@@ -15,6 +15,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::get('/test','TestControler@index');
+Route::get('/test/{id}','TestControler@show');
+
 Route::get('/theme', function () {
     return view('template/dashboard');
 });

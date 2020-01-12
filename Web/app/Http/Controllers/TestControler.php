@@ -14,8 +14,16 @@ class TestControler extends Controller
     public function index()
     {
         $iq=IQ::all();
-        echo "<pre>";
-        print_r($iq);
+        // echo "<pre>";
+        return view('template/map')->with('iq',$iq);
+        // print_r($iq[0]->question_statement);
+    }
+    public function show($id)
+    {
+        $iq=IQ::where('question_id',$id)->get();
+        // echo "<pre>";
+        return view('template/map')->with('iq',$iq);
+        // print_r($iq[0]->question_statement);
     }
 
     /**
@@ -45,10 +53,7 @@ class TestControler extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
-    {
-        //
-    }
+    
 
     /**
      * Show the form for editing the specified resource.

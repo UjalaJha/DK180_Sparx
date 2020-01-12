@@ -94,10 +94,10 @@
       <div class="sidebar-wrapper">
         <div style="margin-left:12px;margin-top:10px;">
         <span>
-        <button class="btn btn-primary" style="border-radius:50px;width:72px">1</button>
+       <a href="/test/1"><button class="btn btn-primary" style="border-radius:50px;width:72px">1</button></a>
        </span>
           <span>
-        <button class="btn btn-primary" style="border-radius:50px;width:72px">2</button>
+       <a href="/test/2"><button class="btn btn-primary" style="border-radius:50px;width:72px">2</button></a>
         </span>
           <span>
         <button class="btn btn-primary" style="border-radius:50px;width:72px">3</button>
@@ -254,7 +254,7 @@
                 <div class="card-header card-header-tabs card-header-primary">
                   <div class="nav-tabs-navigation">
                     <div class="nav-tabs-wrapper">
-                      <h3>Multiple Choice Questions</h3>
+                      <h3>Multiple Choice Questions </h3>
                       
                     </div>
                   </div>
@@ -267,9 +267,9 @@
                         <tbody>
                           <tr>
                             <td>
-                              <div style="background:#972FAF;box-shadow: 3px 3px 4px #ccc;width:30px;height:30px;color:white;padding-top:2px;text-align:center">1</div>   
+                              <div style="background:#972FAF;box-shadow: 3px 3px 4px #ccc;width:30px;height:30px;color:white;padding-top:2px;text-align:center">{{$iq[0]->question_id}}</div>   
                             </td>
-                            <td>Sign contract for "What are conference organizers afraid of?"</td>
+                            <td>{{$iq[0]->question_statement}}</td>
                             
                           </tr>
                           <tr>
@@ -285,7 +285,7 @@
                               </div>
                            
                             </td>
-                            <td>Sign contract for "What are conference organizers afraid of?"</td>
+                            <td>{{$iq[0]->option_1}}</td>
             
                               
                        
@@ -306,7 +306,7 @@
                      
                              
                             </td>
-                            <td>Lines From Great Russian Literature? Or E-mails From My Boss?</td>
+                            <td>{{$iq[0]->option_2}}</td>
                             
                           </tr>
                           <tr>
@@ -321,7 +321,7 @@
                               </div>
                                 
                             </td>
-                            <td>Flooded: One year later, assessing what was lost and what was found when a ravaging rain swept through metro Detroit
+                            <td>{{$iq[0]->option_3}}
                             </td>
                             
                           </tr>
@@ -337,7 +337,7 @@
                               </div>
                                 
                             </td>
-                            <td>Create 4 Invisible User Experiences you Never Knew About</td>
+                            <td>{{$iq[0]->option_4}}</td>
                             
                           </tr>
                         </tbody>
@@ -355,8 +355,8 @@
           </div>
                 <span>
                    <button type="submit" class="btn btn-danger">End Test</button>
-                  <button type="submit" class="btn btn-primary pull-right">Next<i class="material-icons">keyboard_arrow_right</i></button>
-                  <button type="submit" class="btn btn-primary pull-right"><i class="material-icons">keyboard_arrow_left</i>Previous</button>
+                  <a href="/test/{{$iq[0]->question_id+1}}"><button type="submit" class="btn btn-primary pull-right">Next<i class="material-icons">keyboard_arrow_right</i></button></a>
+                  <a href="/test/{{$iq[0]->question_id-1}}"><button type="submit" class="btn btn-primary pull-right"><i class="material-icons">keyboard_arrow_left</i>Previous</button></a>
                 </span>
         </div>
       </div>
