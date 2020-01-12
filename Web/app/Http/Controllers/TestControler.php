@@ -14,6 +14,8 @@ class TestControler extends Controller
     public function index()
     {
         $iq=IQ::all();
+        echo "<pre>";
+        print_r($iq);
     }
 
     /**

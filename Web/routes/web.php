@@ -15,3 +15,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::get('/test','TestControler@index');
+Route::get('/theme', function () {
+    return view('template/dashboard');
+});
+Route::get('/quiz', function () {
+    return view('template/map');
+});
