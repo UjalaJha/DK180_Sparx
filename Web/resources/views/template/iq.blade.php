@@ -33,77 +33,49 @@
   <!-- CSS Just for demo purpose, don't include it in your project -->
   <link href="../assets/demo/demo.css" rel="stylesheet" />
   <style type="text/css">
-    .cont{
-  height: 100%;
-  width: 576px;
-  left: calc(50% - 288px);
-  padding: 0;
-  margin: 0 auto;
+  /* Create a custom radio button */
+.checkmark {
   position: absolute;
-}
-#progress-bar{
-  appearance:none;
-  width: 576px;
-  color: #000;
-  height: 2px;
-  margin: 0 auto;
-}
-span {
-  height: 10px;
-  width: 10px;
-  border-radius: 100%;
-  border: 3px solid #a03ab5;
-  background:#a03ab5;
-  position: absolute;
-  left:0;
-  top: 12px;
-  cursor: pointer;
-  transition: all 0.4s ease-in-out;
-}
-.percent{
-  font-family: Arial;
-  font-size: 14pt;
-  color:#a03ab5 ;
-  text-align: center;
-}
-/*h1{
-   font-family: Arial;
-  font-size: 24pt;
-  text-shadow: 1px 1px 0px #000;
-  color: #fff;
-  text-align: center; 
-  margin:0;
-  padding:0;
-}
-h3{
-  font-family: Arial;
-  font-size: 16pt;
-  text-shadow: 1px 1px 0px #000;
-  color: #fff;
-  text-align: center; 
-}*/
-.second{
-  left: 192px;
-}
-.third{
-  left: 384px;
-}
-.fourth{
-  left: 576px;
-}
-#progress-bar::-webkit-progress-value{ /* Changes line color */
-  background: #a03ab5;
-  transition: all 0.4s ease-in-out;
-}
-#progress-bar::-webkit-progress-bar{ /* Changes background color */
-  background:#ccc;
-}
-.border-change{
-  border-color: #a03ab5;
-  transition: all 0.4s ease-in-out;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  border-radius: 50%;
 }
 
-  </style>
+/* On mouse-over, add a grey background color */
+.cont:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+.cont input:checked ~ .checkmark {
+  background-color:#A03AB5;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.cont input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.cont .checkmark:after {
+  top: 9px;
+  left: 9px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: white;
+}
+</style>
 </head>
 
 <body class="">
@@ -120,62 +92,102 @@ h3{
         </a>
       </div>
       <div class="sidebar-wrapper">
-        <ul class="nav">
-          <li class="nav-item  ">
-            <a class="nav-link" href="./dashboard.html">
-              <i class="material-icons">dashboard</i>
-              <p>Dashboard</p>
-            </a>
-          </li>
-          <li class="nav-item ">
-            <a class="nav-link" href="./user.html">
-              <i class="material-icons">person</i>
-              <p>User Profile</p>
-            </a>
-          </li>
-          <li class="nav-item ">
-            <a class="nav-link" href="./tables.html">
-              <i class="material-icons">content_paste</i>
-              <p>Table List</p>
-            </a>
-          </li>
-          <li class="nav-item active ">
-            <a class="nav-link" href="./typography.html">
-              <i class="material-icons">library_books</i>
-              <p>Typography</p>
-            </a>
-          </li>
-          <li class="nav-item ">
-            <a class="nav-link" href="./icons.html">
-              <i class="material-icons">bubble_chart</i>
-              <p>Icons</p>
-            </a>
-          </li>
-          <li class="nav-item ">
-            <a class="nav-link" href="./map.html">
-              <i class="material-icons">location_ons</i>
-              <p>Maps</p>
-            </a>
-          </li>
-          <li class="nav-item ">
-            <a class="nav-link" href="./notifications.html">
-              <i class="material-icons">notifications</i>
-              <p>Notifications</p>
-            </a>
-          </li>
-          <li class="nav-item ">
-            <a class="nav-link" href="./rtl.html">
-              <i class="material-icons">language</i>
-              <p>RTL Support</p>
-            </a>
-          </li>
-          <li class="nav-item active-pro ">
-            <a class="nav-link" href="./upgrade.html">
-              <i class="material-icons">unarchive</i>
-              <p>Upgrade to PRO</p>
-            </a>
-          </li>
-        </ul>
+        <div style="margin-left:12px;margin-top:10px;">
+        <span>
+       <a href="/test/1"><button class="btn btn-primary" style="border-radius:50px;width:72px">1</button></a>
+       </span>
+          <span>
+       <a href="/test/2"><button class="btn btn-primary" style="border-radius:50px;width:72px">2</button></a>
+        </span>
+
+        <span>
+       <a href="/test/3"><button class="btn btn-primary" style="border-radius:50px;width:72px">3</button></a>
+       </span>
+       <span>
+       <a href="/test/4"><button class="btn btn-primary" style="border-radius:50px;width:72px">4</button></a>
+       </span>
+       <span>
+       <a href="/test/5"><button class="btn btn-primary" style="border-radius:50px;width:72px">5</button></a>
+       </span>
+       <span>
+       <a href="/test/6"><button class="btn btn-primary" style="border-radius:50px;width:72px">6</button></a>
+       </span>
+       <span>
+       <a href="/test/7"><button class="btn btn-primary" style="border-radius:50px;width:72px">7</button></a>
+       </span>
+       <span>
+       <a href="/test/8"><button class="btn btn-primary" style="border-radius:50px;width:72px">8</button></a>
+       </span>
+       <span>
+       <a href="/test/9"><button class="btn btn-primary" style="border-radius:50px;width:72px">9</button></a>
+       </span>
+       <span>
+       <a href="/test/10"><button class="btn btn-primary" style="border-radius:50px;width:72px">10</button></a>
+       </span>
+       <span>
+       <a href="/test/11"><button class="btn btn-primary" style="border-radius:50px;width:72px">11</button></a>
+       </span>
+
+
+       <span>
+       <a href="/test/12"><button class="btn btn-primary" style="border-radius:50px;width:72px">12</button></a>
+       </span>
+       <span>
+       <a href="/test/13"><button class="btn btn-primary" style="border-radius:50px;width:72px">13</button></a>
+       </span>
+       <span>
+       <a href="/test/14"><button class="btn btn-primary" style="border-radius:50px;width:72px">14</button></a>
+       </span>
+       <span>
+       <a href="/test/15"><button class="btn btn-primary" style="border-radius:50px;width:72px">15</button></a>
+       </span>
+       <span>
+       <a href="/test/16"><button class="btn btn-primary" style="border-radius:50px;width:72px">16</button></a>
+       </span>
+       <span>
+       <a href="/test/17"><button class="btn btn-primary" style="border-radius:50px;width:72px">17</button></a>
+       </span>
+       <span>
+       <a href="/test/18"><button class="btn btn-primary" style="border-radius:50px;width:72px">18</button></a>
+       </span>
+       <span>
+       <a href="/test/19"><button class="btn btn-primary" style="border-radius:50px;width:72px">19</button></a>
+       </span>
+       <span>
+       <a href="/test/20"><button class="btn btn-primary" style="border-radius:50px;width:72px">20</button></a>
+       </span>
+       <span>
+       <a href="/test/21"><button class="btn btn-primary" style="border-radius:50px;width:72px">21</button></a>
+       </span>
+
+
+
+       <span>
+       <a href="/test/22"><button class="btn btn-primary" style="border-radius:50px;width:72px">22</button></a>
+       </span><span>
+       <a href="/test/23"><button class="btn btn-primary" style="border-radius:50px;width:72px">23</button></a>
+       </span><span>
+       <a href="/test/24"><button class="btn btn-primary" style="border-radius:50px;width:72px">24</button></a>
+       </span><span>
+       <a href="/test/25"><button class="btn btn-primary" style="border-radius:50px;width:72px">25</button></a>
+       </span><span>
+       <a href="/test/26"><button class="btn btn-primary" style="border-radius:50px;width:72px">26</button></a>
+       </span><span>
+       <a href="/test/27"><button class="btn btn-primary" style="border-radius:50px;width:72px">27</button></a>
+       </span><span>
+       <a href="/test/28"><button class="btn btn-primary" style="border-radius:50px;width:72px">28</button></a>
+       </span><span>
+       <a href="/test/29"><button class="btn btn-primary" style="border-radius:50px;width:72px">29</button></a>
+       </span><span>
+       <a href="/test/30"><button class="btn btn-primary" style="border-radius:50px;width:72px">30</button></a>
+       </span>
+
+
+
+        </div>
+        
+          
+         
       </div>
     </div>
     <div class="main-panel">
@@ -183,8 +195,9 @@ h3{
       <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top ">
         <div class="container-fluid">
           <div class="navbar-wrapper">
-            <a class="navbar-brand" href="#pablo">Typography</a>
+            <a class="navbar-brand" href="#pablo">All The Best for your Test !!</a>
           </div>
+          <p>IQ</p> 
           <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
             <span class="sr-only">Toggle navigation</span>
             <span class="navbar-toggler-icon icon-bar"></span>
@@ -192,7 +205,7 @@ h3{
             <span class="navbar-toggler-icon icon-bar"></span>
           </button>
           <div class="collapse navbar-collapse justify-content-end">
-            <!-- <form class="navbar-form">
+            <form class="navbar-form">
               <div class="input-group no-border">
                 <input type="text" value="" class="form-control" placeholder="Search...">
                 <button type="submit" class="btn btn-white btn-round btn-just-icon">
@@ -200,103 +213,136 @@ h3{
                   <div class="ripple-container"></div>
                 </button>
               </div>
-            </form> -->
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link" href="#pablo">
-                  <i class="material-icons">dashboard</i>
-                  <p class="d-lg-none d-md-block">
-                    Stats
-                  </p>
-                </a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  <i class="material-icons">notifications</i>
-                  <span class="notification">5</span>
-                  <p class="d-lg-none d-md-block">
-                    Some Actions
-                  </p>
-                </a>
-                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
-                  <a class="dropdown-item" href="#">Mike John responded to your email</a>
-                  <a class="dropdown-item" href="#">You have 5 new tasks</a>
-                  <a class="dropdown-item" href="#">You're now friend with Andrew</a>
-                  <a class="dropdown-item" href="#">Another Notification</a>
-                  <a class="dropdown-item" href="#">Another One</a>
-                </div>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link" href="#pablo" id="navbarDropdownProfile" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  <i class="material-icons">person</i>
-                  <p class="d-lg-none d-md-block">
-                    Account
-                  </p>
-                </a>
-                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownProfile">
-                  <a class="dropdown-item" href="#">Profile</a>
-                  <a class="dropdown-item" href="#">Settings</a>
-                  <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="#">Log out</a>
-                </div>
-              </li>
-            </ul>
+            </form>
+            
           </div>
         </div>
       </nav>
-      <!-- End Navbar -->
-      <div class="content">
-        <div class="container-fluid">
-        <h1>Profile Completion</h1>
-<h3>Click on a notch.</h3>
-<div class="cont">
- 
-<progress id="progress-bar" min="1" max="100" value="0"></progress>
-<span class="first border-change"></span>
-<span class="second"></span>
-<span class="third"></span>
-<span class="fourth"></span>
 
-<p class="percent">0% Complete</p>
-</div>
+     <div class="content">
+       
+                        
+                        
+  <button type="submit" class="btn btn-success" style="margin-left:80%"><i class="material-icons">alarm</i>Time Remaining : 00:30</button>
+      <div class="container-fluid">
+      <!-- End Navbar -->
+
+         <div class="row">
+            <div class="col-lg-12 col-md-12">
+              <div class="card">
+
+                <div class="card-header card-header-tabs card-header-primary">
+                  <div class="nav-tabs-navigation">
+                    <div class="nav-tabs-wrapper">
+                      <h3>Multiple Choice Questions </h3>
+                      
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card-body">
+                  <div class="tab-content">
+                    <div class="tab-pane active" id="profile">
+                      <table class="table">
+                        <tbody>
+                          <tr>
+                            <td>
+                              <div style="background:#972FAF;box-shadow: 3px 3px 4px #ccc;width:30px;height:30px;color:white;padding-top:2px;text-align:center">{{$iq[0]->question_id}}</div>   
+                            </td>
+                            <td>{{$iq[0]->question_statement}}</td>
+                            
+                          </tr>
+                          <tr>
+                        
+                            <td>
+                              <div class="form-check">
+                                
+                                <label class="cont">
+                                <input type="radio" checked="checked" name="radio" value="{{$iq[0]->option_1}}">
+                                <span class="checkmark"></span>
+                              </label>
+                        
+                              </div>
+                           
+                            </td>
+                            <td>{{$iq[0]->option_1}}</td>
+            
+                              
+                       
+                          </tr>
+                          <tr>
+                            <!-- <td>A.</td> -->
+                            <td>
+                           
+                               <div class="form-check">
+                                
+                                <label class="cont">
+                                <input type="radio" checked="checked" name="radio" value="{{$iq[0]->option_2}}">
+                                <span class="checkmark"></span>
+                              </label>
+                        
+                              </div>
+                                
+                     
+                             
+                            </td>
+                            <td>{{$iq[0]->option_2}}</td>
+                            
+                          </tr>
+                          <tr>
+                            <td>
+                               <div class="form-check">
+                                
+                                <label class="cont">
+                                <input type="radio" checked="checked" name="radio" value="{{$iq[0]->option_3}}">
+                                <span class="checkmark"></span>
+                              </label>
+                        
+                              </div>
+                                
+                            </td>
+                            <td>{{$iq[0]->option_3}}
+                            </td>
+                            
+                          </tr>
+                          <tr>
+                            <td>
+                              <div class="form-check">
+                                
+                                <label class="cont">
+                                <input type="radio" checked="checked" name="radio" value="{{$iq[0]->option_4}}">
+                                <span class="checkmark"></span>
+                              </label>
+                        
+                              </div>
+                                
+                            </td>
+                            <td>{{$iq[0]->option_4}}</td>
+                            
+                          </tr>
+                        </tbody>
+                      </table>
+
+                    </div>
+                  
+                    
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          
+          </div>
+                <span>
+                   <button type="submit" class="btn btn-danger">End Test</button>
+                  <a href="/test/{{$iq[0]->question_id+1}}"><button type="submit" class="btn btn-primary pull-right">Next<i class="material-icons">keyboard_arrow_right</i></button></a>
+                  <a href="/test/{{$iq[0]->question_id-1}}"><button type="submit" class="btn btn-primary pull-right"><i class="material-icons">keyboard_arrow_left</i>Previous</button></a>
+                </span>
         </div>
       </div>
-      <footer class="footer">
-        <div class="container-fluid">
-          <nav class="float-left">
-            <ul>
-              <li>
-                <a href="https://www.creative-tim.com">
-                  Creative Tim
-                </a>
-              </li>
-              <li>
-                <a href="https://creative-tim.com/presentation">
-                  About Us
-                </a>
-              </li>
-              <li>
-                <a href="http://blog.creative-tim.com">
-                  Blog
-                </a>
-              </li>
-              <li>
-                <a href="https://www.creative-tim.com/license">
-                  Licenses
-                </a>
-              </li>
-            </ul>
-          </nav>
-          <div class="copyright float-right">
-            &copy;
-            <script>
-              document.write(new Date().getFullYear())
-            </script>, made with <i class="material-icons">favorite</i> by
-            <a href="https://www.creative-tim.com" target="_blank">Creative Tim</a> for a better web.
-          </div>
-        </div>
-      </footer>
+
     </div>
+
   </div>
   
   <!--   Core JS Files   -->
@@ -308,8 +354,6 @@ h3{
   <script src="../assets/js/plugins/moment.min.js"></script>
   <!--  Plugin for Sweet Alert -->
   <script src="../assets/js/plugins/sweetalert2.js"></script>
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.compatibility.js"></script>
-  <script type="text/javascript" src="../assets/js/plugins/easing.min.js"></script>
   <!-- Forms Validations Plugin -->
   <script src="../assets/js/plugins/jquery.validate.min.js"></script>
   <!-- Plugin for the Wizard, full documentation here: https://github.com/VinceG/twitter-bootstrap-wizard -->
@@ -335,7 +379,7 @@ h3{
   <!-- Library for adding dinamically elements -->
   <script src="../assets/js/plugins/arrive.min.js"></script>
   <!--  Google Maps Plugin    -->
-
+  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
   <!-- Chartist JS -->
   <script src="../assets/js/plugins/chartist.min.js"></script>
   <!--  Notifications Plugin    -->
@@ -344,40 +388,8 @@ h3{
   <script src="../assets/js/material-dashboard.js?v=2.1.1" type="text/javascript"></script>
   <!-- Material Dashboard DEMO methods, don't include it in your project! -->
   <script src="../assets/demo/demo.js"></script>
- 
   <script>
-    // CommonJS
-$(document).ready(function(){
-  $('span').click(function(){
-    if ($(this).hasClass('first')){
-        $('#progress-bar').val('0');
-        $(this).nextAll().removeClass('border-change');  
-        $('.percent').html("0% Complete");
-       }else if ($(this).hasClass('second')){
-        $(this).nextAll().removeClass('border-change');  
-        $('#progress-bar').val('34');
-        $(this).prevAll().addClass('border-change');  
-        $(this).addClass('border-change');
-         $('.percent').html("33% Complete");
-       }else if ($(this).hasClass('third')){
-        $(this).nextAll().removeClass('border-change');  
-        $('#progress-bar').val('67');
-        $(this).prevAll().addClass('border-change'); 
-        $(this).addClass('border-change');
-        $('.percent').html("66% Complete");
-       } else{
-        $('#progress-bar').val('100');
-         $(this).addClass('border-change');
-        $(this).prevAll().addClass('border-change');
-         $('.percent').html("100% Complete");
-       }
-  });
-});// complete click 
-  
-    
-  </script>
-  <script type="text/javascript">
-     $(document).ready(function() {
+    $(document).ready(function() {
       $().ready(function() {
         $sidebar = $('.sidebar');
 
@@ -545,6 +557,12 @@ $(document).ready(function(){
 
         });
       });
+    });
+  </script>
+  <script>
+    $(document).ready(function() {
+      // Javascript method's body can be found in assets/js/demos.js
+      demo.initGoogleMaps();
     });
   </script>
 </body>

@@ -15,14 +15,14 @@ class TestControler extends Controller
     {
         $iq=IQ::all();
         // echo "<pre>";
-        return view('template/map')->with('iq',$iq);
+        return view('template/iq')->with('iq',$iq);
         // print_r($iq[0]->question_statement);
     }
     public function show($id)
     {
         $iq=IQ::where('question_id',$id)->get();
         // echo "<pre>";
-        return view('template/map')->with('iq',$iq);
+        return view('template/iq')->with('iq',$iq);
         // print_r($iq[0]->question_statement);
     }
 
