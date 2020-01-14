@@ -98,7 +98,7 @@
                   </div>
 
                 </div>
-                 <button type="submit" class="btn btn-info">Start Test</button>
+                 <a href="/instructions"><button type="submit" class="btn btn-info">Start Test</button></a>
               </div>
             </div>
             <div class="col-lg-3 col-md-6 col-sm-6">

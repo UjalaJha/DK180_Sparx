@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\IQ;
+
 class TestControler extends Controller
 {
     /**
@@ -15,7 +16,7 @@ class TestControler extends Controller
     {
         $iq=IQ::all();
         // echo "<pre>";
-                Session:: set("iq_test_marks",0);
+        // \Session:: set("iq_test_marks",0);
         return view('template/iq')->with('iq',$iq);
         // print_r($iq[0]->question_statement);
     }

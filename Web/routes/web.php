@@ -22,3 +22,6 @@ Route::get('/login', function () {
 Route::get('/dashboard', function () {
     return view('template/dashboard');
 });
+Route::get('/instructions', function () {
+    return view('template/instructions');
+});
