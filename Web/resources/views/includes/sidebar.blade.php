@@ -45,7 +45,7 @@
             </a>
           </li>
           <li class="nav-item ">
-            <a class="nav-link" href="/quiz">
+            <a class="nav-link" href="/test">
               <i class="material-icons">location_ons</i>
               <p>Maps</p>
             </a>
@@ -590,3 +590,4 @@
       </footer>
     </div>
   </div>
+ 

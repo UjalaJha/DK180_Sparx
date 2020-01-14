@@ -15,11 +15,13 @@ class TestControler extends Controller
     {
         $iq=IQ::all();
         // echo "<pre>";
+                Session:: set("iq_test_marks",0);
         return view('template/iq')->with('iq',$iq);
         // print_r($iq[0]->question_statement);
     }
     public function show($id)
     {
+
         $iq=IQ::where('question_id',$id)->get();
         // echo "<pre>";
         return view('template/iq')->with('iq',$iq);
