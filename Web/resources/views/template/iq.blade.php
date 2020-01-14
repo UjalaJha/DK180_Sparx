@@ -258,7 +258,7 @@
                               <div class="form-check">
                                 
                                 <label class="cont">
-                                <input type="radio" checked="checked" name="radio" value="{{$iq[0]->option_1}}">
+                                <input type="radio"  name="iq_radio" id="iq_option" value="{{$iq[0]->option_1}}" onchange="check_ans(this.value)">
                                 <span class="checkmark"></span>
                               </label>
                         
@@ -277,7 +277,7 @@
                                <div class="form-check">
                                 
                                 <label class="cont">
-                                <input type="radio" checked="checked" name="radio" value="{{$iq[0]->option_2}}">
+                                <input type="radio" name="iq_radio" value="{{$iq[0]->option_2}}" onchange="check_ans(this.value)">
                                 <span class="checkmark"></span>
                               </label>
                         
@@ -294,7 +294,7 @@
                                <div class="form-check">
                                 
                                 <label class="cont">
-                                <input type="radio" checked="checked" name="radio" value="{{$iq[0]->option_3}}">
+                                <input type="radio" name="iq_radio" value="{{$iq[0]->option_3}} " onchange="check_ans(this.value)">
                                 <span class="checkmark"></span>
                               </label>
                         
@@ -310,7 +310,7 @@
                               <div class="form-check">
                                 
                                 <label class="cont">
-                                <input type="radio" checked="checked" name="radio" value="{{$iq[0]->option_4}}">
+                                <input type="radio"  name="iq_radio" value="{{$iq[0]->option_4}}" onchange="check_ans(this.value)">
                                 <span class="checkmark"></span>
                               </label>
                         
@@ -319,6 +319,13 @@
                             </td>
                             <td>{{$iq[0]->option_4}}</td>
                             
+                          </tr>
+                          <tr>
+                            <input type="hidden" id="answer" name="" value="{{$iq[0]->correct_opton}}" >
+                          </tr>
+
+                          <tr>
+                            <input type="hidden" id="score" name="" value="{{$iq[0]->correct_opton}}" >
                           </tr>
                         </tbody>
                       </table>
@@ -565,6 +572,41 @@
       demo.initGoogleMaps();
     });
   </script>
+
+
+  <script>
+    var final_answer = document.getElementById('answer').value;
+    // alert(final_answer);
+    var choosed_ans;
+    function check_ans(val){
+      choosed_ans=val;
+      // alert(choosed_ans);
+      if(final_answer === choosed_ans){
+      alert("Right ans");
+       // var firstName = '<%= Session["iq_test_marks"] ?? "" %>';
+       // alert(firstName);
+      var flag=localStorage.getItem('iq_score');
+
+
+      alert(falg);
+      <?php
+        // $vali=Session::get('iq_test_marks');
+        // echo $vali; 
+        // $vali+=1;
+        // echo $vali;
+        // Session::put("iq_test_marks",$vali);
+      ?>
+      // var a=<?php 
+      // echo $vali; 
+      ?> 
+      
+      }
+    }
+    
+  </script>
+
+
+
 </body>
 
 </html>
