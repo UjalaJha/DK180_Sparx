@@ -99,112 +99,91 @@
           <span>
        <a href="/test/2"><button class="btn btn-primary" style="border-radius:50px;width:72px">2</button></a>
         </span>
-          <span>
-        <button class="btn btn-primary" style="border-radius:50px;width:72px">3</button>
-        </span>
-        </div>
-        <div style="margin-left:12px;margin-top:10px;">
+
         <span>
-        <button class="btn btn-primary" style="border-radius:50px;width:72px">4</button>
+       <a href="/test/3"><button class="btn btn-primary" style="border-radius:50px;width:72px">3</button></a>
        </span>
-          <span>
-        <button class="btn btn-primary" style="border-radius:50px;width:72px">5</button>
-        </span>
-          <span>
-        <button class="btn btn-primary" style="border-radius:50px;width:72px">6</button>
-        </span>
-        </div>
-        <div style="margin-left:12px;margin-top:10px;">
-        <span>
-        <button class="btn btn-primary" style="border-radius:50px;width:72px">7</button>
+       <span>
+       <a href="/test/4"><button class="btn btn-primary" style="border-radius:50px;width:72px">4</button></a>
        </span>
-          <span>
-        <button class="btn btn-primary" style="border-radius:50px;width:72px">8</button>
-        </span>
-          <span>
-        <button class="btn btn-primary" style="border-radius:50px;width:72px">9</button>
-        </span>
-        </div>
-        <div style="margin-left:12px;margin-top:10px;">
-        <span>
-        <button class="btn btn-primary" style="border-radius:50px;">10</button>
+       <span>
+       <a href="/test/5"><button class="btn btn-primary" style="border-radius:50px;width:72px">5</button></a>
        </span>
-          <span>
-        <button class="btn btn-primary" style="border-radius:50px">11</button>
-        </span>
-          <span>
-        <button class="btn btn-primary" style="border-radius:50px">12</button>
-        </span>
-        </div><div style="margin-left:12px;margin-top:10px;">
-        <span>
-        <button class="btn btn-primary" style="border-radius:50px;">13</button>
+       <span>
+       <a href="/test/6"><button class="btn btn-primary" style="border-radius:50px;width:72px">6</button></a>
        </span>
-          <span>
-        <button class="btn btn-primary" style="border-radius:50px">14</button>
-        </span>
-          <span>
-        <button class="btn btn-primary" style="border-radius:50px">15</button>
-        </span>
-        </div>
-      
-        <div style="margin-left:12px;margin-top:10px;">
-        <span>
-        <button class="btn btn-primary" style="border-radius:50px;">16</button>
+       <span>
+       <a href="/test/7"><button class="btn btn-primary" style="border-radius:50px;width:72px">7</button></a>
        </span>
-          <span>
-        <button class="btn btn-primary" style="border-radius:50px">17</button>
-        </span>
-          <span>
-        <button class="btn btn-primary" style="border-radius:50px">18</button>
-        </span>
-        </div>
-        
-        <div style="margin-left:12px;margin-top:10px;">
-        <span>
-        <button class="btn btn-primary" style="border-radius:50px;">19</button>
+       <span>
+       <a href="/test/8"><button class="btn btn-primary" style="border-radius:50px;width:72px">8</button></a>
        </span>
-          <span>
-        <button class="btn btn-primary" style="border-radius:50px">20</button>
-        </span>
-          <span>
-        <button class="btn btn-primary" style="border-radius:50px">21</button>
-        </span>
-        </div>
-        
-        <div style="margin-left:12px;margin-top:10px;">
-        <span>
-        <button class="btn btn-primary" style="border-radius:50px;">22</button>
+       <span>
+       <a href="/test/9"><button class="btn btn-primary" style="border-radius:50px;width:72px">9</button></a>
        </span>
-          <span>
-        <button class="btn btn-primary" style="border-radius:50px">23</button>
-        </span>
-          <span>
-        <button class="btn btn-primary" style="border-radius:50px">24</button>
-        </span>
-        </div>
-      
-        <div style="margin-left:12px;margin-top:10px;">
-        <span>
-        <button class="btn btn-primary" style="border-radius:50px;">25</button>
+       <span>
+       <a href="/test/10"><button class="btn btn-primary" style="border-radius:50px;width:72px">10</button></a>
        </span>
-          <span>
-        <button class="btn btn-primary" style="border-radius:50px">26</button>
-        </span>
-          <span>
-        <button class="btn btn-primary" style="border-radius:50px">27</button>
-        </span>
-        </div>
-      
-        <div style="margin-left:12px;margin-top:10px;">
-        <span>
-        <button class="btn btn-primary" style="border-radius:50px;">28</button>
+       <span>
+       <a href="/test/11"><button class="btn btn-primary" style="border-radius:50px;width:72px">11</button></a>
        </span>
-          <span>
-        <button class="btn btn-primary" style="border-radius:50px">29</button>
-        </span>
-          <span>
-        <button class="btn btn-primary" style="border-radius:50px">30</button>
-        </span>
+
+
+       <span>
+       <a href="/test/12"><button class="btn btn-primary" style="border-radius:50px;width:72px">12</button></a>
+       </span>
+       <span>
+       <a href="/test/13"><button class="btn btn-primary" style="border-radius:50px;width:72px">13</button></a>
+       </span>
+       <span>
+       <a href="/test/14"><button class="btn btn-primary" style="border-radius:50px;width:72px">14</button></a>
+       </span>
+       <span>
+       <a href="/test/15"><button class="btn btn-primary" style="border-radius:50px;width:72px">15</button></a>
+       </span>
+       <span>
+       <a href="/test/16"><button class="btn btn-primary" style="border-radius:50px;width:72px">16</button></a>
+       </span>
+       <span>
+       <a href="/test/17"><button class="btn btn-primary" style="border-radius:50px;width:72px">17</button></a>
+       </span>
+       <span>
+       <a href="/test/18"><button class="btn btn-primary" style="border-radius:50px;width:72px">18</button></a>
+       </span>
+       <span>
+       <a href="/test/19"><button class="btn btn-primary" style="border-radius:50px;width:72px">19</button></a>
+       </span>
+       <span>
+       <a href="/test/20"><button class="btn btn-primary" style="border-radius:50px;width:72px">20</button></a>
+       </span>
+       <span>
+       <a href="/test/21"><button class="btn btn-primary" style="border-radius:50px;width:72px">21</button></a>
+       </span>
+
+
+
+       <span>
+       <a href="/test/22"><button class="btn btn-primary" style="border-radius:50px;width:72px">22</button></a>
+       </span><span>
+       <a href="/test/23"><button class="btn btn-primary" style="border-radius:50px;width:72px">23</button></a>
+       </span><span>
+       <a href="/test/24"><button class="btn btn-primary" style="border-radius:50px;width:72px">24</button></a>
+       </span><span>
+       <a href="/test/25"><button class="btn btn-primary" style="border-radius:50px;width:72px">25</button></a>
+       </span><span>
+       <a href="/test/26"><button class="btn btn-primary" style="border-radius:50px;width:72px">26</button></a>
+       </span><span>
+       <a href="/test/27"><button class="btn btn-primary" style="border-radius:50px;width:72px">27</button></a>
+       </span><span>
+       <a href="/test/28"><button class="btn btn-primary" style="border-radius:50px;width:72px">28</button></a>
+       </span><span>
+       <a href="/test/29"><button class="btn btn-primary" style="border-radius:50px;width:72px">29</button></a>
+       </span><span>
+       <a href="/test/30"><button class="btn btn-primary" style="border-radius:50px;width:72px">30</button></a>
+       </span>
+
+
+
         </div>
         
           
@@ -218,6 +197,7 @@
           <div class="navbar-wrapper">
             <a class="navbar-brand" href="#pablo">All The Best for your Test !!</a>
           </div>
+          <p>IQ</p> 
           <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
             <span class="sr-only">Toggle navigation</span>
             <span class="navbar-toggler-icon icon-bar"></span>
@@ -278,7 +258,7 @@
                               <div class="form-check">
                                 
                                 <label class="cont">
-                                <input type="radio" checked="checked" name="radio">
+                                <input type="radio" checked="checked" name="radio" value="{{$iq[0]->option_1}}">
                                 <span class="checkmark"></span>
                               </label>
                         
@@ -297,7 +277,7 @@
                                <div class="form-check">
                                 
                                 <label class="cont">
-                                <input type="radio" checked="checked" name="radio">
+                                <input type="radio" checked="checked" name="radio" value="{{$iq[0]->option_2}}">
                                 <span class="checkmark"></span>
                               </label>
                         
@@ -314,7 +294,7 @@
                                <div class="form-check">
                                 
                                 <label class="cont">
-                                <input type="radio" checked="checked" name="radio">
+                                <input type="radio" checked="checked" name="radio" value="{{$iq[0]->option_3}}">
                                 <span class="checkmark"></span>
                               </label>
                         
@@ -330,7 +310,7 @@
                               <div class="form-check">
                                 
                                 <label class="cont">
-                                <input type="radio" checked="checked" name="radio">
+                                <input type="radio" checked="checked" name="radio" value="{{$iq[0]->option_4}}">
                                 <span class="checkmark"></span>
                               </label>
                         
