@@ -20,6 +20,3 @@ Route::get('/test/{id}','TestControler@show');
 Route::get('/theme', function () {
     return view('template/dashboard');
 });
-Route::get('/quiz', function () {
-    return view('template/map');
-});
