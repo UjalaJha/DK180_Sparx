@@ -12,11 +12,13 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('landing/index');
 });
 Route::get('/test','TestControler@index');
 Route::get('/test/{id}','TestControler@show');
-
-Route::get('/theme', function () {
+Route::get('/login', function () {   
+	return view('landing/login');
+});
+Route::get('/dashboard', function () {
     return view('template/dashboard');
 });
