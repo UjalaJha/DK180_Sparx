@@ -32,78 +32,6 @@
   <link href="../assets/css/material-dashboard.css?v=2.1.1" rel="stylesheet" />
   <!-- CSS Just for demo purpose, don't include it in your project -->
   <link href="../assets/demo/demo.css" rel="stylesheet" />
-  <style type="text/css">
-    .cont{
-  height: 100%;
-  width: 576px;
-  left: calc(50% - 288px);
-  padding: 0;
-  margin: 0 auto;
-  position: absolute;
-}
-#progress-bar{
-  appearance:none;
-  width: 576px;
-  color: #000;
-  height: 2px;
-  margin: 0 auto;
-}
-span {
-  height: 10px;
-  width: 10px;
-  border-radius: 100%;
-  border: 3px solid #a03ab5;
-  background:#a03ab5;
-  position: absolute;
-  left:0;
-  top: 12px;
-  cursor: pointer;
-  transition: all 0.4s ease-in-out;
-}
-.percent{
-  font-family: Arial;
-  font-size: 14pt;
-  color:#a03ab5 ;
-  text-align: center;
-}
-/*h1{
-   font-family: Arial;
-  font-size: 24pt;
-  text-shadow: 1px 1px 0px #000;
-  color: #fff;
-  text-align: center; 
-  margin:0;
-  padding:0;
-}
-h3{
-  font-family: Arial;
-  font-size: 16pt;
-  text-shadow: 1px 1px 0px #000;
-  color: #fff;
-  text-align: center; 
-}*/
-.second{
-  left: 192px;
-}
-.third{
-  left: 384px;
-}
-.fourth{
-  left: 576px;
-}
-#progress-bar::-webkit-progress-value{ /* Changes line color */
-  background: #a03ab5;
-  transition: all 0.4s ease-in-out;
-}
-#progress-bar::-webkit-progress-bar{ /* Changes background color */
-  background:#ccc;
-}
-.border-change{
-  border-color: #a03ab5;
-  transition: all 0.4s ease-in-out;
-}
-
-  </style>
 </head>
 
 <body class="">
@@ -121,7 +49,7 @@ h3{
       </div>
       <div class="sidebar-wrapper">
         <ul class="nav">
-          <li class="nav-item  ">
+          <li class="nav-item active  ">
             <a class="nav-link" href="./dashboard.html">
               <i class="material-icons">dashboard</i>
               <p>Dashboard</p>
@@ -139,7 +67,7 @@ h3{
               <p>Table List</p>
             </a>
           </li>
-          <li class="nav-item active ">
+          <li class="nav-item ">
             <a class="nav-link" href="./typography.html">
               <i class="material-icons">library_books</i>
               <p>Typography</p>
@@ -183,7 +111,7 @@ h3{
       <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top ">
         <div class="container-fluid">
           <div class="navbar-wrapper">
-            <a class="navbar-brand" href="#pablo">Typography</a>
+            <a class="navbar-brand" href="#pablo">Dashboard</a>
           </div>
           <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
             <span class="sr-only">Toggle navigation</span>
@@ -192,7 +120,7 @@ h3{
             <span class="navbar-toggler-icon icon-bar"></span>
           </button>
           <div class="collapse navbar-collapse justify-content-end">
-            <!-- <form class="navbar-form">
+            <form class="navbar-form">
               <div class="input-group no-border">
                 <input type="text" value="" class="form-control" placeholder="Search...">
                 <button type="submit" class="btn btn-white btn-round btn-just-icon">
@@ -200,7 +128,7 @@ h3{
                   <div class="ripple-container"></div>
                 </button>
               </div>
-            </form> -->
+            </form>
             <ul class="navbar-nav">
               <li class="nav-item">
                 <a class="nav-link" href="#pablo">
@@ -245,22 +173,53 @@ h3{
         </div>
       </nav>
       <!-- End Navbar -->
-      <div class="content">
+    <div class="content">
         <div class="container-fluid">
-        <h1>Profile Completion</h1>
-<h3>Click on a notch.</h3>
-<div class="cont">
- 
-<progress id="progress-bar" min="1" max="100" value="0"></progress>
-<span class="first border-change"></span>
-<span class="second"></span>
-<span class="third"></span>
-<span class="fourth"></span>
+          <div class="row">
+            <div class="col-md-12">
+              <div class="card">
+                <div class="card-header card-header-primary">
+                  <h3 class="card-title">Instructions !!</h3>
+                  <p class="card-category">Read the below guidelines properly.</p>
+                </div>
+                <div class="card-body">
+                  <ul>
+                    <br>
+                    <li><h4>Total number of sections : 4 (Intelligent + Emotional + Technical + Adversity)</h4></li>
+                    <li><h4>Total number of questions : 90 + Technical Section</h4></li>
+                    <li><h4>Number of questions in each section : 30.</h4></li>
+                    <li><h4>Time alloted for each section : 30 minutes.</h4></li>
+                    <li><h4>Total Time to complete the test : 1 hr 20 minutes.</h4></li>
+                    <li><h4>Each question carry 1 mark, no negative marks.</h4></li>
+                    <li><h4>DO NOT Referesh the page.</h4></li>
+                    <li><h4>DO NOT Switch between sections.</h4></li>
+                    <li><h4>DO NOT Switch tabs.</h4></li>
+                   <!--  <li><h4>Number of questions in each section : 30.</h4></li>
+                    <li><h4>Number of questions in each section : 30.</h4></li> -->
+                  </ul>
+                  
+                  <!-- <h4></h4> --><br>
+           
+                  
+                  
+                  <h4 style="margin-left:40px;"><b><i>All the best :-).</i></b></h4>
+                  <button style="margin-left:30px;" type="submit" class="btn btn-primary">Start Your Test Now!!</button>
+                 <p>
 
-<p class="percent">0% Complete</p>
-</div>
+
+
+</p>
+        
+                </div>
+
+              </div>
+            </div>
+           
+          </div>
         </div>
+
       </div>
+     
       <footer class="footer">
         <div class="container-fluid">
           <nav class="float-left">
@@ -308,8 +267,6 @@ h3{
   <script src="../assets/js/plugins/moment.min.js"></script>
   <!--  Plugin for Sweet Alert -->
   <script src="../assets/js/plugins/sweetalert2.js"></script>
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.compatibility.js"></script>
-  <script type="text/javascript" src="../assets/js/plugins/easing.min.js"></script>
   <!-- Forms Validations Plugin -->
   <script src="../assets/js/plugins/jquery.validate.min.js"></script>
   <!-- Plugin for the Wizard, full documentation here: https://github.com/VinceG/twitter-bootstrap-wizard -->
@@ -335,7 +292,7 @@ h3{
   <!-- Library for adding dinamically elements -->
   <script src="../assets/js/plugins/arrive.min.js"></script>
   <!--  Google Maps Plugin    -->
-
+  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
   <!-- Chartist JS -->
   <script src="../assets/js/plugins/chartist.min.js"></script>
   <!--  Notifications Plugin    -->
@@ -344,40 +301,8 @@ h3{
   <script src="../assets/js/material-dashboard.js?v=2.1.1" type="text/javascript"></script>
   <!-- Material Dashboard DEMO methods, don't include it in your project! -->
   <script src="../assets/demo/demo.js"></script>
- 
   <script>
-    // CommonJS
-$(document).ready(function(){
-  $('span').click(function(){
-    if ($(this).hasClass('first')){
-        $('#progress-bar').val('0');
-        $(this).nextAll().removeClass('border-change');  
-        $('.percent').html("0% Complete");
-       }else if ($(this).hasClass('second')){
-        $(this).nextAll().removeClass('border-change');  
-        $('#progress-bar').val('34');
-        $(this).prevAll().addClass('border-change');  
-        $(this).addClass('border-change');
-         $('.percent').html("33% Complete");
-       }else if ($(this).hasClass('third')){
-        $(this).nextAll().removeClass('border-change');  
-        $('#progress-bar').val('67');
-        $(this).prevAll().addClass('border-change'); 
-        $(this).addClass('border-change');
-        $('.percent').html("66% Complete");
-       } else{
-        $('#progress-bar').val('100');
-         $(this).addClass('border-change');
-        $(this).prevAll().addClass('border-change');
-         $('.percent').html("100% Complete");
-       }
-  });
-});// complete click 
-  
-    
-  </script>
-  <script type="text/javascript">
-     $(document).ready(function() {
+    $(document).ready(function() {
       $().ready(function() {
         $sidebar = $('.sidebar');
 
@@ -545,6 +470,13 @@ $(document).ready(function(){
 
         });
       });
+    });
+  </script>
+  <script>
+    $(document).ready(function() {
+      // Javascript method's body can be found in assets/js/demos.js
+      md.initDashboardPageCharts();
+
     });
   </script>
 </body>
