@@ -146,7 +146,7 @@ $(function() {
                 element: 'morris_gross',
 
                 data: [
-                    { value: 94, label: 'Budget' },
+                    { value: 71, label: 'Score' },
                     { value: 15, label: '' }
                    
                 ],
@@ -171,7 +171,7 @@ $(function() {
                 element: 'morris_profit',
 
                 data: [
-                    { value: 93, label: 'Profit' },
+                    { value: 93, label: 'Eligible' },
                     { value: 15, label: '' }
                    
                 ],
@@ -199,21 +199,41 @@ $(function() {
 
     Morris.Bar({
         element: 'ebit_morris',
+        
         data: [
-            { x: '2011 Q1', y: 20000 },
-            { x: '2011 Q2', y: 24000 },
-            { x: '2011 Q3', y: 33000 },
-            { x: '2011 Q4', y: 40000 },
-            { x: '2012 Q1', y: 25000 },
-            { x: '2012 Q2', y: 70000 },
-            { x: '2012 Q3', y: 52000 },
-            { x: '2012 Q4', y: 39000 },
-            { x: '2013 Q1', y: 80000 }
+            { x: 'SA', y: 20000 },
+            { x: 'SC', y: 25000 },
+            { x: 'SOA', y: -40000 },
+            { x: 'IL', y: -40000 },
+            { x: 'OA', y: -25000 },
+            { x: 'P', y: 30000 },
+            { x: 'A', y: 50000 },
+            { x: 'E', y: -50000 },
+            { x: 'AO', y: -17000 },
+            { x: 'H', y: -20000 },
+            { x: 'CM', y: 35000 },
+
+
         ],
         xkey: 'x',
         ykeys: ['y'],
         labels: ['Y'],
-        barColors: ['#ff407b'],
+        /*barColors: ['lightblue','blue','green'],*/
+        barColors: function (row, series, type) {
+            console.log("--> "+row.label, series, type);
+            if(row.label == "SA") return "#AD1D28";
+            else if(row.label == "SC") return "#DEBB27";
+            else if(row.label == "SOA") return "#fec04c";
+            else if(row.label == "IL") return "#1AB244";
+            else if(row.label == "OA") return "#ff407b";
+            else if(row.label == "P") return "#25d5f2";
+            else if(row.label == "A") return "#5969ff";
+            else if(row.label == "E") return "lightpink";
+            else if(row.label == "AO") return "lightblue";
+            else if(row.label == "H") return "orange";
+            else if(row.label == "CM") return "maroon";
+
+        },
         preUnits: ["$"]
 
     });
@@ -225,13 +245,13 @@ $(function() {
     // ============================================================== 
     //EBIT Morris
     // ============================================================== 
-    var a = c3.generate({
+   /* var a = c3.generate({
         bindto: "#goodservice",
         size: { height: 350 },
         color: { pattern: ["#5969ff", "#ff407b"] },
         data: {
             columns: [
-                ["Service", 20000, 25000, 30000, 80000, 10000, 50000],
+                ["Service", 1000, 4000, 30000, 80000, 10000, 50000],
                 ["Average", 25000, 25000, 25000, 25000, 25000, 25000]
             ],
             types: { Service: "bar" }
@@ -253,7 +273,7 @@ $(function() {
 
         },
 
-    });
+    });*/
 
 
 
@@ -359,7 +379,7 @@ $(function() {
     // ============================================================== 
 
     // // Use Morris.Area instead of Morris.Line
-    Morris.Area({
+    /*Morris.Area({
         element: 'capital',
         behaveLikeLine: true,
 
@@ -384,12 +404,12 @@ $(function() {
 
 
 
-    });
+    });*/
    
     // ============================================================== 
     // Working Capital
     // ============================================================== 
-    new Chartist.Bar('.ct-chart-inventory', {
+    /*new Chartist.Bar('.ct-chart-inventory', {
         labels: ['Q1', 'Q2', 'Q3', 'Q4'],
         series: [
             [800000, 1200000, 1400000, 1300000],
@@ -409,9 +429,35 @@ $(function() {
                 style: 'stroke-width: 30px'
             });
         }
-    });
+    });*/
 
 
+    // Total Sale
+    // ============================================================== 
+ var ctx = document.getElementById("total-sale").getContext('2d');
+            var myChart = new Chart(ctx, {
+                type: 'doughnut',
+                
+                data: {
+                    labels: ["Direct", " Affilliate", "Sponsored", " E-mail"],
+                    datasets: [{
+                        backgroundColor: [
+                            "#5969ff",
+                            "#ff407b",
+                            "#25d5f2",
+                            "#ffc750"
+                        ],
+                        data: [20, 15, 12,30]
+                    }]
+                },
+                options: {
+                    legend: {
+                        display: false
 
+                    }
+                }
+
+            });
+     
 
 });
