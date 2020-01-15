@@ -1,3 +1,4 @@
+  
 
 @include('includes/header')
 @include('includes/sidebar')
@@ -236,11 +237,8 @@
 
 @include('includes/footer')
  <script type="text/javascript">
-
 // sessionStorage.getItem("iq_score") 
-
 // sessionStorage.setItem("iq_score",0);
-localStorage.setItem('iq_score', 0 );
-alert();
-
+// localStorage.setItem('iq_score', 0 );
+// alert();
  </script>

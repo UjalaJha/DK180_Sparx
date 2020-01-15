@@ -25,3 +25,6 @@ Route::get('/dashboard', function () {
 Route::get('/instructions', function () {
     return view('template/instructions');
 });
+Route::get('/eq_instructions', function () {
+    return view('template/eq_instructions');
+});

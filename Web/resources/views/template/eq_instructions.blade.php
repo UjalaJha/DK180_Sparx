@@ -75,7 +75,9 @@
             <div class="col-md-12">
               <div class="card">
                 <div class="card-header card-header-primary">
-                  <h3 class="card-title">Instructions !!</h3>
+                 
+                 <p id="iq_test_score"> IQ</p>
+                  <h3 class="card-title">Emotional Quotient Test Instructions !!</h3>
                   <p class="card-category">Read the below guidelines properly.</p>
                 </div>
                 <div class="card-body">
@@ -100,7 +102,7 @@
                   
                   <h4 style="margin-left:40px;"><b><i>All the best :-).</i></b></h4>
                   <a href="/test">
-                  <button style="margin-left:30px;" type="submit" class="btn btn-primary">Start Your Test Now!!</button>
+                  <button style="margin-left:30px;" type="submit" class="btn btn-primary">Start Your Emotional Quotient Test Now!!</button>
                   </a>
                  <p>
 
@@ -120,7 +122,16 @@
 
       @include('includes/footer')
 
+     <script>
+      var iq_score_var = localStorage.getItem('iq_score'); 
+            alert(iq_score_var);
+       document.getElementById("iq_test_score").innerHTML="IQ test score "+iq_score_var;     
+
+  // var iq_score=localStorage.getItem('iq_score');
+    // document.getElementById.innerHTML=iq_score; 
+    </script>
+     
       <script type="text/javascript">
-      	      localStorage.setItem('iq_score',0);
+      	      localStorage.setItem('eq_score',0);
 
       </script>
