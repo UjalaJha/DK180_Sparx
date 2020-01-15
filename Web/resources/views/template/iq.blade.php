@@ -341,7 +341,7 @@
           
           </div>
                 <span>
-                   <button type="submit" class="btn btn-danger">End Test</button>
+                    <a href="/eq_instructions"><button type="submit" class="btn btn-danger">End Test</button></a>
                   <a href="/test/{{$iq[0]->question_id+1}}"><button type="submit" class="btn btn-primary pull-right">Next<i class="material-icons">keyboard_arrow_right</i></button></a>
                   <a href="/test/{{$iq[0]->question_id-1}}"><button type="submit" class="btn btn-primary pull-right"><i class="material-icons">keyboard_arrow_left</i>Previous</button></a>
                 </span>
@@ -581,26 +581,22 @@
     function check_ans(val){
       choosed_ans=val;
       // alert(choosed_ans);
+      var flag=localStorage.getItem('iq_score');
+      flag=parseInt(flag);
+
       if(final_answer === choosed_ans){
       alert("Right ans");
-       // var firstName = '<%= Session["iq_test_marks"] ?? "" %>';
-       // alert(firstName);
-      var flag=localStorage.getItem('iq_score');
+      var rflag;
+      rflag=flag+1;
+      localStorage.setItem('iq_score',rflag);
 
-
-      alert(falg);
-      <?php
-        // $vali=Session::get('iq_test_marks');
-        // echo $vali; 
-        // $vali+=1;
-        // echo $vali;
-        // Session::put("iq_test_marks",$vali);
-      ?>
-      // var a=<?php 
-      // echo $vali; 
-      ?> 
-      
+      alert(localStorage.getItem('iq_score'));
       }
+
+      else{
+        localStorage.setItem('iq_score',flag);
+      }   
+
     }
     
   </script>

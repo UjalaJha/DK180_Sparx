@@ -12,11 +12,19 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('landing/index');
 });
 Route::get('/test','TestControler@index');
 Route::get('/test/{id}','TestControler@show');
-
-Route::get('/theme', function () {
+Route::get('/login', function () {   
+	return view('landing/login');
+});
+Route::get('/dashboard', function () {
     return view('template/dashboard');
+});
+Route::get('/instructions', function () {
+    return view('template/instructions');
+});
+Route::get('/eq_instructions', function () {
+    return view('template/eq_instructions');
 });
