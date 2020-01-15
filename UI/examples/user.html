@@ -201,7 +201,7 @@
                         </li>
                         <li class="nav-item" style="margin-left:15%">
                           <a class="nav-link" href="#messages" data-toggle="tab">
-                            <i class="material-icons">wb_incandescent</i> Experience Gained
+                            <i class="material-icons">equalizer</i>Academics and Achievements
                             <div class="ripple-container"></div>
                           </a>
                         </li>
@@ -227,7 +227,7 @@
                     <div class="row">
                       <div class="col-md-6">
                         <div class="form-group">
-                          <label class="bmd-label-floating">Fist Name</label>
+                          <label class="bmd-label-floating">First Name</label>
                           <input type="text" class="form-control">
                         </div>
                       </div>
@@ -264,33 +264,19 @@
 
 
                     <div class="row">
-                       <div class="col-md-4">
+                       <div class="col-md-6">
                         <div class="form-group">
                           <label class="bmd-label-floating">Email address</label>
                           <input type="email" class="form-control">
                         </div>
                       </div>
-                      <div class="col-md-4">
+                      <div class="col-md-6">
                         <div class="form-group">
                           <label class="bmd-label-floating">Contact No</label>
                           <input type="email" class="form-control">
                         </div>
                       </div>
-                      <div class="col-md-4">
-                        <div class="form-group">
-                        <!-- <div class="form-group"> -->
-                      <!-- <label for="sel1">Gender</label> -->
-
-                      <select class="form-control" style="color:#aaa;margin-top: -5px;" id="sel1">
-                        <option class="disabled" style="color:#aaa;">Stream</option>
-                        <option>Male</option>
-                        <option>Female</option>
-                        <option>Others</option>
-                        <!-- <option>4</option> -->
-                      </select>
-                        <!-- </div> -->
-                      </div>
-                    </div>  
+                      
                     </div>
 
 
@@ -360,15 +346,20 @@
                         </div>
                       </div>
                       
-                          <div class="custom-file mb-12">
-                            <p>Custom file:</p>
-                            <input type="file" class="custom-file-input" id="customFile" name="filename">
-                            <label class="custom-file-label" for="customFile">Choose file</label>
-                          </div>
+                          
                         
                     
                       
                       
+                    </div>
+
+
+                    <div class="row" style="margin-top:10px;">
+                      <div class="col-md-12">
+                         <!-- <b><p >Upload Resume</p></b> -->
+                         <b><span style="margin-right:10px;color:purple">Upload Resume : </span></b><span><input type="file" id="myFile" name="filename2"></span>
+                      </div>
+                           
                     </div>
                      
                     <button type="submit" class="btn btn-primary pull-right">Submit Profile</button>
@@ -384,53 +375,139 @@
 
                     </div>
                     <div class="tab-pane" id="messages">
-                      <table class="table">
-                        <tbody>
-                          <tr>
-                            <td>
-                              <div class="form-check">
-                                <label class="form-check-label">
-                                  <input class="form-check-input" type="checkbox" value="" checked>
-                                  <span class="form-check-sign">
-                                    <span class="check"></span>
-                                  </span>
-                                </label>
-                              </div>
-                            </td>
-                            <td>Flooded: One year later, assessing what was lost and what was found when a ravaging rain swept through metro Detroit
-                            </td>
-                            <td class="td-actions text-right">
-                              <button type="button" rel="tooltip" title="Edit Task" class="btn btn-primary btn-link btn-sm">
-                                <i class="material-icons">edit</i>
-                              </button>
-                              <button type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-link btn-sm">
-                                <i class="material-icons">close</i>
-                              </button>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>
-                              <div class="form-check">
-                                <label class="form-check-label">
-                                  <input class="form-check-input" type="checkbox" value="">
-                                  <span class="form-check-sign">
-                                    <span class="check"></span>
-                                  </span>
-                                </label>
-                              </div>
-                            </td>
-                            <td>Sign contract for "What are conference organizers afraid of?"</td>
-                            <td class="td-actions text-right">
-                              <button type="button" rel="tooltip" title="Edit Task" class="btn btn-primary btn-link btn-sm">
-                                <i class="material-icons">edit</i>
-                              </button>
-                              <button type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-link btn-sm">
-                                <i class="material-icons">close</i>
-                              </button>
-                            </td>
-                          </tr>
-                        </tbody>
-                      </table>
+                        <div class="row">                            
+                        <div class="col-md-12">
+                        <div class="card">
+                            
+                          <div class="card-body">
+                        <form>
+                      <b><h5 style="color:purple;margin-top:10px;font-weight:bold;">School Information Details</h5></b>
+
+                     <div class="row">
+
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label class="bmd-label-floating">School Name</label>
+                          <input type="text" class="form-control">
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label class="bmd-label-floating">Board</label>
+                          <input type="text" class="form-control">
+                        </div>
+                      </div>
+                    </div>
+                     <div class="row">
+                       <div class="col-md-2" style="margin-top: 10px;">
+                        <div class="form-group">
+                         <input type="radio" id="defaultRadio" name="example2">
+                          <label for="defaultRadio">Percentage</label>
+                          <input type="radio" id="defaultRadio" name="example2" style="margin-left: 10px;">
+                           <label for="defaultRadio">CGPI</label>
+                        </div>
+                      </div>
+                      <div class="col-md-5">
+                        <div class="form-group">
+                          <label class="bmd-label-floating">Year of Completion</label>
+                          <input type="text" class="form-control">
+                        </div>
+                      </div>
+                       <div class="col-md-5">
+                        <div class="form-group">
+                          <label class="bmd-label-floating">Marks</label>
+                          <input type="text" class="form-control">
+                        </div>
+                      </div>
+                     
+                    </div>
+                    <hr style="background: :purple">
+                    <b><h5 style="color:purple;margin-top:10px;font-weight:bold;">Higher Secondary Information Details</h5></b>
+                     <div class="row">
+
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label class="bmd-label-floating">College Name</label>
+                          <input type="text" class="form-control">
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label class="bmd-label-floating">Board</label>
+                          <input type="text" class="form-control">
+                        </div>
+                      </div>
+                    </div>
+                     <div class="row">
+                       <div class="col-md-2" style="margin-top: 10px;">
+                        <div class="form-group">
+                         <input type="radio" id="defaultRadio" name="example2">
+                          <label for="defaultRadio">Percentage</label>
+                          <input type="radio" id="defaultRadio" name="example2" style="margin-left: 10px;">
+                           <label for="defaultRadio">CGPI</label>
+                        </div>
+                      </div>
+                      <div class="col-md-5">
+                        <div class="form-group">
+                          <label class="bmd-label-floating">Year of Completion</label>
+                          <input type="text" class="form-control">
+                        </div>
+                      </div>
+                       <div class="col-md-5">
+                        <div class="form-group">
+                          <label class="bmd-label-floating">Marks</label>
+                          <input type="text" class="form-control">
+                        </div>
+                      </div>
+                     
+                    </div><hr style="background: :purple">
+                    <b><h5 style="color:purple;margin-top:10px;font-weight:bold;">Under Graduate Information Details</h5></b>
+                     <div class="row">
+
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label class="bmd-label-floating">School Name</label>
+                          <input type="text" class="form-control">
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label class="bmd-label-floating">Board</label>
+                          <input type="text" class="form-control">
+                        </div>
+                      </div>
+                    </div>
+
+                     <div class="row">
+                       <div class="col-md-2" style="margin-top: 10px;">
+                        <div class="form-group">
+                         <input type="radio" id="defaultRadio" name="example2">
+                          <label for="defaultRadio">Percentage</label>
+                          <input type="radio" id="defaultRadio" name="example2" style="margin-left: 10px;">
+                           <label for="defaultRadio">CGPI</label>
+                        </div>
+                      </div>
+                      <div class="col-md-5">
+                        <div class="form-group">
+                          <label class="bmd-label-floating">Year of Completion</label>
+                          <input type="text" class="form-control">
+                        </div>
+                      </div>
+                       <div class="col-md-5">
+                        <div class="form-group">
+                          <label class="bmd-label-floating">Marks</label>
+                          <input type="text" class="form-control">
+                        </div>
+                      </div>
+                     
+                    </div>
+
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          
                     </div>
                     <div class="tab-pane" id="settings">
                       <table class="table">
