@@ -6,11 +6,11 @@
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
 <script type="text/javascript">
 jQuery(function($){
-	var $email = $('#email1'), count = 1;
-	$('#addemail').click(function(e){
+	var $internship = $('#internship1'), count = 1;
+	$('#addinternship').click(function(e){
 		e.preventDefault();
-		var idname = 'email' + (++count);
-		$email.parent().append($email.clone().attr({id: idname, name: idname}));
+		var idname = 'internship' + (++count);
+		$internship.parent().append($internship.clone().attr({id: idname, name: idname}));
 	});
 	
 });
@@ -22,7 +22,7 @@ jQuery(function($){
 </style>
 </head>
 <body>
-<div class="row" id="internship">
+<div class="row" id="internship1" name="internship1">
                        <div class="col-md-2" style="margin-top: 10px;">
                         <div class="form-group">
                          <input type="radio" id="defaultRadio" name="example2">

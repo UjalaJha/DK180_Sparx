@@ -208,15 +208,21 @@
                             <div class="ripple-container"></div>
                           </a>
                         </li>
-                        <li class="nav-item" style="margin-left:15%">
+                        <li class="nav-item" style="margin-left:5%">
                           <a class="nav-link" href="#messages" data-toggle="tab">
                             <i class="material-icons">equalizer</i>Academics and Achievements
                             <div class="ripple-container"></div>
                           </a>
                         </li>
-                        <li class="nav-item" style="margin-left:15%">
+                        <li class="nav-item" style="margin-left:5%">
                           <a class="nav-link" href="#settings" data-toggle="tab">
-                            <i class="material-icons">code</i>Experience and Projects
+                            <i class="material-icons">work</i>Internship Details
+                            <div class="ripple-container"></div>
+                          </a>
+                        </li>
+                         <li class="nav-item" style="margin-left:5%">
+                          <a class="nav-link" href="#project" data-toggle="tab">
+                            <i class="material-icons">code</i>Project Details
                             <div class="ripple-container"></div>
                           </a>
                         </li>
@@ -526,9 +532,10 @@
                 
                 <div class="card-body">
                   <form>
-              <div class="row">
-                  <div class="col-md-12">
+              
                     <b><h5 style="color:purple;margin-top:10px;font-weight:bold;">Internship Details</h5></b>
+                    <div class="row" id="internship1" name="internship1">
+                  <div class="col-md-12">
                     <div class="row">
                       <div class="col-md-6">
                         <div class="form-group">
@@ -571,7 +578,35 @@
                       </div>
                     </div>
                     <hr>
+                  </div>
+                </div>
+                   
+            
+                <!-- <a  href="#">Add Email Field</a> -->
+                    
+                  </form>
+                </div>
+              </div>
+            </div>
+           
+          </div>
+                      <button id="addinternship" type="submit" class="btn btn-info">Add more</button>
+                    <button type="submit" class="btn btn-primary pull-right">Submit Profile</button>
+                    <div class="clearfix"></div>
+                  </div>
+
+                  <div class="tab-pane" id="project">
+                      <div class="row">   
+                       <!-- <b><h5 style="color:purple;margin-top:10px;font-weight:bold;">Under Graduate Information Details</h5></b>                          -->
+            <div class="col-md-12">
+              <div class="card">
+                
+                <div class="card-body">
+                  <form>
                     <b><h5 style="color:purple;margin-top:10px;font-weight:bold;">Project Details</h5></b>
+                     <div class="row" id="project1" name="project1">
+                     <div class="col-md-12">
+                    
                       <div class="row">
                       <div class="col-md-6">
                         <div class="form-group">
@@ -604,15 +639,26 @@
                         </div>
                       </div>
                     </div>
+                  <hr>
+                    
+                
+                    
+                  </div>
+                </div>
+                   
+            
+                <!-- <a  href="#">Add Email Field</a> -->
+                   
                   </form>
                 </div>
               </div>
             </div>
            
           </div>
-                     
+                      <button id="addproject" type="submit" class="btn btn-info">Add more</button>
                     <button type="submit" class="btn btn-primary pull-right">Submit Profile</button>
                     <div class="clearfix"></div>
+                  </div>
                   </form>
                 </div>
               </div>
@@ -895,6 +941,28 @@
 $(".custom-file-input").on("change", function() {
   var fileName = $(this).val().split("\\").pop();
   $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
+});
+</script>
+<script type="text/javascript">
+jQuery(function($){
+  var $internship = $('#internship1'), count = 1;
+  $('#addinternship').click(function(e){
+    e.preventDefault();
+    var idname = 'internship' + (++count);
+    $internship.parent().append($internship.clone().attr({id: idname, name: idname}));
+  });
+  
+});
+</script>
+<script type="text/javascript">
+jQuery(function($){
+  var $project = $('#project1'), count = 1;
+  $('#addproject').click(function(e){
+    e.preventDefault();
+    var idname = 'project' + (++count);
+    $project.parent().append($project.clone().attr({id: idname, name: idname}));
+  });
+  
 });
 </script>
 
