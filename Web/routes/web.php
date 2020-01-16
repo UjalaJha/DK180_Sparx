@@ -19,6 +19,9 @@ Route::get('/test/{id}','TestControler@show');
 Route::get('/login', function () {   
 	return view('landing/login');
 });
+Route::get('/companylogin', function () {   
+	return view('landing/companylogin');
+});
 Route::get('/dashboard', function () {
     return view('template/dashboard');
 });
