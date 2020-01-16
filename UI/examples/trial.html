@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+<script type="text/javascript">
+jQuery(function($){
+	var $email = $('#email1'), count = 1;
+	$('#addemail').click(function(e){
+		e.preventDefault();
+		var idname = 'email' + (++count);
+		$email.parent().append($email.clone().attr({id: idname, name: idname}));
+	});
+	
+});
+</script>
+<style type="text/css">
+#emails input {
+	display: block;
+}
+</style>
+</head>
+<body>
+<div class="row" id="internship">
+                       <div class="col-md-2" style="margin-top: 10px;">
+                        <div class="form-group">
+                         <input type="radio" id="defaultRadio" name="example2">
+                          <label for="defaultRadio">Percentage</label>
+                          <input type="radio" id="defaultRadio" name="example2" style="margin-left: 10px;">
+                           <label for="defaultRadio">CGPI</label>
+                        </div>
+                      </div>
+                      <div class="col-md-5">
+                        <div class="form-group">
+                          <label class="bmd-label-floating">Year of Completion</label>
+                          <input type="text" class="form-control">
+                        </div>
+                      </div>
+                       <div class="col-md-5">
+                        <div class="form-group">
+                          <label class="bmd-label-floating">Marks</label>
+                          <input type="text" class="form-control">
+                        </div>
+                      </div>
+                     
+ </div>
+<div id="emails">
+<input type="text" id="email1" name="email1">
+</div>
+<a id="addinternship" href="#">Add Email Field</a>
+</body>
+</html>

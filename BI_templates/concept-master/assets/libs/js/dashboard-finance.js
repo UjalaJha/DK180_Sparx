@@ -228,11 +228,11 @@ $(function() {
     var a = c3.generate({
         bindto: "#goodservice",
         size: { height: 350 },
-        color: { pattern: ["#5969ff", "#ff407b"] },
+        color: { pattern: ["#5969ff"] },
         data: {
             columns: [
                 ["Service", 20000, 25000, 30000, 80000, 10000, 50000],
-                ["Average", 25000, 25000, 25000, 25000, 25000, 25000]
+                
             ],
             types: { Service: "bar" }
         },
@@ -241,9 +241,7 @@ $(function() {
             width: 45
 
         },
-        legend: {
-  show: true
-},
+        
         axis: {
             y: {
                 tick: {

@@ -9,16 +9,16 @@
                             type: 'line',
 
                             data: {
-                                labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+                                labels: ["Java", "C", "C++", "Python", "Ruby", "Spring", ".Net"],
                                 datasets: [{
-                                    label: 'Almonds',
+                                    label: 'Eligible Students',
                                     data: [12, 19, 3, 17, 6, 3, 7],
 
                                     backgroundColor: "rgba(89, 105, 255,0.5)",
                                     borderColor: "rgba(89, 105, 255,0.7)",
                                     borderWidth: 2
                                 }, {
-                                    label: 'Cashew',
+                                    label: 'Ineligible Students',
                                     data: [2, 29, 5, 5, 2, 3, 10],
                                     backgroundColor: "rgba(255, 64, 123,0.5)",
                                     borderColor: "rgba(255, 64, 123,0.7)",
@@ -67,15 +67,15 @@
                 var myChart = new Chart(ctx, {
                     type: 'bar',
                     data: {
-                        labels: ["M", "T", "W", "R", "F", "S", "S"],
+                        labels: ["Java", "C", "C++", "Python", "Ruby", "Spring", ".Net"],
                         datasets: [{
-                            label: 'Almonds',
-                            data: [12, 19, 3, 17, 28, 24, 7],
-                           backgroundColor: "rgba(89, 105, 255,0.5)",
-                                    borderColor: "rgba(89, 105, 255,0.7)",
-                            borderWidth: 2
-                        }, {
-                            label: 'Cashew',
+                        //     label: 'Course',
+                        //     data: [12, 19, 3, 17, 28, 24, 7],
+                        //    backgroundColor: "rgba(89, 105, 255,0.5)",
+                        //             borderColor: "rgba(89, 105, 255,0.7)",
+                        //     borderWidth: 2
+                        // }, {
+                            label: 'Students',
                             data: [30, 29, 5, 5, 20, 3, 10],
                            backgroundColor: "rgba(255, 64, 123,0.5)",
                                     borderColor: "rgba(255, 64, 123,0.7)",
@@ -166,7 +166,7 @@
                 var myChart = new Chart(ctx, {
                     type: 'polarArea',
                     data: {
-                        labels: ["M", "T", "W", "T", "F", "S", "S"],
+                        labels: ["Java", "C", "C++", "Python", "Ruby", "Spring", ".Net"],
                         datasets: [{
                             backgroundColor: [
                                 "#5969ff",
@@ -204,7 +204,7 @@
                 var myChart = new Chart(ctx, {
                     type: 'pie',
                     data: {
-                        labels: ["M", "T", "W", "T", "F", "S", "S"],
+                        labels: ["Software Developer", "UI/UX Designers", "SAP", "HR", "Application Development", "Core Tech", "SAM"],
                         datasets: [{
                             backgroundColor: [
                                "#5969ff",
@@ -241,7 +241,7 @@
                 var myChart = new Chart(ctx, {
                     type: 'doughnut',
                     data: {
-                        labels: ["M", "T", "W", "T", "F", "S", "S"],
+                        labels: ["Java", "C", "C++", "Python", "Ruby", "Spring", ".Net"],
                         datasets: [{
                             backgroundColor: [
                                  "#5969ff",
