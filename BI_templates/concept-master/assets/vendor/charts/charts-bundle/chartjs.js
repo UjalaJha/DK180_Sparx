@@ -126,15 +126,15 @@
                 var myChart = new Chart(ctx, {
                     type: 'radar',
                     data: {
-                        labels: ["M", "T", "W", "T", "F", "S", "S"],
+                        labels: ["Abstraction", "Connection", "Perspective", "Curiosity", "Boldness", "Complexity", "Persistence"],
                         datasets: [{
-                            label: 'Almonds',
+                            label: 'Average',
                            backgroundColor: "rgba(89, 105, 255,0.5)",
                                     borderColor: "rgba(89, 105, 255,0.7)",
-                            data: [12, 19, 3, 17, 28, 24, 7],
+                            data: [20, 15, 13, 15, 22, 21, 19],
                             borderWidth: 2
                         }, {
-                            label: 'Cashew',
+                            label: 'You',
                              backgroundColor: "rgba(255, 64, 123,0.5)",
                                     borderColor: "rgba(255, 64, 123,0.7)",
                             data: [30, 29, 5, 5, 20, 3, 10],

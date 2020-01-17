@@ -10,7 +10,7 @@ $(function() {
     // ============================================================== 
     // Revenue Cards
     // ============================================================== 
-    $("#sparkline-revenue").sparkline([5, 5, 7, 7, 9, 5, 3, 5, 2, 4, 6, 7], {
+    /*$("#sparkline-revenue").sparkline([5, 5, 7, 7, 9, 5, 3, 5, 2, 4, 6, 7], {
         type: 'line',
         width: '99.5%',
         height: '100',
@@ -74,11 +74,11 @@ $(function() {
         highlightSpotColor: undefined,
         highlightLineColor: undefined,
         resize:true,
-    });
+    });*/
     // ============================================================== 
     // Chart Balance Bar
     // ============================================================== 
-    var ctx = document.getElementById("chartjs_balance_bar").getContext('2d');
+    /*var ctx = document.getElementById("chartjs_balance_bar").getContext('2d');
     var myChart = new Chart(ctx, {
         type: 'bar',
 
@@ -136,7 +136,7 @@ $(function() {
 
 
 
-});
+});*/
  
     
     // ============================================================== 
@@ -280,7 +280,7 @@ $(function() {
     // ============================================================== 
     // Disputed vs Overdue Invoices
     // ============================================================== 
-    var data = {
+    /*var data = {
         labels: ['Disputed Invoice', 'Overdue Invoice'],
         series: [20, 15]
     };
@@ -306,14 +306,14 @@ $(function() {
         }]
     ];
 
-    new Chartist.Pie('.ct-chart-invoice', data, options, responsiveOptions);
+    new Chartist.Pie('.ct-chart-invoice', data, options, responsiveOptions);*/
 
 
     // ============================================================== 
     // Disputed vs Overdue Invoices
     // ============================================================== 
 
-    new Chartist.Line('.ct-chart-line-invoice', {
+    /*new Chartist.Line('.ct-chart-line-invoice', {
         labels: ['Jan 2018', 'Mar 2018', 'May 2018', 'Jul 2018', 'Sep 2018', 'Oct 2018', 'Nov 2018'],
         series: [
             [12, 8, 6, 7, 3, 2.5, 7, 8],
@@ -332,7 +332,7 @@ $(function() {
         },
 
 
-    });
+    });*/
 
 
 
@@ -340,7 +340,7 @@ $(function() {
     // Accounts Payable Age
     // ============================================================== 
 
-    var chart = c3.generate({
+    /*var chart = c3.generate({
         bindto: "#account",
         color: { pattern: ["#5969ff", "#ff407b", "#25d5f2", "#ffc750"] },
         data: {
@@ -372,7 +372,7 @@ $(function() {
         });
     }, 
     2500
-    );
+    );*/
 
     // ============================================================== 
     // Working Capital
@@ -439,7 +439,7 @@ $(function() {
                 type: 'doughnut',
                 
                 data: {
-                    labels: ["Direct", " Affilliate", "Sponsored", " E-mail"],
+                    labels: ["Java", " Python", "Machine Learning","C"],
                     datasets: [{
                         backgroundColor: [
                             "#5969ff",
@@ -460,4 +460,6 @@ $(function() {
             });
      
 
+
 });
+
