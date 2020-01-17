@@ -104,4 +104,4 @@ Route::post('/logins','LoginController@login_check');
 Route::get('/companylogin', function () {
     return view('landing/companylogin');
 });
-
+Route::get('/save_skill','TQController@save_score');
