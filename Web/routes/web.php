@@ -35,6 +35,10 @@ Route::get('/eq_instructions', function () {
     return view('template/eq_instructions');
 });
 
+Route::get('/aq_instructions', function () {
+    return view('template/aq_instructions');
+});
+
 
 Route::get('/user_profile', function () {
     return view('template/user');
@@ -86,6 +90,15 @@ Route::post('/company','TestControler@companysubmit');
 
 Route::get('/eq','EQController@index');
 Route::get('/eqtest/{id}','EQController@show');
+
+Route::get('/aq','AQController@index');
+Route::get('/aqtest/{id}','AQController@show');
+
+Route::get('/tests_done',function (){
+    return view('template/submit_test');
+});
+Route::post('/save_scores','UserController@saveTestScore');
+
 
 //Route::get('/tq_instructions', function () {
 //    return view('template/tq_instructions');

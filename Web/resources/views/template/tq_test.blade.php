@@ -363,8 +363,8 @@
           </div>
                 <span>
                    
-                    <a href="/eq_instructions"><button type="submit" class="btn btn-danger">End Test</button></a>
-                    <a href="/tq_instruction/1"><button type="submit" class="btn btn-info">Submit Section</button></a>
+                    <a href="/aq_instructions"><button type="submit" class="btn btn-danger">End Test</button></a>
+                    <a href="/aq_instructions"><button type="submit" class="btn btn-info">Submit Section</button></a>
                     
 <!--                                     <a href="/instructions"><button type="submit" style="width:100%" class="btn btn-info">SUBMIT</button></a>-->
 

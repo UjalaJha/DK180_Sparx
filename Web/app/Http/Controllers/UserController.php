@@ -9,6 +9,14 @@ use App\UserTechnical;
 use App\UserRatings;
 use Session;
 
+use App\IQ;
+use App\EQ;
+use App\AQ;
+
+use App\UserIQ;
+use App\UserEQ;
+use App\UserAQ;
+
 use Illuminate\Http\Request;
 
 class UserController extends Controller
@@ -266,6 +274,52 @@ class UserController extends Controller
 
 
         }
+
+    }
+
+    public function saveTestScore(){
+
+        $id = Session::get('user_id');
+
+        $iq_score = $_POST['iq_score'];
+        $user_iq_score = new UserIQ;
+        $user_iq_score->user_id = $id;
+        $user_iq_score->iq_score = $iq_score;
+        $user_iq_score->save();
+
+
+        $self_awareness = $_POST['self_awareness'];
+        $self_control = $_POST['self_control'];
+        $achievement_orientation = $_POST['achievement_orientation'];
+        $positive_outlook = $_POST['positive_outlook'];
+        $inspirational_leadership = $_POST['inspirational_leadership'];
+        $social_awareness = $_POST['social_awareness'];
+        $user_eq_score = new UserEQ;
+        $user_eq_score->user_id = $id;
+        $user_eq_score->eq_self_awareness = $self_awareness;
+        $user_eq_score->eq_self_control = $self_control;
+        $user_eq_score->eq_achievement_orientation = $achievement_orientation;
+        $user_eq_score->eq_positive_outlook = $positive_outlook;
+        $user_eq_score->eq_inspirational_leadership = $inspirational_leadership;
+        $user_eq_score->eq_social_awareness = $social_awareness;
+        $user_eq_score->save();
+
+
+
+        $persistence = $_POST['persistence'];
+        $boldness = $_POST['boldness'];
+        $complexity = $_POST['complexity'];
+        $abstraction = $_POST['abstraction'];
+        $curiosity = $_POST['curiosity'];
+        $user_aq_score = new UserAQ;
+        $user_aq_score->user_id = $id;
+        $user_aq_score->aq_persistence = $persistence;
+        $user_aq_score->aq_boldness = $boldness;
+        $user_aq_score->aq_complexity = $complexity;
+        $user_aq_score->aq_abstraction = $abstraction;
+        $user_aq_score->aq_curiosity = $curiosity;
+        $user_aq_score->save();
+
 
     }
 
