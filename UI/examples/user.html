@@ -34,13 +34,22 @@
   <link href="../assets/demo/demo.css" rel="stylesheet" />
    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"> -->
   
-  <!-- <style type="text/css">
-     
+  <style type="text/css">
+     /*@import "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css";*/
 
-      .demo-width-class {
-        width: 400px;
-      }
-  </style> -->
+/* Select2 css */
+@import "http://propeller.in/components/select2/css/select2.min.css";
+@import "http://propeller.in/components/select2/css/select2-bootstrap.css";
+
+/* Propeller typography */
+@import "http://propeller.in/components/typography/css/typography.css";
+
+/* Propeller text fields */
+@import "http://propeller.in/components/textfield/css/textfield.css";
+
+/* Propeller select2 */
+@import "http://propeller.in/components/select2/css/pmd-select2.css";
+  </style>
 </head>
 
 <body class="">
@@ -199,15 +208,21 @@
                             <div class="ripple-container"></div>
                           </a>
                         </li>
-                        <li class="nav-item" style="margin-left:15%">
+                        <li class="nav-item" style="margin-left:5%">
                           <a class="nav-link" href="#messages" data-toggle="tab">
                             <i class="material-icons">equalizer</i>Academics and Achievements
                             <div class="ripple-container"></div>
                           </a>
                         </li>
-                        <li class="nav-item" style="margin-left:15%">
+                        <li class="nav-item" style="margin-left:5%">
                           <a class="nav-link" href="#settings" data-toggle="tab">
-                            <i class="material-icons">code</i>Experience and Projects
+                            <i class="material-icons">work</i>Internship Details
+                            <div class="ripple-container"></div>
+                          </a>
+                        </li>
+                         <li class="nav-item" style="margin-left:5%">
+                          <a class="nav-link" href="#project" data-toggle="tab">
+                            <i class="material-icons">code</i>Project Details
                             <div class="ripple-container"></div>
                           </a>
                         </li>
@@ -517,146 +532,133 @@
                 
                 <div class="card-body">
                   <form>
+              
+                    <b><h5 style="color:purple;margin-top:10px;font-weight:bold;">Internship Details</h5></b>
+                    <div class="row" id="internship1" name="internship1">
+                  <div class="col-md-12">
                     <div class="row">
                       <div class="col-md-6">
                         <div class="form-group">
                           <label class="bmd-label-floating">Company Name</label>
+                          <input type="text" class="form-control" disabled>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label class="bmd-label-floating">Project Name</label>
                           <input type="text" class="form-control">
                         </div>
                       </div>
                       <div class="col-md-6">
                         <div class="form-group">
-                          <label class="bmd-label-floating">Last Name</label>
-                          <input type="text" class="form-control">
-                        </div>
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="col-md-6">
-                        <div class="form-group">
-                        <!-- <div class="form-group"> -->
-                      <!-- <label for="sel1">Gender</label> -->
-
-                      <select class="form-control" style="color:#aaa;margin-top: -5px;" id="sel1">
-                        <option class="disabled" style="color:#aaa;">Gender</option>
-                        <option>Male</option>
-                        <option>Female</option>
-                        <option>Others</option>
-                        <!-- <option>4</option> -->
-                      </select>
-                        <!-- </div> -->
-                      </div>
-                    </div>
-                      <div class="col-md-6">
-                        <div class="form-group">
-                          <label class="bmd-label-floating">Age</label>
-                          <input type="text" class="form-control">
-                        </div>
-                      </div>
-                    </div>
-
-
-                    <div class="row">
-                       <div class="col-md-6">
-                        <div class="form-group">
-                          <label class="bmd-label-floating">Email address</label>
+                          <label class="bmd-label-floating">Role</label>
                           <input type="email" class="form-control">
                         </div>
                       </div>
                       <div class="col-md-6">
                         <div class="form-group">
-                          <label class="bmd-label-floating">Contact No</label>
-                          <input type="email" class="form-control">
+                          <label class="bmd-label-floating">Duration</label>
+                          <input type="text" class="form-control">
                         </div>
                       </div>
+                    </div>
+                    <div class="row">
                       
-                    </div>
-
-
-                    
-                    <div class="row">
-                      <div class="col-md-12">
+                      <div class="col-md-6">
                         <div class="form-group">
-                          <label class="bmd-label-floating">Address</label>
+                          <label class="bmd-label-floating">Domain</label>
+                          <input type="text" class="form-control">
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label class="bmd-label-floating">Technology Stack</label>
                           <input type="text" class="form-control">
                         </div>
                       </div>
                     </div>
-                    <div class="row">
-                      <div class="col-md-4">
-                        <div class="form-group">
-                          <label class="bmd-label-floating">City</label>
-                          <input type="text" class="form-control">
-                        </div>
-                      </div>
-                      <div class="col-md-4">
-                        <div class="form-group">
-                          <label class="bmd-label-floating">Country</label>
-                          <input type="text" class="form-control">
-                        </div>
-                      </div>
-                      <div class="col-md-4">
-                        <div class="form-group">
-                          <label class="bmd-label-floating">Postal Code</label>
-                          <input type="text" class="form-control">
-                        </div>
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="col-md-12">
-                        <div class="form-group">
-                        <!-- <div class="form-group"> -->
-                      <!-- <label for="sel1">Gender</label> -->
-
-                      <select class="form-control" style="color:#aaa;margin-top: -5px;" id="sel1">
-                        <option class="disabled" style="color:#aaa;">Skills you have</option>
-                        <option>Male</option>
-                        <option>Female</option>
-                        <option>Others</option>
-                        <!-- <option>4</option> -->
-                      </select>
-                        <!-- </div> -->
-                      </div>
-                    </div>
+                    <hr>
                   </div>
-                  <div class="row">
-                      <div class="col-md-4">
-                        <div class="form-group">
-                          <label class="bmd-label-floating">Github Link</label>
-                          <input type="text" class="form-control">
-                        </div>
-                      </div>
-                      <div class="col-md-4">
-                        <div class="form-group">
-                          <label class="bmd-label-floating">LinkedIn Link</label>
-                          <input type="text" class="form-control">
-                        </div>
-                      </div>
-                      <div class="col-md-4">
-                        <div class="form-group">
-                          <label class="bmd-label-floating">Other Links</label>
-                          <input type="text" class="form-control">
-                        </div>
-                      </div>
-                      
-                          
-                        
+                </div>
+                   
+            
+                <!-- <a  href="#">Add Email Field</a> -->
                     
-                      
-                      
-                    </div>
-
-
-                    <div class="row" style="margin-top:10px;">
-                      <div class="col-md-12">
-                         <!-- <b><p >Upload Resume</p></b> -->
-                         <b><span style="margin-right:10px;color:purple">Upload Resume : </span></b><span><input type="file" id="myFile" name="filename2"></span>
-                      </div>
-                           
-                    </div>
-                     
+                  </form>
+                </div>
+              </div>
+            </div>
+           
+          </div>
+                      <button id="addinternship" type="submit" class="btn btn-info">Add more</button>
                     <button type="submit" class="btn btn-primary pull-right">Submit Profile</button>
                     <div class="clearfix"></div>
+                  </div>
+
+                  <div class="tab-pane" id="project">
+                      <div class="row">   
+                       <!-- <b><h5 style="color:purple;margin-top:10px;font-weight:bold;">Under Graduate Information Details</h5></b>                          -->
+            <div class="col-md-12">
+              <div class="card">
+                
+                <div class="card-body">
+                  <form>
+                    <b><h5 style="color:purple;margin-top:10px;font-weight:bold;">Project Details</h5></b>
+                     <div class="row" id="project1" name="project1">
+                     <div class="col-md-12">
+                    
+                      <div class="row">
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label class="bmd-label-floating">Project Name</label>
+                          <input type="text" class="form-control" disabled>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label class="bmd-label-floating">Your Contribution</label>
+                          <input type="text" class="form-control">
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label class="bmd-label-floating">Domain</label>
+                          <input type="email" class="form-control">
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label class="bmd-label-floating">Duration</label>
+                          <input type="text" class="form-control">
+                        </div>
+                      </div>
+                      <div class="col-md-12">
+                        <div class="form-group">
+                          <label class="bmd-label-floating">Technology Stack</label>
+                          <input type="text" class="form-control">
+                        </div>
+                      </div>
+                    </div>
+                  <hr>
+                    
+                
+                    
+                  </div>
+                </div>
+                   
+            
+                <!-- <a  href="#">Add Email Field</a> -->
+                   
+                  </form>
+                </div>
+              </div>
+            </div>
+           
+          </div>
+                      <button id="addproject" type="submit" class="btn btn-info">Add more</button>
+                    <button type="submit" class="btn btn-primary pull-right">Submit Profile</button>
+                    <div class="clearfix"></div>
+                  </div>
                   </form>
                 </div>
               </div>
@@ -941,6 +943,29 @@ $(".custom-file-input").on("change", function() {
   $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
 });
 </script>
+<script type="text/javascript">
+jQuery(function($){
+  var $internship = $('#internship1'), count = 1;
+  $('#addinternship').click(function(e){
+    e.preventDefault();
+    var idname = 'internship' + (++count);
+    $internship.parent().append($internship.clone().attr({id: idname, name: idname}));
+  });
+  
+});
+</script>
+<script type="text/javascript">
+jQuery(function($){
+  var $project = $('#project1'), count = 1;
+  $('#addproject').click(function(e){
+    e.preventDefault();
+    var idname = 'project' + (++count);
+    $project.parent().append($project.clone().attr({id: idname, name: idname}));
+  });
+  
+});
+</script>
+
 </body>
 
 </html>
