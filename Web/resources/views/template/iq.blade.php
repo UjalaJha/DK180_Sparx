@@ -341,8 +341,10 @@
           
           </div>
                 <span>
+
                     <a href="/eq_instructions"><button type="submit" class="btn btn-danger">End Test</button></a>
                      <a href="/eq_instructions"><button type="submit" class="btn btn-info">Submit Section</button></a>
+
                   <a href="/test/{{$iq[0]->question_id+1}}"><button type="submit" class="btn btn-primary pull-right">Next<i class="material-icons">keyboard_arrow_right</i></button></a>
                   <a href="/test/{{$iq[0]->question_id-1}}"><button type="submit" class="btn btn-primary pull-right"><i class="material-icons">keyboard_arrow_left</i>Previous</button></a>
                 </span>
