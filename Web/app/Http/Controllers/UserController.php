@@ -7,6 +7,7 @@ use App\UserAcademics;
 use App\UserExperiences;
 use App\UserTechnical;
 use App\UserRatings;
+use Session;
 
 use Illuminate\Http\Request;
 
@@ -16,10 +17,12 @@ class UserController extends Controller
 
 
 
-    public function skills_view($id){
+    public function skills_view(){
 //        echo "hi";
 //
 
+        $id = Session::get('user_id');
+//        echo $id;
         $user_detail=UserPersonalDetails::where('user_id',$id)->get();
 //        if($user_detail){
 //            echo "sn";

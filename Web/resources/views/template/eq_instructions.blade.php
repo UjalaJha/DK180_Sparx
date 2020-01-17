@@ -133,5 +133,13 @@
 
   <script type="text/javascript">
     localStorage.setItem('eq_score',0);
+    localStorage.setItem('self awareness',0);
+    localStorage.setItem('self control',0);
+    localStorage.setItem('achievement orientation',0);
+    localStorage.setItem('positive outlook',0);
+    localStorage.setItem('inspiration leadership',0);
+    localStorage.setItem('social awareness',0);
+
+
 
   </script>
