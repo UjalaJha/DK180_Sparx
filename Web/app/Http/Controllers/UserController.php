@@ -22,15 +22,33 @@ class UserController extends Controller
 //
 
         $id = Session::get('user_id');
-//        echo $id;
-        $user_detail=UserPersonalDetails::where('user_id',$id)->get();
+        echo $id;
+//        exit;
+        $user_detail=UserTechnical::where('user_id',$id)->where('test_given',0)->get();
 //        if($user_detail){
 //            echo "sn";
 //        }
 //        echo "<pre>";
-//        print_r($user_detail[0]->skills);
-        $skill_set=explode(",",$user_detail[0]->skills);
+//        print_r($user_detail);
+        $size=sizeof($user_detail);
+        echo $size;
+        $count=0;
+        $skill_array=array();
+        while($count!=$size)
+        {
+            
+            $lan=$user_detail[$count]->language;
+//            echo $lan;
+            $count+=1;
+            array_push($skill_array,$lan);
+        }
+//        print_r($skill_array);
+//        exit;
+        $skill_set=implode(",",$skill_array);
 //        print_r($skill_set);
+        $skill_set=explode(",",$skill_set);
+//        print_r($skill_set);
+//        exit;
         return view('template/tq_instructions')->with("skill_set",$skill_set);
 //        exit;
 

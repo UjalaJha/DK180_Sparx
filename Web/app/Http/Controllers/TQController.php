@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\TQ;
+//use App\TQController;
 use Illuminate\Http\Request;
 
 class TQController extends Controller
@@ -84,12 +85,12 @@ class TQController extends Controller
     }
     
     public function skill_test($skill,$id){
-        //echo $skill;
-//        echo $id;
+        echo $skill;
+        echo $id;
         $tech=TQ::where('question_id',$id)->where('tag',$skill)->get();
 //        echo $tech;
 //        exit;
-        return view('/template/tq_test')->with("tech",$tech);
+        return view('/template/tq_test')->with("tech",$tech)->with("skill",$skill);
 //        exit;
     }
 }
