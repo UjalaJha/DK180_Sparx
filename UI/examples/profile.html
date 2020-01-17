@@ -32,6 +32,144 @@
   <link href="../assets/css/material-dashboard.css?v=2.1.1" rel="stylesheet" />
   <!-- CSS Just for demo purpose, don't include it in your project -->
   <link href="../assets/demo/demo.css" rel="stylesheet" />
+   <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"> -->
+  
+  <style type="text/css">
+     /*@import "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css";*/
+
+/* Select2 css */
+
+#content {
+  margin-top: 50px;
+  text-align: center;
+}
+
+section.timeline-outer {
+  width: 80%;
+  margin: 0 auto;
+}
+
+/*h1.header {
+  font-size: 50px;
+  line-height: 70px;
+}*/
+/* Timeline */
+
+.timeline {
+  border-left: 8px solid #9229AD;
+  border-bottom-right-radius: 2px;
+  border-top-right-radius: 2px;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  color: #333;
+  margin: 50px auto;
+  /*letter-spacing: 0.5px;*/
+  position: relative;
+  /*line-height: 1.4em;*/
+  padding: 20px;
+  list-style: none;
+  text-align: left;
+}
+
+/*.timeline h1,
+.timeline h2,
+.timeline h4 {
+  font-size: 1.4em;
+}*/
+
+.timeline .event {
+  border-bottom: 1px solid rgba(160, 160, 160, 0.2);
+  padding-bottom: 15px;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.timeline .event:last-of-type {
+  padding-bottom: 0;
+  margin-bottom: 0;
+  border: none;
+}
+
+.timeline .event:before,
+.timeline .event:after {
+  position: absolute;
+  display: block;
+  top: 0;
+}
+
+.timeline .event:before {
+  left: -177.5px;
+  color: #212121;
+  content: attr(data-date);
+  text-align: right;
+  /*  font-weight: 100;*/
+  
+  font-size: 16px;
+  min-width: 120px;
+}
+
+.timeline .event:after {
+  box-shadow: 0 0 0 8px #9229AD;
+  left: -30px;
+  background: #ffff;
+  border-radius: 50%;
+  height: 11px;
+  width: 11px;
+  content: "";
+  top: 5px;
+}
+/**/
+/*——————————————
+Responsive Stuff
+———————————————*/
+
+@media (max-width: 945px) {
+  .timeline .event::before {
+    left: 0.5px;
+    top: 20px;
+    min-width: 0;
+    font-size: 13px;
+  }
+  /*.timeline h4 {
+    font-size: 16px;
+  }*/
+  .timeline p {
+    padding-top: 20px;
+  }
+  /*section.lab h4.card-title {
+    padding: 5px;
+    font-size: 16px
+  }*/
+}
+
+@media (max-width: 768px) {
+  .timeline .event::before {
+    left: 0.5px;
+    top: 20px;
+    min-width: 0;
+    font-size: 13px;
+  }
+  .timeline .event:nth-child(1)::before,
+  .timeline .event:nth-child(3)::before,
+  .timeline .event:nth-child(5)::before {
+    top: 38px;
+  }
+  .timeline h4 {
+    font-size: 16px;
+  }
+  .timeline p {
+    padding-top: 20px;
+  }
+}
+/*——————————————
+others
+———————————————*/
+
+a.portfolio-link {
+  margin: 0 auto;
+  display: block;
+  text-align: center;
+}
+  </style>
 </head>
 
 <body class="">
@@ -55,7 +193,7 @@
               <p>Dashboard</p>
             </a>
           </li>
-          <li class="nav-item ">
+          <li class="nav-item active ">
             <a class="nav-link" href="./user.html">
               <i class="material-icons">person</i>
               <p>User Profile</p>
@@ -85,7 +223,7 @@
               <p>Maps</p>
             </a>
           </li>
-          <li class="nav-item active ">
+          <li class="nav-item ">
             <a class="nav-link" href="./notifications.html">
               <i class="material-icons">notifications</i>
               <p>Notifications</p>
@@ -111,7 +249,7 @@
       <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top ">
         <div class="container-fluid">
           <div class="navbar-wrapper">
-            <a class="navbar-brand" href="#pablo">Notifications</a>
+            <a class="navbar-brand" href="#pablo">User Profile</a>
           </div>
           <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
             <span class="sr-only">Toggle navigation</span>
@@ -175,232 +313,298 @@
       <!-- End Navbar -->
       <div class="content">
         <div class="container-fluid">
-          <div class="card">
-            <div class="card-header card-header-primary">
-              <h3 class="card-title">Notifications</h3>
-              <p class="card-category">Handcrafted by our friend
-                <a target="_blank" href="https://github.com/mouse0270">Robert McIntosh</a>. Please checkout the
-                <a href="http://bootstrap-notify.remabledesigns.com/" target="_blank">full documentation.</a>
-              </p>
-            </div>
-            <div class="card-body">
-              <div class="row">
-                <div class="col-md-6">
-                  <h4 class="card-title">Notifications Style</h4>
-                  <div class="alert alert-info">
-                    <span>This is a plain notification</span>
-                  </div>
-                  <div class="alert alert-info">
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                      <i class="material-icons">close</i>
-                    </button>
-                    <span>This is a notification with close button.</span>
-                  </div>
-                  <div class="alert alert-with-icon" data-notify="container">
-                    <i class="material-icons" data-notify="icon">add_alert</i>
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                      <i class="material-icons">close</i>
-                    </button>
-                    <span data-notify="message">This is a notification with close button and icon.</span>
-                  </div>
-                  <div class="alert alert-info alert-with-icon" data-notify="container">
-                    <i class="material-icons" data-notify="icon">add_alert</i>
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                      <i class="material-icons">close</i>
-                    </button>
-                    <span data-notify="message">This is a notification with close button and icon and have many lines. You can see that the icon and the close button are always vertically aligned. This is a beautiful notification. So you don't have to worry about the style.</span>
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <h4 class="card-title">Notification states</h4>
-                  <div class="alert alert-info">
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                      <i class="material-icons">close</i>
-                    </button>
-                    <span>
-                      <b> Info - </b> This is a regular notification made with ".alert-info"</span>
-                  </div>
-                  <div class="alert alert-success">
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                      <i class="material-icons">close</i>
-                    </button>
-                    <span>
-                      <b> Success - </b> This is a regular notification made with ".alert-success"</span>
-                  </div>
-                  <div class="alert alert-warning">
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                      <i class="material-icons">close</i>
-                    </button>
-                    <span>
-                      <b> Warning - </b> This is a regular notification made with ".alert-warning"</span>
-                  </div>
-                  <div class="alert alert-danger">
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                      <i class="material-icons">close</i>
-                    </button>
-                    <span>
-                      <b> Danger - </b> This is a regular notification made with ".alert-danger"</span>
-                  </div>
-                  <div class="alert alert-primary">
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                      <i class="material-icons">close</i>
-                    </button>
-                    <span>
-                      <b> Primary - </b> This is a regular notification made with ".alert-primary"</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-12">
-              <div class="places-buttons">
-                <div class="row">
-                  <div class="col-md-6 ml-auto mr-auto text-center">
-                    <h4 class="card-title">
-                      Notifications Places
-                      <p class="category">Click to view notifications</p>
-                    </h4>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col-lg-8 col-md-10 ml-auto mr-auto">
-                    <div class="row">
-                      <div class="col-md-4">
-                        <button class="btn btn-primary btn-block" onclick="md.showNotification('top','left')">Top Left</button>
-                      </div>
-                      <div class="col-md-4">
-                        <button class="btn btn-primary btn-block" onclick="md.showNotification('top','center')">Top Center</button>
-                      </div>
-                      <div class="col-md-4">
-                        <button class="btn btn-primary btn-block" onclick="md.showNotification('top','right')">Top Right</button>
-                      </div>
+          <div class="row">
+            <div class="col-lg-12 col-md-12">
+              <div class="card">
+                <div class="card-header card-header-tabs card-header-primary">
+                  <div class="nav-tabs-navigation">
+                    <div class="nav-tabs-wrapper">
+                      <!-- <span class="nav-tabs-title">Tasks:</span> -->
+
+                      <ul class="nav nav-tabs" data-tabs="tabs">
+                        <li class="nav-item" style="margin-left:15%;">
+                          <a class="nav-link active" href="#profile" data-toggle="tab">
+                            <i class="material-icons">person</i> Personal Information
+                            <div class="ripple-container"></div>
+                          </a>
+                        </li>
+                        <li class="nav-item" style="margin-left:10%;">
+                          <a class="nav-link" href="#messages" data-toggle="tab">
+                            <i class="material-icons">code</i> Projects and Experience
+                            <div class="ripple-container"></div>
+                          </a>
+                        </li>
+                        <li class="nav-item" style="margin-left:10%;">
+                          <a class="nav-link" href="#settings" data-toggle="tab">
+                            <i class="material-icons">equalizer</i>Perfomance
+                            <div class="ripple-container"></div>
+                          </a>
+                        </li>
+                         
+                      </ul>
                     </div>
                   </div>
                 </div>
-                <div class="row">
-                  <div class="col-lg-8 col-md-10 ml-auto mr-auto">
-                    <div class="row">
-                      <div class="col-md-4">
-                        <button class="btn btn-primary btn-block" onclick="md.showNotification('bottom','left')">Bottom Left</button>
+       <div class="card-body">
+             <div class="tab-content">
+               <div class="tab-pane active" id="profile"><br>
+         <div class="col-md-10" style="align-items: center;margin-left:7%;">
+           <div class="card card-profile">
+                <div class="card-avatar">
+                  <a href="#pablo">
+                    <img class="img" src="../assets/img/faces/marc.jpg" />
+                  </a>
+                </div>
+                <div class="card-body">
+                  <!-- <h6 class="card-category text-gray"></h6> -->
+                  <h3 class="card-title">Khushboo Chandnani</h3>
+                  <h5 class="card-category text-gray">Age : 21</h5>
+                   <!-- <h5 class="card-category text-gray">Contact : 9511738058</h5> -->
+                    <!-- <h5 class="card-category text-gray">khushboochandnani21@gmail.com</h5> -->
+                  <br>
+
+                 <div class="card">
+                <div class="card-body">
+                    <div class="card-header card-header-primary">
+
+                  <h4 class="card-title">Personal Details</h4>
+                  <!-- <p class="card-category">Read the below guidelines properly.</p> -->
+                </div><br>
+                 <div class="row">
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <h5><b>Email ID : </b>Khushboo Chandnani</h5>
+                        </div>
                       </div>
-                      <div class="col-md-4">
-                        <button class="btn btn-primary btn-block" onclick="md.showNotification('bottom','center')">Bottom Center</button>
+                      <div class="col-md-6">
+                       <div class="form-group">
+                          <h5><b>Contact No : </b>9511738058</h5>
+                        </div>
                       </div>
-                      <div class="col-md-4">
-                        <button class="btn btn-primary btn-block" onclick="md.showNotification('bottom','right')">Bottom Right</button>
+
+                    </div>
+                      <div class="row">
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <h5><b>Github Link : </b>github.com/khushboochandnani</h5>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                       <div class="form-group">
+                          <h5><b>LinkedIn Link : </b> linkedin.com/in/khushboo-chandnani</h5>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                </div>
+                      <div class="row">
+                      <!-- <div class="col-md-12"> -->
+                        <!-- <div class="form-group"> -->
+                        <!-- <h4><b><i>Based on your skillset, Languages you have to attempt are : </i> </b></h4> -->
+                    <span style="font-size:19px;margin-top:10px;margin-left: 12%;"><b>Skills :  </b> </span><span style="margin-left:20px;"><button class="btn btn-warning">C</button></span> <span><button class="btn btn-info" style="margin-left:10px;">JAVA</button></span> <span><button class="btn btn-success" style="margin-left:10px;">PYTHON</button></span><span><button class="btn btn-primary" style="margin-left:10px;">UI/UX</button></span><span><button class="btn btn-warning" style="margin-left:10px;">C++</button></span><span><button class="btn btn-success" style="margin-left:10px;">RUBY</button></span>
+                        </div>
+                      
+                      <!-- <div class="col-md-6">
+                       <div class="form-group">
+                          <h5>Email ID : Khushboo Chandnani</h5>
+                        </div>
+                      </div> -->
+                    </div>
+                   
               </div>
-            </div>
-          </div>
         </div>
       </div>
-      <footer class="footer">
-        <div class="container-fluid">
-          <nav class="float-left">
-            <ul>
-              <li>
-                <a href="https://www.creative-tim.com">
-                  Creative Tim
-                </a>
-              </li>
-              <li>
-                <a href="https://creative-tim.com/presentation">
-                  About Us
-                </a>
-              </li>
-              <li>
-                <a href="http://blog.creative-tim.com">
-                  Blog
-                </a>
-              </li>
-              <li>
-                <a href="https://www.creative-tim.com/license">
-                  Licenses
-                </a>
-              </li>
-            </ul>
-          </nav>
-          <div class="copyright float-right">
-            &copy;
-            <script>
-              document.write(new Date().getFullYear())
-            </script>, made with <i class="material-icons">favorite</i> by
-            <a href="https://www.creative-tim.com" target="_blank">Creative Tim</a> for a better web.
-          </div>
+    <div class="card">
+        <div class="card-body">
+            <div class="card-header card-header-primary">
+
+          <h4 class="card-title" style="text-align: center;">Academic Details</h4>
+          <!-- <p class="card-category">Read the below guidelines properly.</p> -->
         </div>
-      </footer>
+        <section id="timeline" class="timeline-outer">
+                        <div class="container" id="content">
+                          <div class="row" style="margin-top:-60px;margin-left:30px;">
+                            <div class="col s12 m12 l12">
+                              <!-- <h3 class="blue-text lighten-1 header">Responsive Material Design Timeline</h3> -->
+                              <ul class="timeline">
+                                <li class="event" data-date="2014">
+                                 <b><h4>School Information</h4></b>
+                                  <p>
+                                    Name : Sacred Heart School
+                                  </p>
+                                  <p>
+                                    Board : State Board of Maharashtra
+                                  </p>
+                                  <p>
+                                    Percentage : 93.88
+                                  </p>
+                                  
+                                </li>
+                                <li class="event" data-date="2016">
+                                  <b><h4>Higher Secondary Information</h4></b>
+                                  <p>
+                                    Name : CHM College
+                                  </p>
+                                  <p>
+                                    Board : Higher Secondary State Board of Maharashtra
+                                  </p>
+                                  <p>
+                                    Percentage : 71.08
+                                  </p>
+                                  
+                                </li>
+                                <li class="event" data-date="Ongoing">
+                                  <b><h4>College Information</h4></b>
+                                  <p>
+                                    Name : Vivekandnand Education Society's Institute of Technology
+                                  </p>
+                                  <p>
+                                    Board : University of Mumbai
+                                  </p>
+                                  <p>
+                                    CGPI : 8.78 
+                                  </p>
+                                  
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      
+       </section>
+          
+          <!-- <a href="#pablo" class="btn btn-primary btn-round">Follow</a> -->
+        </div>
+      </div>
     </div>
   </div>
-  <div class="fixed-plugin">
-    <div class="dropdown show-dropdown">
-      <a href="#" data-toggle="dropdown">
-        <i class="fa fa-cog fa-2x"> </i>
-      </a>
-      <ul class="dropdown-menu">
-        <li class="header-title"> Sidebar Filters</li>
-        <li class="adjustments-line">
-          <a href="javascript:void(0)" class="switch-trigger active-color">
-            <div class="badge-colors ml-auto mr-auto">
-              <span class="badge filter badge-purple" data-color="purple"></span>
-              <span class="badge filter badge-azure" data-color="azure"></span>
-              <span class="badge filter badge-green" data-color="green"></span>
-              <span class="badge filter badge-warning" data-color="orange"></span>
-              <span class="badge filter badge-danger" data-color="danger"></span>
-              <span class="badge filter badge-rose active" data-color="rose"></span>
+        <div class="tab-pane" id="messages"><br>
+             <div class="col-md-10" style="align-items: center;margin-left:7%;">
+           <div class="card card-profile">
+                <div class="card-avatar">
+                  <a href="#pablo">
+                    <img class="img" src="../assets/img/faces/marc.jpg" />
+                  </a>
+                </div>
+              
+                <div class="card-body">
+                  <!-- <h6 class="card-category text-gray"></h6> -->
+                  <h3 class="card-title">Khushboo Chandnani</h3>
+                  <h5 class="card-category text-gray">Age : 21</h5>
+                   <!-- <h5 class="card-category text-gray">Contact : 9511738058</h5> -->
+                    <!-- <h5 class="card-category text-gray">khushboochandnani21@gmail.com</h5> -->
+                  <br>
+                </div>
+              </div>
+                 <div class="card">
+                <!-- <div class="card-body"> -->
+                    <div class="card-header card-header-primary">
+
+                  <h4 class="card-title" style="text-align: center">Experiences</h4>
+                  <!-- <p class="card-category">Read the below guidelines properly.</p> -->
+                </div><br>
+                     
+                      <ul>
+                         <b><h4 style="font-weight:bold;">Internship</h4></b>
+                        <h5><li>Company Name : Zataakse Foundation</li></h5>
+                        <h5><li>Project Name : Food App</li></h5>
+                        <h5><li>Role : Freelancer</li></h5>
+                        <h5><li>Domain : UI/UX</li></h5>
+                        <h5><li>Technology Stack : HTML, CSSS3, Bootstrap, Adobe XD</li></h5>
+                      </ul>
+                     
+                      
+                      
+                      
+                      <!-- <div class="col-md-6">
+                       <div class="form-group">
+                          <h5>Email ID : Khushboo Chandnani</h5>
+                        </div>
+                      </div> -->
+                    </div>
+                    <div class="card">
+                <!-- <div class="card-body"> -->
+                    <div class="card-header card-header-primary">
+
+                  <h4 class="card-title" style="text-align: center">Projects</h4>
+                  <!-- <p class="card-category">Read the below guidelines properly.</p> -->
+                </div><br>
+                     
+                      <ul>
+                         <b><h4 style="font-weight:bold;">Project1</h4></b>
+                        <h5><li>Project Name : Vesitchain</li></h5>
+                        <h5><li>Contribution : UI Developer</li></h5>
+                        <h5><li>Domain : Blockchain</li></h5>
+                        <h5><li>Duration : 4 months (BE Project)</li></h5>
+                        <h5><li>Technology Stack : HTML, CSS3, Eherium, Truffle, Ajax</li></h5>
+                      </ul>
+                     
+                      
+                      
+                      
+                      <!-- <div class="col-md-6">
+                       <div class="form-group">
+                          <h5>Email ID : Khushboo Chandnani</h5>
+                        </div>
+                      </div> -->
+                    </div>
+                   
+              </div>
+        
+      </div>
+          
+          </div>
+         
+
+        
+         
+        </div>
+
+                  
+              
             </div>
-            <div class="clearfix"></div>
-          </a>
-        </li>
-        <li class="header-title">Images</li>
-        <li class="active">
-          <a class="img-holder switch-trigger" href="javascript:void(0)">
-            <img src="../assets/img/sidebar-1.jpg" alt="">
-          </a>
-        </li>
-        <li>
-          <a class="img-holder switch-trigger" href="javascript:void(0)">
-            <img src="../assets/img/sidebar-2.jpg" alt="">
-          </a>
-        </li>
-        <li>
-          <a class="img-holder switch-trigger" href="javascript:void(0)">
-            <img src="../assets/img/sidebar-3.jpg" alt="">
-          </a>
-        </li>
-        <li>
-          <a class="img-holder switch-trigger" href="javascript:void(0)">
-            <img src="../assets/img/sidebar-4.jpg" alt="">
-          </a>
-        </li>
-        <li class="button-container">
-          <a href="https://www.creative-tim.com/product/material-dashboard" target="_blank" class="btn btn-primary btn-block">Free Download</a>
-        </li>
-        <!-- <li class="header-title">Want more components?</li>
-            <li class="button-container">
-                <a href="https://www.creative-tim.com/product/material-dashboard-pro" target="_blank" class="btn btn-warning btn-block">
-                  Get the pro version
-                </a>
-            </li> -->
-        <li class="button-container">
-          <a href="https://demos.creative-tim.com/material-dashboard/docs/2.1/getting-started/introduction.html" target="_blank" class="btn btn-default btn-block">
-            View Documentation
-          </a>
-        </li>
-        <li class="button-container github-star">
-          <a class="github-button" href="https://github.com/creativetimofficial/material-dashboard" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star ntkme/github-buttons on GitHub">Star</a>
-        </li>
-        <li class="header-title">Thank you for 95 shares!</li>
-        <li class="button-container text-center">
-          <button id="twitter" class="btn btn-round btn-twitter"><i class="fa fa-twitter"></i> &middot; 45</button>
-          <button id="facebook" class="btn btn-round btn-facebook"><i class="fa fa-facebook-f"></i> &middot; 50</button>
-          <br>
-          <br>
-        </li>
-      </ul>
+          </div>
+
+         </div>
+                  
+              
+                  
+                  
+                   
+            
+                <!-- <a  href="#">Add Email Field</a> -->
+                    
+                  
+                </div>
+              </div>
+            
+                      <!-- <button id="addinternship" type="submit" class="btn btn-info">Add more</button> -->
+                    <!-- <button type="submit" class="btn btn-primary pull-right">Submit Profile</button> -->
+                    <div class="clearfix"></div>
+                  </div>
+
+                  
+                     
+                    <!-- <button type="submit" class="btn btn-primary pull-right">Submit Profile</button> -->
+                    <div class="clearfix"></div>
+                  
+                  </form>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+         
+        </div>
+      </div>
+     
     </div>
   </div>
+
   <!--   Core JS Files   -->
   <script src="../assets/js/core/jquery.min.js"></script>
   <script src="../assets/js/core/popper.min.js"></script>
@@ -414,13 +618,13 @@
   <script src="../assets/js/plugins/jquery.validate.min.js"></script>
   <!-- Plugin for the Wizard, full documentation here: https://github.com/VinceG/twitter-bootstrap-wizard -->
   <script src="../assets/js/plugins/jquery.bootstrap-wizard.js"></script>
-  <!--	Plugin for Select, full documentation here: http://silviomoreto.github.io/bootstrap-select -->
+  <!--  Plugin for Select, full documentation here: http://silviomoreto.github.io/bootstrap-select -->
   <script src="../assets/js/plugins/bootstrap-selectpicker.js"></script>
   <!--  Plugin for the DateTimePicker, full documentation here: https://eonasdan.github.io/bootstrap-datetimepicker/ -->
   <script src="../assets/js/plugins/bootstrap-datetimepicker.min.js"></script>
   <!--  DataTables.net Plugin, full documentation here: https://datatables.net/  -->
   <script src="../assets/js/plugins/jquery.dataTables.min.js"></script>
-  <!--	Plugin for Tags, full documentation here: https://github.com/bootstrap-tagsinput/bootstrap-tagsinputs  -->
+  <!--  Plugin for Tags, full documentation here: https://github.com/bootstrap-tagsinput/bootstrap-tagsinputs  -->
   <script src="../assets/js/plugins/bootstrap-tagsinput.js"></script>
   <!-- Plugin for Fileupload, full documentation here: http://www.jasny.net/bootstrap/javascript/#fileinput -->
   <script src="../assets/js/plugins/jasny-bootstrap.min.js"></script>
@@ -442,8 +646,12 @@
   <script src="../assets/js/plugins/bootstrap-notify.js"></script>
   <!-- Control Center for Material Dashboard: parallax effects, scripts for the example pages etc -->
   <script src="../assets/js/material-dashboard.js?v=2.1.1" type="text/javascript"></script>
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script> -->
   <!-- Material Dashboard DEMO methods, don't include it in your project! -->
   <script src="../assets/demo/demo.js"></script>
+ 
   <script>
     $(document).ready(function() {
       $().ready(function() {
@@ -476,6 +684,7 @@
             }
           }
         });
+
 
         $('.fixed-plugin .active-color span').click(function() {
           $full_page_background = $('.full-page-background');
@@ -615,12 +824,41 @@
       });
     });
   </script>
-  <script>
+   <script type="text/javascript">
     $(document).ready(function() {
-      //init DateTimePickers
-      md.initFormExtendedDatetimepickers();
-    });
+      $('.mdb-select').materialSelect();
+      });
   </script>
+  <script>
+// Add the following code if you want the name of the file appear on select
+$(".custom-file-input").on("change", function() {
+  var fileName = $(this).val().split("\\").pop();
+  $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
+});
+</script>
+<script type="text/javascript">
+jQuery(function($){
+  var $internship = $('#internship1'), count = 1;
+  $('#addinternship').click(function(e){
+    e.preventDefault();
+    var idname = 'internship' + (++count);
+    $internship.parent().append($internship.clone().attr({id: idname, name: idname}));
+  });
+  
+});
+</script>
+<script type="text/javascript">
+jQuery(function($){
+  var $project = $('#project1'), count = 1;
+  $('#addproject').click(function(e){
+    e.preventDefault();
+    var idname = 'project' + (++count);
+    $project.parent().append($project.clone().attr({id: idname, name: idname}));
+  });
+  
+});
+</script>
+
 </body>
 
 </html>
