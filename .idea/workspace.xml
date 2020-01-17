@@ -2,15 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b42da8c1-15de-4d9c-badb-bb940fa51862" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/.env.example" beforeDir="false" afterPath="$PROJECT_DIR$/Web/.env.example" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/app/Http/Controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Web/app/Http/Controllers/UserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/config/database.php" beforeDir="false" afterPath="$PROJECT_DIR$/Web/config/database.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/resources/views/template/dashboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/Web/resources/views/template/dashboard.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/resources/views/template/eq.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/Web/resources/views/template/eq.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Web/resources/views/template/eq_instructions.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/Web/resources/views/template/eq_instructions.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/resources/views/template/iq.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/Web/resources/views/template/iq.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/Web/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -50,8 +42,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Web/resources/views/template/eq_instructions.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="139" column="53" lean-forward="true" selection-start-line="139" selection-start-column="53" selection-end-line="139" selection-end-column="53" />
+            <state relative-caret-position="346">
+              <caret line="139" column="39" selection-start-line="139" selection-start-column="39" selection-end-line="139" selection-end-column="39" />
             </state>
           </provider>
         </entry>
@@ -59,7 +51,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Web/app/Http/Controllers/TestControler.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="338">
+            <state relative-caret-position="98">
               <caret line="27" column="51" lean-forward="true" selection-start-line="27" selection-start-column="51" selection-end-line="27" selection-end-column="51" />
             </state>
           </provider>
@@ -68,7 +60,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Web/app/Http/Controllers/EQController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="400">
+            <state relative-caret-position="340">
               <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
               <folding>
                 <element signature="e#40#51#0#PHP" expanded="true" />
@@ -98,8 +90,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Web/resources/views/template/eq.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="95">
-              <caret line="96" column="25" selection-start-line="96" selection-start-column="25" selection-end-line="96" selection-end-column="25" />
+            <state relative-caret-position="275">
+              <caret line="624" column="44" selection-start-line="624" selection-start-column="44" selection-end-line="624" selection-end-column="44" />
               <folding>
                 <element signature="n#style#0;n#button#0;n#a#0;n#span#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#button#0;n#a#0;n#span#4;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -376,12 +368,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1579254725829</updated>
-      <workItem from="1579254729168" duration="13800000" />
+      <workItem from="1579254729168" duration="15814000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13800000" />
+    <option name="totallyTimeSpent" value="15814000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -545,21 +537,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Web/app/Http/Controllers/TestControler.php">
+    <entry file="file://$PROJECT_DIR$/Web/app/Http/Controllers/EQController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="338">
-          <caret line="27" column="51" lean-forward="true" selection-start-line="27" selection-start-column="51" selection-end-line="27" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Web/resources/views/template/eq.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="96" column="25" selection-start-line="96" selection-start-column="25" selection-end-line="96" selection-end-column="25" />
+        <state relative-caret-position="340">
+          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
           <folding>
-            <element signature="n#style#0;n#button#0;n#a#0;n#span#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#button#0;n#a#0;n#span#4;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#40#51#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -571,20 +554,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Web/app/Http/Controllers/EQController.php">
+    <entry file="file://$PROJECT_DIR$/Web/app/Http/Controllers/TestControler.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+        <state relative-caret-position="98">
+          <caret line="27" column="51" lean-forward="true" selection-start-line="27" selection-start-column="51" selection-end-line="27" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Web/resources/views/template/eq.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="624" column="44" selection-start-line="624" selection-start-column="44" selection-end-line="624" selection-end-column="44" />
           <folding>
-            <element signature="e#40#51#0#PHP" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#a#0;n#span#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#a#0;n#span#4;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Web/resources/views/template/eq_instructions.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="139" column="53" lean-forward="true" selection-start-line="139" selection-start-column="53" selection-end-line="139" selection-end-column="53" />
+        <state relative-caret-position="346">
+          <caret line="139" column="39" selection-start-line="139" selection-start-column="39" selection-end-line="139" selection-end-column="39" />
         </state>
       </provider>
     </entry>

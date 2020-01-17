@@ -137,7 +137,7 @@
     localStorage.setItem('self control',0);
     localStorage.setItem('achievement orientation',0);
     localStorage.setItem('positive outlook',0);
-    localStorage.setItem('inspiration leadership',0);
+    localStorage.setItem('inspirational leadership',0);
     localStorage.setItem('social awareness',0);
 
 
