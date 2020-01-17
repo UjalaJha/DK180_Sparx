@@ -47,7 +47,7 @@ class UserController extends Controller
         $skill_set=implode(",",$skill_array);
 //        print_r($skill_set);
         $skill_set=explode(",",$skill_set);
-        print_r($skill_set);
+//        print_r($skill_set);
 //        exit;
 //        echo "snj";
 //        $ab=sizeof($skill_set);
@@ -56,36 +56,23 @@ class UserController extends Controller
         
         $EmptyTestArray = array_filter($skill_set);
 
-if (!empty($EmptyTestArray))
-  {
-    // do some tests on the values in $ArrayOne
-    echo "exists";
-            return view('template/tq_instructions')->with("skill_set",$skill_set);
+        if (!empty($EmptyTestArray))
+          {
+            // do some tests on the values in $ArrayOne
+            echo "exists";
+                    return view('template/tq_instructions')->with("skill_set",$skill_set);
 
-    
-  }
-else
-  {
-    // Likely not to need an else, 
-    // but could return message to user "you entered nothing" etc etc
-    echo "empty";
-    echo "test done";
+
+          }
+        else
+          {
+            // Likely not to need an else, 
+            // but could return message to user "you entered nothing" etc etc
+            echo "empty";
+            echo "test done";
             
-  }
-        
-//        if(!$skill_set){
-//            echo "empty";
-//        }
-//        
-//        exit;
-//        return view('template/tq_instructions')->with("skill_set",$skill_set);
-////        exit;
 
-
-//        $jobs=Jobs::where('company_id',1)->get();
-////         echo "<pre>";
-////        print_r($jobs[0]->job_role);
-//        return view('company/view_jobs')->with('jobs',$jobs)
+          }
     }
 
 

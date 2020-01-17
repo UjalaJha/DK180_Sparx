@@ -9,7 +9,7 @@
     -->
       <div class="logo">
         <a href="http://www.creative-tim.com" class="simple-text logo-normal">
-          Creative Tim
+          HigherConnect
         </a>
       </div>
       <div class="sidebar-wrapper">
@@ -21,15 +21,15 @@
             </a>
           </li>
           <li class="nav-item ">
-            <a class="nav-link" href="./user.html">
+            <a class="nav-link" href="/profile">
               <i class="material-icons">person</i>
               <p>User Profile</p>
             </a>
           </li>
           <li class="nav-item ">
-            <a class="nav-link" href="./tables.html">
+            <a class="nav-link" href="/performance">
               <i class="material-icons">content_paste</i>
-              <p>Table List</p>
+              <p>My Performance</p>
             </a>
           </li>
           <li class="nav-item ">
@@ -45,7 +45,7 @@
             </a>
           </li>
           <li class="nav-item ">
-            <a class="nav-link" href="/test">
+            <a class="nav-link" href="/instructions">
               <i class="material-icons">location_ons</i>
               <p>Maps</p>
             </a>
