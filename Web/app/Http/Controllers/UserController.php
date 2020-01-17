@@ -26,11 +26,11 @@ class UserController extends Controller
 
 
     public function skills_view(){
-//        echo "hi";
+        echo "hi";
 //
 
         $id = Session::get('user_id');
-        echo $id;
+//        echo $id;
 //        exit;
         $user_detail=UserTechnical::where('user_id',$id)->where('test_given',0)->get();
 //        if($user_detail){
@@ -39,7 +39,7 @@ class UserController extends Controller
 //        echo "<pre>";
 //        print_r($user_detail);
         $size=sizeof($user_detail);
-        echo $size;
+//        echo $size;
         $count=0;
         $skill_array=array();
         while($count!=$size)
@@ -57,14 +57,30 @@ class UserController extends Controller
         $skill_set=explode(",",$skill_set);
 //        print_r($skill_set);
 //        exit;
-        return view('template/tq_instructions')->with("skill_set",$skill_set);
-//        exit;
+//        echo "snj";
+//        $ab=sizeof($skill_set);
+//        echo $ab;
+//        echo $skill_set[0];
+        
+        $EmptyTestArray = array_filter($skill_set);
+
+        if (!empty($EmptyTestArray))
+          {
+            // do some tests on the values in $ArrayOne
+            echo "exists";
+                    return view('template/tq_instructions')->with("skill_set",$skill_set);
 
 
-//        $jobs=Jobs::where('company_id',1)->get();
-////         echo "<pre>";
-////        print_r($jobs[0]->job_role);
-//        return view('company/view_jobs')->with('jobs',$jobs)
+          }
+        else
+          {
+            // Likely not to need an else, 
+            // but could return message to user "you entered nothing" etc etc
+            echo "empty";
+            echo "test done";
+            
+
+          }
     }
 
 

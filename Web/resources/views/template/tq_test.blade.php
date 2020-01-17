@@ -93,93 +93,106 @@
       </div>
       <div class="sidebar-wrapper">
         <div style="margin-left:12px;margin-top:10px;">
+        <?php
+          if($skill=="C")
+          {
+              $val=0;
+          }
+          else if($skill=="Python"){
+            $val=30;    
+            }
+        else{
+            $val=60;
+        }    
+            
+        ?>    
         <span>
-       <a href="/tech_test/{{$skill}}/1"><button class="btn btn-primary" style="border-radius:50px;width:72px">1</button></a>
+       <a href="/tech_test/{{$skill}}/{{$val+2}}"><button class="btn btn-primary" style="border-radius:50px;width:72px">1</button></a>
        </span>
-          <span>
-       <a href="/tech_test/{{$skill}}/2"><button class="btn btn-primary" style="border-radius:50px;width:72px">2</button></a>
+        <span>
+       <a href="/tech_test/{{$skill}}/{{$val+2}}"><button class="btn btn-primary" style="border-radius:50px;width:72px">2</button></a>
         </span>
 
         <span>
-       <a href="/tech_test/{{$skill}}/3"><button class="btn btn-primary" style="border-radius:50px;width:72px">3</button></a>
+       <a href="/tech_test/{{$skill}}/{{$val+3}}"><button class="btn btn-primary" style="border-radius:50px;width:72px">3</button></a>
        </span>
        <span>
-       <a href="/tech_test/{{$skill}}/4"><button class="btn btn-primary" style="border-radius:50px;width:72px">4</button></a>
+       <a href="/tech_test/{{$skill}}/{{$val+4}}"><button class="btn btn-primary" style="border-radius:50px;width:72px">4</button></a>
        </span>
        <span>
-       <a href="/tech_test/{{$skill}}/5"><button class="btn btn-primary" style="border-radius:50px;width:72px">5</button></a>
+       <a href="/tech_test/{{$skill}}/{{$val+5}}"><button class="btn btn-primary" style="border-radius:50px;width:72px">5</button></a>
        </span>
        <span>
-       <a href="/tech_test/{{$skill}}/6"><button class="btn btn-primary" style="border-radius:50px;width:72px">6</button></a>
+       <a href="/tech_test/{{$skill}}/{{$val+6}}"><button class="btn btn-primary" style="border-radius:50px;width:72px">6</button></a>
        </span>
        <span>
-       <a href="/tech_test/{{$skill}}/7"><button class="btn btn-primary" style="border-radius:50px;width:72px">7</button></a>
+       <a href="/tech_test/{{$skill}}/{{$val+8}}"><button class="btn btn-primary" style="border-radius:50px;width:72px">7</button></a>
        </span>
        <span>
-       <a href="/tech_test/{{$skill}}/8"><button class="btn btn-primary" style="border-radius:50px;width:72px">8</button></a>
+       <a href="/tech_test/{{$skill}}/{{$val+9}}"><button class="btn btn-primary" style="border-radius:50px;width:72px">8</button></a>
        </span>
        <span>
-       <a href="/tech_test/{{$skill}}/9"><button class="btn btn-primary" style="border-radius:50px;width:72px">9</button></a>
+       <a href="/tech_test/{{$skill}}/{{$val+9}}"><button class="btn btn-primary" style="border-radius:50px;width:72px">9</button></a>
        </span>
        <span>
-       <a href="/tech_test/{{$skill}}/10"><button class="btn btn-primary" style="border-radius:50px;width:72px">10</button></a>
+       <a href="/tech_test/{{$skill}}/{{$val+10}}"><button class="btn btn-primary" style="border-radius:50px;width:72px">10</button></a>
        </span>
        <span>
-       <a href="/tech_test/{{$skill}}/11"><button class="btn btn-primary" style="border-radius:50px;width:72px">11</button></a>
-       </span>
-
-
-       <span>
-       <a href="/tech_test/{{$skill}}/12"><button class="btn btn-primary" style="border-radius:50px;width:72px">12</button></a>
-       </span>
-       <span>
-       <a href="/tech_test/{{$skill}}/13"><button class="btn btn-primary" style="border-radius:50px;width:72px">13</button></a>
-       </span>
-       <span>
-       <a href="/tech_test/{{$skill}}/14"><button class="btn btn-primary" style="border-radius:50px;width:72px">14</button></a>
-       </span>
-       <span>
-       <a href="/tech_test/{{$skill}}/15"><button class="btn btn-primary" style="border-radius:50px;width:72px">15</button></a>
-       </span>
-       <span>
-       <a href="/tech_test/{{$skill}}/16"><button class="btn btn-primary" style="border-radius:50px;width:72px">16</button></a>
-       </span>
-       <span>
-       <a href="/tech_test/{{$skill}}/17"><button class="btn btn-primary" style="border-radius:50px;width:72px">17</button></a>
-       </span>
-       <span>
-       <a href="/tech_test/{{$skill}}/18"><button class="btn btn-primary" style="border-radius:50px;width:72px">18</button></a>
-       </span>
-       <span>
-       <a href="/tech_test/{{$skill}}/19"><button class="btn btn-primary" style="border-radius:50px;width:72px">19</button></a>
-       </span>
-       <span>
-       <a href="/tech_test/{{$skill}}/20"><button class="btn btn-primary" style="border-radius:50px;width:72px">20</button></a>
-       </span>
-       <span>
-       <a href="/tech_test/{{$skill}}/21"><button class="btn btn-primary" style="border-radius:50px;width:72px">21</button></a>
+       <a href="/tech_test/{{$skill}}/{{$val+11}}"><button class="btn btn-primary" style="border-radius:50px;width:72px">11</button></a>
        </span>
 
 
+       <span>
+       <a href="/tech_test/{{$skill}}/{{$val+12}}"><button class="btn btn-primary" style="border-radius:50px;width:72px">12</button></a>
+       </span>
+       <span>
+       <a href="/tech_test/{{$skill}}/{{$val+13}}"><button class="btn btn-primary" style="border-radius:50px;width:72px">13</button></a>
+       </span>
+       <span>
+       <a href="/tech_test/{{$skill}}/{{$val+14}}"><button class="btn btn-primary" style="border-radius:50px;width:72px">14</button></a>
+       </span>
+       <span>
+       <a href="/tech_test/{{$skill}}/{{$val+15}}"><button class="btn btn-primary" style="border-radius:50px;width:72px">15</button></a>
+       </span>
+       <span>
+       <a href="/tech_test/{{$skill}}/{{$val+16}}"><button class="btn btn-primary" style="border-radius:50px;width:72px">16</button></a>
+       </span>
+       <span>
+       <a href="/tech_test/{{$skill}}/{{$val+17}}"><button class="btn btn-primary" style="border-radius:50px;width:72px">17</button></a>
+       </span>
+       <span>
+       <a href="/tech_test/{{$skill}}/{{$val+18}}"><button class="btn btn-primary" style="border-radius:50px;width:72px">18</button></a>
+       </span>
+       <span>
+       <a href="/tech_test/{{$skill}}/{{$val+19}}"><button class="btn btn-primary" style="border-radius:50px;width:72px">19</button></a>
+       </span>
+       <span>
+       <a href="/tech_test/{{$skill}}/{{$val+20}}"><button class="btn btn-primary" style="border-radius:50px;width:72px">20</button></a>
+       </span>
+       <span>
+       <a href="/tech_test/{{$skill}}/{{$val+21}}"><button class="btn btn-primary" style="border-radius:50px;width:72px">21</button></a>
+       </span>
+
+
 
        <span>
-       <a href="/tech_test/{{$skill}}/22"><button class="btn btn-primary" style="border-radius:50px;width:72px">22</button></a>
+       <a href="/tech_test/{{$skill}}/{{$val+22}}"><button class="btn btn-primary" style="border-radius:50px;width:72px">22</button></a>
        </span><span>
-       <a href="/tech_test/{{$skill}}/23"><button class="btn btn-primary" style="border-radius:50px;width:72px">23</button></a>
+       <a href="/tech_test/{{$skill}}/{{$val+23}}"><button class="btn btn-primary" style="border-radius:50px;width:72px">23</button></a>
        </span><span>
-       <a href="/tech_test/{{$skill}}/24"><button class="btn btn-primary" style="border-radius:50px;width:72px">24</button></a>
+       <a href="/tech_test/{{$skill}}/{{$val+24}}"><button class="btn btn-primary" style="border-radius:50px;width:72px">24</button></a>
        </span><span>
-       <a href="/tech_test/{{$skill}}/25"><button class="btn btn-primary" style="border-radius:50px;width:72px">25</button></a>
+       <a href="/tech_test/{{$skill}}/{{$val+25}}"><button class="btn btn-primary" style="border-radius:50px;width:72px">25</button></a>
        </span><span>
-       <a href="/tech_test/{{$skill}}/26"><button class="btn btn-primary" style="border-radius:50px;width:72px">26</button></a>
+       <a href="/tech_test/{{$skill}}/{{$val+26}}"><button class="btn btn-primary" style="border-radius:50px;width:72px">26</button></a>
        </span><span>
-       <a href="/tech_test/{{$skill}}/27"><button class="btn btn-primary" style="border-radius:50px;width:72px">27</button></a>
+       <a href="/tech_test/{{$skill}}/{{$val+27}}"><button class="btn btn-primary" style="border-radius:50px;width:72px">27</button></a>
        </span><span>
-       <a href="/tech_test/{{$skill}}/28"><button class="btn btn-primary" style="border-radius:50px;width:72px">28</button></a>
+       <a href="/tech_test/{{$skill}}/{{$val+28}}"><button class="btn btn-primary" style="border-radius:50px;width:72px">28</button></a>
        </span><span>
-       <a href="/tech_test/{{$skill}}/29"><button class="btn btn-primary" style="border-radius:50px;width:72px">29</button></a>
+       <a href="/tech_test/{{$skill}}/{{$val+29}}"><button class="btn btn-primary" style="border-radius:50px;width:72px">29</button></a>
        </span><span>
-       <a href="/tech_test/{{$skill}}/30"><button class="btn btn-primary" style="border-radius:50px;width:72px">30</button></a>
+       <a href="/tech_test/{{$skill}}/{{$val+30}}"><button class="btn btn-primary" style="border-radius:50px;width:72px">30</button></a>
        </span>
 
 
@@ -336,7 +349,7 @@
                                 
                             </td>
                             <td>
-                            {{ $tech[0]->option_4}}
+                            {{ $tech[0]->option_4 }}
 <!--                           -->
                             </td>
                             
@@ -346,7 +359,8 @@
                           </tr>
 
                           <tr>
-                            <input type="hidden" id="lang" name="" value="{{$skill}}" >
+                          </tr>
+                          <tr>
                           </tr>
                         </tbody>
                       </table>
@@ -361,11 +375,20 @@
             </div>
           
           </div>
+                
+              
                 <span>
-                   
-                    <a href="/aq_instructions"><button type="submit" class="btn btn-danger">End Test</button></a>
-                    <a href="/aq_instructions"><button type="submit" class="btn btn-info">Submit Section</button></a>
-                    
+
+                    <form method="get" action="/save_skill">
+                @csrf
+                   <input type="hidden" id="lang" name="language" value="{{$skill}}" >
+                   <input type="hidden" id="score" name="scores" value="" >
+
+                    <a href="/eq_instructions"><button type="" class="btn btn-danger">End Test</button></a>
+                   <button type="submit" class="btn btn-info">Submit Section</button>s
+             
+                     </form>       
+
 <!--                                     <a href="/instructions"><button type="submit" style="width:100%" class="btn btn-info">SUBMIT</button></a>-->
 
                   <a href="/tech_test/{{$skill}}/{{$tech[0]->question_id+1}}"><button type="submit" class="btn btn-primary pull-right">Next<i class="material-icons">keyboard_arrow_right</i></button></a>
@@ -603,6 +626,11 @@
   <script>
     var final_answer = document.getElementById('answer').value;
      alert(final_answer);
+      alert(document.getElementById("lang").value);
+      
+      document.getElementById("score").value=localStorage.getItem('tq_score');
+      
+      alert("hid"+document.getElementById("score").value);
     var choosed_ans;
       
       
@@ -622,8 +650,9 @@
       var rflag;
       rflag=flag+1;
       localStorage.setItem('tq_score',rflag);
-
-      alert(localStorage.getItem('tq_score'));
+          
+//      alert(localStorage.getItem('tq_score'));
+    
       }
 
       else{

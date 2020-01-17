@@ -98,11 +98,20 @@
                     <?php
                       $a=array("btn btn-warning","btn btn-info","btn btn-success","btn btn-warning","btn btn-info","btn btn-success","btn btn-warning","btn btn-info","btn btn-success");
                       $count=0;
+                      
 //                      $skill_set=array("c","c","c","c","c");
                       ?>
                     @foreach($skill_set as $skills)
-                    
-                    <span><a href="/tech_test/{{$skills}}/2"><button class="<?php echo $a[$count]?>" style="margin-left:20px;">{{$skills}}</button></a></span> 
+                    <?php
+                          if($skills=="C"){
+                              $c=1 ;
+                          }else if($skills=="Python"){
+                              $c=30;
+                          }else{
+                              $c=60;
+                          }
+                          ?>
+                    <span><a href="/tech_test/{{$skills}}/{{$c+1}}"><button class="<?php echo $a[$count]?>" style="margin-left:20px;">{{$skills}}</button></a></span> 
                     <?php
                     $count+=1;
     ?>
