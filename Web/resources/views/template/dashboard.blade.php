@@ -99,7 +99,7 @@
                   </div>
 
                 </div>
-                 <a href="/instructions"><button type="submit" class="btn btn-info">Start Test</button></a>
+                 <a href="/instructions"><button type="submit" class="btn btn-info" style="width: 100%;">Start Test</button></a>
               </div>
             </div>
             <div class="col-lg-3 col-md-6 col-sm-6">

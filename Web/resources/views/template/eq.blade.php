@@ -94,92 +94,92 @@
       <div class="sidebar-wrapper">
         <div style="margin-left:12px;margin-top:10px;">
         <span>
-       <a href="/test/1"><button class="btn btn-primary" style="border-radius:50px;width:72px">1</button></a>
+       <a href="/eqtest/1"><button class="btn btn-primary" style="border-radius:50px;width:72px">1</button></a>
        </span>
           <span>
-       <a href="/test/2"><button class="btn btn-primary" style="border-radius:50px;width:72px">2</button></a>
+       <a href="/eqtest/2"><button class="btn btn-primary" style="border-radius:50px;width:72px">2</button></a>
         </span>
 
         <span>
-       <a href="/test/3"><button class="btn btn-primary" style="border-radius:50px;width:72px">3</button></a>
+       <a href="/eqtest/3"><button class="btn btn-primary" style="border-radius:50px;width:72px">3</button></a>
        </span>
        <span>
-       <a href="/test/4"><button class="btn btn-primary" style="border-radius:50px;width:72px">4</button></a>
+       <a href="/eqtest/4"><button class="btn btn-primary" style="border-radius:50px;width:72px">4</button></a>
        </span>
        <span>
-       <a href="/test/5"><button class="btn btn-primary" style="border-radius:50px;width:72px">5</button></a>
+       <a href="/eqtest/5"><button class="btn btn-primary" style="border-radius:50px;width:72px">5</button></a>
        </span>
        <span>
-       <a href="/test/6"><button class="btn btn-primary" style="border-radius:50px;width:72px">6</button></a>
+       <a href="/eqtest/6"><button class="btn btn-primary" style="border-radius:50px;width:72px">6</button></a>
        </span>
        <span>
-       <a href="/test/7"><button class="btn btn-primary" style="border-radius:50px;width:72px">7</button></a>
+       <a href="/eqtest/7"><button class="btn btn-primary" style="border-radius:50px;width:72px">7</button></a>
        </span>
        <span>
-       <a href="/test/8"><button class="btn btn-primary" style="border-radius:50px;width:72px">8</button></a>
+       <a href="/eqtest/8"><button class="btn btn-primary" style="border-radius:50px;width:72px">8</button></a>
        </span>
        <span>
-       <a href="/test/9"><button class="btn btn-primary" style="border-radius:50px;width:72px">9</button></a>
+       <a href="/eqtest/9"><button class="btn btn-primary" style="border-radius:50px;width:72px">9</button></a>
        </span>
        <span>
-       <a href="/test/10"><button class="btn btn-primary" style="border-radius:50px;width:72px">10</button></a>
+       <a href="/eqtest/10"><button class="btn btn-primary" style="border-radius:50px;width:72px">10</button></a>
        </span>
        <span>
-       <a href="/test/11"><button class="btn btn-primary" style="border-radius:50px;width:72px">11</button></a>
-       </span>
-
-
-       <span>
-       <a href="/test/12"><button class="btn btn-primary" style="border-radius:50px;width:72px">12</button></a>
-       </span>
-       <span>
-       <a href="/test/13"><button class="btn btn-primary" style="border-radius:50px;width:72px">13</button></a>
-       </span>
-       <span>
-       <a href="/test/14"><button class="btn btn-primary" style="border-radius:50px;width:72px">14</button></a>
-       </span>
-       <span>
-       <a href="/test/15"><button class="btn btn-primary" style="border-radius:50px;width:72px">15</button></a>
-       </span>
-       <span>
-       <a href="/test/16"><button class="btn btn-primary" style="border-radius:50px;width:72px">16</button></a>
-       </span>
-       <span>
-       <a href="/test/17"><button class="btn btn-primary" style="border-radius:50px;width:72px">17</button></a>
-       </span>
-       <span>
-       <a href="/test/18"><button class="btn btn-primary" style="border-radius:50px;width:72px">18</button></a>
-       </span>
-       <span>
-       <a href="/test/19"><button class="btn btn-primary" style="border-radius:50px;width:72px">19</button></a>
-       </span>
-       <span>
-       <a href="/test/20"><button class="btn btn-primary" style="border-radius:50px;width:72px">20</button></a>
-       </span>
-       <span>
-       <a href="/test/21"><button class="btn btn-primary" style="border-radius:50px;width:72px">21</button></a>
+       <a href="/eqtest/11"><button class="btn btn-primary" style="border-radius:50px;width:72px">11</button></a>
        </span>
 
 
+       <span>
+       <a href="/eqtest/12"><button class="btn btn-primary" style="border-radius:50px;width:72px">12</button></a>
+       </span>
+       <span>
+       <a href="/eqtest/13"><button class="btn btn-primary" style="border-radius:50px;width:72px">13</button></a>
+       </span>
+       <span>
+       <a href="/eqtest/14"><button class="btn btn-primary" style="border-radius:50px;width:72px">14</button></a>
+       </span>
+       <span>
+       <a href="/eqtest/15"><button class="btn btn-primary" style="border-radius:50px;width:72px">15</button></a>
+       </span>
+       <span>
+       <a href="/eqtest/16"><button class="btn btn-primary" style="border-radius:50px;width:72px">16</button></a>
+       </span>
+       <span>
+       <a href="/eqtest/17"><button class="btn btn-primary" style="border-radius:50px;width:72px">17</button></a>
+       </span>
+       <span>
+       <a href="/eqtest/18"><button class="btn btn-primary" style="border-radius:50px;width:72px">18</button></a>
+       </span>
+       <span>
+       <a href="/eqtest/19"><button class="btn btn-primary" style="border-radius:50px;width:72px">19</button></a>
+       </span>
+       <span>
+       <a href="/eqtest/20"><button class="btn btn-primary" style="border-radius:50px;width:72px">20</button></a>
+       </span>
+       <span>
+       <a href="/eqtest/21"><button class="btn btn-primary" style="border-radius:50px;width:72px">21</button></a>
+       </span>
+
+
 
        <span>
-       <a href="/test/22"><button class="btn btn-primary" style="border-radius:50px;width:72px">22</button></a>
+       <a href="/eqtest/22"><button class="btn btn-primary" style="border-radius:50px;width:72px">22</button></a>
        </span><span>
-       <a href="/test/23"><button class="btn btn-primary" style="border-radius:50px;width:72px">23</button></a>
+       <a href="/eqtest/23"><button class="btn btn-primary" style="border-radius:50px;width:72px">23</button></a>
        </span><span>
-       <a href="/test/24"><button class="btn btn-primary" style="border-radius:50px;width:72px">24</button></a>
+       <a href="/eqtest/24"><button class="btn btn-primary" style="border-radius:50px;width:72px">24</button></a>
        </span><span>
-       <a href="/test/25"><button class="btn btn-primary" style="border-radius:50px;width:72px">25</button></a>
+       <a href="/eqtest/25"><button class="btn btn-primary" style="border-radius:50px;width:72px">25</button></a>
        </span><span>
-       <a href="/test/26"><button class="btn btn-primary" style="border-radius:50px;width:72px">26</button></a>
+       <a href="/eqtest/26"><button class="btn btn-primary" style="border-radius:50px;width:72px">26</button></a>
        </span><span>
-       <a href="/test/27"><button class="btn btn-primary" style="border-radius:50px;width:72px">27</button></a>
+       <a href="/eqtest/27"><button class="btn btn-primary" style="border-radius:50px;width:72px">27</button></a>
        </span><span>
-       <a href="/test/28"><button class="btn btn-primary" style="border-radius:50px;width:72px">28</button></a>
+       <a href="/eqtest/28"><button class="btn btn-primary" style="border-radius:50px;width:72px">28</button></a>
        </span><span>
-       <a href="/test/29"><button class="btn btn-primary" style="border-radius:50px;width:72px">29</button></a>
+       <a href="/eqtest/29"><button class="btn btn-primary" style="border-radius:50px;width:72px">29</button></a>
        </span><span>
-       <a href="/test/30"><button class="btn btn-primary" style="border-radius:50px;width:72px">30</button></a>
+       <a href="/eqtest/30"><button class="btn btn-primary" style="border-radius:50px;width:72px">30</button></a>
        </span>
 
 
@@ -248,13 +248,13 @@
                           <tr>
                             <td>
                               <div style="background:#972FAF;box-shadow: 3px 3px 4px #ccc;width:30px;height:30px;color:white;padding-top:2px;text-align:center">
-
+                                  {{$eq[0]->question_id}}
                               
                               </div>   
                             </td>
                             <td>
 <!--                         -->
-                            
+                                {{$eq[0]->question_statement}}
                             </td>
                             
                           </tr>
@@ -264,7 +264,7 @@
                               <div class="form-check">
                                 
                                 <label class="cont">
-                                <input type="radio"  name="iq_radio" id="iq_option" value="" onchange="check_ans(this.value)">
+                                <input type="radio"  name="eq_radio" id="eq_option" value="-1" onchange="check_ans(this.value)">
                                 <span class="checkmark"></span>
                               </label>
                         
@@ -274,6 +274,7 @@
                             <td>
                             
 <!--                         -->
+                                {{$eq[0]->option_1}}
                             
                             </td>
             
@@ -287,7 +288,7 @@
                                <div class="form-check">
                                 
                                 <label class="cont">
-                                <input type="radio" name="iq_radio" value="}" onchange="check_ans(this.value)">
+                                <input type="radio" name="eq_radio" value="-0.5" onchange="check_ans(this.value)">
                                 <span class="checkmark"></span>
                               </label>
                         
@@ -298,6 +299,7 @@
                             </td>
                             <td>
 <!--                         -->
+                                {{$eq[0]->option_2}}
                             </td>
                             
                           </tr>
@@ -306,7 +308,7 @@
                                <div class="form-check">
                                 
                                 <label class="cont">
-                                <input type="radio" name="iq_radio" value=" " onchange="check_ans(this.value)">
+                                <input type="radio" name="eq_radio" value="0" onchange="check_ans(this.value)">
                                 <span class="checkmark"></span>
                               </label>
                         
@@ -315,6 +317,7 @@
                             </td>
                             <td>
 <!--                            -->
+                                {{$eq[0]->option_3}}
                             </td>
                             
                           </tr>
@@ -323,7 +326,7 @@
                               <div class="form-check">
                                 
                                 <label class="cont">
-                                <input type="radio"  name="iq_radio" value="" onchange="check_ans(this.value)">
+                                <input type="radio" name="eq_radio" value="0.5" onchange="check_ans(this.value)">
                                 <span class="checkmark"></span>
                               </label>
                         
@@ -332,11 +335,30 @@
                             </td>
                             <td>
 <!--                           -->
+                                {{$eq[0]->option_4}}
                             </td>
                             
                           </tr>
                           <tr>
-                            <input type="hidden" id="answer" name="" value="" >
+                              <td>
+                                  <div class="form-check">
+
+                                      <label class="cont">
+                                          <input type="radio" name="eq_radio" value="1" onchange="check_ans(this.value)">
+                                          <span class="checkmark"></span>
+                                      </label>
+
+                                  </div>
+
+                              </td>
+                              <td>
+                                  <!--                           -->
+                                  {{$eq[0]->option_5}}
+                              </td>
+
+                          </tr>
+                          <tr>
+                            <input type="hidden" id="answer" name="" value="{{$eq[0]->tag}}" >
                           </tr>
 
                           <tr>
@@ -357,8 +379,8 @@
           </div>
                 <span>
                    
-                    <a href="/eq_instructions"><button type="submit" class="btn btn-danger">End Test</button></a>
-                    <a href="/tq_instruction/1"><button type="submit" class="btn btn-info">Submit Section</button></a>
+                    <a href="/tq_instructions"><button type="submit" class="btn btn-danger">End Test</button></a>
+                    <a href="/tq_instructions"><button type="submit" class="btn btn-info">Submit Section</button></a>
                     
 <!--                                     <a href="/instructions"><button type="submit" style="width:100%" class="btn btn-info">SUBMIT</button></a>-->
 
@@ -595,27 +617,30 @@
 
 
   <script>
-    var final_answer = document.getElementById('answer').value;
-    // alert(final_answer);
+    var tag = document.getElementById('answer').value;
+    alert(tag);
     var choosed_ans;
     function check_ans(val){
       choosed_ans=val;
-      // alert(choosed_ans);
-      var flag=localStorage.getItem('iq_score');
+      choosed_ans = parseFloat(choosed_ans);
+      alert(choosed_ans);
+
+      var flag=localStorage.getItem(tag);
       flag=parseInt(flag);
+      alert(localStorage.getItem(tag));
 
-      if(final_answer === choosed_ans){
-      alert("Right ans");
-      var rflag;
-      rflag=flag+1;
-      localStorage.setItem('iq_score',rflag);
+      // if(final_answer === choosed_ans){
+      // alert("Right ans");
+      // var rflag;
+      // rflag=flag+1;
+      localStorage.setItem(tag,flag+choosed_ans);
 
-      alert(localStorage.getItem('iq_score'));
-      }
+      alert(localStorage.getItem(tag));
+      // }
 
-      else{
-        localStorage.setItem('iq_score',flag);
-      }   
+      // else{
+      //   localStorage.setItem('iq_score',flag);
+      // }
 
     }
     
