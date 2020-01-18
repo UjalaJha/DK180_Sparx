@@ -625,8 +625,10 @@
 
   <script>
     var final_answer = document.getElementById('answer').value;
+
      // alert(final_answer);
-     //  alert(document.getElementById("lang").value);
+//      alert(document.getElementById("lang").value);
+
       
       document.getElementById("score").value=localStorage.getItem('tq_score');
       

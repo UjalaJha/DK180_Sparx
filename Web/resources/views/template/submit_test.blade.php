@@ -76,15 +76,33 @@
                     <div class="card">
                         <div class="card-header card-header-primary">
 
-{{--                            <p id="iq_test_score"> IQ</p>--}}
-                            <h3 class="card-title">Submit your Test Scores?</h3>
-{{--                            <p class="card-category">Read the below guidelines properly.</p>--}}
+{{--                            <p id="iq_test_score"> </p>--}}
+                            <h3 class="card-title">Submit your Test Scores</h3>
+                            <p class="card-category">Read the below guidelines properly.</p>
                         </div>
                         <div class="card-body">
 
                             <!-- <h4></h4> --><br>
 
-
+                                <ul>
+                    <br>
+                    <h1>Thank You</h1>
+                    <h4>Your Test Ends Here</h4>
+                   <h4>Get your Results</h4>
+                    <h4>We will recommend you the best job</h4>
+<!--
+                    
+                    <li><h4>Total Time to complete the test : 1 hr 20 minutes.</h4></li>
+                    <li><h4>Each question carry 1 mark, no negative marks.</h4></li>
+                    <li><h4>DO NOT Referesh the page.</h4></li>
+                    <li><h4>DO NOT Switch between sections.</h4></li>
+                    <li><h4>DO NOT Switch tabs.</h4></li>
+-->
+                   <!--  <li><h4>Number of questions in each section : 30.</h4></li>
+                    <li><h4>Number of questions in each section : 30.</h4></li> -->
+                  </ul>
+                            
+                            
 
                             <form method="post" action="/save_scores">
                                 @csrf
