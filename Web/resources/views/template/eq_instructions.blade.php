@@ -76,7 +76,7 @@
           <div class="card">
             <div class="card-header card-header-primary">
 
-              <p id="iq_test_score"> IQ</p>
+              <p id="iq_test_score"> </p>
               <h3 class="card-title">Emotional Quotient Test Instructions !!</h3>
               <p class="card-category">Read the below guidelines properly.</p>
             </div>
@@ -125,7 +125,7 @@
   <script>
     var iq_score_var = localStorage.getItem('iq_score');
     alert(iq_score_var);
-    document.getElementById("iq_test_score").innerHTML="IQ test score "+iq_score_var;
+    document.getElementById("iq_test_score").innerHTML="";
 
     // var iq_score=localStorage.getItem('iq_score');
     // document.getElementById.innerHTML=iq_score; 
