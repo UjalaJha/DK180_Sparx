@@ -14,7 +14,11 @@ class AQController extends Controller
         return view('template/aq')->with('aq',$aq);
         // print_r($iq[0]->question_statement);
     }
-
+    public function indexapi()
+    {
+        $aq=AQ::all()->toJson();
+        return $aq;
+    }
     public function show($id)
     {
 
