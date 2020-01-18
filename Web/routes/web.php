@@ -130,4 +130,7 @@ Route::get('/performance', function () {
 });
 
 
+Route::get('/notifications', function () {
+    return view('template/notifications');
+});
 

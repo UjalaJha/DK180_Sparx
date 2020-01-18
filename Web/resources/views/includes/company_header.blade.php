@@ -22,7 +22,7 @@
   <link rel="icon" type="image/png" href="../assets/img/favicon.png">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <title>
-    Material Dashboard by Creative Tim
+    HireConnect
   </title>
   <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
   <!--     Fonts and icons     -->
@@ -32,4 +32,22 @@
   <link href="../assets/css/material-dashboard.css?v=2.1.1" rel="stylesheet" />
   <!-- CSS Just for demo purpose, don't include it in your project -->
   <link href="../assets/demo/demo.css" rel="stylesheet" />
+
+  <link rel="stylesheet" href="../assets/select2/css/select2.min.css">
+  <style type="text/css">
+    /*@import "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css";*/
+
+    /* Select2 css */
+    @import "http://propeller.in/components/select2/css/select2.min.css";
+    @import "http://propeller.in/components/select2/css/select2-bootstrap.css";
+
+    /* Propeller typography */
+    @import "http://propeller.in/components/typography/css/typography.css";
+
+    /* Propeller text fields */
+    @import "http://propeller.in/components/textfield/css/textfield.css";
+
+    /* Propeller select2 */
+    @import "http://propeller.in/components/select2/css/pmd-select2.css";
+  </style>
 </head>

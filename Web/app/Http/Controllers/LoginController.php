@@ -17,8 +17,10 @@ class LoginController extends Controller
             'password' => 'required'
         ]);
 
+        $hashed_password = bcrypt($_POST['password']);
+
         $user_details->email_id = $_POST['email_id'];
-        $user_details->password = $_POST['password'];
+        $user_details->password = $hashed_password;
 
         $user_details->save();
 
