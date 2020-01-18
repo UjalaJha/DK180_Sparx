@@ -458,7 +458,7 @@ $(".custom-file-input").on("change", function() {
   $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
 });
 </script>
-<script src="../assets/select2/dist/js/select2.min.js"></script>
+<script src="../assets/select2/js/select2.min.js"></script>
 
 <script>
     
