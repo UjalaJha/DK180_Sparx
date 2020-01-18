@@ -15,6 +15,13 @@ class EQController extends Controller
         return view('template/eq')->with('eq',$eq);
         // print_r($iq[0]->question_statement);
     }
+     public function indexapi()
+    {
+        $eq=EQ::all()->toJson();
+        return $eq;
+       
+    }
+
 
     public function show($id)
     {

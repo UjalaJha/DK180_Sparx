@@ -23,11 +23,9 @@ class UserController extends Controller
 {
 
 
-
-
     public function skills_view(){
-        echo "hi";
-//
+//        echo "hi";
+
 
         $id = Session::get('user_id');
 //        echo $id;
@@ -76,9 +74,9 @@ class UserController extends Controller
           {
             // Likely not to need an else, 
             // but could return message to user "you entered nothing" etc etc
-            echo "empty";
-            echo "test done";
-            
+//            echo "empty";
+//            echo "test done";
+            return view('/template/aq_instructions');
 
           }
     }
@@ -94,7 +92,10 @@ class UserController extends Controller
 //        print_r($_POST);
 //        exit;
 
+        $user_id = Session::get('user_id');
+
         $user = new UserPersonalDetails;
+        $user->user_id = $user_id;
         $user->first_name = $_POST['first_name'];
         $user->last_name = $_POST['last_name'];
         $user->age = $_POST['age'];
@@ -151,7 +152,7 @@ class UserController extends Controller
         foreach ($_POST['skills'] as $value){
             $user_technical_details = new UserTechnical;
 
-            $user_technical_details->user_id = 1;
+            $user_technical_details->user_id = $user_id;
             $user_technical_details->language = $value;
             $user_technical_details->language_score = 0;
             $user_technical_details->test_given = 0;
@@ -173,7 +174,7 @@ class UserController extends Controller
         foreach ($_POST['skills'] as $value){
             $user_ratings_details = new UserRatings;
 
-            $user_ratings_details->user_id = 1;
+            $user_ratings_details->user_id = $user_id;
             $user_ratings_details->language = $value;
 
             $user_ratings_details->save();
@@ -189,6 +190,7 @@ class UserController extends Controller
 
 
 
+        return view('/template/user');
 
 
     }
@@ -199,7 +201,9 @@ class UserController extends Controller
 //        echo "<pre>";
 //        print_r($_POST);
 //        exit;
+        $user_id = Session::get('user_id');
 
+        $user_academics->user_id = $user_id;
         $user_academics->x_school_name = $_POST['x_school_name'];
         $user_academics->x_board_name = $_POST['x_board_name'];
         $user_academics->x_year_of_completion = $_POST['x_year_of_completion'];
@@ -222,9 +226,14 @@ class UserController extends Controller
         $user_academics->save();
 
 
+        return view('/template/user');
+
     }
 
     public function storeInternship(){
+
+
+        $user_id = Session::get('user_id');
 
 
         $size = count($_POST['company_name']);
@@ -236,6 +245,7 @@ class UserController extends Controller
 //            echo $_POST['company_name'][$i];
             $user_experience = new UserExperiences;
 
+            $user_experience->user_id = $user_id;
             $user_experience->is_internship_project = 1;
             $user_experience->company_name = $_POST['company_name'][$i];
             $user_experience->project_name = $_POST['project_name'][$i];
@@ -257,6 +267,8 @@ class UserController extends Controller
             $user_experience = null;
 
 
+            return view('/template/user');
+
         }
 
     }
@@ -267,10 +279,12 @@ class UserController extends Controller
 
 //        $user_project->project_name;
 
+        $user_id = Session::get('user_id');
 
         for($i=0; $i<$size; $i++){
             $user_project = new UserExperiences;
 
+            $user_project->user_id = $user_id;
             $user_project->project_name = $_POST['project_name'][$i];
             $user_project->role = $_POST['role'][$i];
             $user_project->domain = $_POST['domain'][$i];
@@ -288,6 +302,7 @@ class UserController extends Controller
 
             $user_project = null;
 
+            return view('/template/user');
 
         }
 
@@ -336,6 +351,7 @@ class UserController extends Controller
         $user_aq_score->aq_curiosity = $curiosity;
         $user_aq_score->save();
 
+        return view('/template/performance');
 
     }
 
