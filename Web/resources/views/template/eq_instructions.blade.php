@@ -124,7 +124,7 @@
 
   <script>
     var iq_score_var = localStorage.getItem('iq_score');
-    alert(iq_score_var);
+    // alert(iq_score_var);
     document.getElementById("iq_test_score").innerHTML="IQ test score "+iq_score_var;
 
     // var iq_score=localStorage.getItem('iq_score');

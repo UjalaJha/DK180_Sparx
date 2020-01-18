@@ -136,7 +136,7 @@
                                     <div id="morris_profit" style="height: 272px;"></div>
                                 </div>
                                <div class="container" style="margin-left: 40px;">
-                                    <p>You are Higly Eligible for jobs !!</p>
+                                    <p>You are Higly Eligible for Data Analyst !!</p>
                                     <!-- <p>Incorrect Answers<span class="text-dark"> :&nbsp; 20 </span> -->
                                   
                                 </div>
@@ -262,8 +262,85 @@
 
 
 
-            
-          </div>
+
+            <section class="site-section">
+                <div class="container jobs">
+
+                    <div class="row mb-5 justify-content-center">
+                        <div class="col-md-7 text-center">
+                            <h2 class="section-title mb-2">50 Jobs Listed</h2>
+                        </div>
+                    </div>
+
+
+                    <div class="mb-5">
+                        <!-- <div class="row align-items-start job-item border-bottom pb-3 mb-3 pt-3">
+                          <div class="col-md-2">
+                            <a href="job-single.html"><img src="images/featured-listing-1.jpg" alt="Image" class="img-fluid"></a>
+                          </div>
+                          <div class="col-md-4">
+                            <span class="badge badge-primary px-2 py-1 mb-3">Freelancer</span>
+                            <h2><a href="job-single.html">Dropbox Product Designer</a> </h2>
+                            <p class="meta">Publisher: <strong>John Stewart</strong> In: <strong>Design</strong></p>
+                          </div>
+                          <div class="col-md-3 text-left">
+                            <h3>Melbourn</h3>
+                            <span class="meta">Australia</span>
+                          </div>
+                          <div class="col-md-3 text-md-right">
+                            <strong class="text-black">$60k &mdash; $100k</strong>
+                          </div>
+                        </div> -->
+
+
+                        <!-- <div class="row align-items-start job-item border-bottom pb-3 mb-3 pt-3">
+                          <div class="col-md-2">
+                            <a href="job-single.html"><img src="images/featured-listing-4.jpg" alt="Image" class="img-fluid"></a>
+                          </div>
+                          <div class="col-md-4">
+                            <span class="badge badge-primary px-2 py-1 mb-3">Freelancer</span>
+                            <h2><a href="job-single.html">Dropbox Product Designer</a> </h2>
+                            <p class="meta">Publisher: <strong>John Stewart</strong> In: <strong>Design</strong></p>
+                          </div>
+                          <div class="col-md-3 text-left">
+                            <h3>Melbourn</h3>
+                            <span class="meta">Australia</span>
+                          </div>
+                          <div class="col-md-3 text-md-right">
+                            <strong class="text-black">$60k &mdash; $100k</strong>
+                          </div>
+                        </div> -->
+
+
+
+                    </div>
+
+                    <!-- <div class="row pagination-wrap">
+
+                      <div class="col-md-6 text-center text-md-left">
+                        <div class="custom-pagination ml-auto">
+                          <a href="#" class="prev">Previous</a>
+                          <div class="d-inline-block">
+                            <a href="#" class="active">1</a>
+                            <a href="#">2</a>
+                            <a href="#">3</a>
+                            <a href="#">4</a>
+                          </div>
+                          <a href="#" class="next">Next</a>
+                        </div>
+                      </div>
+                    </div> -->
+
+                </div>
+            </section>
+
+
+
+
+
+
+
+        </div>
         </div>
       </div>
      
@@ -283,7 +360,33 @@
   <script src="../assets/js/plugins/jquery.validate.min.js"></script>
   <!-- Plugin for the Wizard, full documentation here: https://github.com/VinceG/twitter-bootstrap-wizard -->
 
-
+  <script>
+      $.getJSON('https://jobs.github.com/positions.json', function(data) {
+          $.each(data, function(index) {
+              // alert(data[index].TEST1);
+              console.log(data[index].url);
+              var html='';
+              html=html+'<div class="row align-items-start job-item border-bottom pb-3 mb-3 pt-3">'
+              html=html+'<div class="col-md-2">'
+              html=html+'  <a href="job-single.html"><img src="'+data[index].company_logo+'" alt="Image" class="img-fluid"></a>'
+              html=html+'</div>'
+              html=html+'<div class="col-md-4">'
+              html=html+'  <span class="badge badge-warning px-2 py-1 mb-3">'+data[index].type+'</span>'
+              html=html+'  <h2><a href="job-single.html">'+data[index].title+'</a> </h2>'
+              html=html+'  <p class="meta">Publisher: <strong>'+data[index].company+'</strong> In: <strong>Design</strong></p>'
+              html=html+'</div>'
+              html=html+'<div class="col-md-3 text-left">'
+              html=html+'  <h3>'+data[index].location+'</h3>'
+              /*html=html+'  <span class="meta">United Kingdom</span>'*/
+              html=html+'</div>'
+              html=html+'<div class="col-md-3 text-md-right">'
+              html=html+'  <strong class="text-black"><a href="'+data[index].url+'">'+data[index].url+'</a></strong>'
+              html=html+'</div>'
+              html=html+'</div>'
+              $('.jobs').append(html);
+          });
+      });
+  </script>
 
 
 

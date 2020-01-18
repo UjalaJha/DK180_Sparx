@@ -210,7 +210,7 @@
           <div class="navbar-wrapper">
             <a class="navbar-brand" href="#pablo">All The Best for your Test !!</a>
           </div>
-          <p>EQ</p> 
+          <p>TQ</p>
           <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
             <span class="sr-only">Toggle navigation</span>
             <span class="navbar-toggler-icon icon-bar"></span>
@@ -384,8 +384,8 @@
                    <input type="hidden" id="lang" name="language" value="{{$skill}}" >
                    <input type="hidden" id="score" name="scores" value="" >
 
-                    <a href="/eq_instructions"><button type="" class="btn btn-danger">End Test</button></a>
-                   <button type="submit" class="btn btn-info">Submit Section</button>s
+                    <a href="/aq_instructions"><button type="" class="btn btn-danger">End Test</button></a>
+                   <button type="submit" class="btn btn-info">Submit Section</button>
              
                      </form>       
 
@@ -625,12 +625,12 @@
 
   <script>
     var final_answer = document.getElementById('answer').value;
-     alert(final_answer);
-      alert(document.getElementById("lang").value);
+     // alert(final_answer);
+     //  alert(document.getElementById("lang").value);
       
       document.getElementById("score").value=localStorage.getItem('tq_score');
       
-      alert("hid"+document.getElementById("score").value);
+      // alert("hid"+document.getElementById("score").value);
     var choosed_ans;
       
       
@@ -646,7 +646,7 @@
 //console.log(final_answer);
       if(final_answer === val){     
 //          alert("hi");
-      alert("Right ans");
+//       alert("Right ans");
       var rflag;
       rflag=flag+1;
       localStorage.setItem('tq_score',rflag);

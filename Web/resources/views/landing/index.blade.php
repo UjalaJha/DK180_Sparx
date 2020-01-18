@@ -32,7 +32,7 @@
     <header class="site-navbar mt-3">
       <div class="container-fluid">
         <div class="row align-items-center">
-          <div class="site-logo col-6"><a href="index.html">Careers</a></div>
+          <div class="site-logo col-6"><a href="index.html">HIRECONNECT</a></div>
 
           <nav class="mx-auto site-navigation">
             <ul class="site-menu js-clone-nav d-none d-xl-block ml-0 pl-0">
@@ -65,8 +65,8 @@
         <div class="row align-items-center justify-content-center">
           <div class="col-md-12">
             <div class="mb-5 text-center">
-              <h1 class="text-white font-weight-bold">A Powerful Career Website Template</h1>
-              <p>Find your dream jobs in our powerful career website template.</p>
+              <h1 class="text-white font-weight-bold">Bringing Your Dream Job to You</h1>
+              <p>We are the most trustworthy when it comes to your career.</p>
             </div>
             <form method="post" class="search-jobs-form">
               <div class="row mb-5">

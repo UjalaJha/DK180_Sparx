@@ -2,438 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b42da8c1-15de-4d9c-badb-bb940fa51862" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/images/avatar-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/images/avatar-2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/images/avatar-3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/images/avatar-4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/images/avatar-5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/images/bitbucket.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/images/card-img-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/images/card-img-2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/images/card-img-3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/images/card-img.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/images/down-arrow.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/images/drag-indicator.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/images/dribbble.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/images/dropbox.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/images/eco-product-img-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/images/eco-product-img-2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/images/eco-product-img-3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/images/eco-product-img-4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/images/eco-slider-img-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/images/eco-slider-img-2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/images/eco-slider-img-3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/images/error-img.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/images/github.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/images/loader.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/images/logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/images/mail_chimp.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/images/product-pic-2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/images/product-pic-3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/images/product-pic-4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/images/product-pic.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/images/slack.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/images/switch.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/libs/css/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/libs/js/Chart.bundle.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/libs/js/dashboard-ecommerce.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/libs/js/dashboard-finance.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/libs/js/dashboard-influencer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/libs/js/dashboard-sales.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/libs/js/gmaps.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/libs/js/google_map.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/libs/js/jvectormap.custom.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/libs/js/main-js.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/bootstrap-colorpicker/@claviska/jquery-minicolors/jquery.minicolors.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/bootstrap-colorpicker/@claviska/jquery-minicolors/jquery.minicolors.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/bootstrap-colorpicker/@claviska/jquery-minicolors/jquery.minicolors.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/bootstrap-colorpicker/jquery-asColor/dist/jquery-asColor.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/bootstrap-colorpicker/jquery-asColorPicker/dist/jquery-asColorPicker.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/bootstrap-colorpicker/jquery-asGradient/dist/jquery-asGradient.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/bootstrap-select/css/bootstrap-select.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/bootstrap-select/js/bootstrap-select.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/bootstrap/css/bootstrap.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/bootstrap/js/bootstrap.bundle.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/charts/c3charts/C3chartjs.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/charts/c3charts/c3.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/charts/c3charts/c3.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/charts/c3charts/d3-5.4.0.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/charts/chartist-bundle/Chartistjs.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/charts/chartist-bundle/chartist-plugin-threshold.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/charts/chartist-bundle/chartist.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/charts/chartist-bundle/chartist.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/charts/charts-bundle/Chart.bundle.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/charts/charts-bundle/chartjs.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/charts/morris-bundle/Morrisjs.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/charts/morris-bundle/morris.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/charts/morris-bundle/morris.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/charts/morris-bundle/morrisjs.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/charts/morris-bundle/raphael.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/charts/sparkline/jquery.sparkline.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/charts/sparkline/spark-js.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/cropper/dist/cropper-int.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/cropper/dist/cropper.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/cropper/dist/cropper.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/custom-js/jquery.multi-select.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/datatables/css/buttons.bootstrap4.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/datatables/css/dataTables.bootstrap4.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/datatables/css/fixedHeader.bootstrap4.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/datatables/css/select.bootstrap4.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/datatables/js/buttons.bootstrap4.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/datatables/js/data-table.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/datatables/js/dataTables.bootstrap4.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/datepicker/datepicker.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/datepicker/moment.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/datepicker/tempusdominus-bootstrap-4.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/datepicker/tempusdominus-bootstrap-4.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/daterangepicker/daterangepicker.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/dropzone/dropzone.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/circular-std/CircularStd-Black.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/circular-std/CircularStd-BlackItalic.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/circular-std/CircularStd-Bold.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/circular-std/CircularStd-BoldItalic.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/circular-std/CircularStd-Book.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/circular-std/CircularStd-BookItalic.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/circular-std/CircularStd-Medium.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/circular-std/CircularStd-MediumItalic.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/circular-std/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flag-icon.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/ad.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/ae.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/af.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/ag.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/ai.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/al.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/am.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/ao.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/aq.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/ar.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/as.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/at.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/au.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/aw.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/ax.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/az.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/ba.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/bb.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/bd.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/be.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/bf.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/bg.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/bh.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/bi.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/bj.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/bl.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/bm.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/bn.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/bo.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/bq.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/br.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/bs.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/bt.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/bv.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/bw.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/by.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/bz.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/ca.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/cc.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/cd.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/cf.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/cg.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/ch.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/ci.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/ck.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/cl.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/cm.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/cn.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/co.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/cr.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/cu.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/cv.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/cw.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/cx.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/cy.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/cz.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/de.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/dj.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/dk.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/dm.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/do.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/dz.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/ec.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/ee.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/eg.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/eh.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/er.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/es.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/et.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/fi.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/fj.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/fk.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/fm.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/fo.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/fr.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/ga.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/gb.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/gd.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/ge.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/gf.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/gg.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/gh.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/gi.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/gl.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/gm.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/gn.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/gp.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/gq.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/gr.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/gs.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/gt.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/gu.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/gw.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/gy.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/hk.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/hm.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/hn.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/hr.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/ht.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/hu.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/id.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/ie.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/il.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/im.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/in.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/io.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/iq.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/ir.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/is.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/it.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/je.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/jm.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/jo.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/jp.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/ke.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/kg.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/kh.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/ki.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/km.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/kn.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/kp.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/kr.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/kw.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/ky.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/kz.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/la.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/lb.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/lc.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/li.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/lk.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/lr.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/ls.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/lt.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/lu.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/lv.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/ly.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/ma.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/mc.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/md.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/me.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/mf.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/mg.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/mh.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/mk.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/ml.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/mm.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/mn.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/mo.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/mp.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/mq.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/mr.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/ms.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/mt.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/mu.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/mv.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/mw.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/mx.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/my.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/mz.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/na.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/nc.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/ne.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/nf.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/ng.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/ni.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/nl.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/no.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/np.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/nr.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/nu.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/nz.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/om.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/pa.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/pe.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/pf.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/pg.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/ph.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/pk.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/pl.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/pm.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/pn.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/pr.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/ps.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/pt.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/pw.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/py.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/qa.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/re.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/ro.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/rs.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/ru.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/rw.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/sa.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/sb.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/sc.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/sd.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/se.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/sg.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/sh.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/si.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/sj.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/sk.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/sl.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/sm.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/sn.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/so.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/sr.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/ss.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/st.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/sv.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/sx.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/sy.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/sz.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/tc.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/td.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/tf.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/tg.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/th.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/tj.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/tk.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/tl.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/tm.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/tn.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/to.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/tr.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/tt.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/tv.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/tw.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/tz.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/ua.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/ug.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/um.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/us.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/uy.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/uz.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/va.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/vc.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/ve.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/vg.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/vi.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/vn.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/vu.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/wf.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/ws.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/ye.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/yt.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/za.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/zm.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/flag-icon-css/flags/zw.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/fontawesome/css/fontawesome-all.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/fontawesome/webfonts/fa-brands-400.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/fontawesome/webfonts/fa-brands-400.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/fontawesome/webfonts/fa-brands-400.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/fontawesome/webfonts/fa-brands-400.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/fontawesome/webfonts/fa-brands-400.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/fontawesome/webfonts/fa-brands-400d41d.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/fontawesome/webfonts/fa-regular-400.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/fontawesome/webfonts/fa-regular-400.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/fontawesome/webfonts/fa-regular-400.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/fontawesome/webfonts/fa-regular-400.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/fontawesome/webfonts/fa-regular-400.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/fontawesome/webfonts/fa-regular-400d41d.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/fontawesome/webfonts/fa-solid-900.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/fontawesome/webfonts/fa-solid-900.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/fontawesome/webfonts/fa-solid-900.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/fontawesome/webfonts/fa-solid-900.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/fontawesome/webfonts/fa-solid-900.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/fontawesome/webfonts/fa-solid-900d41d.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/material-design-iconic-font/css/materialdesignicons.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/material-design-iconic-font/fonts/materialdesignicons-webfontd41d.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/material-design-iconic-font/fonts/materialdesignicons-webfontdc99.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/material-design-iconic-font/fonts/materialdesignicons-webfontdc99.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/material-design-iconic-font/fonts/materialdesignicons-webfontdc99.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/material-design-iconic-font/fonts/materialdesignicons-webfontdc99.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/material-design-iconic-font/fonts/materialdesignicons-webfontdc99.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/simple-line-icons/css/simple-line-icons.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/simple-line-icons/fonts/Simple-Line-Icons4c82.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/simple-line-icons/fonts/Simple-Line-Icons4c82.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/simple-line-icons/fonts/Simple-Line-Icons4c82.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/simple-line-icons/fonts/Simple-Line-Icons4c82.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/simple-line-icons/fonts/Simple-Line-Icons4c82.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/simple-line-icons/fonts/Simple-Line-Iconsd41d.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/themify-icons/fonts/themify.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/themify-icons/fonts/themify.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/themify-icons/fonts/themify9f24.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/themify-icons/fonts/themify9f24.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/themify-icons/fonts/themifyd41d.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/themify-icons/themify-icons.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/weather-icons/css/weather-icons.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/fonts/weather-icons/fonts/weathericons-regular-webfont.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/full-calendar/css/fullcalendar.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/full-calendar/css/fullcalendar.print.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/full-calendar/js/calendar.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/full-calendar/js/fullcalendar.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/full-calendar/js/jquery-ui.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/full-calendar/js/moment.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/gauge/gauge.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/gauge/gauge.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/inputmask/css/inputmask.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/inputmask/js/jquery.inputmask.bundle.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/jquery/jquery-3.3.1.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/jvectormap/jquery-jvectormap-2.0.2.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/jvectormap/jquery-jvectormap-2.0.2.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/jvectormap/jquery-jvectormap-au-mill.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/jvectormap/jquery-jvectormap-in-mill.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/jvectormap/jquery-jvectormap-uk-mill-en.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/jvectormap/jquery-jvectormap-us-aea-en.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/jvectormap/jquery-jvectormap-world-mill-en.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/multi-select/css/multi-select.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/multi-select/js/jquery.multi-select.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/parsley/parsley.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/select2/css/select2.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/select2/js/select2.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/shortable-nestable/Sortable.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/shortable-nestable/jquery.nestable.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/shortable-nestable/sort-nest.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/slimscroll/jquery.slimscroll.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/summernote/css/font/summernote.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/summernote/css/font/summernote.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/summernote/css/font/summernote.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/summernote/css/font/summernote.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/summernote/css/summernote-bs4.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/summernote/js/summernote-bs4.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/timeline/img/cd-icon-location.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/timeline/img/cd-icon-movie.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/timeline/img/cd-icon-picture.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/timeline/js/main.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/vector-map/jqvmap.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/resources/views/template/performance.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/resources/views/template/profile.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/app/Http/Controllers/TQController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Web/app/Http/Controllers/TQController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Web/app/Http/Controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Web/app/Http/Controllers/UserController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Web/resources/views/includes/sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/Web/resources/views/includes/sidebar.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/resources/views/template/tq_instructions.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/Web/resources/views/template/tq_instructions.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web/resources/views/landing/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/Web/resources/views/landing/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web/resources/views/template/aq.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/Web/resources/views/template/aq.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web/resources/views/template/aq_instructions.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/Web/resources/views/template/aq_instructions.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web/resources/views/template/eq.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/Web/resources/views/template/eq.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web/resources/views/template/eq_instructions.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/Web/resources/views/template/eq_instructions.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web/resources/views/template/iq.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/Web/resources/views/template/iq.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web/resources/views/template/performance.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/Web/resources/views/template/performance.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Web/resources/views/template/tq_test.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/Web/resources/views/template/tq_test.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/Web/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web/resources/views/template/user.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/Web/resources/views/template/user.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -450,97 +29,91 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Web/resources/views/template/performance.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="338">
+              <caret line="270" column="61" selection-start-line="270" selection-start-column="61" selection-end-line="270" selection-end-column="61" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Web/resources/views/landing/login.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="124">
+              <caret line="38" column="49" lean-forward="true" selection-start-line="38" selection-start-column="49" selection-end-line="38" selection-end-column="49" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Web/routes/web.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="460">
-              <caret line="32" column="3" selection-start-line="32" selection-start-column="3" selection-end-line="32" selection-end-column="3" />
+            <state relative-caret-position="158">
+              <caret line="112" column="53" lean-forward="true" selection-start-line="112" selection-start-column="53" selection-end-line="112" selection-end-column="53" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Web/app/Http/Controllers/LoginController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="80">
+              <caret line="35" column="41" lean-forward="true" selection-start-line="35" selection-start-column="41" selection-end-line="35" selection-end-column="41" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Web/resources/views/template/user.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="400">
+              <caret line="68" column="19" selection-start-line="68" selection-start-column="19" selection-end-line="68" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Web/resources/views/includes/sidebar.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="30" column="45" lean-forward="true" selection-start-line="30" selection-start-column="45" selection-end-line="30" selection-end-column="45" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Web/resources/views/template/eq.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="438">
+              <caret line="645" column="4" lean-forward="true" selection-start-line="645" selection-start-column="4" selection-end-line="645" selection-end-column="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Web/resources/views/template/tq_test.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="96" column="25" lean-forward="true" selection-start-line="96" selection-start-column="25" selection-end-line="96" selection-end-column="25" />
+            <state relative-caret-position="262">
+              <caret line="217" column="49" lean-forward="true" selection-start-line="217" selection-start-column="49" selection-end-line="217" selection-end-column="49" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Web/app/TQ.php">
+        <entry file="file://$PROJECT_DIR$/Web/resources/views/template/aq_instructions.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+            <state relative-caret-position="124">
+              <caret line="132" lean-forward="true" selection-start-line="132" selection-end-line="132" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Web/app/UserTechnical.php">
+        <entry file="file://$PROJECT_DIR$/Web/resources/views/template/aq.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="11" column="31" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Web/app/UserIQ.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="160">
-              <caret line="8" column="31" selection-start-line="8" selection-start-column="31" selection-end-line="8" selection-end-column="31" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Web/app/UserEQ.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="9" column="31" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Web/app/UserAQ.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="9" column="31" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Web/app/Http/Controllers/UserController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="158">
-              <caret line="330" column="38" selection-start-line="330" selection-start-column="38" selection-end-line="330" selection-end-column="38" />
-              <folding>
-                <element signature="e#40#68#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Web/app/Http/Controllers/TQController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1776">
-              <caret line="10" column="6" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
-              <folding>
-                <element signature="e#40#51#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Web/app/Http/Controllers/IQController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
+            <state relative-caret-position="504">
+              <caret line="574" column="12" lean-forward="true" selection-start-line="574" selection-start-column="12" selection-end-line="574" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -556,6 +129,10 @@
       <find>check_ans</find>
       <find>aq</find>
       <find>hidden</find>
+      <find>careers</find>
+      <find>100 jobs</find>
+      <find>EQ</find>
+      <find>You are Higly Eligible for jobs !!</find>
     </findStrings>
     <replaceStrings>
       <replace>eq</replace>
@@ -569,26 +146,30 @@
       <list>
         <option value="$PROJECT_DIR$/Web/.env" />
         <option value="$PROJECT_DIR$/Web/.env.example" />
-        <option value="$PROJECT_DIR$/Web/resources/views/template/user.blade.php" />
         <option value="$PROJECT_DIR$/Web/config/database.php" />
         <option value="$PROJECT_DIR$/Web/resources/views/template/dashboard.blade.php" />
         <option value="$PROJECT_DIR$/Web/app/Http/Controllers/TestControler.php" />
         <option value="$PROJECT_DIR$/Web/app/EQ.php" />
         <option value="$PROJECT_DIR$/Web/app/Http/Controllers/EQController.php" />
-        <option value="$PROJECT_DIR$/Web/resources/views/template/iq.blade.php" />
-        <option value="$PROJECT_DIR$/Web/resources/views/template/eq.blade.php" />
-        <option value="$PROJECT_DIR$/Web/resources/views/template/eq_instructions.blade.php" />
         <option value="$PROJECT_DIR$/Web/app/AQ.php" />
         <option value="$PROJECT_DIR$/Web/app/Http/Controllers/AQController.php" />
-        <option value="$PROJECT_DIR$/Web/resources/views/template/aq_instructions.blade.php" />
-        <option value="$PROJECT_DIR$/Web/resources/views/template/aq.blade.php" />
         <option value="$PROJECT_DIR$/Web/resources/views/template/submit_test.blade.php" />
         <option value="$PROJECT_DIR$/Web/routes/web.php" />
         <option value="$PROJECT_DIR$/Web/app/UserIQ.php" />
         <option value="$PROJECT_DIR$/Web/app/UserEQ.php" />
         <option value="$PROJECT_DIR$/Web/app/UserAQ.php" />
+        <option value="$PROJECT_DIR$/Web/app/Http/Controllers/TQController.php" />
         <option value="$PROJECT_DIR$/Web/app/Http/Controllers/UserController.php" />
+        <option value="$PROJECT_DIR$/Web/resources/views/includes/sidebar.blade.php" />
+        <option value="$PROJECT_DIR$/Web/resources/views/landing/index.blade.php" />
+        <option value="$PROJECT_DIR$/Web/resources/views/template/iq.blade.php" />
+        <option value="$PROJECT_DIR$/Web/resources/views/template/eq_instructions.blade.php" />
+        <option value="$PROJECT_DIR$/Web/resources/views/template/eq.blade.php" />
         <option value="$PROJECT_DIR$/Web/resources/views/template/tq_test.blade.php" />
+        <option value="$PROJECT_DIR$/Web/resources/views/template/aq_instructions.blade.php" />
+        <option value="$PROJECT_DIR$/Web/resources/views/template/aq.blade.php" />
+        <option value="$PROJECT_DIR$/Web/resources/views/template/performance.blade.php" />
+        <option value="$PROJECT_DIR$/Web/resources/views/template/user.blade.php" />
       </list>
     </option>
   </component>
@@ -746,6 +327,22 @@
               <item name="Web" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="includes" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SIH2020" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SIH2020" type="462c0819:PsiDirectoryNode" />
+              <item name="Web" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="landing" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SIH2020" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SIH2020" type="462c0819:PsiDirectoryNode" />
+              <item name="Web" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
               <item name="template" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -790,12 +387,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1579254725829</updated>
-      <workItem from="1579254729168" duration="28767000" />
+      <workItem from="1579254729168" duration="34050000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28767000" />
+    <option name="totallyTimeSpent" value="34050000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -833,13 +430,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Web/app/Http/Controllers/LoginController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-180">
-          <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Web/config/app.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-3062" />
@@ -849,13 +439,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="220">
           <caret line="11" column="19" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Web/resources/views/template/user.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="34" column="49" lean-forward="true" selection-start-line="34" selection-start-column="49" selection-end-line="34" selection-end-column="49" />
         </state>
       </provider>
     </entry>
@@ -948,47 +531,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Web/resources/views/template/iq.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="542">
-          <caret line="313" column="63" lean-forward="true" selection-start-line="313" selection-start-column="63" selection-end-line="313" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Web/resources/views/template/aq.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="284">
-          <caret line="317" column="35" selection-start-line="317" selection-start-column="35" selection-end-line="317" selection-end-column="35" />
-          <folding>
-            <element signature="n#style#0;n#button#0;n#a#0;n#span#23;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Web/resources/views/template/eq.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="361" column="31" lean-forward="true" selection-start-line="361" selection-start-column="31" selection-end-line="361" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Web/resources/views/template/eq_instructions.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="438">
-          <caret line="140" column="47" lean-forward="true" selection-start-line="140" selection-start-column="47" selection-end-line="140" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Web/resources/views/template/aq_instructions.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="318">
-          <caret line="141" column="44" selection-start-line="141" selection-start-column="44" selection-end-line="141" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Web/resources/views/template/submit_test.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="173">
@@ -1041,23 +583,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Web/routes/web.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="460">
-          <caret line="32" column="3" selection-start-line="32" selection-start-column="3" selection-end-line="32" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Web/app/Http/Controllers/TQController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1776">
-          <caret line="10" column="6" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
-          <folding>
-            <element signature="e#40#51#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Web/app/Http/Controllers/IQController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -1065,20 +590,119 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Web/app/Http/Controllers/TQController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="258">
+          <caret line="111" column="73" lean-forward="true" selection-start-line="111" selection-start-column="73" selection-end-line="111" selection-end-column="73" />
+          <folding>
+            <element signature="e#40#51#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Web/app/Http/Controllers/UserController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="158">
-          <caret line="330" column="38" selection-start-line="330" selection-start-column="38" selection-end-line="330" selection-end-column="38" />
+        <state relative-caret-position="218">
+          <caret line="252" column="51" lean-forward="true" selection-start-line="252" selection-start-column="51" selection-end-line="252" selection-end-column="51" />
           <folding>
             <element signature="e#40#68#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Web/resources/views/includes/header.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-296" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Web/resources/views/landing/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="104">
+          <caret line="360" column="13" lean-forward="true" selection-start-line="360" selection-start-column="13" selection-end-line="360" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Web/resources/views/template/iq.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="596" column="7" lean-forward="true" selection-start-line="596" selection-start-column="7" selection-end-line="596" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Web/resources/views/template/eq_instructions.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="127" column="27" selection-start-line="127" selection-start-column="27" selection-end-line="127" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Web/resources/views/template/eq.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="438">
+          <caret line="645" column="4" lean-forward="true" selection-start-line="645" selection-start-column="4" selection-end-line="645" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Web/resources/views/template/tq_test.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="96" column="25" lean-forward="true" selection-start-line="96" selection-start-column="25" selection-end-line="96" selection-end-column="25" />
+        <state relative-caret-position="262">
+          <caret line="217" column="49" lean-forward="true" selection-start-line="217" selection-start-column="49" selection-end-line="217" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Web/resources/views/template/aq_instructions.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="124">
+          <caret line="132" lean-forward="true" selection-start-line="132" selection-end-line="132" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Web/resources/views/template/aq.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="574" column="12" lean-forward="true" selection-start-line="574" selection-start-column="12" selection-end-line="574" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Web/resources/views/template/performance.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="338">
+          <caret line="270" column="61" selection-start-line="270" selection-start-column="61" selection-end-line="270" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Web/resources/views/landing/login.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="124">
+          <caret line="38" column="49" lean-forward="true" selection-start-line="38" selection-start-column="49" selection-end-line="38" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Web/routes/web.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="158">
+          <caret line="112" column="53" lean-forward="true" selection-start-line="112" selection-start-column="53" selection-end-line="112" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Web/app/Http/Controllers/LoginController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="35" column="41" lean-forward="true" selection-start-line="35" selection-start-column="41" selection-end-line="35" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Web/resources/views/includes/sidebar.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="30" column="45" lean-forward="true" selection-start-line="30" selection-start-column="45" selection-end-line="30" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Web/resources/views/template/user.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="68" column="19" selection-start-line="68" selection-start-column="19" selection-end-line="68" selection-end-column="19" />
         </state>
       </provider>
     </entry>

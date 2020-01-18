@@ -554,16 +554,16 @@
 
 <script>
     var tag = document.getElementById('answer').value;
-    alert(tag);
+    // alert(tag);
     var choosed_ans;
     function check_ans(val){
         choosed_ans=val;
         choosed_ans = parseInt(choosed_ans);
-        alert(choosed_ans);
+        // alert(choosed_ans);
 
         var flag=localStorage.getItem(tag);
         flag=parseInt(flag);
-        alert(localStorage.getItem(tag));
+        // alert(localStorage.getItem(tag));
 
         // if(final_answer === choosed_ans){
         // alert("Right ans");
@@ -571,7 +571,7 @@
         // rflag=flag+1;
         localStorage.setItem(tag,flag+choosed_ans);
 
-        alert(localStorage.getItem(tag));
+        // alert(localStorage.getItem(tag));
         // }
 
         // else{

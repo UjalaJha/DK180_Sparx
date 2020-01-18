@@ -588,12 +588,12 @@
       flag=parseInt(flag);
 
       if(final_answer === choosed_ans){
-      alert("Right ans");
+      // alert("Right ans");
       var rflag;
       rflag=flag+1;
       localStorage.setItem('iq_score',rflag);
 
-      alert(localStorage.getItem('iq_score'));
+      // alert(localStorage.getItem('iq_score'));
       }
 
       else{
