@@ -234,18 +234,18 @@
                             <h5 class="card-header" style="font-weight: bold"> Adjectives that define you</h5>
                             <div class="card-body p-0">
                                 <ul class="traffic-sales list-group list-group-flush">
-                                    <li class="traffic-sales-content list-group-item "><span class="traffic-sales-name">Direct</span>
+                                    <li class="traffic-sales-content list-group-item "><span class="traffic-sales-name">Abstract Thinker</span>
                                     </li>
-                                    <li class="traffic-sales-content list-group-item"><span class="traffic-sales-name">Search
+                                    <li class="traffic-sales-content list-group-item"><span class="traffic-sales-name">Logical
                                         </span>
                                     </li>
-                                    <li class="traffic-sales-content list-group-item"><span class="traffic-sales-name">Social
+                                    <li class="traffic-sales-content list-group-item"><span class="traffic-sales-name">Analytical Thinker
                                         </span>
                                     </li>
-                                    <li class="traffic-sales-content list-group-item"><span class="traffic-sales-name">Referrals
+                                    <li class="traffic-sales-content list-group-item"><span class="traffic-sales-name">Fearless
                                         </span>
                                     </li>
-                                    <li class="traffic-sales-content list-group-item "><span class="traffic-sales-name">Email
+                                    <li class="traffic-sales-content list-group-item "><span class="traffic-sales-name">Hardworking
                                         </span>
                                     </li>
                                 </ul>
@@ -710,11 +710,13 @@ $(function() {
     // ============================================================== 
     // Net Profit Margin
     // ============================================================== 
+    var x=90;
+    
     Morris.Donut({
                 element: 'morris_profit',
 
                 data: [
-                    { value: 93, label: 'Eligible' },
+                    { value: x, label: 'Eligible' },
                     { value: 15, label: '' }
                    
                 ],

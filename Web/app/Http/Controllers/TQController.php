@@ -106,7 +106,7 @@ class TQController extends Controller
         $user_id=Session::get('user_id');
         $l=$_GET['language'];
         echo $l;
-        $tech=UserTechnical::where('user_id',$user_id)->where('language',$l)->update(['language_score'=>$_GET['scores'],'test_given'=>1]);
+        $tech=UserTechnical::where('user_id',$user_id)->where('language',$l)->update(['language_score'=>$_GET['scores']+1,'test_given'=>1]);
         
 //        exit;
         return app('App\Http\Controllers\UserController')->skills_view();

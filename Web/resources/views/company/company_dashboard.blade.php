@@ -76,8 +76,8 @@
             <div class="col-md-12">
               <div class="card">
                 <div class="card-header card-header-primary">
-                  <h4 class="card-title">Sections you have to attempt !!</h4>
-                  <p class="card-category">4 Sections enough to test your skillsets!</p>
+                  <h4 class="card-title">Hire Students to raise your company profits !!</h4>
+                  <p class="card-category">Look for top category students!</p>
                 </div>
                 <div class="card-body">
                  
@@ -89,17 +89,17 @@
                     <i class="material-icons">wb_incandescent</i>
                   </div>
                   <!-- <p class="card-category">Used Space</p> -->
-                  <h3 class="card-title">Jobs Posted
+                  <h3 class="card-title">Data Analysts
                    
                   </h3>
                 </div>
                 <div class="card-footer">
                   <div class="stats">
-                    <i class="material-icons">people_alt</i>1150 people attempted 
+                    <i class="material-icons">people_alt</i>45 Students Specialize 
                   </div>
 
                 </div>
-                 <a href="/instructions"><button type="submit" class="btn btn-info">Start Test</button></a>
+                 <a href="/instructions"><button type="submit"  style="width:100%" class="btn btn-info">View Students</button></a>
               </div>
             </div>
             <div class="col-lg-3 col-md-6 col-sm-6">
@@ -109,14 +109,14 @@
                     <i class="material-icons">tag_faces</i>
                   </div>
                 
-                  <h3 class="card-title">Emotional Quotient</h3>
+                  <h3 class="card-title">Full Stack Developers</h3>
                 </div>
                 <div class="card-footer">
                   <div class="stats">
-                    <i class="material-icons">people_alt</i>1150 people attempted 
+                    <i class="material-icons">people_alt</i>32 Students Specialize 
                   </div>
                 </div>
-                <button type="submit" class="btn btn-info">Start Test</button>
+                <a href="/instructions"><button type="submit"  style="width:100%" class="btn btn-info">View Students</button></a>
               </div>
             </div>
             <div class="col-lg-3 col-md-6 col-sm-6">
@@ -126,14 +126,14 @@
                     <i class="material-icons">computer</i>
                   </div>
                   <!-- <p class="card-category">Fixed Issues</p> -->
-                  <h3 class="card-title">Technical Quotient</h3>
+                  <h3 class="card-title">Application Developers</h3>
                 </div>
                 <div class="card-footer">
                   <div class="stats">
-                    <i class="material-icons">people_alt</i>1150 people attempted 
+                    <i class="material-icons">people_alt</i>21 Students Specialize 
                   </div>
                 </div>
-                <button type="submit" class="btn btn-info">Start Test</button>
+              <a href="/search_students"><button type="submit" style="width:100%" class="btn btn-info">View Students</button></a>
               </div>
             </div>
             <div class="col-lg-3 col-md-6 col-sm-6">
@@ -143,14 +143,14 @@
                     <i class="material-icons">build</i>
                   </div>
                   <!-- <p class="card-category">Followers</p> -->
-                  <h3 class="card-title">Adversity Quotient</h3>
+                  <h3 class="card-title">Business Analysts</h3>
                 </div>
                 <div class="card-footer">
                   <div class="stats">
-                    <i class="material-icons">people_alt</i>1150 people attempted 
+                    <i class="material-icons">people_alt</i>12 Students Specialize 
                   </div>
                 </div>
-                <button type="submit" class="btn btn-info">Start Test</button>
+                <a href="/instructions"><button type="submit"  style="width:100%" class="btn btn-info">View Students</button></a>
               </div>
             </div>
           </div>

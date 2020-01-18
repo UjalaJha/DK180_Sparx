@@ -106,7 +106,7 @@
                             1
                           </td>
                           <td>
-                            Sanjay Janyani
+                            Khushboo Chandnani
                           </td>
                           <td>
                             
@@ -118,7 +118,7 @@
                         
                          
                           <td>
-                          <a href="/instructions"><button type="submit" class="btn btn-info">View Profile</button></a>    
+                          <a href="/profile"><button type="submit" class="btn btn-info">View Profile</button></a>    
                           </td>
                           
                         </tr>
@@ -130,7 +130,7 @@
                             2
                           </td>
                           <td>
-                            Khushboo Chandnani
+                            Sanjay Janyani
                           </td>
                           <td>
                             
@@ -142,7 +142,7 @@
                         
                          
                           <td>
-                          <a href="/instructions"><button type="submit" class="btn btn-info">View Profile</button></a>    
+                          <a href="/profile"><button type="submit" class="btn btn-info">View Profile</button></a>    
                           </td>
                           
                         </tr>
