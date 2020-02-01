@@ -350,9 +350,20 @@ class UserController extends Controller
         $user_aq_score->aq_abstraction = $abstraction;
         $user_aq_score->aq_curiosity = $curiosity;
         $user_aq_score->save();
+//        echo $iq_score;
+//        exit;
+        return view('/template/performance')->with("iq_score",$iq_score);
 
-        return view('/template/performance');
-
+    }
+    
+    public function view_profile(){
+        $id=Session::get('user_id');
+        echo $id;
+        $user_details=UserPersonalDetails::where('user_id',$id)->get();
+        print_r($user_details);
+        exit;
+        return view('/template/profile')->with("user_details",$user_details);
+//        exit;
     }
 
 }

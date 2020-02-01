@@ -121,9 +121,11 @@ Route::get('/save_skill','TQController@save_score');
 
 
 
-Route::get('/profile', function () {
-    return view('template/profile');
-});
+//Route::get('/profile', function () {
+//    return view('template/profile');
+//});
+Route::get('/profile','UserController@view_profile');
+
 
 Route::get('/performance', function () {
     return view('template/performance');

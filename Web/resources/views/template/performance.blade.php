@@ -112,7 +112,7 @@
                         <!-- ============================================================== -->
                         <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12">
                             <div class="card">
-                                <h5 class="card-header" style="font-weight: bold">Performance in IQ</h5>
+                                <h5 class="card-header" style="font-weight: bold">Performance in IQ{{$iq_score}}</h5>
                                 <div class="card-body">
                                     <div id="morris_gross" style="height: 272px;"></div>
                                 </div>
@@ -643,6 +643,7 @@
 
     });
   </script>
+  
   <script type="text/javascript">
      /*
 Template Name: Influence Admin Template
@@ -652,7 +653,8 @@ File: js
 */
 $(function() {
     "use strict";
-    
+    var iq_score=localStorage.getItem('iq_score');
+    alert(iq_score);
     // ============================================================== 
     // Revenue Cards
     // ============================================================== 
@@ -788,11 +790,13 @@ $(function() {
     // ============================================================== 
     // Gross Profit Margin
     // ============================================================== 
+    
+    
    Morris.Donut({
                 element: 'morris_gross',
 
                 data: [
-                    { value: 71, label: 'Score' },
+                    { value: iq_score*3+10, label: 'Score' },
                     { value: 15, label: '' }
                    
                 ],
@@ -817,9 +821,9 @@ $(function() {
     
     Morris.Donut({
                 element: 'morris_profit',
-
+            
                 data: [
-                    { value: x, label: 'Eligible' },
+                    { value: iq_score, label: 'Eligible' },
                     { value: 15, label: '' }
                    
                 ],

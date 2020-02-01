@@ -273,7 +273,7 @@ a.portfolio-link {
                  <div class="row">
                       <div class="col-md-6">
                         <div class="form-group">
-                          <h5><b>Email ID : </b>Khushboo Chandnani</h5>
+                          <h5><b>Email ID : </b>{{ $user_details['first_name'] }}</h5>
                         </div>
                       </div>
                       <div class="col-md-6">
