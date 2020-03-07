@@ -2,12 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b42da8c1-15de-4d9c-badb-bb940fa51862" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/app/Http/Controllers/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Web/app/Http/Controllers/LoginController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/app/Http/Controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Web/app/Http/Controllers/UserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/resources/views/template/iq.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/Web/resources/views/template/iq.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/resources/views/template/user.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/Web/resources/views/template/user.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UI/examples/performance.html" beforeDir="false" afterPath="$PROJECT_DIR$/UI/examples/performance.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web/resources/views/includes/company_header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/Web/resources/views/includes/company_header.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web/resources/views/template/performance.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/Web/resources/views/template/performance.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -23,11 +20,24 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Web/routes/web.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="320">
-              <caret line="25" column="43" lean-forward="true" selection-start-line="25" selection-start-column="43" selection-end-line="25" selection-end-column="43" />
+            <state relative-caret-position="340">
+              <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Web/resources/views/template/performance.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="261">
+              <caret line="1644" selection-start-line="1644" selection-end-line="1644" />
+              <folding>
+                <element signature="n#style#0;n#h5#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#h5#0;n#div#0;n#div#1;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -104,11 +114,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Web/resources/views/includes/company_header.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="24" column="12" selection-start-line="24" selection-start-column="12" selection-end-line="24" selection-end-column="12" />
+            <state relative-caret-position="51">
+              <caret line="37" column="4" selection-start-line="37" selection-start-column="4" selection-end-line="37" selection-end-column="4" />
             </state>
           </provider>
         </entry>
@@ -167,14 +177,14 @@
         <option value="$PROJECT_DIR$/Web/resources/views/includes/sidebar.blade.php" />
         <option value="$PROJECT_DIR$/Web/resources/views/includes/header.blade.php" />
         <option value="$PROJECT_DIR$/Web/resources/views/template/notifications.blade.php" />
-        <option value="$PROJECT_DIR$/Web/resources/views/includes/company_header.blade.php" />
         <option value="$PROJECT_DIR$/Web/resources/views/landing/login.blade.php" />
         <option value="$PROJECT_DIR$/Web/routes/web.php" />
-        <option value="$PROJECT_DIR$/Web/resources/views/template/performance.blade.php" />
         <option value="$PROJECT_DIR$/Web/app/Http/Controllers/LoginController.php" />
         <option value="$PROJECT_DIR$/Web/resources/views/template/iq.blade.php" />
         <option value="$PROJECT_DIR$/Web/resources/views/template/user.blade.php" />
         <option value="$PROJECT_DIR$/Web/app/Http/Controllers/UserController.php" />
+        <option value="$PROJECT_DIR$/Web/resources/views/template/performance.blade.php" />
+        <option value="$PROJECT_DIR$/Web/resources/views/includes/company_header.blade.php" />
       </list>
     </option>
   </component>
@@ -341,6 +351,14 @@
               <item name="Web" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="includes" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SIH2020" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SIH2020" type="462c0819:PsiDirectoryNode" />
+              <item name="Web" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
               <item name="template" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -381,21 +399,21 @@
       <updated>1579254725829</updated>
       <workItem from="1579254729168" duration="41822000" />
       <workItem from="1580539570881" duration="7306000" />
-      <workItem from="1583382463174" duration="612000" />
+      <workItem from="1583382463174" duration="2013000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="49740000" />
+    <option name="totallyTimeSpent" value="51141000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.25637585" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.25637585" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="0" visible="true" weight="0.2592068" />
+      <window_info anchor="bottom" id="Terminal" order="0" visible="true" weight="0.2592068" />
       <window_info anchor="bottom" id="Database Changes" order="1" />
       <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="3" />
@@ -668,13 +686,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Web/resources/views/template/performance.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4200">
-          <caret line="210" column="33" selection-start-line="210" selection-start-column="33" selection-end-line="210" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Web/resources/views/template/tq_test.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="9375">
@@ -684,8 +695,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Web/routes/web.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="25" column="43" lean-forward="true" selection-start-line="25" selection-start-column="43" selection-end-line="25" selection-end-column="43" />
+        <state relative-caret-position="340">
+          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
         </state>
       </provider>
     </entry>
@@ -747,10 +758,21 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Web/resources/views/template/performance.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="261">
+          <caret line="1644" selection-start-line="1644" selection-end-line="1644" />
+          <folding>
+            <element signature="n#style#0;n#h5#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h5#0;n#div#0;n#div#1;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Web/resources/views/includes/company_header.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="24" column="12" selection-start-line="24" selection-start-column="12" selection-end-line="24" selection-end-column="12" />
+        <state relative-caret-position="51">
+          <caret line="37" column="4" selection-start-line="37" selection-start-column="4" selection-end-line="37" selection-end-column="4" />
         </state>
       </provider>
     </entry>

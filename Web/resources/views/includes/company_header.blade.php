@@ -33,8 +33,9 @@
   <!-- CSS Just for demo purpose, don't include it in your project -->
   <link href="../assets/demo/demo.css" rel="stylesheet" />
 
-  <link rel="stylesheet" href="../assets/select2/css/select2.min.css">
-  <style type="text/css">
+    <link rel="stylesheet" href="../assets/select2/css/select2.min.css">
+<style type="text/css">
+
     /*@import "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css";*/
 
     /* Select2 css */
