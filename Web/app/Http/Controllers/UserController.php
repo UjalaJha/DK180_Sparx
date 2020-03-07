@@ -85,7 +85,7 @@ class UserController extends Controller
 
 
 
-    public function store()
+    public function store(Request $request)
     {
         //
 //        echo "<pre>";
@@ -118,6 +118,30 @@ class UserController extends Controller
         $user->resume_filename = $_POST['resume_filename'];
 
         $user->save();
+
+
+        //traversy
+
+        if($request->hasFile('resume_filename')){
+            // Get filename with the extension
+            $filenameWithExt = $request->file('resume_filename')->getClientOriginalName();
+            echo $filenameWithExt;
+            // Get just filename
+            $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
+            // Get just ext
+            $extension = $request->file('resume_filename')->getClientOriginalExtension();
+            // Filename to store
+            $fileNameToStore= $filename.'_'.time().'.'.$extension;
+            // Upload Image
+            $path = $request->file('resume_filename')->storeAs('public/resume', $fileNameToStore);
+        } else {
+            $fileNameToStore = 'noimage.jpg';
+            echo "no file";
+        }
+
+        //traversy
+
+
 
 //
 //        $file = $request->file('resume_filename');
@@ -190,7 +214,7 @@ class UserController extends Controller
 
 
 
-        return view('/template/user');
+//        return view('/template/user');
 
 
     }

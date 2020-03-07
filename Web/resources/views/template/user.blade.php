@@ -221,7 +221,7 @@
                         <div class="card">
 
                           <div class="card-body">
-                            <form action="/personal_details" method="post">
+                            <form action="/personal_details" method="post" enctype="multipart/form-data">
                               @csrf
                               <div class="row">
                                 <div class="col-md-6">
