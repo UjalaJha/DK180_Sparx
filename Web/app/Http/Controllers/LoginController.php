@@ -51,6 +51,8 @@ class LoginController extends Controller
                 $i = Session::get('user_id');
 //            echo $i;
                 return view('template/dashboard');
+            }else{
+                echo "wrong password";
             }
         } else {
             echo "invalid";

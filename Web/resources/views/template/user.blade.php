@@ -22,7 +22,7 @@
   <link rel="icon" type="image/png" href="../assets/img/favicon.png">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <title>
-    HireConnect
+    Material Dashboard by Creative Tim
   </title>
   <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
   <!--     Fonts and icons     -->
@@ -92,7 +92,7 @@
         </li>
 
         <li class="nav-item ">
-          <a class="nav-link" href="./notifications">
+          <a class="nav-link" href="./notifications.html">
             <i class="material-icons">notifications</i>
             <p>Notifications</p>
           </a>
@@ -121,7 +121,7 @@
           <span class="navbar-toggler-icon icon-bar"></span>
         </button>
         <div class="collapse navbar-collapse justify-content-end">
-          <form class="navbar-form">
+          <form class="navbar-form" >
             <div class="input-group no-border">
               <input type="text" value="" class="form-control" placeholder="Search...">
               <button type="submit" class="btn btn-white btn-round btn-just-icon">
@@ -381,7 +381,20 @@
                         <div class="card">
 
                           <div class="card-body">
-                            <form action="/academics" method="post">
+                           <?php
+
+                              $user_id=7;
+                              if($user_id=7){
+                                  $a=array('Fatima High School','Maharashtra State Board SSC','Chandibai Himathmal Mansukhani College ','Maharashtra State Board HSC','Mahrashtra','Computer Science','Interactive Broker','Python');
+                              }
+
+                              $b=array('Lourdes High School','Maharashtra State Board SSC','Chandibai Himathmal Mansukhani College ','Maharashtra State Board HSC','Mahrashtra','Information Technolgy','--',' --' );
+
+                              
+                              
+                              
+                            ?>  
+                            <form action="/academics" method="post" enctype="multipart/form-data">
                               @csrf
                               <b><h5 style="color:purple;margin-top:10px;font-weight:bold;">School Information Details</h5></b>
 
@@ -390,13 +403,13 @@
                                 <div class="col-md-6">
                                   <div class="form-group">
                                     <label class="bmd-label-floating">School Name</label>
-                                    <input type="text" class="form-control" name="x_school_name">
+                                    <input type="text" class="form-control" name="x_school_name" value="{{ $a[0]}}">
                                   </div>
                                 </div>
                                 <div class="col-md-6">
                                   <div class="form-group">
                                     <label class="bmd-label-floating">Board</label>
-                                    <input type="text" class="form-control" name="x_board_name">
+                                    <input type="text" class="form-control" name="x_board_name" value="{{ $a[1] }}">
                                   </div>
                                 </div>
                               </div>
@@ -405,7 +418,7 @@
                                   <div class="form-group">
                                     <input type="radio" id="defaultRadio" name="is_x_gpa_percentage" value="2">
                                     <label for="defaultRadio">Percentage</label>
-                                    <input type="radio" id="defaultRadio" name="is_x_gpa_percentage" valuw="1" style="margin-left: 10px;">
+                                    <input type="radio" id="defaultRadio" name="is_x_gpa_percentage" value="1" style="margin-left: 10px;">
                                     <label for="defaultRadio">CGPI</label>
                                   </div>
                                 </div>
@@ -430,13 +443,13 @@
                                 <div class="col-md-6">
                                   <div class="form-group">
                                     <label class="bmd-label-floating">College Name</label>
-                                    <input type="text" class="form-control" name="xii_school_name">
+                                    <input type="text" class="form-control" name="xii_school_name" value="{{$a[2]}}">
                                   </div>
                                 </div>
                                 <div class="col-md-6">
                                   <div class="form-group">
                                     <label class="bmd-label-floating">Board</label>
-                                    <input type="text" class="form-control" name="xii_board_name">
+                                    <input type="text" class="form-control" name="xii_board_name" value="{{$a[3]}}">
                                   </div>
                                 </div>
                               </div>
@@ -476,13 +489,13 @@
                                 <div class="col-md-4">
                                   <div class="form-group">
                                     <label class="bmd-label-floating">University</label>
-                                    <input type="text" class="form-control" name="ug_university_name">
+                                    <input type="text" class="form-control" name="ug_university_name" value="{{ $a[4]}}">
                                   </div>
                                 </div>
                                 <div class="col-md-4">
                                   <div class="form-group">
                                     <label class="bmd-label-floating">Course Name</label>
-                                    <input type="text" class="form-control" name="ug_course_name">
+                                    <input type="text" class="form-control" name="ug_course_name" value="{{$a[5]}}">
                                   </div>
                                 </div>
                               </div>
@@ -529,7 +542,7 @@
                         <div class="card">
 
                           <div class="card-body">
-                            <form  name="storeInternship" id="storeInternship">
+                            <form action="/internship" name="storeInternship" id="storeInternship" method="POST">
                             @csrf
 
                               <b><h5 style="color:purple;margin-top:10px;font-weight:bold;">Internship Details</h5></b>
@@ -538,8 +551,8 @@
                                   <div class="row">
                                     <div class="col-md-6">
                                       <div class="form-group">
-                                        <label class="bmd-label-floating">Company Name</label>
-                                        <input type="text" class="form-control" name="company_name[]">
+                                        <label class="bmd-label-floating"></label>
+                                        <input type="text" class="form-control" name="company_name[]" value="{{$a[6]}}">
                                       </div>
                                     </div>
                                     <div class="col-md-6">
@@ -572,7 +585,7 @@
                                     <div class="col-md-6">
                                       <div class="form-group">
                                         <label class="bmd-label-floating">Technology Stack</label>
-                                        <input type="text" class="form-control" name="tech_stack[]">
+                                        <input type="text" class="form-control" name="tech_stack[]" value="{{$a[7]}}">
                                       </div>
                                     </div>
                                   </div>
@@ -604,7 +617,7 @@
                         <div class="card">
 
                           <div class="card-body">
-                            <form name="storeProject" id="storeProject">
+                            <form action="/project" name="storeProject" id="storeProject" method="POST">
                               @csrf
                               <b><h5 style="color:purple;margin-top:10px;font-weight:bold;">Project Details</h5></b>
                               <div class="row" id="project1" name="project1">
@@ -638,7 +651,7 @@
                                     <div class="col-md-12">
                                       <div class="form-group">
                                         <label class="bmd-label-floating">Technology Stack</label>
-                                        <input type="text" class="form-control" name="tech_stack[]">
+                                        <input type="text" class="form-control" name="tech_stack[]" >
                                       </div>
                                     </div>
                                   </div>
@@ -730,13 +743,13 @@
 <script src="../assets/js/plugins/jquery.validate.min.js"></script>
 <!-- Plugin for the Wizard, full documentation here: https://github.com/VinceG/twitter-bootstrap-wizard -->
 <script src="../assets/js/plugins/jquery.bootstrap-wizard.js"></script>
-<!--	Plugin for Select, full documentation here: http://silviomoreto.github.io/bootstrap-select -->
+<!--  Plugin for Select, full documentation here: http://silviomoreto.github.io/bootstrap-select -->
 <script src="../assets/js/plugins/bootstrap-selectpicker.js"></script>
 <!--  Plugin for the DateTimePicker, full documentation here: https://eonasdan.github.io/bootstrap-datetimepicker/ -->
 <script src="../assets/js/plugins/bootstrap-datetimepicker.min.js"></script>
 <!--  DataTables.net Plugin, full documentation here: https://datatables.net/  -->
 <script src="../assets/js/plugins/jquery.dataTables.min.js"></script>
-<!--	Plugin for Tags, full documentation here: https://github.com/bootstrap-tagsinput/bootstrap-tagsinputs  -->
+<!--  Plugin for Tags, full documentation here: https://github.com/bootstrap-tagsinput/bootstrap-tagsinputs  -->
 <script src="../assets/js/plugins/bootstrap-tagsinput.js"></script>
 <!-- Plugin for Fileupload, full documentation here: http://www.jasny.net/bootstrap/javascript/#fileinput -->
 <script src="../assets/js/plugins/jasny-bootstrap.min.js"></script>

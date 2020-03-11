@@ -73,6 +73,10 @@ Route::get('/search_students', function () {
     return view('company/search_students');
 });
 
+Route::get('linkedin_students','UserController@linkedin_profile');
+
+
+
 Route::get('view_jobs','TestControler@show_jobs');
 //Route::get('/view_jobs', function () {
 //    return view('company/view_jobs');
@@ -133,4 +137,7 @@ Route::get('/performance', function () {
 Route::get('/notifications', function () {
     return view('template/notifications');
 });
+
+Route::post('/filter','UserController@filter_students');
+
 

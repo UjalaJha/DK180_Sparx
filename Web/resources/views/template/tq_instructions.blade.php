@@ -96,7 +96,7 @@
                     <h4><b><i>Based on your skillset, Languages you have to attempt are : </i> </b></h4>
                     
                     <?php
-                      $a=array("btn btn-warning","btn btn-info","btn btn-success","btn btn-warning","btn btn-info","btn btn-success","btn btn-warning","btn btn-info","btn btn-success");
+                      $a=array("btn btn-warning","btn btn-info","btn btn-success","btn btn-warning","btn btn-info","btn btn-success","btn btn-warning","btn btn-info","btn btn-success","btn btn-warning","btn btn-info","btn btn-success");
                       $count=0;
                       
 //                      $skill_set=array("c","c","c","c","c");
@@ -111,7 +111,7 @@
                               $c=60;
                           }
                           ?>
-                    <span><a href="/tech_test/{{$skills}}/{{$c+1}}"><button class="<?php echo $a[$count]?>" style="margin-left:20px;">{{$skills}}</button></a></span> 
+                    <span><a href="/tech_test/{{$skills}}/{{$c+1}}"><button class="<?php echo $a[0]?>" style="margin-left:20px;">{{$skills}}</button></a></span> 
                     <?php
                     $count+=1;
     ?>
@@ -162,6 +162,6 @@
     </script>
      
       <script type="text/javascript">
-      	      localStorage.setItem('tq_score',0);
+              localStorage.setItem('tq_score',0);
 
       </script>

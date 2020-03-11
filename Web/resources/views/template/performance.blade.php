@@ -136,7 +136,7 @@
                                     <div id="morris_profit" style="height: 272px;"></div>
                                 </div>
                                <div class="container" style="margin-left: 40px;">
-                                    <p>You are Higly Eligible for Data Analyst !!</p>
+                                    <!-- <p>You are Higly Eligible for Data Analyst !!</p> -->
                                     <!-- <p>Incorrect Answers<span class="text-dark"> :&nbsp; 20 </span> -->
                                   
                                 </div>
@@ -200,17 +200,7 @@
                         <!-- ============================================================== -->
                     </div>
                        <div class="row">
-                           <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
-                               <div class="card">
-                                   <h5 class="card-header" style="font-weight: bold;">Technical Ratings</h5>
-                                   <div class="card-body">
-                                       <div class="ct-chart-horizontal ct-golden-section"></div>
-                                   </div>
-                               </div>
-
-                           </div>
-
-                           <div class="col-xl-4 col-lg-12 col-md-4 col-sm-12 col-12">
+                    <div class="col-xl-4 col-lg-12 col-md-4 col-sm-12 col-12">
                         <div class="card">
                             <h5 class="card-header" style="font-weight: bold">Most Relevant Skills from TQ</h5>
                             <div class="card-body">
@@ -258,6 +248,31 @@
                                     <li class="traffic-sales-content list-group-item "><span class="traffic-sales-name">Hardworking
                                         </span>
                                     </li>
+                                </ul>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-12 col-md-4 col-sm-12 col-12">
+                    <div class="card">
+                            <h5 class="card-header" style="font-weight: bold">You look like a good fit in below job roles</h5>
+                            <div class="card-body p-0">
+                                <ul class="traffic-sales list-group list-group-flush">
+                                  
+                                    <li class="traffic-sales-content list-group-item "><span class="traffic-sales-name">Data Analyst</span>
+                                    </li>
+                                    <li class="traffic-sales-content list-group-item"><span class="traffic-sales-name">Business Analyst
+                                        </span>
+                                    </li>
+                                    <li class="traffic-sales-content list-group-item"><span class="traffic-sales-name">Data Engineer
+                                        </span>
+                                    </li>
+                                    <!-- <li class="traffic-sales-content list-group-item"><span class="traffic-sales-name">Fearless
+                                        </span>
+                                    </li>
+                                    <li class="traffic-sales-content list-group-item "><span class="traffic-sales-name">Hardworking
+                                        </span>
+                                    </li> -->
                                 </ul>
                             </div>
                             
@@ -1122,7 +1137,6 @@ $(function() {
 
   </script>
   <script>
-
 (function(window, document, $, undefined) {
     "use strict";
     $(function() {
@@ -1642,7 +1656,6 @@ $(function() {
 
 })(window, document, window.jQuery);
 </script>
-
 </body>
 
 </html>
