@@ -267,7 +267,9 @@ class UserController extends Controller
             $user_experience = null;
 
 
+            
             return view('/template/user');
+            
 
         }
 
