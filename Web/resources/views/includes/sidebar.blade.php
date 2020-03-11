@@ -36,18 +36,13 @@
 
 
           <li class="nav-item ">
-            <a class="nav-link" href="./notifications.html">
+            <a class="nav-link" href="./notifications">
               <i class="material-icons">notifications</i>
-              <p>Notifications</p>
+              <p>Look for Companies</p>
             </a>
           </li>
 
-          <li class="nav-item active-pro ">
-            <a class="nav-link" href="./upgrade.html">
-              <i class="material-icons">unarchive</i>
-              <p>Upgrade to PRO</p>
-            </a>
-          </li>
+         
         </ul>
       </div>
     </div>

@@ -136,7 +136,7 @@
                                     <div id="morris_profit" style="height: 272px;"></div>
                                 </div>
                                <div class="container" style="margin-left: 40px;">
-                                    <p>You are Higly Eligible for Data Analyst !!</p>
+                                    <!-- <p>You are Higly Eligible for Data Analyst !!</p> -->
                                     <!-- <p>Incorrect Answers<span class="text-dark"> :&nbsp; 20 </span> -->
                                   
                                 </div>
@@ -248,6 +248,31 @@
                                     <li class="traffic-sales-content list-group-item "><span class="traffic-sales-name">Hardworking
                                         </span>
                                     </li>
+                                </ul>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-12 col-md-4 col-sm-12 col-12">
+                    <div class="card">
+                            <h5 class="card-header" style="font-weight: bold">You look like a good fit in below job roles</h5>
+                            <div class="card-body p-0">
+                                <ul class="traffic-sales list-group list-group-flush">
+                                  
+                                    <li class="traffic-sales-content list-group-item "><span class="traffic-sales-name">Data Analyst</span>
+                                    </li>
+                                    <li class="traffic-sales-content list-group-item"><span class="traffic-sales-name">Business Analyst
+                                        </span>
+                                    </li>
+                                    <li class="traffic-sales-content list-group-item"><span class="traffic-sales-name">Data Engineer
+                                        </span>
+                                    </li>
+                                    <!-- <li class="traffic-sales-content list-group-item"><span class="traffic-sales-name">Fearless
+                                        </span>
+                                    </li>
+                                    <li class="traffic-sales-content list-group-item "><span class="traffic-sales-name">Hardworking
+                                        </span>
+                                    </li> -->
                                 </ul>
                             </div>
                             

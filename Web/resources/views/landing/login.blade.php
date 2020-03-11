@@ -93,7 +93,7 @@
 							Or Sign Up Using
 						</span>
 
-				<a href="signup.html" class="txt2">
+				<a href="/signup" class="txt2">
 					Sign Up
 				</a>
 			</div>

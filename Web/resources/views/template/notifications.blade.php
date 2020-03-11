@@ -13,99 +13,11 @@
 
  The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. -->
 
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="utf-8" />
-  <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png">
-  <link rel="icon" type="image/png" href="../assets/img/favicon.png">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-  <title>
-    Material Dashboard by Creative Tim
-  </title>
-  <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
-  <!--     Fonts and icons     -->
-  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
-  <!-- CSS Files -->
-  <link href="../assets/css/material-dashboard.css?v=2.1.1" rel="stylesheet" />
-  <!-- CSS Just for demo purpose, don't include it in your project -->
-  <link href="../assets/demo/demo.css" rel="stylesheet" />
-</head>
-
+@include('includes/header')
+@include('includes/sidebar')
 <body class="">
   <div class="wrapper ">
-    <div class="sidebar" data-color="purple" data-background-color="white" data-image="../assets/img/sidebar-1.jpg">
-      <!--
-        Tip 1: You can change the color of the sidebar using: data-color="purple | azure | green | orange | danger"
-
-        Tip 2: you can also add an image using data-image tag
-    -->
-      <div class="logo">
-        <a href="http://www.creative-tim.com" class="simple-text logo-normal">
-          Creative Tim
-        </a>
-      </div>
-      <div class="sidebar-wrapper">
-        <ul class="nav">
-          <li class="nav-item  ">
-            <a class="nav-link" href="./dashboard.html">
-              <i class="material-icons">dashboard</i>
-              <p>Dashboard</p>
-            </a>
-          </li>
-          <li class="nav-item ">
-            <a class="nav-link" href="./user.html">
-              <i class="material-icons">person</i>
-              <p>User Profile</p>
-            </a>
-          </li>
-          <li class="nav-item ">
-            <a class="nav-link" href="./tables.html">
-              <i class="material-icons">content_paste</i>
-              <p>Table List</p>
-            </a>
-          </li>
-          <li class="nav-item ">
-            <a class="nav-link" href="./typography.html">
-              <i class="material-icons">library_books</i>
-              <p>Typography</p>
-            </a>
-          </li>
-          <li class="nav-item ">
-            <a class="nav-link" href="./icons.html">
-              <i class="material-icons">bubble_chart</i>
-              <p>Icons</p>
-            </a>
-          </li>
-          <li class="nav-item ">
-            <a class="nav-link" href="./map.html">
-              <i class="material-icons">location_ons</i>
-              <p>Maps</p>
-            </a>
-          </li>
-          <li class="nav-item active ">
-            <a class="nav-link" href="./notifications.html">
-              <i class="material-icons">notifications</i>
-              <p>Notifications</p>
-            </a>
-          </li>
-          <li class="nav-item ">
-            <a class="nav-link" href="./rtl.html">
-              <i class="material-icons">language</i>
-              <p>RTL Support</p>
-            </a>
-          </li>
-          <li class="nav-item active-pro ">
-            <a class="nav-link" href="./upgrade.html">
-              <i class="material-icons">unarchive</i>
-              <p>Upgrade to PRO</p>
-            </a>
-          </li>
-        </ul>
-      </div>
-    </div>
+ 
     <div class="main-panel">
       <!-- Navbar -->
       <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top ">
@@ -177,122 +89,82 @@
         <div class="container-fluid">
           <div class="card">
             <div class="card-header card-header-primary">
-              <h3 class="card-title">Notifications</h3>
-              <p class="card-category">Handcrafted by our friend
-                <a target="_blank" href="https://github.com/mouse0270">Robert McIntosh</a>. Please checkout the
-                <a href="http://bootstrap-notify.remabledesigns.com/" target="_blank">full documentation.</a>
+              <h3 class="card-title">Companies</h3>
+              <p class="card-category">Look for some top ranking companies of your interest
+                
               </p>
             </div>
             <div class="card-body">
               <div class="row">
-                <div class="col-md-6">
-                  <h4 class="card-title">Notifications Style</h4>
-                  <div class="alert alert-info">
-                    <span>This is a plain notification</span>
-                  </div>
-                  <div class="alert alert-info">
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                      <i class="material-icons">close</i>
-                    </button>
-                    <span>This is a notification with close button.</span>
-                  </div>
-                  <div class="alert alert-info alert-with-icon" data-notify="container">
-                    <i class="material-icons" data-notify="icon">add_alert</i>
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                      <i class="material-icons">close</i>
-                    </button>
-                    <span data-notify="message">This is a notification with close button and icon.</span>
-                  </div>
-                  <div class="alert alert-info alert-with-icon" data-notify="container">
-                    <i class="material-icons" data-notify="icon">add_alert</i>
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                      <i class="material-icons">close</i>
-                    </button>
-                    <span data-notify="message">This is a notification with close button and icon and have many lines. You can see that the icon and the close button are always vertically aligned. This is a beautiful notification. So you don't have to worry about the style.</span>
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <h4 class="card-title">Notification states</h4>
-                  <div class="alert alert-info">
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                      <i class="material-icons">close</i>
-                    </button>
-                    <span>
-                      <b> Info - </b> This is a regular notification made with ".alert-info"</span>
-                  </div>
-                  <div class="alert alert-success">
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                      <i class="material-icons">close</i>
-                    </button>
-                    <span>
-                      <b> Success - </b> This is a regular notification made with ".alert-success"</span>
-                  </div>
-                  <div class="alert alert-warning">
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                      <i class="material-icons">close</i>
-                    </button>
-                    <span>
-                      <b> Warning - </b> This is a regular notification made with ".alert-warning"</span>
-                  </div>
-                  <div class="alert alert-danger">
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                      <i class="material-icons">close</i>
-                    </button>
-                    <span>
-                      <b> Danger - </b> This is a regular notification made with ".alert-danger"</span>
-                  </div>
-                  <div class="alert alert-primary">
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                      <i class="material-icons">close</i>
-                    </button>
-                    <span>
-                      <b> Primary - </b> This is a regular notification made with ".alert-primary"</span>
-                  </div>
-                </div>
+                   <section class="site-section">
+      <div class="container jobs">
+
+       
+        
+
+        <div class="mb-5">
+          <!-- <div class="row align-items-start job-item border-bottom pb-3 mb-3 pt-3">
+            <div class="col-md-2">
+              <a href="job-single.html"><img src="images/featured-listing-1.jpg" alt="Image" class="img-fluid"></a>
+            </div>
+            <div class="col-md-4">
+              <span class="badge badge-primary px-2 py-1 mb-3">Freelancer</span>
+              <h2><a href="job-single.html">Dropbox Product Designer</a> </h2>
+              <p class="meta">Publisher: <strong>John Stewart</strong> In: <strong>Design</strong></p>
+            </div>
+            <div class="col-md-3 text-left">
+              <h3>Melbourn</h3>
+              <span class="meta">Australia</span>
+            </div>
+            <div class="col-md-3 text-md-right">
+              <strong class="text-black">$60k &mdash; $100k</strong>
+            </div>
+          </div> -->
+
+
+          <!-- <div class="row align-items-start job-item border-bottom pb-3 mb-3 pt-3">
+            <div class="col-md-2">
+              <a href="job-single.html"><img src="images/featured-listing-4.jpg" alt="Image" class="img-fluid"></a>
+            </div>
+            <div class="col-md-4">
+              <span class="badge badge-primary px-2 py-1 mb-3">Freelancer</span>
+              <h2><a href="job-single.html">Dropbox Product Designer</a> </h2>
+              <p class="meta">Publisher: <strong>John Stewart</strong> In: <strong>Design</strong></p>
+            </div>
+            <div class="col-md-3 text-left">
+              <h3>Melbourn</h3>
+              <span class="meta">Australia</span>
+            </div>
+            <div class="col-md-3 text-md-right">
+              <strong class="text-black">$60k &mdash; $100k</strong>
+            </div>
+          </div> -->
+        
+          
+
+        </div>
+        
+        <!-- <div class="row pagination-wrap">
+          
+          <div class="col-md-6 text-center text-md-left">
+            <div class="custom-pagination ml-auto">
+              <a href="#" class="prev">Previous</a>
+              <div class="d-inline-block">
+                <a href="#" class="active">1</a>
+                <a href="#">2</a>
+                <a href="#">3</a>
+                <a href="#">4</a>
+              </div>
+              <a href="#" class="next">Next</a>
+            </div>
+          </div>
+        </div> -->
+
+      </div>
+    </section>
               </div>
             </div>
-            <div class="col-md-12">
-              <div class="places-buttons">
-                <div class="row">
-                  <div class="col-md-6 ml-auto mr-auto text-center">
-                    <h4 class="card-title">
-                      Notifications Places
-                      <p class="category">Click to view notifications</p>
-                    </h4>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col-lg-8 col-md-10 ml-auto mr-auto">
-                    <div class="row">
-                      <div class="col-md-4">
-                        <button class="btn btn-primary btn-block" onclick="md.showNotification('top','left')">Top Left</button>
-                      </div>
-                      <div class="col-md-4">
-                        <button class="btn btn-primary btn-block" onclick="md.showNotification('top','center')">Top Center</button>
-                      </div>
-                      <div class="col-md-4">
-                        <button class="btn btn-primary btn-block" onclick="md.showNotification('top','right')">Top Right</button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col-lg-8 col-md-10 ml-auto mr-auto">
-                    <div class="row">
-                      <div class="col-md-4">
-                        <button class="btn btn-primary btn-block" onclick="md.showNotification('bottom','left')">Bottom Left</button>
-                      </div>
-                      <div class="col-md-4">
-                        <button class="btn btn-primary btn-block" onclick="md.showNotification('bottom','center')">Bottom Center</button>
-                      </div>
-                      <div class="col-md-4">
-                        <button class="btn btn-primary btn-block" onclick="md.showNotification('bottom','right')">Bottom Right</button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+          
           </div>
         </div>
       </div>
@@ -333,74 +205,7 @@
       </footer>
     </div>
   </div>
-  <div class="fixed-plugin">
-    <div class="dropdown show-dropdown">
-      <a href="#" data-toggle="dropdown">
-        <i class="fa fa-cog fa-2x"> </i>
-      </a>
-      <ul class="dropdown-menu">
-        <li class="header-title"> Sidebar Filters</li>
-        <li class="adjustments-line">
-          <a href="javascript:void(0)" class="switch-trigger active-color">
-            <div class="badge-colors ml-auto mr-auto">
-              <span class="badge filter badge-purple" data-color="purple"></span>
-              <span class="badge filter badge-azure" data-color="azure"></span>
-              <span class="badge filter badge-green" data-color="green"></span>
-              <span class="badge filter badge-warning" data-color="orange"></span>
-              <span class="badge filter badge-danger" data-color="danger"></span>
-              <span class="badge filter badge-rose active" data-color="rose"></span>
-            </div>
-            <div class="clearfix"></div>
-          </a>
-        </li>
-        <li class="header-title">Images</li>
-        <li class="active">
-          <a class="img-holder switch-trigger" href="javascript:void(0)">
-            <img src="../assets/img/sidebar-1.jpg" alt="">
-          </a>
-        </li>
-        <li>
-          <a class="img-holder switch-trigger" href="javascript:void(0)">
-            <img src="../assets/img/sidebar-2.jpg" alt="">
-          </a>
-        </li>
-        <li>
-          <a class="img-holder switch-trigger" href="javascript:void(0)">
-            <img src="../assets/img/sidebar-3.jpg" alt="">
-          </a>
-        </li>
-        <li>
-          <a class="img-holder switch-trigger" href="javascript:void(0)">
-            <img src="../assets/img/sidebar-4.jpg" alt="">
-          </a>
-        </li>
-        <li class="button-container">
-          <a href="https://www.creative-tim.com/product/material-dashboard" target="_blank" class="btn btn-primary btn-block">Free Download</a>
-        </li>
-        <!-- <li class="header-title">Want more components?</li>
-            <li class="button-container">
-                <a href="https://www.creative-tim.com/product/material-dashboard-pro" target="_blank" class="btn btn-warning btn-block">
-                  Get the pro version
-                </a>
-            </li> -->
-        <li class="button-container">
-          <a href="https://demos.creative-tim.com/material-dashboard/docs/2.1/getting-started/introduction.html" target="_blank" class="btn btn-default btn-block">
-            View Documentation
-          </a>
-        </li>
-        <li class="button-container github-star">
-          <a class="github-button" href="https://github.com/creativetimofficial/material-dashboard" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star ntkme/github-buttons on GitHub">Star</a>
-        </li>
-        <li class="header-title">Thank you for 95 shares!</li>
-        <li class="button-container text-center">
-          <button id="twitter" class="btn btn-round btn-twitter"><i class="fa fa-twitter"></i> &middot; 45</button>
-          <button id="facebook" class="btn btn-round btn-facebook"><i class="fa fa-facebook-f"></i> &middot; 50</button>
-          <br>
-          <br>
-        </li>
-      </ul>
-    </div>
-  </div>
+
   <!--   Core JS Files   -->
   <script src="../assets/js/core/jquery.min.js"></script>
   <script src="../assets/js/core/popper.min.js"></script>
@@ -621,6 +426,137 @@
       md.initFormExtendedDatetimepickers();
     });
   </script>
+  <script>
+   $.getJSON('https://jobs.github.com/positions.json', function(data) {
+        $.each(data, function(index) {
+            // alert(data[index].TEST1);
+            console.log(data[index].url);
+            var html='';
+            html=html+'<div class="row align-items-start job-item border-bottom pb-3 mb-3 pt-3">'
+            html=html+'<div class="col-md-2">'
+            html=html+'  <a href="job-single.html"><img src="'+data[index].company_logo+'" alt="Image" class="img-fluid" width="100px" height="50px"></a>'
+            html=html+'</div>'
+            html=html+'<div class="col-md-4">'
+            html=html+'  <span class="badge badge-warning px-2 py-1 mb-3">'+data[index].type+'</span>'
+            html=html+'  <h4><a href="job-single.html">'+data[index].title+'</a> </h4>'
+            html=html+'  <p class="meta">Publisher: <strong>'+data[index].company+'</strong> In: <strong>Design</strong></p>'
+            html=html+'</div>'
+            html=html+'<div class="col-md-3 text-left">'
+            html=html+'  <h5>'+data[index].location+'</h5>'
+            /*html=html+'  <span class="meta">United Kingdom</span>'*/
+            html=html+'</div>'
+            html=html+'<div class="col-md-3 text-md-right">'
+            html=html+'  <strong class="text-black"><a href="'+data[index].url+'">'+data[index].url+'</a></strong>'
+            html=html+'</div>'
+          html=html+'</div>'
+          $('.jobs').append(html);
+        });
+    });
+</script>
+<!-- <script type="text/javascript">
+  $.getJSON('https://jobs.github.com/positions.json', function(data) {
+        $.each(data, function(index) {
+            // alert(data[index].TEST1);
+            console.log(data[index].url);
+            var html='';
+            html=html+'<div class="table-responsive">'
+            html=html+'<table class="table">'
+            html=html+'<thead class=" text-primary">'
+            html=html+'<th name="sr_no">'
+            html=html+' Sr No'
+            html=html+'  </th>'
+            html=html+'  <a href="job-single.html"><img src="'+data[index].company_logo+'" alt="Image" class="img-fluid"></a>'
+            html=html+'</div>'
+            html=html+'<div class="col-md-4">'
+            html=html+'  <span class="badge badge-warning px-2 py-1 mb-3">'+data[index].type+'</span>'
+            html=html+'  <h2><a href="job-single.html">'+data[index].title+'</a> </h2>'
+            html=html+'  <p class="meta">Publisher: <strong>'+data[index].company+'</strong> In: <strong>Design</strong></p>'
+            html=html+'</div>'
+            html=html+'<div class="col-md-3 text-left">'
+            html=html+'  <h3>'+data[index].location+'</h3>'
+            /*html=html+'  <span class="meta">United Kingdom</span>'*/
+            html=html+'</div>'
+            html=html+'<div class="col-md-3 text-md-right">'
+            html=html+'  <strong class="text-black"><a href="'+data[index].url+'">'+data[index].url+'</a></strong>'
+            html=html+'</div>'
+          html=html+'</div>'
+          $('.jobs').append(html);
+        });
+    });
+  
+                    
+                  
+
+                        
+                        
+                         
+                      
+                        <th name="name">
+                          Name
+                        </th>
+                        <th name="stream">
+                          Stream
+                        <th name="skills">
+                          Special Skills
+                        </th>
+                        
+                        <th>
+                          View Profile 
+                        </th>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>
+                           
+                            1
+                          </td>
+                          <td>
+                            Khushboo Chandnani
+                          </td>
+                          <td>
+                            
+                            Information Technology
+                          </td>
+                          <td>
+                           C, Python
+                          </td>
+                        
+                         
+                          <td>
+                          <a href="/profile"><button type="submit" class="btn btn-info">View Profile</button></a>    
+                          </td>
+                          
+                        </tr>
+                        
+                        
+                        <tr>
+                          <td>
+                           
+                            2
+                          </td>
+                          <td>
+                            Sanjay Janyani
+                          </td>
+                          <td>
+                            
+                            Information Technology
+                          </td>
+                          <td>
+                           Java
+                          </td>
+                        
+                         
+                          <td>
+                          <a href="/profile"><button type="submit" class="btn btn-info">View Profile</button></a>    
+                          </td>
+                          
+                        </tr>
+                       
+                        
+                      </tbody>
+                    </table>
+                  </div>
+</script> -->
 </body>
 
 </html>

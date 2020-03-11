@@ -13,9 +13,12 @@ use App\IQ;
 use App\EQ;
 use App\AQ;
 
+use App\LinkedinProfiles;
 use App\UserIQ;
 use App\UserEQ;
 use App\UserAQ;
+
+use App\ResumeClassification;
 
 use Illuminate\Http\Request;
 
@@ -42,7 +45,7 @@ class UserController extends Controller
         $skill_array=array();
         while($count!=$size)
         {
-            
+
             $lan=$user_detail[$count]->language;
 //            echo $lan;
             $count+=1;
@@ -59,33 +62,33 @@ class UserController extends Controller
 //        $ab=sizeof($skill_set);
 //        echo $ab;
 //        echo $skill_set[0];
-        
+
         $EmptyTestArray = array_filter($skill_set);
 
         if (!empty($EmptyTestArray))
-          {
+        {
             // do some tests on the values in $ArrayOne
             echo "exists";
-                    return view('template/tq_instructions')->with("skill_set",$skill_set);
+            return view('template/tq_instructions')->with("skill_set",$skill_set);
 
 
-          }
+        }
         else
-          {
-            // Likely not to need an else, 
+        {
+            // Likely not to need an else,
             // but could return message to user "you entered nothing" etc etc
 //            echo "empty";
 //            echo "test done";
             return view('/template/aq_instructions');
 
-          }
+        }
     }
 
 
 
 
 
-    public function store()
+    public function store(Request $request)
     {
         //
 //        echo "<pre>";
@@ -115,9 +118,33 @@ class UserController extends Controller
         $user->linkedin_id = $_POST['linkedin_id'];
         $user->github_id = $_POST['github_id'];
         $user->other_links = $_POST['other_links'];
-        $user->resume_filename = $_POST['resume_filename'];
-
+//        $user->resume_filename = $_POST['resume_filename'];
+        $user->resume_filename="1.pdf";
         $user->save();
+
+
+        //traversy
+
+        if($request->hasFile('resume_filename')){
+            // Get filename with the extension
+            $filenameWithExt = $request->file('resume_filename')->getClientOriginalName();
+            echo $filenameWithExt;
+            // Get just filename
+            $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
+            // Get just ext
+            $extension = $request->file('resume_filename')->getClientOriginalExtension();
+            // Filename to store
+            $fileNameToStore= $filename.'_'.time().'.'.$extension;
+            // Upload Image
+            $path = $request->file('resume_filename')->storeAs('public/resume', $fileNameToStore);
+        } else {
+            $fileNameToStore = 'noimage.jpg';
+            echo "no file";
+        }
+
+        //traversy
+
+
 
 //
 //        $file = $request->file('resume_filename');
@@ -188,12 +215,14 @@ class UserController extends Controller
 
         }
 
+        return view('/template/user')->with('user_id',$user_id);
 
 
-        return view('/template/user');
+//        return view('/template/user');
 
 
     }
+
 
     public  function storeAcademics(){
 
@@ -226,7 +255,7 @@ class UserController extends Controller
         $user_academics->save();
 
 
-        return view('/template/user');
+        return view('/template/user')->with('user_id',$user_id);
 
     }
 
@@ -267,11 +296,13 @@ class UserController extends Controller
             $user_experience = null;
 
 
-            
-            return view('/template/user');
-            
+
+
+//            echo "ss";
 
         }
+
+        return view('/template/user');
 
     }
 
@@ -295,6 +326,7 @@ class UserController extends Controller
 
 
             $user_project->save();
+//            echo $user_project;
 
             $user_project->project_name = "";
             $user_project->role = "";
@@ -304,9 +336,10 @@ class UserController extends Controller
 
             $user_project = null;
 
-            return view('/template/user');
+
 
         }
+        return view('/template/user');
 
     }
 
@@ -320,6 +353,34 @@ class UserController extends Controller
         $user_iq_score->iq_score = $iq_score;
         $user_iq_score->save();
 
+        $user_tech_detail=UserExperiences::where('user_id',$id)->where('is_internship_project',1)->get();
+//        echo $user_tech_detail;
+        $lang=$user_tech_detail[0]['tech_stack'];
+//        echo $lang;
+        $tech=UserRatings::where('user_id',$id)->where('language',$lang)->update(['internship_star'=>1]);
+//        exit;
+
+
+//        $user_rating_detail=UserRatings::where('user_id',$id)->get();
+//
+//                $int=$user_rating_detail[0]['internship_star'];
+//                $exp=$user_rating_detail[0]['project_star'];
+//                $tec=$user_rating_detail[0]['technical_star'];
+//                $tot=$int+$exp+$tec;
+//                echo $int.$exp.$tec;
+//        echo "<br>";
+//        echo $tot;
+//                $tech=UserRatings::where('user_id',$id)->where('language',$lang)->update(['total_star'=>$tot]);
+
+//                echo $int;
+        $user_tech_detail=UserExperiences::where('user_id',$id)->where('is_internship_project',0)->get();
+        $lang=$user_tech_detail[0]['tech_stack'];
+        $tech=UserRatings::where('user_id',$id)->where('language',$lang)->update(['project_star'=>1]);
+//                exit;
+//        $user_tech_detail=UserExperiences::where('user_id',$id)->where('is_internship_project',0)->get();
+
+
+//                exit;
 
         $self_awareness = $_POST['self_awareness'];
         $self_control = $_POST['self_control'];
@@ -356,6 +417,7 @@ class UserController extends Controller
 //        exit;
         return view('/template/performance')->with("iq_score",$iq_score);
 
+<<<<<<< HEAD
     }
     
     public function view_profile(){
@@ -366,6 +428,68 @@ class UserController extends Controller
         exit;
         return view('/template/profile')->with("user_details",$user_details);
 //        exit;
+=======
+
+
+
+
+        return view('/template/performance');
+
+>>>>>>> 4505baf9e178c683a944481fabb024cde8ce73bf
     }
+
+
+
+    public function pyexe(){
+
+        echo "hello ";
+//        exit;
+        $commnad=escapeshellcmd('snj.py');
+        $output=shell_exec($commnad);
+        echo $output;
+////        echo "here";
+//        echo $commnad;
+//
+
+
+        $python = json_decode(`python snj.py`);
+        var_dump($python);
+    }
+
+
+    public function filter_students(){
+
+//        $id = Session::get('user_id');
+        $branch=$_POST['branch'][0];
+        // $exp=$_POST['experience'];
+        // echo $exp;
+//        exit;
+
+//        echo $branch;
+        $resume_class=ResumeClassification::where('branch_classification',$branch)->get();
+//        echo $resume_class;
+
+//        $s=$count
+//        foreach($resume_class){
+////        $data=UserPersonalDetails::where
+//            echo "snj";
+//        }
+//        echo"hello";
+//        exit;
+        return view('/company/search_students')->with('resume_class',$resume_class);
+//        exit;
+
+    }
+
+    public function linkedin_profile(){
+        echo "here";
+        $linkedin=LinkedinProfiles::all();
+        // echo $linkedin;
+        // exit;
+        return view('/company/linkedin_students')->with('linkedin',$linkedin);
+
+        // exit;
+    }
+
 
 }

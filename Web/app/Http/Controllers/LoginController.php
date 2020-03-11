@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Login;
 use Session;
+use Hash;
 
 class LoginController extends Controller
 {
@@ -17,8 +18,11 @@ class LoginController extends Controller
             'password' => 'required'
         ]);
 
+//        $hashed = Hash::make($_POST['password']);
+        $hashed = password_hash($_POST['password'],PASSWORD_DEFAULT);
+
         $user_details->email_id = $_POST['email_id'];
-        $user_details->password = $_POST['password'];
+        $user_details->password = $hashed;
 
         $user_details->save();
 
@@ -38,16 +42,21 @@ class LoginController extends Controller
         }
         $credentials = Login::where('email_id', $_POST['email'])->get();
 //        echo "<pre>";
-        if (!empty($credentials) && $credentials[0]->password == $_POST['password']) {
+        if (!empty($credentials)) {
+            if(password_verify($_POST['password'],$credentials[0]->password)) {
 //            echo "valid";
-            $uid = $credentials[0]->user_id;
+                $uid = $credentials[0]->user_id;
 //            echo $uid;
-            Session::put('user_id', $uid);
-            $i = Session::get('user_id');
+                Session::put('user_id', $uid);
+                $i = Session::get('user_id');
 //            echo $i;
-            return view('template/dashboard');
+                return view('template/dashboard');
+            }else{
+                echo "wrong password";
+            }
         } else {
             echo "invalid";
+            echo bcrypt($_POST['password']);
             return view('landing/login');
             exit();
         }

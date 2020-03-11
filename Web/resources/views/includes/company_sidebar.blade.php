@@ -20,12 +20,12 @@
               <p>Dashboard</p>
             </a>
           </li>
-          <li class="nav-item ">
+          <!-- <li class="nav-item ">
             <a class="nav-link" href="./user.html">
               <i class="material-icons">person</i>
               <p>Company Profile</p>
             </a>
-          </li>
+          </li> -->
           <li class="nav-item ">
             <a class="nav-link" href="/view_jobs">
               <i class="material-icons">content_paste</i>
@@ -46,9 +46,9 @@
           </li>
           
           <li class="nav-item ">
-            <a class="nav-link" href="./notifications.html">
+            <a class="nav-link" href="./linkedin_students">
               <i class="material-icons">notifications</i>
-              <p>Notifications</p>
+              <p>LinkedIn Profiles</p>
             </a>
           </li>
           
