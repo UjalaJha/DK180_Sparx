@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class AQ extends Model
+class HGMI extends Model
 {
     protected $table = 'hgmi_test_questions';
 

@@ -22,7 +22,7 @@
     <link rel="icon" type="image/png" href="../assets/img/favicon.png">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <title>
-        Material Dashboard by Creative Tim
+        HireConnect
     </title>
     <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
     <!--     Fonts and icons     -->
@@ -80,115 +80,14 @@
 
 <body class="">
 <div class="wrapper ">
-    <div class="sidebar" data-color="purple" data-background-color="white" data-image="../assets/img/sidebar-1.jpg">
-        <!--
-          Tip 1: You can change the color of the sidebar using: data-color="purple | azure | green | orange | danger"
 
-          Tip 2: you can also add an image using data-image tag
-      -->
-        <div class="logo">
-            <a href="http://www.creative-tim.com" class="simple-text logo-normal">
-                Creative Tim
-            </a>
-        </div>
-        <div class="sidebar-wrapper">
-            <div style="margin-left:12px;margin-top:10px;">
-        <span>
-       <a href="/aqtest/1"><button class="btn btn-primary" style="border-radius:50px;width:72px">1</button></a>
-       </span>
-                <span>
-       <a href="/aqtest/2"><button class="btn btn-primary" style="border-radius:50px;width:72px">2</button></a>
-        </span>
-
-                <span>
-       <a href="/aqtest/3"><button class="btn btn-primary" style="border-radius:50px;width:72px">3</button></a>
-       </span>
-                <span>
-       <a href="/aqtest/4"><button class="btn btn-primary" style="border-radius:50px;width:72px">4</button></a>
-       </span>
-                <span>
-       <a href="/aqtest/5"><button class="btn btn-primary" style="border-radius:50px;width:72px">5</button></a>
-       </span>
-                <span>
-       <a href="/aqtest/6"><button class="btn btn-primary" style="border-radius:50px;width:72px">6</button></a>
-       </span>
-                <span>
-       <a href="/aqtest/7"><button class="btn btn-primary" style="border-radius:50px;width:72px">7</button></a>
-       </span>
-                <span>
-       <a href="/aqtest/8"><button class="btn btn-primary" style="border-radius:50px;width:72px">8</button></a>
-       </span>
-                <span>
-       <a href="/aqtest/9"><button class="btn btn-primary" style="border-radius:50px;width:72px">9</button></a>
-       </span>
-                <span>
-       <a href="/aqtest/10"><button class="btn btn-primary" style="border-radius:50px;width:72px">10</button></a>
-       </span>
-                <span>
-       <a href="/aqtest/11"><button class="btn btn-primary" style="border-radius:50px;width:72px">11</button></a>
-       </span>
-
-
-                <span>
-       <a href="/aqtest/12"><button class="btn btn-primary" style="border-radius:50px;width:72px">12</button></a>
-       </span>
-                <span>
-       <a href="/aqtest/13"><button class="btn btn-primary" style="border-radius:50px;width:72px">13</button></a>
-       </span>
-                <span>
-       <a href="/aqtest/14"><button class="btn btn-primary" style="border-radius:50px;width:72px">14</button></a>
-       </span>
-                <span>
-       <a href="/aqtest/15"><button class="btn btn-primary" style="border-radius:50px;width:72px">15</button></a>
-       </span>
-                <span>
-       <a href="/aqtest/16"><button class="btn btn-primary" style="border-radius:50px;width:72px">16</button></a>
-       </span>
-                <span>
-       <a href="/aqtest/17"><button class="btn btn-primary" style="border-radius:50px;width:72px">17</button></a>
-       </span>
-                <span>
-       <a href="/aqtest/18"><button class="btn btn-primary" style="border-radius:50px;width:72px">18</button></a>
-       </span>
-                <span>
-       <a href="/aqtest/19"><button class="btn btn-primary" style="border-radius:50px;width:72px">19</button></a>
-       </span>
-                <span>
-       <a href="/aqtest/20"><button class="btn btn-primary" style="border-radius:50px;width:72px">20</button></a>
-       </span>
-                <span>
-       <a href="/aqtest/21"><button class="btn btn-primary" style="border-radius:50px;width:72px">21</button></a>
-       </span>
-
-
-
-                <span>
-       <a href="/aqtest/22"><button class="btn btn-primary" style="border-radius:50px;width:72px">22</button></a>
-       </span><span>
-       <a href="/aqtest/23"><button class="btn btn-primary" style="border-radius:50px;width:72px">23</button></a>
-       </span><span>
-       <a href="/aqtest/24"><button class="btn btn-primary" style="border-radius:50px;width:72px">24</button></a>
-       </span><span>
-       <a href="/aqtest/25"><button class="btn btn-primary" style="border-radius:50px;width:72px">25</button></a>
-       </span>
-
-
-
-
-            </div>
-
-
-
-        </div>
-    </div>
     <div class="main-panel">
         <!-- Navbar -->
         <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top ">
             <div class="container-fluid">
                 <div class="navbar-wrapper">
-                    <a class="navbar-brand" href="#pablo">All The Best for your Test !!</a>
+                    <a class="navbar-brand" href="#pablo">HireConnect Test Platform!!</a>
                 </div>
-                <p>HGMI</p>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="sr-only">Toggle navigation</span>
                     <span class="navbar-toggler-icon icon-bar"></span>
@@ -205,135 +104,126 @@
                             </button>
                         </div>
                     </form>
-
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#pablo">
+                                <i class="material-icons">dashboard</i>
+                                <p class="d-lg-none d-md-block">
+                                    Stats
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="material-icons">notifications</i>
+                                <span class="notification">5</span>
+                                <p class="d-lg-none d-md-block">
+                                    Some Actions
+                                </p>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+                                <a class="dropdown-item" href="#">Mike John responded to your email</a>
+                                <a class="dropdown-item" href="#">You have 5 new tasks</a>
+                                <a class="dropdown-item" href="#">You're now friend with Andrew</a>
+                                <a class="dropdown-item" href="#">Another Notification</a>
+                                <a class="dropdown-item" href="#">Another One</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link" href="#pablo" id="navbarDropdownProfile" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="material-icons">person</i>
+                                <p class="d-lg-none d-md-block">
+                                    Account
+                                </p>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownProfile">
+                                <a class="dropdown-item" href="#">Profile</a>
+                                <a class="dropdown-item" href="#">Settings</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">Log out</a>
+                            </div>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </nav>
-
+        <!-- End Navbar -->
         <div class="content">
-
-
-
-            <button type="submit" class="btn btn-success" style="margin-left:80%"><i class="material-icons">alarm</i>Time Remaining : 00:30</button>
             <div class="container-fluid">
-                <!-- End Navbar -->
-
-
                 <div class="row">
-                    <div class="col-lg-12 col-md-12">
+                    <div class="col-md-12">
                         <div class="card">
-
-                            <div class="card-header card-header-tabs card-header-primary">
-                                <div class="nav-tabs-navigation">
-                                    <div class="nav-tabs-wrapper">
-                                        <h3>Multiple Choice Questions</h3>
-
-                                    </div>
-                                </div>
+                            <div class="card-header card-header-primary">
+                                <h4 class="card-title">Howard Gardner Multiple Intelligence - Test</h4>
+                                <p class="card-category">To test your Self-development and formation which can help studentsbetter understand their abilities and build up confidence.</p>
                             </div>
-
                             <div class="card-body">
-                                <div class="tab-content">
-                                    <div class="tab-pane active" id="profile">
-                                        <table class="table">
-                                            <tbody>
+                                <div class="table-responsive table-upgrade">
+                                    <table class="table">
+                                        <thead>
+                                        <tr>
+                                            <th></th>
+                                            <th class="text-center">Yes</th>
+                                            <th class="text-center">No</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+
+                                        @foreach ($hgmi as $hgmi_ques)
                                             <tr>
-                                                <td>
-                                                    <div style="background:#972FAF;box-shadow: 3px 3px 4px #ccc;width:30px;height:30px;color:white;padding-top:2px;text-align:center">1</div>
+                                                <td>{{$hgmi_ques->question}}</td>
+                                                <td class="text-center"><div class="form-check">
+
+                                                        <label class="cont">
+                                                            <input type="radio" name="radio" value="{{$hgmi_ques->tag}}" onchange="check_ans(this.value, 1)">
+                                                            <span class="checkmark"></span>
+                                                        </label>
+
+                                                    </div>
                                                 </td>
-                                                <td>question 1</td>
+                                                <td class="text-center"><div class="form-check">
 
+                                                        <label class="cont">
+                                                            <input type="radio" name="radio" value="{{$hgmi_ques->tag}}" onchange="check_ans(this.value, -1)">
+                                                            <span class="checkmark"></span>
+                                                        </label>
+
+                                                    </div>
+                                                </td>
                                             </tr>
-                                            </tbody>
-                                        </table>
-                                        <div class="row" style="margin-left:50px;">
-<!--
-                                            <div class="col-md-1.5">
-                                                <div class="form-group">
 
-                                                    <label for="defaultRadio"><b><i>Not like me at all</i></b></label>
-                                                </div>
-                                            </div>
--->
-                                            <div class="col-md-1" style="margin-left:10px;">
-                                                <div class="form-group">
-                                                    <input type="radio" id="defaultRadio" name="example2" value=" " onchange="check_ans(this.value)">
-                                                    <label for="defaultRadio">YES</label>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-1">
-                                                <div class="form-group">
-                                                    <input type="radio" id="defaultRadio" name="example2" value="" onchange="check_ans(this.value)">
-                                                    <label for="defaultRadio">NO</label>
-                                                </div>
-                                            </div>
-<!--
-                                            <div class="col-md-1">
-                                                <div class="form-group">
-                                                    <input type="radio" id="defaultRadio" name="example2" value="" onchange="check_ans(this.value)">
-                                                    <label for="defaultRadio">3</label>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-1">
-                                                <div class="form-group">
-                                                    <input type="radio" id="defaultRadio" name="example2" value="" onchange="check_ans(this.value)">
-                                                    <label for="defaultRadio">4</label>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-0.5">
-                                                <div class="form-group">
-                                                    <input type="radio" id="defaultRadio" name="example2" value="" onchange="check_ans(this.value)">
-                                                    <label for="defaultRadio">5</label>
-                                                </div>
-                                            </div>
--->
-<!--
-                                            <div class="col-md-2">
-                                                <div class="form-group">
+{{--                                            <div>--}}
+{{--                                                <input type="hidden" id="answer" name="" value="{{$hgmi_ques->tag}}" >--}}
 
-                                                    <label for="defaultRadio"><b><i>A lot like me</i></b></label>
-                                                </div>
-                                            </div>
--->
+{{--                                            </div>--}}
 
-                                            <div>
-<!--                                                    <input type="hidden" id="answer" name="" value="" >-->
-
-                                            </div>
+                                        @endforeach
 
 
 
-                                        </div>
-                                    </div>
+
+                                        <td class="text-center"></td>
+                                        <td class="">
+                                            <!-- <a href="#" class="btn btn-round btn-fill btn-default disabled">Current Version</a> -->
+                                        </td>
+
+                                        <td class="">
+                                            <button type="submit" class="btn btn-primary pull-right">Next<i class="material-icons">keyboard_arrow_right</i></button>
+
+                                        </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
                                 </div>
-
-
-
                             </div>
-
-
                         </div>
                     </div>
-
                 </div>
             </div>
-
         </div>
-                <span>
-
-                    <a href="/tests_done"><button type="submit" class="btn btn-danger">End Test</button></a>
-                    <a href="/tests_done"><button type="submit" class="btn btn-info">Submit Section</button></a>
-
-                    <!--                                     <a href="/instructions"><button type="submit" style="width:100%" class="btn btn-info">SUBMIT</button></a>-->
-
-                  <a href="/test/"><button type="submit" class="btn btn-primary pull-right">Next<i class="material-icons">keyboard_arrow_right</i></button></a>
-                  <a href="/test/"><button type="submit" class="btn btn-primary pull-right"><i class="material-icons">keyboard_arrow_left</i>Previous</button></a>
-                </span>
-            </div>
-        </div>
+        {{ $hgmi->links() }}
 
     </div>
-
 </div>
 
 <!--   Core JS Files   -->
@@ -349,13 +239,13 @@
 <script src="../assets/js/plugins/jquery.validate.min.js"></script>
 <!-- Plugin for the Wizard, full documentation here: https://github.com/VinceG/twitter-bootstrap-wizard -->
 <script src="../assets/js/plugins/jquery.bootstrap-wizard.js"></script>
-<!--	Plugin for Select, full documentation here: http://silviomoreto.github.io/bootstrap-select -->
+<!--  Plugin for Select, full documentation here: http://silviomoreto.github.io/bootstrap-select -->
 <script src="../assets/js/plugins/bootstrap-selectpicker.js"></script>
 <!--  Plugin for the DateTimePicker, full documentation here: https://eonasdan.github.io/bootstrap-datetimepicker/ -->
 <script src="../assets/js/plugins/bootstrap-datetimepicker.min.js"></script>
 <!--  DataTables.net Plugin, full documentation here: https://datatables.net/  -->
 <script src="../assets/js/plugins/jquery.dataTables.min.js"></script>
-<!--	Plugin for Tags, full documentation here: https://github.com/bootstrap-tagsinput/bootstrap-tagsinputs  -->
+<!--  Plugin for Tags, full documentation here: https://github.com/bootstrap-tagsinput/bootstrap-tagsinputs  -->
 <script src="../assets/js/plugins/bootstrap-tagsinput.js"></script>
 <!-- Plugin for Fileupload, full documentation here: http://www.jasny.net/bootstrap/javascript/#fileinput -->
 <script src="../assets/js/plugins/jasny-bootstrap.min.js"></script>
@@ -550,40 +440,26 @@
         });
     });
 </script>
-<script>
-    $(document).ready(function() {
-        // Javascript method's body can be found in assets/js/demos.js
-        demo.initGoogleMaps();
-    });
-</script>
+
 
 
 <script>
-    var tag = document.getElementById('answer').value;
+
     // alert(tag);
-    var choosed_ans;
-    function check_ans(val){
-        choosed_ans=val;
-        choosed_ans = parseInt(choosed_ans);
-        // alert(choosed_ans);
-
-        var flag=localStorage.getItem(tag);
-        flag=parseInt(flag);
-        // alert(localStorage.getItem(tag));
-
-        // if(final_answer === choosed_ans){
-        // alert("Right ans");
-        // var rflag;
-        // rflag=flag+1;
-        localStorage.setItem(tag,flag+choosed_ans);
-
-        // alert(localStorage.getItem(tag));
-        // }
-
-        // else{
-        //   localStorage.setItem('iq_score',flag);
-        // }
-
+    function check_ans(tag, val){
+        alert(tag);
+        // alert(val);
+        // var tag = document.getElementById('answer').value;
+        var choosedAns = val;
+        alert("choosed val = "+choosedAns);
+        choosedAns = parseInt(choosedAns);
+        var currentVal=localStorage.getItem(tag);
+        alert("current val was "+currentVal);
+        // flag=parseInt(flag);
+        var total = (parseInt(currentVal)+choosedAns);
+        alert("sum is "+total);
+        localStorage.setItem(tag, total);
+        alert("updated val "+localStorage.getItem(tag));
     }
 
 </script>

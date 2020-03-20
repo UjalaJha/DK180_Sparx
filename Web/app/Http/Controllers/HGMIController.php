@@ -8,8 +8,9 @@ class HGMIController extends Controller
 {
     public function index()
     {
-        $hgmi=HGMI::all();
-        
+        $hgmi=HGMI::simplePaginate(10);
+//        echo $hgmi;
+        return view('template/hgmi', ['hgmi'=>$hgmi]);
         // print_r($iq[0]->question_statement);
     }
     public function indexapi()
