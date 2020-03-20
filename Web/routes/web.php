@@ -142,4 +142,6 @@ Route::get('/notifications', function () {
 
 Route::post('/filter','UserController@filter_students');
 
-
+Route::get('/hgmi', function () {
+    return view('template/hgmi');
+});
