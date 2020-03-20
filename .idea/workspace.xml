@@ -2,22 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b42da8c1-15de-4d9c-badb-bb940fa51862" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Web/app/Http/Controllers/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Web/app/Http/Controllers/LoginController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Web/app/Http/Controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Web/app/Http/Controllers/UserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/resources/views/company/post_job.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/Web/resources/views/company/post_job.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/resources/views/company/search_students.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/Web/resources/views/company/search_students.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/resources/views/includes/company_footer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/Web/resources/views/includes/company_footer.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/resources/views/includes/company_header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/Web/resources/views/includes/company_header.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/resources/views/includes/company_sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/Web/resources/views/includes/company_sidebar.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/resources/views/includes/footer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/Web/resources/views/includes/footer.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/resources/views/includes/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/Web/resources/views/includes/header.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/resources/views/includes/sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/Web/resources/views/includes/sidebar.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/resources/views/landing/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/Web/resources/views/landing/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/resources/views/template/notifications.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/Web/resources/views/template/notifications.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/resources/views/template/performance.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/Web/resources/views/template/performance.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/resources/views/template/tq_instructions.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/Web/resources/views/template/tq_instructions.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/resources/views/template/user.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/Web/resources/views/template/user.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/Web/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Web/composer.lock" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -34,25 +21,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Web/resources/views/template/performance.blade.php">
+        <entry file="file://$PROJECT_DIR$/Web/app/Http/Controllers/UserController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="521">
-              <caret line="1657" column="9" selection-start-line="1657" selection-start-column="9" selection-end-line="1657" selection-end-column="9" />
-              <folding>
-                <element signature="n#style#0;n#h5#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#h5#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#h5#0;n#div#0;n#div#1;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#h5#0;n#div#0;n#div#2;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Web/app/Http/Controllers/LoginController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="278">
-              <caret line="54" column="38" selection-start-line="54" selection-start-column="38" selection-end-line="54" selection-end-column="38" />
+            <state relative-caret-position="160">
+              <caret line="368" lean-forward="true" selection-start-line="368" selection-end-line="368" />
               <folding>
                 <element signature="e#40#68#0#PHP" expanded="true" />
               </folding>
@@ -61,71 +33,40 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Web/app/Http/Controllers/UserController.php">
+        <entry file="file://$PROJECT_DIR$/Web/resources/views/template/aq.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="303" column="38" selection-start-line="303" selection-start-column="38" selection-end-line="303" selection-end-column="38" />
+            <state relative-caret-position="820">
+              <caret line="263" column="137" selection-start-line="263" selection-start-column="123" selection-end-line="263" selection-end-column="137" />
               <folding>
-                <element signature="e#40#68#0#PHP" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Web/resources/views/landing/signup.blade.php">
+        <entry file="file://$PROJECT_DIR$/Web/resources/views/template/aq_instructions.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="700">
-              <caret line="35" column="74" selection-start-line="35" selection-start-column="74" selection-end-line="35" selection-end-column="74" />
+            <state relative-caret-position="751">
+              <caret line="103" column="42" lean-forward="true" selection-start-line="103" selection-start-column="42" selection-end-line="103" selection-end-column="42" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Web/resources/views/template/user.blade.php">
+        <entry file="file://$PROJECT_DIR$/Web/.env.example">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="379">
-              <caret line="619" column="42" selection-start-line="619" selection-start-column="42" selection-end-line="619" selection-end-column="42" />
+            <state relative-caret-position="60">
+              <caret line="3" column="14" selection-start-line="3" selection-start-column="14" selection-end-line="3" selection-end-column="14" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Web/resources/views/includes/company_header.blade.php">
+        <entry file="file://$PROJECT_DIR$/Web/.env">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="581">
-              <caret line="35" column="23" selection-start-line="35" selection-start-column="23" selection-end-line="35" selection-end-column="23" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Web/resources/views/landing/index.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="7680">
-              <caret line="384" column="9" selection-start-line="384" selection-start-column="9" selection-end-line="384" selection-end-column="9" />
-              <folding>
-                <element signature="n#style#0;n#section#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#section#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="e#10423#10430#0#HTML" expanded="true" />
-                <element signature="e#10618#10625#0#HTML" expanded="true" />
-                <element signature="e#10654#10661#0#HTML" expanded="true" />
-                <element signature="e#10998#11005#0#HTML" expanded="true" />
-                <element signature="e#11193#11200#0#HTML" expanded="true" />
-                <element signature="e#11229#11236#0#HTML" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Web/resources/views/company/post_job.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="555">
-              <caret line="465" selection-start-line="465" selection-end-line="465" />
-              <folding>
-                <element signature="e#7762#7768#0#HTML" expanded="true" />
-              </folding>
+            <state relative-caret-position="-40">
+              <caret line="7" selection-start-line="7" selection-end-line="7" />
             </state>
           </provider>
         </entry>
@@ -133,13 +74,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Web/resources/views/company/search_students.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
+            <state relative-caret-position="480">
               <caret line="24" column="36" selection-start-line="24" selection-start-column="36" selection-end-line="24" selection-end-column="36" />
-              <folding>
-                <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#1;n#div#0;n#div#1;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#2;n#div#0;n#div#1;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -147,8 +83,29 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Web/routes/web.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="50" column="20" selection-start-line="50" selection-start-column="20" selection-end-line="50" selection-end-column="20" />
+            <state relative-caret-position="160">
+              <caret line="98" column="47" lean-forward="true" selection-start-line="98" selection-start-column="47" selection-end-line="98" selection-end-column="47" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Web/app/Http/Controllers/AQController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="340">
+              <caret line="26" column="51" lean-forward="true" selection-start-line="26" selection-start-column="51" selection-end-line="26" selection-end-column="51" />
+              <folding>
+                <element signature="e#39#50#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Web/app/AQ.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="200">
+              <caret line="10" column="42" selection-start-line="10" selection-start-column="42" selection-end-line="10" selection-end-column="42" />
             </state>
           </provider>
         </entry>
@@ -194,7 +151,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Web/.env" />
         <option value="$PROJECT_DIR$/Web/.env.example" />
         <option value="$PROJECT_DIR$/Web/config/database.php" />
         <option value="$PROJECT_DIR$/Web/resources/views/template/dashboard.blade.php" />
@@ -227,6 +183,7 @@
         <option value="$PROJECT_DIR$/Web/app/Http/Controllers/LoginController.php" />
         <option value="$PROJECT_DIR$/Web/routes/web.php" />
         <option value="$PROJECT_DIR$/Web/resources/views/template/user.blade.php" />
+        <option value="$PROJECT_DIR$/Web/.env" />
         <option value="$PROJECT_DIR$/Web/app/Http/Controllers/UserController.php" />
       </list>
     </option>
@@ -337,65 +294,65 @@
         <subPane>
           <expand>
             <path>
-              <item name="SIH2020" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SIH2020" type="462c0819:PsiDirectoryNode" />
+              <item name="SihFinal" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SihFinal" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="SIH2020" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SIH2020" type="462c0819:PsiDirectoryNode" />
+              <item name="SihFinal" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SihFinal" type="462c0819:PsiDirectoryNode" />
               <item name="Web" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="SIH2020" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SIH2020" type="462c0819:PsiDirectoryNode" />
+              <item name="SihFinal" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SihFinal" type="462c0819:PsiDirectoryNode" />
               <item name="Web" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="SIH2020" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SIH2020" type="462c0819:PsiDirectoryNode" />
+              <item name="SihFinal" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SihFinal" type="462c0819:PsiDirectoryNode" />
               <item name="Web" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="Http" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="SIH2020" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SIH2020" type="462c0819:PsiDirectoryNode" />
+              <item name="SihFinal" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SihFinal" type="462c0819:PsiDirectoryNode" />
               <item name="Web" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="Http" type="462c0819:PsiDirectoryNode" />
               <item name="Controllers" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="SIH2020" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SIH2020" type="462c0819:PsiDirectoryNode" />
+              <item name="SihFinal" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SihFinal" type="462c0819:PsiDirectoryNode" />
               <item name="Web" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="database" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="SIH2020" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SIH2020" type="462c0819:PsiDirectoryNode" />
+              <item name="SihFinal" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SihFinal" type="462c0819:PsiDirectoryNode" />
               <item name="Web" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="SIH2020" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SIH2020" type="462c0819:PsiDirectoryNode" />
+              <item name="SihFinal" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SihFinal" type="462c0819:PsiDirectoryNode" />
               <item name="Web" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="SIH2020" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SIH2020" type="462c0819:PsiDirectoryNode" />
+              <item name="SihFinal" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SihFinal" type="462c0819:PsiDirectoryNode" />
               <item name="Web" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
               <item name="template" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="SIH2020" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SIH2020" type="462c0819:PsiDirectoryNode" />
+              <item name="SihFinal" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SihFinal" type="462c0819:PsiDirectoryNode" />
               <item name="Web" type="462c0819:PsiDirectoryNode" />
               <item name="routes" type="462c0819:PsiDirectoryNode" />
             </path>
@@ -438,19 +395,21 @@
       <workItem from="1579254729168" duration="41822000" />
       <workItem from="1580539570881" duration="7306000" />
       <workItem from="1583382463174" duration="17090000" />
+      <workItem from="1584647245643" duration="14582000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="66218000" />
+    <option name="totallyTimeSpent" value="80800000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.25637585" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.25973153" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="0" visible="true" weight="0.2592068" />
+      <window_info anchor="bottom" id="Terminal" order="0" visible="true" weight="0.22096318" />
       <window_info anchor="bottom" id="Database Changes" order="1" />
       <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="3" />
@@ -484,22 +443,8 @@
         <state relative-caret-position="-3062" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Web/.env.example">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="11" column="19" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Web/.editorconfig">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Web/.env">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="11" column="19" lean-forward="true" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Web/config/database.php">
       <provider selected="true" editor-type-id="text-editor">
@@ -560,16 +505,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Web/app/Http/Controllers/EQController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="218">
-          <caret line="14" column="28" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
-          <folding>
-            <element signature="e#40#51#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Web/resources/views/template/submit_test.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="173">
@@ -577,13 +512,6 @@
           <folding>
             <element signature="e#5865#5890#0#HTML" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Web/app/AQ.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="10" column="42" selection-start-line="10" selection-start-column="42" selection-end-line="10" selection-end-column="42" />
         </state>
       </provider>
     </entry>
@@ -622,41 +550,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Web/app/Http/Controllers/IQController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Web/app/Http/Controllers/TQController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="258">
-          <caret line="111" column="73" lean-forward="true" selection-start-line="111" selection-start-column="73" selection-end-line="111" selection-end-column="73" />
-          <folding>
-            <element signature="e#40#51#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Web/resources/views/template/eq.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="438">
           <caret line="645" column="4" lean-forward="true" selection-start-line="645" selection-start-column="4" selection-end-line="645" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Web/resources/views/template/aq_instructions.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="124">
-          <caret line="132" lean-forward="true" selection-start-line="132" selection-end-line="132" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Web/resources/views/template/aq.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="574" column="12" lean-forward="true" selection-start-line="574" selection-start-column="12" selection-end-line="574" selection-end-column="12" />
         </state>
       </provider>
     </entry>
@@ -723,20 +620,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Web/app/Http/Controllers/AQController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="560">
-          <caret line="29" column="1" selection-start-line="29" selection-start-column="1" selection-end-line="29" selection-end-column="1" />
-          <folding>
-            <element signature="e#39#50#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Web/routes/api.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
           <caret line="18" column="20" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Web/resources/views/template/performance.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="33140">
+          <caret line="1657" selection-start-line="1657" selection-end-line="1657" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Web/app/Http/Controllers/LoginController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1020">
+          <caret line="54" column="38" selection-start-line="54" selection-start-column="38" selection-end-line="54" selection-end-column="38" />
+          <folding>
+            <element signature="e#40#68#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -747,31 +651,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Web/resources/views/company/post_job.blade.php">
+    <entry file="file://$PROJECT_DIR$/Web/resources/views/template/user.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="555">
-          <caret line="465" selection-start-line="465" selection-end-line="465" />
-          <folding>
-            <element signature="e#7762#7768#0#HTML" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Web/resources/views/company/search_students.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="24" column="36" selection-start-line="24" selection-start-column="36" selection-end-line="24" selection-end-column="36" />
-          <folding>
-            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#1;n#div#0;n#div#1;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#2;n#div#0;n#div#1;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="12380">
+          <caret line="619" column="42" selection-start-line="619" selection-start-column="42" selection-end-line="619" selection-end-column="42" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Web/resources/views/includes/company_header.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="581">
+        <state relative-caret-position="700">
           <caret line="35" column="23" selection-start-line="35" selection-start-column="23" selection-end-line="35" selection-end-column="23" />
         </state>
       </provider>
@@ -780,62 +669,111 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="7680">
           <caret line="384" column="9" selection-start-line="384" selection-start-column="9" selection-end-line="384" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Web/resources/views/company/post_job.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="9300">
+          <caret line="465" selection-start-line="465" selection-end-line="465" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Web/resources/views/company/search_students.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="24" column="36" selection-start-line="24" selection-start-column="36" selection-end-line="24" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Web/.env.example">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="3" column="14" selection-start-line="3" selection-start-column="14" selection-end-line="3" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Web/.env">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-40">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Web/app/Http/Controllers/TQController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="93" column="22" lean-forward="true" selection-start-line="93" selection-start-column="22" selection-end-line="93" selection-end-column="22" />
           <folding>
-            <element signature="n#style#0;n#section#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#section#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="e#10423#10430#0#HTML" expanded="true" />
-            <element signature="e#10618#10625#0#HTML" expanded="true" />
-            <element signature="e#10654#10661#0#HTML" expanded="true" />
-            <element signature="e#10998#11005#0#HTML" expanded="true" />
-            <element signature="e#11193#11200#0#HTML" expanded="true" />
-            <element signature="e#11229#11236#0#HTML" expanded="true" />
+            <element signature="e#40#51#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Web/app/Http/Controllers/LoginController.php">
+    <entry file="file://$PROJECT_DIR$/Web/app/Http/Controllers/IQController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="278">
-          <caret line="54" column="38" selection-start-line="54" selection-start-column="38" selection-end-line="54" selection-end-column="38" />
+        <state relative-caret-position="120">
+          <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Web/app/Http/Controllers/EQController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="32" column="5" selection-start-line="32" selection-start-column="4" selection-end-line="32" selection-end-column="5" />
           <folding>
-            <element signature="e#40#68#0#PHP" expanded="true" />
+            <element signature="e#40#51#0#PHP" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Web/resources/views/template/performance.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="521">
-          <caret line="1657" column="9" selection-start-line="1657" selection-start-column="9" selection-end-line="1657" selection-end-column="9" />
-          <folding>
-            <element signature="n#style#0;n#h5#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h5#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h5#0;n#div#0;n#div#1;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h5#0;n#div#0;n#div#2;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Web/resources/views/template/user.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="379">
-          <caret line="619" column="42" selection-start-line="619" selection-start-column="42" selection-end-line="619" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Web/routes/web.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="50" column="20" selection-start-line="50" selection-start-column="20" selection-end-line="50" selection-end-column="20" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Web/app/Http/Controllers/UserController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="303" column="38" selection-start-line="303" selection-start-column="38" selection-end-line="303" selection-end-column="38" />
+        <state relative-caret-position="160">
+          <caret line="368" lean-forward="true" selection-start-line="368" selection-end-line="368" />
           <folding>
             <element signature="e#40#68#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Web/resources/views/template/aq_instructions.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="751">
+          <caret line="103" column="42" lean-forward="true" selection-start-line="103" selection-start-column="42" selection-end-line="103" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Web/app/AQ.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="10" column="42" selection-start-line="10" selection-start-column="42" selection-end-line="10" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Web/routes/web.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="98" column="47" lean-forward="true" selection-start-line="98" selection-start-column="47" selection-end-line="98" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Web/app/Http/Controllers/AQController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="26" column="51" lean-forward="true" selection-start-line="26" selection-start-column="51" selection-end-line="26" selection-end-column="51" />
+          <folding>
+            <element signature="e#39#50#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Web/resources/views/template/aq.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="820">
+          <caret line="263" column="137" selection-start-line="263" selection-start-column="123" selection-end-line="263" selection-end-column="137" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>

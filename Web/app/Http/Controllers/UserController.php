@@ -307,39 +307,78 @@ class UserController extends Controller
     }
 
     public function storeProject(){
-
         $size = count($_POST['project_name']);
-
 //        $user_project->project_name;
-
         $user_id = Session::get('user_id');
 
-        for($i=0; $i<$size; $i++){
-            $user_project = new UserExperiences;
+//        for($i=0; $i<$size; $i++){
+//            $user_project = new UserExperiences;
+//
+//            $user_project->user_id = $user_id;
+//            $user_project->project_name = $_POST['project_name'][$i];
+//            echo $user_project->project_name;
+//            $user_project->role = $_POST['role'][$i];
+//            $user_project->domain = $_POST['domain'][$i];
+//            $user_project->duration = $_POST['duration'][$i];
+//            $user_project->tech_stack = $_POST['tech_stack'][$i];
+//
+//            $user_project->save();
+////            echo $user_project;
+////            echo $user_project->project_name;
+//            $user_project->project_name = "";
+//            $user_project->role = "";
+//            $user_project->domain = "";
+//            $user_project->duration = "";
+//            $user_project->tech_stack = "";
+//
+//            echo "hello";
+//
+////            $user_project = null;
+//
+//        }
 
-            $user_project->user_id = $user_id;
+
+        $i = 0;
+//        print_r($_POST);
+//        echo "<br>".$_POST["project_name"][0];
+//        echo "<br>".count($_POST["project_name"]);
+//        for($i=0; $i<count($_POST["project_name"]); $i++){
+//            echo $i;
+//            $user_project = new UserExperiences;
+//            $user_project->project_name = $_POST['project_name'][$i];
+//            $user_project->role = $_POST['role'][$i];
+//            $user_project->domain = $_POST['domain'][$i];
+//            $user_project->duration = $_POST['duration'][$i];
+//            $user_project->tech_stack = $_POST['tech_stack'][$i];
+//            $user_project->save();
+//        }
+
+        $i=count($_POST["project_name"]);
+        while($i>0){
+            $i--;
+            echo $i;
+            $user_project = new UserExperiences;
             $user_project->project_name = $_POST['project_name'][$i];
             $user_project->role = $_POST['role'][$i];
             $user_project->domain = $_POST['domain'][$i];
             $user_project->duration = $_POST['duration'][$i];
             $user_project->tech_stack = $_POST['tech_stack'][$i];
-
-
             $user_project->save();
-//            echo $user_project;
-
-            $user_project->project_name = "";
-            $user_project->role = "";
-            $user_project->domain = "";
-            $user_project->duration = "";
-            $user_project->tech_stack = "";
-
-            $user_project = null;
-
-
 
         }
-        return view('/template/user');
+
+//        foreach ($_POST as $post){
+//            echo $key[$i];
+//            echo $value[$i];
+//            $i++;
+//            echo $_POST["project_name"];
+
+//            $i++;
+//            print_r($_POST);
+//        }
+
+
+//        return view('/template/user');
 
     }
 
@@ -417,7 +456,7 @@ class UserController extends Controller
 //        exit;
         return view('/template/performance')->with("iq_score",$iq_score);
 
-<<<<<<< HEAD
+
     }
     
     public function view_profile(){
@@ -428,14 +467,13 @@ class UserController extends Controller
         exit;
         return view('/template/profile')->with("user_details",$user_details);
 //        exit;
-=======
 
 
 
 
-        return view('/template/performance');
 
->>>>>>> 4505baf9e178c683a944481fabb024cde8ce73bf
+//        return view('/template/performance');
+
     }
 
 
