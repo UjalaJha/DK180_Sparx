@@ -994,7 +994,13 @@
     $("#skill_select").select2({
       multiple: true,
       placeholder: "Add your Skills",
+      maximumSelectionLength: 4,
+      formatSelectionTooBig: function (limit) {
 
+        // Callback
+
+        return 'Too many selected items, only 4 allowed';
+      }
     });
 
 

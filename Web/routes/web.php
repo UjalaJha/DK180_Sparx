@@ -109,9 +109,15 @@ Route::post('/save_scores','UserController@saveTestScore');
 //});
 
 Route::get('/tq_instructions','UserController@skills_view');
+Route::get('/advance_tq_instructions','UserController@advance_skills_view');
 
 
-Route::get('/tech_test/{skill}/{id}','TQController@skill_test');
+Route::get('/tech_test/{skill_id}', 'TQController@start_test');
+Route::get('/advance_tech_test/{skill_id}', 'TQController@start_advance_test');
+
+
+Route::get('/tech_test/{skill_id}/{ques_id}','TQController@skill_test');
+Route::get('/advance_tech_test/{skill_id}/{ques_id}','TQController@skill_advance_test');
 
 
 Route::post('/logins','LoginController@login_check');
@@ -121,7 +127,10 @@ Route::post('/logins','LoginController@login_check');
 Route::get('/companylogin', function () {
     return view('landing/companylogin');
 });
+
+
 Route::get('/save_skill','TQController@save_score');
+Route::get('/advance_save_skill','TQController@save_advance_score');
 
 
 

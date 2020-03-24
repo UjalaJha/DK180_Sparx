@@ -93,107 +93,122 @@
       </div>
       <div class="sidebar-wrapper">
         <div style="margin-left:12px;margin-top:10px;">
-        <?php
-          if($skill=="C")
-          {
-              $val=0;
-          }
-          else if($skill=="Python"){
-            $val=30;    
-            }
-        else{
-            $val=60;
-        }    
-            
-        ?>    
-        <span>
-       <a href="/tech_test/{{$skill}}/{{$val+2}}"><button class="btn btn-primary" style="border-radius:50px;width:72px">1</button></a>
-       </span>
-        <span>
-       <a href="/tech_test/{{$skill}}/{{$val+2}}"><button class="btn btn-primary" style="border-radius:50px;width:72px">2</button></a>
-        </span>
+<!--        --><?php
+//          if($skill=="C")
+//          {
+//              $val=0;
+//          }
+//          else if($skill=="Python"){
+//            $val=30;
+//            }
+//        else{
+//            $val=60;
+//        }
+//
+//        ?>
 
-        <span>
-       <a href="/tech_test/{{$skill}}/{{$val+3}}"><button class="btn btn-primary" style="border-radius:50px;width:72px">3</button></a>
+           <?php
+           $count = 1;
+           ?>
+          @foreach($all_question_id as $question_id)
+
+                <span>
+       <a href="/tech_test/{{$skill_id}}/{{$question_id}}"><button class="btn btn-primary" style="border-radius:50px;width:72px">{{$count}}</button></a>
        </span>
-       <span>
-       <a href="/tech_test/{{$skill}}/{{$val+4}}"><button class="btn btn-primary" style="border-radius:50px;width:72px">4</button></a>
-       </span>
-       <span>
-       <a href="/tech_test/{{$skill}}/{{$val+5}}"><button class="btn btn-primary" style="border-radius:50px;width:72px">5</button></a>
-       </span>
-       <span>
-       <a href="/tech_test/{{$skill}}/{{$val+6}}"><button class="btn btn-primary" style="border-radius:50px;width:72px">6</button></a>
-       </span>
-       <span>
-       <a href="/tech_test/{{$skill}}/{{$val+8}}"><button class="btn btn-primary" style="border-radius:50px;width:72px">7</button></a>
-       </span>
-       <span>
-       <a href="/tech_test/{{$skill}}/{{$val+9}}"><button class="btn btn-primary" style="border-radius:50px;width:72px">8</button></a>
-       </span>
-       <span>
-       <a href="/tech_test/{{$skill}}/{{$val+9}}"><button class="btn btn-primary" style="border-radius:50px;width:72px">9</button></a>
-       </span>
-       <span>
-       <a href="/tech_test/{{$skill}}/{{$val+10}}"><button class="btn btn-primary" style="border-radius:50px;width:72px">10</button></a>
-       </span>
-       <span>
-       <a href="/tech_test/{{$skill}}/{{$val+11}}"><button class="btn btn-primary" style="border-radius:50px;width:72px">11</button></a>
-       </span>
+<?php
+              $count+=1;
+              ?>
+            @endforeach
 
 
-       <span>
-       <a href="/tech_test/{{$skill}}/{{$val+12}}"><button class="btn btn-primary" style="border-radius:50px;width:72px">12</button></a>
-       </span>
-       <span>
-       <a href="/tech_test/{{$skill}}/{{$val+13}}"><button class="btn btn-primary" style="border-radius:50px;width:72px">13</button></a>
-       </span>
-       <span>
-       <a href="/tech_test/{{$skill}}/{{$val+14}}"><button class="btn btn-primary" style="border-radius:50px;width:72px">14</button></a>
-       </span>
-       <span>
-       <a href="/tech_test/{{$skill}}/{{$val+15}}"><button class="btn btn-primary" style="border-radius:50px;width:72px">15</button></a>
-       </span>
-       <span>
-       <a href="/tech_test/{{$skill}}/{{$val+16}}"><button class="btn btn-primary" style="border-radius:50px;width:72px">16</button></a>
-       </span>
-       <span>
-       <a href="/tech_test/{{$skill}}/{{$val+17}}"><button class="btn btn-primary" style="border-radius:50px;width:72px">17</button></a>
-       </span>
-       <span>
-       <a href="/tech_test/{{$skill}}/{{$val+18}}"><button class="btn btn-primary" style="border-radius:50px;width:72px">18</button></a>
-       </span>
-       <span>
-       <a href="/tech_test/{{$skill}}/{{$val+19}}"><button class="btn btn-primary" style="border-radius:50px;width:72px">19</button></a>
-       </span>
-       <span>
-       <a href="/tech_test/{{$skill}}/{{$val+20}}"><button class="btn btn-primary" style="border-radius:50px;width:72px">20</button></a>
-       </span>
-       <span>
-       <a href="/tech_test/{{$skill}}/{{$val+21}}"><button class="btn btn-primary" style="border-radius:50px;width:72px">21</button></a>
-       </span>
+{{--        <span>--}}
+{{--       <a href="/tech_test/{{$skill}}/{{$val+2}}"><button class="btn btn-primary" style="border-radius:50px;width:72px">1</button></a>--}}
+{{--       </span>--}}
+{{--        <span>--}}
+{{--       <a href="/tech_test/{{$skill}}/{{$val+2}}"><button class="btn btn-primary" style="border-radius:50px;width:72px">2</button></a>--}}
+{{--        </span>--}}
+
+{{--        <span>--}}
+{{--       <a href="/tech_test/{{$skill}}/{{$val+3}}"><button class="btn btn-primary" style="border-radius:50px;width:72px">3</button></a>--}}
+{{--       </span>--}}
+{{--       <span>--}}
+{{--       <a href="/tech_test/{{$skill}}/{{$val+4}}"><button class="btn btn-primary" style="border-radius:50px;width:72px">4</button></a>--}}
+{{--       </span>--}}
+{{--       <span>--}}
+{{--       <a href="/tech_test/{{$skill}}/{{$val+5}}"><button class="btn btn-primary" style="border-radius:50px;width:72px">5</button></a>--}}
+{{--       </span>--}}
+{{--       <span>--}}
+{{--       <a href="/tech_test/{{$skill}}/{{$val+6}}"><button class="btn btn-primary" style="border-radius:50px;width:72px">6</button></a>--}}
+{{--       </span>--}}
+{{--       <span>--}}
+{{--       <a href="/tech_test/{{$skill}}/{{$val+8}}"><button class="btn btn-primary" style="border-radius:50px;width:72px">7</button></a>--}}
+{{--       </span>--}}
+{{--       <span>--}}
+{{--       <a href="/tech_test/{{$skill}}/{{$val+9}}"><button class="btn btn-primary" style="border-radius:50px;width:72px">8</button></a>--}}
+{{--       </span>--}}
+{{--       <span>--}}
+{{--       <a href="/tech_test/{{$skill}}/{{$val+9}}"><button class="btn btn-primary" style="border-radius:50px;width:72px">9</button></a>--}}
+{{--       </span>--}}
+{{--       <span>--}}
+{{--       <a href="/tech_test/{{$skill}}/{{$val+10}}"><button class="btn btn-primary" style="border-radius:50px;width:72px">10</button></a>--}}
+{{--       </span>--}}
+{{--       <span>--}}
+{{--       <a href="/tech_test/{{$skill}}/{{$val+11}}"><button class="btn btn-primary" style="border-radius:50px;width:72px">11</button></a>--}}
+{{--       </span>--}}
+
+
+{{--       <span>--}}
+{{--       <a href="/tech_test/{{$skill}}/{{$val+12}}"><button class="btn btn-primary" style="border-radius:50px;width:72px">12</button></a>--}}
+{{--       </span>--}}
+{{--       <span>--}}
+{{--       <a href="/tech_test/{{$skill}}/{{$val+13}}"><button class="btn btn-primary" style="border-radius:50px;width:72px">13</button></a>--}}
+{{--       </span>--}}
+{{--       <span>--}}
+{{--       <a href="/tech_test/{{$skill}}/{{$val+14}}"><button class="btn btn-primary" style="border-radius:50px;width:72px">14</button></a>--}}
+{{--       </span>--}}
+{{--       <span>--}}
+{{--       <a href="/tech_test/{{$skill}}/{{$val+15}}"><button class="btn btn-primary" style="border-radius:50px;width:72px">15</button></a>--}}
+{{--       </span>--}}
+{{--       <span>--}}
+{{--       <a href="/tech_test/{{$skill}}/{{$val+16}}"><button class="btn btn-primary" style="border-radius:50px;width:72px">16</button></a>--}}
+{{--       </span>--}}
+{{--       <span>--}}
+{{--       <a href="/tech_test/{{$skill}}/{{$val+17}}"><button class="btn btn-primary" style="border-radius:50px;width:72px">17</button></a>--}}
+{{--       </span>--}}
+{{--       <span>--}}
+{{--       <a href="/tech_test/{{$skill}}/{{$val+18}}"><button class="btn btn-primary" style="border-radius:50px;width:72px">18</button></a>--}}
+{{--       </span>--}}
+{{--       <span>--}}
+{{--       <a href="/tech_test/{{$skill}}/{{$val+19}}"><button class="btn btn-primary" style="border-radius:50px;width:72px">19</button></a>--}}
+{{--       </span>--}}
+{{--       <span>--}}
+{{--       <a href="/tech_test/{{$skill}}/{{$val+20}}"><button class="btn btn-primary" style="border-radius:50px;width:72px">20</button></a>--}}
+{{--       </span>--}}
+{{--       <span>--}}
+{{--       <a href="/tech_test/{{$skill}}/{{$val+21}}"><button class="btn btn-primary" style="border-radius:50px;width:72px">21</button></a>--}}
+{{--       </span>--}}
 
 
 
-       <span>
-       <a href="/tech_test/{{$skill}}/{{$val+22}}"><button class="btn btn-primary" style="border-radius:50px;width:72px">22</button></a>
-       </span><span>
-       <a href="/tech_test/{{$skill}}/{{$val+23}}"><button class="btn btn-primary" style="border-radius:50px;width:72px">23</button></a>
-       </span><span>
-       <a href="/tech_test/{{$skill}}/{{$val+24}}"><button class="btn btn-primary" style="border-radius:50px;width:72px">24</button></a>
-       </span><span>
-       <a href="/tech_test/{{$skill}}/{{$val+25}}"><button class="btn btn-primary" style="border-radius:50px;width:72px">25</button></a>
-       </span><span>
-       <a href="/tech_test/{{$skill}}/{{$val+26}}"><button class="btn btn-primary" style="border-radius:50px;width:72px">26</button></a>
-       </span><span>
-       <a href="/tech_test/{{$skill}}/{{$val+27}}"><button class="btn btn-primary" style="border-radius:50px;width:72px">27</button></a>
-       </span><span>
-       <a href="/tech_test/{{$skill}}/{{$val+28}}"><button class="btn btn-primary" style="border-radius:50px;width:72px">28</button></a>
-       </span><span>
-       <a href="/tech_test/{{$skill}}/{{$val+29}}"><button class="btn btn-primary" style="border-radius:50px;width:72px">29</button></a>
-       </span><span>
-       <a href="/tech_test/{{$skill}}/{{$val+30}}"><button class="btn btn-primary" style="border-radius:50px;width:72px">30</button></a>
-       </span>
+{{--       <span>--}}
+{{--       <a href="/tech_test/{{$skill}}/{{$val+22}}"><button class="btn btn-primary" style="border-radius:50px;width:72px">22</button></a>--}}
+{{--       </span><span>--}}
+{{--       <a href="/tech_test/{{$skill}}/{{$val+23}}"><button class="btn btn-primary" style="border-radius:50px;width:72px">23</button></a>--}}
+{{--       </span><span>--}}
+{{--       <a href="/tech_test/{{$skill}}/{{$val+24}}"><button class="btn btn-primary" style="border-radius:50px;width:72px">24</button></a>--}}
+{{--       </span><span>--}}
+{{--       <a href="/tech_test/{{$skill}}/{{$val+25}}"><button class="btn btn-primary" style="border-radius:50px;width:72px">25</button></a>--}}
+{{--       </span><span>--}}
+{{--       <a href="/tech_test/{{$skill}}/{{$val+26}}"><button class="btn btn-primary" style="border-radius:50px;width:72px">26</button></a>--}}
+{{--       </span><span>--}}
+{{--       <a href="/tech_test/{{$skill}}/{{$val+27}}"><button class="btn btn-primary" style="border-radius:50px;width:72px">27</button></a>--}}
+{{--       </span><span>--}}
+{{--       <a href="/tech_test/{{$skill}}/{{$val+28}}"><button class="btn btn-primary" style="border-radius:50px;width:72px">28</button></a>--}}
+{{--       </span><span>--}}
+{{--       <a href="/tech_test/{{$skill}}/{{$val+29}}"><button class="btn btn-primary" style="border-radius:50px;width:72px">29</button></a>--}}
+{{--       </span><span>--}}
+{{--       <a href="/tech_test/{{$skill}}/{{$val+30}}"><button class="btn btn-primary" style="border-radius:50px;width:72px">30</button></a>--}}
+{{--       </span>--}}
 
 
 
@@ -234,7 +249,7 @@
 
      <div class="content">
        
-                        
+
                         
   <button type="submit" class="btn btn-success" style="margin-left:80%"><i class="material-icons">alarm</i>Time Remaining : 00:30</button>
       <div class="container-fluid">
@@ -260,14 +275,14 @@
                         <tbody>
                           <tr>
                             <td>
-                              <div style="background:#972FAF;box-shadow: 3px 3px 4px #ccc;width:30px;height:30px;color:white;padding-top:2px;text-align:center">
+{{--                              <div style="background:#972FAF;box-shadow: 3px 3px 4px #ccc;width:30px;height:30px;color:white;padding-top:2px;text-align:center">--}}
 
-                              {{ $tech[0]->question_id }}
-                              </div>   
+{{--                              {{ $question_details[0]->question_id }}--}}
+{{--                              </div>   --}}
                             </td>
                             <td>
 <!--                         -->
-                            {{ $tech[0]->question_statement}}
+                            {{ $question_details[0]->question_statement}}
                             </td>
                             
                           </tr>
@@ -285,7 +300,7 @@
                               </div>
                            
                             </td>
-                            <td>{{ $tech[0]->option_1}}
+                            <td>{{ $question_details[0]->option_1}}
                             
 <!--                         -->
                             
@@ -311,7 +326,7 @@
                              
                             </td>
                             <td>
-                            {{ $tech[0]->option_2}}
+                            {{ $question_details[0]->option_2}}
 <!--                         -->
                             </td>
                             
@@ -332,7 +347,7 @@
                             
                             <td>
 <!--                            -->
-                           {{ $tech[0]->option_3}}
+                           {{ $question_details[0]->option_3}}
                             </td>
                             
                           </tr>
@@ -349,13 +364,13 @@
                                 
                             </td>
                             <td>
-                            {{ $tech[0]->option_4 }}
+                            {{ $question_details[0]->option_4 }}
 <!--                           -->
                             </td>
                             
                           </tr>
                           <tr>
-                            <input type="hidden" id="answer" name="" value="{{ $tech[0]->correct_opton}}" >
+                            <input type="hidden" id="answer" name="" value="{{ $question_details[0]->correct_opton}}" >
                           </tr>
 
                           <tr>
@@ -381,18 +396,18 @@
 
                     <form method="get" action="/save_skill">
                 @csrf
-                   <input type="hidden" id="lang" name="language" value="{{$skill}}" >
+                   <input type="hidden" id="skill_category_id" name="skill_category_id" value="{{$skill_id}}" >
                    <input type="hidden" id="score" name="scores" value="" >
 
-                    <a href="/aq_instructions"><button type="" class="btn btn-danger">End Test</button></a>
-                   <button type="submit" class="btn btn-info">Submit Section</button>
+{{--                    <a href="/aq_instructions"><button type="" class="btn btn-danger">End Test</button></a>--}}
+                   <button type="submit" class="btn btn-info">Submit Test</button>
              
                      </form>       
 
 <!--                                     <a href="/instructions"><button type="submit" style="width:100%" class="btn btn-info">SUBMIT</button></a>-->
 
-                  <a href="/tech_test/{{$skill}}/{{$tech[0]->question_id+1}}"><button type="submit" class="btn btn-primary pull-right">Next<i class="material-icons">keyboard_arrow_right</i></button></a>
-                  <a href="/tech_test/{{$skill}}/$tech[0]->question_id-1"><button type="submit" class="btn btn-primary pull-right"><i class="material-icons">keyboard_arrow_left</i>Previous</button></a>
+{{--                  <a href="/tech_test/{{$skill_id}}/{{$all_question_id[1]}}"><button type="submit" class="btn btn-primary pull-right">Next<i class="material-icons">keyboard_arrow_right</i></button></a>--}}
+{{--                  <a href="/tech_test/{{$skill}}/$tech[0]->question_id-1"><button type="submit" class="btn btn-primary pull-right"><i class="material-icons">keyboard_arrow_left</i>Previous</button></a>--}}
                 </span>
         </div>
       </div>

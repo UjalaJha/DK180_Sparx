@@ -175,7 +175,7 @@
                                                 <td class="text-center"><div class="form-check">
 
                                                         <label class="cont">
-                                                            <input type="radio" name="radio" value="{{$hgmi_ques->tag}}" onchange="check_ans(this.value, 1)">
+                                                            <input type="radio" name="{{$hgmi_ques->question_id}}" id="{{$hgmi_ques->question_id}}" value="{{$hgmi_ques->tag}}" onchange="check_ans(this.value, 1, this.id)">
                                                             <span class="checkmark"></span>
                                                         </label>
 
@@ -184,7 +184,7 @@
                                                 <td class="text-center"><div class="form-check">
 
                                                         <label class="cont">
-                                                            <input type="radio" name="radio" value="{{$hgmi_ques->tag}}" onchange="check_ans(this.value, -1)">
+                                                            <input type="radio" name="{{$hgmi_ques->question_id}}" id="{{$hgmi_ques->question_id}}" value="{{$hgmi_ques->tag}}" onchange="check_ans(this.value, -1, this.id)">
                                                             <span class="checkmark"></span>
                                                         </label>
 
@@ -446,7 +446,7 @@
 <script>
 
     // alert(tag);
-    function check_ans(tag, val){
+    function check_ans(tag, val, question_id){
         alert(tag);
         // alert(val);
         // var tag = document.getElementById('answer').value;
@@ -456,10 +456,33 @@
         var currentVal=localStorage.getItem(tag);
         alert("current val was "+currentVal);
         // flag=parseInt(flag);
-        var total = (parseInt(currentVal)+choosedAns);
-        alert("sum is "+total);
-        localStorage.setItem(tag, total);
-        alert("updated val "+localStorage.getItem(tag));
+
+
+        // checking whether ans is previously set or not
+        var getCheckValue = JSON.parse(localStorage.getItem("setAns"));
+        if(getCheckValue[question_id-1]==0){
+            var total = (parseInt(currentVal)+choosedAns);
+            alert("sum is "+total);
+            localStorage.setItem(tag, total);
+            getCheckValue[question_id-1] = 1;
+            localStorage.setItem("setAns",JSON.stringify(getCheckValue));
+            alert("updated val "+localStorage.getItem(tag));
+        }else{
+            if(choosedAns == 1){
+                var total = (parseInt(currentVal)+choosedAns+1);
+                alert("sum is "+total);
+                localStorage.setItem(tag, total);
+                alert("updated val "+localStorage.getItem(tag));
+            }else if(choosedAns == -1){
+                var total = (parseInt(currentVal)+choosedAns-1);
+                alert("sum is "+total);
+                localStorage.setItem(tag, total);
+                alert("updated val "+localStorage.getItem(tag));
+            }
+        }
+
+
+
     }
 
 </script>

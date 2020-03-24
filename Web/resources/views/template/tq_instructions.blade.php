@@ -101,17 +101,17 @@
                       
 //                      $skill_set=array("c","c","c","c","c");
                       ?>
-                    @foreach($skill_set as $skills)
+                    @foreach($skill_id_array_set as $skill_id)
                     <?php
-                          if($skills=="C"){
-                              $c=1 ;
-                          }else if($skills=="Python"){
-                              $c=30;
-                          }else{
-                              $c=60;
-                          }
+//                          if($skills=="C"){
+//                              $c=1 ;
+//                          }else if($skills=="Python"){
+//                              $c=30;
+//                          }else{
+//                              $c=60;
+//                          }
                           ?>
-                    <span><a href="/tech_test/{{$skills}}/{{$c+1}}"><button class="<?php echo $a[0]?>" style="margin-left:20px;">{{$skills}}</button></a></span> 
+                    <span><a href="/tech_test/{{$skill_id}}"><button class="<?php echo $a[$count]?>" style="margin-left:20px;">{{$skill_set[$count]}}</button></a></span>
                     <?php
                     $count+=1;
     ?>

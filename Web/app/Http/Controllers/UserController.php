@@ -7,6 +7,7 @@ use App\UserAcademics;
 use App\UserExperiences;
 use App\UserTechnical;
 use App\UserRatings;
+use App\TQCategoryDetails;
 use Session;
 
 use App\IQ;
@@ -29,11 +30,10 @@ class UserController extends Controller
     public function skills_view(){
 //        echo "hi";
 
-
         $id = Session::get('user_id');
 //        echo $id;
 //        exit;
-        $user_detail=UserTechnical::where('user_id',$id)->where('test_given',0)->get();
+        $user_detail=UserTechnical::where('user_id',$id)->where('level_1_test_given',0)->get();
 //        if($user_detail){
 //            echo "sn";
 //        }
@@ -43,19 +43,25 @@ class UserController extends Controller
 //        echo $size;
         $count=0;
         $skill_array=array();
+        $skill_id_array = array();
         while($count!=$size)
         {
 
-            $lan=$user_detail[$count]->language;
+            $skill_name = TQCategoryDetails::where('tq_category_details_id', $user_detail[$count]->tq_category_details_id)->pluck('sub_category')->first();
+            $lan=$skill_name;
+            $skill_id = $user_detail[$count]->tq_category_details_id;
 //            echo $lan;
             $count+=1;
             array_push($skill_array,$lan);
+            array_push($skill_id_array, $skill_id);
         }
 //        print_r($skill_array);
 //        exit;
         $skill_set=implode(",",$skill_array);
+        $skill_id_array_set=implode(",",$skill_id_array);
 //        print_r($skill_set);
         $skill_set=explode(",",$skill_set);
+        $skill_id_array_set=explode(",",$skill_id_array_set);
 //        print_r($skill_set);
 //        exit;
 //        echo "snj";
@@ -63,13 +69,82 @@ class UserController extends Controller
 //        echo $ab;
 //        echo $skill_set[0];
 
-        $EmptyTestArray = array_filter($skill_set);
+        $EmptyTestArray1 = array_filter($skill_set);
+        $EmptyTestArray2 = array_filter($skill_id_array_set);
 
-        if (!empty($EmptyTestArray))
+        if (!empty($EmptyTestArray1))
         {
             // do some tests on the values in $ArrayOne
             echo "exists";
-            return view('template/tq_instructions')->with("skill_set",$skill_set);
+//            print_r($EmptyTestArray1);
+//            print_r($EmptyTestArray2);
+            return view('template/tq_instructions')->with("skill_set",$skill_set)->with("skill_id_array_set", $skill_id_array_set);
+
+
+        }
+        else
+        {
+            // Likely not to need an else,
+            // but could return message to user "you entered nothing" etc etc
+//            echo "empty";
+//            echo "test done";
+            return view('/template/aq_instructions');
+
+        }
+    }
+
+    public function advance_skills_view(){
+//        echo "hi";
+
+        $id = Session::get('user_id');
+//        echo $id;
+//        exit;
+        $user_detail=UserTechnical::where('user_id',$id)->where('level_1_test_given',1)->where('level_2_eligible',1)->where('level_2_test_given',0)->get();
+//        if($user_detail){
+//            echo "sn";
+//        }
+//        echo "<pre>";
+//        print_r($user_detail);
+        $size=sizeof($user_detail);
+//        echo $size;
+        $count=0;
+        $skill_array=array();
+        $skill_id_array = array();
+        while($count!=$size)
+        {
+
+            $skill_name = TQCategoryDetails::where('tq_category_details_id', $user_detail[$count]->tq_category_details_id)->pluck('sub_category')->first();
+            $lan=$skill_name;
+            $skill_id = $user_detail[$count]->tq_category_details_id;
+//            echo $lan;
+            $count+=1;
+            array_push($skill_array,$lan);
+            array_push($skill_id_array, $skill_id);
+        }
+//        print_r($skill_array);
+//        exit;
+        $skill_set=implode(",",$skill_array);
+        $skill_id_array_set=implode(",",$skill_id_array);
+//        print_r($skill_set);
+        $skill_set=explode(",",$skill_set);
+        $skill_id_array_set=explode(",",$skill_id_array_set);
+//        print_r($skill_set);
+//        exit;
+//        echo "snj";
+//        $ab=sizeof($skill_set);
+//        echo $ab;
+//        echo $skill_set[0];
+
+        $EmptyTestArray1 = array_filter($skill_set);
+        $EmptyTestArray2 = array_filter($skill_id_array_set);
+
+        if (!empty($EmptyTestArray1))
+        {
+            // do some tests on the values in $ArrayOne
+            echo "exists";
+//            print_r($EmptyTestArray1);
+//            print_r($EmptyTestArray2);
+            return view('template/advance_tq_instructions')->with("skill_set",$skill_set)->with("skill_id_array_set", $skill_id_array_set);
 
 
         }
@@ -179,20 +254,20 @@ class UserController extends Controller
         foreach ($_POST['skills'] as $value){
             $user_technical_details = new UserTechnical;
 
+            $tq_category = TQCategoryDetails::where('sub_category', $value)->pluck('tq_category_details_id')->first();
+
+//            echo $tq_category."-".$value;
+
             $user_technical_details->user_id = $user_id;
-            $user_technical_details->language = $value;
-            $user_technical_details->language_score = 0;
-            $user_technical_details->test_given = 0;
+            $user_technical_details->tq_category_details_id = $tq_category;
 
             $user_technical_details->save();
 
             $user_technical_details->user_id = "";
-            $user_technical_details->language = "";
-            $user_technical_details->language_score = "";
-            $user_technical_details->test_given = "";
+            $user_technical_details->tq_category_details_id = "";
+
 
             $user_technical_details = null;
-
 
         }
 
@@ -218,7 +293,6 @@ class UserController extends Controller
         return view('/template/user')->with('user_id',$user_id);
 
 
-//        return view('/template/user');
 
 
     }

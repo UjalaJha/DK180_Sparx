@@ -76,8 +76,8 @@
                     <div class="card">
                         <div class="card-header card-header-primary">
 
-                            <p id="hgmi_test_score"> HGMI</p>
-                            <h3 class="card-title">HGMI Test Instructions !!</h3>
+                            <p id="iq_test_score">Advanced Technical Test</p>
+                            <h3 class="card-title">Advanced Technical  Test Instructions !!</h3>
                             <p class="card-category">Read the below guidelines properly.</p>
                         </div>
                         <div class="card-body">
@@ -91,9 +91,39 @@
                                 <li><h4>Each question carry 1 mark, no negative marks.</h4></li>
                                 <li><h4>DO NOT Referesh the page.</h4></li>
                                 <li><h4>DO NOT Switch between sections.</h4></li>
-                                <li><h4>DO NOT Switch tabs.</h4></li>
-                                <!--  <li><h4>Number of questions in each section : 30.</h4></li>
-                                 <li><h4>Number of questions in each section : 30.</h4></li> -->
+                                <li><h4>DO NOT Switch tabs.</h4></li><br>
+
+                               <h2>Congratulations!!</h2>
+                                <h3>You have earned basic level badge in following skills. Appear for advance test to earn intermediate or expert badges </h3>
+                                <h4><b><i>Based on your skillset qualified, Languages you have to attempt are : </i> </b></h4>
+
+                                <?php
+                                $a=array("btn btn-warning","btn btn-info","btn btn-success","btn btn-warning","btn btn-info","btn btn-success","btn btn-warning","btn btn-info","btn btn-success","btn btn-warning","btn btn-info","btn btn-success");
+                                $count=0;
+
+                                //                      $skill_set=array("c","c","c","c","c");
+                                ?>
+                                @foreach($skill_id_array_set as $skill_id)
+                                    <?php
+                                    //                          if($skills=="C"){
+                                    //                              $c=1 ;
+                                    //                          }else if($skills=="Python"){
+                                    //                              $c=30;
+                                    //                          }else{
+                                    //                              $c=60;
+                                    //                          }
+                                    ?>
+                                    <span><a href="/advance_tech_test/{{$skill_id}}"><button class="<?php echo $a[$count]?>" style="margin-left:20px;">{{$skill_set[$count]}}</button></a></span>
+                                <?php
+                                $count+=1;
+                                ?>
+                                <!--                    <span><button class="btn btn-info" style="margin-left:10px;">JAVA</button></span> <span><button class="btn btn-success" style="margin-left:10px;">PYTHON</button></span>-->
+
+
+
+                            @endforeach
+                            <!--  <li><h4>Number of questions in each section : 30.</h4></li>
+                    <li><h4>Number of questions in each section : 30.</h4></li> -->
                             </ul>
 
                             <!-- <h4></h4> --><br>
@@ -101,9 +131,11 @@
 
 
                             <h4 style="margin-left:40px;"><b><i>All the best :-).</i></b></h4>
-                            <a href="/hgmi">
-                                <button style="margin-left:30px;" type="submit" class="btn btn-primary">Start Your HGMI Test Now!!</button>
-                            </a>
+                            <!--
+                                              <a href="/eq">
+                                              <button style="margin-left:30px;" type="submit" class="btn btn-primary">Start Your Emotional Quotient Test Now!!</button>
+                                              </a>
+                            -->
                             <p>
 
 
@@ -123,41 +155,15 @@
     @include('includes/footer')
 
     <script>
-        // var tq_score_var = localStorage.getItem('tq_score');
-        // alert(tq_score_var);
-        // document.getElementById("tq_test_score").innerHTML="TQ test score "+tq_score_var;
+        //      var iq_score_var = localStorage.getItem('iq_score');
+        //            alert(iq_score_var);
+        //       document.getElementById("iq_test_score").innerHTML="IQ test score "+iq_score_var;
 
         // var iq_score=localStorage.getItem('iq_score');
         // document.getElementById.innerHTML=iq_score;
     </script>
 
     <script type="text/javascript">
-        localStorage.setItem('Kinesthetic',0);
-        localStorage.setItem('Musical',0);
-        localStorage.setItem('Naturalist',0);
-        localStorage.setItem('Visual',0);
-        localStorage.setItem('Existential',0);
-        localStorage.setItem('Verbal',0);
-        localStorage.setItem('Interpersonal',0);
-        localStorage.setItem('Intrapersonal',0);
-        localStorage.setItem('Logical',0);
-
-
-        var setAns = [0,0,0,0,0,0,0,0,0,0,
-            0,0,0,0,0,0,0,0,0,0,
-            0,0,0,0,0,0,0,0,0,0,
-            0,0,0,0,0,0,0,0,0,0,
-            0,0,0,0,0,0,0,0,0,0,
-            0,0,0,0,0,0,0,0,0,0,
-            0,0,0,0,0,0,0,0,0,0,
-            0,0,0,0,0,0,0,0,0,0,
-            0,0,0,0,0,0,0,0,0,0,
-            0,0,0,0,0,0,0,0,0,0,
-            0,0];
-
-        localStorage.setItem("setAns",JSON.stringify(setAns));
-
-        var storedAns = JSON.parse(localStorage.getItem("setAns"));
-        // console.log(storedAns);
+        localStorage.setItem('tq_score',0);
 
     </script>
