@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use App\Login;
 use Session;
 use Hash;
+use URL;
+use App\UserTests;
 
 class LoginController extends Controller
 {
@@ -29,6 +31,19 @@ class LoginController extends Controller
 //        $user = Login::create(request(['email_id', 'password']));
 
 //        auth()->login($user);
+
+        $user_id = Login::where('email_id',$_POST['email_id'])->pluck('user_id');
+
+        $user_id_last = 0;
+        foreach ($user_id as $user){
+            $user_id_last = $user;
+        }
+//        echo $user_id_last;
+
+        $user_tests = new UserTests();
+        $user_tests->user_id = $user_id_last;
+        $user_tests->save();
+
         return view('landing/index');
     }
 
@@ -50,7 +65,13 @@ class LoginController extends Controller
                 Session::put('user_id', $uid);
                 $i = Session::get('user_id');
 //            echo $i;
-                return view('template/dashboard');
+//                return view('template/dashboard');
+//                $url = URL::route('view_dashboard');
+//                Redirect::to($url);
+//                return redirect()->route('view_dashboard/');
+//                return redirect()->action('UserController@redirectDashboard');
+                return app('App\Http\Controllers\UserController')->redirectDashboard();
+
             }else{
                 echo "wrong password";
             }

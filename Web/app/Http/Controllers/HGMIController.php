@@ -5,6 +5,7 @@ use App\HGMI;
 use Illuminate\Http\Request;
 use App\UserHGMI;
 use Session;
+use App\UserTests;
 
 class HGMIController extends Controller
 {
@@ -23,7 +24,7 @@ class HGMIController extends Controller
 
     public function storeScore(){
 
-//        echo Session::get('user_id');
+        $user_id = Session::get('user_id');
         $hgmi_score = new UserHGMI();
         $hgmi_score->user_id = Session::get('user_id');
         $hgmi_score->Verbal = $_POST['Verbal'];
@@ -36,7 +37,12 @@ class HGMIController extends Controller
         $hgmi_score->Naturalist = $_POST['Naturalist'];
         $hgmi_score->Existential = $_POST['Existential'];
         $hgmi_score->save();
-        return view('template/dashboard');
+
+        $user_test = UserTests::where('user_id',$user_id)->update(['hgmi_given'=>1]);
+        return app('App\Http\Controllers\UserController')->redirectDashboard();
+
+
+//        return view('template/dashboard');
 
     }
 }

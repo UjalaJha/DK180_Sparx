@@ -10,4 +10,5 @@ class UserTechnical extends Model
 
 //    protected $primaryKey = 'user_id';
     public $timestamps = false;
+
 }
