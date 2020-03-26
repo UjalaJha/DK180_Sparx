@@ -117,10 +117,28 @@ class TQController extends Controller
 //        echo gettype($adv_ques_array);
 //        print_r($adv_ques_array);
 
+        $question_details_in_array = json_decode(json_encode($question_details), true);
 
-//        echo ($question_details);
+        $question_details_in_array_new = array();
+        $count = 0;
+        $size = count($question_details_in_array);
+        while($size!=0) {
+            $question_details_in_array_new[$count] = array();
+            $question_details_in_array_new[$count][0] = 1;
+            $question_details_in_array_new[$count][1] = $question_details_in_array[0];
+//            echo $question_details_in_array_new[$count][0];
+            $count++;
+            $size--;
+
+//            echo $count;
+        }
+
+//        print_r($question_details_in_array_new);
+//        echo $question_details_in_array_new[0][0];
+
+//         print_r($question_details_in_array);
 //        echo ($all_question_id);
-        return view('/template/advance_tq_test')->with("question_details", $question_details)->with("all_question_id", $all_question_id)->with('skill_id', $skill_id);
+        return view('/template/advance_tq_test')->with("question_details_in_array_new", $question_details_in_array_new)->with("all_question_id", $all_question_id)->with('skill_id', $skill_id);
 
     }
 
@@ -149,7 +167,22 @@ class TQController extends Controller
         $adv_ques_array = json_decode(json_encode($all_question_id), true);
         $_SESSION["all_advance_question_id"] = $adv_ques_array;
 
-        return view('/template/advance_tq_test')->with("question_details",$question_details)->with("skill_id",$skill_id)->with("all_question_id", $all_question_id);
+
+        $question_details_in_array = json_decode(json_encode($question_details), true);
+
+        $question_details_in_array_new = array();
+//        $count = 0;
+//        $size = count($question_details_in_array);
+//        while($size!=0) {
+            $question_details_in_array_new[0] = array();
+            $question_details_in_array_new[0][0] = 0;
+            $question_details_in_array_new[0][1] = $question_details_in_array[0];
+//            $count++;
+//            $size--;
+//        }
+
+
+        return view('/template/advance_tq_test')->with("question_details_in_array_new",$question_details_in_array_new)->with("skill_id",$skill_id)->with("all_question_id", $all_question_id);
 //        exit;
     }
 

@@ -315,13 +315,23 @@
         </div>
                 <span>
 
-                    <a href="/tests_done"><button type="submit" class="btn btn-danger">End Test</button></a>
-                    <a href="/tests_done"><button type="submit" class="btn btn-info">Submit Section</button></a>
+                    <form action="/save_aq" method="post">
+                        @csrf
+
+                        <input type="hidden" id="persistence" name="persistence">
+                         <input type="hidden" id="boldness" name="boldness">
+                         <input type="hidden" id="complexity" name="complexity">
+                         <input type="hidden" id="abstraction" name="abstraction">
+                         <input type="hidden" id="curiosity" name="curiosity">
+
+                       <button type="submit" class="btn btn-info">Submit Section</button>
+
+                    </form>
 
                     <!--                                     <a href="/instructions"><button type="submit" style="width:100%" class="btn btn-info">SUBMIT</button></a>-->
 
-                  <a href="/test/"><button type="submit" class="btn btn-primary pull-right">Next<i class="material-icons">keyboard_arrow_right</i></button></a>
-                  <a href="/test/"><button type="submit" class="btn btn-primary pull-right"><i class="material-icons">keyboard_arrow_left</i>Previous</button></a>
+                  <a href="/aqtest/"><button type="submit" class="btn btn-primary pull-right">Next<i class="material-icons">keyboard_arrow_right</i></button></a>
+                  <a href="/aqtest/"><button type="submit" class="btn btn-primary pull-right"><i class="material-icons">keyboard_arrow_left</i>Previous</button></a>
                 </span>
             </div>
         </div>
@@ -554,7 +564,7 @@
 
 <script>
     var tag = document.getElementById('answer').value;
-    // alert(tag);
+    alert("hi");
     var choosed_ans;
     function check_ans(val){
         choosed_ans=val;
@@ -570,8 +580,8 @@
         // var rflag;
         // rflag=flag+1;
         localStorage.setItem(tag,flag+choosed_ans);
-
-        // alert(localStorage.getItem(tag));
+        document.getElementById(tag).value = localStorage.getItem(tag);
+        alert('value set to '+document.getElementById(tag).value);
         // }
 
         // else{

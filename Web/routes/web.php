@@ -15,6 +15,9 @@ Route::get('/', function () {
     return view('landing/index');
 });
 Route::get('/test','TestControler@index');
+
+Route::post('save_iq_score','TestControler@storeIQ');
+
 Route::get('/test/{id}','TestControler@show');
 Route::get('/login', function () {
     return view('landing/login');
@@ -95,8 +98,11 @@ Route::post('/company','TestControler@companysubmit');
 Route::get('/eq','EQController@index');
 Route::get('/eqtest/{id}','EQController@show');
 
+Route::post('save_eq','EQController@storeEQ');
+
 Route::get('/aq','AQController@index');
 Route::get('/aqtest/{id}','AQController@show');
+Route::post('/save_aq', 'AQController@storeAQ');
 
 Route::get('/tests_done',function (){
     return view('template/submit_test');
@@ -117,7 +123,7 @@ Route::get('/advance_tech_test/{skill_id}', 'TQController@start_advance_test');
 
 
 Route::get('/tech_test/{skill_id}/{ques_id}','TQController@skill_test');
-Route::get('/advance_tech_test/{skill_id}/{ques_id}','TQController@skill_advance_test');
+Route::get('/advance_tech_test/{skill_id}/{ques_id}/','TQController@skill_advance_test');
 
 
 Route::post('/logins','LoginController@login_check');
@@ -156,3 +162,5 @@ Route::get('hgmi_instructions', function(){
 });
 
 Route::get('/hgmi', 'HGMIController@index');
+
+Route::post('save_hgmi','HGMIController@storeScore');

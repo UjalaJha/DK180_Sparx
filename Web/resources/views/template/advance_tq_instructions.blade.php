@@ -166,4 +166,7 @@
     <script type="text/javascript">
         localStorage.setItem('tq_score',0);
 
+        var adv_tq_check_array = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
+        localStorage.setItem('adv_tq_check_array', JSON.stringify(adv_tq_check_array));
+
     </script>

@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\EQ;
+use App\UserEQ;
 use Illuminate\Http\Request;
+use Session;
 
 class EQController extends Controller
 {
@@ -30,5 +32,19 @@ class EQController extends Controller
         // echo "<pre>";
         return view('template/eq')->with('eq',$eq);
         // print_r($iq[0]->question_statement);
+    }
+
+    public function storeEQ(){
+        $eq_score = new UserEQ();
+        $eq_score->user_id = Session::get('user_id');
+        $eq_score->eq_self_awareness = $_POST["self_awareness"];
+        $eq_score->eq_self_control	 = $_POST["self_control"];
+        $eq_score->eq_achievement_orientation = $_POST["achievement_orientation"];
+        $eq_score->eq_positive_outlook = $_POST["positive_outlook"];
+        $eq_score->eq_inspirational_leadership = $_POST["inspirational_leadership"];
+        $eq_score->eq_social_awareness = $_POST["social_awareness"];
+        $eq_score->save();
+
+        return view('template/dashboard');
     }
 }

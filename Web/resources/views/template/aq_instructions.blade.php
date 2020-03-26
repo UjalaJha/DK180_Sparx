@@ -123,9 +123,9 @@
     @include('includes/footer')
 
     <script>
-        var tq_score_var = localStorage.getItem('tq_score');
+        // var tq_score_var = localStorage.getItem('tq_score');
         // alert(tq_score_var);
-        document.getElementById("tq_test_score").innerHTML="TQ test score "+tq_score_var;
+        // document.getElementById("tq_test_score").innerHTML="TQ test score "+tq_score_var;
 
         // var iq_score=localStorage.getItem('iq_score');
         // document.getElementById.innerHTML=iq_score;

@@ -378,10 +378,19 @@
           
           </div>
                 <span>
-                   
-                    <a href="/tq_instructions"><button type="submit" class="btn btn-danger">End Test</button></a>
-                    <a href="/tq_instructions"><button type="submit" class="btn btn-info">Submit Section</button></a>
-                    
+                   <form action="/save_eq" method="post">
+                    @csrf
+                       <input type="hidden" id="self awareness" name="self awareness" value="0">
+                       <input type="hidden" id="self control" name="self control" value="0">
+                       <input type="hidden" id="achievement orientation" name="achievement orientation" value="0">
+                       <input type="hidden" id="positive outlook" name="positive outlook" value="0">
+                       <input type="hidden" id="inspirational leadership" name="inspirational leadership" value="0">
+                       <input type="hidden" id="social awareness" name="social awareness" value="0">
+
+                    <button type="submit" class="btn btn-info">Submit Section</button>
+
+                   </form>
+
 <!--                                     <a href="/instructions"><button type="submit" style="width:100%" class="btn btn-info">SUBMIT</button></a>-->
 
                   <a href="/test/"><button type="submit" class="btn btn-primary pull-right">Next<i class="material-icons">keyboard_arrow_right</i></button></a>
@@ -617,6 +626,7 @@
 
 
   <script>
+
     var tag = document.getElementById('answer').value;
     // alert(tag);
     var choosed_ans;
@@ -634,7 +644,8 @@
       // var rflag;
       // rflag=flag+1;
       localStorage.setItem(tag,flag+choosed_ans);
-
+      alert(flag+choosed_ans);
+      document.getElementById(tag).innerHTML = flag+choosed_ans;
       // alert(localStorage.getItem(tag));
       // }
 

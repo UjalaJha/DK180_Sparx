@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 use App\AQ;
+use App\UserAQ;
 use Illuminate\Http\Request;
+use Session;
 
 class AQController extends Controller
 {
@@ -27,4 +29,26 @@ class AQController extends Controller
         return view('template/aq')->with('aq',$aq);
         // print_r($iq[0]->question_statement);
     }
+
+    public function storeAQ(){
+        $aq_score = new UserAQ();
+        $aq_score->user_id = Session::get('user_id');
+//        echo $_POST['persistence'];
+//        echo $_POST['boldness'];
+//        echo $_POST['complexity'];
+//        echo $_POST['abstraction'];
+//        echo $_POST['curiosity'];
+
+        $aq_score->aq_persistence = $_POST['persistence'];
+        $aq_score->aq_boldness = $_POST['boldness'];
+        $aq_score->aq_complexity = $_POST['complexity'];
+        $aq_score->aq_abstraction = $_POST['abstraction'];
+        $aq_score->aq_curiosity = $_POST['curiosity'];
+        $aq_score->save();
+
+        return view('template/dashboard');
+
+
+    }
+
 }

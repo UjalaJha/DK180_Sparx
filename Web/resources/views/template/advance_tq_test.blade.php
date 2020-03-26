@@ -1,3 +1,4 @@
+
 <!--
 =========================================================
  Material Dashboard - v2.1.1
@@ -276,14 +277,14 @@
                                             <tbody>
                                             <tr>
                                                 <td>
-                                                    {{--                              <div style="background:#972FAF;box-shadow: 3px 3px 4px #ccc;width:30px;height:30px;color:white;padding-top:2px;text-align:center">--}}
+                                                    <div style="background:#972FAF;box-shadow: 3px 3px 4px #ccc;width:30px;height:30px;color:white;padding-top:2px;text-align:center">
 
-                                                    {{--                              {{ $question_details[0]->question_id }}--}}
-                                                    {{--                              </div>   --}}
+                                                        {{$question_details_in_array_new[0][0]}}
+                                                    </div>
                                                 </td>
                                                 <td>
                                                     <!--                         -->
-                                                    {{ $question_details[0]->question_statement}}
+                                                    {{$question_details_in_array_new[0][1]['question_statement']}}
                                                 </td>
 
                                             </tr>
@@ -301,7 +302,7 @@
                                                     </div>
 
                                                 </td>
-                                                <td>{{ $question_details[0]->option_1}}
+                                                <td>{{$question_details_in_array_new[0][1]['option_1']}}
 
                                                 <!--                         -->
 
@@ -327,7 +328,7 @@
 
                                                 </td>
                                                 <td>
-                                                {{ $question_details[0]->option_2}}
+                                                {{$question_details_in_array_new[0][1]['option_2']}}
                                                 <!--                         -->
                                                 </td>
 
@@ -348,7 +349,7 @@
 
                                                 <td>
                                                     <!--                            -->
-                                                    {{ $question_details[0]->option_3}}
+                                                    {{$question_details_in_array_new[0][1]['option_3']}}
                                                 </td>
 
                                             </tr>
@@ -365,13 +366,13 @@
 
                                                 </td>
                                                 <td>
-                                                {{ $question_details[0]->option_4 }}
+                                                {{$question_details_in_array_new[0][1]['option_4']}}
                                                 <!--                           -->
                                                 </td>
 
                                             </tr>
                                             <tr>
-                                                <input type="hidden" id="answer" name="" value="{{ $question_details[0]->correct_opton}}" >
+                                                <input type="hidden" id="answer" name="" value="{{$question_details_in_array_new[0][1]['correct_opton']}}" >
                                             </tr>
 
                                             <tr>
@@ -408,29 +409,31 @@
                     <!--                                     <a href="/instructions"><button type="submit" style="width:100%" class="btn btn-info">SUBMIT</button></a>-->
 
                     <div style="display: none;">
-{{$_SESSION['this_page_ques_id'] =$question_details[0]->question_id}}
+
+
+{{$_SESSION['this_page_ques_id'] =$question_details_in_array_new[0][1]['question_id']}}
                     </div>
                     <?php
 
-                        $arraySize = count($_SESSION["all_advance_question_id"]);
-//                        echo $arraySize;
+                    $arraySize = count($_SESSION["all_advance_question_id"]);
+                    //                        echo $arraySize;
                     $current_question_id_index = array_search($_SESSION['this_page_ques_id'] ,$_SESSION["all_advance_question_id"]);
-//                    echo $current_question_id_index;
-                        if($current_question_id_index!=$arraySize-1){
-                            ?>
+                    //                    echo $current_question_id_index;
+                    if($current_question_id_index!=$arraySize-1){
+                    ?>
                             <a href="/advance_tech_test/{{$skill_id}}/{{$_SESSION["all_advance_question_id"][$current_question_id_index+1]}}"><button type="submit" class="btn btn-primary pull-right">Next<i class="material-icons">keyboard_arrow_right</i></button></a>
    <?php
-                        }
+                    }
                     ?>
 
-                        <?php
-                        if($current_question_id_index!=0){
-                            ?>
+                    <?php
+                    if($current_question_id_index!=0){
+                    ?>
                     <a href="/advance_tech_test/{{$skill_id}}/{{$_SESSION["all_advance_question_id"][$current_question_id_index-1]}}"><button type="submit" class="btn btn-primary pull-right"><i class="material-icons">keyboard_arrow_left</i>Previous</button></a>
 
                     <?php
-                        }
-                        ?>
+                    }
+                    ?>
 
 
                 </span>
@@ -693,7 +696,8 @@
             rflag=flag+1;
             localStorage.setItem('tq_score',rflag);
 
-     // alert(localStorage.getItem('tq_score'));
+            // alert(localStorage.getItem('tq_score'));
+
 
         }
 

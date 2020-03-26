@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\IQ;
+use App\UserIQ;
 use App\Jobs;
+use Session;
 class TestControler extends Controller
 {
     /**
@@ -27,6 +29,15 @@ class TestControler extends Controller
         // echo "<pre>";
         return view('template/iq')->with('iq',$iq);
         // print_r($iq[0]->question_statement);
+    }
+
+    public function storeIQ(){
+
+        $iq_score = new UserIQ();
+        $iq_score->user_id = Session::get('user_id');
+        $iq_score->iq_score = $_POST["iq_score"];
+        $iq_score->save();
+        return view('template/dashboard');
     }
 
     /**
