@@ -82,7 +82,8 @@
                 <div class="card-body">
                  
           <div class="row" >
-            <div class="col-lg-3 col-md-6 col-sm-6">
+            @if($user_test_details[0]->iq_given !=1)
+            <div class="col-lg-4 col-md-4 col-sm-6">
               <div class="card card-stats">
                 <div class="card-header card-header-warning card-header-icon">
                   <div class="card-icon">
@@ -102,7 +103,53 @@
                  <a href="/instructions"><button type="submit" class="btn btn-info" style="width: 100%;">Start Test</button></a>
               </div>
             </div>
-            <div class="col-lg-3 col-md-6 col-sm-6">
+            @endif
+
+            @if($user_test_details[0]->hgmi_given !=1)
+            <div class="col-lg-4 col-md-4 col-sm-6">
+              <div class="card card-stats">
+                <div class="card-header card-header-warning card-header-icon">
+                  <div class="card-icon">
+                    <i class="material-icons">wb_incandescent</i>
+                  </div>
+                  <!-- <p class="card-category">Used Space</p> -->
+                  <h3 class="card-title">HGMI Quotient
+
+                  </h3>
+                </div>
+                <div class="card-footer">
+                  <div class="stats">
+                    <i class="material-icons">people_alt</i>1150 people attempted
+                  </div>
+
+                </div>
+                <a href="/hgmi_instructions"><button type="submit" @if($user_test_details[0]->iq_given!=1) disabled @endif class="btn btn-info" style="width: 100%;">Start Test</button></a>
+              </div>
+            </div>
+              @endif
+
+              @if($user_test_details[0]->tq_given !=1)
+            <div class="col-lg-4 col-md-4 col-sm-6">
+              <div class="card card-stats">
+                <div class="card-header card-header-danger card-header-icon">
+                  <div class="card-icon">
+                    <i class="material-icons">computer</i>
+                  </div>
+                  <!-- <p class="card-category">Fixed Issues</p> -->
+                  <h3 class="card-title">Technical Quotient</h3>
+                </div>
+                <div class="card-footer">
+                  <div class="stats">
+                    <i class="material-icons">people_alt</i>1150 people attempted
+                  </div>
+                </div>
+                <a href="/tq_instructions"><button type="submit" @if($user_test_details[0]->hgmi_given!=1) disabled @endif class="btn btn-info" style="width: 100%;">Start Test</button></a>
+              </div>
+            </div>
+              @endif
+
+              @if($user_test_details[0]->eq_given !=1)
+            <div class="col-lg-4 col-md-4 col-sm-6">
               <div class="card card-stats">
                 <div class="card-header card-header-success card-header-icon">
                   <div class="card-icon">
@@ -116,27 +163,13 @@
                     <i class="material-icons">people_alt</i>1150 people attempted 
                   </div>
                 </div>
-                <button type="submit" class="btn btn-info">Start Test</button>
+                <a href="/eq_instructions"><button type="submit" @if($user_test_details[0]->tq_given!=1) disabled @endif class="btn btn-info" style="width: 100%;">Start Test</button></a>
               </div>
             </div>
-            <div class="col-lg-3 col-md-6 col-sm-6">
-              <div class="card card-stats">
-                <div class="card-header card-header-danger card-header-icon">
-                  <div class="card-icon">
-                    <i class="material-icons">computer</i>
-                  </div>
-                  <!-- <p class="card-category">Fixed Issues</p> -->
-                  <h3 class="card-title">Technical Quotient</h3>
-                </div>
-                <div class="card-footer">
-                  <div class="stats">
-                    <i class="material-icons">people_alt</i>1150 people attempted 
-                  </div>
-                </div>
-                <button type="submit" class="btn btn-info">Start Test</button>
-              </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-6">
+              @endif
+
+              @if($user_test_details[0]->aq_given !=1)
+            <div class="col-lg-4 col-md-4 col-sm-6">
               <div class="card card-stats">
                 <div class="card-header card-header-primary card-header-icon">
                   <div class="card-icon">
@@ -150,9 +183,11 @@
                     <i class="material-icons">people_alt</i>1150 people attempted 
                   </div>
                 </div>
-                <button type="submit" class="btn btn-info">Start Test</button>
+                <a href="aq_instructions"><button type="submit" @if($user_test_details[0]->eq_given!=1) disabled @endif class="btn btn-info" style="width: 100%;">Start Test</button></a>
               </div>
             </div>
+                @endif
+
           </div>
                 </div>
 

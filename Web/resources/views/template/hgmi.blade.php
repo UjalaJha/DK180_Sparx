@@ -222,18 +222,19 @@
                         <span>
                         <form method="post" action="/save_hgmi">
                             @csrf
-                            <input type="hidden" id="Verbal" name="Verbal" value="0" >
-                            <input type="hidden" id="Logical" name="Logical" value="0" >
-                            <input type="hidden" id="Musical" name="Musical" value="0" >
-                            <input type="hidden" id="Visual" name="Visual" value="0" >
-                            <input type="hidden" id="Kinesthetic" name="Kinesthetic" value="0" >
-                            <input type="hidden" id="Intrapersonal" name="Intrapersonal" value="0" >
-                            <input type="hidden" id="Interpersonal" name="Interpersonal" value="0" >
-                            <input type="hidden" id="Naturalist" name="Naturalist" value="0" >
-                            <input type="hidden" id="Existential" name="Existential" value="0" >
+                            <input type="hidden" id="Verbal" name="Verbal" value="0">
+                            <input type="hidden" id="Logical" name="Logical" value="0">
+                            <input type="hidden" id="Musical" name="Musical" value="0">
+                            <input type="hidden" id="Visual" name="Visual" value="0">
+                            <input type="hidden" id="Kinesthetic" name="Kinesthetic" value="0">
+                            <input type="hidden" id="Intrapersonal" name="Intrapersonal" value="0">
+                            <input type="hidden" id="Interpersonal" name="Interpersonal" value="0">
+                            <input type="hidden" id="Naturalist" name="Naturalist" value="0">
+                            <input type="hidden" id="Existential" name="Existential" value="0">
 
 
-                            <button type="submit" class="btn btn-info">Submit Test</button>
+
+                            <button type="submit" onclick="update_values_hgmi()" class="btn btn-info">Submit Test</button>
 
                         </form>
                         </span>
@@ -512,9 +513,20 @@
 
     }
 
+    function update_values_hgmi() {
+        document.getElementById('Verbal').value = localStorage.getItem('Verbal');
+        document.getElementById('Logical').value = localStorage.getItem('Logical');
+        document.getElementById('Musical').value = localStorage.getItem('Musical');
+        document.getElementById('Visual').value = localStorage.getItem('Visual');
+        document.getElementById('Kinesthetic').value = localStorage.getItem('Kinesthetic');
+        document.getElementById('Intrapersonal').value = localStorage.getItem('Intrapersonal');
+        document.getElementById('Interpersonal').value = localStorage.getItem('Interpersonal');
+        document.getElementById('Naturalist').value = localStorage.getItem('Naturalist');
+        document.getElementById('Existential').value = localStorage.getItem('Existential');
+
+    }
+
 </script>
-
-
 
 </body>
 

@@ -347,7 +347,7 @@
                         <input type="hidden" id="iq_score" name="iq_score" value="0">
                         
 {{--                     <a href="/eq_instructions"><button type="submit" class="btn btn-info">Submit Section</button></a>--}}
-                         <button type="submit" class="btn btn-info">Submit Test</button>
+                         <button type="submit" onclick="update_values_iq()" class="btn btn-info">Submit Test</button>
         </form>
 
                   <a href="/test/{{$iq[0]->question_id+1}}"><button type="submit" class="btn btn-primary pull-right">Next<i class="material-icons">keyboard_arrow_right</i></button></a>
@@ -608,7 +608,13 @@
       }   
 
     }
-    
+
+    function update_values_iq() {
+        document.getElementById('iq_score').value = localStorage.getItem('iq_score');
+    }
+
+
+
   </script>
 
 

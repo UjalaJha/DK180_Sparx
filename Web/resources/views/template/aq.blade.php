@@ -318,20 +318,20 @@
                     <form action="/save_aq" method="post">
                         @csrf
 
-                        <input type="hidden" id="persistence" name="persistence">
-                         <input type="hidden" id="boldness" name="boldness">
-                         <input type="hidden" id="complexity" name="complexity">
-                         <input type="hidden" id="abstraction" name="abstraction">
-                         <input type="hidden" id="curiosity" name="curiosity">
+                        <input type="hidden" id="persistence" name="persistence" value="0">
+                         <input type="hidden" id="boldness" name="boldness" value="0">
+                         <input type="hidden" id="complexity" name="complexity" value="0">
+                         <input type="hidden" id="abstraction" name="abstraction" value="0">
+                         <input type="hidden" id="curiosity" name="curiosity" value="0">
 
-                       <button type="submit" class="btn btn-info">Submit Section</button>
+                       <button type="submit" onclick="update_values_aq()" class="btn btn-info">Submit Section</button>
 
                     </form>
 
                     <!--                                     <a href="/instructions"><button type="submit" style="width:100%" class="btn btn-info">SUBMIT</button></a>-->
 
-                  <a href="/aqtest/"><button type="submit" class="btn btn-primary pull-right">Next<i class="material-icons">keyboard_arrow_right</i></button></a>
-                  <a href="/aqtest/"><button type="submit" class="btn btn-primary pull-right"><i class="material-icons">keyboard_arrow_left</i>Previous</button></a>
+                  <a href="/aqtest/{{$aq[0]->question_id+1}}"><button type="submit" class="btn btn-primary pull-right">Next<i class="material-icons">keyboard_arrow_right</i></button></a>
+                  <a href="/aqtest/{{$aq[0]->question_id-1}}"><button type="submit" class="btn btn-primary pull-right"><i class="material-icons">keyboard_arrow_left</i>Previous</button></a>
                 </span>
             </div>
         </div>
@@ -590,9 +590,16 @@
 
     }
 
+    function update_values_aq(){
+        document.getElementById('persistence').value = localStorage.getItem('persistence');
+        document.getElementById('boldness').value = localStorage.getItem('boldness');
+        document.getElementById('complexity').value = localStorage.getItem('complexity');
+        document.getElementById('abstraction').value = localStorage.getItem('abstraction');
+        document.getElementById('curiosity').value = localStorage.getItem('curiosity');
+
+    }
+
 </script>
-
-
 
 </body>
 

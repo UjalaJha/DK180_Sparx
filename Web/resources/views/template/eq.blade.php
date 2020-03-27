@@ -387,14 +387,14 @@
                        <input type="hidden" id="inspirational leadership" name="inspirational leadership" value="0">
                        <input type="hidden" id="social awareness" name="social awareness" value="0">
 
-                    <button type="submit" class="btn btn-info">Submit Section</button>
+                    <button type="submit" onclick="update_values()" class="btn btn-info">Submit Section</button>
 
                    </form>
 
 <!--                                     <a href="/instructions"><button type="submit" style="width:100%" class="btn btn-info">SUBMIT</button></a>-->
 
-                  <a href="/test/"><button type="submit" class="btn btn-primary pull-right">Next<i class="material-icons">keyboard_arrow_right</i></button></a>
-                  <a href="/test/"><button type="submit" class="btn btn-primary pull-right"><i class="material-icons">keyboard_arrow_left</i>Previous</button></a>
+                  <a href="/eqtest/{{$eq[0]->question_id+1}}"><button type="submit" class="btn btn-primary pull-right">Next<i class="material-icons">keyboard_arrow_right</i></button></a>
+                  <a href="/eqtest/{{$eq[0]->question_id-1}}"><button type="submit" class="btn btn-primary pull-right"><i class="material-icons">keyboard_arrow_left</i>Previous</button></a>
                 </span>
         </div>
       </div>
@@ -654,7 +654,17 @@
       // }
 
     }
-    
+
+    function update_values() {
+        document.getElementById('self awareness').value = localStorage.getItem('self awareness');
+        document.getElementById('self control').value = localStorage.getItem('self control');
+        document.getElementById('achievement orientation').value = localStorage.getItem('achievement orientation');
+        document.getElementById('positive outlook').value = localStorage.getItem('positive outlook');
+        document.getElementById('inspirational leadership').value = localStorage.getItem('inspirational leadership');
+        document.getElementById('social awareness').value = localStorage.getItem('social awareness');
+
+    }
+
   </script>
 
 

@@ -28,9 +28,7 @@ Route::get('/signup', function () {
 
 Route::post('/register', 'LoginController@store');
 
-Route::get('/dashboard', function () {
-    return view('template/dashboard');
-});
+Route::get('/view_dashboard', 'UserController@redirectDashboard');
 Route::get('/instructions', function () {
     return view('template/instructions');
 });

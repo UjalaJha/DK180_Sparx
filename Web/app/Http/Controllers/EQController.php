@@ -6,6 +6,7 @@ use App\EQ;
 use App\UserEQ;
 use Illuminate\Http\Request;
 use Session;
+use App\UserTests;
 
 class EQController extends Controller
 {
@@ -45,6 +46,10 @@ class EQController extends Controller
         $eq_score->eq_social_awareness = $_POST["social_awareness"];
         $eq_score->save();
 
-        return view('template/dashboard');
+        $user_id = Session::get('user_id');
+        $user_test = UserTests::where('user_id',$user_id)->update(['eq_given'=>1]);
+        return app('App\Http\Controllers\UserController')->redirectDashboard();
+
+//        return view('template/dashboard');
     }
 }

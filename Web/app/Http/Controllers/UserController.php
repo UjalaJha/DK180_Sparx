@@ -10,6 +10,7 @@ use App\UserRatings;
 use App\TQCategoryDetails;
 use Session;
 
+use App\UserTests;
 use App\IQ;
 use App\EQ;
 use App\AQ;
@@ -25,6 +26,17 @@ use Illuminate\Http\Request;
 
 class UserController extends Controller
 {
+
+
+    public function redirectDashboard(){
+        $id = Session::get('user_id');
+//        echo $id;
+        $user_test_details = UserTests::where('user_id',$id)->get();
+//        $user_test_array = json_decode(json_encode($user_test_details), true);
+//         print_r($user_test_array);
+        return view('template/dashboard')->with('user_test_details',$user_test_details);
+
+    }
 
 
     public function skills_view(){
@@ -88,7 +100,11 @@ class UserController extends Controller
             // but could return message to user "you entered nothing" etc etc
 //            echo "empty";
 //            echo "test done";
-            return view('/template/aq_instructions');
+
+            $user_id = Session::get('user_id');
+            $user_test = UserTests::where('user_id',$user_id)->update(['tq_given'=>1]);
+            return app('App\Http\Controllers\UserController')->redirectDashboard();
+
 
         }
     }
@@ -154,7 +170,9 @@ class UserController extends Controller
             // but could return message to user "you entered nothing" etc etc
 //            echo "empty";
 //            echo "test done";
-            return view('/template/aq_instructions');
+//            $user_id = Session::get('user_id');
+//            $user_test = UserTests::where('user_id',$user_id)->update('tq_given',1);
+            return app('App\Http\Controllers\UserController')->redirectDashboard();
 
         }
     }

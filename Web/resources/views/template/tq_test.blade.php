@@ -397,7 +397,7 @@
                     <form method="get" action="/save_skill">
                 @csrf
                    <input type="hidden" id="skill_category_id" name="skill_category_id" value="{{$skill_id}}" >
-                   <input type="hidden" id="score" name="scores" value="" >
+                   <input type="hidden" id="score" name="scores" value="">
 
 {{--                    <a href="/aq_instructions"><button type="" class="btn btn-danger">End Test</button></a>--}}
                    <button type="submit" class="btn btn-info">Submit Test</button>

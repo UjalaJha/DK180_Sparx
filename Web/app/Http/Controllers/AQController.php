@@ -5,6 +5,7 @@ use App\AQ;
 use App\UserAQ;
 use Illuminate\Http\Request;
 use Session;
+use App\UserTests;
 
 class AQController extends Controller
 {
@@ -23,7 +24,6 @@ class AQController extends Controller
     }
     public function show($id)
     {
-
         $aq=AQ::where('question_id',$id)->get();
         // echo "<pre>";
         return view('template/aq')->with('aq',$aq);
@@ -46,8 +46,12 @@ class AQController extends Controller
         $aq_score->aq_curiosity = $_POST['curiosity'];
         $aq_score->save();
 
-        return view('template/dashboard');
+        $user_id = Session::get('user_id');
+        $user_test = UserTests::where('user_id',$user_id)->update(['aq_given'=>1]);
+        return app('App\Http\Controllers\UserController')->redirectDashboard();
 
+
+//        return view('template/dashboard');
 
     }
 

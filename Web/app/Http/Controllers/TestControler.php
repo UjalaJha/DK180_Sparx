@@ -7,6 +7,7 @@ use App\IQ;
 use App\UserIQ;
 use App\Jobs;
 use Session;
+use App\UserTests;
 class TestControler extends Controller
 {
     /**
@@ -33,11 +34,16 @@ class TestControler extends Controller
 
     public function storeIQ(){
 
+        $user_id = Session::get('user_id');
         $iq_score = new UserIQ();
         $iq_score->user_id = Session::get('user_id');
         $iq_score->iq_score = $_POST["iq_score"];
         $iq_score->save();
-        return view('template/dashboard');
+
+        $user_test = UserTests::where('user_id',$user_id)->update(['iq_given'=>1]);
+        return app('App\Http\Controllers\UserController')->redirectDashboard();
+
+//        return view('template/dashboard');
     }
 
     /**
