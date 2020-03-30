@@ -25,7 +25,7 @@
                       <label>Select Stream</label>
                       <div class="form-group">
 
-                        <select name="stream" id="stream_selec" class="form-control">
+                        <select name="stream" id="stream_select" class="form-control">
                           <option value="Engineering">Engineering </option>
                           <option value="MBA">MBA</option>
                           <option value="BMS">BMS</option>
@@ -46,7 +46,7 @@
                       <label>Select Category</label>
                       <div class="form-group">
 
-                        <select name="category" id="category_selec" class="form-control">
+                        <select name="category" id="category_select" class="form-control">
                           <option value="Application Development">Application Development </option>
                           <option value="Web Development">Web Development</option>
                           
@@ -58,9 +58,37 @@
                   
                 </div>
                 
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <div class="form-group">
+
+                        <label class="bmd-label-floating">Sub-Category/Language</label>
+                      <input type="text" class="form-control" name="sub_category">                     
+                     
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label>Select level</label>
+                      <div class="form-group">
+
+                        <select name="level" id="level_select" class="form-control">
+                          <option value="0">Beginner</option>
+                          <option value="1">Expert</option>
+                          
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  
+                  </div>
                 
                 
-                
+<!--
                 <div class="row">
                   <div class="col-md-12">
                     <div class="form-group">
@@ -72,6 +100,7 @@
                     </div>
                   </div>
                 </div>
+-->
                 <div class="row">
 
                 </div>
@@ -397,12 +426,16 @@
   jQuery(document).ready(function() {
 
     $("#stream_select").select2({
-//      multiple: true,
+      multiple: false,
         placeholder: "Select Stream"
 
     }),
     $("#category_select").select2({
-//      multiple: true,
+      multiple: false,
+
+    }),
+    $("#level_select").select2({
+      multiple: false,
 
     });
 
@@ -421,10 +454,10 @@ $(document).ready(function(){
  {
   html = '<tr>';
         html+='<div class="row"><div class="col-md-4">';
-        html += '<td><label class="bmd-label-floating">Concept Name</label><input type="text" name="first_name[]" class="form-control" /></td></div>';
+        html += '<td><label class="bmd-label-floating">Concept Name</label><input type="text" name="concept_name[]" class="form-control" /></td></div>';
         html+='<div class="col-md-4"></div>';
         html+='<div class="col-md-4">'
-        html += '<td><label class="bmd-label-floating">Number of Questions to be Asked</label><input type="text" name="last_name[]" class="form-control" /></td></div>';
+        html += '<td><label class="bmd-label-floating">Number of Questions to be Asked</label><input type="text" name="concept_number[]" class="form-control" /></td></div>';
         if(number > 1)
         {
             html += '<td><button type="button" name="remove" id="" class="btn btn-danger remove">Remove</button></td></tr>';
