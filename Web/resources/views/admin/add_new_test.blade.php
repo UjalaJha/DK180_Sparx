@@ -17,7 +17,7 @@
 
 
 
-              <form action="" method="post">
+              <form action="/insert_new_test" method="post">
                @csrf
                <div class="row">
                   <div class="col-md-6">
@@ -25,7 +25,7 @@
                       <label>Select Stream</label>
                       <div class="form-group">
 
-                        <select name="stream[]" id="stream_select" multiple="" class="form-control">
+                        <select name="stream" id="stream_selec" class="form-control">
                           <option value="Engineering">Engineering </option>
                           <option value="MBA">MBA</option>
                           <option value="BMS">BMS</option>
@@ -46,7 +46,7 @@
                       <label>Select Category</label>
                       <div class="form-group">
 
-                        <select name="category[]" id="category_select" multiple="" class="form-control">
+                        <select name="category" id="category_selec" class="form-control">
                           <option value="Application Development">Application Development </option>
                           <option value="Web Development">Web Development</option>
                           
@@ -79,20 +79,9 @@
                 
                 
                 
+<!--
                 <div class="row">
-                  <div class="col-md-4">
-                    <div class="form-group">
-                      <label class="bmd-label-floating">Employmnet Type</label>
-                      <div class="form-group">
-                        <select  class="form-control" name="empolyment_type">
-                          <option value="full time">Full Time</option>
-                          <option value="part time">Part Time</option>
-                          <option value="shifts">Shifts</option>
-
-                        </select>
-                      </div>
-                    </div>
-                  </div>
+                  
                   <div class="col-md-4">
                     <div class="form-group">
                       <label class="bmd-label-floating">Experience</label>
@@ -107,14 +96,24 @@
                   </div>
 
                 </div>
+-->
 
 
-                
+                <table>
+                    <tr>
+<!--                        <td> <input type="text" class="form-control" name="location"></td>-->
+                    </tr>
+                </table>
 
 
-                <button type="submit" class="btn btn-primary pull-right">Post</button>
+                <button type="submit" class="btn btn-primary pull-right">SUBMIT</button>
                 <div class="clearfix"></div>
+                
+                
               </form>
+              
+              
+              
             </div>
           </div>
         </div>
@@ -398,11 +397,12 @@
   jQuery(document).ready(function() {
 
     $("#stream_select").select2({
-      multiple: true,
+//      multiple: true,
+        placeholder: "Select Stream"
 
     }),
     $("#category_select").select2({
-      multiple: true,
+//      multiple: true,
 
     });
 
@@ -410,6 +410,47 @@
   });
 
 </script>
+<script>
+$(document).ready(function(){
+
+ var count = 1;
+
+ dynamic_field(count);
+
+ function dynamic_field(number)
+ {
+  html = '<tr>';
+        html+='<div class="row"><div class="col-md-4">';
+        html += '<td><label class="bmd-label-floating">Concept Name</label><input type="text" name="first_name[]" class="form-control" /></td></div>';
+        html+='<div class="col-md-4"></div>';
+        html+='<div class="col-md-4">'
+        html += '<td><label class="bmd-label-floating">Number of Questions to be Asked</label><input type="text" name="last_name[]" class="form-control" /></td></div>';
+        if(number > 1)
+        {
+            html += '<td><button type="button" name="remove" id="" class="btn btn-danger remove">Remove</button></td></tr>';
+            $('tbody').append(html);
+        }
+        else
+        {   
+            html += '<td><button type="button" name="add" id="add" class="btn btn-success">Add</button></td></tr>';
+            $('tbody').html(html);
+        }
+ }
+
+ $(document).on('click', '#add', function(){
+  count++;
+  dynamic_field(count);
+ });
+$(document).on('click', '.remove', function(){
+  count--;
+  $(this).closest("tr").remove();
+ });    
+    
+ });
+ </script>
+ 
+
+
 
 
 

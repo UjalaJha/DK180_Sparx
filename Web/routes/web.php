@@ -170,3 +170,5 @@ Route::get('add_test', function(){
 Route::get('add_question', function(){
     return view('admin/add_new_question');
 });
+
+Route::post('insert_new_test','AddTestController@addNewTest');
