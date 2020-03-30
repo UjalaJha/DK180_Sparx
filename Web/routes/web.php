@@ -166,3 +166,6 @@ Route::post('save_hgmi','HGMIController@storeScore');
 Route::get('add_test', function(){
     return view('admin/add_new_test');
 });
+
+Route::post('insert_new_test','AddTestController@addNewTest');
+
