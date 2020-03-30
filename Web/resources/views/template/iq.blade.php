@@ -345,6 +345,7 @@
                     <form action="/save_iq_score" method="post">
                         @csrf
                         <input type="hidden" id="iq_score" name="iq_score" value="0">
+                        
 {{--                     <a href="/eq_instructions"><button type="submit" class="btn btn-info">Submit Section</button></a>--}}
                          <button type="submit" onclick="update_values_iq()" class="btn btn-info">Submit Test</button>
         </form>
