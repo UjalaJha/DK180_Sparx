@@ -172,3 +172,6 @@ Route::get('add_question', function(){
 });
 
 Route::post('insert_new_test','AddTestController@addNewTest');
+
+Route::post('proceed_with_add_ques_form', 'AddQuestionController@proceedForm');
+Route::post('save_manual_question','AddQuestionController@saveManualForm');

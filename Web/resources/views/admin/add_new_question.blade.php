@@ -69,8 +69,8 @@
                                         <div class="form-group">
 
                                             <select name="concept" id="concept_select" class="form-control">
-                                                <option value="Basics">Basics</option>
-                                                <option value="Advance">Advance</option>
+                                                <option value="0">Basics</option>
+                                                <option value="1">Advance</option>
 
                                             </select>
                                         </div>
@@ -83,10 +83,10 @@
                                         <div class="form-group">
 
                                             <select name="sub_concept" id="sub_concept_select" class="form-control">
-                                                <option value="Classes and Objects">Classes and Objects</option>
+                                                <option value="Pointer">Pointer</option>
+                                                <option value="Control Statements">Control Statements</option>
+                                                <option value="Bitwise operations">Bitwise operations</option>
                                                 <option value="Strings">Strings</option>
-                                                <option value="ArrayList">ArrayList</option>
-                                                <option value="LinkedList">LinkedList</option>
 
                                             </select>
                                         </div>
@@ -123,7 +123,7 @@
                                         <div class="col-md-4">
                                             <div class="form-group">
                                                 <label class="bmd-label-floating">Enter no of questions</label>
-                                                <input type="number" class="form-control" min="1" id="no_of_ques" name="no_of_ques" value="0">
+                                                <input type="number" class="form-control" min="1" id="no_of_ques" name="no_of_ques" value="1">
                                             </div>
                                         </div>
                                     </div>
@@ -202,7 +202,7 @@
 
 
 
-                            <button type="submit" name="proceed" class="btn btn-primary pull-right">Proceed</button>
+                            <button type="submit" name="proceed" onclick="checkforfields()" class="btn btn-primary pull-right">Proceed</button>
                             <div class="clearfix"></div>
                         </form>
                     </div>
@@ -487,7 +487,7 @@
         if(buttontype=='excel'){
             document.getElementById('excel-operations').style.display = 'block';
             document.getElementById('manual-operations').style.display = 'none';
-            document.getElementById('no_of_ques').value = 0;
+            document.getElementById('no_of_ques').value = 101010;
         }if(buttontype=='manual'){
             document.getElementById('excel-operations').style.display = 'none';
             document.getElementById('manual-operations').style.display = 'block';
@@ -505,6 +505,16 @@
             document.getElementById('ifNo').style.display = 'block';
         }
     }
+
+    function checkforfields() {
+        var x = document.getElementById('ques_file').value;
+        var y = document.getElementById('no_of_ques').value;
+        if(x=="" && (y==1 || y==101010)){
+            // alert("hee");
+            document.getElementById('no_of_ques').value = 1;
+        }
+    }
+
 </script>
 
 {{--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">--}}
