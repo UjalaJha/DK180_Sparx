@@ -17,7 +17,7 @@
 
 
 
-                        <form action="" method="post">
+                        <form action="/proceed_with_add_ques_form" method="post">
                             @csrf
                             <div class="row">
                                 <div class="col-md-6">
@@ -118,86 +118,91 @@
                             </div>
 
                             <div id="manual-operations" style="display: none;">
-                                <div class="row">
-                                    <div class="col-md-4">
-                                        <div class="form-group">
-                                            <label for="">Enter total no of questions</label>
-                                            <input type="number" min="1" class="form-control">
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <div class="form-group">
-                                            <label class="bmd-label-floating">Enter question</label>
-                                            <input type="text" class="form-control" name="question_statement">
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="row">
-                                    <div class="col-md-4">
-                                        <div class="form-group">
-                                            <label class="bmd-label-floating">Is options available?</label>
-                                            <input type="radio" onclick="yesNoCheck()" id="yesCheck" name="question_statement">
-                                            <label for="defaultRadio">Yes</label>
-                                            <input type="radio" onclick="yesNoCheck()" id="noCheck"  name="question_statement">
-                                            <label for="defaultRadio">No</label>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="row" id="ifYes" style="display: none">
-                                    <div class="col-md-12">
-                                        <div class="col-md-3">
+                                <div class="manual-div">
+                                    <div class="row">
+                                        <div class="col-md-4">
                                             <div class="form-group">
-                                                <label class="bmd-label-floating" for="">Option 1</label>
-                                                <input type="text" class="form-control">
-                                            </div>
-                                        </div>
-                                        <div class="col-md-3">
-                                            <div class="form-group">
-                                                <label class="bmd-label-floating" for="">Option 2</label>
-                                                <input type="text" class="form-control">
-                                            </div>
-                                        </div>
-                                        <div class="col-md-3">
-                                            <div class="form-group">
-                                                <label class="bmd-label-floating" for="">Option 3</label>
-                                                <input type="text" class="form-control">
-                                            </div>
-                                        </div>
-                                        <div class="col-md-3">
-                                            <div class="form-group">
-                                                <label class="bmd-label-floating" for="">Option 4</label>
-                                                <input type="text" class="form-control">
+                                                <label class="bmd-label-floating">Enter no of questions</label>
+                                                <input type="number" class="form-control" min="1" id="no_of_ques" name="no_of_ques" value="0">
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-md-4">
-                                        <div class="form-group">
-                                            <label class="bmd-label-floating" for="">Correct option</label>
-                                            <input type="number" class="form-control" min="1" max="4">
-                                        </div>
-                                    </div>
-                                </div>
+{{--                                <div class="row">--}}
+{{--                                    <div class="col-md-12">--}}
+{{--                                        <div class="form-group">--}}
+{{--                                            <label class="bmd-label-floating">Enter question</label>--}}
+{{--                                            <input type="text" class="form-control" name="question_statement">--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                </div>--}}
 
-                                <div class="row" id="ifNo" style="display: none">
-                                    <div class="col-md-12">
-                                        <div class="form-group">
-                                            <label class="bmd-label-floating" for="">Enter Answer</label>
-                                            <input type="text" class="form-control">
-                                        </div>
-                                    </div>
-                                </div>
+{{--                                <div class="row">--}}
+{{--                                    <div class="col-md-4">--}}
+{{--                                        <div class="form-group">--}}
+{{--                                            <label class="bmd-label-floating">Is options available?</label>--}}
+{{--                                            <input type="radio" onclick="yesNoCheck()" id="yesCheck" name="question_statement">--}}
+{{--                                            <label for="defaultRadio">Yes</label>--}}
+{{--                                            <input type="radio" onclick="yesNoCheck()" id="noCheck"  name="question_statement">--}}
+{{--                                            <label for="defaultRadio">No</label>--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                </div>--}}
+
+{{--                                <div class="row" id="ifYes" style="display: none">--}}
+{{--                                    <div class="col-md-12">--}}
+{{--                                        <div class="col-md-2">--}}
+{{--                                            <div class="form-group">--}}
+{{--                                                <label class="bmd-label-floating" for="">Option 1</label>--}}
+{{--                                                <input type="text" class="form-control">--}}
+{{--                                            </div>--}}
+{{--                                        </div>--}}
+{{--                                        <div class="col-md-2">--}}
+{{--                                            <div class="form-group">--}}
+{{--                                                <label class="bmd-label-floating" for="">Option 2</label>--}}
+{{--                                                <input type="text" class="form-control">--}}
+{{--                                            </div>--}}
+{{--                                        </div>--}}
+{{--                                        <div class="col-md-2">--}}
+{{--                                            <div class="form-group">--}}
+{{--                                                <label class="bmd-label-floating" for="">Option 3</label>--}}
+{{--                                                <input type="text" class="form-control">--}}
+{{--                                            </div>--}}
+{{--                                        </div>--}}
+{{--                                        <div class="col-md-2">--}}
+{{--                                            <div class="form-group">--}}
+{{--                                                <label class="bmd-label-floating" for="">Option 4</label>--}}
+{{--                                                <input type="text" class="form-control">--}}
+{{--                                            </div>--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                    <div class="col-md-4">--}}
+{{--                                        <div class="form-group">--}}
+{{--                                            <label class="bmd-label-floating" for="">Correct option</label>--}}
+{{--                                            <input type="number" class="form-control" min="1" max="4">--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                </div>--}}
+
+{{--                                <div class="row" id="ifNo" style="display: none">--}}
+{{--                                    <div class="col-md-12">--}}
+{{--                                        <div class="form-group">--}}
+{{--                                            <label class="bmd-label-floating" for="">Enter Answer</label>--}}
+{{--                                            <input type="text" class="form-control">--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                </div>--}}
+
+                            </div>
+{{--                                <div>--}}
+{{--                                    <button type="button" name="add" id="add_fields" class="btn btn-success add_fields">Add</button>--}}
+{{--                                </div>--}}
                             </div>
 
 
 
 
 
-{{--                            <button type="submit" class="btn btn-primary pull-right">Post</button>--}}
+                            <button type="submit" name="proceed" class="btn btn-primary pull-right">Proceed</button>
                             <div class="clearfix"></div>
                         </form>
                     </div>
@@ -482,10 +487,11 @@
         if(buttontype=='excel'){
             document.getElementById('excel-operations').style.display = 'block';
             document.getElementById('manual-operations').style.display = 'none';
-
+            document.getElementById('no_of_ques').value = 0;
         }if(buttontype=='manual'){
             document.getElementById('excel-operations').style.display = 'none';
             document.getElementById('manual-operations').style.display = 'block';
+            document.getElementById('no_of_ques').value = 1;
         }
     }
 
@@ -501,6 +507,108 @@
     }
 </script>
 
+{{--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">--}}
+{{--</script>--}}
+
+{{--<script>--}}
+{{--    //Add Input Fields--}}
+{{--    $(document).ready(function() {--}}
+{{--        var max_fields = 100; //Maximum allowed input fields--}}
+{{--        var wrapper    = $(".manual-div"); //Input fields wrapper--}}
+{{--        var add_button = $(".add_fields"); //Add button class or ID--}}
+{{--        var x = 1; //Initial input field is set to 1--}}
+
+{{--        //When user click on add input button--}}
+{{--        $(add_button).click(function(e){--}}
+{{--            e.preventDefault();--}}
+{{--            //Check maximum allowed input fields--}}
+{{--            if(x < max_fields){--}}
+{{--                x++; //input field increment--}}
+{{--                //add input field--}}
+{{--                $(wrapper).append('<div class="manual-div">\n' +--}}
+{{--                    '                                <div class="row">\n' +--}}
+{{--                    '                                    <div class="col-md-12">\n' +--}}
+{{--                    '                                        <div class="form-group">\n' +--}}
+{{--                    '                                            <label class="bmd-label-floating">Enter question</label>\n' +--}}
+{{--                    '                                            <input type="text" class="form-control" name="question_statement">\n' +--}}
+{{--                    '                                        </div>\n' +--}}
+{{--                    '                                    </div>\n' +--}}
+{{--                    '                                </div>\n' +--}}
+{{--                    '\n' +--}}
+{{--                    '                                <div class="row">\n' +--}}
+{{--                    '                                    <div class="col-md-4">\n' +--}}
+{{--                    '                                        <div class="form-group">\n' +--}}
+{{--                    '                                            <label class="bmd-label-floating">Is options available?</label>\n' +--}}
+{{--                    '                                            <input type="radio" onclick="yesNoCheck()" id="yesCheck" name="question_statement">\n' +--}}
+{{--                    '                                            <label for="defaultRadio">Yes</label>\n' +--}}
+{{--                    '                                            <input type="radio" onclick="yesNoCheck()" id="noCheck"  name="question_statement">\n' +--}}
+{{--                    '                                            <label for="defaultRadio">No</label>\n' +--}}
+{{--                    '                                        </div>\n' +--}}
+{{--                    '                                    </div>\n' +--}}
+{{--                    '                                </div>\n' +--}}
+{{--                    '\n' +--}}
+{{--                    '                                <div class="row" id="ifYes" style="display: none">\n' +--}}
+{{--                    '                                    <div class="col-md-12">\n' +--}}
+{{--                    '                                        <div class="col-md-2">\n' +--}}
+{{--                    '                                            <div class="form-group">\n' +--}}
+{{--                    '                                                <label class="bmd-label-floating" for="">Option 1</label>\n' +--}}
+{{--                    '                                                <input type="text" class="form-control">\n' +--}}
+{{--                    '                                            </div>\n' +--}}
+{{--                    '                                        </div>\n' +--}}
+{{--                    '                                        <div class="col-md-2">\n' +--}}
+{{--                    '                                            <div class="form-group">\n' +--}}
+{{--                    '                                                <label class="bmd-label-floating" for="">Option 2</label>\n' +--}}
+{{--                    '                                                <input type="text" class="form-control">\n' +--}}
+{{--                    '                                            </div>\n' +--}}
+{{--                    '                                        </div>\n' +--}}
+{{--                    '                                        <div class="col-md-2">\n' +--}}
+{{--                    '                                            <div class="form-group">\n' +--}}
+{{--                    '                                                <label class="bmd-label-floating" for="">Option 3</label>\n' +--}}
+{{--                    '                                                <input type="text" class="form-control">\n' +--}}
+{{--                    '                                            </div>\n' +--}}
+{{--                    '                                        </div>\n' +--}}
+{{--                    '                                        <div class="col-md-2">\n' +--}}
+{{--                    '                                            <div class="form-group">\n' +--}}
+{{--                    '                                                <label class="bmd-label-floating" for="">Option 4</label>\n' +--}}
+{{--                    '                                                <input type="text" class="form-control">\n' +--}}
+{{--                    '                                            </div>\n' +--}}
+{{--                    '                                        </div>\n' +--}}
+{{--                    '                                    </div>\n' +--}}
+{{--                    '                                    <div class="col-md-4">\n' +--}}
+{{--                    '                                        <div class="form-group">\n' +--}}
+{{--                    '                                            <label class="bmd-label-floating" for="">Correct option</label>\n' +--}}
+{{--                    '                                            <input type="number" class="form-control" min="1" max="4">\n' +--}}
+{{--                    '                                        </div>\n' +--}}
+{{--                    '                                    </div>\n' +--}}
+{{--                    '                                </div>\n' +--}}
+{{--                    '\n' +--}}
+{{--                    '                                <div class="row" id="ifNo" style="display: none">\n' +--}}
+{{--                    '                                    <div class="col-md-12">\n' +--}}
+{{--                    '                                        <div class="form-group">\n' +--}}
+{{--                    '                                            <label class="bmd-label-floating" for="">Enter Answer</label>\n' +--}}
+{{--                    '                                            <input type="text" class="form-control">\n' +--}}
+{{--                    '                                        </div>\n' +--}}
+{{--                    '                                    </div>\n' +--}}
+{{--                    '                                </div>\n' +--}}
+{{--                    '\n' +--}}
+{{--                    '                            </div>');--}}
+{{--            }--}}
+{{--        });--}}
+
+{{--        //when user click on remove button--}}
+{{--        $(wrapper).on("click",".remove_field", function(e){--}}
+{{--            e.preventDefault();--}}
+{{--            // $(this).parent(".manual-div").remove(); //remove inout field--}}
+{{--            $(this).closest("div").parent("div").remove();--}}
+{{--            // alert("hi");--}}
+{{--            // var y = $(this).parentNode.nodeName;--}}
+{{--            // alert(y);--}}
+{{--            x--; //inout field decrement--}}
+{{--        })--}}
+{{--    });--}}
+
+{{--    // <div><a href="javascript:void(0);" class="remove_field">Remove</a></div>--}}
+{{--</script>--}}
 
 
 </body>
