@@ -24,10 +24,11 @@
                                     <div class="form-group">
                                         <label>Select Category</label>
                                         <div class="form-group">
-
-                                            <select name="category" id="category_select" class="form-control">
-                                                <option value="Application Development">Application Development </option>
-                                                <option value="Web Development">Web Development</option>
+                                            <select onchange="selectedCategory(this)" name="category" id="category_select" class="form-control">
+                                                <option value="">Select category...</option>
+                                            @foreach($categories as $value)
+                                                    <option value="{{$value->category}}">{{$value->category}}</option>
+                                                @endforeach
 
                                             </select>
                                         </div>
@@ -39,21 +40,12 @@
                                         <label>Select Sub Category</label>
                                         <div class="form-group">
 
-                                            <select name="sub_category" id="sub_category_select" class="form-control">
-                                                <option value="C">C</option>
-                                                <option value="Java">Java</option>
-                                                <option value="Python">Python</option>
-                                                <option value="C#">C#</option>
-
+                                            <select disabled name="sub_category" id="sub_category_select" onchange="selectedSubCategory(this)" class="form-control">
+                                                <option value="0">Select sub category...</option>
                                             </select>
                                         </div>
                                     </div>
                                 </div>
-
-
-
-
-
 
 
 
@@ -68,7 +60,8 @@
                                         <label>Select Concept</label>
                                         <div class="form-group">
 
-                                            <select name="concept" id="concept_select" class="form-control">
+                                            <select disabled onchange="selectedConcept(this)" name="concept" id="concept_select" class="form-control">
+                                                <option value="">Select level/concept...</option>
                                                 <option value="0">Basics</option>
                                                 <option value="1">Advance</option>
 
@@ -82,12 +75,8 @@
                                         <label>Select Sub Concept</label>
                                         <div class="form-group">
 
-                                            <select name="sub_concept" id="sub_concept_select" class="form-control">
-                                                <option value="Pointer">Pointer</option>
-                                                <option value="Control Statements">Control Statements</option>
-                                                <option value="Bitwise operations">Bitwise operations</option>
-                                                <option value="Strings">Strings</option>
-
+                                            <select disabled name="sub_concept" id="sub_concept_select" class="form-control">
+                                                <option value="">Select sub concept...</option>
                                             </select>
                                         </div>
                                     </div>
@@ -514,8 +503,137 @@
             document.getElementById('no_of_ques').value = 1;
         }
     }
+    
+    
+    // window.test = function (e) {
+    //
+    // }
+
+    window.selectedCategory = function (e) {
+        document.getElementById('sub_category_select').removeAttribute('disabled');
+    }
+
+    window.selectedSubCategory = function (e) {
+        localStorage.setItem('currentSubCategory', e.value);
+        document.getElementById('concept_select').removeAttribute('disabled');
+    }
+
+    window.selectedConcept = function (e) {
+        document.getElementById('sub_concept_select').removeAttribute('disabled');
+    }
+
 
 </script>
+
+
+<script>
+    $(document).ready(function () {
+
+        $('#category_select').change(function () {
+            // alert("hihihihi");
+            //category_name
+            var category_name = $(this).val();
+
+            //empty the dropdown
+            $('#sub_category_select').find('option').not(':first').remove();
+
+            // AJAX request
+            $.ajax({
+                url: 'getSubCategory/'+category_name,
+                type: 'get',
+                dataType: 'json',
+                success: function(response){
+                    // alert("success");
+                    var len = 0;
+                    if(response['data'] != null){
+                        len = response['data'].length;
+                        // alert(len);
+                    }
+
+                    if(len > 0){
+                        // alert("len>0");
+                        // Read data and create <option >
+                        for(var i=0; i<len; i++){
+
+                            var id = response['data'][i].sub_category;
+                            var name = response['data'][i].sub_category;
+
+                            var option = "<option value='"+id+"'>"+name+"</option>";
+
+                            $("#sub_category_select").append(option);
+                        }
+                    }
+
+                }
+            });
+
+
+        });
+    });
+    
+</script>
+
+
+
+<script>
+    $(document).ready(function () {
+
+        $('#concept_select').change(function () {
+            // alert("hihihihi");
+            //category_name
+            var concept = $(this).val();
+            // alert(localStorage.getItem('currentSubCategory')+ concept);
+            //empty the dropdown
+            $('#sub_concept_select').find('option').not(':first').remove();
+
+            // AJAX request
+            $.ajax({
+                url: 'getSubConcept/'+localStorage.getItem('currentSubCategory')+'/'+concept,
+                type: 'get',
+                dataType: 'json',
+                success: function(response){
+                    // alert("success");
+                    var len = 0;
+                    if(response['data'] != null){
+                        len = response['data'].length;
+                        // alert(len);
+                    }
+
+                    if(len > 0){
+                        // alert("len>0");
+                        // Read data and create <option >
+                        for(var i=0; i<len; i++){
+
+                            var id = response['data'][i].sub_concept;
+                            var name = response['data'][i].sub_concept;
+
+                            var option = "<option value='"+id+"'>"+name+"</option>";
+
+                            $("#sub_concept_select").append(option);
+                        }
+                    }
+
+                }
+            });
+
+
+        });
+    });
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 {{--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">--}}
 {{--</script>--}}

@@ -11,6 +11,33 @@ use Session;
 class AddQuestionController extends Controller
 {
     //
+
+    public function index(){
+        $categories = TQCategoryDetails::distinct()->get(['category']);
+//        echo $categories;
+        return view('admin/add_new_question')->with('categories', $categories);
+    }
+
+
+    public function getSubCategory($category_name){
+        $sub_categories['data'] = TQCategoryDetails::fetchSubCategory($category_name);
+        echo json_encode($sub_categories);
+        exit;
+    }
+
+    public function getSubConcept($sub_category, $concept){
+        $category_id = TQCategoryDetails::where('sub_category', $sub_category)->pluck('tq_category_details_id');
+        $tq_category_id = 0;
+        foreach ($category_id as $id){
+            $tq_category_id  = $id;
+        }
+
+        $sub_concept['data'] = TQConceptDetails::fetchSubConcept($tq_category_id, $concept);
+        echo json_encode($sub_concept);
+        exit;
+    }
+
+
     public function proceedForm(){
 //        echo "hey";
 //        echo $_POST['category'];

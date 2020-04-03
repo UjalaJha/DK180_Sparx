@@ -167,11 +167,13 @@ Route::get('add_test', function(){
     return view('admin/add_new_test');
 });
 
-Route::get('add_question', function(){
-    return view('admin/add_new_question');
-});
+Route::get('add_question', 'AddQuestionController@index');
 
 Route::post('insert_new_test','AddTestController@addNewTest');
 
 Route::post('proceed_with_add_ques_form', 'AddQuestionController@proceedForm');
 Route::post('save_manual_question','AddQuestionController@saveManualForm');
+
+Route::get('getSubCategory/{category_name}','AddQuestionController@getSubCategory');
+
+Route::get('getSubConcept/{sub_category}/{concept}','AddQuestionController@getSubConcept');
