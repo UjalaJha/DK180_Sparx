@@ -20,7 +20,7 @@ class AddTestController extends Controller
 //    }
 
     public function addNewTest(){
-        echo "here";
+//        echo "here"; //
         $test=new TQCategoryDetails;
 //        $test->stream=$_POST['stream'];
 //        echo $stream;
@@ -31,7 +31,7 @@ class AddTestController extends Controller
     
 //        print_r($first_name);
 //        print_r($lastname);
-        echo $test->sub_category;
+//        echo $test->sub_category; //
 //        print_r($test);
         $test->save();
         $tq_category_details_id_var=$test->tq_category_details_id;
@@ -41,15 +41,15 @@ class AddTestController extends Controller
         
         $test_concept->tq_category_details_id=$tq_category_details_id_var;
         $test_concept->level=$_POST['level'];
-        echo $test_concept->tq_category_details_id.$test_concept->level;
+//        echo $test_concept->tq_category_details_id.$test_concept->level; //
         
         
 //        print_r($_POST['concept_name']);
 //        print_r($_POST['concept_number']);
         
         $count=sizeof($_POST['concept_name']);
-        echo "<br>";
-        echo $count;
+//        echo "<br>"; //
+//        echo $count; //
         
         for($i=0;$i<$count;$i++){
             echo "<br>";
@@ -57,7 +57,7 @@ class AddTestController extends Controller
             $test_concept->sub_concept=$_POST['concept_name'][$i];
             
             $test_concept->no_of_questions=$_POST['concept_number'][$i];
-            echo $test_concept->sub_concept."".$test_concept->no_of_questions;
+//            echo $test_concept->sub_concept."".$test_concept->no_of_questions;  //
 //            $test_concept->save();
             
             $data=array(
@@ -78,7 +78,7 @@ class AddTestController extends Controller
 //            $data->level=$test_concept->level;
 //                $data->=$test_concept->sub_concept;
 //                $data->no_of_question=$test_concept->no_of_questions;
-            print_r($data);
+//            print_r($data);  //
             TQConceptDetails::insert($data);
             
 
@@ -90,7 +90,7 @@ class AddTestController extends Controller
         
 //        echo "".$lastname."".$first_name;
         
-        
+        return view("landing/index");
         
     }
 }

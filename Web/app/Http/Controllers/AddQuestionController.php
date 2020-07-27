@@ -124,11 +124,12 @@ class AddQuestionController extends Controller
                 return view('admin/add_new_question');
             }
 
-            print_r($data);
+//            print_r($data); //
             TQ::insert($data);
 
         }
 
+        return view('landing/index');
     }
 
 }

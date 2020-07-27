@@ -179,6 +179,36 @@ class UserController extends Controller
 
 
 
+    public function storeMedia(Request $request)
+    {
+        $this->validate($request, [
+            'image_filename' => 'required|image|mimes:jpeg,png,jpg,gif,svg',
+        ]);
+//        |max:2048
+
+        echo "in store media func";
+        $user_id = Session::get('user_id');
+
+        if ($request->hasFile('image_filename')) {
+            $image = $request->file('image_filename');
+            $image_name = $user_id.'.'.$image->getClientOriginalExtension();
+//            echo $name;
+        $destinationPath = public_path('/images');
+        $image->move($destinationPath, $image_name);
+//        $this->save();
+        }
+
+        if ($request->hasFile('resume_filename')) {
+            $resume = $request->file('resume_filename');
+            $resume_name = $user_id.'.'.$resume->getClientOriginalExtension();
+//            echo $name;
+            $destinationPath = public_path('/resumes');
+            $resume->move($destinationPath, $resume_name);
+//        $this->save();
+        }
+
+        return view('template/user')->with('image_name', $image_name)->with('resume_name', $resume_name);
+    }
 
 
     public function store(Request $request)
@@ -203,6 +233,8 @@ class UserController extends Controller
         $user->country = $_POST['country'];
         $user->postal_code = $_POST['postal_code'];
 
+
+
         $string='';
         foreach ($_POST['skills'] as $value){
             $string .=  $value.',';
@@ -211,29 +243,30 @@ class UserController extends Controller
         $user->linkedin_id = $_POST['linkedin_id'];
         $user->github_id = $_POST['github_id'];
         $user->other_links = $_POST['other_links'];
-//        $user->resume_filename = $_POST['resume_filename'];
-        $user->resume_filename="1.pdf";
+        $user->image_filename = $_POST['image_name'];
+        $user->resume_filename = $_POST['resume_name'];
+
         $user->save();
 
 
         //traversy
 
-        if($request->hasFile('resume_filename')){
-            // Get filename with the extension
-            $filenameWithExt = $request->file('resume_filename')->getClientOriginalName();
-            echo $filenameWithExt;
-            // Get just filename
-            $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
-            // Get just ext
-            $extension = $request->file('resume_filename')->getClientOriginalExtension();
-            // Filename to store
-            $fileNameToStore= $filename.'_'.time().'.'.$extension;
-            // Upload Image
-            $path = $request->file('resume_filename')->storeAs('public/resume', $fileNameToStore);
-        } else {
-            $fileNameToStore = 'noimage.jpg';
-            echo "no file";
-        }
+//        if($request->hasFile('resume_filename')){
+//            // Get filename with the extension
+//            $filenameWithExt = $request->file('resume_filename')->getClientOriginalName();
+//            echo $filenameWithExt;
+//            // Get just filename
+//            $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
+//            // Get just ext
+//            $extension = $request->file('resume_filename')->getClientOriginalExtension();
+//            // Filename to store
+//            $fileNameToStore= $filename.'_'.time().'.'.$extension;
+//            // Upload Image
+//            $path = $request->file('resume_filename')->storeAs('public/resume', $fileNameToStore);
+//        } else {
+//            $fileNameToStore = 'noimage.jpg';
+//            echo "no file";
+//        }
 
         //traversy
 
@@ -308,15 +341,15 @@ class UserController extends Controller
 
         }
 
-        return view('/template/user')->with('user_id',$user_id);
+//        return view('/template/user')->with('user_id',$user_id);
 
 
 
 
-    }
+//    }
 
 
-    public  function storeAcademics(){
+//    public  function storeAcademics(){
 
         $user_academics = new UserAcademics;
 //        echo "<pre>";
@@ -347,11 +380,11 @@ class UserController extends Controller
         $user_academics->save();
 
 
-        return view('/template/user')->with('user_id',$user_id);
+//        return view('/template/user')->with('user_id',$user_id);
 
-    }
+//    }
 
-    public function storeInternship(){
+//    public function storeInternship(){
 
 
         $user_id = Session::get('user_id');
@@ -394,11 +427,11 @@ class UserController extends Controller
 
         }
 
-        return view('/template/user');
+//        return view('/template/user');
 
-    }
+//    }
 
-    public function storeProject(){
+//    public function storeProject(){
         $size = count($_POST['project_name']);
 //        $user_project->project_name;
         $user_id = Session::get('user_id');
@@ -448,8 +481,9 @@ class UserController extends Controller
         $i=count($_POST["project_name"]);
         while($i>0){
             $i--;
-            echo $i;
+//            echo $i;
             $user_project = new UserExperiences;
+            $user_project->user_id = $user_id;
             $user_project->project_name = $_POST['project_name'][$i];
             $user_project->role = $_POST['role'][$i];
             $user_project->domain = $_POST['domain'][$i];
@@ -470,7 +504,7 @@ class UserController extends Controller
 //        }
 
 
-//        return view('/template/user');
+        return view('/template/user');
 
     }
 

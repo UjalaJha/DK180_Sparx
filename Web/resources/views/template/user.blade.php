@@ -213,16 +213,19 @@
                   </div>
                 </div>
               </div>
+              <form action="/personal_details" method="post" enctype="multipart/form-data">
+                @csrf
               <div class="card-body">
                 <div class="tab-content">
+
                   <div class="tab-pane active" id="profile">
                     <div class="row">
                       <div class="col-md-12">
                         <div class="card">
 
                           <div class="card-body">
-                            <form action="/personal_details" method="post" enctype="multipart/form-data">
-                              @csrf
+{{--                            <form action="/personal_details" method="post" enctype="multipart/form-data">--}}
+{{--                              @csrf--}}
                               <div class="row">
                                 <div class="col-md-6">
                                   <div class="form-group">
@@ -355,16 +358,31 @@
 
 
                               <div class="row" style="margin-top:10px;">
+                                  <div class="col-md-12">
+                                      <input type="hidden" name="image_name" value="{{$image_name ?? ''}}">
+                                  </div>
+
+                              </div>
+                              <div class="row" style="margin-top:10px;">
+                                  <div class="col-md-12">
+                                      <input type="hidden" name="resume_name" value="{{$resume_name ?? ''}}">
+                                  </div>
+
+                              </div>
+
+
+                              <div class="row" style="margin-top:10px;">
                                 <div class="col-md-12">
                                   <!-- <b><p >Upload Resume</p></b> -->
-                                  <b><span style="margin-right:10px;color:purple">Upload Resume : </span></b><span><input type="file" id="myFile" name="resume_filename"></span>
+{{--                                  <b><span style="margin-right:10px;color:purple">Upload Resume : </span></b><span><input type="file" id="myFile" name="resume_filename"></span>--}}
                                 </div>
 
                               </div>
 
-                              <button type="submit" class="btn btn-primary pull-right">Submit Profile</button>
+                                <a href="#messages" onclick="next1()" data-toggle="tab" class="btn btn-success pull-right">Next</a>
+{{--                              <button type="submit" class="btn btn-primary pull-right">Submit Profile</button>--}}
                               <div class="clearfix"></div>
-                            </form>
+{{--                            </form>--}}
 
                           </div>
                         </div>
@@ -394,8 +412,8 @@
                               
                               
                             ?>  
-                            <form action="/academics" method="post" enctype="multipart/form-data">
-                              @csrf
+{{--                            <form action="/academics" method="post" enctype="multipart/form-data">--}}
+{{--                              @csrf--}}
                               <b><h5 style="color:purple;margin-top:10px;font-weight:bold;">School Information Details</h5></b>
 
                               <div class="row">
@@ -525,10 +543,12 @@
 
                               </div>
 
-                              <button type="submit" class="btn btn-primary pull-right">Submit Profile</button>
+                              <a href="#profile" onclick="previous1()" data-toggle="tab" class="btn btn-danger">Previous</a>
+                              <a href="#settings" onclick="next2()" data-toggle="tab" class="btn btn-success pull-right">Next</a>
+{{--                              <button type="submit" class="btn btn-primary pull-right">Submit Profile</button>--}}
                               <div class="clearfix"></div>
 
-                            </form>
+{{--                            </form>--}}
                           </div>
                         </div>
                       </div>
@@ -542,8 +562,8 @@
                         <div class="card">
 
                           <div class="card-body">
-                            <form action="/internship" name="storeInternship" id="storeInternship" method="POST">
-                            @csrf
+{{--                            <form action="/internship" name="storeInternship" id="storeInternship" method="POST">--}}
+{{--                            @csrf--}}
 
                               <b><h5 style="color:purple;margin-top:10px;font-weight:bold;">Internship Details</h5></b>
                               <div class="row" id="internship1" name="internship1">
@@ -597,10 +617,14 @@
                               <!-- <a  href="#">Add Email Field</a> -->
 
                               <button id="addinternship" type="submit" class="btn btn-info">Add more</button>
-                              <button type="submit" class="btn btn-primary pull-right" name="submitInternship" id="submitInternship">Submit Profile</button>
+
+                              <a href="#messages" onclick="previous2()" data-toggle="tab" class="btn btn-danger">Previous</a>
+                              <a href="#project" onclick="next3()" data-toggle="tab" class="btn btn-success pull-right">Next</a>
+
+{{--                              <button type="submit" class="btn btn-primary pull-right" name="submitInternship" id="submitInternship">Submit Profile</button>--}}
                               <div class="clearfix"></div>
 
-                            </form>
+{{--                            </form>--}}
 
                           </div>
                         </div>
@@ -617,8 +641,8 @@
                         <div class="card">
 
                           <div class="card-body">
-                            <form action="/project" name="storeProject" id="storeProject" method="POST">
-                              @csrf
+{{--                            <form action="/project" name="storeProject" id="storeProject" method="POST">--}}
+{{--                              @csrf--}}
                               <b><h5 style="color:purple;margin-top:10px;font-weight:bold;">Project Details</h5></b>
                               <div class="row" id="project1" name="project1">
                                 <div class="col-md-12">
@@ -666,10 +690,16 @@
                               <!-- <a  href="#">Add Email Field</a> -->
 
                               <button id="addproject" type="submit" class="btn btn-info">Add more</button>
-                              <button type="submit" class="btn btn-primary pull-right" id="submitProject" name="submitProject">Submit Profile</button>
-                              <div class="clearfix"></div>
 
-                            </form>
+                              <a href="#settings" onclick="previous3()" data-toggle="tab" class="btn btn-danger">Previous</a>
+
+{{--                              <button type="submit" class="btn btn-primary pull-right" id="submitProject" name="submitProject">Submit Profile</button>--}}
+
+                            <button type="submit" class="btn btn-primary pull-right">Submit Profile</button>
+
+                            <div class="clearfix"></div>
+
+{{--                            </form>--}}
                           </div>
                         </div>
                       </div>
@@ -677,8 +707,10 @@
                     </div>
 
                   </div>
-                  </form>
+
+                  </div>
                 </div>
+              </form>
               </div>
             </div>
 
@@ -955,6 +987,26 @@
   });
 </script>
 <script>
+  function next1(){
+    $('[href="#messages"]').tab('show');
+  }
+
+  function previous1(){
+    $('[href="#profile"]').tab('show');
+  }function next2(){
+    $('[href="#settings"]').tab('show');
+  }
+
+  function previous2(){
+    $('[href="#messages"]').tab('show');
+  }function next3(){
+    $('[href="#project"]').tab('show');
+  }
+
+  function previous3(){
+    $('[href="#settings"]').tab('show');
+  }
+
   // Add the following code if you want the name of the file appear on select
   $(".custom-file-input").on("change", function() {
     var fileName = $(this).val().split("\\").pop();

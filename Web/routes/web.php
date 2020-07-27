@@ -40,10 +40,16 @@ Route::get('/aq_instructions', function () {
     return view('template/aq_instructions');
 });
 
+Route::get('/user', function (){
+    return view('template/preuser');
+});
 
 Route::get('/user_profile', function () {
     return view('template/user');
 });
+
+
+Route::post('/user_media','UserController@storeMedia');
 
 Route::post('/personal_details','UserController@store');
 
@@ -177,3 +183,9 @@ Route::post('save_manual_question','AddQuestionController@saveManualForm');
 Route::get('getSubCategory/{category_name}','AddQuestionController@getSubCategory');
 
 Route::get('getSubConcept/{sub_category}/{concept}','AddQuestionController@getSubConcept');
+
+
+//view user details - admin side
+Route::get('view_users', function (){
+    return view('admin/view_users');
+});

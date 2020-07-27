@@ -101,9 +101,22 @@
 
 
                             <div class="row" id="excel-operations" style="display: none;">
+                                <div class="col-md-12 alert-warning" style="color:#222;">
+                                    <h3>Note: The requred excel file should have the following template:</h3>
+                                    <ol>
+                                        <li>is_options_available</li>
+                                        <li>question_statement</li>
+                                        <li>option_1</li>
+                                        <li>option_2</li>
+                                        <li>option_3</li>
+                                        <li>option_4</li>
+                                        <li>correct_option/answer</li>
+                                    </ol>
+                                </div>
                                 <div class="col-md-12">
                                     <label style="">Upload file : </label><span><input type="file" id="ques_file" name="ques_file" accept=".xls,.xlsx,.csv"></span>
                                 </div>
+
                             </div>
 
                             <div id="manual-operations" style="display: none;">
@@ -111,7 +124,7 @@
                                     <div class="row">
                                         <div class="col-md-4">
                                             <div class="form-group">
-                                                <label class="bmd-label-floating">Enter no of questions</label>
+                                                <label class="">Enter no of questions</label>
                                                 <input type="number" class="form-control" min="1" id="no_of_ques" name="no_of_ques" value="1">
                                             </div>
                                         </div>
