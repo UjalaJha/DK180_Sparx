@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Deployment Tutorial 1</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+  <div class="form">
+	<h2>Job Recommendation Model</h2>
+
+     
+    <form action="{{ url_for('predict')}}" method="POST" enctype="multipart/form-data">
+        <label for="fname">Skills</label>
+    	 <input type="text" name="skills" placeholder="Enter skills in comma seperated form" required="required" />
+
+        <input type="submit" value="Submit">
+    </form>
+ </div>
+
+
+<div class="result" style="word-wrap: break-word;overflow:wrap">
+  {{ prediction_text }}
+
+    {% for table in tables %}
+            {{titles[loop.index]}}
+            {{ table|safe }}
+    {% endfor %}
+  
+</div> 
+
+
+</body>
+</html>
