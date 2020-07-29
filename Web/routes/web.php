@@ -60,6 +60,10 @@ Route::post('/internship','UserController@storeInternship');
 Route::post('/project','UserController@storeProject');
 
 
+Route::post('/resume','UserController@resume');
+
+
+Route::get('/candidaterecommendation','UserController@candidaterecommendation');
 
 ///sanjay
 

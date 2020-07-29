@@ -32,7 +32,7 @@ import datetime
 
 model = pickle.load(open("job_recommender.pkl","rb"))
 
-roles_df = pd.read_csv("C:\\Users\\juyee\\Desktop\\Web scraping\\data_final_final.csv")
+roles_df = pd.read_csv("data_final_final.csv")
 roles_df = roles_df.replace(np.nan, '', regex=True)
 
 roles_df['TOOLS'] = roles_df['TOOLS'].map(lambda x: x.strip("[]'."))
@@ -40,7 +40,7 @@ roles_df['TOOLS'] = roles_df['TOOLS'].map(lambda x: x.replace("'",""))
 roles_df['TOOLS'] = roles_df['TOOLS'].map(lambda x: x.replace(", ",","))
 
 app = Flask(__name__)
-app.config['UPLOAD_FOLDER']='C://Users//juyee//Envs//sih2020//resume'
+# app.config['UPLOAD_FOLDER']='C://Users//juyee//Envs//sih2020//resume'
 
 def get_title_from_index(index):
     return roles_df[roles_df.index == index]["JOB PROFILE"].values[0]

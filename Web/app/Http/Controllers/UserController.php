@@ -186,7 +186,7 @@ class UserController extends Controller
         ]);
 //        |max:2048
 
-        echo "in store media func";
+        // echo "in store media func";
         $user_id = Session::get('user_id');
 
         if ($request->hasFile('image_filename')) {
@@ -207,7 +207,92 @@ class UserController extends Controller
 //        $this->save();
         }
 
+        // $endpoint = "http://localhost:5000/resume_api";
+        // $client = new \GuzzleHttp\Client();
+        
+
+        // // $response = $client->request('POST', $endpoint, ['query' => [
+            
+        // //     // 'key2' => $value,
+        // // ]]);
+        //     // print_r($request->file('image_filename'));
+        //     // exit();
+        // $file = $request->file('resume_filename');
+        // $name = $file->getClientOriginalName();
+        // $path = 'C:\\Users\\Ujala Jha\\Downloads\\';
+        // $response =  $client->request('POST', $endpoint, [
+        //     'multipart' => [
+        //         [
+        //             'name'     => 'file',
+        //             'contents' => file_get_contents($path . $name),
+        //             'filename' => $name
+        //         ]
+        //     ],
+        // ]);
+
+        // // url will be: http://my.domain.com/test.php?key1=5&key2=ABC;
+
+        // // $statusCode = $response->getStatusCode();
+        // // $content = $response->getBody();
+
+        // // or when your server returns json
+        // $content = json_decode($response->getBody(), true);
+
+        // print_r($content) ;
+        // exit();
+        $curl = curl_init();
+
+        curl_setopt_array($curl, array(
+          CURLOPT_URL => "https://resume-extraction.herokuapp.com/resume/parse/",
+          CURLOPT_RETURNTRANSFER => true,
+          CURLOPT_ENCODING => "",
+          CURLOPT_MAXREDIRS => 10,
+          CURLOPT_TIMEOUT => 0,
+          CURLOPT_FOLLOWLOCATION => true,
+          CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+          CURLOPT_CUSTOMREQUEST => "POST",
+          CURLOPT_POSTFIELDS => array('url' => 'https://www.jobvacancyresult.com/storage/users/resumes/5833_02_Jatin_Acharya%20-%20JATIN%20ACHARYA.pdf'),
+        ));
+
+        $response = curl_exec($curl);
+
+        curl_close($curl);
+        // echo "<pre>";
+        print_r(json_decode($response));
+        exit();
+
         return view('template/user')->with('image_name', $image_name)->with('resume_name', $resume_name);
+    }
+
+
+    public function candidaterecommendation()
+    {
+
+        // print_r("expression");
+        $curl = curl_init();
+
+        curl_setopt_array($curl, array(
+          CURLOPT_URL => "http://127.0.0.1:5000/api",
+          CURLOPT_RETURNTRANSFER => true,
+          CURLOPT_ENCODING => "",
+          CURLOPT_MAXREDIRS => 10,
+          CURLOPT_TIMEOUT => 0,
+          CURLOPT_FOLLOWLOCATION => true,
+          CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+          CURLOPT_CUSTOMREQUEST => "POST",
+          CURLOPT_POSTFIELDS =>"{\r\n        \"skills\": \"python-advance,java-basic,machine learning-advance,data science-intermediate,r-intermediate,business analytics-intermediate,sql-advance\" \r\n}",
+          CURLOPT_HTTPHEADER => array(
+            "Content-Type: application/json"
+          ),
+        ));
+
+        $response = curl_exec($curl);
+
+        curl_close($curl);
+        print_r(json_decode($response));
+        exit();
+
+
     }
 
 
@@ -655,5 +740,24 @@ class UserController extends Controller
         // exit;
     }
 
+    public function resume(){
+        $endpoint = "http://localhost:5000/resume_api";
+        $client = new \GuzzleHttp\Client();
+        
 
+        $response = $client->request('POST', $endpoint, ['query' => [
+            'file' => $_POST['file'], 
+            // 'key2' => $value,
+        ]]);
+
+        // url will be: http://my.domain.com/test.php?key1=5&key2=ABC;
+
+        // $statusCode = $response->getStatusCode();
+        // $content = $response->getBody();
+
+        // or when your server returns json
+        $content = json_decode($response->getBody(), true);
+
+        echo $content;
+    }
 }

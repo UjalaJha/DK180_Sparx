@@ -186,31 +186,31 @@
                             <div class="card-body">
 
 
-                                <form action="/user_media" method="post" enctype="multipart/form-data">
+                                <form action="/user_media" method="post" id="form-submit" enctype="multipart/form-data">
                                     @csrf
                                     <div class="row" style="margin-top:10px;">
+                                        <div class="form-group">
                                         <div class="col-md-12">
+
                                             <b><p >Upload Picture</p></b>
-                                            <b>
-{{--                                                <span style="margin-right:10px;color:purple">Upload Picture : </span>--}}
-                                            </b><span><input type="file" id="myFile1" name="image_filename" required accept="image/*"></span>
+                                            <input type="file" id="myFile1" name="image_filename" required accept="image/*">
+                                        </div>
                                         </div>
 
                                     </div>
 
                                     <div class="row" style="margin-top:10px;">
                                         <div class="col-md-12">
+                                            <div class="form-group">
                                             <b><p >Upload Resume</p></b>
-                                            <b>
-{{--                                                <span style="margin-right:10px;color:purple">Upload Resume : </span>--}}
-
-                                            </b><span><input type="file" id="myFile2" name="resume_filename" required accept="application/pdf"></span>
+                                            <input type="file" id="resume_filename" name="resume_filename" required accept="application/pdf">
                                             <span class="alert-danger" style="color:#222;">Note: Upload your resume in pdf format <only></only></span>
+                                            </div>
                                         </div>
 
                                     </div>
 
-                                    <div class="row" id="use_resume_option" style="display: none;">
+                                    <div class="row" id="use_resume_option" style="display: block;">
                                         <div class="col-md-6" style="margin-top: 10px;">
                                             <div class="form-group">
                                                 <label class="bmd-label-floating">Do you want to import your profile using resume?</label>
@@ -625,3 +625,27 @@
 </body>
 
 </html>
+
+<!-- <script type="text/javascript">
+$(document).ready(function() {
+        // file=$('#resumefile').val();
+        // console.log("file"+file);
+        $('#form-submit').submit(function(e){
+            e.preventDefault();
+            var form = $(this);
+            $.ajax({
+            type:"POST",
+            url : "/resume",
+            data: new FormData(this),
+            dataType: 'json',
+            success : function(data){
+               console.log(data);
+            },
+            always: function() {
+               // //submit form !!!
+               // $("#formtopost").submit();
+            }
+        });//end ajax   
+      });//end click
+    });//end rdy
+</script> -->
