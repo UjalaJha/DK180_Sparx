@@ -255,17 +255,29 @@ class UserController extends Controller
         ));
 
         $response = curl_exec($curl);
-
         curl_close($curl);
-        // echo "<pre>";
-        print_r(json_decode($response));
+        // $response = $connection -> getData();
+
+        // get rid of the extra NULs
+        // $response = str_replace(chr(0), '', $response);
+        // $response = rtrim($response, "\0");
+        // print_r($response->toJson());
+        $response = stripslashes(html_entity_decode($response));
+        $response = utf8_encode($response);
+        $response = substr($response, 1); 
+        $response = substr($response, 0, -1);
+        
+        $var=json_decode($response);
+        print_r($var);
+        print_r($var[0]->Email);
+        // print_r(json_last_error());
         exit();
 
         return view('template/user')->with('image_name', $image_name)->with('resume_name', $resume_name);
     }
 
 
-    public function candidaterecommendation()
+    public function jobrecommendation()
     {
 
         // $skills="python-advance,java-basic,machine learning-advance,data science-intermediate,r-intermediate,business analytics-intermediate,sql-advance";
@@ -295,13 +307,13 @@ class UserController extends Controller
 
         $json_string = '{"job profiles":["python/django senior software","data scientist -","database specialist  ","data software engineer","data analytics, nj","sr. data scientist","analyst - python","esri arcgis administrator","mobile sdet  ","data analystics engineer","lead data scientist","senior database administrator"],"jobs":[{"from":"Indeed","job_company":"StartUs Insights","job_id":"93ad1b7f9420a729","job_link":"https://www.indeed.co.in/jobs?q=python/django+senior+software&l=India&start=10&vjk=93ad1b7f9420a729","job_location":"Bengaluru, Karnataka","job_summary":"— Solid understanding of software development principles and best practices.\nBuilding data applications in a product company,.\nWHAT YOU GET IN RETURN: *.","job_title":"Senior Python Developer","posted_date":"21 days ago"},{"from":"Indeed","job_company":"Techversant Infotech Pvt. Ltd.","job_id":"672b77efc079ca85","job_link":"https://www.indeed.co.in/jobs?q=python/django+senior+software&l=India&start=10&vjk=672b77efc079ca85","job_location":"Thiruvananthapuram, Kerala","job_summary":"MVC software pattern and frameworks.\nWork as a member of a team or on their own to deliver high quality and maintainable software solutions, to strict deadlines…","job_title":"Sr. Software Engineer / Software Engineer - ColdFusion","posted_date":"30+ days ago"},{"from":"Indeed","job_company":"HP","job_id":"f19117ec92fc2221","job_link":"https://www.indeed.co.in/jobs?q=lead+data+scientist&l=India&start=10&vjk=f19117ec92fc2221","job_location":"Bengaluru, Karnataka","job_summary":"O Fluent in structured and unstructured data and modern data transformation methodologies.\nO Leads a project team of data science professionals.","job_title":"Data Scientist Sales & Channel","posted_date":"25 days ago"}]}';
         echo "<pre>";
-        print_r(json_decode($json_string));
+        print_r(json_decode($json_string,true));
         exit();
 
 
     }
 
-    public function jobrecommendation(){
+    public function candidaterecommendation(){
         // give this json
         // {
         //     "role_title": "database",
@@ -331,11 +343,152 @@ class UserController extends Controller
         ));
 
         $response = curl_exec($curl);
-
         curl_close($curl);
-        echo $response;
+
+        // // $jsonDecode = json_decode(trim($jsonData), TRUE);
+        // // echo $response;
         // echo "<pre>";
-        // print_r(json_decode($response));
+        // print_r(json_decode(trim($response), TRUE));
+
+        $decode_data = json_decode('{
+  "recommended_candidates": [
+    {
+      "Education": "",
+      "Email": "sagar.saxena.min17@itbhu.ac.in",
+      "Experience": "",
+      "LinkedIn": "",
+      "Name": "sagar saxena",
+      "Phone No": 7237971138.0,
+      "Skillset": "Net,Data analytics,It,Analytics,C/c++,Data,Engineering,Python,Technology,R,C,Digital,Development,Operations,System,C++,Software,Software development",
+      "Tags": "It,Music",
+      "ind": 432,
+      "index": 432.0,
+      "scores": 2.381448361039201
+    },
+    {
+      "Education": "BTech",
+      "Email": "17uec069@lnmiit.ac.in",
+      "Experience": "",
+      "LinkedIn": "",
+      "Name": "mansi mittal",
+      "Phone No": 918559924980.0,
+      "Skillset": "Development,Research,Implement,Business,C++,Php,Optimization,Matlab,Technology,Mysql,Develop,Database,Software,Build,It,Seo,Marketing,C,Media,Management,Project,Digital,Software development",
+      "Tags": "It,Marketing",
+      "ind": 207,
+      "index": 207.0,
+      "scores": 1.9611613513818402
+    },
+    {
+      "Education": "BTech",
+      "Email": "17uec069@lnmiit.ac.in",
+      "Experience": "",
+      "LinkedIn": "",
+      "Name": "mansi mittal",
+      "Phone No": 918559924980.0,
+      "Skillset": "Development,Research,Implement,Business,C++,Php,Optimization,Matlab,Technology,Mysql,Develop,Database,Software,Build,It,Seo,Marketing,C,Media,Management,Project,Digital,Software development",
+      "Tags": "It,Marketing",
+      "ind": 545,
+      "index": 545.0,
+      "scores": 1.9611613513818402
+    },
+    {
+      "Education": "MBA,BCA",
+      "Email": "kasturisen4998@gmail.com",
+      "Experience": "",
+      "LinkedIn": "https://www.linkedin.com/in/",
+      "Name": "kasturi sen",
+      "Phone No": 918460620601.0,
+      "Skillset": "Design,Requirements,Asp.net,Web,Application,Development,Training,Java,Service,Php,Computer,Technology,Mysql,It,Leadership,C,Management,Software,Etc",
+      "Tags": "Communications,It",
+      "ind": 480,
+      "index": 480.0,
+      "scores": 1.911797782254681
+    },
+    {
+      "Education": "Btech,BTech",
+      "Email": "pendliy.reddy.min17@itbhu.ac.in",
+      "Experience": " PROJECTS Summer Industrial",
+      "LinkedIn": "",
+      "Name": "pendli yashwanth",
+      "Phone No": 916392059890.0,
+      "Skillset": "Programming,Engineering,Data structures,Systems,Development,Training,Adobe,Coding,Algorithms,Intern,Data,Microsoft,Photoshop,Word,Support,Powerpoint,Technical,Management,Project,Software,Software development",
+      "Tags": "",
+      "ind": 693,
+      "index": 693.0,
+      "scores": 1.8569533817705186
+    },
+    {
+      "Education": "BE,HSC,SSC",
+      "Email": "shindetejas1508@gmail.com",
+      "Experience": " VESIT ",
+      "LinkedIn": "https://www.linkedin.com/in/tejas-shinde-7ab02b189 github:  https:/",
+      "Name": "tejas shinde",
+      "Phone No": 918149636148.0,
+      "Skillset": "Design,Web,Python,Inventory,Css,Hadoop,Database design,Application,Development,Spark,Algorithm,Github,Intern,Html,Developer,Java,Django,Switching,Php,Automated,Technology,Mysql,Iot,Oracle,Database,Information technology,Cloudera,Sql,Ups,It,Android,Javascript,Admin,C,Performance,Technical,Verification,System,Management,Project",
+      "Tags": "Information technology,Mathematics",
+      "ind": 393,
+      "index": NaN,
+      "scores": NaN
+    },
+    {
+      "Education": "HSC",
+      "Email": "shrynitshangloo18@gmail.com",
+      "Experience": " S S",
+      "LinkedIn": "",
+      "Name": "shrynit shangloo",
+      "Phone No": 9867693914.0,
+      "Skillset": "Inventory,Sales,Development,Research,Intern,Financial,Business,Data,Excel,Reports,Trading,Protocols,Database,Business development,Presentations,Marketing,Media,Pricing,Operations,Management,Benefits",
+      "Tags": "Economics,Marketing",
+      "ind": 448,
+      "index": NaN,
+      "scores": NaN
+    },
+    {
+      "Education": "BSc",
+      "Email": "",
+      "Experience": "",
+      "LinkedIn": "",
+      "Name": "curriculum vitae",
+      "Phone No": 919973160020.0,
+      "Skillset": "Programming,Development,Research,Data,Html,R,Statistics,Java,Applications,C++,Mysql,Analysis,Database,Scripting,Marketing,Technical,Media,Project,Software",
+      "Tags": "Marketing",
+      "ind": 349,
+      "index": NaN,
+      "scores": NaN
+    },
+    {
+      "Education": "MBA,BSc",
+      "Email": "pgp10snehab@iimrohtak.ac.in",
+      "Experience": "",
+      "LinkedIn": "",
+      "Name": "bharti mba|",
+      "Phone No": 9873574993.0,
+      "Skillset": "Requirements,Android,Excel,Finance,Microsoft,Budgeting,Technical,Writer,Development,Training,Database,Management,Software,Coding",
+      "Tags": "Cs,Finance",
+      "ind": 151,
+      "index": NaN,
+      "scores": NaN
+    },
+    {
+      "Education": "HSC,SSC,BE,Ms,ME",
+      "Email": "â€‹karthikkeswani1234@gmail.com",
+      "Experience": "",
+      "LinkedIn": "",
+      "Name": "mahesh keswani",
+      "Phone No": 9699336323.0,
+      "Skillset": "Design,Programming,Google analytics,Git,Web,Python,Css,Azure,Flash,Database design,Application,Development,Voice,Research,Analytics,Data,Html,Microsoft,Developer,Java,Ui,Django,Bootstrap,Library,Php,Technology,Analysis,Database,Oracle,Cloudera,Sql,It,Debugging,Javascript,Mobile,Technical,Network,Big data,System,Management,Project,Cloud",
+      "Tags": "Information technology,It",
+      "ind": 318,
+      "index": NaN,
+      "scores": NaN
+    }
+  ]
+}');
+        foreach($decode_data as $key=>$value){
+
+                print_r($value);
+        }
+#
         exit();
 
     }
