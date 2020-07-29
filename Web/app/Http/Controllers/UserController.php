@@ -207,7 +207,7 @@ class UserController extends Controller
 //        $this->save();
         }
 
-        $endpoint = "http://68efb60e1c22.ngrok.io/resume_api";
+        $endpoint = "http://aef4d9e6e63d.ngrok.io/resume_api";
         $client = new \GuzzleHttp\Client();
         
 
@@ -325,7 +325,14 @@ class UserController extends Controller
         //     "salary":550000,
         //     "skills" : "NET Framework, ASP, Software Development, software engineer"
         // }
-
+        $data['role_title']='database';
+        $data['company_name']="RS Solutions";
+        $data['description']="Urgent need of DB designer. Can work from home too.";
+        $data['exp']=3;
+        $data['loc']="Delhi";
+        $data['salary']=550000;
+        $data['skills']="NET Framework, ASP, Software Development, software engineer";
+        $json=json_encode($data);
         $curl = curl_init();
 
         curl_setopt_array($curl, array(
@@ -337,7 +344,7 @@ class UserController extends Controller
           CURLOPT_FOLLOWLOCATION => true,
           CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
           CURLOPT_CUSTOMREQUEST => "POST",
-          CURLOPT_POSTFIELDS =>"{\r\n    \"role_title\": \"database\",\r\n    \"company_name\": \"RS Solutions\",\r\n    \"description\" : \"Urgent need of DB designer. Can work from home too.\",\r\n    \"exp\":3, \r\n    \"loc\":\"Delhi\",\r\n    \"salary\":550000,\r\n    \"skills\" : \"NET Framework, ASP, Software Development, software engineer\"\r\n}",
+          CURLOPT_POSTFIELDS =>$json,
           CURLOPT_HTTPHEADER => array(
             "Content-Type: application/json"
           ),
