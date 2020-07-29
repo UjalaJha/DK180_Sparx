@@ -207,7 +207,7 @@ class UserController extends Controller
 //        $this->save();
         }
 
-        $endpoint = "https://68efb60e1c22.ngrok.io/resume_api";
+        $endpoint = "http://68efb60e1c22.ngrok.io/resume_api";
         $client = new \GuzzleHttp\Client();
         
 
@@ -237,9 +237,9 @@ class UserController extends Controller
 
         // or when your server returns json
         $content = json_decode($response->getBody(), true);
-
-        // print_r($content) ;
-        // exit();
+        echo "<pre>";
+        print_r($content) ;
+        exit();
         // $curl = curl_init();
 
         // curl_setopt_array($curl, array(
