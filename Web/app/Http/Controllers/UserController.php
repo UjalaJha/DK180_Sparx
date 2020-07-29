@@ -355,6 +355,40 @@ class UserController extends Controller
      
 
     }
+    public function learningrecommendation(){
+        $data['name']="Ujala Jha";
+        $data['skills']="sql-advance,photoshop-basic',graphql-intermediate,ajax-basic,bootstrap-intermediate,css3-intermediate,angularjs-basic";
+        $json=json_encode($data);
+        // print_r($json);
+        // exit();
+
+        $curl = curl_init();
+
+        curl_setopt_array($curl, array(
+          CURLOPT_URL => "http://localhost:5002/course_api",
+          CURLOPT_RETURNTRANSFER => true,
+          CURLOPT_ENCODING => "",
+          CURLOPT_MAXREDIRS => 10,
+          CURLOPT_TIMEOUT => 0,
+          CURLOPT_FOLLOWLOCATION => true,
+          CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+          CURLOPT_CUSTOMREQUEST => "POST",
+          CURLOPT_POSTFIELDS =>$json,
+          CURLOPT_HTTPHEADER => array(
+            "Content-Type: application/json"
+          ),
+        ));
+
+        $response = curl_exec($curl);
+
+        curl_close($curl);
+        echo "<pre>";
+
+        print_r(json_decode($response, TRUE));
+        // print_r($response);
+        exit();
+
+    }
     public function store(Request $request)
     {
         //
