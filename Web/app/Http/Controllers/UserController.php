@@ -268,28 +268,34 @@ class UserController extends Controller
     public function candidaterecommendation()
     {
 
-        // print_r("expression");
-        $curl = curl_init();
+        // $skills="python-advance,java-basic,machine learning-advance,data science-intermediate,r-intermediate,business analytics-intermediate,sql-advance";
+        $skills='';
 
-        curl_setopt_array($curl, array(
-          CURLOPT_URL => "http://127.0.0.1:5000/api",
-          CURLOPT_RETURNTRANSFER => true,
-          CURLOPT_ENCODING => "",
-          CURLOPT_MAXREDIRS => 10,
-          CURLOPT_TIMEOUT => 0,
-          CURLOPT_FOLLOWLOCATION => true,
-          CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-          CURLOPT_CUSTOMREQUEST => "POST",
-          CURLOPT_POSTFIELDS =>"{\r\n        \"skills\": \"python-advance,java-basic,machine learning-advance,data science-intermediate,r-intermediate,business analytics-intermediate,sql-advance\" \r\n}",
-          CURLOPT_HTTPHEADER => array(
-            "Content-Type: application/json"
-          ),
-        ));
+        // $curl = curl_init();
 
-        $response = curl_exec($curl);
+        // curl_setopt_array($curl, array(
+        //   CURLOPT_URL => "http://127.0.0.1:5000/api",
+        //   CURLOPT_RETURNTRANSFER => true,
+        //   CURLOPT_ENCODING => "",
+        //   CURLOPT_MAXREDIRS => 10,
+        //   CURLOPT_TIMEOUT => 0,
+        //   CURLOPT_FOLLOWLOCATION => true,
+        //   CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+        //   CURLOPT_CUSTOMREQUEST => "POST",
+        //   CURLOPT_POSTFIELDS =>"{\r\n        \"skills\": \"python-advance,java-basic,machine learning-advance,data science-intermediate,r-intermediate,business analytics-intermediate,sql-advance\" \r\n}",
+        //   CURLOPT_HTTPHEADER => array(
+        //     "Content-Type: application/json"
+        //   ),
+        // ));
 
-        curl_close($curl);
-        print_r(json_decode($response));
+        // $response = curl_exec($curl);
+
+        // curl_close($curl);
+        // echo $response;
+
+        $json_string = '{"job profiles":["python/django senior software","data scientist -","database specialist  ","data software engineer","data analytics, nj","sr. data scientist","analyst - python","esri arcgis administrator","mobile sdet  ","data analystics engineer","lead data scientist","senior database administrator"],"jobs":[{"from":"Indeed","job_company":"StartUs Insights","job_id":"93ad1b7f9420a729","job_link":"https://www.indeed.co.in/jobs?q=python/django+senior+software&l=India&start=10&vjk=93ad1b7f9420a729","job_location":"Bengaluru, Karnataka","job_summary":"— Solid understanding of software development principles and best practices.\nBuilding data applications in a product company,.\nWHAT YOU GET IN RETURN: *.","job_title":"Senior Python Developer","posted_date":"21 days ago"},{"from":"Indeed","job_company":"Techversant Infotech Pvt. Ltd.","job_id":"672b77efc079ca85","job_link":"https://www.indeed.co.in/jobs?q=python/django+senior+software&l=India&start=10&vjk=672b77efc079ca85","job_location":"Thiruvananthapuram, Kerala","job_summary":"MVC software pattern and frameworks.\nWork as a member of a team or on their own to deliver high quality and maintainable software solutions, to strict deadlines…","job_title":"Sr. Software Engineer / Software Engineer - ColdFusion","posted_date":"30+ days ago"},{"from":"Indeed","job_company":"HP","job_id":"f19117ec92fc2221","job_link":"https://www.indeed.co.in/jobs?q=lead+data+scientist&l=India&start=10&vjk=f19117ec92fc2221","job_location":"Bengaluru, Karnataka","job_summary":"O Fluent in structured and unstructured data and modern data transformation methodologies.\nO Leads a project team of data science professionals.","job_title":"Data Scientist Sales & Channel","posted_date":"25 days ago"}]}';
+        echo "<pre>";
+        print_r(json_decode($json_string));
         exit();
 
 
