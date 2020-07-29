@@ -280,6 +280,7 @@ class UserController extends Controller
     public function jobrecommendation()
     {
 
+        //give this string
         // $skills="python-advance,java-basic,machine learning-advance,data science-intermediate,r-intermediate,business analytics-intermediate,sql-advance";
         $skills='';
 
