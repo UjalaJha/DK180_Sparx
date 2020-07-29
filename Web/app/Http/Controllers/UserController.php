@@ -194,7 +194,7 @@ class UserController extends Controller
         ]);
 //        |max:2048
 
-        echo "in store media func";
+        // echo "in store media func";
         $user_id = Session::get('user_id');
 
         if ($request->hasFile('image_filename')) {
@@ -215,10 +215,156 @@ class UserController extends Controller
 //        $this->save();
         }
 
+        $endpoint = "http://68efb60e1c22.ngrok.io/resume_api";
+        $client = new \GuzzleHttp\Client();
+
+        
+
+        // $response = $client->request('POST', $endpoint, ['query' => [
+            
+        //     // 'key2' => $value,
+        // ]]);
+            // print_r($request->file('image_filename'));
+            // exit();
+        $file = $request->file('resume_filename');
+//        $name = $file->getClientOriginalName();
+        $name = $user_id.'.'.$file->getClientOriginalExtension();
+//        $path = 'C:\\Users\\Ujala Jha\\Downloads\\';
+        $path = public_path('resumes/');
+        $response =  $client->request('POST', $endpoint, [
+            'multipart' => [
+                [
+                    'name'     => 'file',
+                    'contents' => file_get_contents($path . $name),
+                    'filename' => $name
+                ]
+            ],
+        ]);
+
+        // url will be: http://my.domain.com/test.php?key1=5&key2=ABC;
+
+        // $statusCode = $response->getStatusCode();
+        // $content = $response->getBody();
+
+        // or when your server returns json
+        $content = json_decode($response->getBody(), true);
+        echo "<pre>";
+        print_r($content) ;
+        exit();
+        // $curl = curl_init();
+
+        // curl_setopt_array($curl, array(
+        //   CURLOPT_URL => "https://68efb60e1c22.ngrok.io/resume_api",
+        //   CURLOPT_RETURNTRANSFER => true,
+        //   CURLOPT_ENCODING => "",
+        //   CURLOPT_MAXREDIRS => 10,
+        //   CURLOPT_TIMEOUT => 0,
+        //   CURLOPT_FOLLOWLOCATION => true,
+        //   CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+        //   CURLOPT_CUSTOMREQUEST => "POST",
+        //   CURLOPT_POSTFIELDS => array('url' => 'https://www.jobvacancyresult.com/storage/users/resumes/5833_02_Jatin_Acharya%20-%20JATIN%20ACHARYA.pdf'),
+        // ));
+
+        // $response = curl_exec($curl);
+        // curl_close($curl);
+        // // $response = $connection -> getData();
+
+        // // get rid of the extra NULs
+        // // $response = str_replace(chr(0), '', $response);
+        // // $response = rtrim($response, "\0");
+        // // print_r($response->toJson());
+        // $response = stripslashes(html_entity_decode($response));
+        // $response = utf8_encode($response);
+        // $response = substr($response, 1); 
+        // $response = substr($response, 0, -1);
+        
+        // $var=json_decode($response);
+        // print_r($var);
+        // print_r($var[0]->Email);
+        // // print_r(json_last_error());
+        // exit();
+
         return view('template/user')->with('image_name', $image_name)->with('resume_name', $resume_name);
     }
 
 
+    public function jobrecommendation()
+    {
+
+        // $skills="python-advance,java-basic,machine learning-advance,data science-intermediate,r-intermediate,business analytics-intermediate,sql-advance";
+        $skills='';
+
+        // $curl = curl_init();
+
+        // curl_setopt_array($curl, array(
+        //   CURLOPT_URL => "http://127.0.0.1:5000/api",
+        //   CURLOPT_RETURNTRANSFER => true,
+        //   CURLOPT_ENCODING => "",
+        //   CURLOPT_MAXREDIRS => 10,
+        //   CURLOPT_TIMEOUT => 0,
+        //   CURLOPT_FOLLOWLOCATION => true,
+        //   CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+        //   CURLOPT_CUSTOMREQUEST => "POST",
+        //   CURLOPT_POSTFIELDS =>"{\r\n        \"skills\": \"python-advance,java-basic,machine learning-advance,data science-intermediate,r-intermediate,business analytics-intermediate,sql-advance\" \r\n}",
+        //   CURLOPT_HTTPHEADER => array(
+        //     "Content-Type: application/json"
+        //   ),
+        // ));
+
+        // $response = curl_exec($curl);
+
+        // curl_close($curl);
+        // echo $response;
+
+        $json_string = '{"job profiles":["python/django senior software","data scientist -","database specialist  ","data software engineer","data analytics, nj","sr. data scientist","analyst - python","esri arcgis administrator","mobile sdet  ","data analystics engineer","lead data scientist","senior database administrator"],"jobs":[{"from":"Indeed","job_company":"StartUs Insights","job_id":"93ad1b7f9420a729","job_link":"https://www.indeed.co.in/jobs?q=python/django+senior+software&l=India&start=10&vjk=93ad1b7f9420a729","job_location":"Bengaluru, Karnataka","job_summary":"— Solid understanding of software development principles and best practices.\nBuilding data applications in a product company,.\nWHAT YOU GET IN RETURN: *.","job_title":"Senior Python Developer","posted_date":"21 days ago"},{"from":"Indeed","job_company":"Techversant Infotech Pvt. Ltd.","job_id":"672b77efc079ca85","job_link":"https://www.indeed.co.in/jobs?q=python/django+senior+software&l=India&start=10&vjk=672b77efc079ca85","job_location":"Thiruvananthapuram, Kerala","job_summary":"MVC software pattern and frameworks.\nWork as a member of a team or on their own to deliver high quality and maintainable software solutions, to strict deadlines…","job_title":"Sr. Software Engineer / Software Engineer - ColdFusion","posted_date":"30+ days ago"},{"from":"Indeed","job_company":"HP","job_id":"f19117ec92fc2221","job_link":"https://www.indeed.co.in/jobs?q=lead+data+scientist&l=India&start=10&vjk=f19117ec92fc2221","job_location":"Bengaluru, Karnataka","job_summary":"O Fluent in structured and unstructured data and modern data transformation methodologies.\nO Leads a project team of data science professionals.","job_title":"Data Scientist Sales & Channel","posted_date":"25 days ago"}]}';
+        echo "<pre>";
+        print_r(json_decode($json_string,true));
+        exit();
+
+
+    }
+
+    public function candidaterecommendation(){
+        // give this json
+        // {
+        //     "role_title": "database",
+        //     "company_name": "RS Solutions",
+        //     "description" : "Urgent need of DB designer. Can work from home too.",
+        //     "exp":3, 
+        //     "loc":"Delhi",
+        //     "salary":550000,
+        //     "skills" : "NET Framework, ASP, Software Development, software engineer"
+        // }
+
+        $curl = curl_init();
+
+        curl_setopt_array($curl, array(
+          CURLOPT_URL => "http://f1d65fe95099.ngrok.io/candidate_api",
+          CURLOPT_RETURNTRANSFER => true,
+          CURLOPT_ENCODING => "",
+          CURLOPT_MAXREDIRS => 10,
+          CURLOPT_TIMEOUT => 0,
+          CURLOPT_FOLLOWLOCATION => true,
+          CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+          CURLOPT_CUSTOMREQUEST => "POST",
+          CURLOPT_POSTFIELDS =>"{\r\n    \"role_title\": \"database\",\r\n    \"company_name\": \"RS Solutions\",\r\n    \"description\" : \"Urgent need of DB designer. Can work from home too.\",\r\n    \"exp\":3, \r\n    \"loc\":\"Delhi\",\r\n    \"salary\":550000,\r\n    \"skills\" : \"NET Framework, ASP, Software Development, software engineer\"\r\n}",
+          CURLOPT_HTTPHEADER => array(
+            "Content-Type: application/json"
+          ),
+        ));
+
+        $response = curl_exec($curl);
+        curl_close($curl);
+
+        // $jsonDecode = json_decode(trim($jsonData), TRUE);
+        // echo $response;
+        echo "<pre>";
+        print_r(json_decode($response, TRUE));
+
+        
+     
+
+    }
     public function store(Request $request)
     {
         //
@@ -741,5 +887,24 @@ class UserController extends Controller
         // exit;
     }
 
+    public function resume(){
+        $endpoint = "http://localhost:5000/resume_api";
+        $client = new \GuzzleHttp\Client();
+        
 
+        $response = $client->request('POST', $endpoint, ['query' => [
+            'file' => $_POST['file'], 
+            // 'key2' => $value,
+        ]]);
+
+        // url will be: http://my.domain.com/test.php?key1=5&key2=ABC;
+
+        // $statusCode = $response->getStatusCode();
+        // $content = $response->getBody();
+
+        // or when your server returns json
+        $content = json_decode($response->getBody(), true);
+
+        echo $content;
+    }
 }
