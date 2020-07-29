@@ -30,6 +30,7 @@ import re
 import requests
 import datetime
 import uuid
+import math
 
 from surprise import Dataset
 from surprise import Reader
@@ -50,7 +51,9 @@ sim_options = {
 model = KNNWithMeans(sim_options=sim_options)
 
 #profiledata = pd.read_csv("C:\\Users\\juyee\\Envs\\sih2020\\candidate_recommender\\Test Profiles\\profile_data.csv")
+df = pd.read_csv(r"./JVR_CandidatesInfo2.csv")
 df = pd.read_csv(r"JVR_CandidatesInfo2.csv")
+
 df = df.replace(np.nan, '', regex=True)
 df = df.rename(columns={'Unnamed: 0':'ind'})
 
@@ -151,6 +154,7 @@ def home():
     
 @app.route('/candidate_api',methods=['POST'])
 def predict_api():
+    profiledata = pd.read_csv(".\\Test Profiles\\profile_data.csv")
     profiledata = pd.read_csv("Test Profiles\\profile_data.csv")
 
     input_company = {'role_title': request.json['role_title'],'company_name':request.json['company_name'],'description' : request.json['description'],
@@ -163,7 +167,9 @@ def predict_api():
     company_loc = input_company['loc']
     salary = input_company['salary']
     company_exp = input_company['exp']
+    path = ".\\Test Profiles\\"+company_role+".csv"
     path = "Test Profiles\\"+company_role+".csv"
+
     role_jobs = pd.read_csv(path)
     #role_jobs = role_jobs.replace(np.nan, '', regex=True)
     role_jobs = pd.DataFrame(role_jobs)
@@ -207,7 +213,22 @@ def predict_api():
 
         
     candidate_recommendations = pd.DataFrame(dfcandidate)
+    
+    phonenos = []
+    for phone in candidate_recommendations["Phone No"]:
+        if type(phone)==float:
+            no = math.trunc(phone)
+            phonenos.append(str(no))
+        else:
+            phonenos.append("")
+
+    candidate_recommendations=candidate_recommendations.drop(columns=['index','ind','Competencies','scores','Phone No'])
+    candidate_recommendations['Phone No']=phonenos
+
+
     candidate_reco = candidate_recommendations.to_dict('records')
+
+    profiledata.to_csv(r"./Test Profiles/profile_data.csv",index=False)
     profiledata.to_csv("Test Profiles\\profile_data.csv",index=False)
     role_jobs.to_csv(path,index=False)  
 
