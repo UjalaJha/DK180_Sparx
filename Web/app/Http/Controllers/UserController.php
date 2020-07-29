@@ -301,7 +301,44 @@ class UserController extends Controller
 
     }
 
+    public function jobrecommendation(){
+        // give this json
+        // {
+        //     "role_title": "database",
+        //     "company_name": "RS Solutions",
+        //     "description" : "Urgent need of DB designer. Can work from home too.",
+        //     "exp":3, 
+        //     "loc":"Delhi",
+        //     "salary":550000,
+        //     "skills" : "NET Framework, ASP, Software Development, software engineer"
+        // }
 
+        $curl = curl_init();
+
+        curl_setopt_array($curl, array(
+          CURLOPT_URL => "http://f1d65fe95099.ngrok.io/candidate_api",
+          CURLOPT_RETURNTRANSFER => true,
+          CURLOPT_ENCODING => "",
+          CURLOPT_MAXREDIRS => 10,
+          CURLOPT_TIMEOUT => 0,
+          CURLOPT_FOLLOWLOCATION => true,
+          CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+          CURLOPT_CUSTOMREQUEST => "POST",
+          CURLOPT_POSTFIELDS =>"{\r\n    \"role_title\": \"database\",\r\n    \"company_name\": \"RS Solutions\",\r\n    \"description\" : \"Urgent need of DB designer. Can work from home too.\",\r\n    \"exp\":3, \r\n    \"loc\":\"Delhi\",\r\n    \"salary\":550000,\r\n    \"skills\" : \"NET Framework, ASP, Software Development, software engineer\"\r\n}",
+          CURLOPT_HTTPHEADER => array(
+            "Content-Type: application/json"
+          ),
+        ));
+
+        $response = curl_exec($curl);
+
+        curl_close($curl);
+        echo $response;
+        // echo "<pre>";
+        // print_r(json_decode($response));
+        exit();
+
+    }
     public function store(Request $request)
     {
         //

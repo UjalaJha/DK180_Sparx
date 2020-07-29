@@ -65,6 +65,8 @@ Route::post('/resume','UserController@resume');
 
 Route::get('/candidaterecommendation','UserController@candidaterecommendation');
 
+Route::get('/jobrecommendation','UserController@jobrecommendation');
+
 ///sanjay
 
 Route::get('/company_dashboard', function () {
