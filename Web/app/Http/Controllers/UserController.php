@@ -390,29 +390,132 @@ class UserController extends Controller
         $json=json_encode($data);
         $curl = curl_init();
 
-        curl_setopt_array($curl, array(
-          CURLOPT_URL => "http://f1d65fe95099.ngrok.io/candidate_api",
-          CURLOPT_RETURNTRANSFER => true,
-          CURLOPT_ENCODING => "",
-          CURLOPT_MAXREDIRS => 10,
-          CURLOPT_TIMEOUT => 0,
-          CURLOPT_FOLLOWLOCATION => true,
-          CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-          CURLOPT_CUSTOMREQUEST => "POST",
-          CURLOPT_POSTFIELDS =>$json,
-          CURLOPT_HTTPHEADER => array(
-            "Content-Type: application/json"
-          ),
-        ));
+        // curl_setopt_array($curl, array(
+        //   CURLOPT_URL => "http://f1d65fe95099.ngrok.io/candidate_api",
+        //   CURLOPT_RETURNTRANSFER => true,
+        //   CURLOPT_ENCODING => "",
+        //   CURLOPT_MAXREDIRS => 10,
+        //   CURLOPT_TIMEOUT => 0,
+        //   CURLOPT_FOLLOWLOCATION => true,
+        //   CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+        //   CURLOPT_CUSTOMREQUEST => "POST",
+        //   CURLOPT_POSTFIELDS =>$json,
+        //   CURLOPT_HTTPHEADER => array(
+        //     "Content-Type: application/json"
+        //   ),
+        // ));
 
-        $response = curl_exec($curl);
-        curl_close($curl);
+        // $response = curl_exec($curl);
+        // curl_close($curl);
 
-        // $jsonDecode = json_decode(trim($jsonData), TRUE);
-        // echo $response;
+        // // $jsonDecode = json_decode(trim($jsonData), TRUE);
+        // // echo $response;
         echo "<pre>";
-        print_r(json_decode($response, TRUE));
-
+        // print_r(json_decode($response, TRUE));
+        print_r(json_decode('{
+          "recommended_candidates": [
+            {
+              "Education": "",
+              "Email": "sagar.saxena.min17@itbhu.ac.in",
+              "Experience": "",
+              "LinkedIn": "",
+              "Name": "sagar saxena",
+              "Phone No": "7237971138",
+              "Skillset": "Net,Data analytics,It,Analytics,C/c++,Data,Engineering,Python,Technology,R,C,Digital,Development,Operations,System,C++,Software,Software development",
+              "Tags": "It,Music"
+            },
+            {
+              "Education": "BTech",
+              "Email": "17uec069@lnmiit.ac.in",
+              "Experience": "",
+              "LinkedIn": "",
+              "Name": "mansi mittal",
+              "Phone No": "918559924980",
+              "Skillset": "Development,Research,Implement,Business,C++,Php,Optimization,Matlab,Technology,Mysql,Develop,Database,Software,Build,It,Seo,Marketing,C,Media,Management,Project,Digital,Software development",
+              "Tags": "It,Marketing"
+            },
+            {
+              "Education": "BTech",
+              "Email": "17uec069@lnmiit.ac.in",
+              "Experience": "",
+              "LinkedIn": "",
+              "Name": "mansi mittal",
+              "Phone No": "918559924980",
+              "Skillset": "Development,Research,Implement,Business,C++,Php,Optimization,Matlab,Technology,Mysql,Develop,Database,Software,Build,It,Seo,Marketing,C,Media,Management,Project,Digital,Software development",
+              "Tags": "It,Marketing"
+            },
+            {
+              "Education": "MBA,BCA",
+              "Email": "kasturisen4998@gmail.com",
+              "Experience": "",
+              "LinkedIn": "https://www.linkedin.com/in/",
+              "Name": "kasturi sen",
+              "Phone No": "918460620601",
+              "Skillset": "Design,Requirements,Asp.net,Web,Application,Development,Training,Java,Service,Php,Computer,Technology,Mysql,It,Leadership,C,Management,Software,Etc",
+              "Tags": "Communications,It"
+            },
+            {
+              "Education": "Btech,BTech",
+              "Email": "pendliy.reddy.min17@itbhu.ac.in",
+              "Experience": " PROJECTS Summer Industrial",
+              "LinkedIn": "",
+              "Name": "pendli yashwanth",
+              "Phone No": "916392059890",
+              "Skillset": "Programming,Engineering,Data structures,Systems,Development,Training,Adobe,Coding,Algorithms,Intern,Data,Microsoft,Photoshop,Word,Support,Powerpoint,Technical,Management,Project,Software,Software development",
+              "Tags": ""
+            },
+            {
+              "Education": "BE,HSC,SSC",
+              "Email": "shindetejas1508@gmail.com",
+              "Experience": " VESIT ",
+              "LinkedIn": "https://www.linkedin.com/in/tejas-shinde-7ab02b189 github:  https:/",
+              "Name": "tejas shinde",
+              "Phone No": "918149636148",
+              "Skillset": "Design,Web,Python,Inventory,Css,Hadoop,Database design,Application,Development,Spark,Algorithm,Github,Intern,Html,Developer,Java,Django,Switching,Php,Automated,Technology,Mysql,Iot,Oracle,Database,Information technology,Cloudera,Sql,Ups,It,Android,Javascript,Admin,C,Performance,Technical,Verification,System,Management,Project",
+              "Tags": "Information technology,Mathematics"
+            },
+            {
+              "Education": "HSC",
+              "Email": "shrynitshangloo18@gmail.com",
+              "Experience": " S S",
+              "LinkedIn": "",
+              "Name": "shrynit shangloo",
+              "Phone No": "9867693914",
+              "Skillset": "Inventory,Sales,Development,Research,Intern,Financial,Business,Data,Excel,Reports,Trading,Protocols,Database,Business development,Presentations,Marketing,Media,Pricing,Operations,Management,Benefits",
+              "Tags": "Economics,Marketing"
+            },
+            {
+              "Education": "BSc",
+              "Email": "",
+              "Experience": "",
+              "LinkedIn": "",
+              "Name": "curriculum vitae",
+              "Phone No": "919973160020",
+              "Skillset": "Programming,Development,Research,Data,Html,R,Statistics,Java,Applications,C++,Mysql,Analysis,Database,Scripting,Marketing,Technical,Media,Project,Software",
+              "Tags": "Marketing"
+            },
+            {
+              "Education": "MBA,BSc",
+              "Email": "pgp10snehab@iimrohtak.ac.in",
+              "Experience": "",
+              "LinkedIn": "",
+              "Name": "bharti mba|",
+              "Phone No": "9873574993",
+              "Skillset": "Requirements,Android,Excel,Finance,Microsoft,Budgeting,Technical,Writer,Development,Training,Database,Management,Software,Coding",
+              "Tags": "Cs,Finance"
+            },
+            {
+              "Education": "HSC,SSC,BE,Ms,ME",
+              "Email": "â€‹karthikkeswani1234@gmail.com",
+              "Experience": "",
+              "LinkedIn": "",
+              "Name": "mahesh keswani",
+              "Phone No": "9699336323",
+              "Skillset": "Design,Programming,Google analytics,Git,Web,Python,Css,Azure,Flash,Database design,Application,Development,Voice,Research,Analytics,Data,Html,Microsoft,Developer,Java,Ui,Django,Bootstrap,Library,Php,Technology,Analysis,Database,Oracle,Cloudera,Sql,It,Debugging,Javascript,Mobile,Technical,Network,Big data,System,Management,Project,Cloud",
+              "Tags": "Information technology,It"
+            }
+          ]
+        }'));
         
      
 
@@ -424,31 +527,279 @@ class UserController extends Controller
         // print_r($json);
         // exit();
 
+        // $curl = curl_init();
+
+        // curl_setopt_array($curl, array(
+        //   CURLOPT_URL => "http://localhost:5002/course_api",
+        //   CURLOPT_RETURNTRANSFER => true,
+        //   CURLOPT_ENCODING => "",
+        //   CURLOPT_MAXREDIRS => 10,
+        //   CURLOPT_TIMEOUT => 0,
+        //   CURLOPT_FOLLOWLOCATION => true,
+        //   CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+        //   CURLOPT_CUSTOMREQUEST => "POST",
+        //   CURLOPT_POSTFIELDS =>$json,
+        //   CURLOPT_HTTPHEADER => array(
+        //     "Content-Type: application/json"
+        //   ),
+        // ));
+
+        // $response = curl_exec($curl);
+
+        // curl_close($curl);
+        echo "<pre>";
+
+        // print_r(json_decode($response, TRUE));
+        print_r(json_decode('{
+              "recommended_courses": [
+                {
+                  "content_duration": 3.0,
+                  "course_id": 16151,
+                  "is_paid": true,
+                  "level": "All Levels",
+                  "num_lectures": 23,
+                  "num_reviews": 147,
+                  "num_subscribers": 7867,
+                  "price": 20,
+                  "published_timestamp": "2012-05-15T18:03:43Z",
+                  "subject": "Web Development",
+                  "title": "AJAX Development",
+                  "url": "https://www.udemy.com/ajax-development/"
+                },
+                {
+                  "content_duration": 3.5,
+                  "course_id": 657734,
+                  "is_paid": true,
+                  "level": "All Levels",
+                  "num_lectures": 26,
+                  "num_reviews": 89,
+                  "num_subscribers": 12368,
+                  "price": 195,
+                  "published_timestamp": "2015-11-13T22:03:15Z",
+                  "subject": "Web Development",
+                  "title": "Complete AJAX Course: Learn AJAX Techniques Using Bootstrap",
+                  "url": "https://www.udemy.com/ajaxcourse/"
+                },
+                {
+                  "content_duration": 0.5666666666666667,
+                  "course_id": 955138,
+                  "is_paid": true,
+                  "level": "All Levels",
+                  "num_lectures": 9,
+                  "num_reviews": 23,
+                  "num_subscribers": 1241,
+                  "price": 35,
+                  "published_timestamp": "2016-09-10T20:59:38Z",
+                  "subject": "Web Development",
+                  "title": "AJAX :basics for beginners",
+                  "url": "https://www.udemy.com/ajaxbasics/"
+                },
+                {
+                  "content_duration": 4.0,
+                  "course_id": 746790,
+                  "is_paid": true,
+                  "level": "All Levels",
+                  "num_lectures": 60,
+                  "num_reviews": 30,
+                  "num_subscribers": 1554,
+                  "price": 20,
+                  "published_timestamp": "2016-02-02T18:36:12Z",
+                  "subject": "Web Development",
+                  "title": "JavaScript, jQuery and Ajax",
+                  "url": "https://www.udemy.com/ajax-calls-the-simplest-way/"
+                },
+                {
+                  "content_duration": 2.0,
+                  "course_id": 691760,
+                  "is_paid": true,
+                  "level": "Beginner Level",
+                  "num_lectures": 18,
+                  "num_reviews": 5,
+                  "num_subscribers": 755,
+                  "price": 65,
+                  "published_timestamp": "2016-01-25T17:57:24Z",
+                  "subject": "Web Development",
+                  "title": "Ajax  for Beginners: A Very Basic Introduction",
+                  "url": "https://www.udemy.com/ajax-for-beginners-a-very-basic-introduction/"
+                },
+                {
+                  "content_duration": 14.0,
+                  "course_id": 304490,
+                  "is_paid": true,
+                  "level": "Intermediate Level",
+                  "num_lectures": 86,
+                  "num_reviews": 231,
+                  "num_subscribers": 4183,
+                  "price": 35,
+                  "published_timestamp": "2014-10-12T06:29:05Z",
+                  "subject": "Web Development",
+                  "title": "A 13 Hour SQL Server 2014 /ASP.NET/CSS/C#/jQuery Course",
+                  "url": "https://www.udemy.com/learnsqlwithsqlserver2014/"
+                },
+                {
+                  "content_duration": 5.5,
+                  "course_id": 425084,
+                  "is_paid": true,
+                  "level": "All Levels",
+                  "num_lectures": 98,
+                  "num_reviews": 65,
+                  "num_subscribers": 586,
+                  "price": 60,
+                  "published_timestamp": "2015-03-23T00:20:29Z",
+                  "subject": "Web Development",
+                  "title": "Administering Microsoft SQL Server 2012 Databases - 70-462",
+                  "url": "https://www.udemy.com/administering-microsoft-sql-server-2012-databases-70-462/"
+                },
+                {
+                  "content_duration": 5.0,
+                  "course_id": 425086,
+                  "is_paid": true,
+                  "level": "All Levels",
+                  "num_lectures": 90,
+                  "num_reviews": 148,
+                  "num_subscribers": 1142,
+                  "price": 85,
+                  "published_timestamp": "2015-05-01T23:08:38Z",
+                  "subject": "Web Development",
+                  "title": "Implementing a Data Warehouse with SQL Server 2012 ",
+                  "url": "https://www.udemy.com/implementing-a-data-warehouse-with-sql-server-2012/"
+                },
+                {
+                  "content_duration": 6.5,
+                  "course_id": 422012,
+                  "is_paid": true,
+                  "level": "All Levels",
+                  "num_lectures": 115,
+                  "num_reviews": 89,
+                  "num_subscribers": 666,
+                  "price": 85,
+                  "published_timestamp": "2015-03-12T21:20:41Z",
+                  "subject": "Web Development",
+                  "title": "Querying Microsoft SQL Server 2012 - (Exam No. 70-461)",
+                  "url": "https://www.udemy.com/querying-sql-server-2012-70-461/"
+                },
+                {
+                  "content_duration": 5.5,
+                  "course_id": 1052304,
+                  "is_paid": true,
+                  "level": "All Levels",
+                  "num_lectures": 77,
+                  "num_reviews": 102,
+                  "num_subscribers": 11285,
+                  "price": 195,
+                  "published_timestamp": "2017-02-07T17:20:39Z",
+                  "subject": "Web Development",
+                  "title": "JavaScript For Beginners : Learn JavaScript From Scratch",
+                  "url": "https://www.udemy.com/javascript-course-for-beginners/"
+                },
+                {
+                  "content_duration": 4.0,
+                  "course_id": 8325,
+                  "is_paid": true,
+                  "level": "All Levels",
+                  "num_lectures": 82,
+                  "num_reviews": 253,
+                  "num_subscribers": 12458,
+                  "price": 20,
+                  "published_timestamp": "2011-09-09T15:28:59Z",
+                  "subject": "Web Development",
+                  "title": "HTML Tutorial: HTML & CSS for Beginners",
+                  "url": "https://www.udemy.com/learn-html5/"
+                },
+                {
+                  "content_duration": 2.0,
+                  "course_id": 15285,
+                  "is_paid": true,
+                  "level": "All Levels",
+                  "num_lectures": 17,
+                  "num_reviews": 306,
+                  "num_subscribers": 25854,
+                  "price": 20,
+                  "published_timestamp": "2012-04-08T05:12:43Z",
+                  "subject": "Web Development",
+                  "title": "HTML Workshop",
+                  "url": "https://www.udemy.com/html-workshop/"
+                },
+                {
+                  "content_duration": 3.0,
+                  "course_id": 1110756,
+                  "is_paid": true,
+                  "level": "All Levels",
+                  "num_lectures": 27,
+                  "num_reviews": 15,
+                  "num_subscribers": 2401,
+                  "price": 20,
+                  "published_timestamp": "2017-02-22T17:36:27Z",
+                  "subject": "Web Development",
+                  "title": "HTML Tutorials : HTML Code for Website Creating",
+                  "url": "https://www.udemy.com/html-code-for-website/"
+                },
+                {
+                  "content_duration": 1.0,
+                  "course_id": 958982,
+                  "is_paid": true,
+                  "level": "Beginner Level",
+                  "num_lectures": 25,
+                  "num_reviews": 20,
+                  "num_subscribers": 785,
+                  "price": 25,
+                  "published_timestamp": "2016-09-15T18:06:58Z",
+                  "subject": "Web Development",
+                  "title": "JavaScript : JavaScript Awesomeness",
+                  "url": "https://www.udemy.com/javascript-javascript/"
+                },
+                {
+                  "content_duration": 5.0,
+                  "course_id": 529828,
+                  "is_paid": true,
+                  "level": "All Levels",
+                  "num_lectures": 36,
+                  "num_reviews": 25,
+                  "num_subscribers": 638,
+                  "price": 95,
+                  "published_timestamp": "2015-06-17T22:23:31Z",
+                  "subject": "Business Finance",
+                  "title": "Python for Trading & Investing",
+                  "url": "https://www.udemy.com/python-for-trading-investing/"
+                },
+                {
+                  "content_duration": 4.0,
+                  "course_id": 16646,
+                  "is_paid": true,
+                  "level": "All Levels",
+                  "num_lectures": 53,
+                  "num_reviews": 217,
+                  "num_subscribers": 35267,
+                  "price": 50,
+                  "published_timestamp": "2012-04-25T00:01:43Z",
+                  "subject": "Web Development",
+                  "title": "Web Programming with Python",
+                  "url": "https://www.udemy.com/web-programming-with-python/"
+                }
+              ]
+            }'));
+        exit();
+
+    }
+    public function githubjobs(){
+
         $curl = curl_init();
 
         curl_setopt_array($curl, array(
-          CURLOPT_URL => "http://localhost:5002/course_api",
+          CURLOPT_URL => "https://jobs.github.com/positions.json",
           CURLOPT_RETURNTRANSFER => true,
           CURLOPT_ENCODING => "",
           CURLOPT_MAXREDIRS => 10,
           CURLOPT_TIMEOUT => 0,
           CURLOPT_FOLLOWLOCATION => true,
           CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-          CURLOPT_CUSTOMREQUEST => "POST",
-          CURLOPT_POSTFIELDS =>$json,
-          CURLOPT_HTTPHEADER => array(
-            "Content-Type: application/json"
-          ),
+          CURLOPT_CUSTOMREQUEST => "GET",
         ));
 
         $response = curl_exec($curl);
 
         curl_close($curl);
-        echo "<pre>";
-
-        print_r(json_decode($response, TRUE));
-        // print_r($response);
-        exit();
+        echo $response;
 
     }
     public function store(Request $request)
