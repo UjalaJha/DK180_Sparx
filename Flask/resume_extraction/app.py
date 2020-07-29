@@ -7,7 +7,7 @@ from pdfminer.pdfinterp import PDFPageInterpreter
 from pdfminer.pdfinterp import PDFResourceManager
 from pdfminer.layout import LAParams
 from pdfminer.pdfpage import PDFPage
-
+from flask_cors import CORS
 import io
 import nltk
 nltk.download('punkt')
@@ -20,7 +20,7 @@ from PIL import Image
 import pytesseract 
 import sys
 import os
-import cv2
+# import cv2
 import glob
 import spacy
 import re
@@ -33,7 +33,9 @@ from nltk.stem import WordNetLemmatizer
 pytesseract.pytesseract.tesseract_cmd ='C://Program Files//Tesseract-OCR//tesseract.exe'
 
 app = Flask(__name__)
-app.config['UPLOAD_FOLDER']='C://Users//juyee//Envs//sih2020//resume_extraction//resume'
+CORS(app)
+
+app.config['UPLOAD_FOLDER']="resume"
 #model = pickle.load(open('model.pkl', 'rb'))
 
 def extract_text_from_pdf(pdf_path):
@@ -72,10 +74,10 @@ def extract_text_from_pdf(pdf_path):
             fake_file_handle.close()
 
 
-def extract_text_from_jpg(file_path):
-    img = cv2.imread(file_path)
-    result = pytesseract.image_to_string(img)
-    return result
+# def extract_text_from_jpg(file_path):
+#     img = cv2.imread(file_path)
+#     result = pytesseract.image_to_string(img)
+#     return result
 
 import docx2txt
 
@@ -101,12 +103,12 @@ def readFile(fileName):
         except:
             return ''
             pass
-    elif extension == 'jpg':
-        try:
-            return extract_text_from_jpg(fileName)
-        except:
-            return ''
-            pass
+    # elif extension == 'jpg':
+    #     try:
+    #         return extract_text_from_jpg(fileName)
+    #     except:
+    #         return ''
+    #         pass
     else:
         print('Unsupported format')
         return '', ''
@@ -202,7 +204,7 @@ def extract_skills(resume_text,cleaned_text):
     tokens = [token.text for token in nlp_text if not token.is_stop]
     
     # reading the csv file
-    data = pd.read_csv("C:\\Users\\juyee\\Envs\\sih2020\\resume_extraction\\final_skills.csv") 
+    data = pd.read_csv("final_skills.csv") 
     
     # extract values
     skills = list(data.Skills.values)
@@ -270,7 +272,7 @@ def qualification_major(resume_text):
     tokens = [token.text for token in nlp_text if not token.is_stop]
     
     # reading the csv file
-    data = pd.read_csv("C://Users//juyee//Envs//sih2020//resume_extraction//grad-students.csv") 
+    data = pd.read_csv("grad-students.csv") 
     
     # extract values
     qualifications = list(data.Major.values)
@@ -435,8 +437,11 @@ def predict_api():
     
     
     path=os.path.join(app.config['UPLOAD_FOLDER'], secure_filename(f.filename))
+    print(path)
     text = readFile(path)
     cleaned_text = preprocessing(text)
+    print("cleaned_text")
+    print(cleaned_text)
     candidate_name = extract_name(cleaned_text)
     
     finalphoneno=''

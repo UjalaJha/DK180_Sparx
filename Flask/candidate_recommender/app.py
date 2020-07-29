@@ -52,6 +52,8 @@ model = KNNWithMeans(sim_options=sim_options)
 
 #profiledata = pd.read_csv("C:\\Users\\juyee\\Envs\\sih2020\\candidate_recommender\\Test Profiles\\profile_data.csv")
 df = pd.read_csv(r"./JVR_CandidatesInfo2.csv")
+df = pd.read_csv(r"JVR_CandidatesInfo2.csv")
+
 df = df.replace(np.nan, '', regex=True)
 df = df.rename(columns={'Unnamed: 0':'ind'})
 
@@ -153,6 +155,7 @@ def home():
 @app.route('/candidate_api',methods=['POST'])
 def predict_api():
     profiledata = pd.read_csv(".\\Test Profiles\\profile_data.csv")
+    profiledata = pd.read_csv("Test Profiles\\profile_data.csv")
 
     input_company = {'role_title': request.json['role_title'],'company_name':request.json['company_name'],'description' : request.json['description'],
     'exp':request.json['exp'], 'loc':request.json['loc'],'salary':request.json['salary'],'skills' : request.json['skills']}
@@ -165,6 +168,8 @@ def predict_api():
     salary = input_company['salary']
     company_exp = input_company['exp']
     path = ".\\Test Profiles\\"+company_role+".csv"
+    path = "Test Profiles\\"+company_role+".csv"
+
     role_jobs = pd.read_csv(path)
     #role_jobs = role_jobs.replace(np.nan, '', regex=True)
     role_jobs = pd.DataFrame(role_jobs)
@@ -224,6 +229,7 @@ def predict_api():
     candidate_reco = candidate_recommendations.to_dict('records')
 
     profiledata.to_csv(r"./Test Profiles/profile_data.csv",index=False)
+    profiledata.to_csv("Test Profiles\\profile_data.csv",index=False)
     role_jobs.to_csv(path,index=False)  
 
     return jsonify({'recommended_candidates' : candidate_reco})
