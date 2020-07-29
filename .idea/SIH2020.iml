@@ -25,9 +25,14 @@
       <excludeFolder url="file://$MODULE_DIR$/Web/vendor/league/commonmark" />
       <excludeFolder url="file://$MODULE_DIR$/Web/vendor/league/commonmark-ext-table" />
       <excludeFolder url="file://$MODULE_DIR$/Web/vendor/league/flysystem" />
+      <excludeFolder url="file://$MODULE_DIR$/Web/vendor/maatwebsite/excel" />
+      <excludeFolder url="file://$MODULE_DIR$/Web/vendor/maennchen/zipstream-php" />
+      <excludeFolder url="file://$MODULE_DIR$/Web/vendor/markbaker/complex" />
+      <excludeFolder url="file://$MODULE_DIR$/Web/vendor/markbaker/matrix" />
       <excludeFolder url="file://$MODULE_DIR$/Web/vendor/mockery/mockery" />
       <excludeFolder url="file://$MODULE_DIR$/Web/vendor/monolog/monolog" />
       <excludeFolder url="file://$MODULE_DIR$/Web/vendor/myclabs/deep-copy" />
+      <excludeFolder url="file://$MODULE_DIR$/Web/vendor/myclabs/php-enum" />
       <excludeFolder url="file://$MODULE_DIR$/Web/vendor/nesbot/carbon" />
       <excludeFolder url="file://$MODULE_DIR$/Web/vendor/nikic/php-parser" />
       <excludeFolder url="file://$MODULE_DIR$/Web/vendor/nunomaduro/collision" />
@@ -38,6 +43,7 @@
       <excludeFolder url="file://$MODULE_DIR$/Web/vendor/phpdocumentor/reflection-common" />
       <excludeFolder url="file://$MODULE_DIR$/Web/vendor/phpdocumentor/reflection-docblock" />
       <excludeFolder url="file://$MODULE_DIR$/Web/vendor/phpdocumentor/type-resolver" />
+      <excludeFolder url="file://$MODULE_DIR$/Web/vendor/phpoffice/phpspreadsheet" />
       <excludeFolder url="file://$MODULE_DIR$/Web/vendor/phpoption/phpoption" />
       <excludeFolder url="file://$MODULE_DIR$/Web/vendor/phpspec/prophecy" />
       <excludeFolder url="file://$MODULE_DIR$/Web/vendor/phpunit/php-code-coverage" />
@@ -47,6 +53,9 @@
       <excludeFolder url="file://$MODULE_DIR$/Web/vendor/phpunit/php-token-stream" />
       <excludeFolder url="file://$MODULE_DIR$/Web/vendor/phpunit/phpunit" />
       <excludeFolder url="file://$MODULE_DIR$/Web/vendor/psr/container" />
+      <excludeFolder url="file://$MODULE_DIR$/Web/vendor/psr/http-client" />
+      <excludeFolder url="file://$MODULE_DIR$/Web/vendor/psr/http-factory" />
+      <excludeFolder url="file://$MODULE_DIR$/Web/vendor/psr/http-message" />
       <excludeFolder url="file://$MODULE_DIR$/Web/vendor/psr/log" />
       <excludeFolder url="file://$MODULE_DIR$/Web/vendor/psr/simple-cache" />
       <excludeFolder url="file://$MODULE_DIR$/Web/vendor/psy/psysh" />

@@ -68,6 +68,7 @@ Route::get('/jobrecommendation','UserController@jobrecommendation');
 
 Route::get('/learningrecommendation','UserController@learningrecommendation');
 
+Route::get('/githubjobs','UserController@githubjobs');
 
 ///sanjay
 
@@ -77,6 +78,8 @@ Route::get('/company_dashboard', function () {
 Route::get('/post_job', function () {
     return view('company/post_job');
 });
+
+Route::post('/company_post_job', 'UserController@candidaterecommendation');
 
 Route::get('/suggested_students', function () {
     return view('company/suggested_students');
@@ -197,3 +200,12 @@ Route::get('getSubConcept/{sub_category}/{concept}','AddQuestionController@getSu
 Route::get('view_users', function (){
     return view('admin/view_users');
 });
+
+
+//update skills
+Route::post('updateSkills', 'UserController@updateSkills');
+
+/*Excel import export*/
+Route::get('export', 'MyController@export')->name('export');
+Route::get('importExportView', 'MyController@importExportView');
+Route::post('import', 'MyController@import')->name('import');

@@ -1,6 +1,9 @@
 <?php
 
 namespace App\Http\Controllers;
+//use Maatwebsite\Excel\Concerns\FromCollection;
+use App\Imports\QuestionsImport;
+use Maatwebsite\Excel\Facades\Excel;
 
 use Illuminate\Http\Request;
 use App\TQCategoryDetails;
@@ -38,7 +41,7 @@ class AddQuestionController extends Controller
     }
 
 
-    public function proceedForm(){
+    public function proceedForm(Request $request){
 //        echo "hey";
 //        echo $_POST['category'];
 //        echo $_POST['sub_category'];
@@ -67,13 +70,37 @@ class AddQuestionController extends Controller
 //        echo $tq_category_details_id;
 //        echo $tq_concept_details_id;
         $_SESSION['$tq_concept_details_id'] = $tq_concept_details_id;
-        if($_POST['ques_file']!=null){
-//            echo "file selected";
+
+
+            echo "file selected";
+//            echo $_POST['ques_file'];
             //insert all details through excel file with concept id
-
-
-
-        }else{
+            if($request->hasFile('ques_file')){
+//                echo "here";
+                $path = $request->file('ques_file')->getRealPath();
+//                echo $path;
+                $data = Excel::import(new QuestionsImport, \request()->file('ques_file'));
+//                echo $data->count();
+//                print_r($data);
+                //
+//                $arr = array();
+//                if($data->count()){
+//                    foreach ($data as $key => $value) {
+//                        $arr[] = ['name' => $value->name, 'details' => $value->details];
+//                    }
+//                        echo "ss";
+//                    print_r($arr);
+//                    if(!empty($arr)){
+////                        \DB::table('tq_test_questions')->insert($arr);
+//                        dd('Insert Record successfully.');
+//                    }
+//                }
+                //
+//                https://www.itsolutionstuff.com/post/laravel-57-import-export-excel-to-database-exampleexample.html
+//                https://docs.laravel-excel.com/3.1/imports/basics.html
+                return $this->index();
+            }
+        else{
 //            echo "no file";
             $ques_count_array = array();
             $ques_count = $_POST['no_of_ques'];

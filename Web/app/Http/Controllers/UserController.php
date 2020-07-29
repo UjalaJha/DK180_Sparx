@@ -31,10 +31,18 @@ class UserController extends Controller
     public function redirectDashboard(){
         $id = Session::get('user_id');
 //        echo $id;
-        $user_test_details = UserTests::where('user_id',$id)->get();
+
+        $check_data = UserPersonalDetails::where('user_id', $id)->get();
+//        echo $check_data;
+        if(sizeof($check_data) == 0){
+            return view('template/preuser');
+        }else{
+            $user_test_details = UserTests::where('user_id',$id)->get();
 //        $user_test_array = json_decode(json_encode($user_test_details), true);
 //         print_r($user_test_array);
-        return view('template/dashboard')->with('user_test_details',$user_test_details);
+            return view('template/dashboard')->with('user_test_details',$user_test_details);
+
+        }
 
     }
 
@@ -207,73 +215,109 @@ class UserController extends Controller
 //        $this->save();
         }
 
-        $endpoint = "http://aef4d9e6e63d.ngrok.io/resume_api";
-        $client = new \GuzzleHttp\Client();
-        
+        if($_POST['use_resume']){
+            $endpoint = "http://aef4d9e6e63d.ngrok.io/resume_api";
+            $client = new \GuzzleHttp\Client();
 
-        // $response = $client->request('POST', $endpoint, ['query' => [
-            
-        //     // 'key2' => $value,
-        // ]]);
+
+
+            // $response = $client->request('POST', $endpoint, ['query' => [
+
+            //     // 'key2' => $value,
+            // ]]);
             // print_r($request->file('image_filename'));
             // exit();
-        $file = $request->file('resume_filename');
-        $name = $file->getClientOriginalName();
-        $path = 'C:\\Users\\Ujala Jha\\Downloads\\';
-        $response =  $client->request('POST', $endpoint, [
-            'multipart' => [
-                [
-                    'name'     => 'file',
-                    'contents' => file_get_contents($path . $name),
-                    'filename' => $name
-                ]
-            ],
-        ]);
+            $file = $request->file('resume_filename');
+//        $name = $file->getClientOriginalName();
+            $name = $user_id.'.'.$file->getClientOriginalExtension();
+//        $path = 'C:\\Users\\Ujala Jha\\Downloads\\';
+            $path = public_path('resumes/');
+            $response =  $client->request('POST', $endpoint, [
+                'multipart' => [
+                    [
+                        'name'     => 'file',
+                        'contents' => file_get_contents($path . $name),
+                        'filename' => $name
+                    ]
+                ],
+            ]);
 
-        // url will be: http://my.domain.com/test.php?key1=5&key2=ABC;
+            // url will be: http://my.domain.com/test.php?key1=5&key2=ABC;
 
-        // $statusCode = $response->getStatusCode();
-        // $content = $response->getBody();
+            // $statusCode = $response->getStatusCode();
+            // $content = $response->getBody();
 
-        // or when your server returns json
-        $content = json_decode($response->getBody(), true);
-        echo "<pre>";
-        print_r($content) ;
-        exit();
-        // $curl = curl_init();
+            // or when your server returns json
+            $content = json_decode($response->getBody(), true);
+//        echo "<pre>";
+//        print_r($content);
+//        print_r($content['Candidate Details'][0]['Email']);
+            $education = $content['Candidate Details'][0]['Education'];
+            $email = $content['Candidate Details'][0]['Email'];
+            $experience = $content['Candidate Details'][0]['Experience'];
+            $name = $content['Candidate Details'][0]['Name'];
+            $phone_no = $content['Candidate Details'][0]['Phone No'];
+            $qualification = $content['Candidate Details'][0]['Qualification Tags'];
+            $skillset = $content['Candidate Details'][0]['Skillset'];
+            $skillset = strtoupper($skillset);
 
-        // curl_setopt_array($curl, array(
-        //   CURLOPT_URL => "https://68efb60e1c22.ngrok.io/resume_api",
-        //   CURLOPT_RETURNTRANSFER => true,
-        //   CURLOPT_ENCODING => "",
-        //   CURLOPT_MAXREDIRS => 10,
-        //   CURLOPT_TIMEOUT => 0,
-        //   CURLOPT_FOLLOWLOCATION => true,
-        //   CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-        //   CURLOPT_CUSTOMREQUEST => "POST",
-        //   CURLOPT_POSTFIELDS => array('url' => 'https://www.jobvacancyresult.com/storage/users/resumes/5833_02_Jatin_Acharya%20-%20JATIN%20ACHARYA.pdf'),
-        // ));
+//        echo $skillset;
+//        print_r(explode(',',$skillset));
+            $skillset = explode(',',$skillset);
+//        print_r(explode(',',$qualification));
+            $qualification = explode(',',$qualification);
+//        print_r(explode(',',$experience));
+            $experience = explode(',',$experience);
+            $name = explode(' ', $name);
+//        exit();
+            // $curl = curl_init();
 
-        // $response = curl_exec($curl);
-        // curl_close($curl);
-        // // $response = $connection -> getData();
+            // curl_setopt_array($curl, array(
+            //   CURLOPT_URL => "https://68efb60e1c22.ngrok.io/resume_api",
+            //   CURLOPT_RETURNTRANSFER => true,
+            //   CURLOPT_ENCODING => "",
+            //   CURLOPT_MAXREDIRS => 10,
+            //   CURLOPT_TIMEOUT => 0,
+            //   CURLOPT_FOLLOWLOCATION => true,
+            //   CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+            //   CURLOPT_CUSTOMREQUEST => "POST",
+            //   CURLOPT_POSTFIELDS => array('url' => 'https://www.jobvacancyresult.com/storage/users/resumes/5833_02_Jatin_Acharya%20-%20JATIN%20ACHARYA.pdf'),
+            // ));
 
-        // // get rid of the extra NULs
-        // // $response = str_replace(chr(0), '', $response);
-        // // $response = rtrim($response, "\0");
-        // // print_r($response->toJson());
-        // $response = stripslashes(html_entity_decode($response));
-        // $response = utf8_encode($response);
-        // $response = substr($response, 1); 
-        // $response = substr($response, 0, -1);
-        
-        // $var=json_decode($response);
-        // print_r($var);
-        // print_r($var[0]->Email);
-        // // print_r(json_last_error());
-        // exit();
+            // $response = curl_exec($curl);
+            // curl_close($curl);
+            // // $response = $connection -> getData();
 
-        return view('template/user')->with('image_name', $image_name)->with('resume_name', $resume_name);
+            // // get rid of the extra NULs
+            // // $response = str_replace(chr(0), '', $response);
+            // // $response = rtrim($response, "\0");
+            // // print_r($response->toJson());
+            // $response = stripslashes(html_entity_decode($response));
+            // $response = utf8_encode($response);
+            // $response = substr($response, 1);
+            // $response = substr($response, 0, -1);
+
+            // $var=json_decode($response);
+            // print_r($var);
+            // print_r($var[0]->Email);
+            // // print_r(json_last_error());
+            // exit();
+
+            return view('template/user')->with('image_name', $image_name)
+                                                ->with('resume_name', $resume_name)
+                                                ->with('education', $education)
+                                                ->with('email', $email)
+                                                ->with('experience', $experience)
+                                                ->with('name', $name)
+                                                ->with('phone_no', $phone_no)
+                                                ->with('qualification', $qualification)
+                                                ->with('skillset',$skillset);
+        }else{
+            return view('template/user')->with('image_name', $image_name)
+                                                ->with('resume_name', $resume_name);
+        }
+
+
     }
 
 
@@ -315,6 +359,17 @@ class UserController extends Controller
     }
 
     public function candidaterecommendation(){
+        $job_role = $_POST['job_role'];
+        $salary = $_POST['salary'];
+        $job_description = $_POST['job_description'];
+        $empolyment_type = $_POST['empolyment_type'];
+        $experience = $_POST['experience'];
+        $location = $_POST['location'];
+        $skills_required = '';
+        foreach ($_POST['skills'] as $value){
+            $skills_required .=  $value.',';
+        }
+        exit;
         // give this json
         // {
         //     "role_title": "database",
@@ -335,29 +390,132 @@ class UserController extends Controller
         $json=json_encode($data);
         $curl = curl_init();
 
-        curl_setopt_array($curl, array(
-          CURLOPT_URL => "http://f1d65fe95099.ngrok.io/candidate_api",
-          CURLOPT_RETURNTRANSFER => true,
-          CURLOPT_ENCODING => "",
-          CURLOPT_MAXREDIRS => 10,
-          CURLOPT_TIMEOUT => 0,
-          CURLOPT_FOLLOWLOCATION => true,
-          CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-          CURLOPT_CUSTOMREQUEST => "POST",
-          CURLOPT_POSTFIELDS =>$json,
-          CURLOPT_HTTPHEADER => array(
-            "Content-Type: application/json"
-          ),
-        ));
+        // curl_setopt_array($curl, array(
+        //   CURLOPT_URL => "http://f1d65fe95099.ngrok.io/candidate_api",
+        //   CURLOPT_RETURNTRANSFER => true,
+        //   CURLOPT_ENCODING => "",
+        //   CURLOPT_MAXREDIRS => 10,
+        //   CURLOPT_TIMEOUT => 0,
+        //   CURLOPT_FOLLOWLOCATION => true,
+        //   CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+        //   CURLOPT_CUSTOMREQUEST => "POST",
+        //   CURLOPT_POSTFIELDS =>$json,
+        //   CURLOPT_HTTPHEADER => array(
+        //     "Content-Type: application/json"
+        //   ),
+        // ));
 
-        $response = curl_exec($curl);
-        curl_close($curl);
+        // $response = curl_exec($curl);
+        // curl_close($curl);
 
-        // $jsonDecode = json_decode(trim($jsonData), TRUE);
-        // echo $response;
+        // // $jsonDecode = json_decode(trim($jsonData), TRUE);
+        // // echo $response;
         echo "<pre>";
-        print_r(json_decode($response, TRUE));
-
+        // print_r(json_decode($response, TRUE));
+        print_r(json_decode('{
+          "recommended_candidates": [
+            {
+              "Education": "",
+              "Email": "sagar.saxena.min17@itbhu.ac.in",
+              "Experience": "",
+              "LinkedIn": "",
+              "Name": "sagar saxena",
+              "Phone No": "7237971138",
+              "Skillset": "Net,Data analytics,It,Analytics,C/c++,Data,Engineering,Python,Technology,R,C,Digital,Development,Operations,System,C++,Software,Software development",
+              "Tags": "It,Music"
+            },
+            {
+              "Education": "BTech",
+              "Email": "17uec069@lnmiit.ac.in",
+              "Experience": "",
+              "LinkedIn": "",
+              "Name": "mansi mittal",
+              "Phone No": "918559924980",
+              "Skillset": "Development,Research,Implement,Business,C++,Php,Optimization,Matlab,Technology,Mysql,Develop,Database,Software,Build,It,Seo,Marketing,C,Media,Management,Project,Digital,Software development",
+              "Tags": "It,Marketing"
+            },
+            {
+              "Education": "BTech",
+              "Email": "17uec069@lnmiit.ac.in",
+              "Experience": "",
+              "LinkedIn": "",
+              "Name": "mansi mittal",
+              "Phone No": "918559924980",
+              "Skillset": "Development,Research,Implement,Business,C++,Php,Optimization,Matlab,Technology,Mysql,Develop,Database,Software,Build,It,Seo,Marketing,C,Media,Management,Project,Digital,Software development",
+              "Tags": "It,Marketing"
+            },
+            {
+              "Education": "MBA,BCA",
+              "Email": "kasturisen4998@gmail.com",
+              "Experience": "",
+              "LinkedIn": "https://www.linkedin.com/in/",
+              "Name": "kasturi sen",
+              "Phone No": "918460620601",
+              "Skillset": "Design,Requirements,Asp.net,Web,Application,Development,Training,Java,Service,Php,Computer,Technology,Mysql,It,Leadership,C,Management,Software,Etc",
+              "Tags": "Communications,It"
+            },
+            {
+              "Education": "Btech,BTech",
+              "Email": "pendliy.reddy.min17@itbhu.ac.in",
+              "Experience": " PROJECTS Summer Industrial",
+              "LinkedIn": "",
+              "Name": "pendli yashwanth",
+              "Phone No": "916392059890",
+              "Skillset": "Programming,Engineering,Data structures,Systems,Development,Training,Adobe,Coding,Algorithms,Intern,Data,Microsoft,Photoshop,Word,Support,Powerpoint,Technical,Management,Project,Software,Software development",
+              "Tags": ""
+            },
+            {
+              "Education": "BE,HSC,SSC",
+              "Email": "shindetejas1508@gmail.com",
+              "Experience": " VESIT ",
+              "LinkedIn": "https://www.linkedin.com/in/tejas-shinde-7ab02b189 github:  https:/",
+              "Name": "tejas shinde",
+              "Phone No": "918149636148",
+              "Skillset": "Design,Web,Python,Inventory,Css,Hadoop,Database design,Application,Development,Spark,Algorithm,Github,Intern,Html,Developer,Java,Django,Switching,Php,Automated,Technology,Mysql,Iot,Oracle,Database,Information technology,Cloudera,Sql,Ups,It,Android,Javascript,Admin,C,Performance,Technical,Verification,System,Management,Project",
+              "Tags": "Information technology,Mathematics"
+            },
+            {
+              "Education": "HSC",
+              "Email": "shrynitshangloo18@gmail.com",
+              "Experience": " S S",
+              "LinkedIn": "",
+              "Name": "shrynit shangloo",
+              "Phone No": "9867693914",
+              "Skillset": "Inventory,Sales,Development,Research,Intern,Financial,Business,Data,Excel,Reports,Trading,Protocols,Database,Business development,Presentations,Marketing,Media,Pricing,Operations,Management,Benefits",
+              "Tags": "Economics,Marketing"
+            },
+            {
+              "Education": "BSc",
+              "Email": "",
+              "Experience": "",
+              "LinkedIn": "",
+              "Name": "curriculum vitae",
+              "Phone No": "919973160020",
+              "Skillset": "Programming,Development,Research,Data,Html,R,Statistics,Java,Applications,C++,Mysql,Analysis,Database,Scripting,Marketing,Technical,Media,Project,Software",
+              "Tags": "Marketing"
+            },
+            {
+              "Education": "MBA,BSc",
+              "Email": "pgp10snehab@iimrohtak.ac.in",
+              "Experience": "",
+              "LinkedIn": "",
+              "Name": "bharti mba|",
+              "Phone No": "9873574993",
+              "Skillset": "Requirements,Android,Excel,Finance,Microsoft,Budgeting,Technical,Writer,Development,Training,Database,Management,Software,Coding",
+              "Tags": "Cs,Finance"
+            },
+            {
+              "Education": "HSC,SSC,BE,Ms,ME",
+              "Email": "â€‹karthikkeswani1234@gmail.com",
+              "Experience": "",
+              "LinkedIn": "",
+              "Name": "mahesh keswani",
+              "Phone No": "9699336323",
+              "Skillset": "Design,Programming,Google analytics,Git,Web,Python,Css,Azure,Flash,Database design,Application,Development,Voice,Research,Analytics,Data,Html,Microsoft,Developer,Java,Ui,Django,Bootstrap,Library,Php,Technology,Analysis,Database,Oracle,Cloudera,Sql,It,Debugging,Javascript,Mobile,Technical,Network,Big data,System,Management,Project,Cloud",
+              "Tags": "Information technology,It"
+            }
+          ]
+        }'));
         
      
 
@@ -621,6 +779,27 @@ class UserController extends Controller
               ]
             }'));
         exit();
+
+    }
+    public function githubjobs(){
+
+        $curl = curl_init();
+
+        curl_setopt_array($curl, array(
+          CURLOPT_URL => "https://jobs.github.com/positions.json",
+          CURLOPT_RETURNTRANSFER => true,
+          CURLOPT_ENCODING => "",
+          CURLOPT_MAXREDIRS => 10,
+          CURLOPT_TIMEOUT => 0,
+          CURLOPT_FOLLOWLOCATION => true,
+          CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+          CURLOPT_CUSTOMREQUEST => "GET",
+        ));
+
+        $response = curl_exec($curl);
+
+        curl_close($curl);
+        echo $response;
 
     }
     public function store(Request $request)
@@ -916,7 +1095,12 @@ class UserController extends Controller
 //        }
 
 
-        return view('/template/user');
+//        return view('/template/user');
+        $user_test_details = UserTests::where('user_id',$user_id)->get();
+//        $user_test_array = json_decode(json_encode($user_test_details), true);
+//         print_r($user_test_array);
+        return view('template/dashboard')->with('user_test_details',$user_test_details);
+
 
     }
 
@@ -999,12 +1183,40 @@ class UserController extends Controller
     
     public function view_profile(){
         $id=Session::get('user_id');
-        echo $id;
+//        echo $id;
         $user_details=UserPersonalDetails::where('user_id',$id)->get();
-        print_r($user_details);
-        exit;
-        return view('/template/profile')->with("user_details",$user_details);
+        $user_tq_details = UserTechnical::where('user_id', $id)->get('tq_category_details_id');
+//        print_r($user_tq_details[0]['tq_category_details_id']);
+        $skills_id_array = array();
+        $count = 0;
+        foreach ($user_tq_details as $skill){
+            $skills_id_array[$count] = $skill['tq_category_details_id'];
+            $count++;
+        }
+//        print_r($skills_id_array);
+        $skills_name_array = array();
+        $count = 0;
+        foreach ($skills_id_array as $skill){
+            $sub_category = TQCategoryDetails::where('tq_category_details_id', $skill)->get();
+            $skills_name_array[$count] = $sub_category[0]['sub_category'];
+            $count++;
+        }
+//        print_r($skills_name_array);
+
+        $user_academics = UserAcademics::where('user_id', $id)->get();
+
+        $user_internships = UserExperiences::where('user_id', $id)->where('is_internship_project', 1)->get();
+//        print_r($user_internships);
+
+        $user_projects = UserExperiences::where('user_id', $id)->where('is_internship_project', 0)->get();
+
 //        exit;
+        return view('/template/profile')->with("user_details",$user_details)
+            ->with("user_tq_skills", $skills_name_array)
+            ->with('user_academics', $user_academics)
+            ->with('user_internships', $user_internships)
+            ->with('user_projects', $user_projects);
+        exit;
 
 
 
@@ -1014,6 +1226,51 @@ class UserController extends Controller
 
     }
 
+
+    public function updateSkills(){
+        $user_id = Session::get('user_id');
+
+        foreach ($_POST['skills'] as $value){
+            $user_technical_details = new UserTechnical;
+
+            $tq_category = TQCategoryDetails::where('sub_category', $value)->pluck('tq_category_details_id')->first();
+
+//            echo $tq_category."-".$value;
+
+            $user_technical_details->user_id = $user_id;
+            $user_technical_details->tq_category_details_id = $tq_category;
+
+            $user_technical_details->save();
+
+            $user_technical_details->user_id = "";
+            $user_technical_details->tq_category_details_id = "";
+
+
+            $user_technical_details = null;
+
+        }
+
+
+
+        foreach ($_POST['skills'] as $value){
+            $user_ratings_details = new UserRatings;
+
+            $user_ratings_details->user_id = $user_id;
+            $user_ratings_details->language = $value;
+
+            $user_ratings_details->save();
+
+            $user_ratings_details->user_id = "";
+            $user_ratings_details->language = "";
+
+
+            $user_ratings_details = null;
+
+        }
+
+        return $this->view_profile();
+
+    }
 
 
     public function pyexe(){
