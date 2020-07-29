@@ -78,6 +78,8 @@ Route::get('/post_job', function () {
     return view('company/post_job');
 });
 
+Route::post('/company_post_job', 'UserController@candidaterecommendation');
+
 Route::get('/suggested_students', function () {
     return view('company/suggested_students');
 });

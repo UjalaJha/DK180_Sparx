@@ -83,7 +83,7 @@
 
 
 
-              <form action="/company" method="post">
+              <form action="/company_post_job" method="post">
                 <div class="row">
                   @csrf
                   <div class="col-md-6">
@@ -163,7 +163,7 @@
                 </div>
 
 
-                <button type="submit" class="btn btn-primary pull-right">Post</button>
+                <button type="submit" class="btn btn-primary pull-right" name="post_job">Post</button>
                 <div class="clearfix"></div>
               </form>
             </div>

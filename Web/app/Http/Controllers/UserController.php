@@ -215,76 +215,109 @@ class UserController extends Controller
 //        $this->save();
         }
 
-        $endpoint = "http://aef4d9e6e63d.ngrok.io/resume_api";
-        $client = new \GuzzleHttp\Client();
+        if($_POST['use_resume']){
+            $endpoint = "http://aef4d9e6e63d.ngrok.io/resume_api";
+            $client = new \GuzzleHttp\Client();
 
-        
 
-        // $response = $client->request('POST', $endpoint, ['query' => [
-            
-        //     // 'key2' => $value,
-        // ]]);
+
+            // $response = $client->request('POST', $endpoint, ['query' => [
+
+            //     // 'key2' => $value,
+            // ]]);
             // print_r($request->file('image_filename'));
             // exit();
-        $file = $request->file('resume_filename');
+            $file = $request->file('resume_filename');
 //        $name = $file->getClientOriginalName();
-        $name = $user_id.'.'.$file->getClientOriginalExtension();
+            $name = $user_id.'.'.$file->getClientOriginalExtension();
 //        $path = 'C:\\Users\\Ujala Jha\\Downloads\\';
-        $path = public_path('resumes/');
-        $response =  $client->request('POST', $endpoint, [
-            'multipart' => [
-                [
-                    'name'     => 'file',
-                    'contents' => file_get_contents($path . $name),
-                    'filename' => $name
-                ]
-            ],
-        ]);
+            $path = public_path('resumes/');
+            $response =  $client->request('POST', $endpoint, [
+                'multipart' => [
+                    [
+                        'name'     => 'file',
+                        'contents' => file_get_contents($path . $name),
+                        'filename' => $name
+                    ]
+                ],
+            ]);
 
-        // url will be: http://my.domain.com/test.php?key1=5&key2=ABC;
+            // url will be: http://my.domain.com/test.php?key1=5&key2=ABC;
 
-        // $statusCode = $response->getStatusCode();
-        // $content = $response->getBody();
+            // $statusCode = $response->getStatusCode();
+            // $content = $response->getBody();
 
-        // or when your server returns json
-        $content = json_decode($response->getBody(), true);
-        echo "<pre>";
-        print_r($content) ;
-        exit();
-        // $curl = curl_init();
+            // or when your server returns json
+            $content = json_decode($response->getBody(), true);
+//        echo "<pre>";
+//        print_r($content);
+//        print_r($content['Candidate Details'][0]['Email']);
+            $education = $content['Candidate Details'][0]['Education'];
+            $email = $content['Candidate Details'][0]['Email'];
+            $experience = $content['Candidate Details'][0]['Experience'];
+            $name = $content['Candidate Details'][0]['Name'];
+            $phone_no = $content['Candidate Details'][0]['Phone No'];
+            $qualification = $content['Candidate Details'][0]['Qualification Tags'];
+            $skillset = $content['Candidate Details'][0]['Skillset'];
+            $skillset = strtoupper($skillset);
 
-        // curl_setopt_array($curl, array(
-        //   CURLOPT_URL => "https://68efb60e1c22.ngrok.io/resume_api",
-        //   CURLOPT_RETURNTRANSFER => true,
-        //   CURLOPT_ENCODING => "",
-        //   CURLOPT_MAXREDIRS => 10,
-        //   CURLOPT_TIMEOUT => 0,
-        //   CURLOPT_FOLLOWLOCATION => true,
-        //   CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-        //   CURLOPT_CUSTOMREQUEST => "POST",
-        //   CURLOPT_POSTFIELDS => array('url' => 'https://www.jobvacancyresult.com/storage/users/resumes/5833_02_Jatin_Acharya%20-%20JATIN%20ACHARYA.pdf'),
-        // ));
+//        echo $skillset;
+//        print_r(explode(',',$skillset));
+            $skillset = explode(',',$skillset);
+//        print_r(explode(',',$qualification));
+            $qualification = explode(',',$qualification);
+//        print_r(explode(',',$experience));
+            $experience = explode(',',$experience);
+            $name = explode(' ', $name);
+//        exit();
+            // $curl = curl_init();
 
-        // $response = curl_exec($curl);
-        // curl_close($curl);
-        // // $response = $connection -> getData();
+            // curl_setopt_array($curl, array(
+            //   CURLOPT_URL => "https://68efb60e1c22.ngrok.io/resume_api",
+            //   CURLOPT_RETURNTRANSFER => true,
+            //   CURLOPT_ENCODING => "",
+            //   CURLOPT_MAXREDIRS => 10,
+            //   CURLOPT_TIMEOUT => 0,
+            //   CURLOPT_FOLLOWLOCATION => true,
+            //   CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+            //   CURLOPT_CUSTOMREQUEST => "POST",
+            //   CURLOPT_POSTFIELDS => array('url' => 'https://www.jobvacancyresult.com/storage/users/resumes/5833_02_Jatin_Acharya%20-%20JATIN%20ACHARYA.pdf'),
+            // ));
 
-        // // get rid of the extra NULs
-        // // $response = str_replace(chr(0), '', $response);
-        // // $response = rtrim($response, "\0");
-        // // print_r($response->toJson());
-        // $response = stripslashes(html_entity_decode($response));
-        // $response = utf8_encode($response);
-        // $response = substr($response, 1); 
-        // $response = substr($response, 0, -1);
-        
-        // $var=json_decode($response);
-        // print_r($var);
-        // print_r($var[0]->Email);
-        // // print_r(json_last_error());
-        // exit();
+            // $response = curl_exec($curl);
+            // curl_close($curl);
+            // // $response = $connection -> getData();
 
-        return view('template/user')->with('image_name', $image_name)->with('resume_name', $resume_name);
+            // // get rid of the extra NULs
+            // // $response = str_replace(chr(0), '', $response);
+            // // $response = rtrim($response, "\0");
+            // // print_r($response->toJson());
+            // $response = stripslashes(html_entity_decode($response));
+            // $response = utf8_encode($response);
+            // $response = substr($response, 1);
+            // $response = substr($response, 0, -1);
+
+            // $var=json_decode($response);
+            // print_r($var);
+            // print_r($var[0]->Email);
+            // // print_r(json_last_error());
+            // exit();
+
+            return view('template/user')->with('image_name', $image_name)
+                                                ->with('resume_name', $resume_name)
+                                                ->with('education', $education)
+                                                ->with('email', $email)
+                                                ->with('experience', $experience)
+                                                ->with('name', $name)
+                                                ->with('phone_no', $phone_no)
+                                                ->with('qualification', $qualification)
+                                                ->with('skillset',$skillset);
+        }else{
+            return view('template/user')->with('image_name', $image_name)
+                                                ->with('resume_name', $resume_name);
+        }
+
+
     }
 
 
@@ -326,6 +359,17 @@ class UserController extends Controller
     }
 
     public function candidaterecommendation(){
+        $job_role = $_POST['job_role'];
+        $salary = $_POST['salary'];
+        $job_description = $_POST['job_description'];
+        $empolyment_type = $_POST['empolyment_type'];
+        $experience = $_POST['experience'];
+        $location = $_POST['location'];
+        $skills_required = '';
+        foreach ($_POST['skills'] as $value){
+            $skills_required .=  $value.',';
+        }
+        exit;
         // give this json
         // {
         //     "role_title": "database",

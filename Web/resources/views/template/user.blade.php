@@ -230,13 +230,13 @@
                                 <div class="col-md-6">
                                   <div class="form-group">
                                     <label class="bmd-label-floating">First Name</label>
-                                    <input type="text" required class="form-control" id="first_name" name="first_name">
+                                    <input type="text" required class="form-control" id="first_name" value="{{$name[0] ?? ''}}" name="first_name">
                                   </div>
                                 </div>
                                 <div class="col-md-6">
                                   <div class="form-group">
                                     <label class="bmd-label-floating">Last Name</label>
-                                    <input type="text" required class="form-control" id="last_name" name="last_name">
+                                    <input type="text" required class="form-control" id="last_name" value="{{$name[1] ?? ''}}" name="last_name">
                                   </div>
                                 </div>
                               </div>
@@ -269,13 +269,13 @@
                                 <div class="col-md-6">
                                   <div class="form-group">
                                     <label class="bmd-label-floating">Email address</label>
-                                    <input type="email" class="form-control" name="email_id">
+                                    <input type="email" class="form-control" name="email_id" value="{{$email ?? ''}}">
                                   </div>
                                 </div>
                                 <div class="col-md-6">
                                   <div class="form-group">
                                     <label class="bmd-label-floating">Contact No</label>
-                                    <input type="text" class="form-control" id="contact_number" name="contact_number">
+                                    <input type="text" class="form-control" id="contact_number" value="{{$phone_no ?? ''}}" name="contact_number">
                                   </div>
                                 </div>
 
@@ -318,14 +318,19 @@
                                     <!-- <label for="sel1">Gender</label> -->
 
                                     <select name="skills[]" id="skill_select" multiple="multiple" class="form-control" name="skills">
+                                      @if(!empty($skillset))
+                                        @foreach($skillset as $skill)
+                                            <option value="{{$skill}}" selected>{{$skill}}</option>
+                                        @endforeach
+                                      @endif
                                       <option value="C">C</option>
-                                      <option value="Java">Java</option>
+                                      <option value="JAVA">JAVA</option>
                                       <option value="C++">C++</option>
-                                      <option value="Python">Python</option>
-                                      <option value="Sql">Sql</option>
-                                      <option value="React">React</option>
-                                      <option value="Angular">Angular</option>
-                                      <option value="Node">Node</option>
+                                      <option value="PYTHON">PYTHON</option>
+                                      <option value="SQL">SQL</option>
+                                      <option value="REACT">REACT</option>
+                                      <option value="ANGULAR">ANGULAR</option>
+                                      <option value="NODE">NODE</option>
                                     </select>
                                     <!-- </div> -->
                                   </div>
@@ -427,7 +432,7 @@
                                 <div class="col-md-6">
                                   <div class="form-group">
                                     <label class="bmd-label-floating">School Name</label>
-                                    <input type="text" class="form-control" name="x_school_name" value="{{ $a[0]}}">
+                                    <input type="text" class="form-control" name="x_school_name" value="">
                                   </div>
                                 </div>
                                 <div class="col-md-6">
@@ -467,7 +472,7 @@
                                 <div class="col-md-6">
                                   <div class="form-group">
                                     <label class="bmd-label-floating">College Name</label>
-                                    <input type="text" class="form-control" name="xii_school_name" value="{{$a[2]}}">
+                                    <input type="text" class="form-control" name="xii_school_name" value="">
                                   </div>
                                 </div>
                                 <div class="col-md-6">
@@ -519,7 +524,7 @@
                                 <div class="col-md-4">
                                   <div class="form-group">
                                     <label class="bmd-label-floating">Course Name</label>
-                                    <input type="text" class="form-control" name="ug_course_name" value="{{$a[5]}}">
+                                    <input type="text" class="form-control" name="ug_course_name" value="{{$qualification[0] ?? ''}}">
                                   </div>
                                 </div>
                               </div>
@@ -578,7 +583,7 @@
                                     <div class="col-md-6">
                                       <div class="form-group">
                                         <label class="bmd-label-floating"></label>
-                                        <input type="text" class="form-control" name="company_name[]" value="{{$a[6]}}">
+                                        <input type="text" class="form-control" name="company_name[]" value="{{$experience[0] ?? ''}}">
                                       </div>
                                     </div>
                                     <div class="col-md-6">
@@ -611,7 +616,7 @@
                                     <div class="col-md-6">
                                       <div class="form-group">
                                         <label class="bmd-label-floating">Technology Stack</label>
-                                        <input type="text" class="form-control" name="tech_stack[]" value="{{$a[7]}}">
+                                        <input type="text" class="form-control" name="tech_stack[]" value="">
                                       </div>
                                     </div>
                                   </div>
@@ -1064,13 +1069,13 @@
     $("#skill_select").select2({
       multiple: true,
       placeholder: "Add your Skills",
-      maximumSelectionLength: 4,
-      formatSelectionTooBig: function (limit) {
-
-        // Callback
-
-        return 'Too many selected items, only 4 allowed';
-      }
+      // maximumSelectionLength: 4,
+      // formatSelectionTooBig: function (limit) {
+      //
+      //   // Callback
+      //
+      //   return 'Too many selected items, only 4 allowed';
+      // }
     });
 
 
