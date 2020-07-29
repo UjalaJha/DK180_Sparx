@@ -222,7 +222,7 @@ def predict_api():
         else:
             phonenos.append("")
 
-    candidate_recommendations=candidate_recommendations.drop(columns=['index','ind','Competencies','scores','Phone No'])
+    candidate_recommendations=candidate_recommendations.drop(columns=['index','ind','scores','Phone No'])
     candidate_recommendations['Phone No']=phonenos
 
 
