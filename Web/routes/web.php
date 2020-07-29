@@ -189,3 +189,12 @@ Route::get('getSubConcept/{sub_category}/{concept}','AddQuestionController@getSu
 Route::get('view_users', function (){
     return view('admin/view_users');
 });
+
+
+//update skills
+Route::post('updateSkills', 'UserController@updateSkills');
+
+/*Excel import export*/
+Route::get('export', 'MyController@export')->name('export');
+Route::get('importExportView', 'MyController@importExportView');
+Route::post('import', 'MyController@import')->name('import');

@@ -31,10 +31,18 @@ class UserController extends Controller
     public function redirectDashboard(){
         $id = Session::get('user_id');
 //        echo $id;
-        $user_test_details = UserTests::where('user_id',$id)->get();
+
+        $check_data = UserPersonalDetails::where('user_id', $id)->get();
+//        echo $check_data;
+        if(sizeof($check_data) == 0){
+            return view('template/preuser');
+        }else{
+            $user_test_details = UserTests::where('user_id',$id)->get();
 //        $user_test_array = json_decode(json_encode($user_test_details), true);
 //         print_r($user_test_array);
-        return view('template/dashboard')->with('user_test_details',$user_test_details);
+            return view('template/dashboard')->with('user_test_details',$user_test_details);
+
+        }
 
     }
 
@@ -504,7 +512,12 @@ class UserController extends Controller
 //        }
 
 
-        return view('/template/user');
+//        return view('/template/user');
+        $user_test_details = UserTests::where('user_id',$user_id)->get();
+//        $user_test_array = json_decode(json_encode($user_test_details), true);
+//         print_r($user_test_array);
+        return view('template/dashboard')->with('user_test_details',$user_test_details);
+
 
     }
 
@@ -587,12 +600,40 @@ class UserController extends Controller
     
     public function view_profile(){
         $id=Session::get('user_id');
-        echo $id;
+//        echo $id;
         $user_details=UserPersonalDetails::where('user_id',$id)->get();
-        print_r($user_details);
-        exit;
-        return view('/template/profile')->with("user_details",$user_details);
+        $user_tq_details = UserTechnical::where('user_id', $id)->get('tq_category_details_id');
+//        print_r($user_tq_details[0]['tq_category_details_id']);
+        $skills_id_array = array();
+        $count = 0;
+        foreach ($user_tq_details as $skill){
+            $skills_id_array[$count] = $skill['tq_category_details_id'];
+            $count++;
+        }
+//        print_r($skills_id_array);
+        $skills_name_array = array();
+        $count = 0;
+        foreach ($skills_id_array as $skill){
+            $sub_category = TQCategoryDetails::where('tq_category_details_id', $skill)->get();
+            $skills_name_array[$count] = $sub_category[0]['sub_category'];
+            $count++;
+        }
+//        print_r($skills_name_array);
+
+        $user_academics = UserAcademics::where('user_id', $id)->get();
+
+        $user_internships = UserExperiences::where('user_id', $id)->where('is_internship_project', 1)->get();
+//        print_r($user_internships);
+
+        $user_projects = UserExperiences::where('user_id', $id)->where('is_internship_project', 0)->get();
+
 //        exit;
+        return view('/template/profile')->with("user_details",$user_details)
+            ->with("user_tq_skills", $skills_name_array)
+            ->with('user_academics', $user_academics)
+            ->with('user_internships', $user_internships)
+            ->with('user_projects', $user_projects);
+        exit;
 
 
 
@@ -602,6 +643,51 @@ class UserController extends Controller
 
     }
 
+
+    public function updateSkills(){
+        $user_id = Session::get('user_id');
+
+        foreach ($_POST['skills'] as $value){
+            $user_technical_details = new UserTechnical;
+
+            $tq_category = TQCategoryDetails::where('sub_category', $value)->pluck('tq_category_details_id')->first();
+
+//            echo $tq_category."-".$value;
+
+            $user_technical_details->user_id = $user_id;
+            $user_technical_details->tq_category_details_id = $tq_category;
+
+            $user_technical_details->save();
+
+            $user_technical_details->user_id = "";
+            $user_technical_details->tq_category_details_id = "";
+
+
+            $user_technical_details = null;
+
+        }
+
+
+
+        foreach ($_POST['skills'] as $value){
+            $user_ratings_details = new UserRatings;
+
+            $user_ratings_details->user_id = $user_id;
+            $user_ratings_details->language = $value;
+
+            $user_ratings_details->save();
+
+            $user_ratings_details->user_id = "";
+            $user_ratings_details->language = "";
+
+
+            $user_ratings_details = null;
+
+        }
+
+        return $this->view_profile();
+
+    }
 
 
     public function pyexe(){

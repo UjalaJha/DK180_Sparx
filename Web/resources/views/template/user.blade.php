@@ -230,13 +230,13 @@
                                 <div class="col-md-6">
                                   <div class="form-group">
                                     <label class="bmd-label-floating">First Name</label>
-                                    <input type="text" class="form-control" name="first_name">
+                                    <input type="text" required class="form-control" id="first_name" name="first_name">
                                   </div>
                                 </div>
                                 <div class="col-md-6">
                                   <div class="form-group">
                                     <label class="bmd-label-floating">Last Name</label>
-                                    <input type="text" class="form-control" name="last_name">
+                                    <input type="text" required class="form-control" id="last_name" name="last_name">
                                   </div>
                                 </div>
                               </div>
@@ -246,7 +246,7 @@
                                     <!-- <div class="form-group"> -->
                                     <!-- <label for="sel1">Gender</label> -->
 
-                                    <select class="form-control" style="color:#aaa;margin-top: -5px;" id="sel1" name="gender">
+                                    <select class="form-control" style="color:#aaa;margin-top: -5px;" id="gender" name="gender">
                                       <option class="disabled" style="color:#aaa;">Gender</option>
                                       <option>Male</option>
                                       <option>Female</option>
@@ -259,7 +259,7 @@
                                 <div class="col-md-6">
                                   <div class="form-group">
                                     <label class="bmd-label-floating">Age</label>
-                                    <input type="number" class="form-control" name="age" min="18" max="100">
+                                    <input type="number" class="form-control" id="age" name="age" min="18" max="100">
                                   </div>
                                 </div>
                               </div>
@@ -275,7 +275,7 @@
                                 <div class="col-md-6">
                                   <div class="form-group">
                                     <label class="bmd-label-floating">Contact No</label>
-                                    <input type="text" class="form-control" name="contact_number">
+                                    <input type="text" class="form-control" id="contact_number" name="contact_number">
                                   </div>
                                 </div>
 
@@ -287,7 +287,7 @@
                                 <div class="col-md-12">
                                   <div class="form-group">
                                     <label class="bmd-label-floating">Address</label>
-                                    <input type="text" class="form-control" name="address">
+                                    <input type="text" class="form-control" id="address" name="address">
                                   </div>
                                 </div>
                               </div>
@@ -295,19 +295,19 @@
                                 <div class="col-md-4">
                                   <div class="form-group">
                                     <label class="bmd-label-floating">City</label>
-                                    <input type="text" class="form-control" name="city">
+                                    <input type="text" class="form-control" id="city" name="city">
                                   </div>
                                 </div>
                                 <div class="col-md-4">
                                   <div class="form-group">
                                     <label class="bmd-label-floating">Country</label>
-                                    <input type="text" class="form-control" name="country">
+                                    <input type="text" class="form-control" id="country" name="country">
                                   </div>
                                 </div>
                                 <div class="col-md-4">
                                   <div class="form-group">
                                     <label class="bmd-label-floating">Postal Code</label>
-                                    <input type="text" class="form-control" name="postal_code">
+                                    <input type="text" class="form-control" id="postal_code" name="postal_code">
                                   </div>
                                 </div>
                               </div>
@@ -323,7 +323,9 @@
                                       <option value="C++">C++</option>
                                       <option value="Python">Python</option>
                                       <option value="Sql">Sql</option>
-
+                                      <option value="React">React</option>
+                                      <option value="Angular">Angular</option>
+                                      <option value="Node">Node</option>
                                     </select>
                                     <!-- </div> -->
                                   </div>
@@ -378,6 +380,10 @@
                                 </div>
 
                               </div>
+
+                            <div id="personal_info_message">
+
+                            </div>
 
                                 <a href="#messages" onclick="next1()" data-toggle="tab" class="btn btn-success pull-right">Next</a>
 {{--                              <button type="submit" class="btn btn-primary pull-right">Submit Profile</button>--}}
@@ -988,7 +994,19 @@
 </script>
 <script>
   function next1(){
-    $('[href="#messages"]').tab('show');
+    if(document.getElementById('first_name').value != "" &&
+            document.getElementById('last_name').value != "" &&
+            document.getElementById('gender').value != "" &&
+            document.getElementById('age').value != "" &&
+            document.getElementById('contact_number').value != "" &&
+            document.getElementById('address').value != "" &&
+            document.getElementById('city').value != "" &&
+            document.getElementById('country').value != "" &&
+            document.getElementById('postal_code').value != "")
+      $('[href="#messages"]').tab('show');
+    else{
+      document.getElementById('personal_info_message').innerHTML = "<h3 class='alert alert-danger'>Please fill all details to proceed<h3>"
+    }
   }
 
   function previous1(){
