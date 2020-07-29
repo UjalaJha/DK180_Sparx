@@ -68,6 +68,7 @@ Route::get('/jobrecommendation','UserController@jobrecommendation');
 
 Route::get('/learningrecommendation','UserController@learningrecommendation');
 
+Route::get('/githubjobs','UserController@githubjobs');
 
 ///sanjay
 
