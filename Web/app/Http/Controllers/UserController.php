@@ -385,8 +385,10 @@ class UserController extends Controller
         // echo "<pre>";
         $recommendation=json_decode($json_string,true);
         print_r($recommendation['job profiles']);
+                print_r($recommendation['jobs']);
+                // exit;
         
-            return view('template/job_recomended')->with('job_recommendation',$recommendation['job profiles']);
+            return view('template/job_recomended')->with('job_recommendation',$recommendation['job profiles'])->with('jobs_list',$recommendation['jobs']);
 
 
         exit();

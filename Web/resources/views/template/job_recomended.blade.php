@@ -231,8 +231,53 @@
                             </div>
                             
                         </div>
+                        <div class="row">
+                     @foreach($jobs_list as $jobs)
 
-                  
+                    <div class="card">
+                            <h5 class="card-header" style="font-weight: bold">You look like a good fit in below job roles</h5>
+                            <div class="card-body p-0">
+                                <ul class="traffic-sales list-group list-group-flush">
+                                  <?php
+                                  // echo "<pre>";
+                                  // print_r($jobs_list);
+                                  ?>
+                                    <li class="traffic-sales-content list-group-item "><span class="traffic-sales-name">
+                                          {{$jobs['from']}}
+                                    </span>
+                                    </li>
+                                    <li class="traffic-sales-content list-group-item "><span class="traffic-sales-name">
+                                          {{$jobs['job_company']}}
+                                    </span>
+                                    </li>
+                                    <li class="traffic-sales-content list-group-item "><span class="traffic-sales-name">
+                                          {{$jobs['job_link']}}
+                                    </span>
+                                    </li>
+                                    <li class="traffic-sales-content list-group-item "><span class="traffic-sales-name">
+                                          {{$jobs['job_location']}}
+                                    </span>
+                                    </li>
+                                    <li class="traffic-sales-content list-group-item "><span class="traffic-sales-name">
+                                          {{$jobs['job_summary']}}
+                                    </span>
+                                    </li>
+                                    <li class="traffic-sales-content list-group-item "><span class="traffic-sales-name">
+                                          {{$jobs['job_title']}}
+                                    </span>
+                                    </li> 
+
+                                    <!-- <li class="traffic-sales-content list-group-item"><span class="traffic-sales-name">Fearless
+                                        </span>
+                                    </li>
+                                    <li class="traffic-sales-content list-group-item "><span class="traffic-sales-name">Hardworking
+                                        </span>
+                                    </li> -->
+                                </ul>
+                            </div>
+
+                  </div>
+                                                  @endforeach
               </div>
               
             
