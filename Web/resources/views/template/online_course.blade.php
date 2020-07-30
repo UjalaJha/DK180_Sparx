@@ -210,8 +210,8 @@
                   <p class="card-category">The best courses based on your interests!!</p>
                 </div>
             <div class="row" style="margin-top:40px;padding-left:20px;padding-right:20px;">
+             @foreach($course_recommendation as $course)
 
-              @foreach($course_recommendation as $course)
                  <div class="col-md-4">
                   <div class="card card-profile">
                     <div class="card-avatar">
@@ -220,110 +220,21 @@
                       </a>
                     </div>
                     <div class="card-body">
-                      <h5 class="card-category" style="color:black;font-size:15px;">{{$course['title']}}</h5>
+                      <h5 class="card-category" style="color:black;font-size:15px;">{{$course['subject']}}</h5>
                        <p class="card-description">
-                        Design Mobile Apps from scratch using Photoshop. UI and UX Design Adobe Photoshop CC 2018 and Illustrator.Master UI & Ux
+                        {{$course['title']}}
                       </p>
                       <h5 class="card-title"><a href="https://www.udemy.com/mobile-app-design-in-photoshop-complete-music-app-design/">{{$course['url']}}</a></h5>
                      
-                      <div class="price-label">Price : Rs 420/-</div>
+                      <div class="price-label">Price: Rs {{$course['price']}}</div>
                     </div>
                   </div>
                 </div>
                 @endforeach
-                 <div class="col-md-4">
-                  <div class="card card-profile">
-                    <div class="card-avatar">
-                      <a href="javascript:;">
-                        <img class="img" src="../assets/img/udemy.png"/>
-                      </a>
-                    </div>
-                    <div class="card-body">
-                      <h5 class="card-category" style="color:black;font-size:15px;">Mobile App Design in Photoshop from Scratch - UI & UX DESIGN</h5>
-                       <p class="card-description">
-                        Design Mobile Apps from scratch using Photoshop. UI and UX Design Adobe Photoshop CC 2018 and Illustrator.Master UI & Ux
-                      </p>
-                      <h5 class="card-title"><a href="https://www.udemy.com/mobile-app-design-in-photoshop-complete-music-app-design/">https://www.udemy.com/mobile-app-design-in-photoshop-complete-music-app-design/</a></h5>
-                     
-                      <div class="price-label">Price : Rs 420/-</div>
-                    </div>
-                  </div>
-                </div>
-                  <div class="col-md-4">
-                  <div class="card card-profile">
-                    <div class="card-avatar">
-                      <a href="javascript:;">
-                        <img class="img" src="../assets/img/udemy.png"/>
-                      </a>
-                    </div>
-                    <div class="card-body">
-                      <h5 class="card-category" style="color:black;font-size:15px;">Mobile App Design in Photoshop from Scratch - UI & UX DESIGN</h5>
-                       <p class="card-description">
-                        Design Mobile Apps from scratch using Photoshop. UI and UX Design Adobe Photoshop CC 2018 and Illustrator.Master UI & Ux
-                      </p>
-                      <h5 class="card-title"><a href="https://www.udemy.com/mobile-app-design-in-photoshop-complete-music-app-design/">https://www.udemy.com/mobile-app-design-in-photoshop-complete-music-app-design/</a></h5>
-                     
-                      <div class="price-label">Price : Rs 420/-</div>
-                    </div>
-                  </div>
-                </div>
+                 
+                  
               </div>
-              <div class="row" style="margin-top:40px;">
-                 <div class="col-md-4">
-                  <div class="card card-profile">
-                    <div class="card-avatar">
-                      <a href="javascript:;">
-                        <img class="img" src="../assets/img/udemy.png"/>
-                      </a>
-                    </div>
-                    <div class="card-body">
-                      <h5 class="card-category" style="color:black;font-size:15px;">Mobile App Design in Photoshop from Scratch - UI & UX DESIGN</h5>
-                       <p class="card-description">
-                        Design Mobile Apps from scratch using Photoshop. UI and UX Design Adobe Photoshop CC 2018 and Illustrator.Master UI & Ux
-                      </p>
-                      <h5 class="card-title"><a href="https://www.udemy.com/mobile-app-design-in-photoshop-complete-music-app-design/">https://www.udemy.com/mobile-app-design-in-photoshop-complete-music-app-design/</a></h5>
-                     
-                      <div class="price-label">Price : Rs 420/-</div>
-                    </div>
-                  </div>
-                </div>
-                  <div class="col-md-4">
-                  <div class="card card-profile">
-                    <div class="card-avatar">
-                      <a href="javascript:;">
-                        <img class="img" src="../assets/img/udemy.png"/>
-                      </a>
-                    </div>
-                    <div class="card-body">
-                      <h5 class="card-category" style="color:black;font-size:15px;">Mobile App Design in Photoshop from Scratch - UI & UX DESIGN</h5>
-                       <p class="card-description">
-                        Design Mobile Apps from scratch using Photoshop. UI and UX Design Adobe Photoshop CC 2018 and Illustrator.Master UI & Ux
-                      </p>
-                      <h5 class="card-title"><a href="https://www.udemy.com/mobile-app-design-in-photoshop-complete-music-app-design/">https://www.udemy.com/mobile-app-design-in-photoshop-complete-music-app-design/</a></h5>
-                     
-                      <div class="price-label">Price : Rs 420/-</div>
-                    </div>
-                  </div>
-                </div>
-                   <div class="col-md-4">
-                  <div class="card card-profile">
-                    <div class="card-avatar">
-                      <a href="javascript:;">
-                        <img class="img" src="../assets/img/udemy.png"/>
-                      </a>
-                    </div>
-                    <div class="card-body">
-                      <h5 class="card-category" style="color:black;font-size:15px;">Mobile App Design in Photoshop from Scratch - UI & UX DESIGN</h5>
-                       <p class="card-description">
-                        Design Mobile Apps from scratch using Photoshop. UI and UX Design Adobe Photoshop CC 2018 and Illustrator.Master UI & Ux
-                      </p>
-                      <h5 class="card-title"><a href="https://www.udemy.com/mobile-app-design-in-photoshop-complete-music-app-design/">https://www.udemy.com/mobile-app-design-in-photoshop-complete-music-app-design/</a></h5>
-                     
-                      <div class="price-label">Price : Rs 420/-</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              
             
             </div>
         </div>

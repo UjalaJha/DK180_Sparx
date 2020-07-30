@@ -366,9 +366,34 @@ class UserController extends Controller
     //NOTE: candidaterecommendation function shifted to company controller
 
     public function learningrecommendation(){
-        $data['name']="Ujala Jha";
-        $data['skills']="sql-advance,photoshop-basic',graphql-intermediate,ajax-basic,bootstrap-intermediate,css3-intermediate,angularjs-basic";
-        $json=json_encode($data);
+        $user_id=Session::get('user_id');
+        $data_fetch=UserPersonalDetails::where('user_id', $user_id)->get();
+        // echo "<pre>";
+        $data['name']=$data_fetch[0]->first_name;
+        // echo $data['name'];
+        $tq=UserTechnical::where('user_id',$user_id)->get();
+        $final_string="";
+        foreach($tq as $tqa){
+            // echo "<br>";
+        $skill_id=TQCategoryDetails::where('tq_category_details_id',$tqa->tq_category_details_id)->get();
+        $skill_name=$skill_id[0]->sub_category;
+        $score_level1=$tqa->level_1_score;
+        $score_level2=$tqa->level_2_score;
+        // echo $skill_name." ".$score_level1." ".$score_level2;
+        if($score_level2>10){
+            $tag='intermediate';
+        }elseif($score_level2>15){
+            $tag='advance';
+        }else{
+            $tag='basic';
+        }
+        // echo $tag;
+        $final_string.="$skill_name"."-"."$tag";
+    }
+    // echo "<br>";
+    // echo $final_string;
+    $data['skills']=$final_string;
+    $json=json_encode($data);
         // print_r($json);
         // exit();
 
@@ -392,9 +417,7 @@ class UserController extends Controller
         // $response = curl_exec($curl);
 
         // curl_close($curl);
-        echo "<pre>";
-
-        // print_r(json_decode($response, TRUE));
+        // echo "<pre>";
         $recommendation = json_decode('{
               "recommended_courses": [
                 {
@@ -622,8 +645,10 @@ class UserController extends Controller
                   "url": "https://www.udemy.com/web-programming-with-python/"
                 }
               ]
-            }');
-        print_r($recommendation);
+            }',true);
+        // print_r($recommendation);
+        return view('template/online_course')->with('course_recommendation',$recommendation['recommended_courses']);
+
         exit();
 
     }
@@ -655,7 +680,7 @@ class UserController extends Controller
         $data_fetch=UserPersonalDetails::where('user_id', $user_id)->get();
         // echo "<pre>";
         // print_r($data);
-        $data['names']=$data_fetch[0]->first_name;
+        $data['name']=$data_fetch[0]->first_name;
         $data['skills']=$data_fetch[0]->skills;
         
         // echo $data['names'];
