@@ -7,7 +7,7 @@
   <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top ">
     <div class="container-fluid">
       <div class="navbar-wrapper">
-        <a class="navbar-brand" href="#pablo">User Profile</a>
+        <a class="navbar-brand" href="#pablo">Company Profile</a>
       </div>
       <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
         <span class="sr-only">Toggle navigation</span>
@@ -89,13 +89,13 @@
                   <div class="col-md-6">
                     <div class="form-group">
                       <label class="bmd-label-floating">Job Role</label>
-                      <input type="text" class="form-control" name=job_role>
+                      <input type="text" class="form-control" required name=job_role>
                     </div>
                   </div>
                   <div class="col-md-4">
                     <div class="form-group">
                       <label class="bmd-label-floating">Salary</label>
-                      <input type="text" class="form-control" name="salary">
+                      <input type="text" class="form-control"  required name="salary">
                     </div>
                   </div>
                 </div>
@@ -105,7 +105,7 @@
                       <label>Job Description</label>
                       <div class="form-group">
 
-                        <textarea class="form-control" rows="5" name="job_description"></textarea>
+                        <textarea class="form-control" rows="5" required name="job_description"></textarea>
                       </div>
                     </div>
                   </div>
@@ -118,7 +118,7 @@
                     <div class="form-group">
                       <label class="bmd-label-floating">Employmnet Type</label>
                       <div class="form-group">
-                        <select  class="form-control" name="empolyment_type">
+                        <select  class="form-control" required name="empolyment_type">
                           <option value="full time">Full Time</option>
                           <option value="part time">Part Time</option>
                           <option value="shifts">Shifts</option>
@@ -130,13 +130,13 @@
                   <div class="col-md-4">
                     <div class="form-group">
                       <label class="bmd-label-floating">Experience</label>
-                      <input type="text" class="form-control" name="experience">
+                      <input type="text" required class="form-control" name="experience">
                     </div>
                   </div>
                   <div class="col-md-4">
                     <div class="form-group">
                       <label class="bmd-label-floating">Location</label>
-                      <input type="text" class="form-control" name="location">
+                      <input type="text" required class="form-control" name="location">
                     </div>
                   </div>
 
@@ -149,7 +149,7 @@
                       <label>Skills Recquired</label>
                       <div class="form-group">
 
-                        <select name="skills[]" id="skill_select" multiple="multiple" class="form-control">
+                        <select name="skills[]" required id="skill_select" multiple="multiple" class="form-control">
                           <option value="C">C</option>
                           <option value="Java">Java</option>
                           <option value="C++">C++</option>
