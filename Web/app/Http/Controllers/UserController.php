@@ -327,10 +327,37 @@ class UserController extends Controller
 
     public function jobrecommendation()
     {
-
+            $user_id=Session::get('user_id');
+        $data_fetch=UserPersonalDetails::where('user_id', $user_id)->get();
+        // echo "<pre>";
+        $data['name']=$data_fetch[0]->first_name;
+        // echo $data['name'];
+        $tq=UserTechnical::where('user_id',$user_id)->get();
+        $final_string="";
+        foreach($tq as $tqa){
+            // echo "<br>";
+        $skill_id=TQCategoryDetails::where('tq_category_details_id',$tqa->tq_category_details_id)->get();
+        $skill_name=$skill_id[0]->sub_category;
+        $score_level1=$tqa->level_1_score;
+        $score_level2=$tqa->level_2_score;
+        // echo $skill_name." ".$score_level1." ".$score_level2;
+        if($score_level2>10){
+            $tag='intermediate';
+        }elseif($score_level2>15){
+            $tag='advance';
+        }else{
+            $tag='basic';
+        }
+        // echo $tag;
+        $final_string.="$skill_name"."-"."$tag";
+    }
+    // echo "<br>";
+    // echo $final_string;
+    // $data['skills']=$final_string;
+    $skills=$final_string;
         //give this string
         // $skills="python-advance,java-basic,machine learning-advance,data science-intermediate,r-intermediate,business analytics-intermediate,sql-advance";
-        $skills='';
+        // $skills='';
 
         // $curl = curl_init();
 
@@ -355,9 +382,13 @@ class UserController extends Controller
         // echo $response;
 
         $json_string = '{"job profiles":["python/django senior software","data scientist -","database specialist  ","data software engineer","data analytics, nj","sr. data scientist","analyst - python","esri arcgis administrator","mobile sdet  ","data analystics engineer","lead data scientist","senior database administrator"],"jobs":[{"from":"Indeed","job_company":"StartUs Insights","job_id":"93ad1b7f9420a729","job_link":"https://www.indeed.co.in/jobs?q=python/django+senior+software&l=India&start=10&vjk=93ad1b7f9420a729","job_location":"Bengaluru, Karnataka","job_summary":"— Solid understanding of software development principles and best practices.\nBuilding data applications in a product company,.\nWHAT YOU GET IN RETURN: *.","job_title":"Senior Python Developer","posted_date":"21 days ago"},{"from":"Indeed","job_company":"Techversant Infotech Pvt. Ltd.","job_id":"672b77efc079ca85","job_link":"https://www.indeed.co.in/jobs?q=python/django+senior+software&l=India&start=10&vjk=672b77efc079ca85","job_location":"Thiruvananthapuram, Kerala","job_summary":"MVC software pattern and frameworks.\nWork as a member of a team or on their own to deliver high quality and maintainable software solutions, to strict deadlines…","job_title":"Sr. Software Engineer / Software Engineer - ColdFusion","posted_date":"30+ days ago"},{"from":"Indeed","job_company":"HP","job_id":"f19117ec92fc2221","job_link":"https://www.indeed.co.in/jobs?q=lead+data+scientist&l=India&start=10&vjk=f19117ec92fc2221","job_location":"Bengaluru, Karnataka","job_summary":"O Fluent in structured and unstructured data and modern data transformation methodologies.\nO Leads a project team of data science professionals.","job_title":"Data Scientist Sales & Channel","posted_date":"25 days ago"}]}';
-        echo "<pre>";
+        // echo "<pre>";
         $recommendation=json_decode($json_string,true);
-        print_r($recommendation);
+        print_r($recommendation['job profiles']);
+        
+            return view('template/job_recomended')->with('job_recommendation',$recommendation['job profiles']);
+
+
         exit();
 
 
