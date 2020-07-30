@@ -78,7 +78,8 @@
 </style>
 </head>
 
-<body class="">
+<body class=""  >
+  <div id="full_pages">
   <div class="wrapper ">
     <div class="sidebar" data-color="purple" data-background-color="white" data-image="../assets/img/sidebar-1.jpg">
       <!--
@@ -88,98 +89,98 @@
     -->
       <div class="logo">
         <a href="http://www.creative-tim.com" class="simple-text logo-normal">
-          Creative Tim
+          HIRECONNECT
         </a>
       </div>
       <div class="sidebar-wrapper">
         <div style="margin-left:12px;margin-top:10px;">
         <span>
-       <a href="/test/1"><button class="btn btn-primary" style="border-radius:50px;width:72px">1</button></a>
+       <a href="#"><button class="btn btn-primary" style="border-radius:50px;width:72px" onclick="displayon(1)">1</button></a>
        </span>
           <span>
-       <a href="/test/2"><button class="btn btn-primary" style="border-radius:50px;width:72px">2</button></a>
+       <a href="#"><button class="btn btn-primary" style="border-radius:50px;width:72px" onclick="displayon(2)">2</button></a>
         </span>
 
         <span>
-       <a href="/test/3"><button class="btn btn-primary" style="border-radius:50px;width:72px">3</button></a>
+       <a href="#"><button class="btn btn-primary" style="border-radius:50px;width:72px" onclick="displayon(3)">3</button></a>
        </span>
        <span>
-       <a href="/test/4"><button class="btn btn-primary" style="border-radius:50px;width:72px">4</button></a>
+       <a href="#"><button class="btn btn-primary" style="border-radius:50px;width:72px" onclick="displayon(4)">4</button></a>
        </span>
        <span>
-       <a href="/test/5"><button class="btn btn-primary" style="border-radius:50px;width:72px">5</button></a>
+       <a href="#"><button class="btn btn-primary" style="border-radius:50px;width:72px" onclick="displayon(5)">5</button></a>
        </span>
        <span>
-       <a href="/test/6"><button class="btn btn-primary" style="border-radius:50px;width:72px">6</button></a>
+       <a href="#"><button class="btn btn-primary" style="border-radius:50px;width:72px" onclick="displayon(6)">6</button></a>
        </span>
        <span>
-       <a href="/test/7"><button class="btn btn-primary" style="border-radius:50px;width:72px">7</button></a>
+       <a href="#"><button class="btn btn-primary" style="border-radius:50px;width:72px" onclick="displayon(7)">7</button></a>
        </span>
        <span>
-       <a href="/test/8"><button class="btn btn-primary" style="border-radius:50px;width:72px">8</button></a>
+       <a href="#"><button class="btn btn-primary" style="border-radius:50px;width:72px" onclick="displayon(8)">8</button></a>
        </span>
        <span>
-       <a href="/test/9"><button class="btn btn-primary" style="border-radius:50px;width:72px">9</button></a>
+       <a href="#"><button class="btn btn-primary" style="border-radius:50px;width:72px" onclick="displayon(9)">9</button></a>
        </span>
        <span>
-       <a href="/test/10"><button class="btn btn-primary" style="border-radius:50px;width:72px">10</button></a>
+       <a href="#"><button class="btn btn-primary" style="border-radius:50px;width:72px" onclick="displayon(10)">10</button></a>
        </span>
        <span>
-       <a href="/test/11"><button class="btn btn-primary" style="border-radius:50px;width:72px">11</button></a>
-       </span>
-
-
-       <span>
-       <a href="/test/12"><button class="btn btn-primary" style="border-radius:50px;width:72px">12</button></a>
-       </span>
-       <span>
-       <a href="/test/13"><button class="btn btn-primary" style="border-radius:50px;width:72px">13</button></a>
-       </span>
-       <span>
-       <a href="/test/14"><button class="btn btn-primary" style="border-radius:50px;width:72px">14</button></a>
-       </span>
-       <span>
-       <a href="/test/15"><button class="btn btn-primary" style="border-radius:50px;width:72px">15</button></a>
-       </span>
-       <span>
-       <a href="/test/16"><button class="btn btn-primary" style="border-radius:50px;width:72px">16</button></a>
-       </span>
-       <span>
-       <a href="/test/17"><button class="btn btn-primary" style="border-radius:50px;width:72px">17</button></a>
-       </span>
-       <span>
-       <a href="/test/18"><button class="btn btn-primary" style="border-radius:50px;width:72px">18</button></a>
-       </span>
-       <span>
-       <a href="/test/19"><button class="btn btn-primary" style="border-radius:50px;width:72px">19</button></a>
-       </span>
-       <span>
-       <a href="/test/20"><button class="btn btn-primary" style="border-radius:50px;width:72px">20</button></a>
-       </span>
-       <span>
-       <a href="/test/21"><button class="btn btn-primary" style="border-radius:50px;width:72px">21</button></a>
+       <a href="#"><button class="btn btn-primary" style="border-radius:50px;width:72px" onclick="displayon(5)">11</button></a>
        </span>
 
 
+       <span>
+       <a href="#"><button class="btn btn-primary" style="border-radius:50px;width:72px" onclick="displayon(12)">12</button></a>
+       </span>
+       <span>
+       <a href="#"><button class="btn btn-primary" style="border-radius:50px;width:72px" onclick="displayon(13)">13</button></a>
+       </span>
+       <span>
+       <a href="#"><button class="btn btn-primary" style="border-radius:50px;width:72px" onclick="displayon(14)">14</button></a>
+       </span>
+       <span>
+       <a href="#"><button class="btn btn-primary" style="border-radius:50px;width:72px" onclick="displayon(15)">15</button></a>
+       </span>
+       <span>
+       <a href="#"><button class="btn btn-primary" style="border-radius:50px;width:72px" onclick="displayon(16)">16</button></a>
+       </span>
+       <span>
+       <a href="#"><button class="btn btn-primary" style="border-radius:50px;width:72px" onclick="displayon(17)">17</button></a>
+       </span>
+       <span>
+       <a href="#"><button class="btn btn-primary" style="border-radius:50px;width:72px" onclick="displayon(18)">18</button></a>
+       </span>
+       <span>
+       <a href="#"><button class="btn btn-primary" style="border-radius:50px;width:72px" onclick="displayon(19)">19</button></a>
+       </span>
+       <span>
+       <a href="#"><button class="btn btn-primary" style="border-radius:50px;width:72px" onclick="displayon(20)">20</button></a>
+       </span>
+       <span>
+       <a href="#"><button class="btn btn-primary" style="border-radius:50px;width:72px" onclick="displayon(21)">21</button></a>
+       </span>
+
+
 
        <span>
-       <a href="/test/22"><button class="btn btn-primary" style="border-radius:50px;width:72px">22</button></a>
+       <a href="#"><button class="btn btn-primary" style="border-radius:50px;width:72px" onclick="displayon(22)">22</button></a>
        </span><span>
-       <a href="/test/23"><button class="btn btn-primary" style="border-radius:50px;width:72px">23</button></a>
+       <a href="#"><button class="btn btn-primary" style="border-radius:50px;width:72px" onclick="displayon(23)">23</button></a>
        </span><span>
-       <a href="/test/24"><button class="btn btn-primary" style="border-radius:50px;width:72px">24</button></a>
+       <a href="#"><button class="btn btn-primary" style="border-radius:50px;width:72px" onclick="displayon(24)">24</button></a>
        </span><span>
-       <a href="/test/25"><button class="btn btn-primary" style="border-radius:50px;width:72px">25</button></a>
+       <a href="#"><button class="btn btn-primary" style="border-radius:50px;width:72px" onclick="displayon(25)">25</button></a>
        </span><span>
-       <a href="/test/26"><button class="btn btn-primary" style="border-radius:50px;width:72px">26</button></a>
+       <a href="#"><button class="btn btn-primary" style="border-radius:50px;width:72px" onclick="displayon(26)">26</button></a>
        </span><span>
-       <a href="/test/27"><button class="btn btn-primary" style="border-radius:50px;width:72px">27</button></a>
+       <a href="#"><button class="btn btn-primary" style="border-radius:50px;width:72px" onclick="displayon(27)">27</button></a>
        </span><span>
-       <a href="/test/28"><button class="btn btn-primary" style="border-radius:50px;width:72px">28</button></a>
+       <a href="#"><button class="btn btn-primary" style="border-radius:50px;width:72px" onclick="displayon(28)">28</button></a>
        </span><span>
-       <a href="/test/29"><button class="btn btn-primary" style="border-radius:50px;width:72px">29</button></a>
+       <a href="#"><button class="btn btn-primary" style="border-radius:50px;width:72px" onclick="displayon(29)">29</button></a>
        </span><span>
-       <a href="/test/30"><button class="btn btn-primary" style="border-radius:50px;width:72px">30</button></a>
+       <a href="#"><button class="btn btn-primary" style="border-radius:50px;width:72px" onclick="displayon(30)" >30</button></a>
        </span>
 
 
@@ -223,10 +224,11 @@
        
                         
                         
-  <button type="submit" class="btn btn-success" style="margin-left:80%"><i class="material-icons">alarm</i>Time Remaining : 00:30</button>
+  <button type="submit" class="btn btn-success" style="margin-left:80%"><i class="material-icons"></i><h7 id="demo"></h7></button>
+  <!-- <p id="demo"></p> -->
       <div class="container-fluid">
       <!-- End Navbar -->
-
+      <!-- <form> -->
          <div class="row">
             <div class="col-lg-12 col-md-12">
               <div class="card">
@@ -239,7 +241,8 @@
                     </div>
                   </div>
                 </div>
-
+                          @foreach($iq as $iq_question)
+                <div id="{{$iq_question->question_id}}">
                 <div class="card-body">
                   <div class="tab-content">
                     <div class="tab-pane active" id="profile">
@@ -247,9 +250,9 @@
                         <tbody>
                           <tr>
                             <td>
-                              <div style="background:#972FAF;box-shadow: 3px 3px 4px #ccc;width:30px;height:30px;color:white;padding-top:2px;text-align:center">{{$iq[0]->question_id}}</div>   
+                              <div style="background:#972FAF;box-shadow: 3px 3px 4px #ccc;width:30px;height:30px;color:white;padding-top:2px;text-align:center">{{$iq_question->question_id}}</div>   
                             </td>
-                            <td>{{$iq[0]->question_statement}}</td>
+                            <td>{{$iq_question->question_statement}}</td>
                             
                           </tr>
                           <tr>
@@ -258,14 +261,14 @@
                               <div class="form-check">
                                 
                                 <label class="cont">
-                                <input type="radio"  name="iq_radio" id="iq_option" value="{{$iq[0]->option_1}}" onchange="check_ans(this.value)">
+                                <input type="radio"  name="iq_radio" id="iq_option" value="{{$iq_question->option_1}}" onchange="check_ans(this.value,{{$iq_question->question_id}})">
                                 <span class="checkmark"></span>
                               </label>
                         
                               </div>
                            
                             </td>
-                            <td>{{$iq[0]->option_1}}</td>
+                            <td>{{$iq_question->option_1}}</td>
             
                               
                        
@@ -277,7 +280,7 @@
                                <div class="form-check">
                                 
                                 <label class="cont">
-                                <input type="radio" name="iq_radio" value="{{$iq[0]->option_2}}" onchange="check_ans(this.value)">
+                                <input type="radio" name="iq_radio" value="{{$iq_question->option_2}}" onchange="check_ans(this.value,{{$iq_question->question_id}})">
                                 <span class="checkmark"></span>
                               </label>
                         
@@ -286,7 +289,7 @@
                      
                              
                             </td>
-                            <td>{{$iq[0]->option_2}}</td>
+                            <td>{{$iq_question->option_2}}</td>
                             
                           </tr>
                           <tr>
@@ -294,14 +297,14 @@
                                <div class="form-check">
                                 
                                 <label class="cont">
-                                <input type="radio" name="iq_radio" value="{{$iq[0]->option_3}} " onchange="check_ans(this.value)">
+                                <input type="radio" name="iq_radio" value="{{$iq_question->option_3}} " onchange="check_ans(this.value,{{$iq_question->question_id}})">
                                 <span class="checkmark"></span>
                               </label>
                         
                               </div>
                                 
                             </td>
-                            <td>{{$iq[0]->option_3}}
+                            <td>{{$iq_question->option_3}}
                             </td>
                             
                           </tr>
@@ -310,22 +313,25 @@
                               <div class="form-check">
                                 
                                 <label class="cont">
-                                <input type="radio"  name="iq_radio" value="{{$iq[0]->option_4}}" onchange="check_ans(this.value)">
+                                <input type="radio"  name="iq_radio" value="{{$iq_question->option_4}}" onchange="check_ans(this.value,{{$iq_question->question_id}})">
                                 <span class="checkmark"></span>
                               </label>
                         
                               </div>
                                 
                             </td>
-                            <td>{{$iq[0]->option_4}}</td>
+                            <td>{{$iq_question->option_4}}</td>
                             
                           </tr>
                           <tr>
-                            <input type="hidden" id="answer" name="" value="{{$iq[0]->correct_opton}}" >
+                            <?php
+                             $ans_id=$iq_question->question_id."_ans";
+                            ?>
+                            <input type="hidden" id="{{$ans_id}}" name="" value="{{$iq_question->correct_opton}}" >
                           </tr>
 
                           <tr>
-                            <input type="hidden" id="score" name="" value="{{$iq[0]->correct_opton}}" >
+                            <input type="hidden" id="score" name="" value="{{$iq_question->correct_opton}}" >
                           </tr>
                         </tbody>
                       </table>
@@ -335,11 +341,13 @@
                     
                   </div>
                 </div>
-
+              </div>
+                @endforeach
               </div>
             </div>
           
           </div>
+        </form>
                 <span>
 
                     <form action="/save_iq_score" method="post">
@@ -349,8 +357,13 @@
 {{--                     <a href="/eq_instructions"><button type="submit" class="btn btn-info">Submit Section</button></a>--}}
                          <button type="submit" onclick="update_values_iq()" class="btn btn-info">Submit Test</button>
         </form>
+                  <?php
+                             $next_id=$iq_question->question_id+1;
+                            ?>
 
-                  <a href="/test/{{$iq[0]->question_id+1}}"><button type="submit" class="btn btn-primary pull-right">Next<i class="material-icons">keyboard_arrow_right</i></button></a>
+                <button type="" class="btn btn-primary pull-right" onclick="displayon(<?php echo $next_id; ?>)">Next<i class="material-icons">keyboard_arrow_right</i></button>
+
+
                   <a href="/test/{{$iq[0]->question_id-1}}"><button type="submit" class="btn btn-primary pull-right"><i class="material-icons">keyboard_arrow_left</i>Previous</button></a>
                 </span>
         </div>
@@ -359,7 +372,7 @@
     </div>
 
   </div>
-  
+  </div>
   <!--   Core JS Files   -->
   <script src="../assets/js/core/jquery.min.js"></script>
   <script src="../assets/js/core/popper.min.js"></script>
@@ -373,13 +386,13 @@
   <script src="../assets/js/plugins/jquery.validate.min.js"></script>
   <!-- Plugin for the Wizard, full documentation here: https://github.com/VinceG/twitter-bootstrap-wizard -->
   <script src="../assets/js/plugins/jquery.bootstrap-wizard.js"></script>
-  <!--	Plugin for Select, full documentation here: http://silviomoreto.github.io/bootstrap-select -->
+  <!--  Plugin for Select, full documentation here: http://silviomoreto.github.io/bootstrap-select -->
   <script src="../assets/js/plugins/bootstrap-selectpicker.js"></script>
   <!--  Plugin for the DateTimePicker, full documentation here: https://eonasdan.github.io/bootstrap-datetimepicker/ -->
   <script src="../assets/js/plugins/bootstrap-datetimepicker.min.js"></script>
   <!--  DataTables.net Plugin, full documentation here: https://datatables.net/  -->
   <script src="../assets/js/plugins/jquery.dataTables.min.js"></script>
-  <!--	Plugin for Tags, full documentation here: https://github.com/bootstrap-tagsinput/bootstrap-tagsinputs  -->
+  <!--  Plugin for Tags, full documentation here: https://github.com/bootstrap-tagsinput/bootstrap-tagsinputs  -->
   <script src="../assets/js/plugins/bootstrap-tagsinput.js"></script>
   <!-- Plugin for Fileupload, full documentation here: http://www.jasny.net/bootstrap/javascript/#fileinput -->
   <script src="../assets/js/plugins/jasny-bootstrap.min.js"></script>
@@ -583,11 +596,17 @@
 
 
   <script>
-    var final_answer = document.getElementById('answer').value;
+    // var final_answer = document.getElementById('answer').value;
     // alert(final_answer);
     var choosed_ans;
-    function check_ans(val){
+    function check_ans(val,qus){
+      // var final_answer = document.getElementById('answer').value;
       choosed_ans=val;
+      // alert(qus);
+      var x=qus+"_ans";
+      // alert(x);
+      var final_answer = document.getElementById(x).value;
+      // alert(final_answer);
       // alert(choosed_ans);
       var flag=localStorage.getItem('iq_score');
       flag=parseInt(flag);
@@ -598,7 +617,7 @@
       rflag=flag+1;
       localStorage.setItem('iq_score',rflag);
 
-      // alert(localStorage.getItem('iq_score'));
+      alert(localStorage.getItem('iq_score'));
           document.getElementById('iq_score').value = localStorage.getItem('iq_score');
       }
 
@@ -617,7 +636,92 @@
 
   </script>
 
+<script>
+  var i;
+  for(i=2;i<=50;i++){
+  document.getElementById(i).style.display="none";
+  }
+</script>
 
+<script type="text/javascript">
+  function displayon(val){
+    document.getElementById(val).style.display="block";
+    var i;
+    for(i=1;i<=50;i++){
+      if(i==val){
+        continue;
+      }else{
+        document.getElementById(i).style.display="none";
+      }
+    }
+
+  }
+
+</script>
+
+
+<script>
+// Set the date we're counting down to
+var oldObj = new Date();
+var countDownDate = new Date();
+countDownDate.setTime(oldObj.getTime() + (30 * 60 * 1000));
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+    
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+    
+  // Time calculations for days, hours, minutes and seconds
+  // var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  // var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+  // Output the result in an element with id="demo"
+  document.getElementById("demo").innerHTML = "Time Remaining: "+minutes + ": " + seconds + "s ";
+    
+  // If the count down is over, write some text 
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "EXPIRED";
+  }
+}, 1000);
+</script>
+
+<script>
+var elem = document.getElementById("full_page");
+// function openFullscreen() {
+  if (elem.requestFullscreen) {
+    elem.requestFullscreen();
+  } else if (elem.mozRequestFullScreen) { /* Firefox */
+    elem.mozRequestFullScreen();
+  } else if (elem.webkitRequestFullscreen) { /* Chrome, Safari & Opera */
+    elem.webkitRequestFullscreen();
+  } else if (elem.msRequestFullscreen) { /* IE/Edge */
+    elem.msRequestFullscreen();
+  }
+// }
+</script>
+<script type="text/javascript">
+  
+  var keys = {};
+
+ $(document).keydown(function (e) {
+  keys[e.which] = true;
+ });
+
+ $(document).keyup(function (e) {
+   delete keys[e.which];
+});
+
+if( (keys[91] && keys[68]) || (keys[18] && keys[9]) ){
+  // alert("error");
+}
+</script>
 
 </body>
 

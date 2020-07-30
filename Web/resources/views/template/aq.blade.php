@@ -564,7 +564,7 @@
 
 <script>
     var tag = document.getElementById('answer').value;
-    alert("hi");
+    // alert("hi");
     var choosed_ans;
     function check_ans(val){
         choosed_ans=val;
@@ -581,7 +581,7 @@
         // rflag=flag+1;
         localStorage.setItem(tag,flag+choosed_ans);
         document.getElementById(tag).value = localStorage.getItem(tag);
-        alert('value set to '+document.getElementById(tag).value);
+        // alert('value set to '+document.getElementById(tag).value);
         // }
 
         // else{

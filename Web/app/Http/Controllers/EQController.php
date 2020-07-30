@@ -39,7 +39,7 @@ class EQController extends Controller
         $eq_score = new UserEQ();
         $eq_score->user_id = Session::get('user_id');
         $eq_score->eq_self_awareness = $_POST["self_awareness"];
-        $eq_score->eq_self_control	 = $_POST["self_control"];
+        $eq_score->eq_self_control   = $_POST["self_control"];
         $eq_score->eq_achievement_orientation = $_POST["achievement_orientation"];
         $eq_score->eq_positive_outlook = $_POST["positive_outlook"];
         $eq_score->eq_inspirational_leadership = $_POST["inspirational_leadership"];
@@ -48,8 +48,21 @@ class EQController extends Controller
 
         $user_id = Session::get('user_id');
         $user_test = UserTests::where('user_id',$user_id)->update(['eq_given'=>1]);
-        return app('App\Http\Controllers\UserController')->redirectDashboard();
+
+        // return view('template/eq_result')->with('eq_self_awareness',$eq_score->eq_self_awareness);
+        return app('App\Http\Controllers\EQController')->fetch_eq_score();
 
 //        return view('template/dashboard');
+    }
+
+    public function fetch_eq_score(){
+
+        $user_id = Session::get('user_id');
+        $eq=UserEQ::where('user_id',$user_id)->get();
+        // echo "<pre>";
+        // print_r($eq);
+        // echo $eq[0]->eq_self_awareness;
+        // exit();
+        return view('template/eq_result')->with('eq',$eq);
     }
 }

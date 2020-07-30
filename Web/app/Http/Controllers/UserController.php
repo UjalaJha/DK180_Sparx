@@ -7,6 +7,7 @@ use App\UserAcademics;
 use App\UserExperiences;
 use App\UserTechnical;
 use App\UserRatings;
+use App\UserHGMI;
 use App\TQCategoryDetails;
 use Session;
 
@@ -57,8 +58,9 @@ class UserController extends Controller
 //        if($user_detail){
 //            echo "sn";
 //        }
-//        echo "<pre>";
-//        print_r($user_detail);
+       // echo "<pre>";
+       // print_r($user_detail);
+       // exit;
         $size=sizeof($user_detail);
 //        echo $size;
         $count=0;
@@ -98,6 +100,8 @@ class UserController extends Controller
             echo "exists";
 //            print_r($EmptyTestArray1);
 //            print_r($EmptyTestArray2);
+            // print_r($skill_set);
+            // exit;
             return view('template/tq_instructions')->with("skill_set",$skill_set)->with("skill_id_array_set", $skill_id_array_set);
 
 
@@ -352,7 +356,8 @@ class UserController extends Controller
 
         $json_string = '{"job profiles":["python/django senior software","data scientist -","database specialist  ","data software engineer","data analytics, nj","sr. data scientist","analyst - python","esri arcgis administrator","mobile sdet  ","data analystics engineer","lead data scientist","senior database administrator"],"jobs":[{"from":"Indeed","job_company":"StartUs Insights","job_id":"93ad1b7f9420a729","job_link":"https://www.indeed.co.in/jobs?q=python/django+senior+software&l=India&start=10&vjk=93ad1b7f9420a729","job_location":"Bengaluru, Karnataka","job_summary":"— Solid understanding of software development principles and best practices.\nBuilding data applications in a product company,.\nWHAT YOU GET IN RETURN: *.","job_title":"Senior Python Developer","posted_date":"21 days ago"},{"from":"Indeed","job_company":"Techversant Infotech Pvt. Ltd.","job_id":"672b77efc079ca85","job_link":"https://www.indeed.co.in/jobs?q=python/django+senior+software&l=India&start=10&vjk=672b77efc079ca85","job_location":"Thiruvananthapuram, Kerala","job_summary":"MVC software pattern and frameworks.\nWork as a member of a team or on their own to deliver high quality and maintainable software solutions, to strict deadlines…","job_title":"Sr. Software Engineer / Software Engineer - ColdFusion","posted_date":"30+ days ago"},{"from":"Indeed","job_company":"HP","job_id":"f19117ec92fc2221","job_link":"https://www.indeed.co.in/jobs?q=lead+data+scientist&l=India&start=10&vjk=f19117ec92fc2221","job_location":"Bengaluru, Karnataka","job_summary":"O Fluent in structured and unstructured data and modern data transformation methodologies.\nO Leads a project team of data science professionals.","job_title":"Data Scientist Sales & Channel","posted_date":"25 days ago"}]}';
         echo "<pre>";
-        print_r(json_decode($json_string,true));
+        $recommendation=json_decode($json_string,true);
+        print_r($recommendation);
         exit();
 
 
@@ -390,7 +395,7 @@ class UserController extends Controller
         echo "<pre>";
 
         // print_r(json_decode($response, TRUE));
-        print_r(json_decode('{
+        $recommendation = json_decode('{
               "recommended_courses": [
                 {
                   "content_duration": 3.0,
@@ -617,7 +622,8 @@ class UserController extends Controller
                   "url": "https://www.udemy.com/web-programming-with-python/"
                 }
               ]
-            }'));
+            }');
+        print_r($recommendation);
         exit();
 
     }
@@ -642,6 +648,159 @@ class UserController extends Controller
         echo $response;
 
     }
+    public function blogrecommendation(){
+
+
+        $user_id=Session::get('user_id');
+        $data_fetch=UserPersonalDetails::where('user_id', $user_id)->get();
+        // echo "<pre>";
+        // print_r($data);
+        $data['names']=$data_fetch[0]->first_name;
+        $data['skills']=$data_fetch[0]->skills;
+        
+        // echo $data['names'];
+        // echo $data['skills'];
+        // exit;
+        // $data['name']='Maya';
+        // $data['skills']='python,graphql,chatbot,bootstrap,finance,angularjs,machine learning,ai,rest';
+        $json=json_encode($data);
+        // print_r($json);
+        // $curl = curl_init();
+
+        // curl_setopt_array($curl, array(
+        //   CURLOPT_URL => "http://127.0.0.1:5000/blog_api",
+        //   CURLOPT_RETURNTRANSFER => true,
+        //   CURLOPT_ENCODING => "",
+        //   CURLOPT_MAXREDIRS => 10,
+        //   CURLOPT_TIMEOUT => 0,
+        //   CURLOPT_FOLLOWLOCATION => true,
+        //   CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+        //   CURLOPT_CUSTOMREQUEST => "POST",
+        //   CURLOPT_POSTFIELDS =>$json,
+        //   CURLOPT_HTTPHEADER => array(
+        //     "Content-Type: application/json"
+        //   ),
+        // ));
+
+        // $response = curl_exec($curl);
+
+        // curl_close($curl);
+        // echo "<pre>";
+        $recommendation=json_decode('{
+          "recommended_blogs": [
+            {
+              "Subtitle": "Featuring implementation code, instructional",
+              "Tag_data-science": "1",
+              "Tag_machine-learning": "1",
+              "Tag_programming": "1",
+              "Tag_python": "1",
+              "Title": "The Hitchhikers Guide to Machine Learning in Python",
+              "url": "https://medium.freecodecamp.org/the-hitchhikers-guide-to-machine-learning-algorithms-in-python-bfad66adb378"
+            },
+            {
+              "Subtitle": "An introduction to the future of data science",
+              "Tag_data-science": "1",
+              "Tag_education": "1",
+              "Tag_machine-learning": "1",
+              "Tag_programming": "1",
+              "Title": "Automated Machine Learning on the Cloud in Python",
+              "url": "https://towardsdatascience.com/automated-machine-learning-on-the-cloud-in-python-47cf568859f"
+            },
+            {
+              "Subtitle": "",
+              "Tag_data-science": "1",
+              "Tag_machine-learning": "1",
+              "Tag_python": "1",
+              "Title": "Open Machine Learning Course. Topic 2. Visual Data Analysis with Python",
+              "url": "https://medium.com/open-machine-learning-course/open-machine-learning-course-topic-2-visual-data-analysis-in-python-846b989675cd"
+            },
+            {
+              "Subtitle": "",
+              "Tag_ux": "1",
+              "Title": "UX Design Glossary: How to Use Affordances in User Interfaces",
+              "url": "https://uxplanet.org/ux-design-glossary-how-to-use-affordances-in-user-interfaces-393c8e9686e4"
+            },
+            {
+              "Subtitle": "Were living in a time when design and user experience have never mattered more. The past decade of",
+              "Tag_ux": "1",
+              "Title": "10 UX Design Predictions For 2018",
+              "url": "https://medium.com/thinking-design/10-ux-design-predictions-for-2018-54bebb8d9767"
+            },
+            {
+              "Subtitle": "A few weeks ago, prominent Design leader Alan Cooper declared on Twitter, There is no such thing",
+              "Tag_product-design": "1",
+              "Tag_ux": "1",
+              "Title": "There is no such thing as UX Design",
+              "url": "https://medium.com/@james.mingardi.elliott/there-is-no-such-thing-as-ux-design-d2c912158498"
+            },
+            {
+              "Subtitle": "Overview of Stakeholders and Activities involved in each stage",
+              "Tag_ux": "1",
+              "Title": "User Experience Design Process",
+              "url": "https://uxplanet.org/user-experience-design-process-d91df1a45916"
+            },
+            {
+              "Subtitle": "",
+              "Tag_machine-learning": "1",
+              "Title": "Ten Machine Learning Algorithms You Should Know to Become a Data Scientist",
+              "url": "https://towardsdatascience.com/ten-machine-learning-algorithms-you-should-know-to-become-a-data-scientist-8dc93d8ca52e"
+            },
+            {
+              "Subtitle": "The amount of data is rapidly growing, doubling every two years, and changing the way people live. Our current output of data is roughly 2.5 quintillion bytes a day. As the world steadily becomes more connected",
+              "Tag_data": "1",
+              "Tag_data-science": "1",
+              "Title": "The difference between Big Data Analytics vs Data Science Analytics",
+              "url": "https://medium.com/bettium/the-difference-between-big-data-analytics-vs-data-science-analytics-a19bd3a0e553"
+            },
+            {
+              "Subtitle": "Lately, Ive noticed a lot more ambient enthusiasm for research among both early stage start-ups and",
+              "Tag_ux": "1",
+              "Title": "The 9 Rules of Design Research",
+              "url": "https://medium.com/mule-design/the-9-rules-of-design-research-1a273fdd1d3b"
+            },
+            {
+              "Subtitle": "Determining the right number of users for User Research.",
+              "Tag_product-design": "1",
+              "Tag_ux": "1",
+              "Title": "User Research: is more the merrier?",
+              "url": "https://uxdesign.cc/user-research-is-more-the-merrier-9ee4cfe46c7a"
+            },
+            {
+              "Subtitle": "If youre a Product Designer like me, I reckon youve spent at least a good part of your life trying to explain to",
+              "Tag_product-design": "1",
+              "Title": "What is Product Design?",
+              "url": "https://uxdesign.cc/what-is-product-design-d95cd5339f5c"
+            },
+            {
+              "Subtitle": "Ah the dreaded machine learning interview. You feel like you know everything until youre tested on it! But it doesnt have to be this way.",
+              "Tag_data-science": "1",
+              "Tag_machine-learning": "1",
+              "Title": "Data Science and Machine Learning Interview Questions",
+              "url": "https://towardsdatascience.com/data-science-and-machine-learning-interview-questions-3f6207cf040b"
+            }
+          ]
+        }' ,true);
+        // echo "<pre>";
+        // print_r($recommendation['recommended_blogs']);
+        // $a=array();
+        // $result = (array) json_decode($recommendation);
+
+        // $a=$recommendation['recommended_blogs'];
+                // print_r($recommendation['recommended_blogs']);
+
+        // var_dump($recommendatio/n->recommended_blogs);
+
+        // $recommendation=json_decode($recommendation,true);
+        // echo $recommendation['recommended_blogs']['Subtitle'];
+        // exit;
+        // echo $recommendation['recommended_blogs']->Subtitle;
+        // exit;
+
+        return view('template/blogs_listing')->with('blog_recommendation',$recommendation['recommended_blogs']);
+
+
+    }
+
     public function store(Request $request)
     {
         //
@@ -1184,4 +1343,46 @@ class UserController extends Controller
 
         echo $content;
     }
+
+        
+        public function full_report(){
+        $user_id=Session::get('user_id');
+        echo $user_id;
+        $eq=UserEQ::where('user_id',$user_id)->get();
+        $aq=UserAQ::where('user_id',$user_id)->get();
+        $iq=UserIQ::where('user_id',$user_id)->get();
+        $tq=UserTechnical::where('user_id',$user_id)->get();
+        $hgmi=UserHGMI::where('user_id',$user_id)->get();
+        // echo "<pre>";
+        // print_r($iq[0]);
+        // print_r($aq[0]);
+        // print_r($eq[0]);
+        // print_r($tq[0]);
+
+        return view('template/performance')->with('iq',$iq)->with('eq',$eq)->with('aq',$aq)->with('tq',$tq);
+
+
+    }
+
+    public function dummy_role(){
+        $user_id=Session::get('user_id');
+        $tq=UserTechnical::where('user_id',$user_id)->get();
+        echo $tq[0];
+        exit;
+        $final_string="";
+        foreach($tq as $tqa){
+        $skill_id=TQCategoryDetails::where('tq_category_details_id',$tqa->tq_concept_details_id)->get();
+        echo $skill_id[0]->sub_category;
+        // if(level__score)
+        $final_string=$skill_id[0]->sub_category."-".$tqa->level_1_score.",";
+        echo $final_string;
+
+    }
+    // endforeach
+
+        echo "<br>";
+
+        echo $final_string;
+    }
+
 }

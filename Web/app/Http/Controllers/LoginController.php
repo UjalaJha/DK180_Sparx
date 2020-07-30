@@ -83,7 +83,7 @@ class LoginController extends Controller
     {
         if(empty($_POST['email'])){
             echo "invalid";
-            return view('landing/login');
+            // return view('landing/login');
             exit();
         }
         $credentials = Login::where('email_id', $_POST['email'])->get();

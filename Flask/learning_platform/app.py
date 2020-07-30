@@ -120,7 +120,7 @@ def recommendbasiccourses(my_skills):
     #my_skills="html,css,javascript,jquery"
     #if len(my_skills)==0:
     #    return empty_basic_courses
-        
+    course_list=[] 
     for bskills in my_skills:
         bskills=pd.Series(bskills)
         only_roles=bskills.append(only_roles ,ignore_index=True)
@@ -139,7 +139,7 @@ def recommendbasiccourses(my_skills):
         i=0
         list_roles =[]
         #print(sorted_obj1)
-        course_list=[]
+
         for element in sorted_obj1:
                 if(checkBasic(element[0])) and (element[1]*5)>2:
                     course_list.append((get_id_from_index(element[0]),element[1]*5))
@@ -148,12 +148,12 @@ def recommendbasiccourses(my_skills):
                 i=i+1
                 if i>5:
                     break
-        return course_list
+    return course_list
 
 def recommendadvancecourses(my_skills):
     only_roles=courses["course_title"]
     
-    
+    course_list = []
     for askills in my_skills:
         askills=pd.Series(askills)
         #print(my_skills)
@@ -174,7 +174,6 @@ def recommendadvancecourses(my_skills):
 
         i=0
         list_roles =[]
-        course_list = []
         for element in sorted_obj1:
                 if(checkAdvance(element[0])) and (element[1]*5)>2:
                     course_list.append((get_id_from_index(element[0]),element[1]*5))
@@ -183,7 +182,7 @@ def recommendadvancecourses(my_skills):
                 i=i+1
                 if i>5:
                     break
-        return course_list
+    return course_list
 
     
 
@@ -322,4 +321,4 @@ def results():
 
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0",port=5002,debug=True)
+    app.run(host="0.0.0.0", debug=True)
