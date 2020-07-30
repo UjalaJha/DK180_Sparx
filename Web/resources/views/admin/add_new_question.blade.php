@@ -104,13 +104,16 @@
                                 <div class="col-md-12 alert-warning" style="color:#222;">
                                     <h3>Note: The requred excel file should have the following template:</h3>
                                     <ol>
-                                        <li>is_options_available</li>
-                                        <li>question_statement</li>
-                                        <li>option_1</li>
-                                        <li>option_2</li>
-                                        <li>option_3</li>
-                                        <li>option_4</li>
-                                        <li>correct_option/answer</li>
+                                        <li>Category Details Id</li>
+                                        <li>Concept Details Id</li>
+                                        <li>level</li>
+                                        <li>Options Available</li>
+                                        <li>Question Statement</li>
+                                        <li>Option 1</li>
+                                        <li>Option 2</li>
+                                        <li>Option 3</li>
+                                        <li>Option 4</li>
+                                        <li>Correct Option/Answer</li>
                                     </ol>
                                 </div>
                                 <div class="col-md-12">
