@@ -89,6 +89,19 @@
       <path value="$PROJECT_DIR$/Web/vendor/phpdocumentor/reflection-common" />
       <path value="$PROJECT_DIR$/Web/vendor/jakub-onderka/php-console-color" />
       <path value="$PROJECT_DIR$/Web/vendor/phpdocumentor/reflection-docblock" />
+      <path value="$PROJECT_DIR$/Web/vendor/psr/http-factory" />
+      <path value="$PROJECT_DIR$/Web/vendor/myclabs/php-enum" />
+      <path value="$PROJECT_DIR$/Web/vendor/psr/http-message" />
+      <path value="$PROJECT_DIR$/Web/vendor/psr/http-client" />
+      <path value="$PROJECT_DIR$/Web/vendor/markbaker/complex" />
+      <path value="$PROJECT_DIR$/Web/vendor/maennchen/zipstream-php" />
+      <path value="$PROJECT_DIR$/Web/vendor/maatwebsite/excel" />
+      <path value="$PROJECT_DIR$/Web/vendor/phpoffice/phpspreadsheet" />
+      <path value="$PROJECT_DIR$/Web/vendor/markbaker/matrix" />
+      <path value="$PROJECT_DIR$/Web/vendor/guzzlehttp/psr7" />
+      <path value="$PROJECT_DIR$/Web/vendor/guzzlehttp/guzzle" />
+      <path value="$PROJECT_DIR$/Web/vendor/ralouphie/getallheaders" />
+      <path value="$PROJECT_DIR$/Web/vendor/guzzlehttp/promises" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="7.2" />

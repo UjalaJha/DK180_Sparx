@@ -26,7 +26,13 @@ Route::get('/signup', function () {
     return view('landing/signup');
 });
 
+Route::get('/company_signup', function () {
+    return view('landing/company-signup');
+});
+
 Route::post('/register', 'LoginController@store');
+Route::post('/company_register', 'LoginController@storeCompany');
+
 
 Route::get('/view_dashboard', 'UserController@redirectDashboard');
 Route::get('/instructions', function () {
@@ -59,13 +65,14 @@ Route::post('/internship','UserController@storeInternship');
 
 Route::post('/project','UserController@storeProject');
 
-
+//ML Model Integration
 Route::post('/resume','UserController@resume');
 
-
-Route::get('/candidaterecommendation','UserController@candidaterecommendation');
-
 Route::get('/jobrecommendation','UserController@jobrecommendation');
+
+Route::get('/learningrecommendation','UserController@learningrecommendation');
+
+Route::get('/githubjobs','UserController@githubjobs');
 
 ///sanjay
 
@@ -75,6 +82,8 @@ Route::get('/company_dashboard', function () {
 Route::get('/post_job', function () {
     return view('company/post_job');
 });
+
+Route::post('/company_post_job', 'CompanyController@candidaterecommendation');
 
 Route::get('/suggested_students', function () {
     return view('company/suggested_students');
@@ -137,11 +146,12 @@ Route::get('/advance_tech_test/{skill_id}/{ques_id}/','TQController@skill_advanc
 
 
 Route::post('/logins','LoginController@login_check');
+Route::post('/company_login','LoginController@company_login_check');
 
 
 
 Route::get('/companylogin', function () {
-    return view('landing/companylogin');
+    return view('landing/company-login');
 });
 
 
@@ -195,3 +205,16 @@ Route::get('getSubConcept/{sub_category}/{concept}','AddQuestionController@getSu
 Route::get('view_users', function (){
     return view('admin/view_users');
 });
+
+
+//update skills
+Route::post('updateSkills', 'UserController@updateSkills');
+
+/*Excel import export*/
+Route::get('export', 'MyController@export')->name('export');
+Route::get('importExportView', 'MyController@importExportView');
+Route::post('import', 'MyController@import')->name('import');
+
+
+
+Route::get('view_user_details/{user_id}', 'CompanyController@view_user_profile');

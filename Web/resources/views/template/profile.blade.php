@@ -3,7 +3,8 @@
 
 @include('includes/header')
 @include('includes/sidebar')
-
+<!--select2 css-->
+<link rel="stylesheet" href="../assets/select2/css/select2.min.css">
   <style type="text/css">
      /*@import "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css";*/
 
@@ -250,17 +251,17 @@ a.portfolio-link {
                <div class="tab-pane active" id="profile"><br>
          <div class="col-md-10" style="align-items: center;margin-left:7%;">
            <div class="card card-profile">
-                <div class="card-avatar">
-                  <a href="#pablo">
-                    <i class="material-icons" style="width:100px;height:100px;font-size: 90px;">person</i>
-                  </a>
+                <div class="card-avatar" style="height: 400px; width: 400px;">
+{{--                  <a href="#pablo">--}}
+{{--                    <i class="material-icons" style="width:100px;height:100px;font-size: 90px;">person</i>--}}
+{{--                  </a>--}}
+                    <img src="images/{{$user_details[0]['image_filename']}}" class="img-responsive" alt="{{ $user_details[0]['first_name']}} {{$user_details[0]['last_name']}}">
                 </div>
                 <div class="card-body">
                   <!-- <h6 class="card-category text-gray"></h6> -->
-                  <h3 class="card-title">Khushboo Chandnani</h3>
-                  <h5 class="card-category text-gray">Age : 21</h5>
-                   <!-- <h5 class="card-category text-gray">Contact : 9511738058</h5> -->
-                    <!-- <h5 class="card-category text-gray">khushboochandnani21@gmail.com</h5> -->
+                  <h3 class="card-title">{{ $user_details[0]['first_name']}} {{$user_details[0]['last_name']}}</h3>
+                  <h5 class="card-category text-gray">Age : {{ $user_details[0]['age']}}</h5>
+
                   <br>
 
                  <div class="card">
@@ -273,12 +274,12 @@ a.portfolio-link {
                  <div class="row">
                       <div class="col-md-6">
                         <div class="form-group">
-                          <h5><b>Email ID : </b>{{ $user_details['first_name'] }}</h5>
+                          <h5><b>Email ID : </b>{{ $user_details[0]['email_id'] }}</h5>
                         </div>
                       </div>
                       <div class="col-md-6">
                        <div class="form-group">
-                          <h5><b>Contact No : </b>9511738058</h5>
+                          <h5><b>Contact No : </b>{{ $user_details[0]['contact_number']}}</h5>
                         </div>
                       </div>
 
@@ -286,12 +287,12 @@ a.portfolio-link {
                       <div class="row">
                       <div class="col-md-6">
                         <div class="form-group">
-                          <h5><b>Github Link : </b>github.com/khushboochandnani</h5>
+                          <h5><b>Github Link : </b>{{ $user_details[0]['github_id']}}</h5>
                         </div>
                       </div>
                       <div class="col-md-6">
                        <div class="form-group">
-                          <h5><b>LinkedIn Link : </b> linkedin.com/in/khushboo-chandnani</h5>
+                          <h5><b>LinkedIn Link : </b> {{ $user_details[0]['linkedin_id']}}</h5>
                         </div>
                       </div>
                     </div>
@@ -299,10 +300,40 @@ a.portfolio-link {
                       <!-- <div class="col-md-12"> -->
                         <!-- <div class="form-group"> -->
                         <!-- <h4><b><i>Based on your skillset, Languages you have to attempt are : </i> </b></h4> -->
-                    <span style="font-size:19px;margin-top:10px;margin-left: 12%;"><b>Skills :  </b> </span><span style="margin-left:20px;"><button class="btn btn-warning">C</button></span> <span><button class="btn btn-info" style="margin-left:10px;">JAVA</button></span> <span><button class="btn btn-success" style="margin-left:10px;">PYTHON</button></span><span><button class="btn btn-primary" style="margin-left:10px;">UI/UX</button></span><span><button class="btn btn-warning" style="margin-left:10px;">C++</button></span><span><button class="btn btn-success" style="margin-left:10px;">RUBY</button></span>
+                    <span style="font-size:19px;margin-top:10px;margin-left: 12%;"><b>Skills :  </b> </span>
+                          @foreach($user_tq_skills as $skill_name)
+                          <span><button class="btn btn-info" style="margin-left:10px;">{{$skill_name}}</button></span>
+                              @endforeach
                         </div>
-                      
-                      <!-- <div class="col-md-6">
+
+                    <form action="updateSkills" method="post">
+                        @csrf
+                    <div class="row">
+                        <div class="col-md-10">
+                            <div class="form-group">
+                                <select name="skills[]" id="skill_select" multiple="multiple" class="form-control" name="skills">
+                                    <option value="C">C</option>
+                                    <option value="Java">Java</option>
+                                    <option value="C++">C++</option>
+                                    <option value="Python">Python</option>
+                                    <option value="Sql">Sql</option>
+                                    <option value="React">React</option>
+                                    <option value="Angular">Angular</option>
+                                    <option value="Node">Node</option>
+                                </select>
+                                <!-- </div> -->
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <button type="submit" class="btn btn-warning pull-right">Add</button>
+                        </div>
+
+                    </div>
+                    </form>
+
+
+
+                <!-- <div class="col-md-6">
                        <div class="form-group">
                           <h5>Email ID : Khushboo Chandnani</h5>
                         </div>
@@ -325,42 +356,42 @@ a.portfolio-link {
                             <div class="col s12 m12 l12">
                               <!-- <h3 class="blue-text lighten-1 header">Responsive Material Design Timeline</h3> -->
                               <ul class="timeline">
-                                <li class="event" data-date="2014">
+                                <li class="event" data-date="{{$user_academics[0]['x_year_of_completion']}}">
                                  <b><h4>School Information</h4></b>
                                   <p>
-                                    Name : Sacred Heart School
+                                    Name : {{$user_academics[0]['x_school_name']}}
                                   </p>
                                   <p>
-                                    Board : State Board of Maharashtra
+                                    Board : {{$user_academics[0]['x_board_name']}}
                                   </p>
                                   <p>
-                                    Percentage : 93.88
+                                    Percentage : {{$user_academics[0]['x_gpa_percentage']}}
                                   </p>
                                   
                                 </li>
-                                <li class="event" data-date="2016">
+                                <li class="event" data-date="{{$user_academics[0]['xii_year_of_completion']}}">
                                   <b><h4>Higher Secondary Information</h4></b>
                                   <p>
-                                    Name : CHM College
+                                    Name : {{$user_academics[0]['xii_school_name']}}
                                   </p>
                                   <p>
-                                    Board : Higher Secondary State Board of Maharashtra
+                                    Board : {{$user_academics[0]['xii_board_name']}}
                                   </p>
                                   <p>
-                                    Percentage : 71.08
+                                    Percentage : {{$user_academics[0]['xii_gpa_percentage']}}
                                   </p>
                                   
                                 </li>
-                                <li class="event" data-date="Ongoing">
+                                <li class="event" data-date="{{$user_academics[0]['ug_year_of_graduation']}}">
                                   <b><h4>College Information</h4></b>
                                   <p>
-                                    Name : Vivekandnand Education Society's Institute of Technology
+                                    Name : {{$user_academics[0]['ug_college_name']}}
                                   </p>
                                   <p>
-                                    Board : University of Mumbai
+                                    Board : {{$user_academics[0]['ug_university_name']}}
                                   </p>
                                   <p>
-                                    CGPI : 8.78 
+                                    CGPI : {{$user_academics[0]['ug_average_gpi']}}
                                   </p>
                                   
                                 </li>
@@ -380,15 +411,17 @@ a.portfolio-link {
              <div class="col-md-10" style="align-items: center;margin-left:7%;">
            <div class="card card-profile">
                 <div class="card-avatar">
-                  <a href="#pablo">
-                   <i class="material-icons" style="width:100px;height:100px;font-size: 90px;text-align: center;">person</i>
-                  </a>
+{{--                  <a href="#pablo">--}}
+{{--                   <i class="material-icons" style="width:100px;height:100px;font-size: 90px;text-align: center;">person</i>--}}
+{{--                  </a>--}}
+                    <img src="images/{{$user_details[0]['image_filename']}}" class="img-responsive" alt="{{ $user_details[0]['first_name']}} {{$user_details[0]['last_name']}}">
+
                 </div>
               
                 <div class="card-body">
                   <!-- <h6 class="card-category text-gray"></h6> -->
-                  <h3 class="card-title">Khushboo Chandnani</h3>
-                  <h5 class="card-category text-gray">Age : 21</h5>
+                  <h3 class="card-title">{{ $user_details[0]['first_name']}} {{ $user_details[0]['last_name']}}</h3>
+                  <h5 class="card-category text-gray">Age : {{ $user_details[0]['age']}}</h5>
                    <!-- <h5 class="card-category text-gray">Contact : 9511738058</h5> -->
                     <!-- <h5 class="card-category text-gray">khushboochandnani21@gmail.com</h5> -->
                   <br>
@@ -404,11 +437,14 @@ a.portfolio-link {
                      
                       <ul>
                          <b><h4 style="font-weight:bold;">Internship</h4></b>
-                        <h5><li>Company Name : Zataakse Foundation</li></h5>
-                        <h5><li>Project Name : Food App</li></h5>
-                        <h5><li>Role : Freelancer</li></h5>
-                        <h5><li>Domain : UI/UX</li></h5>
-                        <h5><li>Technology Stack : HTML, CSSS3, Bootstrap, Adobe XD</li></h5>
+                          @foreach($user_internships as $internship)
+                        <h5><li>Company Name : {{$internship['company_name']}}</li></h5>
+                        <h5><li>Project Name : {{$internship['project_name']}}</li></h5>
+                        <h5><li>Role : {{$internship['role']}}</li></h5>
+                        <h5><li>Domain : {{$internship['domain']}}</li></h5>
+                        <h5><li>Technology Stack : {{$internship['tech_stack']}}</li></h5>
+                              <hr/>
+                              @endforeach
                       </ul>
                      
                       
@@ -429,12 +465,14 @@ a.portfolio-link {
                 </div><br>
                      
                       <ul>
-                         <b><h4 style="font-weight:bold;">Project1</h4></b>
-                        <h5><li>Project Name : Vesitchain</li></h5>
-                        <h5><li>Contribution : UI Developer</li></h5>
-                        <h5><li>Domain : Blockchain</li></h5>
-                        <h5><li>Duration : 4 months (BE Project)</li></h5>
-                        <h5><li>Technology Stack : HTML, CSS3, Eherium, Truffle, Ajax</li></h5>
+                         <b><h4 style="font-weight:bold;">Project</h4></b>
+                          @foreach($user_projects as $project)
+                              <h5><li>Project Name : {{$project['project_name']}}</li></h5>
+                              <h5><li>Role : {{$project['role']}}</li></h5>
+                              <h5><li>Domain : {{$project['domain']}}</li></h5>
+                              <h5><li>Technology Stack : {{$project['tech_stack']}}</li></h5>
+                              <hr/>
+                              @endforeach
                       </ul>
                      
                       
@@ -505,6 +543,33 @@ a.portfolio-link {
     </div>
   </div>
 @include('includes/footer')
+
+
+
+  <script src="../../assets/select2/js/select2.min.js"></script>
+
+  <script>
+
+      jQuery(document).ready(function() {
+
+          $("#skill_select").select2({
+              multiple: true,
+              placeholder: "Add More Skills",
+              // maximumSelectionLength: 4,
+              // formatSelectionTooBig: function (limit) {
+              //
+              //     // Callback
+              //
+              //     return 'Too many selected items, only 4 allowed';
+              // }
+          });
+
+
+      });
+
+  </script>
+
+
 
 </body>
 
