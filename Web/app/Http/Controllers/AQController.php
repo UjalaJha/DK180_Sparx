@@ -48,11 +48,22 @@ class AQController extends Controller
 
         $user_id = Session::get('user_id');
         $user_test = UserTests::where('user_id',$user_id)->update(['aq_given'=>1]);
-        return app('App\Http\Controllers\UserController')->redirectDashboard();
+
+        return app('App\Http\Controllers\AQController')->fetch_aq_score();
+        // return app('App\Http\Controllers\UserController')->redirectDashboard();
 
 
 //        return view('template/dashboard');
 
+    }
+    public function fetch_aq_score(){
+        $user_id=Session::get('user_id');
+        $aq=UserAQ::where('user_id',$user_id)->get();
+        // echo "<pre>";
+        // print_r($aq);
+        // echo $eq[0]->eq_self_awareness;
+        // exit();
+        return view('template/aq_result')->with('aq',$aq);
     }
 
 }

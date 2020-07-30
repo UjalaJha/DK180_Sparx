@@ -122,7 +122,7 @@
 
 
 {{--        <span>--}}
-{{--       <a href="/tech_test/{{$skill}}/{{$val+2}}"><button class="btn btn-primary" style="border-radius:50px;width:72px">1</button></a>--}}
+{{--       <a href="/tech_test/{{$skill}}/{{$val+1}}"><button class="btn btn-primary" style="border-radius:50px;width:72px">1</button></a>--}}
 {{--       </span>--}}
 {{--        <span>--}}
 {{--       <a href="/tech_test/{{$skill}}/{{$val+2}}"><button class="btn btn-primary" style="border-radius:50px;width:72px">2</button></a>--}}
@@ -429,13 +429,13 @@
   <script src="../../assets/js/plugins/jquery.validate.min.js"></script>
   <!-- Plugin for the Wizard, full documentation here: https://github.com/VinceG/twitter-bootstrap-wizard -->
   <script src="../../assets/js/plugins/jquery.bootstrap-wizard.js"></script>
-  <!--	Plugin for Select, full documentation here: http://silviomoreto.github.io/bootstrap-select -->
+  <!--  Plugin for Select, full documentation here: http://silviomoreto.github.io/bootstrap-select -->
   <script src="../../assets/js/plugins/bootstrap-selectpicker.js"></script>
   <!--  Plugin for the DateTimePicker, full documentation here: https://eonasdan.github.io/bootstrap-datetimepicker/ -->
   <script src="../../assets/js/plugins/bootstrap-datetimepicker.min.js"></script>
   <!--  DataTables.net Plugin, full documentation here: https://datatables.net/  -->
   <script src="../../assets/js/plugins/jquery.dataTables.min.js"></script>
-  <!--	Plugin for Tags, full documentation here: https://github.com/bootstrap-tagsinput/bootstrap-tagsinputs  -->
+  <!--  Plugin for Tags, full documentation here: https://github.com/bootstrap-tagsinput/bootstrap-tagsinputs  -->
   <script src="../../assets/js/plugins/bootstrap-tagsinput.js"></script>
   <!-- Plugin for Fileupload, full documentation here: http://www.jasny.net/bootstrap/javascript/#fileinput -->
   <script src="../../assets/js/plugins/jasny-bootstrap.min.js"></script>

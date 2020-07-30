@@ -84,26 +84,6 @@
         </div>
       </nav>
       <!-- End Navbar -->
-      <input type="hidden" value="{{$iq[0]->iq_score}}" id="iq_score">
-
-      <input type="hidden" value="{{$eq[0]->eq_self_awareness}}" id="self_awr">
-          <input type="hidden" value="{{$eq[0]->eq_self_control}}" id="self_con">
-          <input type="hidden" value="{{$eq[0]->eq_achievement_orientation}}" id="self_ach">
-          <input type="hidden" value="{{$eq[0]->eq_positive_outlook}}" id="self_pos">
-          <input type="hidden" value="{{$eq[0]->eq_inspirational_leadership}}" id="self_ins">
-          <input type="hidden" value="{{$eq[0]->eq_social_awareness}}" id="self_soc">
-
-          <input type="hidden" value="{{$aq[0]->aq_persistence}}" id="aq_persistence">
-          <input type="hidden" value="{{$aq[0]->aq_boldness}}" id="aq_boldness">
-          <input type="hidden" value="{{$aq[0]->aq_complexity}}" id="aq_complexity">
-          <input type="hidden" value="{{$aq[0]->aq_abstraction}}" id="aq_abstraction">
-            <input type="hidden" value="{{$aq[0]->aq_queriosity}}" id="aq_queriosity">
-
-            <input type="hidden" value="{{$tq[0]->level_1_score}}" id="c_score">
-            <input type="hidden" value="{{$tq[1]->level_1_score}}" id="java_score">
-            <input type="hidden" value="{{$tq[2]->level_1_score}}" id="python_score">
-            
-
        <div class="content">
         <div class="container-fluid">
         
@@ -111,24 +91,7 @@
                         <!-- ============================================================== -->
                         <!-- ap and ar balance  -->
                         <!-- ============================================================== -->
-                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
-                        <div class="card">
-                            <h5 class="card-header" style="font-weight: bold">Adversity Quotient Metrics</h5>
-                            <h4>Persistence:{{$aq[0]->aq_persistence}}</h4>
-          <h4>Boldness:{{$aq[0]->aq_boldness}}</h4>
-          <h4>Abstraction:{{$aq[0]->aq_abstraction}}</h4>
-          <h4>Complexity:{{$aq[0]->aq_complexity}}</h4>
-          <h4>Cueriosity:{{$aq[0]->aq_curiosity}}</h4>
-                            <div class="card-body">
-                                <canvas id="chartjs_radar"></canvas>
-                            </div>
-                            <div class="card-footer bg-white">
-                                    <p>Your Creativity Score is <span class="float-right text-dark">  &nbsp; <b>48.76</b></span></p>
-                                    <p>Average Score is <span class="float-right text-dark">   &nbsp; <b>61.54</b></span></p>
-                                    
-                            </div>
-                        </div>
-                    </div>
+                        
                         <!-- ============================================================== -->
                         <!-- end ap and ar balance  -->
                         <!-- ============================================================== -->
@@ -154,22 +117,22 @@
                         <!-- ============================================================== -->
                         <!-- profit margin  -->
                         <!-- ============================================================== -->
-                        <div style="display: none">
-                        <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12">
+                      <!--   <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12">
                             <div class="card">
-                                <h5 class="card-header" style="font-weight: bold">Job Eligibility</h5>
+                                <h5 class="card-header" style="font-weight: bold">Job Eligibility</h5> -->
                                 <div class="card-body">
                                     <div id="morris_profit" style="height: 272px;"></div>
                                 </div>
-                               <div class="container" style="margin-left: 40px;">
-                                    <!-- <p>You are Higly Eligible for Data Analyst !!</p> -->
-                                    <!-- <p>Incorrect Answers<span class="text-dark"> :&nbsp; 20 </span> -->
-                                  
-                                </div>
-                            </div>
-                        </div>
-                      </div>
+                               
                     </div>
+
+
+          <input type="hidden" value="{{$eq[0]->eq_self_awareness}}" id="self_awr">
+          <input type="hidden" value="{{$eq[0]->eq_self_control}}" id="self_con">
+          <input type="hidden" value="{{$eq[0]->eq_achievement_orientation}}" id="self_ach">
+          <input type="hidden" value="{{$eq[0]->eq_positive_outlook}}" id="self_pos">
+          <input type="hidden" value="{{$eq[0]->eq_inspirational_leadership}}" id="self_ins">
+          <input type="hidden" value="{{$eq[0]->eq_social_awareness}}" id="self_soc">
 
                     <div class="row">
                         <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
@@ -210,6 +173,9 @@
                                 </div>
                             </div>
                         </div>
+                        <a href="/view_dashboard">
+                <button style="margin-left:30px;" type="submit" class="btn btn-primary">Start Your Adversity Quotient Test Now!!</button>
+              </a>
                         <!-- ============================================================== -->
                         <!-- end earnings before interest tax  -->
                         <!-- ============================================================== -->
@@ -229,15 +195,7 @@
                         <!-- ============================================================== -->
                     </div>
                        <div class="row">
-                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
-                        <div class="card">
-                            <h5 class="card-header" style="font-weight: bold;">Horizontal Chart Bar</h5>
-                            <div class="card-body">
-                                <div class="ct-chart-horizontal ct-golden-section"></div>
-                            </div>
-                        </div>
-                       </div>
-                    <div class="col-xl-4 col-lg-12 col-md-4 col-sm-12 col-12">
+                    <!-- <div class="col-xl-4 col-lg-12 col-md-4 col-sm-12 col-12">
                         <div class="card">
                             <h5 class="card-header" style="font-weight: bold">Most Relevant Skills from TQ</h5>
                             <div class="card-body">
@@ -245,28 +203,28 @@
                                 <div class="chart-widget-list">
                                     <p>
                                        <span class="legend-text"> Java Language</span>
-                                        <span class="float-right">{{$tq[1]->level_1_score}}</span>
+                                        <span class="float-right">20</span>
                                     </p>
                                     <p>
                                         
                                         <span class="legend-text">Python Language</span>
-                                        <span class="float-right">{{$tq[2]->level_1_score}}</span>
+                                        <span class="float-right">15</span>
                                     </p>
                                     <p>
                                          <span class="legend-text">C Language</span>
-                                        <span class="float-right">{{$tq[0]->level_1_score}}</span>
+                                        <span class="float-right">30</span>
                                     </p>
-                                    <!-- <p class="mb-0">
+                                    <p class="mb-0">
                                        <span class="legend-text"> Machine Learning</span>
                                         <span class="float-right">12</span>
-                                    </p> -->
+                                    </p>
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
 
                     <!--TQ Skills Tabular Format -->
-                    <div class="col-xl-4 col-lg-12 col-md-4 col-sm-12 col-12">
+                    <!-- <div class="col-xl-4 col-lg-12 col-md-4 col-sm-12 col-12">
                     <div class="card">
                             <h5 class="card-header" style="font-weight: bold"> Adjectives that define you</h5>
                             <div class="card-body p-0">
@@ -289,115 +247,17 @@
                             </div>
                             
                         </div>
-                    </div>
-                    <div class="col-xl-4 col-lg-12 col-md-4 col-sm-12 col-12">
-                    <div class="card">
-                            <h5 class="card-header" style="font-weight: bold">You look like a good fit in below job roles</h5>
-                            <div class="card-body p-0">
-                                <ul class="traffic-sales list-group list-group-flush">
-                                  
-                                    <li class="traffic-sales-content list-group-item "><span class="traffic-sales-name">Data Analyst</span>
-                                    </li>
-                                    <li class="traffic-sales-content list-group-item"><span class="traffic-sales-name">Business Analyst
-                                        </span>
-                                    </li>
-                                    <li class="traffic-sales-content list-group-item"><span class="traffic-sales-name">Data Engineer
-                                        </span>
-                                    </li>
-                                    <!-- <li class="traffic-sales-content list-group-item"><span class="traffic-sales-name">Fearless
-                                        </span>
-                                    </li>
-                                    <li class="traffic-sales-content list-group-item "><span class="traffic-sales-name">Hardworking
-                                        </span>
-                                    </li> -->
-                                </ul>
-                            </div>
-                            
-                        </div>
-                    </div>
-                    <a href="/dummy_job_role">
-                <button style="margin-left:30px;" type="submit" class="btn btn-primary">Know the best role suited for you!!</button>
-              </a>
-
-
-
-                </div>
-
-
-
-
-
-
-            <section class="site-section">
-                <div class="container jobs">
-
-                    <div class="row mb-5 justify-content-center">
-                        <div class="col-md-7 text-center">
-                            <h2 class="section-title mb-2">50 Jobs Listed</h2>
-                        </div>
-                    </div>
-
-
-                    <div class="mb-5">
-                        <!-- <div class="row align-items-start job-item border-bottom pb-3 mb-3 pt-3">
-                          <div class="col-md-2">
-                            <a href="job-single.html"><img src="images/featured-listing-1.jpg" alt="Image" class="img-fluid"></a>
-                          </div>
-                          <div class="col-md-4">
-                            <span class="badge badge-primary px-2 py-1 mb-3">Freelancer</span>
-                            <h2><a href="job-single.html">Dropbox Product Designer</a> </h2>
-                            <p class="meta">Publisher: <strong>John Stewart</strong> In: <strong>Design</strong></p>
-                          </div>
-                          <div class="col-md-3 text-left">
-                            <h3>Melbourn</h3>
-                            <span class="meta">Australia</span>
-                          </div>
-                          <div class="col-md-3 text-md-right">
-                            <strong class="text-black">$60k &mdash; $100k</strong>
-                          </div>
-                        </div> -->
-
-
-                        <!-- <div class="row align-items-start job-item border-bottom pb-3 mb-3 pt-3">
-                          <div class="col-md-2">
-                            <a href="job-single.html"><img src="images/featured-listing-4.jpg" alt="Image" class="img-fluid"></a>
-                          </div>
-                          <div class="col-md-4">
-                            <span class="badge badge-primary px-2 py-1 mb-3">Freelancer</span>
-                            <h2><a href="job-single.html">Dropbox Product Designer</a> </h2>
-                            <p class="meta">Publisher: <strong>John Stewart</strong> In: <strong>Design</strong></p>
-                          </div>
-                          <div class="col-md-3 text-left">
-                            <h3>Melbourn</h3>
-                            <span class="meta">Australia</span>
-                          </div>
-                          <div class="col-md-3 text-md-right">
-                            <strong class="text-black">$60k &mdash; $100k</strong>
-                          </div>
-                        </div> -->
-
-
-
-                    </div>
-
-                    <!-- <div class="row pagination-wrap">
-
-                      <div class="col-md-6 text-center text-md-left">
-                        <div class="custom-pagination ml-auto">
-                          <a href="#" class="prev">Previous</a>
-                          <div class="d-inline-block">
-                            <a href="#" class="active">1</a>
-                            <a href="#">2</a>
-                            <a href="#">3</a>
-                            <a href="#">4</a>
-                          </div>
-                          <a href="#" class="next">Next</a>
-                        </div>
-                      </div>
                     </div> -->
+                    
+
+
 
                 </div>
-            </section>
+
+
+
+
+
 
 
 
@@ -718,13 +578,7 @@ File: js
 */
 $(function() {
     "use strict";
-    var iq_score=document.getElementById("iq_score").value;
-    var percentage_iq_score=iq_score;
-    percentage_iq_score=percentage_iq_score*3.3;
-    percentage_iq_score=percentage_iq_score.toFixed(1);
-    var wrong_per=100-percentage_iq_score;
-    wrong_per=wrong_per.toFixed(1);
-    // alert(iq_score);
+    var iq_score=localStorage.getItem('iq_score');
     var self_awr=document.getElementById("self_awr").value;
     var self_con=document.getElementById("self_con").value;
     var self_ach=document.getElementById("self_ach").value;
@@ -732,19 +586,8 @@ $(function() {
     var self_ins=document.getElementById("self_ins").value;
     var self_soc=document.getElementById("self_soc").value;
 
-    var aq_persistence=document.getElementById("aq_persistence").value;
-    var aq_boldness=document.getElementById("aq_boldness").value;
-    var aq_complexity=document.getElementById("aq_complexity").value;
-    var aq_abstraction=document.getElementById("aq_abstraction").value;
-    var aq_queriosity=document.getElementById("aq_queriosity").value;
 
-    var python_score=document.getElementById("python_score").value;
-    var java_score=document.getElementById("java_score").value;
-    var c_score=document.getElementById("c_score").value;
-    // alert(c_score);
-
-
-    // python_score
+    // alert(self_con);
     // ============================================================== 
     // Revenue Cards
     // ============================================================== 
@@ -886,8 +729,8 @@ $(function() {
                 element: 'morris_gross',
 
                 data: [
-                    { value: iq_score, label: 'Score' },
-                    { value: wrong_per, label: 'Wrong' }
+                    { value: iq_score*3+10, label: 'Score' },
+                    { value: 15, label: '' }
                    
                 ],
              
@@ -895,8 +738,7 @@ $(function() {
 
                 colors: [
                     '#5969ff',
-                    '#FF0000'
-
+                    '#a8b0ff'
                    
                 ],
 
@@ -914,7 +756,7 @@ $(function() {
                 element: 'morris_profit',
             
                 data: [
-                    { value: percentage_iq_score, label: 'Eligible' },
+                    { value: iq_score, label: 'Eligible' },
                     { value: 15, label: '' }
                    
                 ],
@@ -950,6 +792,7 @@ $(function() {
             { x: 'IL', y: self_pos },
             { x: 'OA', y: self_ins },
             { x: 'P', y: self_soc },
+            
 
         ],
         xkey: 'x',
@@ -964,6 +807,11 @@ $(function() {
             else if(row.label == "IL") return "#1AB244";
             else if(row.label == "OA") return "#ff407b";
             else if(row.label == "P") return "#25d5f2";
+            // else if(row.label == "A") return "#5969ff";
+            // else if(row.label == "E") return "lightpink";
+            // else if(row.label == "AO") return "lightblue";
+            // else if(row.label == "H") return "orange";
+            // else if(row.label == "CM") return "maroon";
 
         },
         preUnits: [""]
@@ -1169,15 +1017,15 @@ $(function() {
                 type: 'doughnut',
                 
                 data: {
-                    labels: ["Java", " Python","C"],
+                    labels: ["Java", " Python", "Machine Learning","C"],
                     datasets: [{
                         backgroundColor: [
                             "#5969ff",
                             "#ff407b",
                             "#25d5f2",
-                            // "#ffc750"
+                            "#ffc750"
                         ],
-                        data: [java_score, python_score,c_score]
+                        data: [20, 15, 12,30]
                     }]
                 },
                 options: {
@@ -1199,9 +1047,6 @@ $(function() {
 (function(window, document, $, undefined) {
     "use strict";
     $(function() {
-      var python_score=document.getElementById("python_score").value;
-    var java_score=document.getElementById("java_score").value;
-    var c_score=document.getElementById("c_score").value;
 
         if ($('.ct-chart-line').length) {
             new Chartist.Line('.ct-chart-line', {
@@ -1692,17 +1537,17 @@ $(function() {
 
         if ($('.ct-chart-horizontal').length) {
             new Chartist.Bar('.ct-chart-horizontal', {
-                labels: ['C', 'Java', 'Python'],
+                labels: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
                 series: [
-                    [c_score,java_score,python_score],
-                   // [9, 8, 1]
+                    [5, 4, 3, 7, 5, 10, 3],
+                    [3, 2, 9, 5, 4, 6, 4]
                 ]
             }, {
-                seriesBarDistance: 30,
+                seriesBarDistance: 10,
                 reverseData: true,
                 horizontalBars: true,
                 axisY: {
-                    offset: 90
+                    offset: 70
                 }
             });
 
