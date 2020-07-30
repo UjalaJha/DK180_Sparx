@@ -216,9 +216,10 @@ def predict_api():
 
     #tags=[]
     final=[]
-    final_dict={}
+
     for b in range(len(blog_recommendations)):
         tags=[]
+        final_dict={}
         for t in Tag_list:
             if blog_recommendations.loc[b][t]==1:
                 tags.append(str(t))
