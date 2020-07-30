@@ -681,7 +681,10 @@ class UserController extends Controller
         // echo "<pre>";
         // print_r($data);
         $data['name']=$data_fetch[0]->first_name;
-        $data['skills']=$data_fetch[0]->skills;
+
+        $data['skills']="'".rtrim(strtolower($data_fetch[0]->skills), ", ")."'";
+        // print_r($data['skills']);
+        // exit();
         
         // echo $data['names'];
         // echo $data['skills'];
@@ -690,121 +693,30 @@ class UserController extends Controller
         // $data['skills']='python,graphql,chatbot,bootstrap,finance,angularjs,machine learning,ai,rest';
         $json=json_encode($data);
         // print_r($json);
-        // $curl = curl_init();
+        $curl = curl_init();
 
-        // curl_setopt_array($curl, array(
-        //   CURLOPT_URL => "http://127.0.0.1:5000/blog_api",
-        //   CURLOPT_RETURNTRANSFER => true,
-        //   CURLOPT_ENCODING => "",
-        //   CURLOPT_MAXREDIRS => 10,
-        //   CURLOPT_TIMEOUT => 0,
-        //   CURLOPT_FOLLOWLOCATION => true,
-        //   CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-        //   CURLOPT_CUSTOMREQUEST => "POST",
-        //   CURLOPT_POSTFIELDS =>$json,
-        //   CURLOPT_HTTPHEADER => array(
-        //     "Content-Type: application/json"
-        //   ),
-        // ));
+        curl_setopt_array($curl, array(
+          CURLOPT_URL => "http://127.0.0.1:5000/blog_api",
+          CURLOPT_RETURNTRANSFER => true,
+          CURLOPT_ENCODING => "",
+          CURLOPT_MAXREDIRS => 10,
+          CURLOPT_TIMEOUT => 0,
+          CURLOPT_FOLLOWLOCATION => true,
+          CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+          CURLOPT_CUSTOMREQUEST => "POST",
+          CURLOPT_POSTFIELDS =>$json,
+          CURLOPT_HTTPHEADER => array(
+            "Content-Type: application/json"
+          ),
+        ));
 
-        // $response = curl_exec($curl);
+        $response = curl_exec($curl);
 
-        // curl_close($curl);
+        curl_close($curl);
+        $recommendation=json_decode($response,true);
+        // print_r($recommendation);
+        // exit();
         // echo "<pre>";
-        $recommendation=json_decode('{
-          "recommended_blogs": [
-            {
-              "Subtitle": "Featuring implementation code, instructional",
-              "Tag_data-science": "1",
-              "Tag_machine-learning": "1",
-              "Tag_programming": "1",
-              "Tag_python": "1",
-              "Title": "The Hitchhikers Guide to Machine Learning in Python",
-              "url": "https://medium.freecodecamp.org/the-hitchhikers-guide-to-machine-learning-algorithms-in-python-bfad66adb378"
-            },
-            {
-              "Subtitle": "An introduction to the future of data science",
-              "Tag_data-science": "1",
-              "Tag_education": "1",
-              "Tag_machine-learning": "1",
-              "Tag_programming": "1",
-              "Title": "Automated Machine Learning on the Cloud in Python",
-              "url": "https://towardsdatascience.com/automated-machine-learning-on-the-cloud-in-python-47cf568859f"
-            },
-            {
-              "Subtitle": "",
-              "Tag_data-science": "1",
-              "Tag_machine-learning": "1",
-              "Tag_python": "1",
-              "Title": "Open Machine Learning Course. Topic 2. Visual Data Analysis with Python",
-              "url": "https://medium.com/open-machine-learning-course/open-machine-learning-course-topic-2-visual-data-analysis-in-python-846b989675cd"
-            },
-            {
-              "Subtitle": "",
-              "Tag_ux": "1",
-              "Title": "UX Design Glossary: How to Use Affordances in User Interfaces",
-              "url": "https://uxplanet.org/ux-design-glossary-how-to-use-affordances-in-user-interfaces-393c8e9686e4"
-            },
-            {
-              "Subtitle": "Were living in a time when design and user experience have never mattered more. The past decade of",
-              "Tag_ux": "1",
-              "Title": "10 UX Design Predictions For 2018",
-              "url": "https://medium.com/thinking-design/10-ux-design-predictions-for-2018-54bebb8d9767"
-            },
-            {
-              "Subtitle": "A few weeks ago, prominent Design leader Alan Cooper declared on Twitter, There is no such thing",
-              "Tag_product-design": "1",
-              "Tag_ux": "1",
-              "Title": "There is no such thing as UX Design",
-              "url": "https://medium.com/@james.mingardi.elliott/there-is-no-such-thing-as-ux-design-d2c912158498"
-            },
-            {
-              "Subtitle": "Overview of Stakeholders and Activities involved in each stage",
-              "Tag_ux": "1",
-              "Title": "User Experience Design Process",
-              "url": "https://uxplanet.org/user-experience-design-process-d91df1a45916"
-            },
-            {
-              "Subtitle": "",
-              "Tag_machine-learning": "1",
-              "Title": "Ten Machine Learning Algorithms You Should Know to Become a Data Scientist",
-              "url": "https://towardsdatascience.com/ten-machine-learning-algorithms-you-should-know-to-become-a-data-scientist-8dc93d8ca52e"
-            },
-            {
-              "Subtitle": "The amount of data is rapidly growing, doubling every two years, and changing the way people live. Our current output of data is roughly 2.5 quintillion bytes a day. As the world steadily becomes more connected",
-              "Tag_data": "1",
-              "Tag_data-science": "1",
-              "Title": "The difference between Big Data Analytics vs Data Science Analytics",
-              "url": "https://medium.com/bettium/the-difference-between-big-data-analytics-vs-data-science-analytics-a19bd3a0e553"
-            },
-            {
-              "Subtitle": "Lately, Ive noticed a lot more ambient enthusiasm for research among both early stage start-ups and",
-              "Tag_ux": "1",
-              "Title": "The 9 Rules of Design Research",
-              "url": "https://medium.com/mule-design/the-9-rules-of-design-research-1a273fdd1d3b"
-            },
-            {
-              "Subtitle": "Determining the right number of users for User Research.",
-              "Tag_product-design": "1",
-              "Tag_ux": "1",
-              "Title": "User Research: is more the merrier?",
-              "url": "https://uxdesign.cc/user-research-is-more-the-merrier-9ee4cfe46c7a"
-            },
-            {
-              "Subtitle": "If youre a Product Designer like me, I reckon youve spent at least a good part of your life trying to explain to",
-              "Tag_product-design": "1",
-              "Title": "What is Product Design?",
-              "url": "https://uxdesign.cc/what-is-product-design-d95cd5339f5c"
-            },
-            {
-              "Subtitle": "Ah the dreaded machine learning interview. You feel like you know everything until youre tested on it! But it doesnt have to be this way.",
-              "Tag_data-science": "1",
-              "Tag_machine-learning": "1",
-              "Title": "Data Science and Machine Learning Interview Questions",
-              "url": "https://towardsdatascience.com/data-science-and-machine-learning-interview-questions-3f6207cf040b"
-            }
-          ]
-        }' ,true);
         // echo "<pre>";
         // print_r($recommendation['recommended_blogs']);
         // $a=array();
