@@ -20,6 +20,8 @@ class TestControler extends Controller
         $iq=IQ::all();
         // echo "<pre>";
         // \Session:: set("iq_test_marks",0);
+                // print_r($iq[0]->question_statement);
+                // exit;
         return view('template/iq')->with('iq',$iq);
         // print_r($iq[0]->question_statement);
     }
@@ -41,7 +43,8 @@ class TestControler extends Controller
         $iq_score->save();
 
         $user_test = UserTests::where('user_id',$user_id)->update(['iq_given'=>1]);
-        return app('App\Http\Controllers\UserController')->redirectDashboard();
+        return view('template/iq_result')->with('iq_score',$iq_score);
+        // return app('App\Http\Controllers\UserController')->redirectDashboard();
 
 //        return view('template/dashboard');
     }
@@ -137,6 +140,7 @@ class TestControler extends Controller
         $jobs->save();
         return view('company/suggested_students');
     }
+    
 
     public function show_jobs()
     {

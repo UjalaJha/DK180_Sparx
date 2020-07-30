@@ -219,3 +219,14 @@ Route::post('import', 'MyController@import')->name('import');
 
 
 Route::get('view_user_details/{user_id}', 'CompanyController@view_user_profile');
+
+
+Route::get('/next_tq_test', function () {
+        return app('App\Http\Controllers\UserController')->skills_view();
+});
+
+Route::get('/performance_report', function () {
+        return app('App\Http\Controllers\UserController')->full_report();
+});
+// Route::get('performance_report','UsserController@full_report');
+Route::get('/dummy_job_role','UserController@dummy_role'); 

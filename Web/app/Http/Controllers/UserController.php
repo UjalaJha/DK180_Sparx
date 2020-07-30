@@ -7,6 +7,7 @@ use App\UserAcademics;
 use App\UserExperiences;
 use App\UserTechnical;
 use App\UserRatings;
+use App\UserHGMI;
 use App\TQCategoryDetails;
 use Session;
 
@@ -57,8 +58,9 @@ class UserController extends Controller
 //        if($user_detail){
 //            echo "sn";
 //        }
-//        echo "<pre>";
-//        print_r($user_detail);
+       // echo "<pre>";
+       // print_r($user_detail);
+       // exit;
         $size=sizeof($user_detail);
 //        echo $size;
         $count=0;
@@ -98,6 +100,8 @@ class UserController extends Controller
             echo "exists";
 //            print_r($EmptyTestArray1);
 //            print_r($EmptyTestArray2);
+            // print_r($skill_set);
+            // exit;
             return view('template/tq_instructions')->with("skill_set",$skill_set)->with("skill_id_array_set", $skill_id_array_set);
 
 
@@ -1216,4 +1220,46 @@ class UserController extends Controller
 
         echo $content;
     }
+
+        
+        public function full_report(){
+        $user_id=Session::get('user_id');
+        echo $user_id;
+        $eq=UserEQ::where('user_id',$user_id)->get();
+        $aq=UserAQ::where('user_id',$user_id)->get();
+        $iq=UserIQ::where('user_id',$user_id)->get();
+        $tq=UserTechnical::where('user_id',$user_id)->get();
+        $hgmi=UserHGMI::where('user_id',$user_id)->get();
+        // echo "<pre>";
+        // print_r($iq[0]);
+        // print_r($aq[0]);
+        // print_r($eq[0]);
+        // print_r($tq[0]);
+
+        return view('template/performance')->with('iq',$iq)->with('eq',$eq)->with('aq',$aq)->with('tq',$tq);
+
+
+    }
+
+    public function dummy_role(){
+        $user_id=Session::get('user_id');
+        $tq=UserTechnical::where('user_id',$user_id)->get();
+        echo $tq[0];
+        exit;
+        $final_string="";
+        foreach($tq as $tqa){
+        $skill_id=TQCategoryDetails::where('tq_category_details_id',$tqa->tq_concept_details_id)->get();
+        echo $skill_id[0]->sub_category;
+        // if(level__score)
+        $final_string=$skill_id[0]->sub_category."-".$tqa->level_1_score.",";
+        echo $final_string;
+
+    }
+    // endforeach
+
+        echo "<br>";
+
+        echo $final_string;
+    }
+
 }
