@@ -51,6 +51,7 @@ sim_options = {
     "user_based": True,  # Compute  similarities between items
 }
 model = KNNWithMeans(sim_options=sim_options)
+blogsdata = pd.read_csv("Blog Test Profiles\\blogsdata.csv")
 
 blogs = pd.read_csv(r"./blogs.csv")
 blogs = blogs.replace(np.nan, '', regex=True)
@@ -80,39 +81,41 @@ def get_title_from_index(index):
 
 def getRecommendedBlogs(skills):
     only_roles=blogs["blog_title"]
+    mskills = skills.split(',')
     #my_skills="Interaction Design, UX, User Experience, Prototyping, Product Design"
-    my_skills=pd.Series([skills])
-    #print(my_skills)
-    only_roles=my_skills.append(only_roles ,ignore_index=True)
-    #print(only_roles)
-    cv = CountVectorizer()
-    count_matrix = cv.fit_transform(only_roles)
-    #print(count_matrix)
-    cosine_sim = cosine_similarity(count_matrix)
-
-    matches=cosine_sim[0:1]
-    matches=matches[:,1:]
-
-    list_matches=matches[0]
-    obj1 = enumerate(list_matches) 
-    obj1 = (list(obj1))
-    sorted_obj1 = sorted(obj1,key=lambda x:x[1],reverse=True)
-
-    i=0
-    list_roles =[]
-    #print(sorted_obj1)
     blogs_list=[]
-    for element in sorted_obj1:
-        if(element[1]*5)>2:
-            blogs_list.append((element[0],element[1]*5))
-            #print(get_title_from_index(element[0]),element[1]*5)    
-        i=i+1
-        if i>10:
-            break
+    for bskills in mskills:
+        my_skills=pd.Series(bskills)
+        #print(my_skills)
+        only_roles=my_skills.append(only_roles ,ignore_index=True)
+        #print(only_roles)
+        cv = CountVectorizer()
+        count_matrix = cv.fit_transform(only_roles)
+        #print(count_matrix)
+        cosine_sim = cosine_similarity(count_matrix)
+
+        matches=cosine_sim[0:1]
+        matches=matches[:,1:]
+
+        list_matches=matches[0]
+        obj1 = enumerate(list_matches) 
+        obj1 = (list(obj1))
+        sorted_obj1 = sorted(obj1,key=lambda x:x[1],reverse=True)
+
+        i=0
+        list_roles =[]
+        #print(sorted_obj1)
+        for element in sorted_obj1:
+            if(element[1]*5)>2:
+                blogs_list.append((element[0],element[1]*5))
+                #print(get_title_from_index(element[0]),element[1]*5)    
+            i=i+1
+            if i>5:
+                break
     return blogs_list
     
 def getTopNCourses(testSubject,blogsdata):
-    
+
     data = Dataset.load_from_df(blogsdata[["userid", "blogid", "score"]], reader)
     trainSet = data.build_full_trainset()
     model.fit(trainSet)
@@ -186,13 +189,16 @@ def predict_api():
         generic_skills="personality development,personality,behavior"
         blogs_list = getRecommendedBlogs(generic_skills)
 
+    #print(blogs_list)
     total_recommendations=blogs_list
     for j in range(0,len(total_recommendations)):
             cid = total_recommendations[j][0]
             score = total_recommendations[j][1]
             blogsdata = blogsdata.append({"userid":uniqueid,"blogid":cid,"score":score},
-                                                                    ignore_index=True)
+                                                                   ignore_index=True)
+    #print(blogsdata.loc[len(blogsdata)-1])
 
+    #print(total_recommendations)
     topNlist = getTopNCourses(uniqueid,blogsdata)
     for t in topNlist:
         bid = t[0]
@@ -216,7 +222,7 @@ def predict_api():
 
     #tags=[]
     final=[]
-
+    
     for b in range(len(blog_recommendations)):
         tags=[]
         final_dict={}
