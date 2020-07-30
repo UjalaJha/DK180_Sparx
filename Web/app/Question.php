@@ -10,7 +10,8 @@ class Question extends Model
 
     protected $primaryKey = 'question_id';
 
-    protected $fillable = ['tq_concept_details_id',
+    protected $fillable = ['tq_category_details_id',
+                            'tq_concept_details_id',
                             'is_level_2',
                             'is_options_available',
                             'question_statement',

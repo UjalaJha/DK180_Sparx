@@ -69,6 +69,7 @@ class AddQuestionController extends Controller
 
 //        echo $tq_category_details_id;
 //        echo $tq_concept_details_id;
+        $_SESSION['$tq_category_details_id'] = $tq_category_details_id;
         $_SESSION['$tq_concept_details_id'] = $tq_concept_details_id;
 
 
@@ -110,7 +111,7 @@ class AddQuestionController extends Controller
                 $count++;
                 $ques_count--;
             }
-            return view('admin/add_manual_question')->with('no_of_ques',$ques_count_array)->with('tq_concept_details_id',$tq_concept_details_id);
+            return view('admin/add_manual_question')->with('no_of_ques',$ques_count_array)->with('tq_category_details_id', $tq_category_details_id)->with('tq_concept_details_id',$tq_concept_details_id);
         }
 
     }
@@ -124,13 +125,14 @@ class AddQuestionController extends Controller
 //        print_r($_POST['correct_option']);
 //        print_r($_POST['direct_answer']);
 
-
+        $tq_category_details_id = $_POST['tq_category_details_id'];
         $tq_concept_details_id = $_POST['tq_concept_details_id'];
 
         $count = sizeof($_POST['correct_option']);
         for($i=0; $i<$count; $i++){
             if($_POST['option_1'][$i]!=null && $_POST['option_2'][$i]!=null && $_POST['option_3'][$i]!=null && $_POST['option_4'][$i]!=null){
                 $data = array(
+                    'tq_category_details_id'=>$tq_category_details_id,
                     'tq_concept_details_id'=>$tq_concept_details_id,
                     'is_options_available'=>1,
                     'question_statement'=>$_POST['question_statement'][$i],
@@ -142,6 +144,7 @@ class AddQuestionController extends Controller
                 );
             }else if($_POST['option_1'][$i]==null && $_POST['option_2'][$i]==null && $_POST['option_3'][$i]==null && $_POST['option_4'][$i]==null){
                 $data = array(
+                    'tq_category_details_id'=>$tq_category_details_id,
                     'tq_concept_details_id'=>$tq_concept_details_id,
                     'is_options_available'=>0,
                     'question_statement'=>$_POST['question_statement'][$i],
@@ -156,7 +159,7 @@ class AddQuestionController extends Controller
 
         }
 
-        return view('landing/index');
+        return view('admin/add_new_question');
     }
 
 }
