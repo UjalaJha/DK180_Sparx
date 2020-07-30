@@ -650,8 +650,19 @@ class UserController extends Controller
     }
     public function blogrecommendation(){
 
-        $data['name']='Maya';
-        $data['skills']='python,graphql,chatbot,bootstrap,finance,angularjs,machine learning,ai,rest';
+
+        $user_id=Session::get('user_id');
+        $data_fetch=UserPersonalDetails::where('user_id', $user_id)->get();
+        // echo "<pre>";
+        // print_r($data);
+        $data['names']=$data_fetch[0]->first_name;
+        $data['skills']=$data_fetch[0]->skills;
+        
+        // echo $data['names'];
+        // echo $data['skills'];
+        // exit;
+        // $data['name']='Maya';
+        // $data['skills']='python,graphql,chatbot,bootstrap,finance,angularjs,machine learning,ai,rest';
         $json=json_encode($data);
         // print_r($json);
         // $curl = curl_init();
@@ -674,7 +685,7 @@ class UserController extends Controller
         // $response = curl_exec($curl);
 
         // curl_close($curl);
-        echo "<pre>";
+        // echo "<pre>";
         $recommendation=json_decode('{
           "recommended_blogs": [
             {
@@ -768,8 +779,24 @@ class UserController extends Controller
               "url": "https://towardsdatascience.com/data-science-and-machine-learning-interview-questions-3f6207cf040b"
             }
           ]
-        }');
-        print_r($recommendation);
+        }' ,true);
+        // echo "<pre>";
+        // print_r($recommendation['recommended_blogs']);
+        // $a=array();
+        // $result = (array) json_decode($recommendation);
+
+        // $a=$recommendation['recommended_blogs'];
+                // print_r($recommendation['recommended_blogs']);
+
+        // var_dump($recommendatio/n->recommended_blogs);
+
+        // $recommendation=json_decode($recommendation,true);
+        // echo $recommendation['recommended_blogs']['Subtitle'];
+        // exit;
+        // echo $recommendation['recommended_blogs']->Subtitle;
+        // exit;
+
+        return view('template/blogs_listing')->with('blog_recommendation',$recommendation['recommended_blogs']);
 
 
     }

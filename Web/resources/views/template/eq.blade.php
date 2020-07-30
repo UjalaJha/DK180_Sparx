@@ -682,7 +682,7 @@ var x = setInterval(function() {
 
 <script type="text/javascript">
   function displayon(val){
-    alert(val);
+    // alert(val);
     document.getElementById(val).style.display="block";
     var i;
     for(i=1;i<=30;i++){
@@ -703,7 +703,7 @@ var x = setInterval(function() {
     // alert(tag);
     var choosed_ans;
     function check_ans(val,qus){
-      alert(qus);
+      // alert(qus);
       choosed_ans=val;
       choosed_ans = parseFloat(choosed_ans);
       // alert(choosed_ans);
@@ -714,14 +714,14 @@ var x = setInterval(function() {
       var tag = document.getElementById(x).value;
       var flag=localStorage.getItem(tag);
       flag=parseInt(flag);
-      alert(localStorage.getItem(tag));
+      // alert(localStorage.getItem(tag));
 
       // if(final_answer === choosed_ans){
       // alert("Right ans");
       // var rflag;
       // rflag=flag+1;
       localStorage.setItem(tag,flag+choosed_ans);
-      alert(flag+choosed_ans);
+      // alert(flag+choosed_ans);
       document.getElementById(tag).innerHTML = flag+choosed_ans;
       // alert(localStorage.getItem(tag));
       // }
