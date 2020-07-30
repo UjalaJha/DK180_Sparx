@@ -150,10 +150,17 @@ Route::post('/logins','LoginController@login_check');
 Route::post('/company_login','LoginController@company_login_check');
 
 
-
 Route::get('/companylogin', function () {
     return view('landing/company-login');
 });
+
+
+Route::get('admin_login', function(){
+    return view('landing/admin-login');
+});
+
+Route::post('admin_login', 'LoginController@admin_login_check');
+
 
 
 Route::get('/save_skill','TQController@save_score');

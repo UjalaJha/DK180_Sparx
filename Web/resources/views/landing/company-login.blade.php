@@ -67,6 +67,17 @@
                     </div>
                 </div>
             </form>
+
+            <div class="container-login100-form-btn" style="margin-top: 25px;">
+                <div class="wrap-login100-form-btn">
+                    <div class="login100-form-bgbtn"></div>
+                    <a href="/company_signup"><button class="login100-form-btn" type="submit">
+                            Sign Up
+                        </button></a>
+
+                </div>
+            </div>
+
             <div class="txt1 text-center p-t-54 p-b-20">
 						<span>
 							Or Sign Up Using
@@ -87,22 +98,6 @@
                 </a>
             </div>
 
-            <div class="flex-col-c p-t-155">
-						<span class="txt1 p-b-17">
-							Or Sign Up Using
-						</span>
-
-                <a href="/company_signup" class="txt2">
-                    Sign Up
-                </a>
-            </div>
-
-            <div class="txt1 text-center p-t-54 p-b-20">
-
-                <a href="index.html" class="txt2">
-                    Go back to Home
-                </a>
-            </div>
             <!-- </form> -->
         </div>
     </div>

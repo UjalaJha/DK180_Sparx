@@ -159,7 +159,7 @@ class AddQuestionController extends Controller
 
         }
 
-        return view('admin/add_new_question');
+        return $this->index();
     }
 
 }
