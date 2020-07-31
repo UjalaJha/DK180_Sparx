@@ -40,9 +40,13 @@ class CompanyController extends Controller
         $new_job->experience = $experience;
         $new_job->skills_recquired = $skills_required;
 
+        $company_name = CompanyDetails::where('company_id', $cid)->pluck('company_name');
+        // echo $company_name[0];
+        // exit;
+        $new_job->company_name=$company_name[0];
         $new_job->save();
 
-        $company_name = CompanyDetails::where('company_id', $cid)->pluck('company_name');
+        
 //        echo $company_name[0];
 
         // give this json
@@ -248,6 +252,17 @@ class CompanyController extends Controller
 
 
 //        return view('/template/performance');
+
+    }
+
+  public function show_jobs()
+    {
+
+        $jobs=Jobs::where('company_id',1)->get();
+//         echo "<pre>";
+//        print_r($jobs[0]->job_role);
+        return view('company/view_jobs')->with('jobs',$jobs);
+//        return view('template/iq')->with('iq',$iq);
 
     }
 

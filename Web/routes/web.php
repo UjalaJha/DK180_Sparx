@@ -110,7 +110,7 @@ Route::get('linkedin_students','UserController@linkedin_profile');
 
 
 
-Route::get('view_jobs','TestControler@show_jobs');
+Route::get('view_jobs','CompanyController@show_jobs');
 //Route::get('/view_jobs', function () {
 //    return view('company/view_jobs');
 //});
@@ -247,3 +247,6 @@ Route::get('/performance_report', function () {
 });
 // Route::get('performance_report','UsserController@full_report');
 Route::get('/dummy_job_role','UserController@dummy_role'); 
+
+Route::get('look_for_jobs', 'UserController@look_for_jobs');
+

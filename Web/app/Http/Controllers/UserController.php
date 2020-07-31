@@ -10,6 +10,7 @@ use App\UserRatings;
 use App\UserHGMI;
 use App\TQCategoryDetails;
 use Session;
+use App\Jobs;
 
 use App\UserTests;
 use App\IQ;
@@ -1532,6 +1533,18 @@ class UserController extends Controller
         echo "<br>";
 
         echo $final_string;
+    }
+
+
+    public function look_for_jobs(){
+
+        $jobs=Jobs::all();
+//         echo "<pre>";
+       // print_r($jobs);
+       // exit;
+        return view('template/look_jobs')->with('jobs_posted',$jobs);
+
+
     }
 
 }
