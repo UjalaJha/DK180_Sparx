@@ -230,14 +230,14 @@ h6 {
                 <div class="card-header border-0 mb-0">
                     <div class="row justify-content-between">
                         <div class="col-auto col-sm-auto">
-                            <h4> <span class="badge badge-pill badge-success">hourly</span></h4>
+                            <h4> <span class="badge badge-pill badge-success">Full Time</span></h4>
                         </div>
                         <div class="col-auto col-sm-auto">
                             <div class="row mx-auto pt-2">
                              <!--            {{$jobs['job_company']}}
 
                              <img src="https://uxwing.com/wp-content/themes/uxwing/download/17-currency/dollar.png" alt="Image result for dollar icon png" width="20" height="20">
-                              -->   <h5>
+                              -->   <h5 class="text-info my-1" style="font-weight: bold;">
                                     {{$jobs['job_company']}}
 
                                 </h5>

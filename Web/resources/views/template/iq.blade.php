@@ -617,7 +617,7 @@
       rflag=flag+1;
       localStorage.setItem('iq_score',rflag);
 
-      alert(localStorage.getItem('iq_score'));
+      // alert(localStorage.getItem('iq_score'));
           document.getElementById('iq_score').value = localStorage.getItem('iq_score');
       }
 

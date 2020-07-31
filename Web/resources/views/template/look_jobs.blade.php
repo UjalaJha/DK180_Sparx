@@ -78,33 +78,99 @@
                   <p class="card-category">The best compnies based on your interests!!</p>
                 </div>
             <div class="row" style="margin-top:40px;padding-left:20px;padding-right:20px;">
-             @foreach($jobs_posted as $jobs)
 
-                 <div class="col-md-6">
-                  <div class="card card-profile">
-                    <!-- <div class="card-avatar">
-                      <a href="javascript:;">
-                        <img class="img" src="../assets/img/udemy.png"/>
-                      </a>
-                    </div> -->
-                    <div class="card-body">
-                      <h2 class="card-category" style="color:black;font-size:35px;">{{$jobs['company_name']}}</h2>
-                       <p class="card-description" style="color:black; font-size:20px;">
-                        {{$jobs['job_role']}}
-                      </p>
-                      <h5 class="card-title">Desciption:{{$jobs['job_description']}}</h5>
-                     
-                      <div class="price-label">Salary:  {{$jobs['salary']}}</div>
-                      <div class="price-label">Skills Recquired:  {{$jobs['skills_recquired']}}</div>
-                      <div class="price-label">Experience:  {{$jobs['experience']}}</div>
-                      <div class="price-label">Location:  {{$jobs['location']}}</div>
+
+    <div class="d-md-inline-flex row justify-content-center">
+                      @foreach($jobs_posted as $jobs)
+                      <div class="col-md-4 ">
+      <!-- <div class="col-md-5 col-lg-4 col-xl-3 col-sm-6 d-flex align-items-stretch"> -->
+
+
+            <div class=" card shadow-lg border-0 py-2">
+                <div class="card-header border-0 mb-0">
+                    <div class="row justify-content-between">
+                        <div class="col-auto col-sm-auto">
+                            <h4> <span class="badge badge-pill badge-success">Full Time</span></h4>
+                        </div>
+                        <div class="col-auto col-sm-auto">
+                            <div class="row mx-auto pt-2">
+                             <!--            {{$jobs['job_company']}}
+
+                             <img src="https://uxwing.com/wp-content/themes/uxwing/download/17-currency/dollar.png" alt="Image result for dollar icon png" width="20" height="20">
+                              -->   <h5 class="text-info my-1" style="font-weight: bold;">
+                                    {{$jobs['company_name']}}
+
+                                </h5>
+                            </div>
+                        </div>
                     </div>
-                  </div>
                 </div>
-                @endforeach
-                 
-                  
-              </div>
+
+                <div class=" card-body text-center pb-0 mt-0 pt-3">
+                    <div class="d-block">
+                        <h5 class="card-title mb-0 font-weight-bold">
+                                          {{$jobs['job_role']}}
+                      </h5> <small class="text-info my-1"> <i class="fa fa-file-code-o small"></i> 
+                                         From HireConnect
+                      </small>
+                    </div>
+                    <div class="d-inline-flex row mb-3 ">
+                        <div class="col-md-auto">
+                            <ul class="list-inline my-0">
+                               <!--  <li class="list-inline-item"> <span class="badge badge-pill badge-outline ">{{$jobs['skills_recquired']}}</span></li>
+                                <li class="list-inline-item"> <span class="badge badge-pill badge-outline ">UX</span></li>
+                                <li class="list-inline-item"> <span class="badge badge-pill badge-outline ">photoshop</span></li>
+                                <li class="list-inline-item "> <button class="badge badge-pill badge-primary" type="button">+4</button></li>
+                           -->  </ul>
+                        </div>
+                    </div>
+                    <div class="d-flex row mb-0">
+                        <div class="col ">
+                            <p class="text-muted">
+                                        Desciption:   {{$jobs['job_description']}}
+
+                           </p>
+                        </div>
+                        <!-- Skills Recquired: {{$jobs['skills_recquired']}} -->
+                    </div>
+                    <h5></h5>
+                </div>
+                  <p>                        Skills Recquired: {{$jobs['skills_recquired']}}
+</p>
+                  <h5>  Location: {{$jobs['location']}}</h5>
+                  <h5>  Salary: {{$jobs['salary']}}</h5>
+                <div>
+                    <hr class="hl">
+                </div>
+         
+                <div class="card-footer border-0 text-center mx-auto ">
+                    <!-- <h5 class="footer"> <a href="" class="text-decoration-none"> VIEW JOB</a></h5> -->
+                    <a href="/instructions" style=""><button type="submit" class="btn btn-info">Quick Apply</button></a>
+
+                </div>
+<!--                 <a href="/instructions" style=""><button type="submit" class="btn btn-info">Quick Apply</button></a> -->
+            </div>
+        </div>
+
+
+        @endforeach
+        
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
               
             
             </div>

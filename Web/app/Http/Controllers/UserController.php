@@ -1508,6 +1508,9 @@ class UserController extends Controller
         // print_r($aq[0]);
         // print_r($eq[0]);
         // print_r($tq[0]);
+        // echo "<pre>";
+        // print_r($eq);
+        // exit;
 
         return view('template/performance')->with('iq',$iq)->with('eq',$eq)->with('aq',$aq)->with('tq',$tq);
 

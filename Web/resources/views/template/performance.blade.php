@@ -87,6 +87,7 @@
       <input type="hidden" value="{{$iq[0]->iq_score}}" id="iq_score">
 
       <input type="hidden" value="{{$eq[0]->eq_self_awareness}}" id="self_awr">
+      
           <input type="hidden" value="{{$eq[0]->eq_self_control}}" id="self_con">
           <input type="hidden" value="{{$eq[0]->eq_achievement_orientation}}" id="self_ach">
           <input type="hidden" value="{{$eq[0]->eq_positive_outlook}}" id="self_pos">
@@ -757,7 +758,7 @@ $(function() {
                 element: 'morris_gross',
 
                 data: [
-                    { value: iq_score, label: 'Score' },
+                    { value: percentage_iq_score, label: 'Score' },
                     { value: wrong_per, label: 'Wrong' }
                    
                 ],
