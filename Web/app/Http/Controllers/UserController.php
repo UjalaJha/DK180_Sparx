@@ -747,11 +747,188 @@ class UserController extends Controller
         $response = curl_exec($curl);
 
         curl_close($curl);
-        $recommendation=json_decode($response,true);
+        $recommendation=json_decode('{
+          "recommended_blogs": [
+            {
+              "Subtitle": "1. I feel like one of these books is misleading me",
+              "Tag_programming": "1",
+              "Title": "15 jokes only programmers will get",
+              "url": "https://hackernoon.com/15-jokes-only-programmers-will-get-b42873eba509"
+            },
+            {
+              "Subtitle": "",
+              "Tag_android": "1",
+              "Title": "Exploring Background Execution Limits on Android Oreo",
+              "url": "https://medium.com/exploring-android/exploring-background-execution-limits-on-android-oreo-ab384762a66c"
+            },
+            {
+              "Subtitle": "oh boy, I was so wrong.",
+              "Tag_programming": "1",
+              "Title": "I thought I understood Open Source. I was wrong",
+              "url": "https://hackernoon.com/i-thought-i-understood-open-source-i-was-wrong-cf54999c097b"
+            },
+            {
+              "Subtitle": "",
+              "Tag_programming": "1",
+              "Title": "How to scale Microservices with Message Queues, Spring Boot, and Kubernetes",
+              "url": "https://medium.freecodecamp.org/how-to-scale-microservices-with-message-queues-spring-boot-and-kubernetes-f691b7ba3acf"
+            },
+            {
+              "Subtitle": "",
+              "Tag_blockchain": "1",
+              "Tag_programming": "1",
+              "Title": "Creating Your First Blockchain with Java. Part 2Transactions.",
+              "url": "https://medium.com/programmers-blockchain/creating-your-first-blockchain-with-java-part-2-transactions-2cdac335e0ce"
+            },
+            {
+              "Subtitle": "As we look deep into 2018, one of the questions on every Web developers mind ought to be, What",
+              "Tag_javascript": "1",
+              "Tag_web-design": "1",
+              "Tag_web-development": "1",
+              "Title": "2018 State of Progressive Web Apps",
+              "url": "https://medium.com/progressive-web-apps/2018-state-of-progressive-web-apps-f7517d43ba70"
+            },
+            {
+              "Subtitle": "Not a statistician? No problem! Learn the",
+              "Tag_data": "1",
+              "Tag_data-science": "1",
+              "Title": "Quick Intro to StatisticsPower Your Stories with Data",
+              "url": "https://hackernoon.com/quick-intro-to-statistics-power-your-stories-with-data-a3a35785692b"
+            },
+            {
+              "Subtitle": "",
+              "Tag_bitcoin": "1",
+              "Tag_cryptocurrency": "1",
+              "Title": "Why Porn Might Just Be Cryptos First Killer App",
+              "url": "https://hackernoon.com/why-porn-might-just-be-cryptos-first-killer-app-596cf822ef3f"
+            },
+            {
+              "Subtitle": "",
+              "Tag_python": "1",
+              "Title": "How To Become a DevOps Engineer In Six Months or Less",
+              "url": "https://medium.com/@devfire/how-to-become-a-devops-engineer-in-six-months-or-less-366097df7737"
+            },
+            {
+              "Subtitle": "I cant recall the number of times someone would tell me, Im too old for this.",
+              "Tag_inspiration": "1",
+              "Tag_life": "1",
+              "Tag_life-lessons": "1",
+              "Tag_self-improvement": "1",
+              "Title": "Age is never an excuse",
+              "url": "https://medium.com/misstiffanysun/age-is-never-an-excuse-978872d8c62d"
+            },
+            {
+              "Subtitle": "9 Steps to Building a",
+              "Tag_artificial-intelligence": "1",
+              "Tag_data-science": "1",
+              "Tag_machine-learning": "1",
+              "Title": "Cutting-Edge Face Recognition is Complicated. These Spreadsheets Make it Easier.",
+              "url": "https://towardsdatascience.com/cutting-edge-face-recognition-is-complicated-these-spreadsheets-make-it-easier-e7864dbf0e1a"
+            },
+            {
+              "Subtitle": "In this tutorial (derived from my original post here), you will learn what",
+              "Tag_artificial-intelligence": "1",
+              "Tag_deep-learning": "1",
+              "Tag_machine-learning": "1",
+              "Title": "Demystifying Generative Adversarial Networks",
+              "url": "https://towardsdatascience.com/demystifying-generative-adversarial-networks-c076d8db8f44"
+            },
+            {
+              "Subtitle": "Especially all of our food",
+              "Tag_happiness": "1",
+              "Tag_life": "1",
+              "Title": "Everything Is Marketing",
+              "url": "https://medium.com/@krisgage/everything-is-marketing-69dbe9e0ff49"
+            },
+            {
+              "Subtitle": "The hyper-saturation of advertising and marketing we see today has many",
+              "Tag_business": "1",
+              "Tag_marketing": "1",
+              "Title": "Value-Added Marketing 101: What? How? And Why?",
+              "url": "https://medium.com/@tunikova_k/value-added-marketing-101-what-how-and-why-7698186cfcb6"
+            },
+            {
+              "Subtitle": "The human brain imitation.",
+              "Tag_data-science": "1",
+              "Tag_machine-learning": "1",
+              "Tag_programming": "1",
+              "Title": "Deep Learning with Python",
+              "url": "https://towardsdatascience.com/deep-learning-with-python-703e26853820"
+            },
+            {
+              "Subtitle": "Featuring implementation code, instructional",
+              "Tag_data-science": "1",
+              "Tag_machine-learning": "1",
+              "Tag_programming": "1",
+              "Tag_python": "1",
+              "Title": "The Hitchhikers Guide to Machine Learning in Python",
+              "url": "https://medium.freecodecamp.org/the-hitchhikers-guide-to-machine-learning-algorithms-in-python-bfad66adb378"
+            },
+            {
+              "Subtitle": "An introduction to the future of data science",
+              "Tag_data-science": "1",
+              "Tag_education": "1",
+              "Tag_machine-learning": "1",
+              "Tag_programming": "1",
+              "Title": "Automated Machine Learning on the Cloud in Python",
+              "url": "https://towardsdatascience.com/automated-machine-learning-on-the-cloud-in-python-47cf568859f"
+            },
+            {
+              "Subtitle": "Using the FeatureSelector for efficient",
+              "Tag_education": "1",
+              "Tag_machine-learning": "1",
+              "Tag_programming": "1",
+              "Tag_python": "1",
+              "Title": "A Feature Selection Tool for Machine Learning in Python",
+              "url": "https://towardsdatascience.com/a-feature-selection-tool-for-machine-learning-in-python-b64dd23710f0"
+            },
+            {
+              "Subtitle": "I have just come out of a project where 80% into it I felt I had very little. I invested a",
+              "Tag_artificial-intelligence": "1",
+              "Tag_data-science": "1",
+              "Tag_machine-learning": "1",
+              "Title": "How to do machine learning efficiently",
+              "url": "https://hackernoon.com/doing-machine-learning-efficiently-8ba9d9bc679d"
+            },
+            {
+              "Subtitle": "One of the major aspects of training your machine learning model is avoiding overfitting. The model",
+              "Tag_artificial-intelligence": "1",
+              "Tag_data-science": "1",
+              "Tag_deep-learning": "1",
+              "Tag_machine-learning": "1",
+              "Title": "Regularization in Machine Learning",
+              "url": "https://towardsdatascience.com/regularization-in-machine-learning-76441ddcf99a"
+            },
+            {
+              "Subtitle": "",
+              "Tag_artificial-intelligence": "1",
+              "Tag_big-data": "1",
+              "Tag_machine-learning": "1",
+              "Title": "The 7 Steps of Machine Learning",
+              "url": "https://towardsdatascience.com/the-7-steps-of-machine-learning-2877d7e5548e"
+            },
+            {
+              "Subtitle": "Unsupervised Learning is a class of Machine Learning techniques to find the patterns in data. The",
+              "Tag_data-science": "1",
+              "Tag_machine-learning": "1",
+              "Tag_programming": "1",
+              "Title": "Unsupervised Learning with Python",
+              "url": "https://towardsdatascience.com/unsupervised-learning-with-python-173c51dc7f03"
+            },
+            {
+              "Subtitle": "Simple explanations of Artificial Intelligence, Machine Learning, and Deep Learning and how theyre all different",
+              "Tag_artificial-intelligence": "1",
+              "Tag_deep-learning": "1",
+              "Tag_machine-learning": "1",
+              "Title": "The Difference Between Artificial Intelligence, Machine Learning, and Deep Learning",
+              "url": "https://medium.com/iotforall/the-difference-between-artificial-intelligence-machine-learning-and-deep-learning-3aa67bff5991"
+            }
+          ]
+        }',true);
         
-        // echo "<pre>";
-        // print_r($recommendation);
-        // exit();
+        echo "<pre>";
+        print_r($recommendation);
+        exit();
         // echo "<pre>";
         // print_r($recommendation['recommended_blogs']);
         // $a=array();
