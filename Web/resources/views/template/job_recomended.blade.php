@@ -163,78 +163,7 @@ h6 {
                   <p class="card-category">Some jobs that match your interests and skills!!</p>
                 </div>
             <div class="row" style="margin-top:40px;padding-left:20px;padding-right:20px;">
-
-                    <div class="card">
-                            <h5 class="card-header" style="font-weight: bold">You look like a good fit in below job roles</h5>
-                            <div class="card-body p-0">
-                                <ul class="traffic-sales list-group list-group-flush">
-                                  
-                            @foreach($job_recommendation as $job)
-
-                                    <li class="traffic-sales-content list-group-item "><span class="traffic-sales-name">{{$job}}</span>
-                                    </li>
-                            @endforeach
-                                    <!-- <li class="traffic-sales-content list-group-item"><span class="traffic-sales-name">Fearless
-                                        </span>
-                                    </li>
-                                    <li class="traffic-sales-content list-group-item "><span class="traffic-sales-name">Hardworking
-                                        </span>
-                                    </li> -->
-                                </ul>
-                            </div>
-                            
-                        </div>
-
-                        <div class="row">
-                     @foreach($jobs_list as $jobs)
-
-                    <div class="card">
-                            <h5 class="card-header" style="font-weight: bold">You look like a good fit in below job roles</h5>
-                            <div class="card-body p-0">
-                                <ul class="traffic-sales list-group list-group-flush">
-                                  <?php
-                                  // echo "<pre>";
-                                  // print_r($jobs_list);
-                                  ?>
-                                    <li class="traffic-sales-content list-group-item "><span class="traffic-sales-name">
-                                          {{$jobs['from']}}
-                                    </span>
-                                    </li>
-                                    <li class="traffic-sales-content list-group-item "><span class="traffic-sales-name">
-                                          {{$jobs['job_company']}}
-                                    </span>
-                                    </li>
-                                    <li class="traffic-sales-content list-group-item "><span class="traffic-sales-name">
-                                          {{$jobs['job_link']}}
-                                    </span>
-                                    </li>
-                                    <li class="traffic-sales-content list-group-item "><span class="traffic-sales-name">
-                                          {{$jobs['job_location']}}
-                                    </span>
-                                    </li>
-                                    <li class="traffic-sales-content list-group-item "><span class="traffic-sales-name">
-                                          {{$jobs['job_summary']}}
-                                    </span>
-                                    </li>
-                                    <li class="traffic-sales-content list-group-item "><span class="traffic-sales-name">
-                                          {{$jobs['job_title']}}
-                                    </span>
-                                    </li> 
-
-                                    <!-- <li class="traffic-sales-content list-group-item"><span class="traffic-sales-name">Fearless
-                                        </span>
-                                    </li>
-                                    <li class="traffic-sales-content list-group-item "><span class="traffic-sales-name">Hardworking
-                                        </span>
-                                    </li> -->
-                                </ul>
-                            </div>
-
-                  </div>
-                                                  @endforeach
-              </div>
------------------------------
-      <div class="card">
+ <div class="card">
             <!-- <div class="card-header card-header-primary">
               <h3 class="card-title">Notifications</h3>
               <p class="card-category">Handcrafted by our friend
@@ -246,9 +175,23 @@ h6 {
               <div class="row">
                 <div class="col-md-8">
                   <h4 class="card-header" style="font-weight: bold;margin-left: -15px;">You look like a good fit in below job roles</h4><br>
-                  <div class="alert alert-info">
-                    <span style="font-weight: bold;font-size:16px;">This is a plain notification</span>
+                  <?php 
+                  $classes=array("alert alert-info","alert alert-success","alert alert-warning");
+                  $count=0;
+                  ?>
+                  @foreach($job_recommendation as $job)
+
+                  <div class="{{$classes[$count]}}">
+                    <span style="font-weight: bold;font-size:16px;">{{$job}}</span>
                   </div>
+                  <?php 
+                  $count++;
+                  if($count==3){
+                    $count=0;
+                  }
+                  ?>
+                  @endforeach
+                  <!-- 
                   <div class="alert alert-success">
                     <span>This is a plain notification</span>
                   </div>
@@ -263,7 +206,7 @@ h6 {
                   </div>
                   <div class="alert alert-info">
                     <span>This is a plain notification</span>
-                  </div>
+                  </div> -->
                  
               
               </div>
@@ -271,11 +214,15 @@ h6 {
             
         </div>
     </div>
-              
+                    
   <div class="container-fluid" style="margin-top:10px;">
     <h4 class="card-header" style="font-weight: bold;">Some jobs where you may apply</h4><br>
     <div class="d-md-inline-flex row justify-content-center">
-        <div class="col-md-5 col-lg-4 col-xl-3 col-sm-6 d-flex align-items-stretch">
+                      @foreach($jobs_list as $jobs)
+
+      <div class="col-md-5 col-lg-4 col-xl-3 col-sm-6 d-flex align-items-stretch">
+
+
             <div class=" card shadow-lg border-0 py-2">
                 <div class="card-header border-0 mb-0">
                     <div class="row justify-content-between">
@@ -283,126 +230,62 @@ h6 {
                             <h4> <span class="badge badge-pill badge-success">hourly</span></h4>
                         </div>
                         <div class="col-auto col-sm-auto">
-                            <div class="row mx-auto pt-2"> <img src="https://uxwing.com/wp-content/themes/uxwing/download/17-currency/dollar.png" alt="Image result for dollar icon png" width="20" height="20">
-                                <h5>55/hr</h5>
+                            <div class="row mx-auto pt-2">
+                             <!--            {{$jobs['job_company']}}
+
+                             <img src="https://uxwing.com/wp-content/themes/uxwing/download/17-currency/dollar.png" alt="Image result for dollar icon png" width="20" height="20">
+                              -->   <h5>
+                                    {{$jobs['job_company']}}
+
+                                </h5>
                             </div>
                         </div>
                     </div>
                 </div>
+
                 <div class=" card-body text-center pb-0 mt-0 pt-3">
                     <div class="d-block">
-                        <h5 class="card-title mb-0 font-weight-bold">UI/UX Designer</h5> <small class="text-info my-1"> <i class="fa fa-file-code-o small"></i> Epic Coders</small>
+                        <h5 class="card-title mb-0 font-weight-bold">
+                                          {{$jobs['job_title']}}
+                      </h5> <small class="text-info my-1"> <i class="fa fa-file-code-o small"></i> 
+                                          {{$jobs['from']}}
+                      </small>
                     </div>
                     <div class="d-inline-flex row mb-3 ">
                         <div class="col-md-auto">
                             <ul class="list-inline my-0">
-                                <li class="list-inline-item"> <span class="badge badge-pill badge-outline ">UI</span></li>
+                                <!-- <li class="list-inline-item"> <span class="badge badge-pill badge-outline ">UI</span></li>
                                 <li class="list-inline-item"> <span class="badge badge-pill badge-outline ">UX</span></li>
                                 <li class="list-inline-item"> <span class="badge badge-pill badge-outline ">photoshop</span></li>
-                                <li class="list-inline-item "> <button class="badge badge-pill badge-primary" type="button">+4</button></li>
+                                <li class="list-inline-item "> <button class="badge badge-pill badge-primary" type="button">+4</button></li> -->
                             </ul>
                         </div>
                     </div>
                     <div class="d-flex row mb-0">
                         <div class="col ">
-                            <p class="text-muted"> We are looking for an experience UI and UX designer to work on our projects... </p>
+                            <p class="text-muted">
+                                        Desciption:   {{$jobs['job_summary']}}
+
+                           </p>
                         </div>
                     </div>
+                    <h5></h5>
                 </div>
+                             <h5>  Location:                                        {{$jobs['job_location']}}
+</h5>
                 <div>
                     <hr class="hl">
                 </div>
+         
                 <div class="card-footer border-0 text-center mx-auto ">
                     <h5 class="footer"> <a href="" class="text-decoration-none"> VIEW JOB</a></h5>
                 </div>
             </div>
         </div>
-        <div class="col-md-5 col-lg-4 col-xl-3 col-sm-6 col-sm-6 d-flex align-items-stretch ">
-            <div class="card shadow-lg border-0 py-2">
-                <div class="card-header border-0 mb-0">
-                    <div class="row justify-content-between">
-                        <div class="col-auto col-sm-auto">
-                            <h4> <span class="badge badge-pill badge-warning text-white ">part-time</span></h4>
-                        </div>
-                        <div class="col-auto col-sm-auto">
-                            <div class="row mx-auto pt-2"> <img src="https://uxwing.com/wp-content/themes/uxwing/download/17-currency/dollar.png" alt="Image result for dollar icon png" width="20" height="20">
-                                <h5>32/hr</h5>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="card-body text-center pb-0 mt-0 pt-3">
-                    <div class="d-block">
-                        <h5 class="card-title mb-0 font-weight-bold">Branding Expert </h5><small class="text-info"> <i class="fa fa-file-code-o small"></i> Hubstaff</small>
-                    </div>
-                    <div class="d-inline-flex row mb-3">
-                        <div class="col-md-auto">
-                            <ul class="list-inline my-0 ">
-                                <li class="list-inline-item"> <span class="badge badge-pill badge-outline ">PHP</span></li>
-                                <li class="list-inline-item"> <span class="badge badge-pill badge-outline ">android</span></li>
-                                <li class="list-inline-item"> <span class="badge badge-pill badge-outline ">ios</span></li>
-                                <li class="list-inline-item "> <button class="badge badge-pill badge-primary" type="button">+2</button></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="d-flex flex-row ">
-                        <div class="col px-0">
-                            <p class="card-text text-muted ">Looking for an experienced person to help us with rebranding our business.We are interested in a... </p>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <hr class="hl">
-                </div>
-                <div class="card-footer border-0 text-center mx-auto ">
-                    <h5 class="footer"> <a href="" class="text-decoration-none"> VIEW JOB</a></h5>
-                </div>
-            </div>
-        </div>
-          <div class="col-md-5 col-lg-4 col-xl-3 col-sm-6 col-sm-6 d-flex align-items-stretch ">
-            <div class="card shadow-lg border-0 py-2">
-                <div class="card-header border-0 mb-0">
-                    <div class="row justify-content-between">
-                        <div class="col-auto col-sm-auto">
-                            <h4> <span class="badge badge-pill badge-warning text-white ">part-time</span></h4>
-                        </div>
-                        <div class="col-auto col-sm-auto">
-                            <div class="row mx-auto pt-2"> <img src="https://uxwing.com/wp-content/themes/uxwing/download/17-currency/dollar.png" alt="Image result for dollar icon png" width="20" height="20">
-                                <h5>32/hr</h5>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="card-body text-center pb-0 mt-0 pt-3">
-                    <div class="d-block">
-                        <h5 class="card-title mb-0 font-weight-bold">Branding Expert </h5><small class="text-info"> <i class="fa fa-file-code-o small"></i> Hubstaff</small>
-                    </div>
-                    <div class="d-inline-flex row mb-3">
-                        <div class="col-md-auto">
-                            <ul class="list-inline my-0 ">
-                                <li class="list-inline-item"> <span class="badge badge-pill badge-outline ">PHP</span></li>
-                                <li class="list-inline-item"> <span class="badge badge-pill badge-outline ">android</span></li>
-                                <li class="list-inline-item"> <span class="badge badge-pill badge-outline ">ios</span></li>
-                                <li class="list-inline-item "> <button class="badge badge-pill badge-primary" type="button">+2</button></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="d-flex flex-row ">
-                        <div class="col px-0">
-                            <p class="card-text text-muted ">Looking for an experienced person to help us with rebranding our business.We are interested in a... </p>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <hr class="hl">
-                </div>
-                <div class="card-footer border-0 text-center mx-auto ">
-                    <h5 class="footer"> <a href="" class="text-decoration-none"> VIEW JOB</a></h5>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+
+
+        @endforeach
+        
             </div>
         </div>
       </div>

@@ -88,13 +88,22 @@
                       </a>
                     </div>
                     <div class="card-body">
-                      <h5 class="card-category" style="color:black;font-size:15px;">{{$course['subject']}}</h5>
+                      <h5 class="card-category" style="color:black;font-size:15px;">{{$course['title']}}</h5>
                        <p class="card-description">
-                        {{$course['title']}}
+                        {{$course['subject']}}
+                      </p>
+                      <h5 class="card-title">
+                        Number of Lectures: {{$course['num_lectures']}}
                       </p>
                       <h5 class="card-title"><a href="https://www.udemy.com/mobile-app-design-in-photoshop-complete-music-app-design/">{{$course['url']}}</a></h5>
-                     
-                      <div class="price-label">Price: Rs {{$course['price']}}</div>
+                     <p class="card-description">
+                        Subscibers: {{$course['num_subscribers']}}
+                      </p>
+                      <div class="price-label">
+                        <button type="submit" class="btn btn-primary ">
+                      Price: Rs {{$course['price']*25}}
+                    </button>
+                    </div>
                     </div>
                   </div>
                 </div>
