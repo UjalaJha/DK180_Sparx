@@ -8,21 +8,68 @@
   <br>
   <br>
 
-  <center>
-  <form method="post" enctype="multipart/form-data">
-    {% csrf_token %}
-      <button type="submit" style="height:50px; width:100px">Download PDF Result</button>
-  </form>
+  <section class="ftco-section" style="background:linear-gradient(45deg, #fb83b5 0%, #9a51ff 100%);">
+      <div class="container" style="margin-top:50px;">
+          <div class="row justify-content-center mb-5 pb-3">
+          <div class="col-md-7 text-center heading-section ftco-animate">
+            <h2 style="color:white;">HIRECONNECT - Upload Resume</h2>
+            <p style="color:white;">Upload your video resume to check your personality</p>
+          </div>
+        </div>
+          <div class="row justify-content-center mb-5 pb-3">
+        <div class="col-md-4 d-flex align-self-stretch ftco-animate">
+            <div class="media block-6 services d-block text-center">
+              <div class="d-flex justify-content-center">
+                <div class="icon d-flex align-items-center justify-content-center">
+                  <span class="flaticon-support"></span>
+                </div>
+              </div>
+              {% if emo_result1 %}
+              <div class="media-body p-2 mt-2">
+                <h3 class="heading">Personality Trait (Big 5)</h3>
+                <h3 class="heading" style="color:purple"><b>{{ emo_result1 }}</b></h3>
+              </div>
+              
+            </div>    
+          </div>
+        </div>
+        <div class="row justify-content-center mb-5 pb-3">
+        <div class="col-md-4 d-flex align-self-stretch ftco-animate">
+            <div class="media block-6 services d-block text-center">
+              <div class="d-flex justify-content-center">
+                <div class="icon d-flex align-items-center justify-content-center">
+                  <span class="flaticon-support"></span>
+                </div>
+              </div>
+              
+              <div class="media-body p-2 mt-2">
+                <h3 class="heading">Detailed Insights</h3><br>
+                <!-- <h3 class="heading" style="color:purple"><b>Negative Neuroticism</b></h3> -->
+                {% for emotions in emo_jso %}
+                
+                <div class="w3-light-grey">
+                  <div class="w3-container w3-green w3-center" style="width:{{ emotions.Percentage }}"><span style="color:black;">{{ emotions.Percentage }}</span></div>
+                  
+                </div><p style="color:#777;font-weight: bold">{{ emotions.Emotion_Label }}</p>
+                
+                {% endfor %}
+                
+              </div>
+              
+            </div>    
+          </div>
+        </div>
+        {% endif %}
+        </div>
+    </section>
 
-<br>
-    <br>
-    <br>
 
-    {% if emo_result %}
+
+   <!--  {% if emo_result %}
  <div style="width:500px; background-color:#EDE1F9">
      <h2 style="color:black">PERSONALITY TRAIT (BIG 5)</h2>
   	<h2 style="color:#C70039">{{ emo_result1 }}</h2>
-<!--     <h2 style="color:#C70039">{{ dom_jso }}</h2>-->
+     <h2 style="color:#C70039">{{ dom_jso }}</h2>
 	</div>
 
   <div style="width:600px;background-color:#EDE1F9">
@@ -30,12 +77,10 @@
 	<h2 style="color:#C70039">{{ emo_jso }}</h2>
   	</div>
 
-  {% endif %}
+  {% endif %} -->
 
 
-  <br>
-    <br>
-  <br>
-    <div style="width:100px;height:20px;background-color:white"><p><a href="{% url 'home' %}">Return to home</a></p></div>
-  </center>
+  
+    <!-- <div style="width:100px;height:20px;background-color:white"><p><a href="{% url 'home' %}">Return to home</a></p></div> -->
+  
 {% endblock %}

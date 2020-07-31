@@ -30,9 +30,6 @@
               <p>My Performance</p>
             </a>
           </li>
-
-
-
           <li class="nav-item ">
             <a class="nav-link" href="./notifications">
               <i class="material-icons">notifications</i>

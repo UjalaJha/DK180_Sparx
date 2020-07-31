@@ -126,7 +126,7 @@ def emo_to_ocean1(emo_data):
             traits.append(NA)
             PA = "POSITIVE NEUROTICISM"
             traits.append(PA)
-            return traits
+            return ",".join(traits)
 
         elif (row['Emotion'] == 1):
             NC = "NEGATIVE CONSCIENTIOUSNESS"
@@ -135,7 +135,7 @@ def emo_to_ocean1(emo_data):
             traits.append(NE)
             PN = "POSITIVE NEUROTICISM"
             traits.append(PN)
-            return traits
+            return ",".join(traits)
 
         elif (row['Emotion'] == 2):
             NC = "NEGATIVE CONSCIENTIOUSNESS"
@@ -144,19 +144,19 @@ def emo_to_ocean1(emo_data):
             traits.append(NE)
             PN = "POSITIVE NEUROTICISM"
             traits.append(PN)
-            return traits
+            return ",".join(traits)
 
         elif (row['Emotion'] == 3):
             PE = "POSITIVE EXTRAVERSION"
             traits.append(PE)
             NN = "NEGATIVE NEUROTICISM"
             traits.append(NN)
-            return traits
+            return ",".join(traits)
 
         elif (row['Emotion'] == 4):
             PN = "POSITIVE NEUROTICISM"
             traits.append(PN)
-            return traits
+            return ",".join(traits)
 
         elif (row['Emotion'] == 5):
             sur = "No mentionable Big 5 personality trait !! Candidate was found surprised during their interview"
@@ -165,7 +165,7 @@ def emo_to_ocean1(emo_data):
         elif (row['Emotion'] == 6):
             NN = "NEGATIVE NEUROTICISM"
             traits.append(NN)
-            return traits
+            return ",".join(traits)
 
 def home(request):
     documents = Document.objects.all()
@@ -227,8 +227,8 @@ def check_result(request):
     # setting emotional values to its respective labels
     emo_data.loc[emo_data['Emotion'] == 0, 'Emotion_Label'] = 'Angry'
     emo_data.loc[emo_data['Emotion'] == 1, 'Emotion_Label'] = 'Disgust'
-    emo_data.loc[emo_data['Emotion'] == 2, 'Emotion_Label'] = 'Fear'
-    emo_data.loc[emo_data['Emotion'] == 3, 'Emotion_Label'] = 'Happy'
+    emo_data.loc[emo_data['Emotion'] == 2, 'Emotion_Label'] = 'Nervous'
+    emo_data.loc[emo_data['Emotion'] == 3, 'Emotion_Label'] = 'Confident'
     emo_data.loc[emo_data['Emotion'] == 4, 'Emotion_Label'] = 'Sad'
     emo_data.loc[emo_data['Emotion'] == 5, 'Emotion_Label'] = 'Surprise'
     emo_data.loc[emo_data['Emotion'] == 6, 'Emotion_Label'] = 'Neutral'
@@ -246,12 +246,17 @@ def check_result(request):
     dom_emo_disp = dominant_emo[['Emotion_Label','Percentage']]
     dom_emo_disp['Percentage'] = dom_emo_disp['Percentage'].astype(str) + '%'
 
-    emo_jso = emo_disp.to_json(orient='values')[1:-1].replace('],[', '] [')
+    emo_jso = emo_disp.to_dict(orient='records')
     dom_jso = dom_emo_disp.to_json(orient='values')[1:-1].replace('],[', '] [')
+
+    #print(emo_jso)
 
     emo_result = emo_to_ocean(dominant_emo)
 
     emo_result1 = emo_to_ocean1(dominant_emo)
+
+
+    
 
     return render(request, 'core/check_result.html', {
         'emo_result': emo_result,
