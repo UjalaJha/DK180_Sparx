@@ -24,7 +24,7 @@
               <p>Company Profile</p>
             </a>
           </li> -->
-          <li class="nav-item ">
+          <li class="nav-item">
             <a class="nav-link" href="/view_jobs">
               <i class="material-icons">content_paste</i>
               <p>Jobs Posted</p>
