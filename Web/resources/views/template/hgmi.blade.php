@@ -32,61 +32,61 @@
     <link href="../assets/css/material-dashboard.css?v=2.1.1" rel="stylesheet" />
     <!-- CSS Just for demo purpose, don't include it in your project -->
     <link href="../assets/demo/demo.css" rel="stylesheet" />
-    <style type="text/css">
-        /* Create a custom radio button */
-        .checkmark {
-            position: absolute;
-            top: 0;
-            left: 0;
-            height: 25px;
-            width: 25px;
-            background-color: #eee;
-            border-radius: 50%;
-        }
+      <style type="text/css">
+  /* Create a custom radio button */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  border-radius: 50%;
+}
 
-        /* On mouse-over, add a grey background color */
-        .cont:hover input ~ .checkmark {
-            background-color: #ccc;
-        }
+/* On mouse-over, add a grey background color */
+.cont:hover input ~ .checkmark {
+  background-color: #ccc;
+}
 
-        /* When the radio button is checked, add a blue background */
-        .cont input:checked ~ .checkmark {
-            background-color:#A03AB5;
-        }
+/* When the radio button is checked, add a blue background */
+.cont input:checked ~ .checkmark {
+  background-color:#A03AB5;
+}
 
-        /* Create the indicator (the dot/circle - hidden when not checked) */
-        .checkmark:after {
-            content: "";
-            position: absolute;
-            display: none;
-        }
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
 
-        /* Show the indicator (dot/circle) when checked */
-        .cont input:checked ~ .checkmark:after {
-            display: block;
-        }
+/* Show the indicator (dot/circle) when checked */
+.cont input:checked ~ .checkmark:after {
+  display: block;
+}
 
-        /* Style the indicator (dot/circle) */
-        .cont .checkmark:after {
-            top: 9px;
-            left: 9px;
-            width: 8px;
-            height: 8px;
-            border-radius: 50%;
-            background: white;
-        }
+/* Style the indicator (dot/circle) */
+.cont .checkmark:after {
+  top: 9px;
+  left: 9px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: white;
+}
     </style>
 </head>
 
 <body class="">
-<div class="wrapper ">
 
-    <div class="main-panel">
+
+    <div style="margin-top:80px;">
         <!-- Navbar -->
         <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top ">
             <div class="container-fluid">
                 <div class="navbar-wrapper">
-                    <a class="navbar-brand" href="#pablo">HireConnect Test Platform!!</a>
+                    <a class="navbar-brand" href="#pablo"><b>HireConnect Test Platform!!</b></a>
                 </div>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="sr-only">Toggle navigation</span>
@@ -163,8 +163,8 @@
                                         <thead>
                                         <tr>
                                             <th></th>
-                                            <th class="text-center">Yes</th>
-                                            <th class="text-center">No</th>
+                                            <th>Yes</th>
+                                            <th>No</th>
                                         </tr>
                                         </thead>
                                         <tbody>
@@ -172,7 +172,8 @@
                                         @foreach ($hgmi as $hgmi_ques)
                                             <tr>
                                                 <td>{{$hgmi_ques->question}}</td>
-                                                <td class="text-center"><div class="form-check">
+                                                <td>
+                                                    <div class="form-check">
 
                                                         <label class="cont">
                                                             <input type="radio" name="{{$hgmi_ques->question_id}}" id="{{$hgmi_ques->question_id}}" value="{{$hgmi_ques->tag}}" onchange="check_ans(this.value, 1, this.id)">
@@ -181,7 +182,7 @@
 
                                                     </div>
                                                 </td>
-                                                <td class="text-center"><div class="form-check">
+                                                <td><div class="form-check">
 
                                                         <label class="cont">
                                                             <input type="radio" name="{{$hgmi_ques->question_id}}" id="{{$hgmi_ques->question_id}}" value="{{$hgmi_ques->tag}}" onchange="check_ans(this.value, -1, this.id)">
@@ -244,7 +245,7 @@
         </div>
         {{ $hgmi->links() }}
 
-    </div>
+
 </div>
 
 <!--   Core JS Files   -->

@@ -163,7 +163,10 @@ h6 {
                   <p class="card-category">Some jobs that match your interests and skills!!</p>
                 </div>
             <div class="row" style="margin-top:40px;padding-left:20px;padding-right:20px;">
- <div class="card">
+
+
+
+      <div class="card">
             <!-- <div class="card-header card-header-primary">
               <h3 class="card-title">Notifications</h3>
               <p class="card-category">Handcrafted by our friend

@@ -14,7 +14,7 @@
         color:white;
      /*@import "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css";*/
     }
-
+  </style>
 
     <div class="main-panel">
       <!-- Navbar -->

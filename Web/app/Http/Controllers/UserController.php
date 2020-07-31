@@ -408,22 +408,22 @@ class UserController extends Controller
         $tq=UserTechnical::where('user_id',$user_id)->get();
         $final_string="";
         foreach($tq as $tqa){
-            // echo "<br>";
-        $skill_id=TQCategoryDetails::where('tq_category_details_id',$tqa->tq_category_details_id)->get();
-        $skill_name=$skill_id[0]->sub_category;
-        $score_level1=$tqa->level_1_score;
-        $score_level2=$tqa->level_2_score;
-        // echo $skill_name." ".$score_level1." ".$score_level2;
-        if($score_level2>10){
-            $tag='intermediate';
-        }elseif($score_level2>15){
-            $tag='advance';
-        }else{
-            $tag='basic';
+                // echo "<br>";
+            $skill_id=TQCategoryDetails::where('tq_category_details_id',$tqa->tq_category_details_id)->get();
+            $skill_name=$skill_id[0]->sub_category;
+            $score_level1=$tqa->level_1_score;
+            $score_level2=$tqa->level_2_score;
+            // echo $skill_name." ".$score_level1." ".$score_level2;
+            if($score_level2>10){
+                $tag='intermediate';
+            }elseif($score_level2>15){
+                $tag='advance';
+            }else{
+                $tag='basic';
+            }
+            // echo $tag;
+            $final_string.="$skill_name"."-"."$tag";
         }
-        // echo $tag;
-        $final_string.="$skill_name"."-"."$tag";
-    }
     // echo "<br>";
     // echo $final_string;
     $data['skills']=$final_string;
@@ -927,9 +927,9 @@ class UserController extends Controller
           ]
         }',true);
         
-        echo "<pre>";
-        print_r($recommendation);
-        exit();
+        // echo "<pre>";
+        // print_r($recommendation);
+        // exit();
         // echo "<pre>";
         // print_r($recommendation['recommended_blogs']);
         // $a=array();
