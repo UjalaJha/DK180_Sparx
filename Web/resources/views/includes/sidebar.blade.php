@@ -38,7 +38,7 @@
             </a>
           </li>
           <li class="nav-item ">
-            <a class="nav-link" href="./notifications">
+            <a class="nav-link" href="./look_for_jobs">
               <i class="material-icons">notifications</i>
               <p>Look for Companies</p>
             </a>
