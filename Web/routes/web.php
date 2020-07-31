@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('landing/index');
+    return view('new_landing/index');
 });
 Route::get('/test','TestControler@index');
 

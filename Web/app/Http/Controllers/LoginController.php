@@ -45,7 +45,7 @@ class LoginController extends Controller
         $user_tests->user_id = $user_id_last;
         $user_tests->save();
 
-        return view('landing/index');
+        return view('new_landing/index');
     }
 
 
@@ -75,7 +75,7 @@ class LoginController extends Controller
 
         $company_details->save();
 
-        return view('landing/index');
+        return view('new_landing/index');
     }
 
 
