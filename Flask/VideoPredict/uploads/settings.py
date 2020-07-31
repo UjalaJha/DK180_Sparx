@@ -117,9 +117,13 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
+STATICFILES_DIRS = ( 
+    'C:/Users/juyee/Envs/sih2020/VideoPredict/uploads/static/',
+)
 
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+#STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 #for uploading media files
 MEDIA_URL = '/resume/'
