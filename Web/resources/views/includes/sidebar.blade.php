@@ -24,8 +24,15 @@
               <p>User Profile</p>
             </a>
           </li>
+
           <li class="nav-item ">
-            <a class="nav-link" href="/performance">
+            <a class="nav-link" href="/user">
+              <i class="material-icons">person</i>
+              <p>Update Profile</p>
+            </a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="/performance_report">
               <i class="material-icons">content_paste</i>
               <p>My Performance</p>
             </a>
