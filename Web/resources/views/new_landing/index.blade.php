@@ -506,48 +506,37 @@
         <div class="row justify-content-center mb-5 pb-3">
           <div class="col-md-7 text-center heading-section ftco-animate">
             <h2>Recent Blog</h2>
-            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in</p>
+            <p>Some Generic blogs that helps you to grow in your career!!</p>
           </div>
         </div>
         <div class="row">
           <div class="col-md-4 ftco-animate">
             <div class="blog-entry">
-              <a href="blog-single.html" class="block-20" style="background-image: url('new_images/image_1.jpg');">
+              <a href="blog-single.html" class="block-20" style="background-image: url('images/sunset.PNG');">
               </a>
-              <div class="text d-flex py-4">
-               <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about the blind texts</a></h3>
+              <div class="text py-4">
+               <h3 class="heading"><a href="#">Surround Yourself with People Who Hold You to a Higher Standard</a></h3>
+               <a href="https://medium.com/the-mission/surround-yourself-with-people-who-hold-you-to-a-higher-standard-than-you-hold-yourself-96f12c186375"><span><b>https://medium.com/the-mission/surround-yourself-with-people-who-hold-you-to-a-higher-standard-than-you-hold-yourself-96f12c186375</b></span></a>
               </div>
             </div>
           </div>
           <div class="col-md-4 ftco-animate">
-            <div class="blog-entry" data-aos-delay="100">
-              <a href="blog-single.html" class="block-20" style="background-image: url('new_images/image_2.jpg');">
+            <div class="blog-entry">
+              <a href="blog-single.html" class="block-20" style="background-image: url('images/blog2.PNG');">
               </a>
-              <div class="text d-flex py-4">
-                <div class="meta mb-3">
-                  <div><a href="#">Sep. 20, 2018</a></div>
-                  <div><a href="#">Admin</a></div>
-                  <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
-                </div>
-                <div class="desc pl-3">
-	                <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about the blind texts</a></h3>
-	              </div>
+              <div class="text py-4">
+               <h3 class="heading"><a href="#">The 2 Mental Shifts Highly Successful People Make</a></h3>
+               <a href="https://medium.com/@benjaminhardy/the-2-mental-shifts-highly-successful-people-make-7089450c2d7c"><span><b>https://medium.com/@benjaminhardy/the-2-mental-shifts-highly-successful-people-make-7089450c2d7c</b></span></a>
               </div>
             </div>
           </div>
           <div class="col-md-4 ftco-animate">
-            <div class="blog-entry" data-aos-delay="200">
-              <a href="blog-single.html" class="block-20" style="background-image: url('new_images/image_3.jpg');">
+            <div class="blog-entry">
+              <a href="blog-single.html" class="block-20" style="background-image: url('images/blog3.PNG');">
               </a>
-              <div class="text d-flex py-4">
-                <div class="meta mb-3">
-                  <div><a href="#">Sep. 20, 2018</a></div>
-                  <div><a href="#">Admin</a></div>
-                  <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
-                </div>
-                <div class="desc pl-3">
-	                <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about the blind texts</a></h3>
-	              </div>
+              <div class="text py-4">
+               <h3 class="heading"><a href="#">The Benefits of Living a 24-Hour Life</a></h3>
+               <a href="https://medium.com/thrive-global/skyrocket-your-productivity-by-living-a-24-hour-life-a778f1c8f627"><span><b>https://medium.com/thrive-global/skyrocket-your-productivity-by-living-a-24-hour-life-a778f1c8f627</b></span></a>
               </div>
             </div>
           </div>
