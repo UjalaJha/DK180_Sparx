@@ -211,119 +211,75 @@
                 </div>
             <div class="row" style="margin-top:40px;padding-left:20px;padding-right:20px;">
 
-              @foreach($course_recommendation as $course)
-                 <div class="col-md-4">
-                  <div class="card card-profile">
-                    <div class="card-avatar">
-                      <a href="javascript:;">
-                        <img class="img" src="../assets/img/udemy.png"/>
-                      </a>
-                    </div>
-                    <div class="card-body">
-                      <h5 class="card-category" style="color:black;font-size:15px;">{{$course['title']}}</h5>
-                       <p class="card-description">
-                        Design Mobile Apps from scratch using Photoshop. UI and UX Design Adobe Photoshop CC 2018 and Illustrator.Master UI & Ux
-                      </p>
-                      <h5 class="card-title"><a href="https://www.udemy.com/mobile-app-design-in-photoshop-complete-music-app-design/">{{$course['url']}}</a></h5>
-                     
-                      <div class="price-label">Price : Rs 420/-</div>
-                    </div>
+                    <div class="card">
+                            <h5 class="card-header" style="font-weight: bold">You look like a good fit in below job roles</h5>
+                            <div class="card-body p-0">
+                                <ul class="traffic-sales list-group list-group-flush">
+                                  
+                            @foreach($job_recommendation as $job)
+
+                                    <li class="traffic-sales-content list-group-item "><span class="traffic-sales-name">{{$job}}</span>
+                                    </li>
+                            @endforeach
+                                    <!-- <li class="traffic-sales-content list-group-item"><span class="traffic-sales-name">Fearless
+                                        </span>
+                                    </li>
+                                    <li class="traffic-sales-content list-group-item "><span class="traffic-sales-name">Hardworking
+                                        </span>
+                                    </li> -->
+                                </ul>
+                            </div>
+                            
+                        </div>
+                        <div class="row">
+                     @foreach($jobs_list as $jobs)
+
+                    <div class="card">
+                            <h5 class="card-header" style="font-weight: bold">You look like a good fit in below job roles</h5>
+                            <div class="card-body p-0">
+                                <ul class="traffic-sales list-group list-group-flush">
+                                  <?php
+                                  // echo "<pre>";
+                                  // print_r($jobs_list);
+                                  ?>
+                                    <li class="traffic-sales-content list-group-item "><span class="traffic-sales-name">
+                                          {{$jobs['from']}}
+                                    </span>
+                                    </li>
+                                    <li class="traffic-sales-content list-group-item "><span class="traffic-sales-name">
+                                          {{$jobs['job_company']}}
+                                    </span>
+                                    </li>
+                                    <li class="traffic-sales-content list-group-item "><span class="traffic-sales-name">
+                                          {{$jobs['job_link']}}
+                                    </span>
+                                    </li>
+                                    <li class="traffic-sales-content list-group-item "><span class="traffic-sales-name">
+                                          {{$jobs['job_location']}}
+                                    </span>
+                                    </li>
+                                    <li class="traffic-sales-content list-group-item "><span class="traffic-sales-name">
+                                          {{$jobs['job_summary']}}
+                                    </span>
+                                    </li>
+                                    <li class="traffic-sales-content list-group-item "><span class="traffic-sales-name">
+                                          {{$jobs['job_title']}}
+                                    </span>
+                                    </li> 
+
+                                    <!-- <li class="traffic-sales-content list-group-item"><span class="traffic-sales-name">Fearless
+                                        </span>
+                                    </li>
+                                    <li class="traffic-sales-content list-group-item "><span class="traffic-sales-name">Hardworking
+                                        </span>
+                                    </li> -->
+                                </ul>
+                            </div>
+
                   </div>
-                </div>
-                @endforeach
-                 <div class="col-md-4">
-                  <div class="card card-profile">
-                    <div class="card-avatar">
-                      <a href="javascript:;">
-                        <img class="img" src="../assets/img/udemy.png"/>
-                      </a>
-                    </div>
-                    <div class="card-body">
-                      <h5 class="card-category" style="color:black;font-size:15px;">Mobile App Design in Photoshop from Scratch - UI & UX DESIGN</h5>
-                       <p class="card-description">
-                        Design Mobile Apps from scratch using Photoshop. UI and UX Design Adobe Photoshop CC 2018 and Illustrator.Master UI & Ux
-                      </p>
-                      <h5 class="card-title"><a href="https://www.udemy.com/mobile-app-design-in-photoshop-complete-music-app-design/">https://www.udemy.com/mobile-app-design-in-photoshop-complete-music-app-design/</a></h5>
-                     
-                      <div class="price-label">Price : Rs 420/-</div>
-                    </div>
-                  </div>
-                </div>
-                  <div class="col-md-4">
-                  <div class="card card-profile">
-                    <div class="card-avatar">
-                      <a href="javascript:;">
-                        <img class="img" src="../assets/img/udemy.png"/>
-                      </a>
-                    </div>
-                    <div class="card-body">
-                      <h5 class="card-category" style="color:black;font-size:15px;">Mobile App Design in Photoshop from Scratch - UI & UX DESIGN</h5>
-                       <p class="card-description">
-                        Design Mobile Apps from scratch using Photoshop. UI and UX Design Adobe Photoshop CC 2018 and Illustrator.Master UI & Ux
-                      </p>
-                      <h5 class="card-title"><a href="https://www.udemy.com/mobile-app-design-in-photoshop-complete-music-app-design/">https://www.udemy.com/mobile-app-design-in-photoshop-complete-music-app-design/</a></h5>
-                     
-                      <div class="price-label">Price : Rs 420/-</div>
-                    </div>
-                  </div>
-                </div>
+                                                  @endforeach
               </div>
-              <div class="row" style="margin-top:40px;">
-                 <div class="col-md-4">
-                  <div class="card card-profile">
-                    <div class="card-avatar">
-                      <a href="javascript:;">
-                        <img class="img" src="../assets/img/udemy.png"/>
-                      </a>
-                    </div>
-                    <div class="card-body">
-                      <h5 class="card-category" style="color:black;font-size:15px;">Mobile App Design in Photoshop from Scratch - UI & UX DESIGN</h5>
-                       <p class="card-description">
-                        Design Mobile Apps from scratch using Photoshop. UI and UX Design Adobe Photoshop CC 2018 and Illustrator.Master UI & Ux
-                      </p>
-                      <h5 class="card-title"><a href="https://www.udemy.com/mobile-app-design-in-photoshop-complete-music-app-design/">https://www.udemy.com/mobile-app-design-in-photoshop-complete-music-app-design/</a></h5>
-                     
-                      <div class="price-label">Price : Rs 420/-</div>
-                    </div>
-                  </div>
-                </div>
-                  <div class="col-md-4">
-                  <div class="card card-profile">
-                    <div class="card-avatar">
-                      <a href="javascript:;">
-                        <img class="img" src="../assets/img/udemy.png"/>
-                      </a>
-                    </div>
-                    <div class="card-body">
-                      <h5 class="card-category" style="color:black;font-size:15px;">Mobile App Design in Photoshop from Scratch - UI & UX DESIGN</h5>
-                       <p class="card-description">
-                        Design Mobile Apps from scratch using Photoshop. UI and UX Design Adobe Photoshop CC 2018 and Illustrator.Master UI & Ux
-                      </p>
-                      <h5 class="card-title"><a href="https://www.udemy.com/mobile-app-design-in-photoshop-complete-music-app-design/">https://www.udemy.com/mobile-app-design-in-photoshop-complete-music-app-design/</a></h5>
-                     
-                      <div class="price-label">Price : Rs 420/-</div>
-                    </div>
-                  </div>
-                </div>
-                   <div class="col-md-4">
-                  <div class="card card-profile">
-                    <div class="card-avatar">
-                      <a href="javascript:;">
-                        <img class="img" src="../assets/img/udemy.png"/>
-                      </a>
-                    </div>
-                    <div class="card-body">
-                      <h5 class="card-category" style="color:black;font-size:15px;">Mobile App Design in Photoshop from Scratch - UI & UX DESIGN</h5>
-                       <p class="card-description">
-                        Design Mobile Apps from scratch using Photoshop. UI and UX Design Adobe Photoshop CC 2018 and Illustrator.Master UI & Ux
-                      </p>
-                      <h5 class="card-title"><a href="https://www.udemy.com/mobile-app-design-in-photoshop-complete-music-app-design/">https://www.udemy.com/mobile-app-design-in-photoshop-complete-music-app-design/</a></h5>
-                     
-                      <div class="price-label">Price : Rs 420/-</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              
             
             </div>
         </div>

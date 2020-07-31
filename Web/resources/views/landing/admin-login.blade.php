@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Login</title>
+	<title>Admin Login</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!--===============================================================================================-->
@@ -34,20 +34,20 @@
 		<div class="wrap-login100 p-l-55 p-r-55 p-t-65 p-b-54">
 			<!-- <form class="login100-form validate-form"> -->
 			<span class="login100-form-title p-b-49">
-						Login
+						Admin Login
 					</span>
-			<form method="post" action="/logins">
+			<form method="post" action="/admin_login">
 				@csrf
 
 				<div class="wrap-input100 validate-input m-b-23" data-validate = "Username is reauired">
 					<span class="label-input100">Username/Email</span>
-					<input class="input100" type="email" required name="email" placeholder="Type your email">
+					<input class="input100" type="email" required name="admin_email" placeholder="Type your email">
 					<span class="focus-input100" data-symbol="&#xf206;"></span>
 				</div>
 
 				<div class="wrap-input100 validate-input" data-validate="Password is required">
 					<span class="label-input100">Password</span>
-					<input class="input100" type="password" required name="password" placeholder="Type your password">
+					<input class="input100" type="password" required name="admin_password" placeholder="Type your password">
 					<span class="focus-input100" data-symbol="&#xf190;"></span>
 				</div>
 
@@ -69,40 +69,8 @@
 					</div>
 				</div><br>
 
-				
 			</form>
 
-			<div class="container-login100-form-btn">
-				<div class="wrap-login100-form-btn">
-					<div class="login100-form-bgbtn"></div>
-					<a href="/signup"><button class="login100-form-btn" type="submit">
-							Sign Up
-						</button></a>
-
-				</div>
-			</div>
-
-			<div class="txt1 text-center p-t-54 p-b-20">
-						<span>
-							Or Sign Up Using
-						</span>
-			</div>
-
-			<div class="flex-c-m">
-				<a href="#" class="login100-social-item bg1">
-					<i class="fa fa-facebook"></i>
-				</a>
-
-				<a href="#" class="login100-social-item bg2">
-					<i class="fa fa-twitter"></i>
-				</a>
-
-				<a href="#" class="login100-social-item bg3">
-					<i class="fa fa-google"></i>
-				</a>
-			</div>
-
-			
 				
 			<!-- </form> -->
 		</div>

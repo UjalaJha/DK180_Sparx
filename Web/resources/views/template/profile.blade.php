@@ -403,6 +403,8 @@ a.portfolio-link {
        </section>
           
           <!-- <a href="#pablo" class="btn btn-primary btn-round">Follow</a> -->
+            <a href="resumes/{{$user_details[0]['resume_filename']}}" target="_blank" class="btn btn-success btn-round" style="margin-left: 400px; font-size: 22px;">View Resume</a>
+
         </div>
       </div>
     </div>

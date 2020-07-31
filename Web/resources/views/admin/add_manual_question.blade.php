@@ -20,6 +20,7 @@
                         <form action="/save_manual_question" method="post">
                             @csrf
 
+                            <input type="hidden" name="tq_category_details_id" value="{{$tq_category_details_id}}">
                             <input type="hidden" name="tq_concept_details_id" value="{{$tq_concept_details_id}}">
 
                             <?php

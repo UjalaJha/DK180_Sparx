@@ -92,12 +92,12 @@ class TQController extends Controller
     public function start_test($skill_id){
        // echo $skill_id;
        // exit;
-        $question_details = TQ::where('tq_concept_details_id', $skill_id)->where('is_level_2',0)->get();
+        $question_details = TQ::where('tq_category_details_id', $skill_id)->where('is_level_2',0)->get();
         // echo "<pre>";
         // print_r($question_details);
         // exit;
 
-        $all_question_id = TQ::where('tq_concept_details_id', $skill_id)->where('is_level_2',0)->pluck('question_id');
+        $all_question_id = TQ::where('tq_category_details_id', $skill_id)->where('is_level_2',0)->pluck('question_id');
 
         $ques_array = json_decode(json_encode($all_question_id), true);
         $_SESSION["all_question_id"] = $ques_array;

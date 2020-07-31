@@ -469,14 +469,14 @@
 
     // alert(tag);
     function check_ans(tag, val, question_id){
-        alert(tag);
+        // alert(tag);
         // alert(val);
         // var tag = document.getElementById('answer').value;
         var choosedAns = val;
-        alert("choosed val = "+choosedAns);
+        // alert("choosed val = "+choosedAns);
         choosedAns = parseInt(choosedAns);
         var currentVal=localStorage.getItem(tag);
-        alert("current val was "+currentVal);
+        // alert("current val was "+currentVal);
         // flag=parseInt(flag);
 
 
@@ -484,26 +484,26 @@
         var getCheckValue = JSON.parse(localStorage.getItem("setAns"));
         if(getCheckValue[question_id-1]==0){
             var total = (parseInt(currentVal)+choosedAns);
-            alert("sum is "+total);
+            // alert("sum is "+total);
             localStorage.setItem(tag, total);
             getCheckValue[question_id-1] = 1;
             localStorage.setItem("setAns",JSON.stringify(getCheckValue));
-            alert("updated val "+localStorage.getItem(tag));
+            // alert("updated val "+localStorage.getItem(tag));
             document.getElementById(tag).value=localStorage.getItem(tag);
 
         }else{
             if(choosedAns == 1){
                 var total = (parseInt(currentVal)+choosedAns+1);
-                alert("sum is "+total);
+                // alert("sum is "+total);
                 localStorage.setItem(tag, total);
-                alert("updated val "+localStorage.getItem(tag));
+                // alert("updated val "+localStorage.getItem(tag));
                 document.getElementById(tag).value=localStorage.getItem(tag);
 
             }else if(choosedAns == -1){
                 var total = (parseInt(currentVal)+choosedAns-1);
-                alert("sum is "+total);
+                // alert("sum is "+total);
                 localStorage.setItem(tag, total);
-                alert("updated val "+localStorage.getItem(tag));
+                // alert("updated val "+localStorage.getItem(tag));
                 document.getElementById(tag).value=localStorage.getItem(tag);
 
             }

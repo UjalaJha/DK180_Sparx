@@ -56,7 +56,7 @@ def getFrame(vidcap, sec, count):
     vidcap.set(cv2.CAP_PROP_POS_MSEC, sec * 1000)
     hasFrames, image = vidcap.read()
     if hasFrames:
-        cv2.imwrite("/VideoPredict/frames/frame" + str(count) + ".jpg", image)  # save frame as JPG file
+        cv2.imwrite("frames/frame" + str(count) + ".jpg", image)  # save frame as JPG file
     return hasFrames
 
 
@@ -116,6 +116,56 @@ def emo_to_ocean(emo_data):
             emo = "Neutral"
             return emo
 
+def emo_to_ocean1(emo_data):
+    traits = []
+    for index, row in emo_data.iterrows():
+        if (row['Emotion'] == 0):
+            NO = "NEGATIVE OPENNESS"
+            traits.append(NO)
+            NA = "NEGATIVE AGREEABLENESS"
+            traits.append(NA)
+            PA = "POSITIVE NEUROTICISM"
+            traits.append(PA)
+            return traits
+
+        elif (row['Emotion'] == 1):
+            NC = "NEGATIVE CONSCIENTIOUSNESS"
+            traits.append(NC)
+            NE = "NEGATIVE EXTRAVERSION"
+            traits.append(NE)
+            PN = "POSITIVE NEUROTICISM"
+            traits.append(PN)
+            return traits
+
+        elif (row['Emotion'] == 2):
+            NC = "NEGATIVE CONSCIENTIOUSNESS"
+            traits.append(NC)
+            NE = "NEGATIVE EXTRAVERSION"
+            traits.append(NE)
+            PN = "POSITIVE NEUROTICISM"
+            traits.append(PN)
+            return traits
+
+        elif (row['Emotion'] == 3):
+            PE = "POSITIVE EXTRAVERSION"
+            traits.append(PE)
+            NN = "NEGATIVE NEUROTICISM"
+            traits.append(NN)
+            return traits
+
+        elif (row['Emotion'] == 4):
+            PN = "POSITIVE NEUROTICISM"
+            traits.append(PN)
+            return traits
+
+        elif (row['Emotion'] == 5):
+            sur = "No mentionable Big 5 personality trait !! Candidate was found surprised during their interview"
+            return sur
+
+        elif (row['Emotion'] == 6):
+            NN = "NEGATIVE NEUROTICISM"
+            traits.append(NN)
+            return traits
 
 def home(request):
     documents = Document.objects.all()
@@ -124,13 +174,13 @@ def home(request):
 
 def video_upload(request):
     if request.method == 'POST' and request.FILES['myfile']:
-        dir_name = "/VideoPredict/frames/"
+        dir_name = "frames/"
         test1 = os.listdir(dir_name)
         for item in test1:
             if item.endswith(".jpg"):
                 os.remove(os.path.join(dir_name, item))
 
-        dir_name = "/VideoPredict/resume/"
+        dir_name = "resume/"
         test1 = os.listdir(dir_name)
         for item in test1:
             if item.endswith(".mp4"):
@@ -140,13 +190,13 @@ def video_upload(request):
         fs = FileSystemStorage()
         filename = fs.save(myfile.name, myfile)
         uploaded_file_url = fs.url(filename)
-        video_path = "/VideoPredict/resume/"
+        video_path = "resume/"
         files = []
         for i in os.listdir(video_path):
             if i.endswith('.mp4'):
                 files.append(i)
         for j in files:
-            vidcap = cv2.VideoCapture("/VideoPredict/resume/" + j)
+            vidcap = cv2.VideoCapture("resume/" + j)
             sec = 0
             count = 1
             frameRate = 5
@@ -165,7 +215,7 @@ def video_upload(request):
 
 #check result of video interview
 def check_result(request):
-    img_path = glob.glob("/VideoPredict/frames/*.jpg")
+    img_path = glob.glob("frames/*.jpg")
     data = []
     for image1 in img_path:
         n = cv2.imread(image1)
@@ -201,8 +251,11 @@ def check_result(request):
 
     emo_result = emo_to_ocean(dominant_emo)
 
+    emo_result1 = emo_to_ocean1(dominant_emo)
+
     return render(request, 'core/check_result.html', {
         'emo_result': emo_result,
+        'emo_result1':emo_result1,
         'emo_jso': emo_jso,
         'dom_jso':dom_jso
     })

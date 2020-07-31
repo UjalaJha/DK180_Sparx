@@ -148,4 +148,27 @@ class LoginController extends Controller
         }
 
     }
+
+
+
+
+    public function admin_login_check()
+    {
+        if(empty($_POST['admin_email'])){
+            echo "invalid";
+            return view('landing/admin-login');
+            exit();
+        }
+
+        $admin_email = $_POST['admin_email'];
+        $admin_password = $_POST['admin_password'];
+        if($admin_email== 'admin@hireconnect.com' && $admin_password == 'abc123'){
+            return view('admin/add_new_test');
+        }else{
+            return view('landing/admin-login');
+        }
+
+    }
+
+
 }
