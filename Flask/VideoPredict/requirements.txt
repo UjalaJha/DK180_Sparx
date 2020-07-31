@@ -1,8 +1,6 @@
 opencv-python==3.3.0.9
 numpy
 pandas
-#glob
-#glob2
 glob3
 requests==2.21.0
 scipy
