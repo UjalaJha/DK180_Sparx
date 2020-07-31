@@ -17336,10 +17336,10 @@ label {
 
 .card-profile .card-avatar {
   margin: -50px auto 0;
-  border-radius: 50%;
+  /*border-radius: 50%;*/
   overflow: hidden;
   padding: 0;
-  box-shadow: 0 16px 38px -12px rgba(0, 0, 0, 0.56), 0 4px 25px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 16px 36px -12px rgba(0, 0, 0, 0.3);
 }
 
 .card-profile .card-avatar+.card-body {
@@ -17348,7 +17348,7 @@ label {
 
 .card-profile .card-avatar img {
   width: 100%;
-  height: auto;
+  height: 120px;
 }
 
 .card-profile .card-body+.card-footer {

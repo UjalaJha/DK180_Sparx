@@ -114,11 +114,15 @@
                         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
                         <div class="card">
                             <h5 class="card-header" style="font-weight: bold">Adversity Quotient Metrics</h5>
-                            <h4>Persistence:{{$aq[0]->aq_persistence}}</h4>
-          <h4>Boldness:{{$aq[0]->aq_boldness}}</h4>
-          <h4>Abstraction:{{$aq[0]->aq_abstraction}}</h4>
-          <h4>Complexity:{{$aq[0]->aq_complexity}}</h4>
-          <h4>Cueriosity:{{$aq[0]->aq_curiosity}}</h4>
+
+                            <div>
+                               <button style="margin-left:20px;font-size:12px;" type="submit" class="btn btn-primary">Persistence : {{$aq[0]->aq_persistence}}</button>
+                               <button style="margin-left:20px;font-size:12px;" type="submit" class="btn btn-success">Boldness : {{$aq[0]->aq_boldness}}</button>
+                               <button style="margin-left:20px;font-size:12px;" type="submit" class="btn btn-info">Abstraction : {{$aq[0]->aq_abstraction}}</button>
+                               <button style="margin-left:20px;font-size:12px;" type="submit" class="btn btn-warning">Complexity : {{$aq[0]->aq_complexity}}</button>
+                               <button style="margin-left:20px;font-size:12px;" type="submit" class="btn btn-danger">Curiosity : {{$aq[0]->aq_curiosity}}</button>
+                          
+                            </div>
                             <div class="card-body">
                                 <canvas id="chartjs_radar"></canvas>
                             </div>
@@ -265,145 +269,12 @@
                         </div>
                     </div>
 
-                    <!--TQ Skills Tabular Format -->
-                    <div class="col-xl-4 col-lg-12 col-md-4 col-sm-12 col-12">
-                    <div class="card">
-                            <h5 class="card-header" style="font-weight: bold"> Adjectives that define you</h5>
-                            <div class="card-body p-0">
-                                <ul class="traffic-sales list-group list-group-flush">
-                                    <li class="traffic-sales-content list-group-item "><span class="traffic-sales-name">Abstract Thinker</span>
-                                    </li>
-                                    <li class="traffic-sales-content list-group-item"><span class="traffic-sales-name">Logical
-                                        </span>
-                                    </li>
-                                    <li class="traffic-sales-content list-group-item"><span class="traffic-sales-name">Analytical Thinker
-                                        </span>
-                                    </li>
-                                    <li class="traffic-sales-content list-group-item"><span class="traffic-sales-name">Fearless
-                                        </span>
-                                    </li>
-                                    <li class="traffic-sales-content list-group-item "><span class="traffic-sales-name">Hardworking
-                                        </span>
-                                    </li>
-                                </ul>
-                            </div>
-                            
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-lg-12 col-md-4 col-sm-12 col-12">
-                    <div class="card">
-                            <h5 class="card-header" style="font-weight: bold">You look like a good fit in below job roles</h5>
-                            <div class="card-body p-0">
-                                <ul class="traffic-sales list-group list-group-flush">
-                                  
-                                    <li class="traffic-sales-content list-group-item "><span class="traffic-sales-name">Data Analyst</span>
-                                    </li>
-                                    <li class="traffic-sales-content list-group-item"><span class="traffic-sales-name">Business Analyst
-                                        </span>
-                                    </li>
-                                    <li class="traffic-sales-content list-group-item"><span class="traffic-sales-name">Data Engineer
-                                        </span>
-                                    </li>
-                                    <!-- <li class="traffic-sales-content list-group-item"><span class="traffic-sales-name">Fearless
-                                        </span>
-                                    </li>
-                                    <li class="traffic-sales-content list-group-item "><span class="traffic-sales-name">Hardworking
-                                        </span>
-                                    </li> -->
-                                </ul>
-                            </div>
-                            
-                        </div>
-                    </div>
-                    <a href="/jobrecommendation">
-                <button style="margin-left:30px;" type="submit" class="btn btn-primary">Know the best role suited for you!!</button>
+                    
+                  
+              <a href="/jobrecommendation">
+              <button style="margin-left:30px;" type="submit" class="btn btn-primary">Know the best role suited for you!!</button>
               </a>
-
-
-
-                </div>
-
-
-
-
-
-
-            <section class="site-section">
-                <div class="container jobs">
-
-                    <div class="row mb-5 justify-content-center">
-                        <div class="col-md-7 text-center">
-                            <h2 class="section-title mb-2">50 Jobs Listed</h2>
-                        </div>
-                    </div>
-
-
-                    <div class="mb-5">
-                        <!-- <div class="row align-items-start job-item border-bottom pb-3 mb-3 pt-3">
-                          <div class="col-md-2">
-                            <a href="job-single.html"><img src="images/featured-listing-1.jpg" alt="Image" class="img-fluid"></a>
-                          </div>
-                          <div class="col-md-4">
-                            <span class="badge badge-primary px-2 py-1 mb-3">Freelancer</span>
-                            <h2><a href="job-single.html">Dropbox Product Designer</a> </h2>
-                            <p class="meta">Publisher: <strong>John Stewart</strong> In: <strong>Design</strong></p>
-                          </div>
-                          <div class="col-md-3 text-left">
-                            <h3>Melbourn</h3>
-                            <span class="meta">Australia</span>
-                          </div>
-                          <div class="col-md-3 text-md-right">
-                            <strong class="text-black">$60k &mdash; $100k</strong>
-                          </div>
-                        </div> -->
-
-
-                        <!-- <div class="row align-items-start job-item border-bottom pb-3 mb-3 pt-3">
-                          <div class="col-md-2">
-                            <a href="job-single.html"><img src="images/featured-listing-4.jpg" alt="Image" class="img-fluid"></a>
-                          </div>
-                          <div class="col-md-4">
-                            <span class="badge badge-primary px-2 py-1 mb-3">Freelancer</span>
-                            <h2><a href="job-single.html">Dropbox Product Designer</a> </h2>
-                            <p class="meta">Publisher: <strong>John Stewart</strong> In: <strong>Design</strong></p>
-                          </div>
-                          <div class="col-md-3 text-left">
-                            <h3>Melbourn</h3>
-                            <span class="meta">Australia</span>
-                          </div>
-                          <div class="col-md-3 text-md-right">
-                            <strong class="text-black">$60k &mdash; $100k</strong>
-                          </div>
-                        </div> -->
-
-
-
-                    </div>
-
-                    <!-- <div class="row pagination-wrap">
-
-                      <div class="col-md-6 text-center text-md-left">
-                        <div class="custom-pagination ml-auto">
-                          <a href="#" class="prev">Previous</a>
-                          <div class="d-inline-block">
-                            <a href="#" class="active">1</a>
-                            <a href="#">2</a>
-                            <a href="#">3</a>
-                            <a href="#">4</a>
-                          </div>
-                          <a href="#" class="next">Next</a>
-                        </div>
-                      </div>
-                    </div> -->
-
-                </div>
-            </section>
-
-
-
-
-
-
+            </div>
 
         </div>
         </div>
