@@ -726,6 +726,7 @@ class UserController extends Controller
         // $data['skills']='python,graphql,chatbot,bootstrap,finance,angularjs,machine learning,ai,rest';
         $json=json_encode($data);
         // print_r($json);
+        // exit();
         $curl = curl_init();
 
         curl_setopt_array($curl, array(
@@ -747,9 +748,10 @@ class UserController extends Controller
 
         curl_close($curl);
         $recommendation=json_decode($response,true);
+        
+        // echo "<pre>";
         // print_r($recommendation);
         // exit();
-        // echo "<pre>";
         // echo "<pre>";
         // print_r($recommendation['recommended_blogs']);
         // $a=array();
