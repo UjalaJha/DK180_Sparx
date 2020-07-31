@@ -14,6 +14,16 @@
 Route::get('/', function () {
     return view('new_landing/index');
 });
+Route::get('/about', function () {
+    return view('new_landing/about');
+});
+Route::get('/contact', function () {
+    return view('new_landing/contact');
+});
+Route::get('/chatbot', function () {
+    return view('new_landing/chatbot');
+});
+
 Route::get('/test','TestControler@index');
 
 Route::post('save_iq_score','TestControler@storeIQ');

@@ -38,10 +38,10 @@
 
 	      <div class="collapse navbar-collapse" id="ftco-nav">
 	        <ul class="navbar-nav ml-auto">
-	          <li class="nav-item active"><a href="index.html" class="nav-link">Home</a></li>
-	          <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
-	          <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
-	          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+	          <li class="nav-item active"><a href="/" class="nav-link">Home</a></li>
+	          <li class="nav-item"><a href="/about" class="nav-link">About</a></li>
+	          <li class="nav-item"><a href="/chatbot" class="nav-link">FAQ</a></li>
+	          <li class="nav-item"><a href="/contact" class="nav-link">Contact</a></li>
 	          <li class="nav-item cta"><a href="contact.html" style="margin-left:20px;" class="nav-link"><span>Admin Login</span></a></li>
             <li class="nav-item cta"><a href="/companylogin" style="margin-left:20px;" class="nav-link"><span>Company Login</span></a></li>
             <li class="nav-item cta"><a href="/login" style="margin-left:20px;" class="nav-link"><span>Candidate Login</span></a></li>
@@ -325,6 +325,20 @@
         </div>
       </div>
     </section>
+     <section class="ftco-domain">
+      <div class="container">
+        <div class="row d-flex">
+          <div class="col-lg-8 heading-white mb-4 mb-sm-4 mb-lg-0 ftco-animate">
+            <h2>Do you have any Questions ?</h2>
+            <p>Ask all your questions related to our system from our 24 X 7 HireBuddy Chatbot!!</p>
+          </div>
+          <div class="col-lg-4 ftco-wrap ftco-animate">
+           <a href="/chatbot" class="btn btn-primary p-3 px-xl-5 py-xl-3">Ask Question</a>
+            <!-- <p class="domain-price mt-2"><span><small>.com</small> $9.75</span> <span><small>.net</small> $9.50</span> <span><small>.biz</small> $8.95</span> <span><small>.co</small> $7.80</span><span><small>.me</small> $7.95</span></p> -->
+          </div>
+        </div>
+      </div>
+    </section>
 
 <!--     <section class="ftco-domain">
     	<div class="container">
@@ -501,14 +515,7 @@
               <a href="blog-single.html" class="block-20" style="background-image: url('new_images/image_1.jpg');">
               </a>
               <div class="text d-flex py-4">
-                <div class="meta mb-3">
-                  <div><a href="#">Sep. 20, 2018</a></div>
-                  <div><a href="#">Admin</a></div>
-                  <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
-                </div>
-                <div class="desc pl-3">
-	                <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about the blind texts</a></h3>
-	              </div>
+               <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about the blind texts</a></h3>
               </div>
             </div>
           </div>
@@ -566,8 +573,8 @@
             <div class="ftco-footer-widget mb-4 ml-md-5">
               <h2 class="ftco-heading-2">Login</h2>
               <ul class="list-unstyled">
-                <li><a href="#" class="py-2 d-block">Candidate Login</a></li>
-                <li><a href="#" class="py-2 d-block">Company Login</a></li>
+                <li><a href="/login" class="py-2 d-block">Candidate Login</a></li>
+                <li><a href="/companylogin" class="py-2 d-block">Company Login</a></li>
               </ul>
             </div>
           </div>
@@ -575,10 +582,10 @@
              <div class="ftco-footer-widget mb-4">
               <h2 class="ftco-heading-2">Navigational</h2>
               <ul class="list-unstyled">
-                <li><a href="index.html" class="py-2 d-block">Home</a></li>
-                <li><a href="about.html" class="py-2 d-block">About</a></li>
-                <li><a href="blog.html" class="py-2 d-block">Blog</a></li>
-                <li><a href="contact.html" class="py-2 d-block">Contact</a></li>
+                <li><a href="/" class="py-2 d-block">Home</a></li>
+                <li><a href="/about" class="py-2 d-block">About</a></li>
+                <li><a href="/chatbot" class="py-2 d-block">FAQ</a></li>
+                <li><a href="/contact" class="py-2 d-block">Contact</a></li>
               </ul>
             </div>
           </div>
