@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Login V4</title>
+	<title>Login</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!--===============================================================================================-->
@@ -41,7 +41,7 @@
 
 				<div class="wrap-input100 validate-input m-b-23" data-validate = "Username is reauired">
 					<span class="label-input100">Username/Email</span>
-					<input class="input100" type="text" required name="email" placeholder="Type your email">
+					<input class="input100" type="email" required name="email" placeholder="Type your email">
 					<span class="focus-input100" data-symbol="&#xf206;"></span>
 				</div>
 
@@ -64,10 +64,24 @@
 						<button class="login100-form-btn" type="submit">
 							Login
 						</button>
+						
 
 					</div>
-				</div>
+				</div><br>
+
+				
 			</form>
+
+			<div class="container-login100-form-btn">
+				<div class="wrap-login100-form-btn">
+					<div class="login100-form-bgbtn"></div>
+					<a href="/signup"><button class="login100-form-btn" type="submit">
+							Sign Up
+						</button></a>
+
+				</div>
+			</div>
+
 			<div class="txt1 text-center p-t-54 p-b-20">
 						<span>
 							Or Sign Up Using
@@ -88,22 +102,8 @@
 				</a>
 			</div>
 
-			<div class="flex-col-c p-t-155">
-						<span class="txt1 p-b-17">
-							Or Sign Up Using
-						</span>
-
-				<a href="/signup" class="txt2">
-					Sign Up
-				</a>
-			</div>
-
-			<div class="txt1 text-center p-t-54 p-b-20">
-
-				<a href="index.html" class="txt2">
-					Go back to Home
-				</a>
-			</div>
+			
+				
 			<!-- </form> -->
 		</div>
 	</div>

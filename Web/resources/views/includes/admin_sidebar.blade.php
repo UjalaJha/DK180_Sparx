@@ -8,9 +8,7 @@
         Tip 2: you can also add an image using data-image tag
     -->
       <div class="logo">
-        <a href="http://www.creative-tim.com" class="simple-text logo-normal">
-          HIRECONNECT
-        </a>
+        <img src="../assets/img/logo.png" width="250px" height="70px">
       </div>
       <div class="sidebar-wrapper">
         <ul class="nav">
@@ -33,12 +31,6 @@
             </a>
           </li>
           <li class="nav-item ">
-            <a class="nav-link" href="/post_job">
-              <i class="material-icons">PJ</i>
-              <p>Post a new Job</p>
-            </a>
-          </li>
-          <li class="nav-item ">
             <a class="nav-link" href="/search_students">
               <i class="material-icons">bubble_chart</i>
               <p>Look for Students</p>
@@ -48,7 +40,21 @@
           <li class="nav-item ">
             <a class="nav-link" href="./linkedin_students">
               <i class="material-icons">notifications</i>
-              <p>LinkedIn Profiles</p>
+              <p>Look for Companies</p>
+            </a>
+          </li>
+
+          <li class="nav-item ">
+            <a class="nav-link" href="add_test">
+              <i class="material-icons">content_paste</i>
+              <p>Add Test</p>
+            </a>
+          </li>
+
+          <li class="nav-item ">
+            <a class="nav-link" href="add_question">
+              <i class="material-icons">bubble_chart</i>
+              <p>Add Question</p>
             </a>
           </li>
           

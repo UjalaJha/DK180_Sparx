@@ -47,6 +47,8 @@
 
         <div class="right-cta-menu text-right d-flex aligin-items-center col-6">
           <div class="ml-auto">
+            <a href="/admin_login" class="btn btn-primary border-width-2 d-none d-lg-inline-block"><span class="mr-2 icon-paper-plane"></span>Admin Login</a>
+
             <a href="/login" class="btn btn-primary border-width-2 d-none d-lg-inline-block"><span class="mr-2 icon-paper-plane"></span>Candidate Login</a>
 
             <a href="/companylogin" class="btn btn-primary border-width-2 d-none d-lg-inline-block"><span class="mr-2 icon-paper-plane"></span>Company Login</a>

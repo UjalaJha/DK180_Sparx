@@ -7,6 +7,7 @@ use App\UserAcademics;
 use App\UserExperiences;
 use App\UserTechnical;
 use App\UserRatings;
+use App\UserHGMI;
 use App\TQCategoryDetails;
 use Session;
 
@@ -57,8 +58,9 @@ class UserController extends Controller
 //        if($user_detail){
 //            echo "sn";
 //        }
-//        echo "<pre>";
-//        print_r($user_detail);
+       // echo "<pre>";
+       // print_r($user_detail);
+       // exit;
         $size=sizeof($user_detail);
 //        echo $size;
         $count=0;
@@ -98,6 +100,8 @@ class UserController extends Controller
             echo "exists";
 //            print_r($EmptyTestArray1);
 //            print_r($EmptyTestArray2);
+            // print_r($skill_set);
+            // exit;
             return view('template/tq_instructions')->with("skill_set",$skill_set)->with("skill_id_array_set", $skill_id_array_set);
 
 
@@ -323,10 +327,37 @@ class UserController extends Controller
 
     public function jobrecommendation()
     {
-
+            $user_id=Session::get('user_id');
+        $data_fetch=UserPersonalDetails::where('user_id', $user_id)->get();
+        // echo "<pre>";
+        $data['name']=$data_fetch[0]->first_name;
+        // echo $data['name'];
+        $tq=UserTechnical::where('user_id',$user_id)->get();
+        $final_string="";
+        foreach($tq as $tqa){
+            // echo "<br>";
+        $skill_id=TQCategoryDetails::where('tq_category_details_id',$tqa->tq_category_details_id)->get();
+        $skill_name=$skill_id[0]->sub_category;
+        $score_level1=$tqa->level_1_score;
+        $score_level2=$tqa->level_2_score;
+        // echo $skill_name." ".$score_level1." ".$score_level2;
+        if($score_level2>10){
+            $tag='intermediate';
+        }elseif($score_level2>15){
+            $tag='advance';
+        }else{
+            $tag='basic';
+        }
+        // echo $tag;
+        $final_string.="$skill_name"."-"."$tag";
+    }
+    // echo "<br>";
+    // echo $final_string;
+    // $data['skills']=$final_string;
+    $skills=$final_string;
         //give this string
         // $skills="python-advance,java-basic,machine learning-advance,data science-intermediate,r-intermediate,business analytics-intermediate,sql-advance";
-        $skills='';
+        // $skills='';
 
         // $curl = curl_init();
 
@@ -351,8 +382,15 @@ class UserController extends Controller
         // echo $response;
 
         $json_string = '{"job profiles":["python/django senior software","data scientist -","database specialist  ","data software engineer","data analytics, nj","sr. data scientist","analyst - python","esri arcgis administrator","mobile sdet  ","data analystics engineer","lead data scientist","senior database administrator"],"jobs":[{"from":"Indeed","job_company":"StartUs Insights","job_id":"93ad1b7f9420a729","job_link":"https://www.indeed.co.in/jobs?q=python/django+senior+software&l=India&start=10&vjk=93ad1b7f9420a729","job_location":"Bengaluru, Karnataka","job_summary":"— Solid understanding of software development principles and best practices.\nBuilding data applications in a product company,.\nWHAT YOU GET IN RETURN: *.","job_title":"Senior Python Developer","posted_date":"21 days ago"},{"from":"Indeed","job_company":"Techversant Infotech Pvt. Ltd.","job_id":"672b77efc079ca85","job_link":"https://www.indeed.co.in/jobs?q=python/django+senior+software&l=India&start=10&vjk=672b77efc079ca85","job_location":"Thiruvananthapuram, Kerala","job_summary":"MVC software pattern and frameworks.\nWork as a member of a team or on their own to deliver high quality and maintainable software solutions, to strict deadlines…","job_title":"Sr. Software Engineer / Software Engineer - ColdFusion","posted_date":"30+ days ago"},{"from":"Indeed","job_company":"HP","job_id":"f19117ec92fc2221","job_link":"https://www.indeed.co.in/jobs?q=lead+data+scientist&l=India&start=10&vjk=f19117ec92fc2221","job_location":"Bengaluru, Karnataka","job_summary":"O Fluent in structured and unstructured data and modern data transformation methodologies.\nO Leads a project team of data science professionals.","job_title":"Data Scientist Sales & Channel","posted_date":"25 days ago"}]}';
-        echo "<pre>";
-        print_r(json_decode($json_string,true));
+        // echo "<pre>";
+        $recommendation=json_decode($json_string,true);
+        print_r($recommendation['job profiles']);
+                print_r($recommendation['jobs']);
+                // exit;
+        
+            return view('template/job_recomended')->with('job_recommendation',$recommendation['job profiles'])->with('jobs_list',$recommendation['jobs']);
+
+
         exit();
 
 
@@ -361,9 +399,34 @@ class UserController extends Controller
     //NOTE: candidaterecommendation function shifted to company controller
 
     public function learningrecommendation(){
-        $data['name']="Ujala Jha";
-        $data['skills']="sql-advance,photoshop-basic',graphql-intermediate,ajax-basic,bootstrap-intermediate,css3-intermediate,angularjs-basic";
-        $json=json_encode($data);
+        $user_id=Session::get('user_id');
+        $data_fetch=UserPersonalDetails::where('user_id', $user_id)->get();
+        // echo "<pre>";
+        $data['name']=$data_fetch[0]->first_name;
+        // echo $data['name'];
+        $tq=UserTechnical::where('user_id',$user_id)->get();
+        $final_string="";
+        foreach($tq as $tqa){
+            // echo "<br>";
+        $skill_id=TQCategoryDetails::where('tq_category_details_id',$tqa->tq_category_details_id)->get();
+        $skill_name=$skill_id[0]->sub_category;
+        $score_level1=$tqa->level_1_score;
+        $score_level2=$tqa->level_2_score;
+        // echo $skill_name." ".$score_level1." ".$score_level2;
+        if($score_level2>10){
+            $tag='intermediate';
+        }elseif($score_level2>15){
+            $tag='advance';
+        }else{
+            $tag='basic';
+        }
+        // echo $tag;
+        $final_string.="$skill_name"."-"."$tag";
+    }
+    // echo "<br>";
+    // echo $final_string;
+    $data['skills']=$final_string;
+    $json=json_encode($data);
         // print_r($json);
         // exit();
 
@@ -387,10 +450,8 @@ class UserController extends Controller
         // $response = curl_exec($curl);
 
         // curl_close($curl);
-        echo "<pre>";
-
-        // print_r(json_decode($response, TRUE));
-        print_r(json_decode('{
+        // echo "<pre>";
+        $recommendation = json_decode('{
               "recommended_courses": [
                 {
                   "content_duration": 3.0,
@@ -617,7 +678,10 @@ class UserController extends Controller
                   "url": "https://www.udemy.com/web-programming-with-python/"
                 }
               ]
-            }'));
+            }',true);
+        // print_r($recommendation);
+        return view('template/online_course')->with('course_recommendation',$recommendation['recommended_courses']);
+
         exit();
 
     }
@@ -644,8 +708,22 @@ class UserController extends Controller
     }
     public function blogrecommendation(){
 
-        $data['name']='Maya';
-        $data['skills']='python,graphql,chatbot,bootstrap,finance,angularjs,machine learning,ai,rest';
+
+        $user_id=Session::get('user_id');
+        $data_fetch=UserPersonalDetails::where('user_id', $user_id)->get();
+        // echo "<pre>";
+        // print_r($data);
+        $data['name']=$data_fetch[0]->first_name;
+
+        $data['skills']="'".rtrim(strtolower($data_fetch[0]->skills), ", ")."'";
+        // print_r($data['skills']);
+        // exit();
+        
+        // echo $data['names'];
+        // echo $data['skills'];
+        // exit;
+        // $data['name']='Maya';
+        // $data['skills']='python,graphql,chatbot,bootstrap,finance,angularjs,machine learning,ai,rest';
         $json=json_encode($data);
         // print_r($json);
         $curl = curl_init();
@@ -668,8 +746,27 @@ class UserController extends Controller
         $response = curl_exec($curl);
 
         curl_close($curl);
-        echo "<pre>";
-        print_r(json_decode($response));
+        $recommendation=json_decode($response,true);
+        // print_r($recommendation);
+        // exit();
+        // echo "<pre>";
+        // echo "<pre>";
+        // print_r($recommendation['recommended_blogs']);
+        // $a=array();
+        // $result = (array) json_decode($recommendation);
+
+        // $a=$recommendation['recommended_blogs'];
+                // print_r($recommendation['recommended_blogs']);
+
+        // var_dump($recommendatio/n->recommended_blogs);
+
+        // $recommendation=json_decode($recommendation,true);
+        // echo $recommendation['recommended_blogs']['Subtitle'];
+        // exit;
+        // echo $recommendation['recommended_blogs']->Subtitle;
+        // exit;
+
+        return view('template/blogs_listing')->with('blog_recommendation',$recommendation['recommended_blogs']);
 
 
     }
@@ -1216,4 +1313,46 @@ class UserController extends Controller
 
         echo $content;
     }
+
+        
+        public function full_report(){
+        $user_id=Session::get('user_id');
+        echo $user_id;
+        $eq=UserEQ::where('user_id',$user_id)->get();
+        $aq=UserAQ::where('user_id',$user_id)->get();
+        $iq=UserIQ::where('user_id',$user_id)->get();
+        $tq=UserTechnical::where('user_id',$user_id)->get();
+        $hgmi=UserHGMI::where('user_id',$user_id)->get();
+        // echo "<pre>";
+        // print_r($iq[0]);
+        // print_r($aq[0]);
+        // print_r($eq[0]);
+        // print_r($tq[0]);
+
+        return view('template/performance')->with('iq',$iq)->with('eq',$eq)->with('aq',$aq)->with('tq',$tq);
+
+
+    }
+
+    public function dummy_role(){
+        $user_id=Session::get('user_id');
+        $tq=UserTechnical::where('user_id',$user_id)->get();
+        echo $tq[0];
+        exit;
+        $final_string="";
+        foreach($tq as $tqa){
+        $skill_id=TQCategoryDetails::where('tq_category_details_id',$tqa->tq_concept_details_id)->get();
+        echo $skill_id[0]->sub_category;
+        // if(level__score)
+        $final_string=$skill_id[0]->sub_category."-".$tqa->level_1_score.",";
+        echo $final_string;
+
+    }
+    // endforeach
+
+        echo "<br>";
+
+        echo $final_string;
+    }
+
 }

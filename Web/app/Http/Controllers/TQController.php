@@ -90,16 +90,21 @@ class TQController extends Controller
 
 
     public function start_test($skill_id){
-//        echo $skill_id;
+       // echo $skill_id;
+       // exit;
         $question_details = TQ::where('tq_category_details_id', $skill_id)->where('is_level_2',0)->get();
+        // echo "<pre>";
+        // print_r($question_details);
+        // exit;
 
         $all_question_id = TQ::where('tq_category_details_id', $skill_id)->where('is_level_2',0)->pluck('question_id');
 
         $ques_array = json_decode(json_encode($all_question_id), true);
         $_SESSION["all_question_id"] = $ques_array;
 
-//        echo ($question_details);
-//        echo ($all_question_id);
+       // echo ($question_details);
+       // echo ($all_question_id);
+       // exit;
         return view('/template/tq_test')->with("question_details", $question_details)->with("all_question_id", $all_question_id)->with('skill_id', $skill_id);
 
     }
@@ -107,9 +112,9 @@ class TQController extends Controller
 
     public function start_advance_test($skill_id){
 //        echo $skill_id;
-        $question_details = TQ::where('tq_category_details_id', $skill_id)->where('is_level_2',1)->get();
+        $question_details = TQ::where('tq_concept_details_id', $skill_id)->where('is_level_2',1)->get();
 
-        $all_question_id = TQ::where('tq_category_details_id', $skill_id)->where('is_level_2',1)->pluck('question_id');
+        $all_question_id = TQ::where('tq_concept_details_id', $skill_id)->where('is_level_2',1)->pluck('question_id');
 
         $adv_ques_array = json_decode(json_encode($all_question_id), true);
         $_SESSION["all_advance_question_id"] = $adv_ques_array;
@@ -144,10 +149,11 @@ class TQController extends Controller
 
 
     public function skill_test($skill_id,$ques_id){
-//        echo $skill;
-//        echo $id;
+       echo $skill_id;
+       echo $ques_id;
+       // exit;
         $question_details=TQ::where('question_id',$ques_id)->get();
-        $all_question_id = TQ::where('tq_category_details_id', $skill_id)->where('is_level_2',0)->pluck('question_id');
+        $all_question_id = TQ::where('tq_concept_details_id', $skill_id)->where('is_level_2',0)->pluck('question_id');
 //        echo $tech;
 //        echo $skill;
 
@@ -160,7 +166,7 @@ class TQController extends Controller
 //        echo $skill;
 //        echo $id;
         $question_details=TQ::where('question_id',$ques_id)->get();
-        $all_question_id = TQ::where('tq_category_details_id', $skill_id)->where('is_level_2',1)->pluck('question_id');
+        $all_question_id = TQ::where('tq_concept_details_id', $skill_id)->where('is_level_2',1)->pluck('question_id');
 //        echo $tech;
 //        echo $skill;
 
@@ -221,6 +227,8 @@ class TQController extends Controller
         if($final_score_to_store>3){
             $eligible = 1;
         }
+                // echo $skill_category_id;
+                // $score=$_GET['scores'];
         $tech = UserTechnical::where('user_id',$user_id)->where('tq_category_details_id',$skill_category_id)->update(['level_1_test_given'=>1,'level_1_score'=>$final_score_to_store,'level_2_eligible'=>$eligible,'attempt_number'=>($attempt+1)]);
 
         $user_attempt = new TQUserAttempt();
@@ -229,10 +237,20 @@ class TQController extends Controller
         $user_attempt->attempt_number = ($attempt+1);
         $user_attempt->score = $_GET['scores'];
         $user_attempt->level_number = 1;
+        // echo "<pre>";
+        // print_r($tech);
         $user_attempt->save();
+        $score=$_GET['scores'];
+        // echo "<br>";
+        // echo $score;
+        // echo $skill_category_id;
+        // exit;
 
+        $level="1";
 //        exit;
-        return app('App\Http\Controllers\UserController')->skills_view();
+
+        return  view('/template/tq_result')->with("score",$score)->with("level",$level);
+        // return app('App\Http\Controllers\UserController')->skills_view();
 //        return view('/template/tq_instructions');
 //        exit;
 
@@ -284,9 +302,11 @@ class TQController extends Controller
         $user_attempt->score = $_GET['scores'];
         $user_attempt->level_number = 2;
         $user_attempt->save();
-
+        $score=$_GET['scores'];
+        $level="2";
 //        exit;
-        return app('App\Http\Controllers\UserController')->advance_skills_view();
+        return  view('/template/advance_tq_result')->with("score",$score)->with("level",$level);
+        // return app('App\Http\Controllers\UserController')->advance_skills_view();
 //        return view('/template/tq_instructions');
 //        exit;
 
