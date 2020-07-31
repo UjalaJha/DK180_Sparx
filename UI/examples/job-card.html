@@ -32,57 +32,109 @@
   <link href="../assets/css/material-dashboard.css?v=2.1.1" rel="stylesheet" />
   <!-- CSS Just for demo purpose, don't include it in your project -->
   <link href="../assets/demo/demo.css" rel="stylesheet" />
-   <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"> -->
-  
   <style type="text/css">
-    .price-label{
-        background:#9124A3;
-        padding:10px;
-        border-radius: 50px;
-        width:150px;
-        margin:0 auto;
-        margin-top:20px;
-        color:white;
-     /*@import "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css";*/
+    .card-header,
+.card-footer {
+    background-color: #fff !important
+}
+
+
+
+.badge {
+    cursor: pointer
+}
+
+button {
+    justify-content: center;
+    border: none !important
+}
+
+a {
+    color: black !important;
+    text-decoration: none !important
+}
+
+.badge-outline {
+    border: 1px solid #999;
+    background-color: transparent
+}
+
+li {
+    color: rgb(65, 65, 65);
+    font-size: 30px
+}
+
+.hl {
+    align-content: center;
+    width: 25%
+}
+
+p {
+    font-size: 15px !important
+}
+
+span {
+    font-size: 18px !important
+}
+
+.badge {
+    padding: 0.5em .4em !important;
+    font-size: 13px !important
+}
+
+.badge-pill {
+    padding-right: 0.8rem !important;
+    padding-left: 0.8rem !important
+}
+
+.footer {
+    font-size: 16px !important
+}
+
+img {
+    opacity: 0.8 !important
+}
+
+h6 {
+    font-size: 14px !important
+}
+
+@media (max-width: 756px) {
+    .card .card-body {
+        padding: 0 !important
     }
 
-/* Select2 css */
-@import "http://propeller.in/components/select2/css/select2.min.css";
-@import "http://propeller.in/components/select2/css/select2-bootstrap.css";
+    .card {
+        margin-top: 5px !important
+    }
+}
 
-/* Propeller typography */
-@import "http://propeller.in/components/typography/css/typography.css";
+@media (min-width: 1200px) {
+    .col-xl-3 {
+        flex: 0 0 35%;
+        max-width: 31%
+    }
+}
 
-/* Propeller text fields */
-@import "http://propeller.in/components/textfield/css/textfield.css";
-
-/* Propeller select2 */
-@import "http://propeller.in/components/select2/css/pmd-select2.css";
   </style>
 </head>
 
 <body class="">
   <div class="wrapper ">
     <div class="sidebar" data-color="purple" data-background-color="white" data-image="../assets/img/sidebar-1.jpg">
-      <!--
-        Tip 1: You can change the color of the sidebar using: data-color="purple | azure | green | orange | danger"
-
-        Tip 2: you can also add an image using data-image tag
-    -->
+      
       <div class="logo">
-        <a href="http://www.creative-tim.com" class="simple-text logo-normal">
-          Creative Tim
-        </a>
+        <img src="../assets/img/logo.png" width="250px" height="70px">
       </div>
       <div class="sidebar-wrapper">
         <ul class="nav">
-          <li class="nav-item  ">
+          <li class="nav-item active  ">
             <a class="nav-link" href="./dashboard.html">
               <i class="material-icons">dashboard</i>
               <p>Dashboard</p>
             </a>
           </li>
-          <li class="nav-item active ">
+          <li class="nav-item ">
             <a class="nav-link" href="./user.html">
               <i class="material-icons">person</i>
               <p>User Profile</p>
@@ -95,9 +147,9 @@
             </a>
           </li>
           <li class="nav-item ">
-            <a class="nav-link" href="./typography.html">
+            <a class="nav-link" href="./sections.html">
               <i class="material-icons">library_books</i>
-              <p>Typography</p>
+              <p>Sections</p>
             </a>
           </li>
           <li class="nav-item ">
@@ -107,9 +159,9 @@
             </a>
           </li>
           <li class="nav-item ">
-            <a class="nav-link" href="./map.html">
+            <a class="nav-link" href="./mcq.html">
               <i class="material-icons">location_ons</i>
-              <p>Maps</p>
+              <p>MCQ</p>
             </a>
           </li>
           <li class="nav-item ">
@@ -119,9 +171,9 @@
             </a>
           </li>
           <li class="nav-item ">
-            <a class="nav-link" href="./rtl.html">
+            <a class="nav-link" href="./instructions.html">
               <i class="material-icons">language</i>
-              <p>RTL Support</p>
+              <p>Instructions</p>
             </a>
           </li>
           <li class="nav-item active-pro ">
@@ -138,7 +190,7 @@
       <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top ">
         <div class="container-fluid">
           <div class="navbar-wrapper">
-            <a class="navbar-brand" href="#pablo">User Profile</a>
+            <a class="navbar-brand" href="#pablo">Dashboard</a>
           </div>
           <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
             <span class="sr-only">Toggle navigation</span>
@@ -200,86 +252,140 @@
         </div>
       </nav>
       <!-- End Navbar -->
-     <div class="content">
-        <div class="container-fluid">
-          <div class="row">
-            <div class="col-md-12">
-              <div class="card">
-                <div class="card-header card-header-primary">
-                  <h3 class="card-title">Recommended Courses</h3>
-                  <p class="card-category">The best courses based on your interests!!</p>
-                </div>
-            <div class="row" style="margin-top:40px;padding-left:20px;padding-right:20px;">
-             @foreach($course_recommendation as $course)
-
-                 <div class="col-md-4">
-                  <div class="card card-profile">
-                    <div class="card-avatar">
-                      <a href="javascript:;">
-                        <img class="img" src="../assets/img/udemy.png"/>
-                      </a>
+      
+<div class="container-fluid" style="margin-top:80px;">
+    <div class="d-md-inline-flex row justify-content-center">
+        <div class="col-md-5 col-lg-4 col-xl-3 col-sm-6 d-flex align-items-stretch">
+            <div class=" card shadow-lg border-0 py-2">
+                <div class="card-header border-0 mb-0">
+                    <div class="row justify-content-between">
+                        <div class="col-auto col-sm-auto">
+                            <h4> <span class="badge badge-pill badge-success">hourly</span></h4>
+                        </div>
+                        <div class="col-auto col-sm-auto">
+                            <div class="row mx-auto pt-2"> <img src="https://uxwing.com/wp-content/themes/uxwing/download/17-currency/dollar.png" alt="Image result for dollar icon png" width="20" height="20">
+                                <h5>55/hr</h5>
+                            </div>
+                        </div>
                     </div>
-                    <div class="card-body">
-                      <h5 class="card-category" style="color:black;font-size:15px;">{{$course['subject']}}</h5>
-                       <p class="card-description">
-                        {{$course['title']}}
-                      </p>
-                      <h5 class="card-title"><a href="https://www.udemy.com/mobile-app-design-in-photoshop-complete-music-app-design/">{{$course['url']}}</a></h5>
-                     
-                      <div class="price-label">Price: Rs {{$course['price']}}</div>
-                    </div>
-                  </div>
                 </div>
-                @endforeach
-                 
-                  
-              </div>
-              
-            
+                <div class=" card-body text-center pb-0 mt-0 pt-3">
+                    <div class="d-block">
+                        <h5 class="card-title mb-0 font-weight-bold">UI/UX Designer</h5> <small class="text-info my-1"> <i class="fa fa-file-code-o small"></i> Epic Coders</small>
+                    </div>
+                    <div class="d-inline-flex row mb-3 ">
+                        <div class="col-md-auto">
+                            <ul class="list-inline my-0">
+                                <li class="list-inline-item"> <span class="badge badge-pill badge-outline ">UI</span></li>
+                                <li class="list-inline-item"> <span class="badge badge-pill badge-outline ">UX</span></li>
+                                <li class="list-inline-item"> <span class="badge badge-pill badge-outline ">photoshop</span></li>
+                                <li class="list-inline-item "> <button class="badge badge-pill badge-primary" type="button">+4</button></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="d-flex row mb-0">
+                        <div class="col ">
+                            <p class="text-muted"> We are looking for an experience UI and UX designer to work on our projects... </p>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <hr class="hl">
+                </div>
+                <div class="card-footer border-0 text-center mx-auto ">
+                    <h5 class="footer"> <a href="" class="text-decoration-none"> VIEW JOB</a></h5>
+                </div>
             </div>
         </div>
-      </div>
-    </div>
-  </div>
-
-      <footer class="footer">
-        <div class="container-fluid">
-          <nav class="float-left">
-            <ul>
-              <li>
-                <a href="https://www.creative-tim.com">
-                  Creative Tim
-                </a>
-              </li>
-              <li>
-                <a href="https://creative-tim.com/presentation">
-                  About Us
-                </a>
-              </li>
-              <li>
-                <a href="http://blog.creative-tim.com">
-                  Blog
-                </a>
-              </li>
-              <li>
-                <a href="https://www.creative-tim.com/license">
-                  Licenses
-                </a>
-              </li>
-            </ul>
-          </nav>
-          <div class="copyright float-right">
-            &copy;
-            <script>
-              document.write(new Date().getFullYear())
-            </script>, made with <i class="material-icons">favorite</i> by
-            <a href="https://www.creative-tim.com" target="_blank">Creative Tim</a> for a better web.
-          </div>
+        <div class="col-md-5 col-lg-4 col-xl-3 col-sm-6 col-sm-6 d-flex align-items-stretch ">
+            <div class="card shadow-lg border-0 py-2">
+                <div class="card-header border-0 mb-0">
+                    <div class="row justify-content-between">
+                        <div class="col-auto col-sm-auto">
+                            <h4> <span class="badge badge-pill badge-warning text-white ">part-time</span></h4>
+                        </div>
+                        <div class="col-auto col-sm-auto">
+                            <div class="row mx-auto pt-2"> <img src="https://uxwing.com/wp-content/themes/uxwing/download/17-currency/dollar.png" alt="Image result for dollar icon png" width="20" height="20">
+                                <h5>32/hr</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body text-center pb-0 mt-0 pt-3">
+                    <div class="d-block">
+                        <h5 class="card-title mb-0 font-weight-bold">Branding Expert </h5><small class="text-info"> <i class="fa fa-file-code-o small"></i> Hubstaff</small>
+                    </div>
+                    <div class="d-inline-flex row mb-3">
+                        <div class="col-md-auto">
+                            <ul class="list-inline my-0 ">
+                                <li class="list-inline-item"> <span class="badge badge-pill badge-outline ">PHP</span></li>
+                                <li class="list-inline-item"> <span class="badge badge-pill badge-outline ">android</span></li>
+                                <li class="list-inline-item"> <span class="badge badge-pill badge-outline ">ios</span></li>
+                                <li class="list-inline-item "> <button class="badge badge-pill badge-primary" type="button">+2</button></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-row ">
+                        <div class="col px-0">
+                            <p class="card-text text-muted ">Looking for an experienced person to help us with rebranding our business.We are interested in a... </p>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <hr class="hl">
+                </div>
+                <div class="card-footer border-0 text-center mx-auto ">
+                    <h5 class="footer"> <a href="" class="text-decoration-none"> VIEW JOB</a></h5>
+                </div>
+            </div>
         </div>
-      </footer>
+          <div class="col-md-5 col-lg-4 col-xl-3 col-sm-6 col-sm-6 d-flex align-items-stretch ">
+            <div class="card shadow-lg border-0 py-2">
+                <div class="card-header border-0 mb-0">
+                    <div class="row justify-content-between">
+                        <div class="col-auto col-sm-auto">
+                            <h4> <span class="badge badge-pill badge-warning text-white ">part-time</span></h4>
+                        </div>
+                        <div class="col-auto col-sm-auto">
+                            <div class="row mx-auto pt-2"> <img src="https://uxwing.com/wp-content/themes/uxwing/download/17-currency/dollar.png" alt="Image result for dollar icon png" width="20" height="20">
+                                <h5>32/hr</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body text-center pb-0 mt-0 pt-3">
+                    <div class="d-block">
+                        <h5 class="card-title mb-0 font-weight-bold">Branding Expert </h5><small class="text-info"> <i class="fa fa-file-code-o small"></i> Hubstaff</small>
+                    </div>
+                    <div class="d-inline-flex row mb-3">
+                        <div class="col-md-auto">
+                            <ul class="list-inline my-0 ">
+                                <li class="list-inline-item"> <span class="badge badge-pill badge-outline ">PHP</span></li>
+                                <li class="list-inline-item"> <span class="badge badge-pill badge-outline ">android</span></li>
+                                <li class="list-inline-item"> <span class="badge badge-pill badge-outline ">ios</span></li>
+                                <li class="list-inline-item "> <button class="badge badge-pill badge-primary" type="button">+2</button></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-row ">
+                        <div class="col px-0">
+                            <p class="card-text text-muted ">Looking for an experienced person to help us with rebranding our business.We are interested in a... </p>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <hr class="hl">
+                </div>
+                <div class="card-footer border-0 text-center mx-auto ">
+                    <h5 class="footer"> <a href="" class="text-decoration-none"> VIEW JOB</a></h5>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
     </div>
   </div>
-
+ 
   <!--   Core JS Files   -->
   <script src="../assets/js/core/jquery.min.js"></script>
   <script src="../assets/js/core/popper.min.js"></script>
@@ -293,13 +399,13 @@
   <script src="../assets/js/plugins/jquery.validate.min.js"></script>
   <!-- Plugin for the Wizard, full documentation here: https://github.com/VinceG/twitter-bootstrap-wizard -->
   <script src="../assets/js/plugins/jquery.bootstrap-wizard.js"></script>
-  <!--	Plugin for Select, full documentation here: http://silviomoreto.github.io/bootstrap-select -->
+  <!--  Plugin for Select, full documentation here: http://silviomoreto.github.io/bootstrap-select -->
   <script src="../assets/js/plugins/bootstrap-selectpicker.js"></script>
   <!--  Plugin for the DateTimePicker, full documentation here: https://eonasdan.github.io/bootstrap-datetimepicker/ -->
   <script src="../assets/js/plugins/bootstrap-datetimepicker.min.js"></script>
   <!--  DataTables.net Plugin, full documentation here: https://datatables.net/  -->
   <script src="../assets/js/plugins/jquery.dataTables.min.js"></script>
-  <!--	Plugin for Tags, full documentation here: https://github.com/bootstrap-tagsinput/bootstrap-tagsinputs  -->
+  <!--  Plugin for Tags, full documentation here: https://github.com/bootstrap-tagsinput/bootstrap-tagsinputs  -->
   <script src="../assets/js/plugins/bootstrap-tagsinput.js"></script>
   <!-- Plugin for Fileupload, full documentation here: http://www.jasny.net/bootstrap/javascript/#fileinput -->
   <script src="../assets/js/plugins/jasny-bootstrap.min.js"></script>
@@ -321,12 +427,8 @@
   <script src="../assets/js/plugins/bootstrap-notify.js"></script>
   <!-- Control Center for Material Dashboard: parallax effects, scripts for the example pages etc -->
   <script src="../assets/js/material-dashboard.js?v=2.1.1" type="text/javascript"></script>
-  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script> -->
   <!-- Material Dashboard DEMO methods, don't include it in your project! -->
   <script src="../assets/demo/demo.js"></script>
- 
   <script>
     $(document).ready(function() {
       $().ready(function() {
@@ -359,7 +461,6 @@
             }
           }
         });
-
 
         $('.fixed-plugin .active-color span').click(function() {
           $full_page_background = $('.full-page-background');
@@ -499,41 +600,13 @@
       });
     });
   </script>
-   <script type="text/javascript">
-    $(document).ready(function() {
-      $('.mdb-select').materialSelect();
-      });
-  </script>
   <script>
-// Add the following code if you want the name of the file appear on select
-$(".custom-file-input").on("change", function() {
-  var fileName = $(this).val().split("\\").pop();
-  $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
-});
-</script>
-<script type="text/javascript">
-jQuery(function($){
-  var $internship = $('#internship1'), count = 1;
-  $('#addinternship').click(function(e){
-    e.preventDefault();
-    var idname = 'internship' + (++count);
-    $internship.parent().append($internship.clone().attr({id: idname, name: idname}));
-  });
-  
-});
-</script>
-<script type="text/javascript">
-jQuery(function($){
-  var $project = $('#project1'), count = 1;
-  $('#addproject').click(function(e){
-    e.preventDefault();
-    var idname = 'project' + (++count);
-    $project.parent().append($project.clone().attr({id: idname, name: idname}));
-  });
-  
-});
-</script>
+    $(document).ready(function() {
+      // Javascript method's body can be found in assets/js/demos.js
+      md.initDashboardPageCharts();
 
+    });
+  </script>
 </body>
 
 </html>

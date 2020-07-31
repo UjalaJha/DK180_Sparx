@@ -38,8 +38,8 @@
 
          <div class="collapse navbar-collapse" id="ftco-nav">
           <ul class="navbar-nav ml-auto">
-            <li class="nav-item active"><a href="/" class="nav-link">Home</a></li>
-            <li class="nav-item"><a href="/about" class="nav-link">About</a></li>
+            <li class="nav-item"><a href="/" class="nav-link">Home</a></li>
+            <li class="nav-item active"><a href="/about" class="nav-link">About</a></li>
             <li class="nav-item"><a href="/chatbot" class="nav-link">FAQ</a></li>
             <li class="nav-item"><a href="/contact" class="nav-link">Contact</a></li>
             <li class="nav-item cta"><a href="contact.html" style="margin-left:20px;" class="nav-link"><span>Admin Login</span></a></li>

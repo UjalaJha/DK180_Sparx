@@ -1,5 +1,91 @@
 @include('includes/header')
 @include('includes/sidebar')
+  <style type="text/css">
+    .card-header,
+.card-footer {
+    background-color: #fff !important
+}
+
+
+
+.badge {
+    cursor: pointer
+}
+
+button {
+    justify-content: center;
+    border: none !important
+}
+
+/*a {
+    color: black !important;
+    text-decoration: none !important
+}*/
+
+.badge-outline {
+    border: 1px solid #999;
+    background-color: transparent
+}
+
+/*li {
+    color: rgb(65, 65, 65);
+    font-size: 20px
+}*/
+
+.hl {
+    align-content: center;
+    width: 25%
+}
+
+/*p {
+    font-size: 15px !important
+}*/
+
+span {
+    /*font-size: 18px !important*/
+}
+
+.badge {
+    padding: 0.5em .4em !important;
+    font-size: 13px !important
+}
+
+.badge-pill {
+    padding-right: 0.8rem !important;
+    padding-left: 0.8rem !important
+}
+
+.footer {
+    /*font-size: 16px !important*/
+}
+
+img {
+    opacity: 0.8 !important
+}
+
+h6 {
+    font-size: 10px !important
+}
+
+@media (max-width: 756px) {
+    .card .card-body {
+        padding: 0 !important
+    }
+
+    .card {
+        margin-top: 5px !important
+    }
+}
+
+@media (min-width: 1200px) {
+    .col-xl-3 {
+        flex: 0 0 35%;
+        max-width: 31%
+    }
+}
+
+  </style>
+
     <div class="main-panel">
       <!-- Navbar -->
       <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top ">
@@ -73,8 +159,8 @@
             <div class="col-md-12">
               <div class="card">
                 <div class="card-header card-header-primary">
-                  <h3 class="card-title">Recommended Courses</h3>
-                  <p class="card-category">The best courses based on your interests!!</p>
+                  <h3 class="card-title">Job Recommendations</h3>
+                  <p class="card-category">Some jobs that match your interests and skills!!</p>
                 </div>
             <div class="row" style="margin-top:40px;padding-left:20px;padding-right:20px;">
 
@@ -98,6 +184,7 @@
                             </div>
                             
                         </div>
+
                         <div class="row">
                      @foreach($jobs_list as $jobs)
 
@@ -146,8 +233,176 @@
                   </div>
                                                   @endforeach
               </div>
+-----------------------------
+      <div class="card">
+            <!-- <div class="card-header card-header-primary">
+              <h3 class="card-title">Notifications</h3>
+              <p class="card-category">Handcrafted by our friend
+                <a target="_blank" href="https://github.com/mouse0270">Robert McIntosh</a>. Please checkout the
+                <a href="http://bootstrap-notify.remabledesigns.com/" target="_blank">full documentation.</a>
+              </p>
+            </div> -->
+            <div class="card-body">
+              <div class="row">
+                <div class="col-md-8">
+                  <h4 class="card-header" style="font-weight: bold;margin-left: -15px;">You look like a good fit in below job roles</h4><br>
+                  <div class="alert alert-info">
+                    <span style="font-weight: bold;font-size:16px;">This is a plain notification</span>
+                  </div>
+                  <div class="alert alert-success">
+                    <span>This is a plain notification</span>
+                  </div>
+                  <div class="alert alert-primary">
+                    <span>This is a plain notification</span>
+                  </div>
+                  <div class="alert alert-warning">
+                    <span>This is a plain notification</span>
+                  </div>
+                  <div class="alert alert-info">
+                    <span>This is a plain notification</span>
+                  </div>
+                  <div class="alert alert-info">
+                    <span>This is a plain notification</span>
+                  </div>
+                 
               
+              </div>
+            </div>
             
+        </div>
+    </div>
+              
+  <div class="container-fluid" style="margin-top:10px;">
+    <h4 class="card-header" style="font-weight: bold;">Some jobs where you may apply</h4><br>
+    <div class="d-md-inline-flex row justify-content-center">
+        <div class="col-md-5 col-lg-4 col-xl-3 col-sm-6 d-flex align-items-stretch">
+            <div class=" card shadow-lg border-0 py-2">
+                <div class="card-header border-0 mb-0">
+                    <div class="row justify-content-between">
+                        <div class="col-auto col-sm-auto">
+                            <h4> <span class="badge badge-pill badge-success">hourly</span></h4>
+                        </div>
+                        <div class="col-auto col-sm-auto">
+                            <div class="row mx-auto pt-2"> <img src="https://uxwing.com/wp-content/themes/uxwing/download/17-currency/dollar.png" alt="Image result for dollar icon png" width="20" height="20">
+                                <h5>55/hr</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class=" card-body text-center pb-0 mt-0 pt-3">
+                    <div class="d-block">
+                        <h5 class="card-title mb-0 font-weight-bold">UI/UX Designer</h5> <small class="text-info my-1"> <i class="fa fa-file-code-o small"></i> Epic Coders</small>
+                    </div>
+                    <div class="d-inline-flex row mb-3 ">
+                        <div class="col-md-auto">
+                            <ul class="list-inline my-0">
+                                <li class="list-inline-item"> <span class="badge badge-pill badge-outline ">UI</span></li>
+                                <li class="list-inline-item"> <span class="badge badge-pill badge-outline ">UX</span></li>
+                                <li class="list-inline-item"> <span class="badge badge-pill badge-outline ">photoshop</span></li>
+                                <li class="list-inline-item "> <button class="badge badge-pill badge-primary" type="button">+4</button></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="d-flex row mb-0">
+                        <div class="col ">
+                            <p class="text-muted"> We are looking for an experience UI and UX designer to work on our projects... </p>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <hr class="hl">
+                </div>
+                <div class="card-footer border-0 text-center mx-auto ">
+                    <h5 class="footer"> <a href="" class="text-decoration-none"> VIEW JOB</a></h5>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-5 col-lg-4 col-xl-3 col-sm-6 col-sm-6 d-flex align-items-stretch ">
+            <div class="card shadow-lg border-0 py-2">
+                <div class="card-header border-0 mb-0">
+                    <div class="row justify-content-between">
+                        <div class="col-auto col-sm-auto">
+                            <h4> <span class="badge badge-pill badge-warning text-white ">part-time</span></h4>
+                        </div>
+                        <div class="col-auto col-sm-auto">
+                            <div class="row mx-auto pt-2"> <img src="https://uxwing.com/wp-content/themes/uxwing/download/17-currency/dollar.png" alt="Image result for dollar icon png" width="20" height="20">
+                                <h5>32/hr</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body text-center pb-0 mt-0 pt-3">
+                    <div class="d-block">
+                        <h5 class="card-title mb-0 font-weight-bold">Branding Expert </h5><small class="text-info"> <i class="fa fa-file-code-o small"></i> Hubstaff</small>
+                    </div>
+                    <div class="d-inline-flex row mb-3">
+                        <div class="col-md-auto">
+                            <ul class="list-inline my-0 ">
+                                <li class="list-inline-item"> <span class="badge badge-pill badge-outline ">PHP</span></li>
+                                <li class="list-inline-item"> <span class="badge badge-pill badge-outline ">android</span></li>
+                                <li class="list-inline-item"> <span class="badge badge-pill badge-outline ">ios</span></li>
+                                <li class="list-inline-item "> <button class="badge badge-pill badge-primary" type="button">+2</button></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-row ">
+                        <div class="col px-0">
+                            <p class="card-text text-muted ">Looking for an experienced person to help us with rebranding our business.We are interested in a... </p>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <hr class="hl">
+                </div>
+                <div class="card-footer border-0 text-center mx-auto ">
+                    <h5 class="footer"> <a href="" class="text-decoration-none"> VIEW JOB</a></h5>
+                </div>
+            </div>
+        </div>
+          <div class="col-md-5 col-lg-4 col-xl-3 col-sm-6 col-sm-6 d-flex align-items-stretch ">
+            <div class="card shadow-lg border-0 py-2">
+                <div class="card-header border-0 mb-0">
+                    <div class="row justify-content-between">
+                        <div class="col-auto col-sm-auto">
+                            <h4> <span class="badge badge-pill badge-warning text-white ">part-time</span></h4>
+                        </div>
+                        <div class="col-auto col-sm-auto">
+                            <div class="row mx-auto pt-2"> <img src="https://uxwing.com/wp-content/themes/uxwing/download/17-currency/dollar.png" alt="Image result for dollar icon png" width="20" height="20">
+                                <h5>32/hr</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body text-center pb-0 mt-0 pt-3">
+                    <div class="d-block">
+                        <h5 class="card-title mb-0 font-weight-bold">Branding Expert </h5><small class="text-info"> <i class="fa fa-file-code-o small"></i> Hubstaff</small>
+                    </div>
+                    <div class="d-inline-flex row mb-3">
+                        <div class="col-md-auto">
+                            <ul class="list-inline my-0 ">
+                                <li class="list-inline-item"> <span class="badge badge-pill badge-outline ">PHP</span></li>
+                                <li class="list-inline-item"> <span class="badge badge-pill badge-outline ">android</span></li>
+                                <li class="list-inline-item"> <span class="badge badge-pill badge-outline ">ios</span></li>
+                                <li class="list-inline-item "> <button class="badge badge-pill badge-primary" type="button">+2</button></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-row ">
+                        <div class="col px-0">
+                            <p class="card-text text-muted ">Looking for an experienced person to help us with rebranding our business.We are interested in a... </p>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <hr class="hl">
+                </div>
+                <div class="card-footer border-0 text-center mx-auto ">
+                    <h5 class="footer"> <a href="" class="text-decoration-none"> VIEW JOB</a></h5>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
             </div>
         </div>
       </div>
