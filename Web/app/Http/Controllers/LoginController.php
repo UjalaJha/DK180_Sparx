@@ -171,4 +171,24 @@ class LoginController extends Controller
     }
 
 
+    public function logout(){
+        if(Session::has('user_id')){
+            Session::forget('user_id');
+            if(!Session::has('user_id'))
+            {
+                return view('new_landing/index');
+            }
+        }
+
+        if(Session::has('company_id')){
+            Session::forget('company_id');
+            if(!Session::has('company_id'))
+            {
+                return view('new_landing/index');
+            }
+        }
+
+    }
+
+
 }
