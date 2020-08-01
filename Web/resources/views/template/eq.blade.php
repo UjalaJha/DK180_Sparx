@@ -34,6 +34,9 @@
   <link href="../assets/demo/demo.css" rel="stylesheet" />
   <style type="text/css">
   /* Create a custom radio button */
+  .btn:hover{
+  background:green;
+}
 .checkmark {
   position: absolute;
   top: 0;
@@ -87,14 +90,12 @@
         Tip 2: you can also add an image using data-image tag
     -->
       <div class="logo">
-        <a href="http://www.creative-tim.com" class="simple-text logo-normal">
-          Creative Tim
-        </a>
-      </div>
+          <img src="../assets/img/logo.png" width="250px" height="70px">
+        </div>
       <div class="sidebar-wrapper">
         <div style="margin-left:12px;margin-top:10px;">
         <span>
-       <a href="#"><button class="btn btn-primary" style="border-radius:50px;width:72px" onclick="displayon(1)">1</button></a>
+       <a href="#"><button class="btn btn-primary mcqbutton" style="border-radius:50px;width:72px" onclick="displayon(1)">1</button></a>
        </span>
           <span>
        <a href="#"><button class="btn btn-primary" style="border-radius:50px;width:72px" onclick="displayon(2)">2</button></a>

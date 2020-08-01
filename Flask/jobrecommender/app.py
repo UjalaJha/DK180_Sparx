@@ -60,13 +60,17 @@ def badge_preference(badge_list):
             advance.append(x[0])
         elif str(x[1]).lower() == 'intermediate':
             intermediate.append(x[0])    
-        #elif str(x[1]).lower() == 'basic':
-         #  basic.append(x[0])
+        elif str(x[1]).lower() == 'basic':
+            basic.append(x[0])
         else:
             no_badge.append(x[0])
     pref_badge = []
     pref_badge = advance + intermediate 
-    return pref_badge
+    
+    if(len(pref_badge)==0):
+        return basic
+    else:
+        return pref_badge
 
 def transform(input,sign, quote = False):
     syntax = input.replace(" ", sign)
@@ -123,8 +127,12 @@ def indeed_web_scraping(num_pages_indeed,url_indeed):
         divs = soup.findAll("div")
         job_divs = [jp for jp in divs if not jp.get('class') is None
                     and 'row' in jp.get('class')]
-            
+        
+        j=0
         for job in job_divs:
+            j+=1
+            if j>3:
+                break
             # job id
             id = job.get('data-jk', None)
             #print(id)
@@ -213,13 +221,13 @@ def predict_api():
         job_profile_list.append(get_title_from_index(element))
         #print(get_title_from_index(element))
         i=i+1
-        if i>11:
+        if i>8:
             break
 
     output_profiles = job_profile_list
 
     result=pd.DataFrame()
-    for t in range(0, 11):
+    for t in range(0, 8):
         input_job = output_profiles[t]
         num_pages_indeed,url_indeed = getting_pages(input_job)
         if num_pages_indeed==0:

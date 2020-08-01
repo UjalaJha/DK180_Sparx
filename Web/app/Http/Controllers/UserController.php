@@ -32,6 +32,8 @@ class UserController extends Controller
 
     public function redirectDashboard(){
         $id = Session::get('user_id');
+        Session::put('page', 'dashboard');
+
 //        echo $id;
 
         $check_data = UserPersonalDetails::where('user_id', $id)->get();
@@ -1332,6 +1334,7 @@ class UserController extends Controller
     
     public function view_profile(){
         $id=Session::get('user_id');
+        Session::put('page', 'view_profile');
 //        echo $id;
         $user_details=UserPersonalDetails::where('user_id',$id)->get();
         $user_tq_details = UserTechnical::where('user_id', $id)->get('tq_category_details_id');
