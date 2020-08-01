@@ -70,14 +70,7 @@
 							</div>
 						</div>
 <br>
-						<div class="container-login100-form-btn">
-							<div class="wrap-login100-form-btn">
-								<div class="login100-form-bgbtn"></div>
-								<button class="login100-form-btn" type="submit">
-									Login
-								</button>
-							</div>
-						</div>
+
 						<div class="txt1 text-center p-t-54 p-b-20">
 							<span>
 								Or Sign Up Using

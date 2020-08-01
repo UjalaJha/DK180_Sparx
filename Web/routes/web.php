@@ -44,6 +44,10 @@ Route::post('/register', 'LoginController@store');
 Route::post('/company_register', 'LoginController@storeCompany');
 
 
+
+Route::get('/logout', 'LoginController@logout');
+
+
 Route::get('/view_dashboard', 'UserController@redirectDashboard');
 Route::get('/instructions', function () {
     return view('template/instructions');
@@ -222,6 +226,9 @@ Route::get('getSubConcept/{sub_category}/{concept}','AddQuestionController@getSu
 //view user details - admin side
 Route::get('view_users', function (){
     return view('admin/view_users');
+});
+Route::get('aicte', function (){
+    return view('admin/aicte');
 });
 
 

@@ -27,7 +27,7 @@
 
           <li class="nav-item ">
             <a class="nav-link" href="/user">
-              <i class="material-icons">person</i>
+              <i class="material-icons">create</i>
               <p>Update Profile</p>
             </a>
           </li>
@@ -39,20 +39,20 @@
           </li>
           <li class="nav-item ">
             <a class="nav-link" href="./look_for_jobs">
-              <i class="material-icons">notifications</i>
+              <i class="material-icons">find_in_page</i>
               <p>Look for Companies</p>
             </a>
           </li>
 
           <li class="nav-item ">
             <a class="nav-link" href="./learningrecommendation">
-              <i class="material-icons">notifications</i>
+              <i class="material-icons">school</i>
               <p>Recommended Courses</p>
             </a>
           </li>
           <li class="nav-item ">
             <a class="nav-link" href="./blogrecommendation">
-              <i class="material-icons">notifications</i>
+              <i class="material-icons">article</i>
               <p>Blogs</p>
             </a>
           </li>
