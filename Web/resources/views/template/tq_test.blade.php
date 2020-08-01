@@ -107,13 +107,21 @@
 //
 //        ?>
 
+                <?php
+//                if(isset($_SESSION['tq_level_1_ques_id'])){
+//
+//                }else{
+//                    $_SESSION['tq_level_1_ques_id'] = 1;
+//                }
+                ?>
+
            <?php
            $count = 1;
            ?>
           @foreach($all_question_id as $question_id)
 
                 <span>
-       <a href="/tech_test/{{$skill_id}}/{{$question_id}}"><button class="btn btn-primary" style="border-radius:50px;width:72px">{{$count}}</button></a>
+       <a href="/tech_test/{{$skill_id}}/{{$question_id}}?c={{$count}}"><button class="btn btn-primary" id="sidebar_ques_{{$count}}" style="border-radius:50px;width:72px">{{$count}}</button></a>
        </span>
 <?php
               $count+=1;
@@ -275,10 +283,10 @@
                         <tbody>
                           <tr>
                             <td>
-{{--                              <div style="background:#972FAF;box-shadow: 3px 3px 4px #ccc;width:30px;height:30px;color:white;padding-top:2px;text-align:center">--}}
+                              <div id="question_id_div" style="background:#972FAF;box-shadow: 3px 3px 4px #ccc;width:30px;height:30px;color:white;padding-top:2px;text-align:center">
 
 {{--                              {{ $question_details[0]->question_id }}--}}
-{{--                              </div>   --}}
+                              </div>
                             </td>
                             <td>
 <!--                         -->
@@ -292,7 +300,7 @@
                               <div class="form-check">
                                 
                                 <label class="cont">
-                                <input type="radio"  name="iq_radio" id="iq_option" value="1" onchange="check_ans(this.value)">
+                                <input type="radio"  name="iq_radio" id="tq_option_1" value="1" onchange="check_ans(this.value, 1)">
                                 <span class="checkmark"></span>
                                 
                               </label>
@@ -316,7 +324,7 @@
                                <div class="form-check">
                                 
                                 <label class="cont">
-                                <input type="radio" name="iq_radio" value="2" onchange="check_ans(this.value)">
+                                <input type="radio" name="iq_radio" id="tq_option_2" value="2" onchange="check_ans(this.value,2)">
                                 <span class="checkmark"></span>
                               </label>
                         
@@ -336,7 +344,7 @@
                                <div class="form-check">
                                 
                                 <label class="cont">
-                                <input type="radio" name="iq_radio" value="3" onchange="check_ans(this.value)">
+                                <input type="radio" name="iq_radio" value="3" id="tq_option_3" onchange="check_ans(this.value, 3)">
                                 
                                 <span class="checkmark"></span>
                               </label>
@@ -356,7 +364,7 @@
                               <div class="form-check">
                                 
                                 <label class="cont">
-                                <input type="radio"  name="iq_radio" value="4" onchange="check_ans(this.value)">
+                                <input type="radio"  name="iq_radio" value="4" id="tq_option_4" onchange="check_ans(this.value, 4)">
                                 <span class="checkmark"></span>
                               </label>
                         
@@ -462,6 +470,42 @@
   <script>
     $(document).ready(function() {
       $().ready(function() {
+          var checkAllLocalValues = JSON.parse(localStorage.getItem("setTQAns"));
+          var tempCount = 1;
+          for(var localValue of checkAllLocalValues){
+              if(localValue !=0){
+                  document.getElementById('sidebar_ques_'+tempCount).classList.remove('btn-primary');
+                  document.getElementById('sidebar_ques_'+tempCount).classList.add('btn-success');
+              }
+              tempCount++;
+          }
+
+
+          // alert(window.location.href);
+          var urlString = window.location.href;
+          var extractedArray = urlString.split("?c=");
+          var quesCount = extractedArray[1];
+          // alert(quesCount);
+          document.getElementById('question_id_div').innerHTML = quesCount;
+
+          var getCurrentQuesLocalValue = JSON.parse(localStorage.getItem("setTQAns"));
+          // alert(getCurrentQuesLocalValue[quesCount-1]);
+          var ansToCheck = getCurrentQuesLocalValue[quesCount-1];
+          if(ansToCheck !== 0){
+              document.getElementById('sidebar_ques_'+quesCount).classList.remove('btn-primary');
+              document.getElementById('sidebar_ques_'+quesCount).classList.add('btn-success');
+
+              if(ansToCheck === 1){
+                  document.getElementById('tq_option_1').checked = true;
+              }else if(ansToCheck === 2){
+                  document.getElementById('tq_option_2').checked = true;
+              }else if(ansToCheck === 3){
+                  document.getElementById('tq_option_3').checked = true;
+              }else if(ansToCheck === 4){
+                  document.getElementById('tq_option_4').checked = true;
+              }
+          }
+
         $sidebar = $('.sidebar');
 
         $sidebar_img_container = $sidebar.find('.sidebar-background');
@@ -634,6 +678,7 @@
     $(document).ready(function() {
       // Javascript method's body can be found in assets/js/demos.js
       demo.initGoogleMaps();
+
     });
   </script>
 
@@ -649,11 +694,21 @@
       
       // alert("hid"+document.getElementById("score").value);
     var choosed_ans;
-      
-      
-      
-    function check_ans(val){
-      choosed_ans=val;
+
+
+
+    function check_ans(val, opt){
+
+     var urlString = window.location.href;
+     var extractedArray = urlString.split("?c=");
+     var quesCount = extractedArray[1];
+
+     // alert(quesCount);
+     document.getElementById('sidebar_ques_'+quesCount).classList.remove('btn-primary');
+     document.getElementById('sidebar_ques_'+quesCount).classList.add('btn-success');
+
+
+        choosed_ans=val;
 //       alert(choosed_ans);
 //             alert(final_answer);
 
@@ -667,12 +722,21 @@
       var rflag;
       rflag=flag+1;
       localStorage.setItem('tq_score',rflag);
-          
+      var storedOption = JSON.parse(localStorage.getItem("setTQAns"));
+       storedOption[quesCount-1] = opt;
+       // alert(storedOption[quesCount-1]);
+       localStorage.setItem("setTQAns",JSON.stringify(storedOption));
+
 //      alert(localStorage.getItem('tq_score'));
     
       }
 
       else{
+          var storedOption = JSON.parse(localStorage.getItem("setTQAns"));
+          storedOption[quesCount-1] = opt;
+          // alert(storedOption[quesCount-1]);
+          localStorage.setItem("setTQAns",JSON.stringify(storedOption));
+
          // alert("inside else");
 //        localStorage.setItem('iq_score',flag);
       }   
