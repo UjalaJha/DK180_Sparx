@@ -44,6 +44,10 @@ Route::post('/register', 'LoginController@store');
 Route::post('/company_register', 'LoginController@storeCompany');
 
 
+
+Route::get('/logout', 'LoginController@logout');
+
+
 Route::get('/view_dashboard', 'UserController@redirectDashboard');
 Route::get('/instructions', function () {
     return view('template/instructions');
