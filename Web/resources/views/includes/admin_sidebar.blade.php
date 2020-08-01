@@ -18,31 +18,26 @@
               <p>Admin Dashboard</p>
             </a>
           </li>
-          <!-- <li class="nav-item ">
-            <a class="nav-link" href="./user.html">
-              <i class="material-icons">person</i>
-              <p>Company Profile</p>
-            </a>
-          </li> -->
-          <li class="nav-item">
-            <a class="nav-link" href="/view_jobs">
-              <i class="material-icons">content_paste</i>
-              <p>Jobs Posted</p>
-            </a>
-          </li>
-          <li class="nav-item ">
-            <a class="nav-link" href="/search_students">
-              <i class="material-icons">bubble_chart</i>
-              <p>Look for Students</p>
-            </a>
-          </li>
-          
-          <li class="nav-item ">
-            <a class="nav-link" href="./linkedin_students">
-              <i class="material-icons">notifications</i>
-              <p>Look for Companies</p>
-            </a>
-          </li>
+
+{{--          <li class="nav-item">--}}
+{{--            <a class="nav-link" href="/view_jobs">--}}
+{{--              <i class="material-icons">content_paste</i>--}}
+{{--              <p>Jobs Posted</p>--}}
+{{--            </a>--}}
+{{--          </li>--}}
+{{--          <li class="nav-item ">--}}
+{{--            <a class="nav-link" href="/search_students">--}}
+{{--              <i class="material-icons">bubble_chart</i>--}}
+{{--              <p>Look for Students</p>--}}
+{{--            </a>--}}
+{{--          </li>--}}
+{{--          --}}
+{{--          <li class="nav-item ">--}}
+{{--            <a class="nav-link" href="./linkedin_students">--}}
+{{--              <i class="material-icons">notifications</i>--}}
+{{--              <p>Look for Companies</p>--}}
+{{--            </a>--}}
+{{--          </li>--}}
 
           <li class="nav-item ">
             <a class="nav-link" href="add_test">

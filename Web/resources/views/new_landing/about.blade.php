@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>WebHost - Free Bootstrap 4 Template by Colorlib</title>
+    <title>HireConnect - Advocating happy careers - Job Recommender System</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     

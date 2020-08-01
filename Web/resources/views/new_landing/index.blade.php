@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>WebHost - Free Bootstrap 4 Template by Colorlib</title>
+    <title>HireConnect - Advocating happy careers - Job Recommender System</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
@@ -42,7 +42,7 @@
 	          <li class="nav-item"><a href="/about" class="nav-link">About</a></li>
 	          <li class="nav-item"><a href="/chatbot" class="nav-link">FAQ</a></li>
 	          <li class="nav-item"><a href="/contact" class="nav-link">Contact</a></li>
-	          <li class="nav-item cta"><a href="contact.html" style="margin-left:20px;" class="nav-link"><span>Admin Login</span></a></li>
+	          <li class="nav-item cta"><a href="/admin_login" style="margin-left:20px;" class="nav-link"><span>Admin Login</span></a></li>
             <li class="nav-item cta"><a href="/companylogin" style="margin-left:20px;" class="nav-link"><span>Company Login</span></a></li>
             <li class="nav-item cta"><a href="/login" style="margin-left:20px;" class="nav-link"><span>Candidate Login</span></a></li>
 	        </ul>
