@@ -60,13 +60,17 @@ def badge_preference(badge_list):
             advance.append(x[0])
         elif str(x[1]).lower() == 'intermediate':
             intermediate.append(x[0])    
-        #elif str(x[1]).lower() == 'basic':
-         #  basic.append(x[0])
+        elif str(x[1]).lower() == 'basic':
+            basic.append(x[0])
         else:
             no_badge.append(x[0])
     pref_badge = []
     pref_badge = advance + intermediate 
-    return pref_badge
+    
+    if(len(pref_badge)==0):
+        return basic
+    else:
+        return pref_badge
 
 def transform(input,sign, quote = False):
     syntax = input.replace(" ", sign)

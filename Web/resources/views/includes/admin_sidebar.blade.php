@@ -41,14 +41,14 @@
 
           <li class="nav-item ">
             <a class="nav-link" href="add_test">
-              <i class="material-icons">content_paste</i>
+              <i class="material-icons">note_add</i>
               <p>Add Test</p>
             </a>
           </li>
 
           <li class="nav-item ">
             <a class="nav-link" href="add_question">
-              <i class="material-icons">bubble_chart</i>
+              <i class="material-icons">playlist_add</i>
               <p>Add Question</p>
             </a>
           </li>
