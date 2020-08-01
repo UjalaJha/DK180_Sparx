@@ -154,7 +154,7 @@ def home():
     
 @app.route('/candidate_api',methods=['POST'])
 def predict_api():
-    profiledata = pd.read_csv(".\\Test Profiles\\profile_data.csv")
+    #profiledata = pd.read_csv(".\\Test Profiles\\profile_data.csv")
     profiledata = pd.read_csv("Test Profiles\\profile_data.csv")
 
     input_company = {'role_title': request.json['role_title'],'company_name':request.json['company_name'],'description' : request.json['description'],
