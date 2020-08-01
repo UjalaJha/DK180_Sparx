@@ -223,6 +223,9 @@ Route::get('getSubConcept/{sub_category}/{concept}','AddQuestionController@getSu
 Route::get('view_users', function (){
     return view('admin/view_users');
 });
+Route::get('aicte', function (){
+    return view('admin/aicte');
+});
 
 
 //update skills
