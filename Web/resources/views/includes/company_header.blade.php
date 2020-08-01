@@ -18,8 +18,7 @@
 
 <head>
   <meta charset="utf-8" />
-  <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png">
-  <link rel="icon" type="image/png" href="../assets/img/favicon.png">
+  <link rel="icon" href="../images/top-favicon.png" type="image/png" sizes="16x26">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <title>
     HireConnect - Advocating happy careers - Job Recommender System

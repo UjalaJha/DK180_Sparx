@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <title>HireConnect - Advocating happy careers - Job Recommender System</title>
+    <link rel="icon" href="images/top-favicon.png" type="image/png" sizes="16x20">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
