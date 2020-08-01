@@ -90,10 +90,8 @@
         Tip 2: you can also add an image using data-image tag
     -->
       <div class="logo">
-        <a href="http://www.creative-tim.com" class="simple-text logo-normal">
-          Creative Tim
-        </a>
-      </div>
+          <img src="../assets/img/logo.png" width="250px" height="70px">
+        </div>
       <div class="sidebar-wrapper">
         <div style="margin-left:12px;margin-top:10px;">
         <span>

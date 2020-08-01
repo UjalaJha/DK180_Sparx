@@ -7093,9 +7093,7 @@ button.bg-dark:focus {
   float: none !important;
 }
 
-a.mcqbutton:visited{
-  color:green;
-}
+
 @media (min-width: 576px) {
   .float-sm-left {
     float: left !important;

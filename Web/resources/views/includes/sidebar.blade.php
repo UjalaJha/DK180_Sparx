@@ -1,3 +1,13 @@
+<?php
+// use Session;
+// $page=Session::get('page');
+// echo $page;
+ // <?php 
+// if($page=='view_profile'){echo "active";} 
+
+?>
+<!-- // exit; -->
+?>
 <body class="">
   
 <div class="wrapper " style="height: 0px;">
