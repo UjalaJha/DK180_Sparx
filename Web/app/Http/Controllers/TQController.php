@@ -198,8 +198,8 @@ class TQController extends Controller
 
     public function save_score()
     {
-        echo "here";
-        echo $_GET['scores'];
+//        echo "here";
+//        echo $_GET['scores'];
 //        exit;s
         $user_id=Session::get('user_id');
         $skill_category_id=$_GET['skill_category_id'];

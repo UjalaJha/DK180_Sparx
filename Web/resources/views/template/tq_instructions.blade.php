@@ -168,4 +168,9 @@
 
               localStorage.setItem("setTQAns",JSON.stringify(setTQAns));
 
+
+              var setADVTQAns = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
+
+              localStorage.setItem("setADVTQAns",JSON.stringify(setADVTQAns));
+
       </script>

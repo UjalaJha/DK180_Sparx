@@ -479,12 +479,20 @@
           }
 
 
+          var quesCount = 0;
           // alert(window.location.href);
           var urlString = window.location.href;
           var extractedArray = urlString.split("?c=");
-          var quesCount = extractedArray[1];
-          // alert(quesCount);
-          document.getElementById('question_id_div').innerHTML = quesCount;
+          // alert(extractedArray.length);
+          if(extractedArray.length == 1){
+              quesCount = 1;
+              document.getElementById('question_id_div').innerHTML = quesCount;
+          }else{
+              quesCount = extractedArray[1];
+              // alert(quesCount);
+              document.getElementById('question_id_div').innerHTML = quesCount;
+          }
+
 
           var getCurrentQuesLocalValue = JSON.parse(localStorage.getItem("setTQAns"));
           // alert(getCurrentQuesLocalValue[quesCount-1]);
@@ -697,13 +705,23 @@
 
     function check_ans(val, opt){
 
+     var quesCount = 0;
      var urlString = window.location.href;
      var extractedArray = urlString.split("?c=");
-     var quesCount = extractedArray[1];
+     if(extractedArray.length == 1){
+         quesCount = 1;
+         document.getElementById('sidebar_ques_'+quesCount).classList.remove('btn-primary');
+         document.getElementById('sidebar_ques_'+quesCount).classList.add('btn-success');
 
-     // alert(quesCount);
-     document.getElementById('sidebar_ques_'+quesCount).classList.remove('btn-primary');
-     document.getElementById('sidebar_ques_'+quesCount).classList.add('btn-success');
+     }else{
+         quesCount = extractedArray[1];
+
+         // alert(quesCount);
+         document.getElementById('sidebar_ques_'+quesCount).classList.remove('btn-primary');
+         document.getElementById('sidebar_ques_'+quesCount).classList.add('btn-success');
+     }
+
+
 
 
         choosed_ans=val;
