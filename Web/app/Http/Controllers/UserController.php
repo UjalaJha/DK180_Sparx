@@ -984,7 +984,15 @@ class UserController extends Controller
 
 
         $response='{ "course_frequency": { "CSS": 2312, "Core Java": 1555, "HTML": 3195, "Html5": 1136, "JQuery": 1405, "Java": 1957, "Javascript": 3505, "MySQL": 1092, "Python": 1156, "SQL": 1375 }, "other_courses": [ "UX", "Marketing", "java", "html", "Angularjs", "Rest", "UI Development", "css", "Front End", "Ajax" ], "popular_courses": [ "Javascript", "HTML", "CSS", "Java", "Core Java", "JQuery", "SQL", "Python", "Html5", "MySQL", "Hibernate", "Finance" ], "popular_softskills": { "analytical": 31, "competitive analysis": 6, "negotiation": 16, "problem solving": 25, "process improvement": 11 } }';
-        print_r(json_decode($response,true));
+        $response=json_decode($response,true);
+        $a_key=[];
+        $a_value=[];
+        foreach($response['course_frequency'] as $key => $value){
+            array_push($a_key, $key);
+            array_push($a_value, $value);
+        }
+        // $a_key = array_values($a_key);
+        return view('admin/learning_platform')->with('keys',$a_key)->with('values',$a_value);
     }
 
     public function store(Request $request)

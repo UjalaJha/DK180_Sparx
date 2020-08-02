@@ -67,7 +67,7 @@
                 var myChart = new Chart(ctx, {
                     type: 'bar',
                     data: {
-                        labels: ["Java", "C", "C++", "Python", "Ruby", "Spring", ".Net", "Ruby", "Spring", ".Net"],
+                        labels: ["CSS", "Core Java", "HTML", "Html5", "JQuery", "Java", "Javascript", "MySQL", "Python", "SQL"],
                         datasets: [{
                         //     label: 'Course',
                         //     data: [12, 19, 3, 17, 28, 24, 7],
@@ -76,7 +76,7 @@
                         //     borderWidth: 2
                         // }, {
                             label: 'Students',
-                            data: [30, 29, 5, 5, 20, 3, 10,12, 25, 34],
+                            data: [2312, 1555, 3195, 1136, 1405, 1957, 3505,1092, 1156, 1375],
                            backgroundColor: "rgba(255, 64, 123,0.5)",
                                     borderColor: "rgba(255, 64, 123,0.7)",
                             borderWidth: 2
