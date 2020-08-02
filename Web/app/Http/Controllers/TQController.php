@@ -197,8 +197,8 @@ class TQController extends Controller
 
     public function save_score()
     {
-        echo "here";
-        echo $_GET['scores'];
+        // echo "here";
+        // echo $_GET['scores'];
 //        exit;s
         $user_id=Session::get('user_id');
         $skill_category_id=$_GET['skill_category_id'];
@@ -206,11 +206,11 @@ class TQController extends Controller
 
         $attempt = TQUserAttempt::where('user_id', $user_id)->where('tq_category_details_id',$skill_category_id)->where('level_number',1)->get();
         $attempt = count($attempt);
-        echo "attempt".$attempt;
+        // echo "attempt".$attempt;
 
 
         $max_score = TQUserAttempt::where('user_id', $user_id)->where('tq_category_details_id',$skill_category_id)->where('level_number',1)->max('score');
-        echo "max score = ".$max_score;
+        // echo "max score = ".$max_score;
 
         $final_score_to_store = 0;
         if($max_score!=null) {
@@ -229,18 +229,25 @@ class TQController extends Controller
         }
                 // echo $skill_category_id;
                 // $score=$_GET['scores'];
+        if(empty($final_score_to_store)){
+            $final_score_to_store=3;
+        }
         $tech = UserTechnical::where('user_id',$user_id)->where('tq_category_details_id',$skill_category_id)->update(['level_1_test_given'=>1,'level_1_score'=>$final_score_to_store,'level_2_eligible'=>$eligible,'attempt_number'=>($attempt+1)]);
 
         $user_attempt = new TQUserAttempt();
         $user_attempt->user_id = $user_id;
         $user_attempt->tq_category_details_id = $skill_category_id;
         $user_attempt->attempt_number = ($attempt+1);
-        $user_attempt->score = $_GET['scores'];
+        $user_attempt->score = 5;
         $user_attempt->level_number = 1;
         // echo "<pre>";
         // print_r($tech);
         $user_attempt->save();
+
         $score=$_GET['scores'];
+        if(empty($score)){
+            $score=3;
+        }
         // echo "<br>";
         // echo $score;
         // echo $skill_category_id;
@@ -293,6 +300,9 @@ class TQController extends Controller
 //        if($final_score_to_store>3){
 //            $eligible = 1;
 //        }
+        if(empty($final_score_to_store)){
+            $final_score_to_store=3;
+        }
         $tech = UserTechnical::where('user_id',$user_id)->where('tq_category_details_id',$skill_category_id)->update(['level_2_test_given'=>1,'level_2_score'=>$final_score_to_store,'attempt_number'=>($attempt+1)]);
 
         $user_attempt = new TQUserAttempt();

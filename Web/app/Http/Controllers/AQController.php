@@ -47,7 +47,7 @@ class AQController extends Controller
         $aq_score->save();
 
         $user_id = Session::get('user_id');
-        $user_test = UserTests::where('user_id',$user_id)->update(['aq_given'=>1]);
+        $user_test = UserTests::where('user_id',$user_id)->update(['aq_given'=>0]);
 
         return app('App\Http\Controllers\AQController')->fetch_aq_score();
         // return app('App\Http\Controllers\UserController')->redirectDashboard();

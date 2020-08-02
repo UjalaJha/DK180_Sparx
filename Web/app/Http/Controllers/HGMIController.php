@@ -38,7 +38,7 @@ class HGMIController extends Controller
         $hgmi_score->Existential = $_POST['Existential'];
         $hgmi_score->save();
 
-        $user_test = UserTests::where('user_id',$user_id)->update(['hgmi_given'=>1]);
+        $user_test = UserTests::where('user_id',$user_id)->update(['hgmi_given'=>0]);
         return app('App\Http\Controllers\UserController')->redirectDashboard();
 
 

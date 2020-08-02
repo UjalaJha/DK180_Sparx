@@ -124,8 +124,12 @@ def indeed_web_scraping(num_pages_indeed,url_indeed):
         job_divs = [jp for jp in divs if not jp.get('class') is None
                     and 'row' in jp.get('class')]
             
+        i=0
         for job in job_divs:
             # job id
+            i+=1
+            if i>3:
+                break
             id = job.get('data-jk', None)
             #print(id)
             # job link related to job id
@@ -285,7 +289,7 @@ def predict():
         job_profile_list.append(get_title_from_index(element))
         #print(get_title_from_index(element))
         i=i+1
-        if i>11:
+        if i>8:
             break
 
     output_profiles = job_profile_list
@@ -319,4 +323,4 @@ def results():
     return jsonify(output)
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=True,port="5004",host="0.0.0.0")
