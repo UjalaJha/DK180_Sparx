@@ -41,13 +41,13 @@
 
 				<div class="wrap-input100 validate-input m-b-23" data-validate = "Username is reauired">
 					<span class="label-input100">Username/Email</span>
-					<input class="input100" type="email" required name="admin_email" placeholder="Type your email">
+					<input class="input100" type="email" required name="admin_email" value="admin@hireconnect.com" placeholder="Type your email">
 					<span class="focus-input100" data-symbol="&#xf206;"></span>
 				</div>
 
 				<div class="wrap-input100 validate-input" data-validate="Password is required">
 					<span class="label-input100">Password</span>
-					<input class="input100" type="password" required name="admin_password" placeholder="Type your password">
+					<input class="input100" type="password" required name="admin_password" value="abc123" placeholder="Type your password">
 					<span class="focus-input100" data-symbol="&#xf190;"></span>
 				</div>
 

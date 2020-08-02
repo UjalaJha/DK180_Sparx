@@ -257,3 +257,13 @@ Route::get('/dummy_job_role','UserController@dummy_role');
 
 Route::get('look_for_jobs', 'UserController@look_for_jobs');
 
+
+
+
+Route::get('custom_test', function(){
+    return view('company/add_test');
+});
+
+Route::post('insert_new_test_company','CompanyController@addNewCustomTest');
+Route::post('proceed_with_add_ques_form_company', 'CompanyController@proceedAddQuesForm');
+Route::post('save_manual_question_company','CompanyController@saveManualForm');

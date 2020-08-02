@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use App\AQ;
 use App\UserAQ;
+use App\UserRatings;
 use Illuminate\Http\Request;
 use Session;
 use App\UserTests;
@@ -48,6 +49,21 @@ class AQController extends Controller
 
         $user_id = Session::get('user_id');
         $user_test = UserTests::where('user_id',$user_id)->update(['aq_given'=>1]);
+
+
+        $gettingAllStars = UserRatings::where('user_id', Session::get('user_id'))->get();
+        foreach ($gettingAllStars as $eachLanguage){
+            $lang = $eachLanguage['language'];
+            $internship_star = $eachLanguage['internship_star'];
+            $project_star = $eachLanguage['project_star'];
+            $technical_star = $eachLanguage['technical_star'];
+            $iq_star = $eachLanguage['iq_star'];
+            $total_star = $internship_star + $project_star + $technical_star + $iq_star;
+
+            UserRatings::where('user_id',$user_id)->where('language', $lang)->update(['total_star'=>$total_star]);
+
+        }
+
 
         return app('App\Http\Controllers\AQController')->fetch_aq_score();
         // return app('App\Http\Controllers\UserController')->redirectDashboard();

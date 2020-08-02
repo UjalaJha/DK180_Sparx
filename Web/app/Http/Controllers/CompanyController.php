@@ -2,19 +2,36 @@
 
 namespace App\Http\Controllers;
 
+use App\Imports\QuestionsImport;
+use App\Imports\CompanyQuestionsImport;
+use App\TQ;
+use App\CompanyCustomTQ;
 use App\TQCategoryDetails;
+use App\TQConceptDetails;
 use App\UserAcademics;
 use App\UserExperiences;
 use App\UserPersonalDetails;
 use App\UserTechnical;
 use Illuminate\Http\Request;
 
+use Maatwebsite\Excel\Facades\Excel;
 use Session;
 use App\Jobs;
 use App\CompanyDetails;
 
 class CompanyController extends Controller
 {
+
+
+    public function index(){
+        $categories = TQCategoryDetails::distinct()->get(['category']);
+//        echo $categories;
+        return view('company/add_new_question_company')->with('categories', $categories);
+    }
+
+
+
+
     public function candidaterecommendation(){
 
         $cid = Session::get('company_id');
@@ -265,6 +282,227 @@ class CompanyController extends Controller
 //        return view('template/iq')->with('iq',$iq);
 
     }
+
+
+
+
+
+    public function addNewCustomTest(){
+//        echo "here"; //
+        $test=new TQCategoryDetails;
+//        $test->stream=$_POST['stream'];
+//        echo $stream;
+        $test->category =$_POST['category'];
+        $test->sub_category=strtoupper($_POST['sub_category']);
+//        $first_name=$_POST['first_name'];
+//        $lastname=$_POST['last_name'];
+
+//        print_r($first_name);
+//        print_r($lastname);
+//        echo $test->sub_category; //
+//        print_r($test);
+        $test->save();
+        $tq_category_details_id_var=$test->tq_category_details_id;
+
+        $test_concept=new TQConceptDetails;
+
+
+        $test_concept->tq_category_details_id=$tq_category_details_id_var;
+        $test_concept->level=$_POST['level'];
+//        echo $test_concept->tq_category_details_id.$test_concept->level; //
+
+
+//        print_r($_POST['concept_name']);
+//        print_r($_POST['concept_number']);
+
+        $count=sizeof($_POST['concept_name']);
+//        echo "<br>"; //
+//        echo $count; //
+
+        for($i=0;$i<$count;$i++){
+//            echo "<br>";
+//            echo "cpp";
+            $test_concept->sub_concept=$_POST['concept_name'][$i];
+
+            $test_concept->no_of_questions=$_POST['concept_number'][$i];
+//            echo $test_concept->sub_concept."".$test_concept->no_of_questions;  //
+//            $test_concept->save();
+
+            $data=array(
+                'tq_category_details_id'=>$tq_category_details_id_var,
+                'level'=>$_POST['level'],
+                'sub_concept'=>$_POST['concept_name'][$i],
+                'no_of_questions'=>$_POST['concept_number'][$i]
+            );
+
+
+
+
+
+
+
+
+//            $data->category_id=>$tq_category_details_id_var;
+//            $data->level=$test_concept->level;
+//                $data->=$test_concept->sub_concept;
+//                $data->no_of_question=$test_concept->no_of_questions;
+//            print_r($data);  //
+            TQConceptDetails::insert($data);
+
+
+        }
+
+
+
+
+
+//        echo "".$lastname."".$first_name;
+
+
+        return $this->index();
+
+    }
+
+
+
+
+
+
+
+    public function proceedAddQuesForm(Request $request){
+//        echo "hey";
+//        echo $_POST['category'];
+//        echo $_POST['sub_category'];
+//        echo $_POST['concept'];
+//        echo $_POST['sub_concept'];
+//        echo $_POST['no_of_ques'];
+//        echo $_POST['ques_file'];
+
+        $category_details_id = TQCategoryDetails::where('category',$_POST['category'])->where('sub_category',$_POST['sub_category'])->pluck('tq_category_details_id');
+//        echo $category_details_id;
+
+        $tq_category_details_id = 0;
+        foreach ($category_details_id as $value){
+            $tq_category_details_id = $value;
+        }
+
+        $concept_details_id = TQConceptDetails::where('tq_category_details_id',$tq_category_details_id)->where('level',$_POST['concept'])->where('sub_concept',$_POST['sub_concept'])->pluck('tq_concept_details_id');
+//        echo $category_details_id;
+
+        $tq_concept_details_id = 0;
+        foreach ($concept_details_id as $value){
+            $tq_concept_details_id = $value;
+        }
+
+
+//        echo $tq_category_details_id;
+//        echo $tq_concept_details_id;
+        $_SESSION['$tq_category_details_id'] = $tq_category_details_id;
+        $_SESSION['$tq_concept_details_id'] = $tq_concept_details_id;
+
+
+//        echo "file selected";
+//            echo $_POST['ques_file'];
+        //insert all details through excel file with concept id
+        if($request->hasFile('ques_file')){
+//                echo "here";
+            $path = $request->file('ques_file')->getRealPath();
+//                echo $path;
+            $data = Excel::import(new CompanyQuestionsImport, \request()->file('ques_file'));
+//                echo $data->count();
+//                print_r($data);
+            //
+//                $arr = array();
+//                if($data->count()){
+//                    foreach ($data as $key => $value) {
+//                        $arr[] = ['name' => $value->name, 'details' => $value->details];
+//                    }
+//                        echo "ss";
+//                    print_r($arr);
+//                    if(!empty($arr)){
+////                        \DB::table('tq_test_questions')->insert($arr);
+//                        dd('Insert Record successfully.');
+//                    }
+//                }
+            //
+//                https://www.itsolutionstuff.com/post/laravel-57-import-export-excel-to-database-exampleexample.html
+//                https://docs.laravel-excel.com/3.1/imports/basics.html
+            return $this->index();
+        }
+        else{
+//            echo "no file";
+            $ques_count_array = array();
+            $ques_count = $_POST['no_of_ques'];
+            $count = 0;
+            while($ques_count!=0){
+                $ques_count_array[$count] = 1;
+                $count++;
+                $ques_count--;
+            }
+            return view('company/add_manual_question_company')->with('no_of_ques',$ques_count_array)->with('tq_category_details_id', $tq_category_details_id)->with('tq_concept_details_id',$tq_concept_details_id);
+        }
+
+    }
+
+
+
+
+
+
+
+
+    public function saveManualForm(){
+        $cid = Session::get('company_id');
+//        print_r($_POST['question_statement']);
+//        print_r($_POST['option_1']);
+//        print_r($_POST['option_2']);
+//        print_r($_POST['option_3']);
+//        print_r($_POST['option_4']);
+//        print_r($_POST['correct_option']);
+//        print_r($_POST['direct_answer']);
+
+        $tq_category_details_id = $_POST['tq_category_details_id'];
+        $tq_concept_details_id = $_POST['tq_concept_details_id'];
+
+        $count = sizeof($_POST['correct_option']);
+        for($i=0; $i<$count; $i++){
+            if($_POST['option_1'][$i]!=null && $_POST['option_2'][$i]!=null && $_POST['option_3'][$i]!=null && $_POST['option_4'][$i]!=null){
+                $data = array(
+                    'company_id'=> $cid,
+                    'tq_category_details_id'=>$tq_category_details_id,
+                    'tq_concept_details_id'=>$tq_concept_details_id,
+                    'is_options_available'=>1,
+                    'question_statement'=>$_POST['question_statement'][$i],
+                    'option_1'=>$_POST['option_1'][$i],
+                    'option_2'=>$_POST['option_2'][$i],
+                    'option_3'=>$_POST['option_3'][$i],
+                    'option_4'=>$_POST['option_4'][$i],
+                    'correct_opton'=>$_POST['correct_option'][$i],
+                );
+            }else if($_POST['option_1'][$i]==null && $_POST['option_2'][$i]==null && $_POST['option_3'][$i]==null && $_POST['option_4'][$i]==null){
+                $data = array(
+                    'company_id'=> $cid,
+                    'tq_category_details_id'=>$tq_category_details_id,
+                    'tq_concept_details_id'=>$tq_concept_details_id,
+                    'is_options_available'=>0,
+                    'question_statement'=>$_POST['question_statement'][$i],
+                    'correct_opton'=>$_POST['direct_answer'][$i],
+                );
+            }else{
+                return view('company/add_new_question_company');
+            }
+
+//            print_r($data); //
+            CompanyCustomTQ::insert($data);
+
+        }
+
+        return $this->index();
+    }
+
+
+
+
 
 
 }

@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\TQ;
 //use App\TQController;
+use App\TQCategoryDetails;
+use App\UserRatings;
 use App\UserTechnical;
 use App\TQUserAttempt;
 use function PHPSTORM_META\type;
@@ -207,11 +209,11 @@ class TQController extends Controller
 
         $attempt = TQUserAttempt::where('user_id', $user_id)->where('tq_category_details_id',$skill_category_id)->where('level_number',1)->get();
         $attempt = count($attempt);
-        echo "attempt".$attempt;
+//        echo "attempt".$attempt;
 
 
         $max_score = TQUserAttempt::where('user_id', $user_id)->where('tq_category_details_id',$skill_category_id)->where('level_number',1)->max('score');
-        echo "max score = ".$max_score;
+//        echo "max score = ".$max_score;
 
         $final_score_to_store = 0;
         if($max_score!=null) {
@@ -250,6 +252,18 @@ class TQController extends Controller
         $level="1";
 //        exit;
 
+        $temp_score = 0;
+        if($score >= 6){
+            $temp_score = 2;
+        }else{
+            $temp_score = 1;
+        }
+        $tempSubCategory = TQCategoryDetails::where('tq_category_details_id', $skill_category_id)->get();
+        $lang = $tempSubCategory[0]['sub_category'];
+        UserRatings::where('user_id',$user_id)->where('language', $lang)->update(['technical_star'=>$temp_score]);
+
+
+
         return  view('/template/tq_result')->with("score",$score)->with("level",$level);
         // return app('App\Http\Controllers\UserController')->skills_view();
 //        return view('/template/tq_instructions');
@@ -261,8 +275,8 @@ class TQController extends Controller
 
     public function save_advance_score()
     {
-        echo "here";
-        echo $_GET['scores'];
+//        echo "here";
+//        echo $_GET['scores'];
 //        exit;s
         $user_id=Session::get('user_id');
         $skill_category_id=$_GET['skill_category_id'];
@@ -306,6 +320,20 @@ class TQController extends Controller
         $score=$_GET['scores'];
         $level="2";
 //        exit;
+
+
+
+        $temp_score = 0;
+        if($score >= 14){
+            $temp_score = 5;
+        }else{
+            $temp_score = 3;
+        }
+        $tempSubCategory = TQCategoryDetails::where('tq_category_details_id', $skill_category_id)->get();
+        $lang = $tempSubCategory[0]['sub_category'];
+        UserRatings::where('user_id',$user_id)->where('language', $lang)->update(['technical_star'=>$temp_score]);
+
+
         return  view('/template/advance_tq_result')->with("score",$score)->with("level",$level);
         // return app('App\Http\Controllers\UserController')->advance_skills_view();
 //        return view('/template/tq_instructions');

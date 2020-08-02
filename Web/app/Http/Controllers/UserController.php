@@ -1148,10 +1148,11 @@ class UserController extends Controller
             $user_experience->role = $_POST['role'][$i];
             $user_experience->duration = $_POST['duration'][$i];
             $user_experience->domain = $_POST['domain'][$i];
-            $user_experience->tech_stack = $_POST['tech_stack'][$i];
-
+            $user_experience->tech_stack = strtoupper($_POST['tech_stack'][$i]);
 
             $user_experience->save();
+
+            UserRatings::where('user_id', $user_id)->where('language', $_POST['tech_stack'][$i])->update(['internship_star'=>1]);
 
             $user_experience->company_name = "";
             $user_experience->project_name = "";
@@ -1230,8 +1231,10 @@ class UserController extends Controller
             $user_project->role = $_POST['role'][$i];
             $user_project->domain = $_POST['domain'][$i];
             $user_project->duration = $_POST['duration'][$i];
-            $user_project->tech_stack = $_POST['tech_stack'][$i];
+            $user_project->tech_stack = strtoupper($_POST['tech_stack'][$i]);
             $user_project->save();
+
+            UserRatings::where('user_id',$user_id)->where('language', $_POST['tech_stack'][$i])->update(['project_star'=>1]);
 
         }
 
@@ -1269,7 +1272,7 @@ class UserController extends Controller
 //        echo $user_tech_detail;
         $lang=$user_tech_detail[0]['tech_stack'];
 //        echo $lang;
-        $tech=UserRatings::where('user_id',$id)->where('language',$lang)->update(['internship_star'=>1]);
+//        $tech=UserRatings::where('user_id',$id)->where('language',$lang)->update(['internship_star'=>1]);
 //        exit;
 
 
@@ -1287,7 +1290,7 @@ class UserController extends Controller
 //                echo $int;
         $user_tech_detail=UserExperiences::where('user_id',$id)->where('is_internship_project',0)->get();
         $lang=$user_tech_detail[0]['tech_stack'];
-        $tech=UserRatings::where('user_id',$id)->where('language',$lang)->update(['project_star'=>1]);
+//        $tech=UserRatings::where('user_id',$id)->where('language',$lang)->update(['project_star'=>1]);
 //                exit;
 //        $user_tech_detail=UserExperiences::where('user_id',$id)->where('is_internship_project',0)->get();
 
@@ -1500,7 +1503,7 @@ class UserController extends Controller
         
         public function full_report(){
         $user_id=Session::get('user_id');
-        echo $user_id;
+//        echo $user_id;
         $eq=UserEQ::where('user_id',$user_id)->get();
         $aq=UserAQ::where('user_id',$user_id)->get();
         $iq=UserIQ::where('user_id',$user_id)->get();
@@ -1523,7 +1526,7 @@ class UserController extends Controller
     public function dummy_role(){
         $user_id=Session::get('user_id');
         $tq=UserTechnical::where('user_id',$user_id)->get();
-        echo $tq[0];
+//        echo $tq[0];
         exit;
         $final_string="";
         foreach($tq as $tqa){
