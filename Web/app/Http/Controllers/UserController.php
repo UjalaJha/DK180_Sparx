@@ -117,7 +117,7 @@ class UserController extends Controller
 //            echo "test done";
 
             $user_id = Session::get('user_id');
-            $user_test = UserTests::where('user_id',$user_id)->update(['tq_given'=>1]);
+            $user_test = UserTests::where('user_id',$user_id)->update(['tq_given'=>0]);
             return app('App\Http\Controllers\UserController')->redirectDashboard();
 
 
@@ -333,7 +333,7 @@ class UserController extends Controller
             $user_id=Session::get('user_id');
         $data_fetch=UserPersonalDetails::where('user_id', $user_id)->get();
         // echo "<pre>";
-        $data['name']=$data_fetch[0]->first_name;
+        // $data['name']=$data_fetch[0]->first_name;
         // echo $data['name'];
         $tq=UserTechnical::where('user_id',$user_id)->get();
         $final_string="";
@@ -352,12 +352,17 @@ class UserController extends Controller
             $tag='basic';
         }
         // echo $tag;
-        $final_string.="$skill_name"."-"."$tag";
+        $final_string.="$skill_name"."-"."$tag,";
     }
     // echo "<br>";
     // echo $final_string;
     // $data['skills']=$final_string;
-    $skills=$final_string;
+    // $skills=$final_string;
+    $data['skills']=$final_string;
+    $data['skills']="'".rtrim(strtolower($data['skills']), ", ")."'";
+    $json=json_encode($data);
+        // print_r($json);
+        // exit();
         //give this string
         // $skills="python-advance,java-basic,machine learning-advance,data science-intermediate,r-intermediate,business analytics-intermediate,sql-advance";
         // $skills='';
@@ -365,7 +370,7 @@ class UserController extends Controller
         // $curl = curl_init();
 
         // curl_setopt_array($curl, array(
-        //   CURLOPT_URL => "http://127.0.0.1:5000/api",
+        //   CURLOPT_URL => "http://127.0.0.1:5004/api",
         //   CURLOPT_RETURNTRANSFER => true,
         //   CURLOPT_ENCODING => "",
         //   CURLOPT_MAXREDIRS => 10,
@@ -373,7 +378,7 @@ class UserController extends Controller
         //   CURLOPT_FOLLOWLOCATION => true,
         //   CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
         //   CURLOPT_CUSTOMREQUEST => "POST",
-        //   CURLOPT_POSTFIELDS =>"{\r\n        \"skills\": \"python-advance,java-basic,machine learning-advance,data science-intermediate,r-intermediate,business analytics-intermediate,sql-advance\" \r\n}",
+        //   CURLOPT_POSTFIELDS =>$json,
         //   CURLOPT_HTTPHEADER => array(
         //     "Content-Type: application/json"
         //   ),
@@ -384,7 +389,7 @@ class UserController extends Controller
         // curl_close($curl);
         // echo $response;
 
-        $json_string = '{"job profiles":["python/django senior software","data scientist -","database specialist  ","data software engineer","data analytics, nj","sr. data scientist","analyst - python","esri arcgis administrator","mobile sdet  ","data analystics engineer","lead data scientist","senior database administrator"],"jobs":[{"from":"Indeed","job_company":"StartUs Insights","job_id":"93ad1b7f9420a729","job_link":"https://www.indeed.co.in/jobs?q=python/django+senior+software&l=India&start=10&vjk=93ad1b7f9420a729","job_location":"Bengaluru, Karnataka","job_summary":"— Solid understanding of software development principles and best practices.\nBuilding data applications in a product company,.\nWHAT YOU GET IN RETURN: *.","job_title":"Senior Python Developer","posted_date":"21 days ago"},{"from":"Indeed","job_company":"Techversant Infotech Pvt. Ltd.","job_id":"672b77efc079ca85","job_link":"https://www.indeed.co.in/jobs?q=python/django+senior+software&l=India&start=10&vjk=672b77efc079ca85","job_location":"Thiruvananthapuram, Kerala","job_summary":"MVC software pattern and frameworks.\nWork as a member of a team or on their own to deliver high quality and maintainable software solutions, to strict deadlines…","job_title":"Sr. Software Engineer / Software Engineer - ColdFusion","posted_date":"30+ days ago"},{"from":"Indeed","job_company":"HP","job_id":"f19117ec92fc2221","job_link":"https://www.indeed.co.in/jobs?q=lead+data+scientist&l=India&start=10&vjk=f19117ec92fc2221","job_location":"Bengaluru, Karnataka","job_summary":"O Fluent in structured and unstructured data and modern data transformation methodologies.\nO Leads a project team of data science professionals.","job_title":"Data Scientist Sales & Channel","posted_date":"25 days ago"}]}';
+        $json_string = '{"job profiles":["python/django senior software","data scientist -","Java Developer  ","data software engineer","data analytics, nj","sr. data scientist","analyst - python","esri arcgis administrator","mobile sdet  ","data analystics engineer","lead data scientist","senior database administrator"],"jobs":[{"from":"Indeed","job_company":"StartUs Insights","job_id":"93ad1b7f9420a729","job_link":"https://www.indeed.co.in/jobs?q=python/django+senior+software&l=India&start=10&vjk=93ad1b7f9420a729","job_location":"Bengaluru, Karnataka","job_summary":"— Solid understanding of software development principles and best practices.\nBuilding data applications in a product company,.\nWHAT YOU GET IN RETURN: *.","job_title":"Senior Java Developer","posted_date":"21 days ago"},{"from":"Indeed","job_company":"Techversant Infotech Pvt. Ltd.","job_id":"672b77efc079ca85","job_link":"https://www.indeed.co.in/jobs?q=python/django+senior+software&l=India&start=10&vjk=672b77efc079ca85","job_location":"Thiruvananthapuram, Kerala","job_summary":"MVC software pattern and frameworks.\nWork as a member of a team or on their own to deliver high quality and maintainable software solutions, to strict deadlines…","job_title":"Sr. Software Engineer / Software Engineer - ColdFusion","posted_date":"30+ days ago"},{"from":"Indeed","job_company":"HP","job_id":"f19117ec92fc2221","job_link":"https://www.indeed.co.in/jobs?q=lead+data+scientist&l=India&start=10&vjk=f19117ec92fc2221","job_location":"Bengaluru, Karnataka","job_summary":"O Fluent in structured and unstructured data and modern data transformation methodologies.\nO Leads a project team of data science professionals.","job_title":"Data Scientist Sales & Channel","posted_date":"25 days ago"}]}';
         // echo "<pre>";
         $recommendation=json_decode($json_string,true);
         // print_r($recommendation['job profiles']);
@@ -424,268 +429,271 @@ class UserController extends Controller
                 $tag='basic';
             }
             // echo $tag;
-            $final_string.="$skill_name"."-"."$tag";
+            $final_string.="$skill_name"."-"."$tag,";
         }
     // echo "<br>";
     // echo $final_string;
     $data['skills']=$final_string;
+    $data['skills']="'".rtrim(strtolower($data['skills']), ", ")."'";
     $json=json_encode($data);
         // print_r($json);
         // exit();
 
-        // $curl = curl_init();
+        $curl = curl_init();
 
-        // curl_setopt_array($curl, array(
-        //   CURLOPT_URL => "http://localhost:5002/course_api",
-        //   CURLOPT_RETURNTRANSFER => true,
-        //   CURLOPT_ENCODING => "",
-        //   CURLOPT_MAXREDIRS => 10,
-        //   CURLOPT_TIMEOUT => 0,
-        //   CURLOPT_FOLLOWLOCATION => true,
-        //   CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-        //   CURLOPT_CUSTOMREQUEST => "POST",
-        //   CURLOPT_POSTFIELDS =>$json,
-        //   CURLOPT_HTTPHEADER => array(
-        //     "Content-Type: application/json"
-        //   ),
-        // ));
+        curl_setopt_array($curl, array(
+          CURLOPT_URL => "http://localhost:5002/course_api",
+          CURLOPT_RETURNTRANSFER => true,
+          CURLOPT_ENCODING => "",
+          CURLOPT_MAXREDIRS => 10,
+          CURLOPT_TIMEOUT => 0,
+          CURLOPT_FOLLOWLOCATION => true,
+          CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+          CURLOPT_CUSTOMREQUEST => "POST",
+          CURLOPT_POSTFIELDS =>$json,
+          CURLOPT_HTTPHEADER => array(
+            "Content-Type: application/json"
+          ),
+        ));
 
-        // $response = curl_exec($curl);
+        $response = curl_exec($curl);
 
-        // curl_close($curl);
+        curl_close($curl);
         // echo "<pre>";
-        $recommendation = json_decode('{
-              "recommended_courses": [
-                {
-                  "content_duration": 3.0,
-                  "course_id": 16151,
-                  "is_paid": true,
-                  "level": "All Levels",
-                  "num_lectures": 23,
-                  "num_reviews": 147,
-                  "num_subscribers": 7867,
-                  "price": 20,
-                  "published_timestamp": "2012-05-15T18:03:43Z",
-                  "subject": "Web Development",
-                  "title": "AJAX Development",
-                  "url": "https://www.udemy.com/ajax-development/"
-                },
-                {
-                  "content_duration": 3.5,
-                  "course_id": 657734,
-                  "is_paid": true,
-                  "level": "All Levels",
-                  "num_lectures": 26,
-                  "num_reviews": 89,
-                  "num_subscribers": 12368,
-                  "price": 195,
-                  "published_timestamp": "2015-11-13T22:03:15Z",
-                  "subject": "Web Development",
-                  "title": "Complete AJAX Course: Learn AJAX Techniques Using Bootstrap",
-                  "url": "https://www.udemy.com/ajaxcourse/"
-                },
-                {
-                  "content_duration": 0.5666666666666667,
-                  "course_id": 955138,
-                  "is_paid": true,
-                  "level": "All Levels",
-                  "num_lectures": 9,
-                  "num_reviews": 23,
-                  "num_subscribers": 1241,
-                  "price": 35,
-                  "published_timestamp": "2016-09-10T20:59:38Z",
-                  "subject": "Web Development",
-                  "title": "AJAX :basics for beginners",
-                  "url": "https://www.udemy.com/ajaxbasics/"
-                },
-                {
-                  "content_duration": 4.0,
-                  "course_id": 746790,
-                  "is_paid": true,
-                  "level": "All Levels",
-                  "num_lectures": 60,
-                  "num_reviews": 30,
-                  "num_subscribers": 1554,
-                  "price": 20,
-                  "published_timestamp": "2016-02-02T18:36:12Z",
-                  "subject": "Web Development",
-                  "title": "JavaScript, jQuery and Ajax",
-                  "url": "https://www.udemy.com/ajax-calls-the-simplest-way/"
-                },
-                {
-                  "content_duration": 2.0,
-                  "course_id": 691760,
-                  "is_paid": true,
-                  "level": "Beginner Level",
-                  "num_lectures": 18,
-                  "num_reviews": 5,
-                  "num_subscribers": 755,
-                  "price": 65,
-                  "published_timestamp": "2016-01-25T17:57:24Z",
-                  "subject": "Web Development",
-                  "title": "Ajax  for Beginners: A Very Basic Introduction",
-                  "url": "https://www.udemy.com/ajax-for-beginners-a-very-basic-introduction/"
-                },
-                {
-                  "content_duration": 14.0,
-                  "course_id": 304490,
-                  "is_paid": true,
-                  "level": "Intermediate Level",
-                  "num_lectures": 86,
-                  "num_reviews": 231,
-                  "num_subscribers": 4183,
-                  "price": 35,
-                  "published_timestamp": "2014-10-12T06:29:05Z",
-                  "subject": "Web Development",
-                  "title": "A 13 Hour SQL Server 2014 /ASP.NET/CSS/C#/jQuery Course",
-                  "url": "https://www.udemy.com/learnsqlwithsqlserver2014/"
-                },
-                {
-                  "content_duration": 5.5,
-                  "course_id": 425084,
-                  "is_paid": true,
-                  "level": "All Levels",
-                  "num_lectures": 98,
-                  "num_reviews": 65,
-                  "num_subscribers": 586,
-                  "price": 60,
-                  "published_timestamp": "2015-03-23T00:20:29Z",
-                  "subject": "Web Development",
-                  "title": "Administering Microsoft SQL Server 2012 Databases - 70-462",
-                  "url": "https://www.udemy.com/administering-microsoft-sql-server-2012-databases-70-462/"
-                },
-                {
-                  "content_duration": 5.0,
-                  "course_id": 425086,
-                  "is_paid": true,
-                  "level": "All Levels",
-                  "num_lectures": 90,
-                  "num_reviews": 148,
-                  "num_subscribers": 1142,
-                  "price": 85,
-                  "published_timestamp": "2015-05-01T23:08:38Z",
-                  "subject": "Web Development",
-                  "title": "Implementing a Data Warehouse with SQL Server 2012 ",
-                  "url": "https://www.udemy.com/implementing-a-data-warehouse-with-sql-server-2012/"
-                },
-                {
-                  "content_duration": 6.5,
-                  "course_id": 422012,
-                  "is_paid": true,
-                  "level": "All Levels",
-                  "num_lectures": 115,
-                  "num_reviews": 89,
-                  "num_subscribers": 666,
-                  "price": 85,
-                  "published_timestamp": "2015-03-12T21:20:41Z",
-                  "subject": "Web Development",
-                  "title": "Querying Microsoft SQL Server 2012 - (Exam No. 70-461)",
-                  "url": "https://www.udemy.com/querying-sql-server-2012-70-461/"
-                },
-                {
-                  "content_duration": 5.5,
-                  "course_id": 1052304,
-                  "is_paid": true,
-                  "level": "All Levels",
-                  "num_lectures": 77,
-                  "num_reviews": 102,
-                  "num_subscribers": 11285,
-                  "price": 195,
-                  "published_timestamp": "2017-02-07T17:20:39Z",
-                  "subject": "Web Development",
-                  "title": "JavaScript For Beginners : Learn JavaScript From Scratch",
-                  "url": "https://www.udemy.com/javascript-course-for-beginners/"
-                },
-                {
-                  "content_duration": 4.0,
-                  "course_id": 8325,
-                  "is_paid": true,
-                  "level": "All Levels",
-                  "num_lectures": 82,
-                  "num_reviews": 253,
-                  "num_subscribers": 12458,
-                  "price": 20,
-                  "published_timestamp": "2011-09-09T15:28:59Z",
-                  "subject": "Web Development",
-                  "title": "HTML Tutorial: HTML & CSS for Beginners",
-                  "url": "https://www.udemy.com/learn-html5/"
-                },
-                {
-                  "content_duration": 2.0,
-                  "course_id": 15285,
-                  "is_paid": true,
-                  "level": "All Levels",
-                  "num_lectures": 17,
-                  "num_reviews": 306,
-                  "num_subscribers": 25854,
-                  "price": 20,
-                  "published_timestamp": "2012-04-08T05:12:43Z",
-                  "subject": "Web Development",
-                  "title": "HTML Workshop",
-                  "url": "https://www.udemy.com/html-workshop/"
-                },
-                {
-                  "content_duration": 3.0,
-                  "course_id": 1110756,
-                  "is_paid": true,
-                  "level": "All Levels",
-                  "num_lectures": 27,
-                  "num_reviews": 15,
-                  "num_subscribers": 2401,
-                  "price": 20,
-                  "published_timestamp": "2017-02-22T17:36:27Z",
-                  "subject": "Web Development",
-                  "title": "HTML Tutorials : HTML Code for Website Creating",
-                  "url": "https://www.udemy.com/html-code-for-website/"
-                },
-                {
-                  "content_duration": 1.0,
-                  "course_id": 958982,
-                  "is_paid": true,
-                  "level": "Beginner Level",
-                  "num_lectures": 25,
-                  "num_reviews": 20,
-                  "num_subscribers": 785,
-                  "price": 25,
-                  "published_timestamp": "2016-09-15T18:06:58Z",
-                  "subject": "Web Development",
-                  "title": "JavaScript : JavaScript Awesomeness",
-                  "url": "https://www.udemy.com/javascript-javascript/"
-                },
-                {
-                  "content_duration": 5.0,
-                  "course_id": 529828,
-                  "is_paid": true,
-                  "level": "All Levels",
-                  "num_lectures": 36,
-                  "num_reviews": 25,
-                  "num_subscribers": 638,
-                  "price": 95,
-                  "published_timestamp": "2015-06-17T22:23:31Z",
-                  "subject": "Business Finance",
-                  "title": "Python for Trading & Investing",
-                  "url": "https://www.udemy.com/python-for-trading-investing/"
-                },
-                {
-                  "content_duration": 4.0,
-                  "course_id": 16646,
-                  "is_paid": true,
-                  "level": "All Levels",
-                  "num_lectures": 53,
-                  "num_reviews": 217,
-                  "num_subscribers": 35267,
-                  "price": 50,
-                  "published_timestamp": "2012-04-25T00:01:43Z",
-                  "subject": "Web Development",
-                  "title": "Web Programming with Python",
-                  "url": "https://www.udemy.com/web-programming-with-python/"
-                }
-              ]
-            }',true);
+        // $recommendation = json_decode('{
+        //       "recommended_courses": [
+        //         {
+        //           "content_duration": 3.0,
+        //           "course_id": 16151,
+        //           "is_paid": true,
+        //           "level": "All Levels",
+        //           "num_lectures": 23,
+        //           "num_reviews": 147,
+        //           "num_subscribers": 7867,
+        //           "price": 20,
+        //           "published_timestamp": "2012-05-15T18:03:43Z",
+        //           "subject": "Web Development",
+        //           "title": "AJAX Development",
+        //           "url": "https://www.udemy.com/ajax-development/"
+        //         },
+        //         {
+        //           "content_duration": 3.5,
+        //           "course_id": 657734,
+        //           "is_paid": true,
+        //           "level": "All Levels",
+        //           "num_lectures": 26,
+        //           "num_reviews": 89,
+        //           "num_subscribers": 12368,
+        //           "price": 195,
+        //           "published_timestamp": "2015-11-13T22:03:15Z",
+        //           "subject": "Web Development",
+        //           "title": "Complete AJAX Course: Learn AJAX Techniques Using Bootstrap",
+        //           "url": "https://www.udemy.com/ajaxcourse/"
+        //         },
+        //         {
+        //           "content_duration": 0.5666666666666667,
+        //           "course_id": 955138,
+        //           "is_paid": true,
+        //           "level": "All Levels",
+        //           "num_lectures": 9,
+        //           "num_reviews": 23,
+        //           "num_subscribers": 1241,
+        //           "price": 35,
+        //           "published_timestamp": "2016-09-10T20:59:38Z",
+        //           "subject": "Web Development",
+        //           "title": "AJAX :basics for beginners",
+        //           "url": "https://www.udemy.com/ajaxbasics/"
+        //         },
+        //         {
+        //           "content_duration": 4.0,
+        //           "course_id": 746790,
+        //           "is_paid": true,
+        //           "level": "All Levels",
+        //           "num_lectures": 60,
+        //           "num_reviews": 30,
+        //           "num_subscribers": 1554,
+        //           "price": 20,
+        //           "published_timestamp": "2016-02-02T18:36:12Z",
+        //           "subject": "Web Development",
+        //           "title": "JavaScript, jQuery and Ajax",
+        //           "url": "https://www.udemy.com/ajax-calls-the-simplest-way/"
+        //         },
+        //         {
+        //           "content_duration": 2.0,
+        //           "course_id": 691760,
+        //           "is_paid": true,
+        //           "level": "Beginner Level",
+        //           "num_lectures": 18,
+        //           "num_reviews": 5,
+        //           "num_subscribers": 755,
+        //           "price": 65,
+        //           "published_timestamp": "2016-01-25T17:57:24Z",
+        //           "subject": "Web Development",
+        //           "title": "Ajax  for Beginners: A Very Basic Introduction",
+        //           "url": "https://www.udemy.com/ajax-for-beginners-a-very-basic-introduction/"
+        //         },
+        //         {
+        //           "content_duration": 14.0,
+        //           "course_id": 304490,
+        //           "is_paid": true,
+        //           "level": "Intermediate Level",
+        //           "num_lectures": 86,
+        //           "num_reviews": 231,
+        //           "num_subscribers": 4183,
+        //           "price": 35,
+        //           "published_timestamp": "2014-10-12T06:29:05Z",
+        //           "subject": "Web Development",
+        //           "title": "A 13 Hour SQL Server 2014 /ASP.NET/CSS/C#/jQuery Course",
+        //           "url": "https://www.udemy.com/learnsqlwithsqlserver2014/"
+        //         },
+        //         {
+        //           "content_duration": 5.5,
+        //           "course_id": 425084,
+        //           "is_paid": true,
+        //           "level": "All Levels",
+        //           "num_lectures": 98,
+        //           "num_reviews": 65,
+        //           "num_subscribers": 586,
+        //           "price": 60,
+        //           "published_timestamp": "2015-03-23T00:20:29Z",
+        //           "subject": "Web Development",
+        //           "title": "Administering Microsoft SQL Server 2012 Databases - 70-462",
+        //           "url": "https://www.udemy.com/administering-microsoft-sql-server-2012-databases-70-462/"
+        //         },
+        //         {
+        //           "content_duration": 5.0,
+        //           "course_id": 425086,
+        //           "is_paid": true,
+        //           "level": "All Levels",
+        //           "num_lectures": 90,
+        //           "num_reviews": 148,
+        //           "num_subscribers": 1142,
+        //           "price": 85,
+        //           "published_timestamp": "2015-05-01T23:08:38Z",
+        //           "subject": "Web Development",
+        //           "title": "Implementing a Data Warehouse with SQL Server 2012 ",
+        //           "url": "https://www.udemy.com/implementing-a-data-warehouse-with-sql-server-2012/"
+        //         },
+        //         {
+        //           "content_duration": 6.5,
+        //           "course_id": 422012,
+        //           "is_paid": true,
+        //           "level": "All Levels",
+        //           "num_lectures": 115,
+        //           "num_reviews": 89,
+        //           "num_subscribers": 666,
+        //           "price": 85,
+        //           "published_timestamp": "2015-03-12T21:20:41Z",
+        //           "subject": "Web Development",
+        //           "title": "Querying Microsoft SQL Server 2012 - (Exam No. 70-461)",
+        //           "url": "https://www.udemy.com/querying-sql-server-2012-70-461/"
+        //         },
+        //         {
+        //           "content_duration": 5.5,
+        //           "course_id": 1052304,
+        //           "is_paid": true,
+        //           "level": "All Levels",
+        //           "num_lectures": 77,
+        //           "num_reviews": 102,
+        //           "num_subscribers": 11285,
+        //           "price": 195,
+        //           "published_timestamp": "2017-02-07T17:20:39Z",
+        //           "subject": "Web Development",
+        //           "title": "JavaScript For Beginners : Learn JavaScript From Scratch",
+        //           "url": "https://www.udemy.com/javascript-course-for-beginners/"
+        //         },
+        //         {
+        //           "content_duration": 4.0,
+        //           "course_id": 8325,
+        //           "is_paid": true,
+        //           "level": "All Levels",
+        //           "num_lectures": 82,
+        //           "num_reviews": 253,
+        //           "num_subscribers": 12458,
+        //           "price": 20,
+        //           "published_timestamp": "2011-09-09T15:28:59Z",
+        //           "subject": "Web Development",
+        //           "title": "HTML Tutorial: HTML & CSS for Beginners",
+        //           "url": "https://www.udemy.com/learn-html5/"
+        //         },
+        //         {
+        //           "content_duration": 2.0,
+        //           "course_id": 15285,
+        //           "is_paid": true,
+        //           "level": "All Levels",
+        //           "num_lectures": 17,
+        //           "num_reviews": 306,
+        //           "num_subscribers": 25854,
+        //           "price": 20,
+        //           "published_timestamp": "2012-04-08T05:12:43Z",
+        //           "subject": "Web Development",
+        //           "title": "HTML Workshop",
+        //           "url": "https://www.udemy.com/html-workshop/"
+        //         },
+        //         {
+        //           "content_duration": 3.0,
+        //           "course_id": 1110756,
+        //           "is_paid": true,
+        //           "level": "All Levels",
+        //           "num_lectures": 27,
+        //           "num_reviews": 15,
+        //           "num_subscribers": 2401,
+        //           "price": 20,
+        //           "published_timestamp": "2017-02-22T17:36:27Z",
+        //           "subject": "Web Development",
+        //           "title": "HTML Tutorials : HTML Code for Website Creating",
+        //           "url": "https://www.udemy.com/html-code-for-website/"
+        //         },
+        //         {
+        //           "content_duration": 1.0,
+        //           "course_id": 958982,
+        //           "is_paid": true,
+        //           "level": "Beginner Level",
+        //           "num_lectures": 25,
+        //           "num_reviews": 20,
+        //           "num_subscribers": 785,
+        //           "price": 25,
+        //           "published_timestamp": "2016-09-15T18:06:58Z",
+        //           "subject": "Web Development",
+        //           "title": "JavaScript : JavaScript Awesomeness",
+        //           "url": "https://www.udemy.com/javascript-javascript/"
+        //         },
+        //         {
+        //           "content_duration": 5.0,
+        //           "course_id": 529828,
+        //           "is_paid": true,
+        //           "level": "All Levels",
+        //           "num_lectures": 36,
+        //           "num_reviews": 25,
+        //           "num_subscribers": 638,
+        //           "price": 95,
+        //           "published_timestamp": "2015-06-17T22:23:31Z",
+        //           "subject": "Business Finance",
+        //           "title": "Python for Trading & Investing",
+        //           "url": "https://www.udemy.com/python-for-trading-investing/"
+        //         },
+        //         {
+        //           "content_duration": 4.0,
+        //           "course_id": 16646,
+        //           "is_paid": true,
+        //           "level": "All Levels",
+        //           "num_lectures": 53,
+        //           "num_reviews": 217,
+        //           "num_subscribers": 35267,
+        //           "price": 50,
+        //           "published_timestamp": "2012-04-25T00:01:43Z",
+        //           "subject": "Web Development",
+        //           "title": "Web Programming with Python",
+        //           "url": "https://www.udemy.com/web-programming-with-python/"
+        //         }
+        //       ]
+        //     }',true);
+        $recommendation=json_decode($response,true);
         // print_r($recommendation);
+        // exit();
         return view('template/online_course')->with('course_recommendation',$recommendation['recommended_courses']);
 
-        exit();
+        
 
     }
     public function githubjobs(){
@@ -750,184 +758,184 @@ class UserController extends Controller
         $response = curl_exec($curl);
 
         curl_close($curl);
-        $recommendation=json_decode('{
-          "recommended_blogs": [
-            {
-              "Subtitle": "1. I feel like one of these books is misleading me",
-              "Tag_programming": "1",
-              "Title": "15 jokes only programmers will get",
-              "url": "https://hackernoon.com/15-jokes-only-programmers-will-get-b42873eba509"
-            },
-            {
-              "Subtitle": "",
-              "Tag_android": "1",
-              "Title": "Exploring Background Execution Limits on Android Oreo",
-              "url": "https://medium.com/exploring-android/exploring-background-execution-limits-on-android-oreo-ab384762a66c"
-            },
-            {
-              "Subtitle": "oh boy, I was so wrong.",
-              "Tag_programming": "1",
-              "Title": "I thought I understood Open Source. I was wrong",
-              "url": "https://hackernoon.com/i-thought-i-understood-open-source-i-was-wrong-cf54999c097b"
-            },
-            {
-              "Subtitle": "",
-              "Tag_programming": "1",
-              "Title": "How to scale Microservices with Message Queues, Spring Boot, and Kubernetes",
-              "url": "https://medium.freecodecamp.org/how-to-scale-microservices-with-message-queues-spring-boot-and-kubernetes-f691b7ba3acf"
-            },
-            {
-              "Subtitle": "",
-              "Tag_blockchain": "1",
-              "Tag_programming": "1",
-              "Title": "Creating Your First Blockchain with Java. Part 2Transactions.",
-              "url": "https://medium.com/programmers-blockchain/creating-your-first-blockchain-with-java-part-2-transactions-2cdac335e0ce"
-            },
-            {
-              "Subtitle": "As we look deep into 2018, one of the questions on every Web developers mind ought to be, What",
-              "Tag_javascript": "1",
-              "Tag_web-design": "1",
-              "Tag_web-development": "1",
-              "Title": "2018 State of Progressive Web Apps",
-              "url": "https://medium.com/progressive-web-apps/2018-state-of-progressive-web-apps-f7517d43ba70"
-            },
-            {
-              "Subtitle": "Not a statistician? No problem! Learn the",
-              "Tag_data": "1",
-              "Tag_data-science": "1",
-              "Title": "Quick Intro to StatisticsPower Your Stories with Data",
-              "url": "https://hackernoon.com/quick-intro-to-statistics-power-your-stories-with-data-a3a35785692b"
-            },
-            {
-              "Subtitle": "",
-              "Tag_bitcoin": "1",
-              "Tag_cryptocurrency": "1",
-              "Title": "Why Porn Might Just Be Cryptos First Killer App",
-              "url": "https://hackernoon.com/why-porn-might-just-be-cryptos-first-killer-app-596cf822ef3f"
-            },
-            {
-              "Subtitle": "",
-              "Tag_python": "1",
-              "Title": "How To Become a DevOps Engineer In Six Months or Less",
-              "url": "https://medium.com/@devfire/how-to-become-a-devops-engineer-in-six-months-or-less-366097df7737"
-            },
-            {
-              "Subtitle": "I cant recall the number of times someone would tell me, Im too old for this.",
-              "Tag_inspiration": "1",
-              "Tag_life": "1",
-              "Tag_life-lessons": "1",
-              "Tag_self-improvement": "1",
-              "Title": "Age is never an excuse",
-              "url": "https://medium.com/misstiffanysun/age-is-never-an-excuse-978872d8c62d"
-            },
-            {
-              "Subtitle": "9 Steps to Building a",
-              "Tag_artificial-intelligence": "1",
-              "Tag_data-science": "1",
-              "Tag_machine-learning": "1",
-              "Title": "Cutting-Edge Face Recognition is Complicated. These Spreadsheets Make it Easier.",
-              "url": "https://towardsdatascience.com/cutting-edge-face-recognition-is-complicated-these-spreadsheets-make-it-easier-e7864dbf0e1a"
-            },
-            {
-              "Subtitle": "In this tutorial (derived from my original post here), you will learn what",
-              "Tag_artificial-intelligence": "1",
-              "Tag_deep-learning": "1",
-              "Tag_machine-learning": "1",
-              "Title": "Demystifying Generative Adversarial Networks",
-              "url": "https://towardsdatascience.com/demystifying-generative-adversarial-networks-c076d8db8f44"
-            },
-            {
-              "Subtitle": "Especially all of our food",
-              "Tag_happiness": "1",
-              "Tag_life": "1",
-              "Title": "Everything Is Marketing",
-              "url": "https://medium.com/@krisgage/everything-is-marketing-69dbe9e0ff49"
-            },
-            {
-              "Subtitle": "The hyper-saturation of advertising and marketing we see today has many",
-              "Tag_business": "1",
-              "Tag_marketing": "1",
-              "Title": "Value-Added Marketing 101: What? How? And Why?",
-              "url": "https://medium.com/@tunikova_k/value-added-marketing-101-what-how-and-why-7698186cfcb6"
-            },
-            {
-              "Subtitle": "The human brain imitation.",
-              "Tag_data-science": "1",
-              "Tag_machine-learning": "1",
-              "Tag_programming": "1",
-              "Title": "Deep Learning with Python",
-              "url": "https://towardsdatascience.com/deep-learning-with-python-703e26853820"
-            },
-            {
-              "Subtitle": "Featuring implementation code, instructional",
-              "Tag_data-science": "1",
-              "Tag_machine-learning": "1",
-              "Tag_programming": "1",
-              "Tag_python": "1",
-              "Title": "The Hitchhikers Guide to Machine Learning in Python",
-              "url": "https://medium.freecodecamp.org/the-hitchhikers-guide-to-machine-learning-algorithms-in-python-bfad66adb378"
-            },
-            {
-              "Subtitle": "An introduction to the future of data science",
-              "Tag_data-science": "1",
-              "Tag_education": "1",
-              "Tag_machine-learning": "1",
-              "Tag_programming": "1",
-              "Title": "Automated Machine Learning on the Cloud in Python",
-              "url": "https://towardsdatascience.com/automated-machine-learning-on-the-cloud-in-python-47cf568859f"
-            },
-            {
-              "Subtitle": "Using the FeatureSelector for efficient",
-              "Tag_education": "1",
-              "Tag_machine-learning": "1",
-              "Tag_programming": "1",
-              "Tag_python": "1",
-              "Title": "A Feature Selection Tool for Machine Learning in Python",
-              "url": "https://towardsdatascience.com/a-feature-selection-tool-for-machine-learning-in-python-b64dd23710f0"
-            },
-            {
-              "Subtitle": "I have just come out of a project where 80% into it I felt I had very little. I invested a",
-              "Tag_artificial-intelligence": "1",
-              "Tag_data-science": "1",
-              "Tag_machine-learning": "1",
-              "Title": "How to do machine learning efficiently",
-              "url": "https://hackernoon.com/doing-machine-learning-efficiently-8ba9d9bc679d"
-            },
-            {
-              "Subtitle": "One of the major aspects of training your machine learning model is avoiding overfitting. The model",
-              "Tag_artificial-intelligence": "1",
-              "Tag_data-science": "1",
-              "Tag_deep-learning": "1",
-              "Tag_machine-learning": "1",
-              "Title": "Regularization in Machine Learning",
-              "url": "https://towardsdatascience.com/regularization-in-machine-learning-76441ddcf99a"
-            },
-            {
-              "Subtitle": "",
-              "Tag_artificial-intelligence": "1",
-              "Tag_big-data": "1",
-              "Tag_machine-learning": "1",
-              "Title": "The 7 Steps of Machine Learning",
-              "url": "https://towardsdatascience.com/the-7-steps-of-machine-learning-2877d7e5548e"
-            },
-            {
-              "Subtitle": "Unsupervised Learning is a class of Machine Learning techniques to find the patterns in data. The",
-              "Tag_data-science": "1",
-              "Tag_machine-learning": "1",
-              "Tag_programming": "1",
-              "Title": "Unsupervised Learning with Python",
-              "url": "https://towardsdatascience.com/unsupervised-learning-with-python-173c51dc7f03"
-            },
-            {
-              "Subtitle": "Simple explanations of Artificial Intelligence, Machine Learning, and Deep Learning and how theyre all different",
-              "Tag_artificial-intelligence": "1",
-              "Tag_deep-learning": "1",
-              "Tag_machine-learning": "1",
-              "Title": "The Difference Between Artificial Intelligence, Machine Learning, and Deep Learning",
-              "url": "https://medium.com/iotforall/the-difference-between-artificial-intelligence-machine-learning-and-deep-learning-3aa67bff5991"
-            }
-          ]
-        }',true);
+        // $recommendation=json_decode('{
+        //   "recommended_blogs": [
+        //     {
+        //       "Subtitle": "1. I feel like one of these books is misleading me",
+        //       "Tag_programming": "1",
+        //       "Title": "15 jokes only programmers will get",
+        //       "url": "https://hackernoon.com/15-jokes-only-programmers-will-get-b42873eba509"
+        //     },
+        //     {
+        //       "Subtitle": "",
+        //       "Tag_android": "1",
+        //       "Title": "Exploring Background Execution Limits on Android Oreo",
+        //       "url": "https://medium.com/exploring-android/exploring-background-execution-limits-on-android-oreo-ab384762a66c"
+        //     },
+        //     {
+        //       "Subtitle": "oh boy, I was so wrong.",
+        //       "Tag_programming": "1",
+        //       "Title": "I thought I understood Open Source. I was wrong",
+        //       "url": "https://hackernoon.com/i-thought-i-understood-open-source-i-was-wrong-cf54999c097b"
+        //     },
+        //     {
+        //       "Subtitle": "",
+        //       "Tag_programming": "1",
+        //       "Title": "How to scale Microservices with Message Queues, Spring Boot, and Kubernetes",
+        //       "url": "https://medium.freecodecamp.org/how-to-scale-microservices-with-message-queues-spring-boot-and-kubernetes-f691b7ba3acf"
+        //     },
+        //     {
+        //       "Subtitle": "",
+        //       "Tag_blockchain": "1",
+        //       "Tag_programming": "1",
+        //       "Title": "Creating Your First Blockchain with Java. Part 2Transactions.",
+        //       "url": "https://medium.com/programmers-blockchain/creating-your-first-blockchain-with-java-part-2-transactions-2cdac335e0ce"
+        //     },
+        //     {
+        //       "Subtitle": "As we look deep into 2018, one of the questions on every Web developers mind ought to be, What",
+        //       "Tag_javascript": "1",
+        //       "Tag_web-design": "1",
+        //       "Tag_web-development": "1",
+        //       "Title": "2018 State of Progressive Web Apps",
+        //       "url": "https://medium.com/progressive-web-apps/2018-state-of-progressive-web-apps-f7517d43ba70"
+        //     },
+        //     {
+        //       "Subtitle": "Not a statistician? No problem! Learn the",
+        //       "Tag_data": "1",
+        //       "Tag_data-science": "1",
+        //       "Title": "Quick Intro to StatisticsPower Your Stories with Data",
+        //       "url": "https://hackernoon.com/quick-intro-to-statistics-power-your-stories-with-data-a3a35785692b"
+        //     },
+        //     {
+        //       "Subtitle": "",
+        //       "Tag_bitcoin": "1",
+        //       "Tag_cryptocurrency": "1",
+        //       "Title": "Why Porn Might Just Be Cryptos First Killer App",
+        //       "url": "https://hackernoon.com/why-porn-might-just-be-cryptos-first-killer-app-596cf822ef3f"
+        //     },
+        //     {
+        //       "Subtitle": "",
+        //       "Tag_python": "1",
+        //       "Title": "How To Become a DevOps Engineer In Six Months or Less",
+        //       "url": "https://medium.com/@devfire/how-to-become-a-devops-engineer-in-six-months-or-less-366097df7737"
+        //     },
+        //     {
+        //       "Subtitle": "I cant recall the number of times someone would tell me, Im too old for this.",
+        //       "Tag_inspiration": "1",
+        //       "Tag_life": "1",
+        //       "Tag_life-lessons": "1",
+        //       "Tag_self-improvement": "1",
+        //       "Title": "Age is never an excuse",
+        //       "url": "https://medium.com/misstiffanysun/age-is-never-an-excuse-978872d8c62d"
+        //     },
+        //     {
+        //       "Subtitle": "9 Steps to Building a",
+        //       "Tag_artificial-intelligence": "1",
+        //       "Tag_data-science": "1",
+        //       "Tag_machine-learning": "1",
+        //       "Title": "Cutting-Edge Face Recognition is Complicated. These Spreadsheets Make it Easier.",
+        //       "url": "https://towardsdatascience.com/cutting-edge-face-recognition-is-complicated-these-spreadsheets-make-it-easier-e7864dbf0e1a"
+        //     },
+        //     {
+        //       "Subtitle": "In this tutorial (derived from my original post here), you will learn what",
+        //       "Tag_artificial-intelligence": "1",
+        //       "Tag_deep-learning": "1",
+        //       "Tag_machine-learning": "1",
+        //       "Title": "Demystifying Generative Adversarial Networks",
+        //       "url": "https://towardsdatascience.com/demystifying-generative-adversarial-networks-c076d8db8f44"
+        //     },
+        //     {
+        //       "Subtitle": "Especially all of our food",
+        //       "Tag_happiness": "1",
+        //       "Tag_life": "1",
+        //       "Title": "Everything Is Marketing",
+        //       "url": "https://medium.com/@krisgage/everything-is-marketing-69dbe9e0ff49"
+        //     },
+        //     {
+        //       "Subtitle": "The hyper-saturation of advertising and marketing we see today has many",
+        //       "Tag_business": "1",
+        //       "Tag_marketing": "1",
+        //       "Title": "Value-Added Marketing 101: What? How? And Why?",
+        //       "url": "https://medium.com/@tunikova_k/value-added-marketing-101-what-how-and-why-7698186cfcb6"
+        //     },
+        //     {
+        //       "Subtitle": "The human brain imitation.",
+        //       "Tag_data-science": "1",
+        //       "Tag_machine-learning": "1",
+        //       "Tag_programming": "1",
+        //       "Title": "Deep Learning with Python",
+        //       "url": "https://towardsdatascience.com/deep-learning-with-python-703e26853820"
+        //     },
+        //     {
+        //       "Subtitle": "Featuring implementation code, instructional",
+        //       "Tag_data-science": "1",
+        //       "Tag_machine-learning": "1",
+        //       "Tag_programming": "1",
+        //       "Tag_python": "1",
+        //       "Title": "The Hitchhikers Guide to Machine Learning in Python",
+        //       "url": "https://medium.freecodecamp.org/the-hitchhikers-guide-to-machine-learning-algorithms-in-python-bfad66adb378"
+        //     },
+        //     {
+        //       "Subtitle": "An introduction to the future of data science",
+        //       "Tag_data-science": "1",
+        //       "Tag_education": "1",
+        //       "Tag_machine-learning": "1",
+        //       "Tag_programming": "1",
+        //       "Title": "Automated Machine Learning on the Cloud in Python",
+        //       "url": "https://towardsdatascience.com/automated-machine-learning-on-the-cloud-in-python-47cf568859f"
+        //     },
+        //     {
+        //       "Subtitle": "Using the FeatureSelector for efficient",
+        //       "Tag_education": "1",
+        //       "Tag_machine-learning": "1",
+        //       "Tag_programming": "1",
+        //       "Tag_python": "1",
+        //       "Title": "A Feature Selection Tool for Machine Learning in Python",
+        //       "url": "https://towardsdatascience.com/a-feature-selection-tool-for-machine-learning-in-python-b64dd23710f0"
+        //     },
+        //     {
+        //       "Subtitle": "I have just come out of a project where 80% into it I felt I had very little. I invested a",
+        //       "Tag_artificial-intelligence": "1",
+        //       "Tag_data-science": "1",
+        //       "Tag_machine-learning": "1",
+        //       "Title": "How to do machine learning efficiently",
+        //       "url": "https://hackernoon.com/doing-machine-learning-efficiently-8ba9d9bc679d"
+        //     },
+        //     {
+        //       "Subtitle": "One of the major aspects of training your machine learning model is avoiding overfitting. The model",
+        //       "Tag_artificial-intelligence": "1",
+        //       "Tag_data-science": "1",
+        //       "Tag_deep-learning": "1",
+        //       "Tag_machine-learning": "1",
+        //       "Title": "Regularization in Machine Learning",
+        //       "url": "https://towardsdatascience.com/regularization-in-machine-learning-76441ddcf99a"
+        //     },
+        //     {
+        //       "Subtitle": "",
+        //       "Tag_artificial-intelligence": "1",
+        //       "Tag_big-data": "1",
+        //       "Tag_machine-learning": "1",
+        //       "Title": "The 7 Steps of Machine Learning",
+        //       "url": "https://towardsdatascience.com/the-7-steps-of-machine-learning-2877d7e5548e"
+        //     },
+        //     {
+        //       "Subtitle": "Unsupervised Learning is a class of Machine Learning techniques to find the patterns in data. The",
+        //       "Tag_data-science": "1",
+        //       "Tag_machine-learning": "1",
+        //       "Tag_programming": "1",
+        //       "Title": "Unsupervised Learning with Python",
+        //       "url": "https://towardsdatascience.com/unsupervised-learning-with-python-173c51dc7f03"
+        //     },
+        //     {
+        //       "Subtitle": "Simple explanations of Artificial Intelligence, Machine Learning, and Deep Learning and how theyre all different",
+        //       "Tag_artificial-intelligence": "1",
+        //       "Tag_deep-learning": "1",
+        //       "Tag_machine-learning": "1",
+        //       "Title": "The Difference Between Artificial Intelligence, Machine Learning, and Deep Learning",
+        //       "url": "https://medium.com/iotforall/the-difference-between-artificial-intelligence-machine-learning-and-deep-learning-3aa67bff5991"
+        //     }
+        //   ]
+        // }',true);
         
         // echo "<pre>";
         // print_r($recommendation);
@@ -947,10 +955,44 @@ class UserController extends Controller
         // exit;
         // echo $recommendation['recommended_blogs']->Subtitle;
         // exit;
-
+        $recommendation=json_decode($response,true);
+        // print_r($recommendation);
+        // exit();
         return view('template/blogs_listing')->with('blog_recommendation',$recommendation['recommended_blogs']);
 
 
+    }
+
+    public function learningplatforminsights(){
+        // $curl = curl_init();
+
+        // curl_setopt_array($curl, array(
+        //   CURLOPT_URL => "http://127.0.0.1:5010/insights_api",
+        //   CURLOPT_RETURNTRANSFER => true,
+        //   CURLOPT_ENCODING => "",
+        //   CURLOPT_MAXREDIRS => 10,
+        //   CURLOPT_TIMEOUT => 0,
+        //   CURLOPT_FOLLOWLOCATION => true,
+        //   CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+        //   CURLOPT_CUSTOMREQUEST => "POST",
+        // ));
+
+        // $response = curl_exec($curl);
+
+        // curl_close($curl);
+        // echo $response;
+
+
+        $response='{ "course_frequency": { "CSS": 2312, "Core Java": 1555, "HTML": 3195, "Html5": 1136, "JQuery": 1405, "Java": 1957, "Javascript": 3505, "MySQL": 1092, "Python": 1156, "SQL": 1375 }, "other_courses": [ "UX", "Marketing", "java", "html", "Angularjs", "Rest", "UI Development", "css", "Front End", "Ajax" ], "popular_courses": [ "Javascript", "HTML", "CSS", "Java", "Core Java", "JQuery", "SQL", "Python", "Html5", "MySQL", "Hibernate", "Finance" ], "popular_softskills": { "analytical": 31, "competitive analysis": 6, "negotiation": 16, "problem solving": 25, "process improvement": 11 } }';
+        $response=json_decode($response,true);
+        $a_key=[];
+        $a_value=[];
+        foreach($response['course_frequency'] as $key => $value){
+            array_push($a_key, $key);
+            array_push($a_value, $value);
+        }
+        // $a_key = array_values($a_key);
+        return view('admin/learning_platform')->with('keys',$a_key)->with('values',$a_value);
     }
 
     public function store(Request $request)
@@ -1148,10 +1190,11 @@ class UserController extends Controller
             $user_experience->role = $_POST['role'][$i];
             $user_experience->duration = $_POST['duration'][$i];
             $user_experience->domain = $_POST['domain'][$i];
-            $user_experience->tech_stack = $_POST['tech_stack'][$i];
-
+            $user_experience->tech_stack = strtoupper($_POST['tech_stack'][$i]);
 
             $user_experience->save();
+
+            UserRatings::where('user_id', $user_id)->where('language', $_POST['tech_stack'][$i])->update(['internship_star'=>1]);
 
             $user_experience->company_name = "";
             $user_experience->project_name = "";
@@ -1230,8 +1273,10 @@ class UserController extends Controller
             $user_project->role = $_POST['role'][$i];
             $user_project->domain = $_POST['domain'][$i];
             $user_project->duration = $_POST['duration'][$i];
-            $user_project->tech_stack = $_POST['tech_stack'][$i];
+            $user_project->tech_stack = strtoupper($_POST['tech_stack'][$i]);
             $user_project->save();
+
+            UserRatings::where('user_id',$user_id)->where('language', $_POST['tech_stack'][$i])->update(['project_star'=>1]);
 
         }
 
@@ -1269,7 +1314,7 @@ class UserController extends Controller
 //        echo $user_tech_detail;
         $lang=$user_tech_detail[0]['tech_stack'];
 //        echo $lang;
-        $tech=UserRatings::where('user_id',$id)->where('language',$lang)->update(['internship_star'=>1]);
+//        $tech=UserRatings::where('user_id',$id)->where('language',$lang)->update(['internship_star'=>1]);
 //        exit;
 
 
@@ -1287,7 +1332,7 @@ class UserController extends Controller
 //                echo $int;
         $user_tech_detail=UserExperiences::where('user_id',$id)->where('is_internship_project',0)->get();
         $lang=$user_tech_detail[0]['tech_stack'];
-        $tech=UserRatings::where('user_id',$id)->where('language',$lang)->update(['project_star'=>1]);
+//        $tech=UserRatings::where('user_id',$id)->where('language',$lang)->update(['project_star'=>1]);
 //                exit;
 //        $user_tech_detail=UserExperiences::where('user_id',$id)->where('is_internship_project',0)->get();
 
@@ -1500,7 +1545,7 @@ class UserController extends Controller
         
         public function full_report(){
         $user_id=Session::get('user_id');
-        echo $user_id;
+//        echo $user_id;
         $eq=UserEQ::where('user_id',$user_id)->get();
         $aq=UserAQ::where('user_id',$user_id)->get();
         $iq=UserIQ::where('user_id',$user_id)->get();
@@ -1510,7 +1555,7 @@ class UserController extends Controller
         // print_r($iq[0]);
         // print_r($aq[0]);
         // print_r($eq[0]);
-        // print_r($tq[0]);
+        // print_r($tq[1]);
         // echo "<pre>";
         // print_r($eq);
         // exit;
@@ -1523,7 +1568,7 @@ class UserController extends Controller
     public function dummy_role(){
         $user_id=Session::get('user_id');
         $tq=UserTechnical::where('user_id',$user_id)->get();
-        echo $tq[0];
+//        echo $tq[0];
         exit;
         $final_string="";
         foreach($tq as $tqa){

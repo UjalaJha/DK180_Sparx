@@ -49,6 +49,13 @@
               <p>LinkedIn Profiles</p>
             </a>
           </li>
+
+          <li class="nav-item ">
+            <a class="nav-link" href="/custom_test">
+              <i class="material-icons">content_paste</i>
+              <p>Custom Test</p>
+            </a>
+          </li>
           
           
         </ul>

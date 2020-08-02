@@ -89,6 +89,9 @@ Route::get('/learningrecommendation','UserController@learningrecommendation');
 Route::get('/githubjobs','UserController@githubjobs');
 
 Route::get('/blogrecommendation','UserController@blogrecommendation');
+
+Route::get('/learningplatforminsights','UserController@learningplatforminsights');
+
 ///sanjay
 
 Route::get('/company_dashboard', function () {
@@ -230,6 +233,7 @@ Route::get('view_users', function (){
 Route::get('aicte', function (){
     return view('admin/aicte');
 });
+Route::get('learning_platform','UserController@learningplatforminsights');
 
 
 //update skills
@@ -257,3 +261,13 @@ Route::get('/dummy_job_role','UserController@dummy_role');
 
 Route::get('look_for_jobs', 'UserController@look_for_jobs');
 
+
+
+
+Route::get('custom_test', function(){
+    return view('company/add_test');
+});
+
+Route::post('insert_new_test_company','CompanyController@addNewCustomTest');
+Route::post('proceed_with_add_ques_form_company', 'CompanyController@proceedAddQuesForm');
+Route::post('save_manual_question_company','CompanyController@saveManualForm');
