@@ -61,7 +61,7 @@
                   <a class="dropdown-item" href="#">Profile</a>
                   <a class="dropdown-item" href="#">Settings</a>
                   <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="#">Log out</a>
+                  <a class="dropdown-item" href="/logout">Log out</a>
                 </div>
               </li>
             </ul>
@@ -163,5 +163,14 @@
      
       <script type="text/javascript">
               localStorage.setItem('tq_score',0);
+
+              var setTQAns = [0,0,0,0,0,0,0,0,0,0];
+
+              localStorage.setItem("setTQAns",JSON.stringify(setTQAns));
+
+
+              var setADVTQAns = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
+
+              localStorage.setItem("setADVTQAns",JSON.stringify(setADVTQAns));
 
       </script>

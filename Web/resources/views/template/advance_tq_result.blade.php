@@ -76,7 +76,7 @@
                   <a class="dropdown-item" href="#">Profile</a>
                   <a class="dropdown-item" href="#">Settings</a>
                   <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="#">Log out</a>
+                  <a class="dropdown-item" href="/logout">Log out</a>
                 </div>
               </li>
             </ul>
@@ -100,8 +100,8 @@
               <ul>
                 <br>
                 <li><h4>Your Score : {{$score}} </h4></li>
-                 <li><h4>Number of questions in each section : 20.</h4></li>
-                 <li><h4>Number of questions in each section {{$level}}.</h4></li>
+                 <li><h4>Number of questions in each section : 15.</h4></li>
+{{--                 <li><h4>Number of questions in each section {{$level}}.</h4></li>--}}
               </ul>
               
 
@@ -123,7 +123,7 @@
                                 </div>
                                 <div class="container" style="margin-left: 50px;">
                                     <p>Correct Answers <span class="text-dark">:&nbsp; <b>{{$score}}</b></span></p>
-                                    <p>Incorrect Answers<span class="text-dark"> :&nbsp; {{10-$score}}</span>
+                                    <p>Incorrect Answers<span class="text-dark"> :&nbsp; {{15-$score}}</span>
                                   
                                 </div>
                             </div>

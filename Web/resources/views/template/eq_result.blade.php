@@ -76,7 +76,7 @@
                   <a class="dropdown-item" href="#">Profile</a>
                   <a class="dropdown-item" href="#">Settings</a>
                   <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="#">Log out</a>
+                  <a class="dropdown-item" href="/logout">Log out</a>
                 </div>
               </li>
             </ul>
@@ -98,6 +98,7 @@
                         <!-- ============================================================== -->
                         <!-- gross profit  -->
                         <!-- ============================================================== -->
+                        <div style="display: none;">
                         <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12">
                             <div class="card">
                                 <h5 class="card-header" style="font-weight: bold">Performance in IQ</h5>
@@ -106,11 +107,11 @@
                                 </div>
                                 <div class="container" style="margin-left: 50px;">
                                     <p>Correct Answers <span class="text-dark">:&nbsp; <b>50</b></span></p>
-                                    <!-- <p>Incorrect Answers<span class="text-dark"> :&nbsp; 20 </span> -->
                                   
                                 </div>
                             </div>
                         </div>
+                      </div>
                         <!-- ============================================================== -->
                         <!-- end gross profit  -->
                         <!-- ============================================================== -->
@@ -120,12 +121,14 @@
                       <!--   <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12">
                             <div class="card">
                                 <h5 class="card-header" style="font-weight: bold">Job Eligibility</h5> -->
+                          <div style="display: none;">
+
                                 <div class="card-body">
                                     <div id="morris_profit" style="height: 272px;"></div>
                                 </div>
                                
                     </div>
-
+                      </div>
 
           <input type="hidden" value="{{$eq[0]->eq_self_awareness}}" id="self_awr">
           <input type="hidden" value="{{$eq[0]->eq_self_control}}" id="self_con">

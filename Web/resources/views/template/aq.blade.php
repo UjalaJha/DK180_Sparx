@@ -18,12 +18,11 @@
 
 <head>
     <meta charset="utf-8" />
-    <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png">
-    <link rel="icon" type="image/png" href="../assets/img/favicon.png">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <title>
-        Material Dashboard by Creative Tim
-    </title>
+  <link rel="icon" href="../images/top-favicon.png" type="image/png" sizes="16x26">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <title>
+    HireConnect - Advocating happy careers - Job Recommender System
+  </title>
     <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
     <!--     Fonts and icons     -->
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
@@ -87,9 +86,7 @@
           Tip 2: you can also add an image using data-image tag
       -->
         <div class="logo">
-            <a href="http://www.creative-tim.com" class="simple-text logo-normal">
-                Creative Tim
-            </a>
+          <img src="../assets/img/logo.png" width="250px" height="70px">
         </div>
         <div class="sidebar-wrapper">
             <div style="margin-left:12px;margin-top:10px;">

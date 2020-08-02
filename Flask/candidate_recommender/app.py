@@ -154,7 +154,7 @@ def home():
     
 @app.route('/candidate_api',methods=['POST'])
 def predict_api():
-    profiledata = pd.read_csv(".\\Test Profiles\\profile_data.csv")
+    #profiledata = pd.read_csv(".\\Test Profiles\\profile_data.csv")
     profiledata = pd.read_csv("Test Profiles\\profile_data.csv")
 
     input_company = {'role_title': request.json['role_title'],'company_name':request.json['company_name'],'description' : request.json['description'],
@@ -167,12 +167,18 @@ def predict_api():
     company_loc = input_company['loc']
     salary = input_company['salary']
     company_exp = input_company['exp']
-    path = ".\\Test Profiles\\"+company_role+".csv"
+    #path = ".\\Test Profiles\\"+company_role+".csv"
+
     path = "Test Profiles\\"+company_role+".csv"
 
-    role_jobs = pd.read_csv(path)
+
+    if os.path.exists(path):
+        role_jobs = pd.read_csv(path)
+        #role_jobs = pd.DataFrame(role_jobs)
+    else:
+        role_jobs = pd.DataFrame(columns=["company","description","exp","loc","salary","skills","unique_id"])
+
     #role_jobs = role_jobs.replace(np.nan, '', regex=True)
-    role_jobs = pd.DataFrame(role_jobs)
 
     #print(role_jobs)
     uniqueid = uuid.uuid4()

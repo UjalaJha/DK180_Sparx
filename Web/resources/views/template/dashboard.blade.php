@@ -62,7 +62,7 @@
                   <a class="dropdown-item" href="#">Profile</a>
                   <a class="dropdown-item" href="#">Settings</a>
                   <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="#">Log out</a>
+                  <a class="dropdown-item" href="/logout">Log out</a>
                 </div>
               </li>
             </ul>
@@ -84,7 +84,7 @@
           <div class="row" >
             @if($user_test_details[0]->iq_given !=1)
             <div class="col-lg-4 col-md-4 col-sm-6">
-              <div class="card card-stats">
+              <div class="card card-stats" style="background:purple;opacity:0.8;">
                 <div class="card-header card-header-warning card-header-icon">
                   <div class="card-icon">
                     <i class="material-icons">wb_incandescent</i>
@@ -108,9 +108,9 @@
             @if($user_test_details[0]->hgmi_given !=1)
             <div class="col-lg-4 col-md-4 col-sm-6">
               <div class="card card-stats">
-                <div class="card-header card-header-warning card-header-icon">
+                <div class="card-header card-header-info card-header-icon">
                   <div class="card-icon">
-                    <i class="material-icons">wb_incandescent</i>
+                    <i class="material-icons">person</i>
                   </div>
                   <!-- <p class="card-category">Used Space</p> -->
                   <h3 class="card-title">HGMI Quotient

@@ -76,7 +76,7 @@
                   <a class="dropdown-item" href="#">Profile</a>
                   <a class="dropdown-item" href="#">Settings</a>
                   <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="#">Log out</a>
+                  <a class="dropdown-item" href="/logout">Log out</a>
                 </div>
               </li>
             </ul>
@@ -93,24 +93,24 @@
 
               <p id="iq_test_score"> </p>
               <h3 class="card-title">Congratulations</h3>
-              <p class="card-category">Your test score is</p>
+              <p class="card-category">Your test score</p>
             </div>
             <input type="hidden" id="score_id" value="{{$score}}">
             <div class="card-body">
               <ul>
                 <br>
                 <li><h4>Your Score : {{$score}} </h4></li>
-                 <li><h4>Number of questions in each section : 10.</h4></li>
-                 <li><h4></h4></li>
+                 <li><h4>Number of questions in each section : 10</h4></li>
+{{--                 <li><h4></h4></li>--}}
               </ul>
-              {{$level}}
+{{--              {{$level}}--}}
 
               <!-- <h4></h4> --><br>
               <?php
               if($level == 1){
                 if($score>=5){
                   $skill_id=$_GET['skill_category_id'];
-                  echo $skill_id;
+//                  echo $skill_id;
                 ?>
                   <h4 style="margin-left:40px;"><b><i>You have qualified for next test</i></b></h4>
                   <a href="/advance_tech_test/{{$skill_id}}">
@@ -144,7 +144,7 @@
 
                         <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12">
                             <div class="card">
-                                <h5 class="card-header" style="font-weight: bold">Performance in IQ</h5>
+                                <h5 class="card-header" style="font-weight: bold">Performance in TQ</h5>
                                 <div class="card-body">
                                     <div id="morris_gross" style="height: 272px;"></div>
                                 </div>
