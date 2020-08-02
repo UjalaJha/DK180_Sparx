@@ -103,6 +103,7 @@
             <input type="hidden" value="{{$tq[0]->level_1_score ?? 0}}" id="c_score">
             <input type="hidden" value="{{$tq[1]->level_1_score ?? 0}}" id="java_score">
             <input type="hidden" value="{{$tq[2]->level_1_score ?? 0}}" id="python_score">
+>>>>>>> e8e8f10d9b27073304d8604d820dd366158c991a
             
 
        <div class="content">
@@ -128,8 +129,8 @@
                                 <canvas id="chartjs_radar"></canvas>
                             </div>
                             <div class="card-footer bg-white">
-                                    <p>Your Creativity Score is <span class="float-right text-dark">  &nbsp; <b>48.76</b></span></p>
-                                    <p>Average Score is <span class="float-right text-dark">   &nbsp; <b>61.54</b></span></p>
+                                    <!-- <p>Your Creativity Score is <span class="float-right text-dark">  &nbsp; <b>48.76</b></span></p>
+                                    <p>Average Score is <span class="float-right text-dark">   &nbsp; <b>61.54</b></span></p> -->
                                     
                             </div>
                         </div>
@@ -147,8 +148,8 @@
                                     <div id="morris_gross" style="height: 272px;"></div>
                                 </div>
                                 <div class="container" style="margin-left: 50px;">
-                                    <p>Correct Answers <span class="text-dark">:&nbsp; <b>50</b></span></p>
-                                    <!-- <p>Incorrect Answers<span class="text-dark"> :&nbsp; 20 </span> -->
+                                    <p>Correct Answers <span class="text-dark">:&nbsp; <b>{{$iq[0]->iq_score}}</b></span></p>
+                                    <p>Incorrect Answers<span class="text-dark"> :&nbsp;{{30-$iq[0]->iq_score}} </span>
                                   
                                 </div>
                             </div>

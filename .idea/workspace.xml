@@ -2,14 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b42da8c1-15de-4d9c-badb-bb940fa51862" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Web/resources/views/company/categorised_candidates.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/app/Http/Controllers/AddQuestionController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Web/app/Http/Controllers/AddQuestionController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Web/app/Http/Controllers/CompanyController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Web/app/Http/Controllers/CompanyController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/app/Http/Controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Web/app/Http/Controllers/UserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/resources/views/includes/admin_sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/Web/resources/views/includes/admin_sidebar.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web/public/images/68.PNG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web/public/images/69.PNG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web/public/images/70.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web/public/resumes/69.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/Web/public/resumes/69.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web/public/resumes/70.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web/resources/views/admin/learning_platform.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/Web/resources/views/admin/learning_platform.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web/resources/views/company/search_students.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/Web/resources/views/company/search_students.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web/resources/views/company/view_user_profile.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/Web/resources/views/company/view_user_profile.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Web/resources/views/includes/company_sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/Web/resources/views/includes/company_sidebar.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/resources/views/includes/sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/Web/resources/views/includes/sidebar.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/Web/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web/resources/views/template/dashboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/Web/resources/views/template/dashboard.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web/resources/views/template/performance.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/Web/resources/views/template/performance.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web/resources/views/template/preuser.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/Web/resources/views/template/preuser.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web/resources/views/template/user.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/Web/resources/views/template/user.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -25,7 +33,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Web/routes/web.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="280">
@@ -58,11 +66,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Web/app/Http/Controllers/CompanyController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="621" column="44" selection-start-line="621" selection-start-column="44" selection-end-line="621" selection-end-column="44" />
+            <state relative-caret-position="266">
+              <caret line="758" lean-forward="true" selection-start-line="758" selection-end-line="758" />
               <folding>
                 <element signature="e#40#72#0#PHP" expanded="true" />
               </folding>
@@ -82,11 +90,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Web/resources/views/template/webinar.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
+            <state relative-caret-position="-240">
               <caret line="100" selection-start-line="100" selection-end-line="100" />
               <folding>
                 <element signature="n#style#0;n#a#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Web/resources/views/includes/company_sidebar.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="274">
+              <caret line="66" column="10" lean-forward="true" selection-start-line="66" selection-start-column="10" selection-end-line="66" selection-end-column="10" />
             </state>
           </provider>
         </entry>
@@ -116,7 +133,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>UserRatings</find>
       <find>saveTest</find>
       <find>TQCategoryDetails</find>
       <find>update_values_iq</find>
@@ -146,6 +162,7 @@
       <find>====</find>
       <find>/view</find>
       <find>webinar_sc</find>
+      <find>UserPersonalDe</find>
     </findStrings>
     <replaceStrings>
       <replace>eq</replace>
@@ -204,10 +221,10 @@
         <option value="$PROJECT_DIR$/Web/resources/views/template/webinar_schedule.blade.php" />
         <option value="$PROJECT_DIR$/Web/resources/views/template/webinar.blade.php" />
         <option value="$PROJECT_DIR$/Web/resources/views/includes/company_sidebar.blade.php" />
-        <option value="$PROJECT_DIR$/Web/app/Http/Controllers/CompanyController.php" />
         <option value="$PROJECT_DIR$/Web/resources/views/company/webinar_company.blade.php" />
         <option value="$PROJECT_DIR$/Web/resources/views/company/company_webinar_schedule.blade.php" />
         <option value="$PROJECT_DIR$/Web/routes/web.php" />
+        <option value="$PROJECT_DIR$/Web/app/Http/Controllers/CompanyController.php" />
       </list>
     </option>
   </component>
@@ -504,12 +521,12 @@
       <workItem from="1596254340692" duration="9855000" />
       <workItem from="1596299070712" duration="15154000" />
       <workItem from="1596345224350" duration="26294000" />
-      <workItem from="1596394106814" duration="7989000" />
+      <workItem from="1596394106814" duration="8556000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="434508000" />
+    <option name="totallyTimeSpent" value="435075000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -853,13 +870,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Web/resources/views/includes/company_sidebar.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="60" column="57" selection-start-line="60" selection-start-column="57" selection-end-line="60" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Web/resources/views/company/candidates_recommended.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="223">
@@ -884,16 +894,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Web/resources/views/template/webinar.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="100" selection-start-line="100" selection-end-line="100" />
-          <folding>
-            <element signature="n#style#0;n#a#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Web/resources/views/company/webinar_company.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
@@ -911,22 +911,39 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Web/app/Http/Controllers/CompanyController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="621" column="44" selection-start-line="621" selection-start-column="44" selection-end-line="621" selection-end-column="44" />
-          <folding>
-            <element signature="e#40#72#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Web/routes/web.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="280">
           <caret line="294" selection-start-line="294" selection-end-line="294" />
           <folding>
             <element signature="e#7#389#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Web/resources/views/template/webinar.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-240">
+          <caret line="100" selection-start-line="100" selection-end-line="100" />
+          <folding>
+            <element signature="n#style#0;n#a#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Web/resources/views/includes/company_sidebar.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="274">
+          <caret line="66" column="10" lean-forward="true" selection-start-line="66" selection-start-column="10" selection-end-line="66" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Web/app/Http/Controllers/CompanyController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="758" lean-forward="true" selection-start-line="758" selection-end-line="758" />
+          <folding>
+            <element signature="e#40#72#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>

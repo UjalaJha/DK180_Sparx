@@ -12,13 +12,29 @@ use App\UserAcademics;
 use App\UserExperiences;
 use App\UserPersonalDetails;
 use App\UserTechnical;
-use App\Webinar;
+
+use App\UserRatings;
+// use App\UserPersonalDetails;
 use Illuminate\Http\Request;
 
 use Maatwebsite\Excel\Facades\Excel;
 use Session;
 use App\Jobs;
 use App\CompanyDetails;
+
+use App\UserTests;
+use App\IQ;
+use App\EQ;
+use App\AQ;
+use App\UserHGMI;
+
+use App\LinkedinProfiles;
+use App\UserIQ;
+use App\UserEQ;
+use App\UserAQ;
+
+use App\Webinar;
+
 
 class CompanyController extends Controller
 {
@@ -63,6 +79,47 @@ class CompanyController extends Controller
         // exit;
         $new_job->company_name=$company_name[0];
         $new_job->save();
+
+
+        $skill_req=$_POST['skills'][0];
+        echo $skill_req;
+        $th=0;
+        // echo "<pre>";
+        $students=UserRatings::where('language',$skill_req)->where('total_star','>', 0)->orderBy('total_star','desc')->get();
+        // print_r($students);
+        // echo $students[0]['user_id'];
+        // exit;
+        // $student_details=array();  
+
+        $total=sizeof($students);
+        $count=0;
+        $name_array=array();
+        $skill_set=array();
+
+        while($count!=$total){
+            $student_personal_details=UserPersonalDetails::where('user_id',$students[$count]['user_id'])->get();
+            // print_r($student_personal_details);
+            // echo $student_personal_details[0]->first_name;
+            // print_r($student_personal_details[0]['first_name']);
+            $name=$student_personal_details[0]['first_name']." ".$student_personal_details[0]['last_name'];
+            echo $name;
+            array_push($name_array, $name);
+            array_push($skill_set, $student_personal_details[0]['skills']);
+
+          // echo $count;
+            $count++;
+         }
+         // print_r($name_array);
+         // print_r($skill_set);
+         // exit;
+         return view('company/categorised_candidates')
+                            ->with('ratings', $students)->with('name',$name_array)->with('skill_set',$skill_set);
+        exit;
+
+
+        // $student_personal_details
+
+
 
         
 //        echo $company_name[0];
@@ -366,12 +423,79 @@ class CompanyController extends Controller
 
         $user_projects = UserExperiences::where('user_id', $id)->where('is_internship_project', 0)->get();
 
+        $rating=UserRatings::where('user_id',$id)->where('language','JAVA')->get();
+        $eq=UserEQ::where('user_id',$id)->get();
+        $aq=UserAQ::where('user_id',$id)->get();
+        $iq=UserIQ::where('user_id',$id)->get();
+        $tq=UserTechnical::where('user_id',$id)->get();
+        $hgmi=UserHGMI::where('user_id',$id)->get();
+        $good_traits=array();
+        $avg_traits=array();
+        if($hgmi[0]['Logical']>7){
+          array_push($good_traits,'Logical');
+        }
+         if($hgmi[0]['Naturalist']>1){
+          array_push($good_traits,'Naturalist');
+        }
+          if($hgmi[0]['Intrapersonal']>5){
+          array_push($good_traits,'IntraPersonal');
+        }
+        if($hgmi[0]['Verbal']>5){
+          array_push($good_traits,'Vocabulary');
+        }
+        if($eq[0]['eq_inspirational_leadership']>3){
+          // echo "here";
+          array_push($good_traits,'Leadership');
+        }
+
+        if($eq[0]['eq_inspirational_leadership']<3){
+          // echo "here";
+          array_push($avg_traits,'Leadership');
+        }
+        if($aq[0]['aq_boldness']<5){
+          // echo "here";
+          array_push($avg_traits,'Boldness');
+        }
+
+        if($eq[0]['eq_social_awareness']<0){
+          // echo "here";
+          array_push($avg_traits,'Socail Awarness');
+        }
+        if($eq[0]['eq_self_control']<0){
+          // echo "here";
+          array_push($avg_traits,'Self Control');
+        }
+        if($eq[0]['eq_self_control']>0){
+          // echo "here";
+          array_push($good_traits,'Self Control');
+        }
+                if($eq[0]['eq_positive_outlook']>3){
+          // echo "here";
+          array_push($good_traits,'Quick Learner');
+        }
+
+
+
+
+        // echo $hgmi[0]['Intrapersonal'];
+        // echo $eq[0]['eq_inspirational_leadership'];
+        // print_r($good_traits);
+        // exit;
+
 //        exit;
-        return view('/company/view_user_profile')->with("user_details",$user_details)
+        return view('/company/view_user_profile')
+            ->with("user_details",$user_details)
             ->with("user_tq_skills", $skills_name_array)
             ->with('user_academics', $user_academics)
             ->with('user_internships', $user_internships)
-            ->with('user_projects', $user_projects);
+            ->with('user_projects', $user_projects)
+            ->with('iq',$iq)
+            ->with('eq',$eq)
+            ->with('aq',$aq)
+            ->with('tq',$tq)
+            ->with('rating',$rating)
+            ->with('good_traits',$good_traits)
+            ->with('avg_traits',$avg_traits);
         exit;
 
 

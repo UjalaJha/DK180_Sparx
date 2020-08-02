@@ -1,147 +1,167 @@
-  
 
-@include('includes/header')
-@include('includes/sidebar')
-    <div class="main-panel">
-        <!-- Navbar -->
-        <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top ">
-            <div class="container-fluid">
-                <div class="navbar-wrapper">
-                    <a class="navbar-brand" href="#pablo">User Profile</a>
-                </div>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="navbar-toggler-icon icon-bar"></span>
-                    <span class="navbar-toggler-icon icon-bar"></span>
-                    <span class="navbar-toggler-icon icon-bar"></span>
-                </button>
-                <div class="collapse navbar-collapse justify-content-end">
-                    <form class="navbar-form" >
-                        <div class="input-group no-border">
-                            <input type="text" value="" class="form-control" placeholder="Search...">
-                            <button type="submit" class="btn btn-white btn-round btn-just-icon">
-                                <i class="material-icons">search</i>
-                                <div class="ripple-container"></div>
-                            </button>
-                        </div>
-                    </form>
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#pablo">
-                                <i class="material-icons">dashboard</i>
-                                <p class="d-lg-none d-md-block">
-                                    Stats
-                                </p>
-                            </a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i class="material-icons">notifications</i>
-                                <span class="notification">5</span>
-                                <p class="d-lg-none d-md-block">
-                                    Some Actions
-                                </p>
-                            </a>
-                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
-                                <a class="dropdown-item" href="#">Mike John responded to your email</a>
-                                <a class="dropdown-item" href="#">You have 5 new tasks</a>
-                                <a class="dropdown-item" href="#">You're now friend with Andrew</a>
-                                <a class="dropdown-item" href="#">Another Notification</a>
-                                <a class="dropdown-item" href="#">Another One</a>
-                            </div>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link" href="#pablo" id="navbarDropdownProfile" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i class="material-icons">person</i>
-                                <p class="d-lg-none d-md-block">
-                                    Account
-                                </p>
-                            </a>
-                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownProfile">
-                                <a class="dropdown-item" href="#">Profile</a>
-                                <a class="dropdown-item" href="#">Settings</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="/logout">Log out</a>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
+@include('includes/company_header')
+@include('includes/company_sidebar')
+
+<div class="main-panel">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top ">
+        <div class="container-fluid">
+            <div class="navbar-wrapper">
+                <a class="navbar-brand" href="#pablo">Company Profile</a>
             </div>
-        </nav>
-        <!-- End Navbar -->
-        <div class="content">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-lg-12 col-md-12">
-                        <div class="card">
-                            <div class="card-header card-header-primary">
-                                <h4 class="card-title">User Details</h4>
-{{--                                <p class="card-category">View</p>--}}
-                            </div>
-                            <div class="card-body">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="navbar-toggler-icon icon-bar"></span>
+                <span class="navbar-toggler-icon icon-bar"></span>
+                <span class="navbar-toggler-icon icon-bar"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end">
+                <form class="navbar-form">
+                    <div class="input-group no-border">
+                        <input type="text" value="" class="form-control" placeholder="Search...">
+                        <button type="submit" class="btn btn-white btn-round btn-just-icon">
+                            <i class="material-icons">search</i>
+                            <div class="ripple-container"></div>
+                        </button>
+                    </div>
+                </form>
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#pablo">
+                            <i class="material-icons">dashboard</i>
+                            <p class="d-lg-none d-md-block">
+                                Stats
+                            </p>
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="material-icons">notifications</i>
+                            <span class="notification">5</span>
+                            <p class="d-lg-none d-md-block">
+                                Some Actions
+                            </p>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="#">Mike John responded to your email</a>
+                            <a class="dropdown-item" href="#">You have 5 new tasks</a>
+                            <a class="dropdown-item" href="#">You're now friend with Andrew</a>
+                            <a class="dropdown-item" href="#">Another Notification</a>
+                            <a class="dropdown-item" href="#">Another One</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="#pablo" id="navbarDropdownProfile" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="material-icons">person</i>
+                            <p class="d-lg-none d-md-block">
+                                Account
+                            </p>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownProfile">
+                            <a class="dropdown-item" href="#">Profile</a>
+                            <a class="dropdown-item" href="#">Settings</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="/logout">Log out</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- End Navbar -->
+    <div class="content">
+        <div class="container-fluid">
+
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-header card-header-primary">
+                            <h4 class="card-title">Recommended Candidates</h4>
+                            <p class="card-category">View</p>
+                        </div>
+                        <div class="card-body">
+
+                            <table class="table table-hover">
+                                <thead class="thead-light">
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">Name</th>
+                                    <th scope="col">Skills</th>
+                                    <th scope="col">Ratings</th>
+<!--                                     <th scope="col">Education</th>
+                                    <th scope="col">Linkedin</th> -->
+                                    <th scope="col">View</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <?php $count = 0; ?>
+                                @foreach($ratings as $student_rating)
+                                <?php
+                                // $count=0;
+                                // print_r($name);
+                                // print_r($skill_set);
+                                // exit;
+                                ?>
+                                   <tr>
+                                       <td scope="row">{{$count+1}}</td>
+                                       <td>{{$name[$count] ?? ''}}</td>
+                                       <td>{{$skill_set[$count] ?? ''}}
+                                       </td>
+                                       <td>{{$student_rating['total_star'] ?? ''}}
+                                       <i class="fa fa-star" aria-hidden="true"></i></td>
+                                       <td><a href="/view_user_details/{{$student_rating['user_id']}}"  class="btn btn-success">View</a></td>
+                                   </tr>
+                                    <?php $count++; ?>
+                                    @endforeach
+
+                                </tbody>
+                            </table>
 
 
-                                <form action="/user_media" method="post" id="form-submit" enctype="multipart/form-data">
-                                    @csrf
-                                    <div class="row" style="margin-top:10px;">
-                                        <div class="form-group">
-                                        <div class="col-md-12">
-
-                                            <b><p >Upload Picture</p></b>
-                                            <input type="file" id="myFile1" name="image_filename" required accept="image/*">
-                                        </div>
-                                        </div>
-
-                                    </div>
-
-                                    <div class="row" style="margin-top:10px;">
-                                        <div class="col-md-12">
-                                            <div class="form-group">
-                                            <b><p >Upload Resume</p></b>
-                                            <input type="file" id="resume_filename" name="resume_filename" required accept="application/pdf">
-                                            <span class="alert-danger" style="color:#222;">Note: Upload your resume in pdf format <only></only></span>
-                                            </div>
-                                        </div>
-
-                                    </div>
-
-                                    <div class="row" id="use_resume_option" style="display: block;">
-                                        <div class="col-md-6" style="margin-top: 10px;">
-                                            <div class="form-group">
-                                                <label class="bmd-label-floating">Do you want to import your profile using resume?</label>
-                                                <input type="radio" id="defaultRadio" required name="use_resume" value="1">
-                                                <label for="defaultRadio">Yes</label>
-                                                <input type="radio" id="defaultRadio" required name="use_resume" value="0" style="margin-left: 10px;">
-                                                <label for="defaultRadio">No</label>
-                                            </div>
-                                        </div>
-                                    </div>
-
-
-                                    <button type="submit" class="btn btn-primary pull-right">Proceed with Profile</button>
-
-                                    <div class="clearfix"></div>
-                                </form>
-
-
-
-                            </div>
                         </div>
                     </div>
-
                 </div>
+
             </div>
         </div>
     </div>
-</div>
-</div>
+    <footer class="footer">
+        <div class="container-fluid">
+            <nav class="float-left">
+                <ul>
+                    <li>
+                        <a href="https://www.creative-tim.com">
+                            Creative Tim
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://creative-tim.com/presentation">
+                            About Us
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://blog.creative-tim.com">
+                            Blog
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.creative-tim.com/license">
+                            Licenses
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="copyright float-right">
+                &copy;
+                <script>
+                    document.write(new Date().getFullYear())
+                </script>, made with <i class="material-icons">favorite</i> by
+                <a href="https://www.creative-tim.com" target="_blank">Creative Tim</a> for a better web.
+            </div>
+        </div>
+    </footer>
 </div>
 
-</div>
-</div>
-
-</div>
-</div>
 
 <!--   Core JS Files   -->
 <script src="../assets/js/core/jquery.min.js"></script>
@@ -193,14 +213,6 @@
 <script>
     $(document).ready(function() {
         $().ready(function() {
-            // alert("hey");
-            $('#myFile2').change(function () {
-                if(document.getElementById("myFile2").files.length != 0) {
-                // you have a file
-                document.getElementById("use_resume_option").style.display = 'block';
-                }
-            })
-
             $sidebar = $('.sidebar');
 
             $sidebar_img_container = $sidebar.find('.sidebar-background');
@@ -373,64 +385,16 @@
 <script type="text/javascript">
     $(document).ready(function() {
         $('.mdb-select').materialSelect();
-
-
     });
 </script>
 <script>
-
-
-    function next1(){
-        $('[href="#messages"]').tab('show');
-    }
-
-    function previous1(){
-        $('[href="#profile"]').tab('show');
-    }function next2(){
-        $('[href="#settings"]').tab('show');
-    }
-
-    function previous2(){
-        $('[href="#messages"]').tab('show');
-    }function next3(){
-        $('[href="#project"]').tab('show');
-    }
-
-    function previous3(){
-        $('[href="#settings"]').tab('show');
-    }
-
     // Add the following code if you want the name of the file appear on select
     $(".custom-file-input").on("change", function() {
         var fileName = $(this).val().split("\\").pop();
         $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
     });
 </script>
-<script type="text/javascript">
-    jQuery(function($){
-        var $internship = $('#internship1'), count = 1;
-        $('#addinternship').click(function(e){
-            e.preventDefault();
-            var idname = 'internship' + (++count);
-            $internship.parent().append($internship.clone().attr({id: idname, name: idname}));
-        });
-
-    });
-</script>
-<script type="text/javascript">
-    jQuery(function($){
-        var $project = $('#project1'), count = 1;
-        $('#addproject').click(function(e){
-            e.preventDefault();
-            var idname = 'project' + (++count);
-            $project.parent().append($project.clone().attr({id: idname, name: idname}));
-        });
-
-    });
-</script>
-
-
-<script src="../../assets/select2/js/select2.min.js"></script>
+<script src="../assets/select2/js/select2.min.js"></script>
 
 <script>
 
@@ -438,14 +402,7 @@
 
         $("#skill_select").select2({
             multiple: true,
-            placeholder: "Add your Skills",
-            maximumSelectionLength: 4,
-            formatSelectionTooBig: function (limit) {
 
-                // Callback
-
-                return 'Too many selected items, only 4 allowed';
-            }
         });
 
 
@@ -453,60 +410,8 @@
 
 </script>
 
-<script>
-    $('#submitInternship').click(function(){
-        $.ajax({
-            url:"/internship",
-            method:"POST",
-            data:$('#storeInternship').serialize(),
-            success:function(data)
-            {
-                alert(data);
-                $('#storeInternship')[0].reset();
-            }
-        });
-    });
-</script>
 
-<script>
-    $('#submitProject').click(function(){
-        $.ajax({
-            url:"/project",
-            method:"POST",
-            data:$('#storeProject').serialize(),
-            success:function(data)
-            {
-                alert(data);
-                $('#storeProject')[0].reset();
-            }
-        });
-    });
-</script>
 
 </body>
 
 </html>
-
-<!-- <script type="text/javascript">
-$(document).ready(function() {
-        // file=$('#resumefile').val();
-        // console.log("file"+file);
-        $('#form-submit').submit(function(e){
-            e.preventDefault();
-            var form = $(this);
-            $.ajax({
-            type:"POST",
-            url : "/resume",
-            data: new FormData(this),
-            dataType: 'json',
-            success : function(data){
-               console.log(data);
-            },
-            always: function() {
-               // //submit form !!!
-               // $("#formtopost").submit();
-            }
-        });//end ajax   
-      });//end click
-    });//end rdy
-</script> -->
