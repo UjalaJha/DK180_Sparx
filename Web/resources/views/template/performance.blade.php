@@ -100,7 +100,7 @@
           <input type="hidden" value="{{$aq[0]->aq_abstraction}}" id="aq_abstraction">
             <input type="hidden" value="{{$aq[0]->aq_queriosity}}" id="aq_queriosity">
 
-            <input type="hidden" value="{{$tq[0]->level_1_score}}" id="c_score">
+            <input type="hidden" value="{{$tq[0]->level_1_score??'0'}}" id="c_score">
             <input type="hidden" value="{{$tq[1]->level_1_score}}" id="java_score">
             <input type="hidden" value="{{$tq[2]->level_1_score}}" id="python_score">
             
@@ -128,8 +128,8 @@
                                 <canvas id="chartjs_radar"></canvas>
                             </div>
                             <div class="card-footer bg-white">
-                                    <p>Your Creativity Score is <span class="float-right text-dark">  &nbsp; <b>48.76</b></span></p>
-                                    <p>Average Score is <span class="float-right text-dark">   &nbsp; <b>61.54</b></span></p>
+                                    <!-- <p>Your Creativity Score is <span class="float-right text-dark">  &nbsp; <b>48.76</b></span></p>
+                                    <p>Average Score is <span class="float-right text-dark">   &nbsp; <b>61.54</b></span></p> -->
                                     
                             </div>
                         </div>
@@ -147,8 +147,8 @@
                                     <div id="morris_gross" style="height: 272px;"></div>
                                 </div>
                                 <div class="container" style="margin-left: 50px;">
-                                    <p>Correct Answers <span class="text-dark">:&nbsp; <b>50</b></span></p>
-                                    <!-- <p>Incorrect Answers<span class="text-dark"> :&nbsp; 20 </span> -->
+                                    <p>Correct Answers <span class="text-dark">:&nbsp; <b>{{$iq[0]->iq_score}}</b></span></p>
+                                    <p>Incorrect Answers<span class="text-dark"> :&nbsp;{{30-$iq[0]->iq_score}} </span>
                                   
                                 </div>
                             </div>

@@ -39,7 +39,7 @@
           <li class="nav-item ">
             <a class="nav-link" href="/search_students">
               <i class="material-icons">bubble_chart</i>
-              <p>Look for Students</p>
+              <p>Look for Candidates</p>
             </a>
           </li>
           
