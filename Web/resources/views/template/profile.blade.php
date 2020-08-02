@@ -1,4 +1,8 @@
-
+<?php 
+// start_session();
+// $_SESSION['page']='profile';
+// view_profile
+?>
 
 
 @include('includes/header')

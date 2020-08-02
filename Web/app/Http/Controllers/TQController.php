@@ -105,6 +105,7 @@ class TQController extends Controller
        // echo ($question_details);
        // echo ($all_question_id);
        // exit;
+//        $question_no_array = {'0': 0, '1': 1};
         return view('/template/tq_test')->with("question_details", $question_details)->with("all_question_id", $all_question_id)->with('skill_id', $skill_id);
 
     }
@@ -149,8 +150,8 @@ class TQController extends Controller
 
 
     public function skill_test($skill_id,$ques_id){
-       echo $skill_id;
-       echo $ques_id;
+//       echo $skill_id;
+//       echo $ques_id;
        // exit;
         $question_details=TQ::where('question_id',$ques_id)->get();
         $all_question_id = TQ::where('tq_concept_details_id', $skill_id)->where('is_level_2',0)->pluck('question_id');
@@ -197,8 +198,8 @@ class TQController extends Controller
 
     public function save_score()
     {
-        echo "here";
-        echo $_GET['scores'];
+//        echo "here";
+//        echo $_GET['scores'];
 //        exit;s
         $user_id=Session::get('user_id');
         $skill_category_id=$_GET['skill_category_id'];

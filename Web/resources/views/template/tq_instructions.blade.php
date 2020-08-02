@@ -164,4 +164,13 @@
       <script type="text/javascript">
               localStorage.setItem('tq_score',0);
 
+              var setTQAns = [0,0,0,0,0,0,0,0,0,0];
+
+              localStorage.setItem("setTQAns",JSON.stringify(setTQAns));
+
+
+              var setADVTQAns = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
+
+              localStorage.setItem("setADVTQAns",JSON.stringify(setADVTQAns));
+
       </script>
