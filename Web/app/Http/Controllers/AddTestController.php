@@ -25,7 +25,7 @@ class AddTestController extends Controller
 //        $test->stream=$_POST['stream'];
 //        echo $stream;
         $test->category =$_POST['category'];
-        $test->sub_category=$_POST['sub_category'];
+        $test->sub_category=strtoupper($_POST['sub_category']);
 //        $first_name=$_POST['first_name'];
 //        $lastname=$_POST['last_name'];
     
@@ -52,7 +52,7 @@ class AddTestController extends Controller
 //        echo $count; //
         
         for($i=0;$i<$count;$i++){
-            echo "<br>";
+//            echo "<br>";
 //            echo "cpp";
             $test_concept->sub_concept=$_POST['concept_name'][$i];
             
@@ -89,8 +89,8 @@ class AddTestController extends Controller
         
         
 //        echo "".$lastname."".$first_name;
-        
-        return view("landing/index");
+
+        return app('App\Http\Controllers\AddQuestionController')->index();
         
     }
 }

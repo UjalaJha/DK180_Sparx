@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\UserRatings;
 use Illuminate\Http\Request;
 use App\IQ;
 use App\UserIQ;
@@ -42,7 +43,16 @@ class TestControler extends Controller
         $iq_score->iq_score = 10;
         $iq_score->save();
 
+
+        $temp_iq_score = (($_POST["iq_score"])/(10));
+//        echo $temp_iq_score;
+//        echo $user_id;
+
+        $takeOp = UserRatings::where('user_id',$user_id)->update(['iq_star' => $temp_iq_score]);
+
         $user_test = UserTests::where('user_id',$user_id)->update(['iq_given'=>0]);
+
+
         return view('template/iq_result')->with('iq_score',$iq_score);
         // return app('App\Http\Controllers\UserController')->redirectDashboard();
 
