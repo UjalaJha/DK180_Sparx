@@ -2,13 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f7799801-25c4-4fe4-be04-2617f3616de9" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../blogs/Blog Test Profiles/blogsdata.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../blogs/Blog Test Profiles/blogsdata.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../blogs/Blog Test Profiles/users.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../blogs/Blog Test Profiles/users.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../candidate_recommender/Test Profiles/backend.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../candidate_recommender/Test Profiles/backend.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../candidate_recommender/Test Profiles/profile_data.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../candidate_recommender/Test Profiles/profile_data.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../candidate_recommender/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/../candidate_recommender/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jobrecommender/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/../jobrecommender/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../learning_platform/Learning Test Profiles/coursesdata.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../learning_platform/Learning Test Profiles/coursesdata.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../learning_platform/Learning Test Profiles/users.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../learning_platform/Learning Test Profiles/users.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Web/app/Http/Controllers/CompanyController.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../Web/app/Http/Controllers/CompanyController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Web/app/Http/Controllers/EQController.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../Web/app/Http/Controllers/EQController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Web/app/Http/Controllers/TQController.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../Web/app/Http/Controllers/TQController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Web/app/Http/Controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../Web/app/Http/Controllers/UserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Web/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../Web/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Web/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../Web/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Web/public/assets/css/material-dashboard.css" beforeDir="false" afterPath="$PROJECT_DIR$/../../Web/public/assets/css/material-dashboard.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Web/resources/views/template/preuser.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../Web/resources/views/template/preuser.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Web/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../Web/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Web/resources/views/template/performance.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../Web/resources/views/template/performance.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,7 +23,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1fK33l3AZ2Qwx5eO7Sk2OPtymbk" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -28,7 +35,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="TERMINAL_CUSTOM_COMMANDS_GOT_IT" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../career-counselling-chatbot-master" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="SvnConfiguration">
@@ -45,6 +52,10 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
+    <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1596305336710">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1596305336710" />
     <state x="184" y="9" key="SettingsEditor" timestamp="1595954609780">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

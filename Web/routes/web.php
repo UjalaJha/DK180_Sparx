@@ -89,6 +89,9 @@ Route::get('/learningrecommendation','UserController@learningrecommendation');
 Route::get('/githubjobs','UserController@githubjobs');
 
 Route::get('/blogrecommendation','UserController@blogrecommendation');
+
+Route::get('/learningplatforminsights','UserController@learningplatforminsights');
+
 ///sanjay
 
 Route::get('/company_dashboard', function () {

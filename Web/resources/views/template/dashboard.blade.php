@@ -123,7 +123,7 @@
                   </div>
 
                 </div>
-                <a href="/hgmi_instructions"><button type="submit" @if($user_test_details[0]->iq_given!=1) disabled @endif class="btn btn-info" style="width: 100%;">Start Test</button></a>
+                <a href="/hgmi_instructions"><button type="submit"  class="btn btn-info" style="width: 100%;">Start Test</button></a>
               </div>
             </div>
               @endif
@@ -143,7 +143,7 @@
                     <i class="material-icons">people_alt</i>1150 people attempted
                   </div>
                 </div>
-                <a href="/tq_instructions"><button type="submit" @if($user_test_details[0]->hgmi_given!=1) disabled @endif class="btn btn-info" style="width: 100%;">Start Test</button></a>
+                <a href="/tq_instructions"><button type="submit"  class="btn btn-info" style="width: 100%;">Start Test</button></a>
               </div>
             </div>
               @endif
@@ -163,7 +163,7 @@
                     <i class="material-icons">people_alt</i>1150 people attempted 
                   </div>
                 </div>
-                <a href="/eq_instructions"><button type="submit" @if($user_test_details[0]->tq_given!=1) disabled @endif class="btn btn-info" style="width: 100%;">Start Test</button></a>
+                <a href="/eq_instructions"><button type="submit"  class="btn btn-info" style="width: 100%;">Start Test</button></a>
               </div>
             </div>
               @endif
@@ -183,7 +183,7 @@
                     <i class="material-icons">people_alt</i>1150 people attempted 
                   </div>
                 </div>
-                <a href="aq_instructions"><button type="submit" @if($user_test_details[0]->eq_given!=1) disabled @endif class="btn btn-info" style="width: 100%;">Start Test</button></a>
+                <a href="aq_instructions"><button type="submit" class="btn btn-info" style="width: 100%;">Start Test</button></a>
               </div>
             </div>
                 @endif
