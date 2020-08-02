@@ -2,16 +2,50 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b42da8c1-15de-4d9c-badb-bb940fa51862" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Flask/learning_platform_insights/app.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Flask/learning_platform_insights/totaljobs.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Web/public/images/68.PNG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Web/public/images/69.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Web/resources/views/admin/learning_platform.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BI_templates/concept-master/pages/chart-charts.html" beforeDir="false" afterPath="$PROJECT_DIR$/BI_templates/concept-master/pages/chart-charts.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flask/blogs/Blog Test Profiles/blogsdata.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Flask/blogs/Blog Test Profiles/blogsdata.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flask/blogs/Blog Test Profiles/users.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Flask/blogs/Blog Test Profiles/users.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flask/candidate_recommender/Test Profiles/backend.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Flask/candidate_recommender/Test Profiles/backend.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flask/candidate_recommender/Test Profiles/profile_data.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Flask/candidate_recommender/Test Profiles/profile_data.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flask/candidate_recommender/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/Flask/candidate_recommender/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flask/learning_platform/Learning Test Profiles/coursesdata.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Flask/learning_platform/Learning Test Profiles/coursesdata.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flask/learning_platform/Learning Test Profiles/users.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Flask/learning_platform/Learning Test Profiles/users.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flask/resume_extraction/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Flask/resume_extraction/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flask/resume_extraction/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Flask/resume_extraction/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Web/app/Http/Controllers/AQController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Web/app/Http/Controllers/AQController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/app/Http/Controllers/AddTestController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Web/app/Http/Controllers/AddTestController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Web/app/Http/Controllers/CompanyController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Web/app/Http/Controllers/CompanyController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web/app/Http/Controllers/EQController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Web/app/Http/Controllers/EQController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web/app/Http/Controllers/HGMIController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Web/app/Http/Controllers/HGMIController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Web/app/Http/Controllers/TQController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Web/app/Http/Controllers/TQController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Web/app/Http/Controllers/TestControler.php" beforeDir="false" afterPath="$PROJECT_DIR$/Web/app/Http/Controllers/TestControler.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Web/app/Http/Controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Web/app/Http/Controllers/UserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/resources/views/includes/company_sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/Web/resources/views/includes/company_sidebar.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/resources/views/landing/admin-login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/Web/resources/views/landing/admin-login.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/resources/views/template/performance.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/Web/resources/views/template/performance.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web/public/bi_assets/vendor/charts/charts-bundle/chartjs.js" beforeDir="false" afterPath="$PROJECT_DIR$/Web/public/bi_assets/vendor/charts/charts-bundle/chartjs.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web/public/images/72.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web/public/images/74.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web/public/resumes/68.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/Web/public/resumes/68.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web/public/resumes/72.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web/public/resumes/74.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web/resources/views/admin/add_new_question.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/Web/resources/views/admin/add_new_question.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web/resources/views/admin/add_new_test.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/Web/resources/views/admin/add_new_test.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web/resources/views/admin/aicte.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/Web/resources/views/admin/aicte.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web/resources/views/includes/admin_header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/Web/resources/views/includes/admin_header.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web/resources/views/includes/admin_sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/Web/resources/views/includes/admin_sidebar.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web/resources/views/new_landing/about.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/Web/resources/views/new_landing/about.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web/resources/views/new_landing/chatbot.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/Web/resources/views/new_landing/chatbot.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web/resources/views/new_landing/contact.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/Web/resources/views/new_landing/contact.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web/resources/views/template/advance_tq_test.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/Web/resources/views/template/advance_tq_test.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web/resources/views/template/aq.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/Web/resources/views/template/aq.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web/resources/views/template/dashboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/Web/resources/views/template/dashboard.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web/resources/views/template/eq.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/Web/resources/views/template/eq.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web/resources/views/template/hgmi.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/Web/resources/views/template/hgmi.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web/resources/views/template/iq.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/Web/resources/views/template/iq.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web/resources/views/template/tq_test.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/Web/resources/views/template/tq_test.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Web/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/Web/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -28,101 +62,107 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Web/routes/web.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="507">
-              <caret line="268" column="79" selection-start-line="268" selection-start-column="79" selection-end-line="268" selection-end-column="79" />
-              <folding>
-                <element signature="e#7#389#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Web/app/Http/Controllers/AddQuestionController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="578">
-              <caret line="163" selection-start-line="163" selection-end-line="163" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Web/app/Http/Controllers/CompanyController.php">
+        <entry file="file://$PROJECT_DIR$/Web/app/Http/Controllers/TQController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="100">
-              <caret line="5" column="39" selection-start-line="5" selection-start-column="39" selection-end-line="5" selection-end-column="39" />
+            <state relative-caret-position="409">
+              <caret line="310" column="9" lean-forward="true" selection-start-line="310" selection-start-column="9" selection-end-line="310" selection-end-column="9" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Web/app/Imports/QuestionsImport.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="6" selection-start-line="6" selection-end-line="6" />
-              <folding>
-                <element signature="e#31#48#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Web/app/Imports/CompanyQuestionsImport.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="17" column="14" selection-start-line="17" selection-start-column="14" selection-end-line="17" selection-end-column="14" />
-              <folding>
-                <element signature="e#31#55#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Web/app/Question.php">
+        <entry file="file://$PROJECT_DIR$/Web/app/Http/Controllers/UserController.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="420">
-              <caret line="21" column="45" selection-start-line="21" selection-start-column="45" selection-end-line="21" selection-end-column="45" />
+              <caret line="1526" column="8" lean-forward="true" selection-start-line="1526" selection-start-column="8" selection-end-line="1526" selection-end-column="8" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Web/app/TQ.php">
+        <entry file="file://$PROJECT_DIR$/Web/app/Http/Controllers/AQController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="10" column="42" selection-start-line="10" selection-start-column="42" selection-end-line="10" selection-end-column="42" />
+            <state relative-caret-position="249">
+              <caret line="69" lean-forward="true" selection-start-line="69" selection-end-line="69" />
+              <folding>
+                <element signature="e#39#50#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Web/app/CompanyCustomTQ.php">
+        <entry file="file://$PROJECT_DIR$/Web/app/Http/Controllers/AddTestController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="440">
-              <caret line="22" column="1" selection-start-line="22" selection-start-column="1" selection-end-line="22" selection-end-column="1" />
+            <state relative-caret-position="229">
+              <caret line="79" column="41" lean-forward="true" selection-start-line="79" selection-start-column="41" selection-end-line="79" selection-end-column="41" />
+              <folding>
+                <element signature="e#39#65#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Web/resources/views/company/add_manual_question_company.blade.php">
+        <entry file="file://$PROJECT_DIR$/Web/app/Http/Controllers/CompanyController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="320">
-              <caret line="88" column="59" selection-start-line="88" selection-start-column="59" selection-end-line="88" selection-end-column="59" />
+            <state relative-caret-position="219">
+              <caret line="21" column="6" selection-start-line="21" selection-start-column="6" selection-end-line="21" selection-end-column="6" />
+              <folding>
+                <element signature="e#40#72#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Web/resources/views/company/add_new_question_company.blade.php">
+        <entry file="file://$PROJECT_DIR$/Web/app/Http/Controllers/EQController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="73" selection-start-line="73" selection-end-line="73" />
+            <state relative-caret-position="344">
+              <caret line="67" column="18" selection-start-line="67" selection-start-column="18" selection-end-line="67" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Web/app/Http/Controllers/HGMIController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="340">
+              <caret line="21" column="21" lean-forward="true" selection-start-line="21" selection-start-column="21" selection-end-line="21" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Web/app/Http/Controllers/IQController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="16" column="10" lean-forward="true" selection-start-line="16" selection-start-column="10" selection-end-line="16" selection-end-column="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Web/app/Http/Controllers/LoginController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="329">
+              <caret line="182" column="38" lean-forward="true" selection-start-line="182" selection-start-column="38" selection-end-line="182" selection-end-column="38" />
+              <folding>
+                <element signature="e#40#68#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Web/app/Http/Controllers/TestControler.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="340">
+              <caret line="134" lean-forward="true" selection-start-line="134" selection-end-line="134" />
+              <folding>
+                <element signature="e#40#60#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -131,10 +171,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>logout</find>
-      <find>UserTests</find>
-      <find>store</find>
-      <find>technical_</find>
       <find>technical_star</find>
       <find>save_scores</find>
       <find>UserRatings</find>
@@ -161,6 +197,10 @@
       <find>proceed_with_add_ques_form</find>
       <find>save_manual_question</find>
       <find>saveManualForm</find>
+      <find>=====`</find>
+      <find>=====</find>
+      <find>_self_awa</find>
+      <find>====</find>
     </findStrings>
     <replaceStrings>
       <replace>eq</replace>
@@ -207,8 +247,6 @@
         <option value="$PROJECT_DIR$/Web/resources/views/template/advance_tq_test.blade.php" />
         <option value="$PROJECT_DIR$/Web/resources/views/template/advance_tq_result.blade.php" />
         <option value="$PROJECT_DIR$/Web/resources/views/template/tq_result.blade.php" />
-        <option value="$PROJECT_DIR$/Web/app/Http/Controllers/TQController.php" />
-        <option value="$PROJECT_DIR$/Web/app/Http/Controllers/TestControler.php" />
         <option value="$PROJECT_DIR$/Web/app/Http/Controllers/AQController.php" />
         <option value="$PROJECT_DIR$/Web/app/Http/Controllers/UserController.php" />
         <option value="$PROJECT_DIR$/Web/resources/views/template/performance.blade.php" />
@@ -223,6 +261,8 @@
         <option value="$PROJECT_DIR$/Web/app/CompanyCustomTQ.php" />
         <option value="$PROJECT_DIR$/Web/app/Imports/CompanyQuestionsImport.php" />
         <option value="$PROJECT_DIR$/Web/app/Http/Controllers/CompanyController.php" />
+        <option value="$PROJECT_DIR$/Web/app/Http/Controllers/TestControler.php" />
+        <option value="$PROJECT_DIR$/Web/app/Http/Controllers/TQController.php" />
       </list>
     </option>
   </component>
@@ -510,19 +550,19 @@
       <workItem from="1596132884616" duration="8886000" />
       <workItem from="1596254340692" duration="9855000" />
       <workItem from="1596299070712" duration="15154000" />
-      <workItem from="1596345224350" duration="21834000" />
+      <workItem from="1596345224350" duration="22719000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="422059000" />
+    <option name="totallyTimeSpent" value="422944000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.18255034" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.18255034" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="0" weight="0.3654391" />
       <window_info anchor="bottom" id="Database Changes" order="1" />
@@ -546,13 +586,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Web/resources/views/company/linkedin_students.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="183">
-          <caret line="83" column="17" lean-forward="true" selection-start-line="83" selection-start-column="17" selection-end-line="83" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Web/resources/views/company/suggested_students.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="143">
@@ -609,16 +642,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Web/app/Http/Controllers/LoginController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="358">
-          <caret line="185" column="13" selection-start-line="185" selection-start-column="13" selection-end-line="185" selection-end-column="13" />
-          <folding>
-            <element signature="e#40#68#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Web/resources/views/template/advance_tq_test.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1960">
@@ -651,20 +674,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="174">
           <caret line="64" column="34" lean-forward="true" selection-start-line="64" selection-start-column="34" selection-end-line="64" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Web/app/Http/Controllers/IQController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="9" column="7" lean-forward="true" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Web/app/Http/Controllers/EQController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="123">
-          <caret line="49" column="30" selection-start-line="49" selection-start-column="21" selection-end-line="49" selection-end-column="30" />
         </state>
       </provider>
     </entry>
@@ -724,16 +733,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Web/app/Http/Controllers/TestControler.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="51" column="83" selection-start-line="51" selection-start-column="83" selection-end-line="51" selection-end-column="83" />
-          <folding>
-            <element signature="e#40#60#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Web/resources/views/template/aq_result.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="154">
@@ -741,13 +740,6 @@
           <folding>
             <element signature="n#style#0;n#button#0;n#a#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#!!top" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Web/app/Http/Controllers/UserController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="1506" column="24" selection-start-line="1506" selection-start-column="24" selection-end-line="1506" selection-end-column="24" />
         </state>
       </provider>
     </entry>
@@ -759,16 +751,6 @@
             <element signature="n#style#0;n#span#1;n#p#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#1;n#p#1;n#div#0;n#div#0;n#div#0;n#div#1;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#1;n#p#2;n#div#0;n#div#0;n#div#0;n#div#1;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Web/app/Http/Controllers/AQController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-71">
-          <caret line="65" selection-start-line="65" selection-end-line="65" />
-          <folding>
-            <element signature="e#39#50#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -798,23 +780,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="80">
           <caret line="4" column="24" selection-start-line="4" selection-start-column="24" selection-end-line="4" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Web/app/Http/Controllers/TQController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="123">
-          <caret line="337" column="84" selection-start-line="337" selection-start-column="84" selection-end-line="337" selection-end-column="84" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Web/app/Http/Controllers/AddTestController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="94" column="5" selection-start-line="94" selection-start-column="5" selection-end-line="94" selection-end-column="5" />
-          <folding>
-            <element signature="e#39#65#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -853,23 +818,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
           <caret line="73" selection-start-line="73" selection-end-line="73" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Web/routes/web.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="507">
-          <caret line="268" column="79" selection-start-line="268" selection-start-column="79" selection-end-line="268" selection-end-column="79" />
-          <folding>
-            <element signature="e#7#389#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Web/app/Http/Controllers/AddQuestionController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="163" selection-start-line="163" selection-end-line="163" />
         </state>
       </provider>
     </entry>
@@ -921,10 +869,105 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Web/app/Http/Controllers/AddQuestionController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="163" selection-start-line="163" selection-end-line="163" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Web/routes/web.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="369">
+          <caret line="263" lean-forward="true" selection-start-line="263" selection-end-line="263" />
+          <folding>
+            <element signature="e#7#389#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Web/app/Http/Controllers/UserController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="1526" column="8" lean-forward="true" selection-start-line="1526" selection-start-column="8" selection-end-line="1526" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Web/app/Http/Controllers/AQController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="249">
+          <caret line="69" lean-forward="true" selection-start-line="69" selection-end-line="69" />
+          <folding>
+            <element signature="e#39#50#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Web/app/Http/Controllers/AddTestController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="229">
+          <caret line="79" column="41" lean-forward="true" selection-start-line="79" selection-start-column="41" selection-end-line="79" selection-end-column="41" />
+          <folding>
+            <element signature="e#39#65#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Web/app/Http/Controllers/CompanyController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="5" column="39" selection-start-line="5" selection-start-column="39" selection-end-line="5" selection-end-column="39" />
+        <state relative-caret-position="219">
+          <caret line="21" column="6" selection-start-line="21" selection-start-column="6" selection-end-line="21" selection-end-column="6" />
+          <folding>
+            <element signature="e#40#72#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Web/app/Http/Controllers/EQController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="344">
+          <caret line="67" column="18" selection-start-line="67" selection-start-column="18" selection-end-line="67" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Web/app/Http/Controllers/HGMIController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="21" column="21" lean-forward="true" selection-start-line="21" selection-start-column="21" selection-end-line="21" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Web/app/Http/Controllers/IQController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="16" column="10" lean-forward="true" selection-start-line="16" selection-start-column="10" selection-end-line="16" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Web/app/Http/Controllers/LoginController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="329">
+          <caret line="182" column="38" lean-forward="true" selection-start-line="182" selection-start-column="38" selection-end-line="182" selection-end-column="38" />
+          <folding>
+            <element signature="e#40#68#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Web/app/Http/Controllers/TestControler.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="134" lean-forward="true" selection-start-line="134" selection-end-line="134" />
+          <folding>
+            <element signature="e#40#60#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Web/app/Http/Controllers/TQController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="409">
+          <caret line="310" column="9" lean-forward="true" selection-start-line="310" selection-start-column="9" selection-end-line="310" selection-end-column="9" />
         </state>
       </provider>
     </entry>

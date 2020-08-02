@@ -89,6 +89,9 @@ Route::get('/learningrecommendation','UserController@learningrecommendation');
 Route::get('/githubjobs','UserController@githubjobs');
 
 Route::get('/blogrecommendation','UserController@blogrecommendation');
+
+Route::get('/learningplatforminsights','UserController@learningplatforminsights');
+
 ///sanjay
 
 Route::get('/company_dashboard', function () {
@@ -230,6 +233,7 @@ Route::get('view_users', function (){
 Route::get('aicte', function (){
     return view('admin/aicte');
 });
+Route::get('learning_platform','UserController@learningplatforminsights');
 
 
 //update skills

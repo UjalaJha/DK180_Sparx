@@ -48,7 +48,7 @@ class AQController extends Controller
         $aq_score->save();
 
         $user_id = Session::get('user_id');
-        $user_test = UserTests::where('user_id',$user_id)->update(['aq_given'=>1]);
+        $user_test = UserTests::where('user_id',$user_id)->update(['aq_given'=>0]);
 
 
         $gettingAllStars = UserRatings::where('user_id', Session::get('user_id'))->get();
