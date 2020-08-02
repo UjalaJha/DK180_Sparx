@@ -52,6 +52,18 @@
               <p>Add Question</p>
             </a>
           </li>
+           <li class="nav-item ">
+            <a class="nav-link" href="aicte">
+              <i class="material-icons">playlist_add</i>
+              <p>AICTE</p>
+            </a>
+          </li>
+           <li class="nav-item ">
+            <a class="nav-link" href="learning_platform">
+              <i class="material-icons">playlist_add</i>
+              <p>Learning Platform Insights</p>
+            </a>
+          </li>
           
           
         </ul>

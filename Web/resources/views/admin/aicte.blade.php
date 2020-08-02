@@ -106,135 +106,82 @@
                                 
                             </div>
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-md-5">
               <div class="card">
                 <div class="card-header card-header-primary">
-                  <h4 class="card-title ">Simple Table</h4>
-                  <p class="card-category"> Here is a subtitle for this table</p>
+                  <h4 class="card-title ">Courses</h4>
+                  <p class="card-category">Suggested Trending Courses for AICTE</p>
                 </div>
                 <div class="card-body">
                   <div class="table-responsive">
                     <table class="table">
                       <thead class=" text-primary">
                         <th>
-                          ID
+                          Sr.No
                         </th>
                         <th>
-                          Name
+                          List of Courses
                         </th>
-                        <th>
-                          Country
-                        </th>
-                        <th>
-                          City
-                        </th>
-                        <th>
-                          Salary
-                        </th>
+                       
                       </thead>
                       <tbody>
                         <tr>
-                          <td>
+                           <td>
                             1
                           </td>
                           <td>
-                            Dakota Rice
-                          </td>
-                          <td>
-                            Niger
-                          </td>
-                          <td>
-                            Oud-Turnhout
-                          </td>
-                          <td class="text-primary">
-                            $36,738
+                            Blockhain
                           </td>
                         </tr>
                         <tr>
-                          <td>
+                           <td>
                             2
                           </td>
                           <td>
-                            Minerva Hooper
-                          </td>
-                          <td>
-                            Curaçao
-                          </td>
-                          <td>
-                            Sinaai-Waas
-                          </td>
-                          <td class="text-primary">
-                            $23,789
+                            Augmented Reality
                           </td>
                         </tr>
-                        <tr>
-                          <td>
+                         <tr>
+                           <td>
                             3
                           </td>
                           <td>
-                            Sage Rodriguez
-                          </td>
-                          <td>
-                            Netherlands
-                          </td>
-                          <td>
-                            Baileux
-                          </td>
-                          <td class="text-primary">
-                            $56,142
+                            Virtual Reality
                           </td>
                         </tr>
-                        <tr>
-                          <td>
+                         <tr>
+                           <td>
                             4
                           </td>
                           <td>
-                            Philip Chaney
-                          </td>
-                          <td>
-                            Korea, South
-                          </td>
-                          <td>
-                            Overland Park
-                          </td>
-                          <td class="text-primary">
-                            $38,735
+                            Angular JS
                           </td>
                         </tr>
-                        <tr>
-                          <td>
+                         <tr>
+                           <td>
                             5
                           </td>
                           <td>
-                            Doris Greene
-                          </td>
-                          <td>
-                            Malawi
-                          </td>
-                          <td>
-                            Feldkirchen in Kärnten
-                          </td>
-                          <td class="text-primary">
-                            $63,542
+                            React JS
                           </td>
                         </tr>
-                        <tr>
-                          <td>
+                         <tr>
+                           <td>
                             6
                           </td>
                           <td>
-                            Mason Porter
-                          </td>
-                          <td>
-                            Chile
-                          </td>
-                          <td>
-                            Gloucester
-                          </td>
-                          <td class="text-primary">
-                            $78,615
+                            Robotic Process Automation (R.P.A)
                           </td>
                         </tr>
+                         <tr>
+                           <td>
+                            7
+                          </td>
+                          <td>
+                            Applied Data Science
+                          </td>
+                        </tr>
+                        
                       </tbody>
                     </table>
                   </div>
@@ -276,14 +223,6 @@
   <!-- Forms Validations Plugin -->
   <script src="../assets/js/plugins/jquery.validate.min.js"></script>
   <!-- Plugin for the Wizard, full documentation here: https://github.com/VinceG/twitter-bootstrap-wizard -->
-
- 
-
-
-
-
-
-
  <!-- <script src="../bi_assets/vendor/bootstrap/js/bootstrap.bundle.js"></script> -->
     <!-- slimscroll js -->
     <script src="../bi_assets/vendor/slimscroll/jquery.slimscroll.js"></script>
@@ -312,18 +251,6 @@
     <!-- daterangepicker js -->
 <!--     <script src="../../../../cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
     <script src="../../../../cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script> -->
-
-
-
-
-
-
-
-
-
-
-
-
 
   <!--  Plugin for Select, full documentation here: http://silviomoreto.github.io/bootstrap-select -->
   <script src="../assets/js/plugins/bootstrap-selectpicker.js"></script>
@@ -533,8 +460,8 @@
                 element: 'morris_gross',
 
                 data: [
-                    { value:35, label: 'Courses Present' },
-                    { value:65, label: 'Courses Not Present' }
+                    { value:36.67, label: 'Courses Present' },
+                    { value:63.33, label: 'Courses Not Present' }
                    
                 ],
              

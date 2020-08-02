@@ -67,7 +67,7 @@
                 var myChart = new Chart(ctx, {
                     type: 'bar',
                     data: {
-                        labels: ["Java", "C", "C++", "Python", "Ruby", "Spring", ".Net"],
+                        labels: ["Java", "C", "C++", "Python", "Ruby", "Spring", ".Net", "Ruby", "Spring", ".Net"],
                         datasets: [{
                         //     label: 'Course',
                         //     data: [12, 19, 3, 17, 28, 24, 7],
@@ -76,7 +76,7 @@
                         //     borderWidth: 2
                         // }, {
                             label: 'Students',
-                            data: [30, 29, 5, 5, 20, 3, 10],
+                            data: [30, 29, 5, 5, 20, 3, 10,12, 25, 34],
                            backgroundColor: "rgba(255, 64, 123,0.5)",
                                     borderColor: "rgba(255, 64, 123,0.7)",
                             borderWidth: 2
@@ -125,7 +125,7 @@
                 var myChart = new Chart(ctx, {
                     type: 'bar',
                     data: {
-                        labels: ["Java", "C", "C++", "Python", "Ruby", "Spring", ".Net"],
+                        labels: ["Java", "C", "C++", "Python", "Ruby", "Spring", ".Net", "Ruby", "Spring", ".Net"],
                         datasets: [{
                         //     label: 'Course',
                         //     data: [12, 19, 3, 17, 28, 24, 7],
@@ -134,7 +134,7 @@
                         //     borderWidth: 2
                         // }, {
                             label: 'Students',
-                            data: [30, 29, 5, 5, 20, 3, 10],
+                            data: [30, 29, 5, 5, 20, 3, 10, 12, 25, 34],
                            backgroundColor: "rgba(5, 177, 220,0.5)",
                                     borderColor: "rgba(5, 177, 220,0.7)",
                             borderWidth: 2
