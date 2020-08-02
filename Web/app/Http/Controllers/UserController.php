@@ -963,6 +963,30 @@ class UserController extends Controller
 
     }
 
+    public function learningplatforminsights(){
+        // $curl = curl_init();
+
+        // curl_setopt_array($curl, array(
+        //   CURLOPT_URL => "http://127.0.0.1:5010/insights_api",
+        //   CURLOPT_RETURNTRANSFER => true,
+        //   CURLOPT_ENCODING => "",
+        //   CURLOPT_MAXREDIRS => 10,
+        //   CURLOPT_TIMEOUT => 0,
+        //   CURLOPT_FOLLOWLOCATION => true,
+        //   CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+        //   CURLOPT_CUSTOMREQUEST => "POST",
+        // ));
+
+        // $response = curl_exec($curl);
+
+        // curl_close($curl);
+        // echo $response;
+
+
+        $response='{ "course_frequency": { "CSS": 2312, "Core Java": 1555, "HTML": 3195, "Html5": 1136, "JQuery": 1405, "Java": 1957, "Javascript": 3505, "MySQL": 1092, "Python": 1156, "SQL": 1375 }, "other_courses": [ "UX", "Marketing", "java", "html", "Angularjs", "Rest", "UI Development", "css", "Front End", "Ajax" ], "popular_courses": [ "Javascript", "HTML", "CSS", "Java", "Core Java", "JQuery", "SQL", "Python", "Html5", "MySQL", "Hibernate", "Finance" ], "popular_softskills": { "analytical": 31, "competitive analysis": 6, "negotiation": 16, "problem solving": 25, "process improvement": 11 } }';
+        print_r(json_decode($response,true));
+    }
+
     public function store(Request $request)
     {
         //
