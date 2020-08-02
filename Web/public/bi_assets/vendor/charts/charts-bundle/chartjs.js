@@ -62,8 +62,8 @@
             }
 
 
-            if ($('#chartjs_bar').length) {
-                var ctx = document.getElementById("chartjs_bar").getContext('2d');
+            if ($('#chartjs_bar1').length) {
+                var ctx = document.getElementById("chartjs_bar1").getContext('2d');
                 var myChart = new Chart(ctx, {
                     type: 'bar',
                     data: {
@@ -79,6 +79,64 @@
                             data: [30, 29, 5, 5, 20, 3, 10],
                            backgroundColor: "rgba(255, 64, 123,0.5)",
                                     borderColor: "rgba(255, 64, 123,0.7)",
+                            borderWidth: 2
+                        }]
+                    },
+                    options: {
+                        scales: {
+                            yAxes: [{
+
+                            }]
+                        },
+                             legend: {
+                        display: true,
+                        position: 'bottom',
+
+                        labels: {
+                            fontColor: '#71748d',
+                            fontFamily: 'Circular Std Book',
+                            fontSize: 14,
+                        }
+                    },
+
+                    scales: {
+                        xAxes: [{
+                            ticks: {
+                                fontSize: 14,
+                                fontFamily: 'Circular Std Book',
+                                fontColor: '#71748d',
+                            }
+                        }],
+                        yAxes: [{
+                            ticks: {
+                                fontSize: 14,
+                                fontFamily: 'Circular Std Book',
+                                fontColor: '#71748d',
+                            }
+                        }]
+                    }
+                }
+
+                    
+                });
+            }
+            if ($('#chartjs_bar2').length) {
+                var ctx = document.getElementById("chartjs_bar2").getContext('2d');
+                var myChart = new Chart(ctx, {
+                    type: 'bar',
+                    data: {
+                        labels: ["Java", "C", "C++", "Python", "Ruby", "Spring", ".Net"],
+                        datasets: [{
+                        //     label: 'Course',
+                        //     data: [12, 19, 3, 17, 28, 24, 7],
+                        //    backgroundColor: "rgba(89, 105, 255,0.5)",
+                        //             borderColor: "rgba(89, 105, 255,0.7)",
+                        //     borderWidth: 2
+                        // }, {
+                            label: 'Students',
+                            data: [30, 29, 5, 5, 20, 3, 10],
+                           backgroundColor: "rgba(5, 177, 220,0.5)",
+                                    borderColor: "rgba(5, 177, 220,0.7)",
                             borderWidth: 2
                         }]
                     },

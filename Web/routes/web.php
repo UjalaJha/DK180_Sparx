@@ -230,6 +230,9 @@ Route::get('view_users', function (){
 Route::get('aicte', function (){
     return view('admin/aicte');
 });
+Route::get('learning_platform', function (){
+    return view('admin/learning_platform');
+});
 
 
 //update skills

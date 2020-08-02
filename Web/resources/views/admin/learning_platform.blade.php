@@ -84,187 +84,71 @@
             
 
        <div class="content">
-        <div class="container-fluid">
+        <div class="container">
         
            <div class="row">
-                        <!-- ============================================================== -->
-                        <!-- ap and ar balance  -->
-                        <!-- ============================================================== -->
-                       
-                        <!-- ============================================================== -->
-                        <!-- end ap and ar balance  -->
-                        <!-- ============================================================== -->
-                        <!-- ============================================================== -->
-                        <!-- gross profit  -->
-                        <!-- ============================================================== -->
-                        <div class="col-xl-5 col-lg-6 col-md-6 col-sm-12 col-12">
-                            <div class="card">
-                                <h5 class="card-header" style="font-weight: bold">Current Trends in AICTE Courses</h5>
-                                <div class="card-body">
-                                    <div id="morris_gross" style="height: 272px;"></div>
-                                </div>
-                                
+                        
+                      <div class="col-md-12">
+                        <div class="card">
+                            <h5 class="card-header">Student Performance in various Courses</h5>
+                            <div class="card-body">
+                                <canvas id="chartjs_bar1"></canvas>
                             </div>
                         </div>
-                        <div class="col-md-6">
-              <div class="card">
-                <div class="card-header card-header-primary">
-                  <h4 class="card-title ">Simple Table</h4>
-                  <p class="card-category"> Here is a subtitle for this table</p>
-                </div>
-                <div class="card-body">
-                  <div class="table-responsive">
-                    <table class="table">
-                      <thead class=" text-primary">
-                        <th>
-                          ID
-                        </th>
-                        <th>
-                          Name
-                        </th>
-                        <th>
-                          Country
-                        </th>
-                        <th>
-                          City
-                        </th>
-                        <th>
-                          Salary
-                        </th>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <td>
-                            1
-                          </td>
-                          <td>
-                            Dakota Rice
-                          </td>
-                          <td>
-                            Niger
-                          </td>
-                          <td>
-                            Oud-Turnhout
-                          </td>
-                          <td class="text-primary">
-                            $36,738
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            2
-                          </td>
-                          <td>
-                            Minerva Hooper
-                          </td>
-                          <td>
-                            Curaçao
-                          </td>
-                          <td>
-                            Sinaai-Waas
-                          </td>
-                          <td class="text-primary">
-                            $23,789
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            3
-                          </td>
-                          <td>
-                            Sage Rodriguez
-                          </td>
-                          <td>
-                            Netherlands
-                          </td>
-                          <td>
-                            Baileux
-                          </td>
-                          <td class="text-primary">
-                            $56,142
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            4
-                          </td>
-                          <td>
-                            Philip Chaney
-                          </td>
-                          <td>
-                            Korea, South
-                          </td>
-                          <td>
-                            Overland Park
-                          </td>
-                          <td class="text-primary">
-                            $38,735
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            5
-                          </td>
-                          <td>
-                            Doris Greene
-                          </td>
-                          <td>
-                            Malawi
-                          </td>
-                          <td>
-                            Feldkirchen in Kärnten
-                          </td>
-                          <td class="text-primary">
-                            $63,542
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            6
-                          </td>
-                          <td>
-                            Mason Porter
-                          </td>
-                          <td>
-                            Chile
-                          </td>
-                          <td>
-                            Gloucester
-                          </td>
-                          <td class="text-primary">
-                            $78,615
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
+                    </div>     
                   </div>
+                        <div class="row">
+                        
+                      <div class="col-md-12">
+                        <div class="card">
+                            <h5 class="card-header">Student Performance in various Courses</h5>
+                            <div class="card-body">
+                                <canvas id="chartjs_bar2"></canvas>
+                            </div>
+                        </div>
+                   </div>
+                  </div>
+                  <div class="row">
+                    <!-- ============================================================== -->
+                    <!-- pie chart  -->
+                    <!-- ============================================================== -->
+                    <div class="col-md-6">
+                        <div class="card">
+                            <h5 class="card-header">Most Poplular Suitable Jobs</h5>
+                            <div class="card-body">
+                                <canvas id="chartjs_pie"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ============================================================== -->
+                    <!-- end pie chart  -->
+                    <!-- ============================================================== -->
+                    <!-- ============================================================== -->
+                    <!-- doughnut chart  -->
+                    <!-- ============================================================== -->
+                    <div class="col-md-6">
+                        <div class="card">
+                            <h5 class="card-header">Most Popular Course</h5>
+                            <div class="card-body">
+                                <canvas id="chartjs_doughnut"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ============================================================== -->
+                    <!-- end doughnut chart  -->
+                    <!-- ============================================================== -->
+                </div>
                 </div>
               </div>
             </div>
-                        <!-- ============================================================== -->
-                        <!-- end gross profit  -->
-                        <!-- ============================================================== -->
-                        <!-- ============================================================== -->
-                        <!-- profit margin  -->
-                        <!-- ============================================================== -->
-                        
-                    </div>
-
-                 
-                    
-
-                    
-      
-            </div>
-
-        </div>
-        </div>
+          </div>
       </div>
      
     </div>
-  </div>
  
-  <!--   Core JS Files   -->
+
+                 
+                    
   <script src="../assets/js/core/jquery.min.js"></script>
   <script src="../assets/js/core/popper.min.js"></script>
   <script src="../assets/js/core/bootstrap-material-design.min.js"></script>
@@ -526,35 +410,7 @@
       });
     });
   </script>
-  <script type="text/javascript">
-  $(function() {
  
- Morris.Donut({
-                element: 'morris_gross',
-
-                data: [
-                    { value:35, label: 'Courses Present' },
-                    { value:65, label: 'Courses Not Present' }
-                   
-                ],
-             
-                labelColor: '#5969ff',
-
-                colors: [
-                    '#1ef213',
-                    '#FF0000'
-
-                   
-                ],
-
-                formatter: function(x) { return x + "%" },
-                  resize: true
-
-            });
-});
-
-
-  </script>
 
 </body>
 
