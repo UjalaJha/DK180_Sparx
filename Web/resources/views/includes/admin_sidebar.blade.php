@@ -64,6 +64,13 @@
               <p>Learning Platform Insights</p>
             </a>
           </li>
+
+          <li class="nav-item ">
+            <a class="nav-link" href="add_webinar">
+              <i class="material-icons">playlist_add</i>
+              <p>Schedule Webinar</p>
+            </a>
+          </li>
           
           
         </ul>

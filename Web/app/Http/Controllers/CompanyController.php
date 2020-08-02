@@ -12,6 +12,7 @@ use App\UserAcademics;
 use App\UserExperiences;
 use App\UserPersonalDetails;
 use App\UserTechnical;
+use App\Webinar;
 use Illuminate\Http\Request;
 
 use Maatwebsite\Excel\Facades\Excel;
@@ -607,6 +608,22 @@ class CompanyController extends Controller
         }
 
         return $this->index();
+    }
+
+
+
+    public function companyWebinars(){
+        $cid = Session::get('company_id');
+        $webinar_details = Webinar::where('company_id', $cid)->where('status', 0)->get();
+
+        return view('company/company_webinar_schedule')->with('webinar_details', $webinar_details);
+    }
+
+    public function endWebinar($webinar_id){
+
+        Webinar::where('webinar_id', $webinar_id)->update(['status' => 1]);
+
+        return $this->companyWebinars();
     }
 
 

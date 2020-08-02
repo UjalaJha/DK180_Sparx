@@ -271,3 +271,24 @@ Route::get('custom_test', function(){
 Route::post('insert_new_test_company','CompanyController@addNewCustomTest');
 Route::post('proceed_with_add_ques_form_company', 'CompanyController@proceedAddQuesForm');
 Route::post('save_manual_question_company','CompanyController@saveManualForm');
+
+
+//webinar urls
+
+Route::get('upcoming_webinars', 'UserController@upcomingWebinars');
+
+Route::get('attend_webinar', function (){
+    return view('template/webinar');
+});
+
+Route::get('add_webinar', 'AddQuestionController@addWebinar');
+Route::post('submit_new_webinar', 'AddQuestionController@submitWebinar');
+
+Route::get('company_webinars', 'CompanyController@companyWebinars');
+
+Route::get('take_webinar', function (){
+    return view('company/webinar_company');
+});
+
+Route::get('end_webinar/{webinar_id}', 'CompanyController@endWebinar');
+
