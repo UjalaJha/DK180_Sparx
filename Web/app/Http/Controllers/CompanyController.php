@@ -12,6 +12,7 @@ use App\UserAcademics;
 use App\UserExperiences;
 use App\UserPersonalDetails;
 use App\UserTechnical;
+
 use App\UserRatings;
 // use App\UserPersonalDetails;
 use Illuminate\Http\Request;
@@ -31,6 +32,8 @@ use App\LinkedinProfiles;
 use App\UserIQ;
 use App\UserEQ;
 use App\UserAQ;
+
+use App\Webinar;
 
 
 class CompanyController extends Controller
@@ -79,7 +82,7 @@ class CompanyController extends Controller
 
 
         $skill_req=$_POST['skills'][0];
-        echo $skill_req;
+        // echo $skill_req;
         $th=0;
         // echo "<pre>";
         $students=UserRatings::where('language',$skill_req)->where('total_star','>', 0)->orderBy('total_star','desc')->get();
@@ -729,6 +732,22 @@ class CompanyController extends Controller
         }
 
         return $this->index();
+    }
+
+
+
+    public function companyWebinars(){
+        $cid = Session::get('company_id');
+        $webinar_details = Webinar::where('company_id', $cid)->where('status', 0)->get();
+
+        return view('company/company_webinar_schedule')->with('webinar_details', $webinar_details);
+    }
+
+    public function endWebinar($webinar_id){
+
+        Webinar::where('webinar_id', $webinar_id)->update(['status' => 1]);
+
+        return $this->companyWebinars();
     }
 
 
