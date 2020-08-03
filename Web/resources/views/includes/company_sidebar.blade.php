@@ -63,7 +63,12 @@
               <p>Webinars</p>
             </a>
           </li>
-          
+          <li class="nav-item ">
+            <a class="nav-link" href="/campus_drive">
+              <i class="material-icons">bubble_chart</i>
+              <p>Campus Drive</p>
+            </a>
+          </li>
           
         </ul>
       </div>
