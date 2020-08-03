@@ -127,7 +127,7 @@
                             Microsoft Certified Artificial Intelligence Practitioner
                           </td>
                           <td>
-                            23rd & 24th May
+                            23rd & 24th July
                           </td>
                           <td class="text-primary">
                              <a href="" class="btn btn-info">View Certificate</a>
@@ -138,13 +138,13 @@
                             1
                           </td>
                           <td>
-                            JP Morgan & Co.
+                            Accenture
                           </td>
                           <td>
-                            AWS Certified Blockchain Practitioner
+                            AWS Certified Android Practitioner
                           </td>
                           <td>
-                            3rd & 4th August
+                            16th & 17th July
                           </td>
                           <td class="text-primary">
                              <a href="" class="btn btn-info">View Certificate</a>
@@ -155,13 +155,13 @@
                             1
                           </td>
                           <td>
-                            JP Morgan & Co.
+                            Google
                           </td>
                           <td>
-                            AWS Certified Blockchain Practitioner
+                            Google Certified Data Analyst Practitioner
                           </td>
                           <td>
-                            3rd & 4th August
+                            18th & 19th June
                           </td>
                           <td class="text-primary">
                              <a href="" class="btn btn-info">View Certificate</a>
@@ -172,13 +172,13 @@
                             1
                           </td>
                           <td>
-                            JP Morgan & Co.
+                            IBM
                           </td>
                           <td>
-                            AWS Certified Blockchain Practitioner
+                            IBM Certified Data Scientist Practitioner
                           </td>
                           <td>
-                            3rd & 4th August
+                            6th & 7th May
                           </td>
                           <td class="text-primary">
                              <a href="" class="btn btn-info">View Certificate</a>
@@ -189,13 +189,13 @@
                             1
                           </td>
                           <td>
-                            JP Morgan & Co.
+                            L&T Infotech
                           </td>
                           <td>
-                            AWS Certified Blockchain Practitioner
+                            AWS Certified Python Practitioner
                           </td>
                           <td>
-                            3rd & 4th August
+                            22nd & 23rd April
                           </td>
                           <td class="text-primary">
                              <a href="" class="btn btn-info">View Certificate</a>
