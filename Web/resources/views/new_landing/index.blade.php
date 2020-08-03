@@ -625,7 +625,7 @@
   <script src="js/google-map.js"></script>
   <script src="js/main.js"></script>
   <script>
-  $.getJSON('http://localhost:8000/githubjobs', function(data) {
+  $.getJSON('https://c9c4ff80c466.ngrok.io/githubjobs', function(data) {
     $.each(data, function(index) {
       // alert(data[index].TEST1);
       console.log(data[index].url);
