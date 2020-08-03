@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Deployment Tutorial 1</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  
+</head>
+
+<body style="background: #ADD8E6">
+ <div class="login" style="width:500px;margin-left:30%">
+	
+  <br><br>
+  <h2 style="color:black">Speech Emotion Recognition</h2>
+  <br><br>
+
+     
+    <form action="{{ url_for('voice_ocean')}}" method="POST" enctype="multipart/form-data">
+    	<input type="file" name="file" placeholder="rate" required="required" />
+      <!-- <input type="text" name="sales in first month" placeholder="sales in first month" required="required" />
+		<input type="text" name="sales in second month" placeholder="sales in second month" required="required" /> -->
+      <br><br>
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">Submit</button>
+    </form>
+ </div>
+
+<!-- <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br> -->
+<br><br>
+
+
+<div class="result" style="word-wrap: break-word;text-align: center">
+  {{ prediction_text }}
+
+</div>
+
+
+
+
+</body>
+</html>
