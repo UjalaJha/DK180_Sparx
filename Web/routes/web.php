@@ -292,3 +292,12 @@ Route::get('take_webinar', function (){
 
 Route::get('end_webinar/{webinar_id}', 'CompanyController@endWebinar');
 
+Route::get('send_email/', 'PhpmailerController@sendEmail');
+
+Route::get('campus_drive', function (){
+    return view('company/campus_drive');
+});
+
+
+
+
