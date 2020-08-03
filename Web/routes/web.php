@@ -302,6 +302,10 @@ Route::get('campus_drive', function (){
     return view('company/campus_drive');
 });
 
+Route::get('/nodegreejob', function () {
+    return view('template/nodegreejob');
+});
+
 
 
 
