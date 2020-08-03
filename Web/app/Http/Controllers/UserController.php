@@ -120,7 +120,7 @@ class UserController extends Controller
 
             $user_id = Session::get('user_id');
             $user_test = UserTests::where('user_id',$user_id)->update(['tq_given'=>0]);
-            return app('App\Http\Controllers\UserController')->redirectDashboard();
+            return view('template/tq_instructions')->with("skill_set",$skill_set)->with("skill_id_array_set", $skill_id_array_set);
 
 
         }
