@@ -56,6 +56,13 @@
               <p>Custom Test</p>
             </a>
           </li>
+
+          <li class="nav-item ">
+            <a class="nav-link" href="/company_webinars">
+              <i class="material-icons">bubble_chart</i>
+              <p>Webinars</p>
+            </a>
+          </li>
           
           
         </ul>

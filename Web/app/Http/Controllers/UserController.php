@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\CompanyDetails;
 use App\UserPersonalDetails;
 use App\UserAcademics;
 use App\UserExperiences;
@@ -9,6 +10,7 @@ use App\UserTechnical;
 use App\UserRatings;
 use App\UserHGMI;
 use App\TQCategoryDetails;
+use App\Webinar;
 use Session;
 use App\Jobs;
 
@@ -1597,5 +1599,19 @@ class UserController extends Controller
 
 
     }
+
+
+    public function upcomingWebinars(){
+        $webinar_details = Webinar::where('status', 0)->get();
+        $organization_names = array();
+        $count = 0;
+        foreach ($webinar_details as $webinar){
+            $organization = CompanyDetails::where('company_id', $webinar['company_id'])->get();
+            $organization_names[$count] = $organization[0]['company_name'];
+        }
+
+        return view('template/webinar_schedule')->with('webinar_details', $webinar_details)->with('organization_names', $organization_names);
+    }
+
 
 }
