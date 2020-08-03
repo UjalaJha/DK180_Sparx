@@ -66,6 +66,18 @@
               <p>Blogs</p>
             </a>
           </li>
+           <li class="nav-item ">
+            <a class="nav-link" href="./my_specializations">
+              <i class="material-icons">verified</i>
+              <p>My Specializations</p>
+            </a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="./my_specializations">
+              <i class="material-icons">verified</i>
+              <p>Trainings</p>
+            </a>
+          </li>
          
         </ul>
       </div>
