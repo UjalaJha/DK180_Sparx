@@ -73,19 +73,20 @@
               <p>My Specializations</p>
             </a>
           </li>
-          <li class="nav-item ">
-            <a class="nav-link" href="./my_specializations">
-              <i class="material-icons">verified</i>
-              <p>Trainings</p>
-
+         
           <li class="nav-item ">
             <a class="nav-link" href="/upcoming_webinars">
-              <i class="material-icons">content_paste</i>
+              <i class="material-icons">computer</i>
               <p>Attend Webinars</p>
 
             </a>
           </li>
-         
+           <li class="nav-item ">
+            <a class="nav-link" href="/training">
+              <i class="material-icons">cast_for_education</i>
+              <p>Trainings</p>
+            </a>
+          </li>
         </ul>
       </div>
     </div>
