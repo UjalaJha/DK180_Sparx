@@ -281,7 +281,7 @@
 
                     
                   
-              <a href="/jobrecommendation">
+              <a href="/send_email">
               <button style="margin-left:30px;" type="submit" class="btn btn-primary">Know the best role suited for you!!</button>
               </a>
             </div>

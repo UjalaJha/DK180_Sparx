@@ -398,7 +398,7 @@ class UserController extends Controller
         //         print_r($recommendation['jobs']);
                 // exit;
         
-            return view('template/job_recomended')->with('job_recommendation',$recommendation['job profiles'])->with('jobs_list',$recommendation['jobs']);
+    return view('template/job_recomended')->with('job_recommendation',$recommendation['job profiles'])->with('jobs_list',$recommendation['jobs']);
 
 
         exit();
