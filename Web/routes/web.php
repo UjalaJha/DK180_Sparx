@@ -39,7 +39,9 @@ Route::get('/signup', function () {
 Route::get('/company_signup', function () {
     return view('landing/company-signup');
 });
-
+Route::get('/viewcerti', function () {
+    return view('E-certificate/index');
+});
 Route::post('/register', 'LoginController@store');
 Route::post('/company_register', 'LoginController@storeCompany');
 
@@ -67,7 +69,9 @@ Route::get('/user', function (){
 Route::get('/user_profile', function () {
     return view('template/user');
 });
-
+Route::get('/my_specializations', function () {
+    return view('template/my_specializations');
+});
 
 Route::post('/user_media','UserController@storeMedia');
 

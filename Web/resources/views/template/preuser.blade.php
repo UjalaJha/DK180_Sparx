@@ -88,7 +88,7 @@
                                         <div class="col-md-12">
 
                                             <b><p >Upload Picture</p></b>
-                                            <input type="file" id="myFile1" name="image_filename" required accept="image/*">
+                                            <input type="file" id="myFile1" name="image_filename"  accept="image/*">
                                         </div>
                                         </div>
 
@@ -98,7 +98,7 @@
                                         <div class="col-md-12">
                                             <div class="form-group">
                                             <b><p >Upload Resume</p></b>
-                                            <input type="file" id="resume_filename" name="resume_filename" required accept="application/pdf">
+                                            <input type="file" id="resume_filename" name="resume_filename" accept="application/pdf">
                                             <span class="alert-danger" style="color:#222;">Note: Upload your resume in pdf format <only></only></span>
                                             </div>
                                         </div>
@@ -109,14 +109,22 @@
                                         <div class="col-md-6" style="margin-top: 10px;">
                                             <div class="form-group">
                                                 <label class="bmd-label-floating">Do you want to import your profile using resume?</label>
-                                                <input type="radio" id="defaultRadio" required name="use_resume" value="1">
+                                                <input type="radio" id="defaultRadio"  name="use_resume" value="1">
                                                 <label for="defaultRadio">Yes</label>
-                                                <input type="radio" id="defaultRadio" required name="use_resume" value="0" style="margin-left: 10px;">
+                                                <input type="radio" id="defaultRadio"  name="use_resume" value="0" style="margin-left: 10px;">
                                                 <label for="defaultRadio">No</label>
                                             </div>
                                         </div>
                                     </div>
 
+                                     <div class="row" id="use_resume_option" style="display: block;">
+                                        <div class="col-md-6" style="margin-top: 10px;">
+                                            <div class="form-group">
+                                                <label class="bmd-label-floating">Import Documents from Digilocker</label><br>
+                                                <a onclick="window.open('https://accounts.digitallocker.gov.in/signin', '_blank')" target="_blank"><button class="btn btn-primary">Choose from Digilocker</button></a>
+                                            </div>
+                                        </div>
+                                    </div>
 
                                     <button type="submit" class="btn btn-primary pull-right">Proceed with Profile</button>
 
@@ -510,3 +518,9 @@ $(document).ready(function() {
       });//end click
     });//end rdy
 </script> -->
+
+<script type="text/javascript"
+src="https://services.digitallocker.gov.in/requester/api/1/dl.js"
+id="dlshare" data-app-id="YOUR_APP_ID" data-app-hash="YOUR_APP_HASH"
+time-stamp=”TIMESTAMP” data-upload-url="YOUR_UPLOAD_URL">
+</script> 
