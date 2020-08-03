@@ -5,12 +5,12 @@
     <link rel="icon" href="images/top-favicon.png" type="image/png" sizes="16x20">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    
+
     <link href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,,500,600,700" rel="stylesheet">
 
     <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
     <link rel="stylesheet" href="css/animate.css">
-    
+
     <link rel="stylesheet" href="css/owl.carousel.min.css">
     <link rel="stylesheet" href="css/owl.theme.default.min.css">
     <link rel="stylesheet" href="css/magnific-popup.css">
@@ -22,13 +22,13 @@
     <link rel="stylesheet" href="css/bootstrap-datepicker.css">
     <link rel="stylesheet" href="css/jquery.timepicker.css">
 
-    
+
     <link rel="stylesheet" href="css/flaticon.css">
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-    
+
 	  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
 	    <div class="container">
 	      <!-- <a class="navbar-brand" href="index.html">HIRECONNECT</a> -->
@@ -61,7 +61,7 @@
             <div class="col-md-5 wrap col-sm-12 ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
               <h1 class="mb-4 mt-5" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Matchmaking your skills with a perfect job</h1>
               <p class="mb-4 mb-md-5 sub-p" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">We are here to provide the finest recommendations to both employees as well as employers.</p>
-              <p><a href="" class="btn btn-primary p-3 px-xl-5 py-xl-3">Get started</a> <a href="#feature-list" class="btn btn-primary btn-primary-2 p-3 px-xl-5 py-xl-3">Read more</a></p>
+              <p><a href="" class="btn btn-primary p-3 px-xl-5 py-xl-3">Download APK</a> <a href="#feature-list" class="btn btn-primary btn-primary-2 p-3 px-xl-5 py-xl-3">Read more</a></p>
             </div>
             <div class="col-md-7 ftco-animate">
             	<img src="new_images/Group.png" class="img-fluid">
@@ -94,7 +94,7 @@
         <div class="row no-gutters">
           <div class="col-lg-5" style="margin-left:60px;">
             <blockquote class="twitter-tweet"><p lang="en" dir="ltr">This year I and my team members are presenting our solution HireConnect for the PS Job Recommender System laid out by Govt of Puducherry. Support our solution by liking and retweeting our post. <a href="https://twitter.com/SIH_2020?ref_src=twsrc%5Etfw">@SIH_2020</a> <a href="https://twitter.com/DrRPNishank?ref_src=twsrc%5Etfw">@DrRPNishank</a> <a href="https://twitter.com/mhrd_innovation?ref_src=twsrc%5Etfw">@mhrd_innovation</a> <a href="https://twitter.com/abhayjere?ref_src=twsrc%5Etfw">@abhayjere</a><a href="https://twitter.com/narendramodi?ref_src=twsrc%5Etfw">@narendramodi</a> <a href="https://t.co/5qaDqG5j2m">pic.twitter.com/5qaDqG5j2m</a></p>&mdash; Ujala Jha (@jhaujala3) <a href="https://twitter.com/jhaujala3/status/1285919756902490112?ref_src=twsrc%5Etfw">July 22, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-           
+
           </div>
           <div class="col-lg-6">
             <div class="services-wrap p-4 p-md-5">
@@ -177,7 +177,7 @@
           </div>
         </div>
         <div class="row">
-        
+
           <div class="col-md-4 d-flex align-self-stretch ftco-animate">
             <div class="media block-6 services d-block text-center">
               <div class="d-flex justify-content-center">
@@ -189,7 +189,7 @@
                 <h3 class="heading">Identifying career interests</h3>
                 <p>It helps one find where their motivation lies and what they are most likely to stay committed to.</p>
               </div>
-            </div>    
+            </div>
           </div>
           <div class="col-md-4 d-flex align-self-stretch ftco-animate">
             <div class="media block-6 services d-block text-center">
@@ -202,7 +202,7 @@
                 <h3 class="heading">Job Recommendations</h3>
                 <p>Matchmaking between a person's overall skills and job profiles is done with intelligent algorithms.</p>
               </div>
-            </div>      
+            </div>
           </div>
           <div class="col-md-4 d-flex align-self-stretch ftco-animate">
             <div class="media block-6 services d-block text-center">
@@ -215,7 +215,7 @@
                 <h3 class="heading">Efficient Learning Platforms</h3>
                 <p>This algorithm aims to recommend courses based on one’s proficiency in a particular skill.</p>
               </div>
-            </div>      
+            </div>
           </div>
           <div class="col-md-4 d-flex align-self-stretch ftco-animate">
             <div class="media block-6 services d-block text-center">
@@ -228,7 +228,7 @@
                 <h3 class="heading">Candidate Ranking Syatem</h3>
                 <p>Ranking is done based on results of the tests and is customizable based on employer’s requirements.</p>
               </div>
-            </div>    
+            </div>
           </div>
           <div class="col-md-4 d-flex align-self-stretch ftco-animate">
             <div class="media block-6 services d-block text-center">
@@ -241,7 +241,7 @@
                 <h3 class="heading">Real Time Job Mapping</h3>
                 <p>The analysis of various tests are given as a report which is then mapped using machine learning algorithms.</p>
               </div>
-            </div>      
+            </div>
           </div>
             <div class="col-md-4 d-flex align-self-stretch ftco-animate">
             <div class="media block-6 services d-block text-center">
@@ -254,17 +254,17 @@
                 <h3 class="heading">Talent Aquisition</h3>
                 <p>Detailed customisable assessments of candidates helps employers acquire the talent they need.</p>
               </div>
-            </div>      
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-        
+
       <section class="ftco-section ftco-counter img" id="section-counter" style="background-image: url(new_images/bg_1.jpg);" data-stellar-background-ratio="0.5" style="margin-top:50px;">
       <div class="container">
         <div class="row justify-content-center mb-5">
-          
+
         </div>
         <div class="row justify-content-center">
           <div class="col-md-10">
@@ -319,7 +319,7 @@
           <div class="col-md-12 ftco-animate">
             <div class="table-responsive">
               <table class="table">
-                
+
               </table>
             </div>
           </div>
@@ -372,12 +372,12 @@
     		</div>
     	</div>
     </section> -->
-  
 
 
-  
-		
-	
+
+
+
+
 
 
 
@@ -403,7 +403,7 @@
             </div>
           </div>
           <div class="col-md-12 align-items-center ftco-animate">
-            
+
             <div class="tab-content ftco-animate" id="v-pills-tabContent">
 
               <div class="tab-pane fade show active" id="v-pills-nextgen" role="tabpanel" aria-labelledby="v-pills-nextgen-tab">
@@ -414,7 +414,7 @@
 	              	<div class="one-half ml-md-5 align-sself-center">
 		                <h2 class="mb-4">Candidate Dasboard</h2>
 		              	<p>The Candidate Dashboard is displayed as soon as the user profile is completed. The four tests available on our portal include The HGMI assessment, the Technical Quotient, Intelligence Quotient, Emotional Quotient and Adversity Quotient. The candidate can mark their growth through graphs</p>
-		              
+
 		              </div>
 	              </div>
               </div>
@@ -427,7 +427,7 @@
 	              	<div class="one-half order-first mr-md-5 align-self-center">
 		                <h2 class="mb-4">Test Analysis</h2>
 		              	<p>Each test is assessed individually. Technical test and IQ have numeric results while the Emotional Quotient and Adversity Quotient, HGMI generate personality traits/tags along with a score that are then processed collectively by our intelligent algorithms. </p>
-		               
+
 		              </div>
 	              </div>
               </div>
@@ -440,7 +440,7 @@
 	              	<div class="one-half ml-md-5 align-self-center">
 		                <h2 class="mb-4">Report Generation</h2>
 		              	<p>A personalised report based on overall assessment is generated to give users detailed understanding about the inferences of tests through visualisation. This report also contains a track of an individual’s growth.</p>
-		            
+
 		              </div>
 	              </div>
               </div>
@@ -452,7 +452,7 @@
                   <div class="one-half order-first ml-md-5 align-self-center">
                     <h2 class="mb-4">User Profile</h2>
                     <p>Based on resume and assessment results of users in various aspects,  jobs curated by our intelligent algorithms for an individual. These jobs are listed in this section by our job recommender module. </p>
-                  
+
                   </div>
                 </div>
               </div>
@@ -464,7 +464,7 @@
                   <div class="one-half ml-md-5 align-self-center">
                     <h2 class="mb-4">AICTE Dashboard</h2>
                     <p>This dashboard aims to inform government and educational organisations about the current trends in domains, thus helping educational ministries to keep up with the market trends and improve the quality of education with latest advancements.</p>
-                  
+
                   </div>
                 </div>
               </div>
@@ -479,7 +479,7 @@
     		<div class="row justify-content-center mb-5 pb-3">
           <div class="col-md-7 text-center heading-section heading-section-white ftco-animate">
             <h2 class="mb-4">Our Candidates interests</h2>
-          
+
           </div>
         </div>
     		<div class="row">
@@ -600,8 +600,8 @@
         </div>
       </div>
     </footer>
-    
-  
+
+
 
   <!-- loader -->
   <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
