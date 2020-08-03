@@ -103,7 +103,6 @@
             <input type="hidden" value="{{$tq[0]->level_1_score ?? 0}}" id="c_score">
             <input type="hidden" value="{{$tq[1]->level_1_score ?? 0}}" id="java_score">
             <input type="hidden" value="{{$tq[2]->level_1_score ?? 0}}" id="python_score">
->>>>>>> e8e8f10d9b27073304d8604d820dd366158c991a
             
 
        <div class="content">
