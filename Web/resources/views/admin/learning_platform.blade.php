@@ -114,7 +114,7 @@
                     <!-- ============================================================== -->
                     <div class="col-md-6">
                         <div class="card">
-                            <h5 class="card-header">Most Poplular Suitable Jobs</h5>
+                            <h5 class="card-header">Most Popular Suitable Jobs</h5>
                             <div class="card-body">
                                 <canvas id="chartjs_pie"></canvas>
                             </div>

@@ -1,155 +1,194 @@
-  
 
-@include('includes/header')
-@include('includes/sidebar')
-    <div class="main-panel">
-        <!-- Navbar -->
-        <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top ">
-            <div class="container-fluid">
-                <div class="navbar-wrapper">
-                    <a class="navbar-brand" href="#pablo">User Profile</a>
-                </div>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="navbar-toggler-icon icon-bar"></span>
-                    <span class="navbar-toggler-icon icon-bar"></span>
-                    <span class="navbar-toggler-icon icon-bar"></span>
-                </button>
-                <div class="collapse navbar-collapse justify-content-end">
-                    <form class="navbar-form" >
-                        <div class="input-group no-border">
-                            <input type="text" value="" class="form-control" placeholder="Search...">
-                            <button type="submit" class="btn btn-white btn-round btn-just-icon">
-                                <i class="material-icons">search</i>
-                                <div class="ripple-container"></div>
-                            </button>
-                        </div>
-                    </form>
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#pablo">
-                                <i class="material-icons">dashboard</i>
-                                <p class="d-lg-none d-md-block">
-                                    Stats
-                                </p>
-                            </a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i class="material-icons">notifications</i>
-                                <span class="notification">5</span>
-                                <p class="d-lg-none d-md-block">
-                                    Some Actions
-                                </p>
-                            </a>
-                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
-                                <a class="dropdown-item" href="#">Mike John responded to your email</a>
-                                <a class="dropdown-item" href="#">You have 5 new tasks</a>
-                                <a class="dropdown-item" href="#">You're now friend with Andrew</a>
-                                <a class="dropdown-item" href="#">Another Notification</a>
-                                <a class="dropdown-item" href="#">Another One</a>
-                            </div>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link" href="#pablo" id="navbarDropdownProfile" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i class="material-icons">person</i>
-                                <p class="d-lg-none d-md-block">
-                                    Account
-                                </p>
-                            </a>
-                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownProfile">
-                                <a class="dropdown-item" href="#">Profile</a>
-                                <a class="dropdown-item" href="#">Settings</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="/logout">Log out</a>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
+@include('includes/company_header')
+@include('includes/company_sidebar')
+
+<div class="main-panel">
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top ">
+        <div class="container-fluid">
+            <div class="navbar-wrapper">
+                <a class="navbar-brand" href="#pablo">Company Profile</a>
             </div>
-        </nav>
-        <!-- End Navbar -->
-        <div class="content">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-lg-12 col-md-12">
-                        <div class="card">
-                            <div class="card-header card-header-primary">
-                                <h4 class="card-title">User Details</h4>
-{{--                                <p class="card-category">View</p>--}}
-                            </div>
-                            <div class="card-body">
-
-
-                                <form action="/user_media" method="post" id="form-submit" enctype="multipart/form-data">
-                                    @csrf
-                                    <div class="row" style="margin-top:10px;">
-                                        <div class="form-group">
-                                        <div class="col-md-12">
-
-                                            <b><p >Upload Picture</p></b>
-                                            <input type="file" id="myFile1" name="image_filename"  accept="image/*">
-                                        </div>
-                                        </div>
-
-                                    </div>
-
-                                    <div class="row" style="margin-top:10px;">
-                                        <div class="col-md-12">
-                                            <div class="form-group">
-                                            <b><p >Upload Resume</p></b>
-                                            <input type="file" id="resume_filename" name="resume_filename" accept="application/pdf">
-                                            <span class="alert-danger" style="color:#222;">Note: Upload your resume in pdf format <only></only></span>
-                                            </div>
-                                        </div>
-
-                                    </div>
-
-                                    <div class="row" id="use_resume_option" style="display: block;">
-                                        <div class="col-md-6" style="margin-top: 10px;">
-                                            <div class="form-group">
-                                                <label class="bmd-label-floating">Do you want to import your profile using resume?</label>
-                                                <input type="radio" id="defaultRadio"  name="use_resume" value="1">
-                                                <label for="defaultRadio">Yes</label>
-                                                <input type="radio" id="defaultRadio"  name="use_resume" value="0" style="margin-left: 10px;">
-                                                <label for="defaultRadio">No</label>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                     <div class="row" id="use_resume_option" style="display: block;">
-                                        <div class="col-md-6" style="margin-top: 10px;">
-                                            <div class="form-group">
-                                                <label class="bmd-label-floating">Import Documents from Digilocker</label><br>
-                                                <a onclick="window.open('https://accounts.digitallocker.gov.in/signin', '_blank')" target="_blank"><button class="btn btn-primary">Choose from Digilocker</button></a>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <button type="submit" class="btn btn-primary pull-right">Proceed with Profile</button>
-
-                                    <div class="clearfix"></div>
-                                </form>
-
-
-
-                            </div>
-                        </div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="navbar-toggler-icon icon-bar"></span>
+                <span class="navbar-toggler-icon icon-bar"></span>
+                <span class="navbar-toggler-icon icon-bar"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end">
+                <form class="navbar-form">
+                    <div class="input-group no-border">
+                        <input type="text" value="" class="form-control" placeholder="Search...">
+                        <button type="submit" class="btn btn-white btn-round btn-just-icon">
+                            <i class="material-icons">search</i>
+                            <div class="ripple-container"></div>
+                        </button>
                     </div>
+                </form>
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#pablo">
+                            <i class="material-icons">dashboard</i>
+                            <p class="d-lg-none d-md-block">
+                                Stats
+                            </p>
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="material-icons">notifications</i>
+                            <span class="notification">5</span>
+                            <p class="d-lg-none d-md-block">
+                                Some Actions
+                            </p>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="#">Mike John responded to your email</a>
+                            <a class="dropdown-item" href="#">You have 5 new tasks</a>
+                            <a class="dropdown-item" href="#">You're now friend with Andrew</a>
+                            <a class="dropdown-item" href="#">Another Notification</a>
+                            <a class="dropdown-item" href="#">Another One</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="#pablo" id="navbarDropdownProfile" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="material-icons">person</i>
+                            <p class="d-lg-none d-md-block">
+                                Account
+                            </p>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownProfile">
+                            <a class="dropdown-item" href="#">Profile</a>
+                            <a class="dropdown-item" href="#">Settings</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="/logout">Log out</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- End Navbar -->
 
+<!-- End Navbar -->
+<div class="content">
+    <div class="container-fluid">
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header card-header-primary">
+                        <h4 class="card-title">Add a new Question</h4>
+                        <p class="card-category">Add a new question for test</p>
+                    </div>
+                    <div class="card-body">
+
+
+
+                        <form action="/save_manual_question_company" method="post">
+                            @csrf
+
+                            <input type="hidden" name="tq_category_details_id" value="{{$tq_category_details_id}}">
+                            <input type="hidden" name="tq_concept_details_id" value="{{$tq_concept_details_id}}">
+
+                            <?php
+                            $count = 1;
+                            ?>
+
+                            @foreach($no_of_ques as $value)
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <label class="bmd-label-floating">Enter question {{$count}}</label>
+                                            <input type="text" class="form-control" name="question_statement[]">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <label class="bmd-label-floating">Is options available?</label>
+                                            <input type="radio" onclick="yesNoCheck(this.id, {{$count}})" id="yesCheck{{$count}}" name="">
+                                            <label for="">Yes</label>
+                                            <input type="radio" onclick="yesNoCheck(this.id, {{$count}})" id="noCheck{{$count}}"  name="">
+                                            <label for="">No</label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row" id="ifYes{{$count}}" style="display: none">
+                                    <div class="col-md-12">
+                                        <div class="col-md-2">
+                                            <div class="form-group">
+                                                <label class="bmd-label-floating" for="">Option 1</label>
+                                                <input type="text" name="option_1[]" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-2">
+                                            <div class="form-group">
+                                                <label class="bmd-label-floating" for="">Option 2</label>
+                                                <input type="text" name="option_2[]" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-2">
+                                            <div class="form-group">
+                                                <label class="bmd-label-floating" for="">Option 3</label>
+                                                <input type="text" name="option_3[]" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-2">
+                                            <div class="form-group">
+                                                <label class="bmd-label-floating" for="">Option 4</label>
+                                                <input type="text" name="option_4[]" class="form-control">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <label class="bmd-label-floating" for="">Correct option</label>
+                                            <input type="number" name="correct_option[]" class="form-control" min="1" max="4">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row" id="ifNo{{$count}}" style="display: none">
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <label class="bmd-label-floating" for="">Enter Answer</label>
+                                            <input type="text" name="direct_answer[]" class="form-control">
+                                        </div>
+                                    </div>
+                                </div>
+                                <?php
+                                $count++;
+                                ?>
+
+                            @endforeach
+
+
+
+
+
+                            <button type="submit" name="submit_manual_questions" class="btn btn-primary pull-right">Submit</button>
+                            <div class="clearfix"></div>
+                        </form>
+                    </div>
                 </div>
             </div>
+
         </div>
     </div>
 </div>
-</div>
-</div>
+
+
+
+
+
 
 </div>
-</div>
 
-</div>
-</div>
 
 <!--   Core JS Files   -->
 <script src="../assets/js/core/jquery.min.js"></script>
@@ -201,14 +240,6 @@
 <script>
     $(document).ready(function() {
         $().ready(function() {
-            // alert("hey");
-            $('#myFile2').change(function () {
-                if(document.getElementById("myFile2").files.length != 0) {
-                // you have a file
-                document.getElementById("use_resume_option").style.display = 'block';
-                }
-            })
-
             $sidebar = $('.sidebar');
 
             $sidebar_img_container = $sidebar.find('.sidebar-background');
@@ -381,146 +412,72 @@
 <script type="text/javascript">
     $(document).ready(function() {
         $('.mdb-select').materialSelect();
-
-
     });
 </script>
 <script>
-
-
-    function next1(){
-        $('[href="#messages"]').tab('show');
-    }
-
-    function previous1(){
-        $('[href="#profile"]').tab('show');
-    }function next2(){
-        $('[href="#settings"]').tab('show');
-    }
-
-    function previous2(){
-        $('[href="#messages"]').tab('show');
-    }function next3(){
-        $('[href="#project"]').tab('show');
-    }
-
-    function previous3(){
-        $('[href="#settings"]').tab('show');
-    }
-
     // Add the following code if you want the name of the file appear on select
     $(".custom-file-input").on("change", function() {
         var fileName = $(this).val().split("\\").pop();
         $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
     });
 </script>
-<script type="text/javascript">
-    jQuery(function($){
-        var $internship = $('#internship1'), count = 1;
-        $('#addinternship').click(function(e){
-            e.preventDefault();
-            var idname = 'internship' + (++count);
-            $internship.parent().append($internship.clone().attr({id: idname, name: idname}));
-        });
-
-    });
-</script>
-<script type="text/javascript">
-    jQuery(function($){
-        var $project = $('#project1'), count = 1;
-        $('#addproject').click(function(e){
-            e.preventDefault();
-            var idname = 'project' + (++count);
-            $project.parent().append($project.clone().attr({id: idname, name: idname}));
-        });
-
-    });
-</script>
-
-
-<script src="../../assets/select2/js/select2.min.js"></script>
+<script src="../assets/select2/js/select2.min.js"></script>
 
 <script>
 
     jQuery(document).ready(function() {
 
-        $("#skill_select").select2({
-            multiple: true,
-            placeholder: "Add your Skills",
-            maximumSelectionLength: 4,
-            formatSelectionTooBig: function (limit) {
+        $("#category_select").select2({
 
-                // Callback
+        }),
+            $("#sub_category_select").select2({
 
-                return 'Too many selected items, only 4 allowed';
-            }
-        });
+
+            }),
+
+            $("#concept_select").select2({
+                placeholder: 'Select Category...'
+
+            }),
+            $("#sub_concept_select").select2({
+
+
+            });
 
 
     });
 
 </script>
+
 
 <script>
-    $('#submitInternship').click(function(){
-        $.ajax({
-            url:"/internship",
-            method:"POST",
-            data:$('#storeInternship').serialize(),
-            success:function(data)
-            {
-                alert(data);
-                $('#storeInternship')[0].reset();
-            }
-        });
-    });
+
+
+    function yesNoCheck(radioId, count) {
+        // alert(radioId+" and ques count"+count);
+        if(radioId==("yesCheck"+count)){
+            document.getElementById('ifYes'+count).style.display = 'block';
+            document.getElementById('ifNo'+count).style.display = 'none';
+        }else{
+            document.getElementById('ifYes'+count).style.display = 'none';
+            document.getElementById('ifNo'+count).style.display = 'block';
+        }
+        // if (document.getElementById(radioId).checked) {
+        //     alert("yes");
+        //     document.getElementById('ifYes'+count).style.display = 'block';
+        //     document.getElementById('ifNo'+count).style.display = 'none';
+        //
+        // } else {
+        //     alert("no");
+        //     document.getElementById('ifYes'+count).style.display = 'none';
+        //     document.getElementById('ifNo'+count).style.display = 'block';
+        // }
+    }
+
+
 </script>
 
-<script>
-    $('#submitProject').click(function(){
-        $.ajax({
-            url:"/project",
-            method:"POST",
-            data:$('#storeProject').serialize(),
-            success:function(data)
-            {
-                alert(data);
-                $('#storeProject')[0].reset();
-            }
-        });
-    });
-</script>
 
 </body>
 
 </html>
-
-<!-- <script type="text/javascript">
-$(document).ready(function() {
-        // file=$('#resumefile').val();
-        // console.log("file"+file);
-        $('#form-submit').submit(function(e){
-            e.preventDefault();
-            var form = $(this);
-            $.ajax({
-            type:"POST",
-            url : "/resume",
-            data: new FormData(this),
-            dataType: 'json',
-            success : function(data){
-               console.log(data);
-            },
-            always: function() {
-               // //submit form !!!
-               // $("#formtopost").submit();
-            }
-        });//end ajax   
-      });//end click
-    });//end rdy
-</script> -->
-
-<script type="text/javascript"
-src="https://services.digitallocker.gov.in/requester/api/1/dl.js"
-id="dlshare" data-app-id="YOUR_APP_ID" data-app-hash="YOUR_APP_HASH"
-time-stamp=”TIMESTAMP” data-upload-url="YOUR_UPLOAD_URL">
-</script> 

@@ -84,25 +84,26 @@
         </div>
       </nav>
       <!-- End Navbar -->
-      <input type="hidden" value="{{$iq[0]->iq_score}}" id="iq_score">
+      <input type="hidden" value="{{$iq[0]->iq_score ?? 0}}" id="iq_score">
 
-      <input type="hidden" value="{{$eq[0]->eq_self_awareness}}" id="self_awr">
+      <input type="hidden" value="{{$eq[0]->eq_self_awareness ?? 0}}" id="self_awr">
       
-          <input type="hidden" value="{{$eq[0]->eq_self_control}}" id="self_con">
-          <input type="hidden" value="{{$eq[0]->eq_achievement_orientation}}" id="self_ach">
-          <input type="hidden" value="{{$eq[0]->eq_positive_outlook}}" id="self_pos">
-          <input type="hidden" value="{{$eq[0]->eq_inspirational_leadership}}" id="self_ins">
-          <input type="hidden" value="{{$eq[0]->eq_social_awareness}}" id="self_soc">
+          <input type="hidden" value="{{$eq[0]->eq_self_control ?? 0}}" id="self_con">
+          <input type="hidden" value="{{$eq[0]->eq_achievement_orientation ?? 0}}" id="self_ach">
+          <input type="hidden" value="{{$eq[0]->eq_positive_outlook ?? 0}}" id="self_pos">
+          <input type="hidden" value="{{$eq[0]->eq_inspirational_leadership ?? 0}}" id="self_ins">
+          <input type="hidden" value="{{$eq[0]->eq_social_awareness ?? 0}}" id="self_soc">
 
-          <input type="hidden" value="{{$aq[0]->aq_persistence}}" id="aq_persistence">
-          <input type="hidden" value="{{$aq[0]->aq_boldness}}" id="aq_boldness">
-          <input type="hidden" value="{{$aq[0]->aq_complexity}}" id="aq_complexity">
-          <input type="hidden" value="{{$aq[0]->aq_abstraction}}" id="aq_abstraction">
-            <input type="hidden" value="{{$aq[0]->aq_queriosity}}" id="aq_queriosity">
+          <input type="hidden" value="{{$aq[0]->aq_persistence ?? 0}}" id="aq_persistence">
+          <input type="hidden" value="{{$aq[0]->aq_boldness ?? 0}}" id="aq_boldness">
+          <input type="hidden" value="{{$aq[0]->aq_complexity ?? 0}}" id="aq_complexity">
+          <input type="hidden" value="{{$aq[0]->aq_abstraction ?? 0}}" id="aq_abstraction">
+            <input type="hidden" value="{{$aq[0]->aq_curiosity ?? 0}}" id="aq_queriosity">
 
-            <input type="hidden" value="{{$tq[0]->level_1_score}}" id="c_score">
-            <input type="hidden" value="{{$tq[1]->level_1_score}}" id="java_score">
-            <input type="hidden" value="{{$tq[2]->level_1_score}}" id="python_score">
+            <input type="hidden" value="{{$tq[0]->level_1_score ?? 0}}" id="c_score">
+            <input type="hidden" value="{{$tq[1]->level_1_score ?? 0}}" id="java_score">
+            <input type="hidden" value="{{$tq[2]->level_1_score ?? 0}}" id="python_score">
+>>>>>>> e8e8f10d9b27073304d8604d820dd366158c991a
             
 
        <div class="content">
@@ -117,19 +118,19 @@
                             <h5 class="card-header" style="font-weight: bold">Adversity Quotient Metrics</h5>
 
                             <div>
-                               <button style="margin-left:20px;font-size:12px;" type="submit" class="btn btn-primary">Persistence : {{$aq[0]->aq_persistence}}</button>
-                               <button style="margin-left:20px;font-size:12px;" type="submit" class="btn btn-success">Boldness : {{$aq[0]->aq_boldness}}</button>
-                               <button style="margin-left:20px;font-size:12px;" type="submit" class="btn btn-info">Abstraction : {{$aq[0]->aq_abstraction}}</button>
-                               <button style="margin-left:20px;font-size:12px;" type="submit" class="btn btn-warning">Complexity : {{$aq[0]->aq_complexity}}</button>
-                               <button style="margin-left:20px;font-size:12px;" type="submit" class="btn btn-danger">Curiosity : {{$aq[0]->aq_curiosity}}</button>
+                               <button style="margin-left:20px;font-size:12px;" type="submit" class="btn btn-primary">Persistence : {{$aq[0]->aq_persistence ?? 0}}</button>
+                               <button style="margin-left:20px;font-size:12px;" type="submit" class="btn btn-success">Boldness : {{$aq[0]->aq_boldness ?? 0}}</button>
+                               <button style="margin-left:20px;font-size:12px;" type="submit" class="btn btn-info">Abstraction : {{$aq[0]->aq_abstraction ?? 0}}</button>
+                               <button style="margin-left:20px;font-size:12px;" type="submit" class="btn btn-warning">Complexity : {{$aq[0]->aq_complexity ?? 0}}</button>
+                               <button style="margin-left:20px;font-size:12px;" type="submit" class="btn btn-danger">Curiosity : {{$aq[0]->aq_curiosity ?? 0}}</button>
                           
                             </div>
                             <div class="card-body">
                                 <canvas id="chartjs_radar"></canvas>
                             </div>
                             <div class="card-footer bg-white">
-                                    <p>Your Creativity Score is <span class="float-right text-dark">  &nbsp; <b>48.76</b></span></p>
-                                    <p>Average Score is <span class="float-right text-dark">   &nbsp; <b>61.54</b></span></p>
+                                    <!-- <p>Your Creativity Score is <span class="float-right text-dark">  &nbsp; <b>48.76</b></span></p>
+                                    <p>Average Score is <span class="float-right text-dark">   &nbsp; <b>61.54</b></span></p> -->
                                     
                             </div>
                         </div>
@@ -147,8 +148,8 @@
                                     <div id="morris_gross" style="height: 272px;"></div>
                                 </div>
                                 <div class="container" style="margin-left: 50px;">
-                                    <p>Correct Answers <span class="text-dark">:&nbsp; <b>50</b></span></p>
-                                    <!-- <p>Incorrect Answers<span class="text-dark"> :&nbsp; 20 </span> -->
+                                    <p>Correct Answers <span class="text-dark">:&nbsp; <b>{{$iq[0]->iq_score}}</b></span></p>
+                                    <p>Incorrect Answers<span class="text-dark"> :&nbsp;{{30-$iq[0]->iq_score}} </span>
                                   
                                 </div>
                             </div>
@@ -249,17 +250,26 @@
                                 <canvas id="total-sale" width="220" height="155"></canvas>
                                 <div class="chart-widget-list">
                                     <p>
+                                        <span class="legend-text">Skill</span>
+                                        <span class="" style="margin-left:120px;">Level 1 score</span>
+                                        <span class="float-right">Level 2 score</span>
+
+                                    </p>
+                                    <p>
                                        <span class="legend-text"> Java Language</span>
-                                        <span class="float-right">{{$tq[1]->level_1_score}}</span>
+                                        <span class="" style="margin-left:100px;">{{$tq[1]->level_1_score ?? 0}}</span>
+                                        <span class="float-right">{{$tq[1]->level_2_score ?? 0}}</span>
                                     </p>
                                     <p>
                                         
                                         <span class="legend-text">Python Language</span>
-                                        <span class="float-right">{{$tq[2]->level_1_score}}</span>
+                                        <span class="" style="padding-left:85px;">{{$tq[2]->level_1_score ?? 0}}</span>
+                                        <span class="float-right">{{$tq[2]->level_2_score ?? 0}}</span>
                                     </p>
                                     <p>
                                          <span class="legend-text">C Language</span>
-                                        <span class="float-right">{{$tq[0]->level_1_score}}</span>
+                                        <span class="" style="margin-left:120px;">{{$tq[0]->level_1_score ?? 0}}</span>
+                                        <span class="float-right">{{$tq[0]->level_2_score ?? 0}}</span>
                                     </p>
                                     <!-- <p class="mb-0">
                                        <span class="legend-text"> Machine Learning</span>

@@ -52,6 +52,25 @@
               <p>Add Question</p>
             </a>
           </li>
+           <li class="nav-item ">
+            <a class="nav-link" href="aicte">
+              <i class="material-icons">assessment</i>
+              <p>AICTE</p>
+            </a>
+          </li>
+           <li class="nav-item ">
+            <a class="nav-link" href="learning_platform">
+              <i class="material-icons">insights</i>
+              <p>Learning Platform Insights</p>
+            </a>
+          </li>
+
+          <li class="nav-item ">
+            <a class="nav-link" href="add_webinar">
+              <i class="material-icons">playlist_add</i>
+              <p>Schedule Webinar</p>
+            </a>
+          </li>
           
           
         </ul>

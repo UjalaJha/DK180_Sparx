@@ -66,6 +66,12 @@
               <p>Blogs</p>
             </a>
           </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="/upcoming_webinars">
+              <i class="material-icons">content_paste</i>
+              <p>Attend Webinars</p>
+            </a>
+          </li>
          
         </ul>
       </div>

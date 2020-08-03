@@ -111,8 +111,8 @@
                       <!-- <label for="sel1">Gender</label> -->
 
                       <select name="skills[]" id="skill_select" multiple="multiple" class="form-control" name="skills">
-                        <option value="C">C</option>
-                        <option value="Java">Java</option>
+                        <option value="1">C</option>
+                        <option value="2">Java</option>
                         <option value="C++">C++</option>
                         <option value="Python">Python</option>
                         <option value="Sql">Oracle</option>

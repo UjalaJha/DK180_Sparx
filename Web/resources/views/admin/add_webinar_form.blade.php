@@ -1,13 +1,15 @@
-  
 
-@include('includes/header')
-@include('includes/sidebar')
+@include('includes/admin_header')
+@include('includes/admin_sidebar')
+<body class="">
+<div class="wrapper ">
+
     <div class="main-panel">
         <!-- Navbar -->
         <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top ">
             <div class="container-fluid">
                 <div class="navbar-wrapper">
-                    <a class="navbar-brand" href="#pablo">User Profile</a>
+                    <a class="navbar-brand" href="#pablo"><b>Schedule Webinar</b></a>
                 </div>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="sr-only">Toggle navigation</span>
@@ -16,7 +18,7 @@
                     <span class="navbar-toggler-icon icon-bar"></span>
                 </button>
                 <div class="collapse navbar-collapse justify-content-end">
-                    <form class="navbar-form" >
+                    <form class="navbar-form">
                         <div class="input-group no-border">
                             <input type="text" value="" class="form-control" placeholder="Search...">
                             <button type="submit" class="btn btn-white btn-round btn-just-icon">
@@ -61,78 +63,86 @@
                                 <a class="dropdown-item" href="#">Profile</a>
                                 <a class="dropdown-item" href="#">Settings</a>
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="/logout">Log out</a>
+                                <a class="dropdown-item" href="#">Log out</a>
                             </div>
                         </li>
                     </ul>
                 </div>
             </div>
         </nav>
+
+
         <!-- End Navbar -->
         <div class="content">
             <div class="container-fluid">
+
                 <div class="row">
-                    <div class="col-lg-12 col-md-12">
+                    <div class="col-md-12">
                         <div class="card">
                             <div class="card-header card-header-primary">
-                                <h4 class="card-title">User Details</h4>
-{{--                                <p class="card-category">View</p>--}}
+                                <h4 class="card-title">Schedule a new Webinar</h4>
+                                <p class="card-category"></p>
                             </div>
                             <div class="card-body">
 
 
-                                <form action="/user_media" method="post" id="form-submit" enctype="multipart/form-data">
+
+                                <form action="/submit_new_webinar" method="post" enctype="multipart/form-data">
                                     @csrf
-                                    <div class="row" style="margin-top:10px;">
-                                        <div class="form-group">
-                                        <div class="col-md-12">
-
-                                            <b><p >Upload Picture</p></b>
-                                            <input type="file" id="myFile1" name="image_filename"  accept="image/*">
-                                        </div>
-                                        </div>
-
-                                    </div>
-
-                                    <div class="row" style="margin-top:10px;">
-                                        <div class="col-md-12">
+                                    <div class="row">
+                                        <div class="col-md-6">
                                             <div class="form-group">
-                                            <b><p >Upload Resume</p></b>
-                                            <input type="file" id="resume_filename" name="resume_filename" accept="application/pdf">
-                                            <span class="alert-danger" style="color:#222;">Note: Upload your resume in pdf format <only></only></span>
+                                                <label>Select Category</label>
+                                                <div class="form-group">
+                                                    <select name="company_id" id="company_select" class="form-control" required>
+                                                        <option value="">Select Company</option>
+                                                        @foreach($company_details as $value)
+                                                            <option value="{{$value['company_id']}}">{{$value['company_name']}}</option>
+                                                        @endforeach
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label for="">Speaker Name</label>
+                                                <div class="form-group">
+                                                    <input type="text" class="form-control" name="speaker_name" placeholder="Speaker name">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label for="">Technology</label>
+                                                <div class="form-group">
+                                                    <input type="text" class="form-control" name="technology" placeholder="Technology" required>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label for="">Date and Time</label>
+                                                <div class="form-group">
+                                                    <input type="datetime-local" class="form-control" name="time" placeholder="Time" required>
+                                                </div>
                                             </div>
                                         </div>
 
                                     </div>
 
-                                    <div class="row" id="use_resume_option" style="display: block;">
-                                        <div class="col-md-6" style="margin-top: 10px;">
-                                            <div class="form-group">
-                                                <label class="bmd-label-floating">Do you want to import your profile using resume?</label>
-                                                <input type="radio" id="defaultRadio"  name="use_resume" value="1">
-                                                <label for="defaultRadio">Yes</label>
-                                                <input type="radio" id="defaultRadio"  name="use_resume" value="0" style="margin-left: 10px;">
-                                                <label for="defaultRadio">No</label>
-                                            </div>
-                                        </div>
-                                    </div>
 
-                                     <div class="row" id="use_resume_option" style="display: block;">
-                                        <div class="col-md-6" style="margin-top: 10px;">
-                                            <div class="form-group">
-                                                <label class="bmd-label-floating">Import Documents from Digilocker</label><br>
-                                                <a onclick="window.open('https://accounts.digitallocker.gov.in/signin', '_blank')" target="_blank"><button class="btn btn-primary">Choose from Digilocker</button></a>
-                                            </div>
-                                        </div>
-                                    </div>
 
-                                    <button type="submit" class="btn btn-primary pull-right">Proceed with Profile</button>
 
+
+
+
+
+
+                                    <button type="submit" name="schedule" class="btn btn-primary pull-right">Schedule</button>
                                     <div class="clearfix"></div>
                                 </form>
-
-
-
                             </div>
                         </div>
                     </div>
@@ -140,16 +150,15 @@
                 </div>
             </div>
         </div>
+
+
     </div>
 </div>
-</div>
-</div>
+</body>
 
-</div>
-</div>
 
-</div>
-</div>
+
+
 
 <!--   Core JS Files   -->
 <script src="../assets/js/core/jquery.min.js"></script>
@@ -201,14 +210,6 @@
 <script>
     $(document).ready(function() {
         $().ready(function() {
-            // alert("hey");
-            $('#myFile2').change(function () {
-                if(document.getElementById("myFile2").files.length != 0) {
-                // you have a file
-                document.getElementById("use_resume_option").style.display = 'block';
-                }
-            })
-
             $sidebar = $('.sidebar');
 
             $sidebar_img_container = $sidebar.find('.sidebar-background');
@@ -381,146 +382,45 @@
 <script type="text/javascript">
     $(document).ready(function() {
         $('.mdb-select').materialSelect();
-
-
     });
 </script>
 <script>
-
-
-    function next1(){
-        $('[href="#messages"]').tab('show');
-    }
-
-    function previous1(){
-        $('[href="#profile"]').tab('show');
-    }function next2(){
-        $('[href="#settings"]').tab('show');
-    }
-
-    function previous2(){
-        $('[href="#messages"]').tab('show');
-    }function next3(){
-        $('[href="#project"]').tab('show');
-    }
-
-    function previous3(){
-        $('[href="#settings"]').tab('show');
-    }
-
     // Add the following code if you want the name of the file appear on select
     $(".custom-file-input").on("change", function() {
         var fileName = $(this).val().split("\\").pop();
         $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
     });
 </script>
-<script type="text/javascript">
-    jQuery(function($){
-        var $internship = $('#internship1'), count = 1;
-        $('#addinternship').click(function(e){
-            e.preventDefault();
-            var idname = 'internship' + (++count);
-            $internship.parent().append($internship.clone().attr({id: idname, name: idname}));
-        });
-
-    });
-</script>
-<script type="text/javascript">
-    jQuery(function($){
-        var $project = $('#project1'), count = 1;
-        $('#addproject').click(function(e){
-            e.preventDefault();
-            var idname = 'project' + (++count);
-            $project.parent().append($project.clone().attr({id: idname, name: idname}));
-        });
-
-    });
-</script>
-
-
-<script src="../../assets/select2/js/select2.min.js"></script>
+<script src="../assets/select2/js/select2.min.js"></script>
 
 <script>
 
     jQuery(document).ready(function() {
 
-        $("#skill_select").select2({
-            multiple: true,
-            placeholder: "Add your Skills",
-            maximumSelectionLength: 4,
-            formatSelectionTooBig: function (limit) {
+        $("#company_select").select2({
 
-                // Callback
-
-                return 'Too many selected items, only 4 allowed';
-            }
         });
 
 
     });
 
 </script>
+
+
+
 
 <script>
-    $('#submitInternship').click(function(){
-        $.ajax({
-            url:"/internship",
-            method:"POST",
-            data:$('#storeInternship').serialize(),
-            success:function(data)
-            {
-                alert(data);
-                $('#storeInternship')[0].reset();
-            }
-        });
+    $(document).ready(function () {
+
     });
+
 </script>
 
-<script>
-    $('#submitProject').click(function(){
-        $.ajax({
-            url:"/project",
-            method:"POST",
-            data:$('#storeProject').serialize(),
-            success:function(data)
-            {
-                alert(data);
-                $('#storeProject')[0].reset();
-            }
-        });
-    });
-</script>
+
+
+
+
 
 </body>
 
 </html>
-
-<!-- <script type="text/javascript">
-$(document).ready(function() {
-        // file=$('#resumefile').val();
-        // console.log("file"+file);
-        $('#form-submit').submit(function(e){
-            e.preventDefault();
-            var form = $(this);
-            $.ajax({
-            type:"POST",
-            url : "/resume",
-            data: new FormData(this),
-            dataType: 'json',
-            success : function(data){
-               console.log(data);
-            },
-            always: function() {
-               // //submit form !!!
-               // $("#formtopost").submit();
-            }
-        });//end ajax   
-      });//end click
-    });//end rdy
-</script> -->
-
-<script type="text/javascript"
-src="https://services.digitallocker.gov.in/requester/api/1/dl.js"
-id="dlshare" data-app-id="YOUR_APP_ID" data-app-hash="YOUR_APP_HASH"
-time-stamp=”TIMESTAMP” data-upload-url="YOUR_UPLOAD_URL">
-</script> 

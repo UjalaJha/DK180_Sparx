@@ -223,6 +223,12 @@ a.portfolio-link {
                       <!-- <span class="nav-tabs-title">Tasks:</span> -->
 
                       <ul class="nav nav-tabs" data-tabs="tabs">
+                        <!-- <li class="nav-item" style="margin-left:15%;">
+                          <a class="nav-link active" href="#profile" data-toggle="tab">
+                            <i class="material-icons">person</i> Results 
+                            <div class="ripple-container"></div>
+                          </a>
+                        </li> -->
                         <li class="nav-item" style="margin-left:15%;">
                           <a class="nav-link active" href="#profile" data-toggle="tab">
                             <i class="material-icons">person</i> Personal Information
@@ -236,7 +242,7 @@ a.portfolio-link {
                           </a>
                         </li>
                         <li class="nav-item" style="margin-left:10%;">
-                          <a class="nav-link" href="#settings" data-toggle="tab">
+                          <a class="nav-link" href="#perform" data-toggle="tab">
                             <i class="material-icons">equalizer</i>Perfomance
                             <div class="ripple-container"></div>
                           </a>
@@ -248,7 +254,7 @@ a.portfolio-link {
                 </div>
        <div class="card-body">
              <div class="tab-content">
-               <div class="tab-pane active" id="profile"><br>
+      <div class="tab-pane active" id="profile"><br>
          <div class="col-md-10" style="align-items: center;margin-left:7%;">
            <div class="card card-profile">
                 <div class="card-avatar" style="height: 400px; width: 400px;">
@@ -458,9 +464,97 @@ a.portfolio-link {
               </div>
         
       </div>
+
+
+      <div class="tab-pane" id="perform"><br>
+             <!-- <div class="col-md-10" style="align-items: center;margin-left:7%;"> -->
+           <!-- <div class="card card-profile"> -->
+                <div class="card-avatar">
+{{--                  <a href="#pablo">--}}
+{{--                   <i class="material-icons" style="width:100px;height:100px;font-size: 90px;text-align: center;">person</i>--}}
+{{--                  </a>--}}
+                    <img src="images/{{$user_details[0]['image_filename']}}" class="img-responsive" alt="{{ $user_details[0]['first_name']}} {{$user_details[0]['last_name']}}">
+
+                </div>
+                <div class="content">
+                <div class="container-fluid">
+                <div class="row">
+               <div class="col-md-12">
+              <div class="card">
+                <div class="card-body">
+                  <!-- <div class="card-body"> -->
+              
+              <!-- <h4></h4> --><br>
+              <!-- <div style="display: inline;"> -->
+                <div class="row"> 
+                  <div class="col-md-4">
+              <h3>Name : {{ $user_details[0]['first_name']}} {{$user_details[0]['last_name']}}</h3>
+            </div>
+              <div class="col-md-4"></div>
+
+                              <div class="col-md-4">
+              <h2>Rating :{{$rating[0]['total_star']}}<i class="fa fa-star" aria-hidden="true"></i></h2>
+            </div>
+            </div>
+            <div class="row"> 
+                <div class="col-md-4">
+                <h3>Score in Intelligent Quoteint Test(IQ): {{$iq[0]['iq_score']}}<h3>
+                </div>
+            </div>
+<div class="row"> 
+                <div class="col-md-4">
+                <h3>Score in Java Test(Beginner): {{$tq[1]['level_1_score']}}/10<h3>
+                </div>
+            </div><div class="row"> 
+                <div class="col-md-4">
+                <h3>Score in Java Test(Advance): {{$tq[1]['level_2_score']}}/20<h3>
+                </div>
+            </div>
+
+            </div><div class="row"> 
+                <div class="col-md-4">
+                <h3>Personal Traits<h3>
+                </div>
+            </div>
+
+            <div class="row">
+                      <!-- <div class="col-md-12"> -->
+                        <!-- <div class="form-group"> -->
+                        <!-- <h4><b><i>Based on your skillset, Languages you have to attempt are : </i> </b></h4> -->
+                    <span style="font-size:19px;margin-top:10px;margin-left: 12%;"><b> </b> </span><!-- Psistive Traits(Excel in) -->
+                          @foreach($good_traits as $good_trait)
+                          <span><button class="btn btn-info" style="margin-left:10px;">{{$good_trait}}</button></span>
+                              @endforeach
+            </div>
+            <div style="margin-top:20px">
+             <div class="row">
+                      <!-- <div class="col-md-12"> -->
+                        <!-- <div class="form-group"> -->
+                        <!-- <h4><b><i>Based on your skillset, Languages you have to attempt are : </i> </b></h4> -->
+                    <span style="font-size:19px;margin-top:10px;margin-left: 12%;"><b> </b> </span>
+                    <!-- Avegerage Traits -->
+                          @foreach($avg_traits as $avg_trait)
+                          <span><button class="btn btn-warning" style="margin-left:10px;">{{$avg_trait}}</button></span>
+                              @endforeach
+            </div>
+
+<!-- 
+              <a href="/view_dashboard">
+                <button style="margin-left:30px;" type="submit" class="btn btn-primary">Start Your HGMI Test Now!!</button>
+              </a> -->
+            </div>
+                  <!-- <h1> hello</h1> -->
+
+                  <!-- <h1> -->
+
+
+                </div></div></div></div>
+              </div>
+
           
           </div>
-         
+         </div>
+       </div>
 
         
          

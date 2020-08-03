@@ -36,18 +36,26 @@ class EQController extends Controller
     }
 
     public function storeEQ(){
+        // $eq_score = new UserEQ();
+        // $eq_score->user_id = Session::get('user_id');
+        // $eq_score->eq_self_awareness = $_POST["self_awareness"]? $_POST["self_awareness"] : NULL;
+        // $eq_score->eq_self_control   = $_POST["self_control"]? $_POST["self_control"] : NULL;
+        // $eq_score->eq_achievement_orientation = $_POST["achievement_orientation"]? $_POST["achievement_orientation"] : NULL;
+        // $eq_score->eq_positive_outlook = $_POST["positive_outlook"]?$_POST["positive_outlook"] : NULL;
+        // $eq_score->eq_inspirational_leadership = $_POST["inspirational_leadership"]?  $_POST["inspirational_leadership"] : NULL;
+        // $eq_score->eq_social_awareness = $_POST["social_awareness"]? $_POST["social_awareness"] : NULL;
+        // $eq_score->save();
         $eq_score = new UserEQ();
         $eq_score->user_id = Session::get('user_id');
-        $eq_score->eq_self_awareness = $_POST["self_awareness"];
-        $eq_score->eq_self_control   = $_POST["self_control"];
-        $eq_score->eq_achievement_orientation = $_POST["achievement_orientation"];
-        $eq_score->eq_positive_outlook = $_POST["positive_outlook"];
-        $eq_score->eq_inspirational_leadership = $_POST["inspirational_leadership"];
-        $eq_score->eq_social_awareness = $_POST["social_awareness"];
+        $eq_score->eq_self_awareness =1;
+        $eq_score->eq_self_control   = 3;
+        $eq_score->eq_achievement_orientation = 5;
+        $eq_score->eq_positive_outlook = 2;
+        $eq_score->eq_inspirational_leadership = 4;
+        $eq_score->eq_social_awareness = 1;
         $eq_score->save();
-
         $user_id = Session::get('user_id');
-        $user_test = UserTests::where('user_id',$user_id)->update(['eq_given'=>1]);
+        $user_test = UserTests::where('user_id',$user_id)->update(['eq_given'=>0]);
 
         // return view('template/eq_result')->with('eq_self_awareness',$eq_score->eq_self_awareness);
         return app('App\Http\Controllers\EQController')->fetch_eq_score();

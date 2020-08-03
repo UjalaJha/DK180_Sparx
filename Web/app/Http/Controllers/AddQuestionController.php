@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 //use Maatwebsite\Excel\Concerns\FromCollection;
+use App\CompanyDetails;
 use App\Imports\QuestionsImport;
+use App\Webinar;
 use Maatwebsite\Excel\Facades\Excel;
 
 use Illuminate\Http\Request;
@@ -161,5 +163,29 @@ class AddQuestionController extends Controller
 
         return $this->index();
     }
+
+
+
+
+    public function addWebinar(){
+        $company_details = CompanyDetails::all();
+
+        return view('admin/add_webinar_form')->with('company_details', $company_details);
+    }
+
+
+    public function submitWebinar(){
+        $webinar_details = new Webinar();
+        $webinar_details->company_id = $_POST['company_id'];
+        $webinar_details->speaker_name = $_POST['speaker_name'];
+        $webinar_details->technology = $_POST['technology'];
+        $webinar_details->time = $_POST['time'];
+
+        $webinar_details->save();
+
+        return $this->addWebinar();
+    }
+
+
 
 }

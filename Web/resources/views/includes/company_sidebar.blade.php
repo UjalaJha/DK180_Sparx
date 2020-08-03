@@ -39,7 +39,7 @@
           <li class="nav-item ">
             <a class="nav-link" href="/search_students">
               <i class="material-icons">bubble_chart</i>
-              <p>Look for Students</p>
+              <p>Look for Candidates</p>
             </a>
           </li>
           
@@ -47,6 +47,20 @@
             <a class="nav-link" href="./linkedin_students">
               <i class="material-icons">notifications</i>
               <p>LinkedIn Profiles</p>
+            </a>
+          </li>
+
+          <li class="nav-item ">
+            <a class="nav-link" href="/custom_test">
+              <i class="material-icons">content_paste</i>
+              <p>Custom Test</p>
+            </a>
+          </li>
+
+          <li class="nav-item ">
+            <a class="nav-link" href="/company_webinars">
+              <i class="material-icons">bubble_chart</i>
+              <p>Webinars</p>
             </a>
           </li>
           
