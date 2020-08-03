@@ -39,7 +39,9 @@ Route::get('/signup', function () {
 Route::get('/company_signup', function () {
     return view('landing/company-signup');
 });
-
+Route::get('/viewcerti', function () {
+    return view('E-certificate/index');
+});
 Route::post('/register', 'LoginController@store');
 Route::post('/company_register', 'LoginController@storeCompany');
 

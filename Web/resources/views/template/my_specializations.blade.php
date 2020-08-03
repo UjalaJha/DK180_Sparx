@@ -113,7 +113,7 @@
                             3rd & 4th August
                           </td>
                           <td class="text-primary">
-                             <a href="" class="btn btn-info">View Certificate</a>
+                             <a href="/viewcerti" target="_blank" class="btn btn-info">View Certificate</a>
                           </td>
                         </tr>
                          <tr>
@@ -130,7 +130,7 @@
                             23rd & 24th May
                           </td>
                           <td class="text-primary">
-                             <a href="" class="btn btn-info">View Certificate</a>
+                             <a href="/viewcerti" target="_blank" class="btn btn-info">View Certificate</a>
                           </td>
                         </tr>
                          <tr>
@@ -147,7 +147,7 @@
                             3rd & 4th August
                           </td>
                           <td class="text-primary">
-                             <a href="" class="btn btn-info">View Certificate</a>
+                             <a href="/viewcerti" target="_blank" class="btn btn-info">View Certificate</a>
                           </td>
                         </tr>
                          <tr>
@@ -164,7 +164,7 @@
                             3rd & 4th August
                           </td>
                           <td class="text-primary">
-                             <a href="" class="btn btn-info">View Certificate</a>
+                             <a href="/viewcerti" target="_blank" class="btn btn-info">View Certificate</a>
                           </td>
                         </tr>
                          <tr>
@@ -181,7 +181,7 @@
                             3rd & 4th August
                           </td>
                           <td class="text-primary">
-                             <a href="" class="btn btn-info">View Certificate</a>
+                             <a href="/viewcerti" target="_blank" class="btn btn-info">View Certificate</a>
                           </td>
                         </tr>
                          <tr>
@@ -198,7 +198,7 @@
                             3rd & 4th August
                           </td>
                           <td class="text-primary">
-                             <a href="" class="btn btn-info">View Certificate</a>
+                             <a href="/viewcerti" target="_blank" class="btn btn-info">View Certificate</a>
                           </td>
                         </tr>
                       </tbody>
