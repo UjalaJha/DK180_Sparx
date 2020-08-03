@@ -82,7 +82,7 @@ class CompanyController extends Controller
 
 
         $skill_req=$_POST['skills'][0];
-        echo $skill_req;
+        // echo $skill_req;
         $th=0;
         // echo "<pre>";
         $students=UserRatings::where('language',$skill_req)->where('total_star','>', 0)->orderBy('total_star','desc')->get();
