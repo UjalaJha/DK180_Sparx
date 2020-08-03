@@ -39,7 +39,9 @@ Route::get('/signup', function () {
 Route::get('/company_signup', function () {
     return view('landing/company-signup');
 });
-
+Route::get('/viewcerti', function () {
+    return view('E-certificate/index');
+});
 Route::post('/register', 'LoginController@store');
 Route::post('/company_register', 'LoginController@storeCompany');
 
@@ -67,7 +69,12 @@ Route::get('/user', function (){
 Route::get('/user_profile', function () {
     return view('template/user');
 });
-
+Route::get('/my_specializations', function () {
+    return view('template/my_specializations');
+});
+Route::get('/training', function () {
+    return view('template/training');
+});
 
 Route::post('/user_media','UserController@storeMedia');
 
@@ -291,4 +298,17 @@ Route::get('take_webinar', function (){
 });
 
 Route::get('end_webinar/{webinar_id}', 'CompanyController@endWebinar');
+
+Route::get('send_email/', 'PhpmailerController@sendEmail');
+
+Route::get('campus_drive', function (){
+    return view('company/campus_drive');
+});
+
+Route::get('/nodegreejob', function () {
+    return view('template/nodegreejob');
+});
+
+
+
 
