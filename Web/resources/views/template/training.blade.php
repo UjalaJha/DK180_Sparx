@@ -151,54 +151,57 @@
              <div class="col-md-4">
                 <div class="card card-chart">
                   <div class="card-header">
-                  <iframe width="330" height="200" src="https://www.youtube.com/embed/68w2VwalD5w" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                 <iframe width="330" height="200" src="https://www.youtube.com/embed/RdTozKPY_OQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                   </div>
                   <div class="card-body">
-                    <h4 class="card-title"><b>Free Adobe XD Tutorial: User Experience Design Course with Adobe XD Course</b></h4>
+                    <h4 class="card-title"><b>Microsoft Excel Tutorial for Beginners | Excel Training | Excel Formulas and Functions | Edureka</b></h4>
                     <p class="card-category">
-                     Aug 26, 2019</p>
+                     Mar 24, 2019</p>
                   </div>
                   <div class="card-footer">
                     <div class="stats text-success" style="font-size:15px">
-                      <a href="https://medium.com/topic/artificial-intelligence"><b>585,788 views</b></a>
+                      <a href="https://medium.com/topic/artificial-intelligence"><b>1,431,924 views</b></a>
                     </div>
                   </div>
                 </div>
               </div>
               <div class="col-md-4">
                 <div class="card card-chart">
-                  <div class="card-header">
-                 <iframe width="956" height="538" src="https://www.youtube.com/embed/M4WBWwe-Evk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                  </div>
+                   <div class="card-header">
+                 <iframe width="330" height="200" src="https://www.youtube.com/embed/fv6Qll3laUU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+               </div>
+                  
                   <div class="card-body">
-                    <h4 class="card-title"><b>Blockchain Explained | Blockchain Technology | Blockchain Training | Edureka</b></h4>
+                    <h4 class="card-title"><b>Artificial Neural Network Tutorial | Deep Learning With Neural Networks | Edureka</b></h4>
                     <p class="card-category">
-                     May 10, 2018</p>
+                     Jul 28, 2017</p>
                   </div>
                   <div class="card-footer">
                     <div class="stats text-success" style="font-size:15px">
-                      <a href="https://medium.com/topic/artificial-intelligence"><b>5,731 views</b></a>
+                      <a href="https://medium.com/topic/artificial-intelligence"><b>133,548 views</b></a>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="col-md-4">
+                <div class="col-md-4">
                 <div class="card card-chart">
                   <div class="card-header">
-                  <iframe width="330" height="200" src="https://www.youtube.com/embed/68w2VwalD5w" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                 <iframe width="330" height="200" src="https://www.youtube.com/embed/_YWwU-gJI5U" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                   </div>
                   <div class="card-body">
-                    <h4 class="card-title"><b>Free Adobe XD Tutorial: User Experience Design Course with Adobe XD Course</b></h4>
+                    <h4 class="card-title"><b>Data Visualization | Data Visualization Python | Intellipaat</b></h4>
                     <p class="card-category">
-                     Aug 26, 2019</p>
+                     Aug 29, 2019</p>
                   </div>
                   <div class="card-footer">
                     <div class="stats text-success" style="font-size:15px">
-                      <a href="https://medium.com/topic/artificial-intelligence"><b>585,788 views</b></a>
+                      <a href="https://medium.com/topic/artificial-intelligence"><b>5,609 views</b></a>
                     </div>
                   </div>
                 </div>
               </div>
+              </div>
+              
               </div>
             </div>
         </div>
