@@ -7,7 +7,7 @@ from pdfminer.pdfinterp import PDFPageInterpreter
 from pdfminer.pdfinterp import PDFResourceManager
 from pdfminer.layout import LAParams
 from pdfminer.pdfpage import PDFPage
-from flask_cors import CORS
+
 import io
 import nltk
 nltk.download('punkt')
@@ -20,7 +20,7 @@ from PIL import Image
 import pytesseract 
 import sys
 import os
-# import cv2
+import cv2
 import glob
 import spacy
 import re
@@ -28,15 +28,19 @@ from spacy.matcher import Matcher
 import en_core_web_sm
 import pandas as pd
 from nltk.stem import WordNetLemmatizer
+import glob
+import speech_recognition as sr
 
+import pydub
+from pydub import AudioSegment
+import math
 
 pytesseract.pytesseract.tesseract_cmd ='C://Program Files//Tesseract-OCR//tesseract.exe'
 
 app = Flask(__name__)
-CORS(app)
-
-app.config['UPLOAD_FOLDER']="resume"
+app.config['UPLOAD_FOLDER']='C://Users//juyee//Envs//sih2020//resume_extraction//resume'
 #model = pickle.load(open('model.pkl', 'rb'))
+pydub.AudioSegment.converter = r'C:/Users/juyee/Downloads/ffmpeg-20200730-134a48a-win64-static/ffmpeg-20200730-134a48a-win64-static/bin'
 
 def extract_text_from_pdf(pdf_path):
     with open(pdf_path, 'rb') as fh:
@@ -74,10 +78,10 @@ def extract_text_from_pdf(pdf_path):
             fake_file_handle.close()
 
 
-# def extract_text_from_jpg(file_path):
-#     img = cv2.imread(file_path)
-#     result = pytesseract.image_to_string(img)
-#     return result
+def extract_text_from_jpg(file_path):
+    img = cv2.imread(file_path)
+    result = pytesseract.image_to_string(img)
+    return result
 
 import docx2txt
 
@@ -86,7 +90,69 @@ def extract_text_from_doc(doc_path):
     text = [line.replace('\t', ' ') for line in temp.split('\n') if line]
     return ' '.join(text)
 
-def readFile(fileName):
+class SplitWavAudioMubin():
+    def __init__(self, folder, newfolder,filename):
+        self.folder = folder
+        self.filename = filename
+        self.filepath = folder + '//' + filename
+        self.newfolder = newfolder
+        self.audio = AudioSegment.from_wav(self.filepath)
+    
+    def get_duration(self):
+        return self.audio.duration_seconds
+    
+    def single_split(self, from_min, to_min, split_filename):
+        t1 = from_min * 1000
+        t2 = to_min * 1000
+        split_audio = self.audio[t1:t2]
+        split_audio.export(self.newfolder + '//' + split_filename, format="wav")
+        
+    def multiple_split(self, min_per_split):
+        total_mins = math.ceil(self.get_duration())
+        print(total_mins)
+        for i in range(0, total_mins, min_per_split):
+            split_fn = str(i) + '_' + self.filename
+            self.single_split(i, i+min_per_split, split_fn)
+            print(str(i) + ' Done')
+            if i == total_mins - min_per_split:
+                print('All splited successfully')
+
+def extract_wav(path,name):
+
+    fileName = name
+    newfolder = "C://Users//juyee//Envs//sih2020//resume_extraction//audi"
+    folder = 'C://Users//juyee//Envs//sih2020/resume_extraction//resume'
+    #filename =f.filename
+    split_wav = SplitWavAudioMubin(folder, newfolder,fileName)
+    split_wav.multiple_split(min_per_split=10)
+    wav_path = sorted(glob.glob('audi/*.wav')) #sort file for ease
+
+    text = []
+
+    i = 0
+    for p in wav_path:
+        audio = sr.AudioFile(p)
+        r = sr.Recognizer()
+        with audio as source:
+            audio = r.record(source)
+            i += 1
+            if i >=0 :
+                try:
+                    #print(r.recognize_google(audio, language = "en-IN"))
+                
+                    #we append into text list
+                    text.append(r.recognize_google(audio, language ='en-US'))
+                
+                    #list to string, so as to store the string to a file
+                    textstring   = '.'.join(str(t) for t in text) 
+
+
+                except sr.UnknownValueError:
+                    print("\nNot possible")
+
+    return textstring
+
+def readFile(fileName,name):
     extension = fileName.split(".")[-1]
     if extension == "pdf":  
         try:
@@ -103,12 +169,18 @@ def readFile(fileName):
         except:
             return ''
             pass
-    # elif extension == 'jpg':
-    #     try:
-    #         return extract_text_from_jpg(fileName)
-    #     except:
-    #         return ''
-    #         pass
+    elif extension == 'jpg':
+        try:
+            return extract_text_from_jpg(fileName)
+        except:
+            return ''
+            pass
+
+    elif extension == 'wav':
+        try:
+            return extract_wav(fileName,name)
+        except:
+            return ''
     else:
         print('Unsupported format')
         return '', ''
@@ -204,7 +276,7 @@ def extract_skills(resume_text,cleaned_text):
     tokens = [token.text for token in nlp_text if not token.is_stop]
     
     # reading the csv file
-    data = pd.read_csv("final_skills.csv") 
+    data = pd.read_csv("C:\\Users\\juyee\\Envs\\sih2020\\resume_extraction\\final_skills.csv") 
     
     # extract values
     skills = list(data.Skills.values)
@@ -234,7 +306,7 @@ def extract_education(resume_text):
             'BE', 'BS','BCA','MCA','MBA','BA','MA', 
             'ME','MS', 'BMS','BSC','MSC','PHD','B-TECH','10th','12th','HSC','SSC',
             'BTECH','MTECH', 'BBA','BCOM','MCOM','MMS','MHRM','B TECH',
-            'BACHELOR OF TECHNOLOGY','PGDM','BARCH'
+            'BACHELOR OF TECHNOLOGY','PGDM','BARCH','BACHELOR OF ENGINEERING'
         ]
     YEAR = r'(((20|19)(\d{2})))'
     
@@ -272,7 +344,7 @@ def qualification_major(resume_text):
     tokens = [token.text for token in nlp_text if not token.is_stop]
     
     # reading the csv file
-    data = pd.read_csv("grad-students.csv") 
+    data = pd.read_csv("C://Users//juyee//Envs//sih2020//resume_extraction//grad-students.csv") 
     
     # extract values
     qualifications = list(data.Major.values)
@@ -440,8 +512,6 @@ def predict_api():
     print(path)
     text = readFile(path)
     cleaned_text = preprocessing(text)
-    print("cleaned_text")
-    print(cleaned_text)
     candidate_name = extract_name(cleaned_text)
     
     finalphoneno=''
@@ -471,11 +541,11 @@ def predict_api():
     candidate_exp = ",".join(candidate_experience)
     experience = re.sub('[^A-Za-z0-9]+', ' ', candidate_exp)
 
-    candidate_competencies = extract_competencies(text)
+    #candidate_competencies = extract_competencies(text)
 
-    if candidate_competencies:
-        for key,val in candidate_competencies.items():
-            candidate_competencies[key] = ",".join(val)
+    #if candidate_competencies:
+     #   for key,val in candidate_competencies.items():
+     #       candidate_competencies[key] = ",".join(val)
 
     CandidatesInfo = CandidatesInfo.append({'Name': candidate_name,
                                 'Phone No': finalphoneno,
@@ -484,7 +554,7 @@ def predict_api():
                                 'Education' : ",".join(candidate_education),
                                 'Qualification Tags': ",".join(candidate_tags),
                                 'Experience':experience,
-                                'Competencies':candidate_competencies},ignore_index=True)
+                                },ignore_index=True)
 
     info = CandidatesInfo.to_dict('records')
 
@@ -522,8 +592,8 @@ def predict():
     #print(f.filename)
     #try:
     path=os.path.join(app.config['UPLOAD_FOLDER'], secure_filename(f.filename))
-    #print(path)
-    text = readFile(path)
+    print(path)
+    text = readFile(path,f.filename)
     #print(text)
     cleaned_text = preprocessing(text)
     candidate_name = extract_name(cleaned_text)

@@ -72,6 +72,9 @@ Route::get('/user_profile', function () {
 Route::get('/my_specializations', function () {
     return view('template/my_specializations');
 });
+Route::get('/training', function () {
+    return view('template/training');
+});
 
 Route::post('/user_media','UserController@storeMedia');
 
