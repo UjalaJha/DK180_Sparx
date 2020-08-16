@@ -121,9 +121,9 @@
     // For test purposes, you can obtain these from https://tokbox.com/account.
 
 
-    var API_KEY = '46871634';
-    var SESSION_ID = '2_MX40Njg3MTYzNH5-MTU5NjM5Mzc0MTY0NX5LV1ZVZFRkZitTdStLWGFKMFZGT0Z0T3R-fg';
-    var TOKEN = 'T1==cGFydG5lcl9pZD00Njg3MTYzNCZzaWc9MzYzMjllOGJkODhiMTQ2ZjdhMjY3ODlkNWQ2ZjhiMzVlNjM2NTNiNjpzZXNzaW9uX2lkPTJfTVg0ME5qZzNNVFl6Tkg1LU1UVTVOak01TXpjME1UWTBOWDVMVjFaVlpGUmtaaXRUZFN0TFdHRktNRlpHVDBaMFQzUi1mZyZjcmVhdGVfdGltZT0xNTk2MzkzNzkwJm5vbmNlPTAuNzQwNDAzNDMzODgzODg3JnJvbGU9cHVibGlzaGVyJmV4cGlyZV90aW1lPTE1OTY5OTg1ODkmaW5pdGlhbF9sYXlvdXRfY2xhc3NfbGlzdD0=';
+    var API_KEY = '';
+    var SESSION_ID = '';
+    var TOKEN = '';
 
 
 
