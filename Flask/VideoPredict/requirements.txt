@@ -1,4 +1,4 @@
-opencv-python==3.3.0.9
+opencv-python==3.4.7.28
 numpy
 pandas
 glob3
