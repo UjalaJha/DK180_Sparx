@@ -7,7 +7,7 @@ pandas==0.25.1
 pytesseract==0.3.3
 Flask==1.1.1
 pdfminer.six==20200124
-numpy==1.16.5
+numpy==1.22.0
 Werkzeug==0.16.0
 opencv_python==4.2.0.34
 pdfminer==20191125
